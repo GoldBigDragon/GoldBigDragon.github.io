@@ -1,0 +1,144 @@
+#dataSpread {
+  display: flex;
+  vertical-align: middle;
+  text-align: center;
+  margin: 40px;
+}
+
+#codeListTable {
+  margin: auto;
+}
+
+.titleHeader {
+  color: dimgray;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+td {
+  transition: 0.3s;
+  padding: 10px;
+  border: 0px;
+}
+
+td:hover {
+  background-color: rgba(45, 45, 45, 3);
+}
+
+td:hover .tooltip {
+  visibility: visible;
+}
+
+tr {
+  transition: 0.3s;
+  background-color: rgba(30, 30, 30, 3);
+}
+
+tr:hover {
+  background-color: rgba(40, 40, 40, 3);
+}
+
+.icon {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: lightgray;
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: gold;
+  font-size: 12pt;
+  width: 170px;
+  height: 50px;
+}
+.description {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  color: lightgray;
+  font-size: 12pt;
+  width: 300px;
+  height: 50px;
+}
+.language {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: lightgray;
+  width: 50px;
+  height: 50px;
+}
+.language:hover .tooltip {
+  visibility: visible;
+}
+.version {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: lightgray;
+  width: 150px;
+  height: 50px;
+}
+
+.information {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: lightgray;
+  width: 120px;
+  height: 50px;
+}
+
+#downloadIcon {
+  transition: 0.2s;
+  background-image: url("../img/icon/download.png");
+  background-size: 35px;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+}
+
+#downloadIcon:hover {
+  background-image: url("../img/icon/download-hover.png");
+}
+
+#downloadIcon:hover .tooltip {
+  visibility: visible;
+}
+#informationIcon {
+  transition: 0.2s;
+  background-image: url("../img/icon/information.png");
+  background-size: 35px;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+}
+
+#informationIcon:hover {
+  background-image: url("../img/icon/information-hover.png");
+}
+
+#informationIcon:hover .tooltip {
+  visibility: visible;
+}
+
+.tooltip {
+  visibility: hidden;
+  padding: 15px;
+  background-color: black;
+  color: snow;
+  text-align: center;
+  border-radius: 6px;
+
+  position: fixed;
+  top: 55px;
+  right: 5px;
+  z-index: 1;
+}
