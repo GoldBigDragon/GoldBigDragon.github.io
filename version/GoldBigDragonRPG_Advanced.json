@@ -1,0 +1,8 @@
+{
+"program": "GoldBigDragonRPG",
+"lastVersion": "Advanced",
+"minecraftVersion": "1.12.2",
+"lastUpdate": "2018-07-22-14:13",
+"server": -1,
+"changeLog": [{"type": "bugFix", "comment": "Area/Monster naming error"}]
+}
