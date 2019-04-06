@@ -1,7 +1,7 @@
 {
 "program": "NuriCHAIN",
 "lastVersion": "0.0.6",
-"lastUpdate": "2019-04-03-11:58",
+"lastUpdate": "2019-04-06-15:01",
 "server": 71,
-"changeLog": [{"type": "add", "comment": "통계 차트 추가"}]
+"changeLog": [{"type": "add", "comment": "인스턴스 던전 추가"}]
 }
