@@ -1,7 +1,7 @@
 {
 "program": "NuriCHAIN",
 "lastVersion": "0.0.6",
-"lastUpdate": "2019-04-06-15:01",
+"lastUpdate": "2019-04-09-21:41",
 "server": 71,
-"changeLog": [{"type": "add", "comment": "인스턴스 던전 추가"}]
+"changeLog": [{"type": "add", "comment": "양식 생성기능 추가"}]
 }
