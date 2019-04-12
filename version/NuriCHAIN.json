@@ -1,7 +1,7 @@
 {
 "program": "NuriCHAIN",
-"lastVersion": "0.0.6",
-"lastUpdate": "2019-04-09-21:41",
+"lastVersion": "0.0.7",
+"lastUpdate": "2019-04-12-18:49",
 "server": 71,
-"changeLog": [{"type": "add", "comment": "양식 생성기능 추가"}]
+"changeLog": [{"type": "add", "comment": "로그인 타임아웃 완화"}]
 }
