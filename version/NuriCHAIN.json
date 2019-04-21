@@ -1,7 +1,7 @@
 {
 "program": "NuriCHAIN",
-"lastVersion": "0.0.7",
-"lastUpdate": "2019-04-12-18:49",
+"lastVersion": "0.0.8",
+"lastUpdate": "2019-04-22-00:03",
 "server": 71,
-"changeLog": [{"type": "add", "comment": "로그인 타임아웃 완화"}]
+"changeLog": [{"type": "add", "comment": "검색결과 경로지정 기능 추가"},{"type": "fix", "comment": "DB 저장 위치 변경(c드라이브 속 NuriCHAIN 디렉터리)"}]
 }
