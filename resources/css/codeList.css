@@ -94,9 +94,8 @@ tr:hover {
   height: 50px;
 }
 
-#downloadIcon {
+.downloadIcon {
   transition: 0.2s;
-  background-image: url("../img/icon/download.png");
   background-size: 35px;
   border-radius: 5px;
   width: 35px;
@@ -104,12 +103,27 @@ tr:hover {
   margin: 5px;
 }
 
+.downloadIcon:hover .tooltip {
+  visibility: visible;
+}
+
+#downloadIcon {
+  background-image: url("../img/icon/download.png");
+}
 #downloadIcon:hover {
   background-image: url("../img/icon/download-hover.png");
 }
-
-#downloadIcon:hover .tooltip {
-  visibility: visible;
+#downloadIcon32 {
+  background-image: url("../img/icon/32download.png");
+}
+#downloadIcon32:hover {
+  background-image: url("../img/icon/32download-hover.png");
+}
+#downloadIcon64 {
+  background-image: url("../img/icon/64download.png");
+}
+#downloadIcon64:hover {
+  background-image: url("../img/icon/64download-hover.png");
 }
 #informationIcon {
   transition: 0.2s;
