@@ -2,7 +2,7 @@
 "program": "GoldBigDragonRPG",
 "lastVersion": "Advanced",
 "minecraftVersion": "1.12.2",
-"lastUpdate": "2018-07-22-14:13",
+"lastUpdate": "2019-06-21-02:06",
 "server": -1,
-"changeLog": [{"type": "bugFix", "comment": "Area/Monster naming error"}]
+"changeLog": [{"type": "§a버그수정", "comment": "커스텀 무기 데미지 연산 오류"},{"type": "§a버그수정", "comment": "사망시 플레이어 충돌 제거"},{"type": "§b기능추가", "comment": "커스텀 아이템 생성 시 딜레이 제거 버튼 추가"},{"type": "§b기능추가", "comment": "업데이트 내역 확인 가능"}]
 }
