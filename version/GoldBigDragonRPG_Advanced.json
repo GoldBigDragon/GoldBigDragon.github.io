@@ -2,7 +2,7 @@
 "program": "GoldBigDragonRPG",
 "lastVersion": "Advanced",
 "minecraftVersion": "1.12.2",
-"lastUpdate": "2019-07-14-01:18",
+"lastUpdate": "2019-07-23-17:34",
 "server": -1,
-"changeLog": [{"type": "§a버그수정", "comment": "개조 장인 레시피가 등록되지 않던 현상"},{"type": "§a버그수정", "comment": "콘솔에서 버전 체크시 한글이 깨지던 현상"}]
+"changeLog": [{"type": "§a버그수정", "comment": "무기의 설명란이 분류 형태일 경우, 데미지 적용이 안되던 현상"}]
 }
