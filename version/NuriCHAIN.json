@@ -1,7 +1,7 @@
 {
 "program": "NuriCHAIN",
-"lastVersion": "0.0.8",
-"lastUpdate": "2019-04-22-00:03",
+"lastVersion": "0.0.9",
+"lastUpdate": "2019-11-25-21:06",
 "server": 71,
-"changeLog": [{"type": "add", "comment": "검색결과 경로지정 기능 추가"},{"type": "fix", "comment": "DB 저장 위치 변경(c드라이브 속 NuriCHAIN 디렉터리)"}]
+"changeLog": [{"type": "add", "comment": "옵션 버튼 추가"},{"type": "add", "comment": "테마 변경, 음향 ON/OFF, 공지사항 ON/OFF 기능 추가"},{"type": "add", "comment": "공지사항 메시지 실시간 출력"},{"type": "fix", "comment": "최적화 스레드 활성화"}]
 }
