@@ -2,7 +2,7 @@
 "program": "GoldBigDragonRPG",
 "lastVersion": "Advanced",
 "minecraftVersion": "1.12.2",
-"lastUpdate": "2019-07-23-17:34",
+"lastUpdate": "2020-03-04-20:03",
 "server": -1,
-"changeLog": [{"type": "§a버그수정", "comment": "무기의 설명란이 분류 형태일 경우, 데미지 적용이 안되던 현상"}]
+"changeLog": [{"type": "§a버그수정", "comment": "던전 제단 생성 중, [이끼 낀 제단], [金泰龍] 제단 생성이 불가하던 버그"}]
 }
