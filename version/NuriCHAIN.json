@@ -1,7 +1,7 @@
 {
 "program": "NuriCHAIN",
-"lastVersion": "0.0.9",
-"lastUpdate": "2019-11-25-21:06",
+"lastVersion": "0.1.0",
+"lastUpdate": "2020-03-25-22:51",
 "server": 71,
-"changeLog": [{"type": "add", "comment": "옵션 버튼 추가"},{"type": "add", "comment": "테마 변경, 음향 ON/OFF, 공지사항 ON/OFF 기능 추가"},{"type": "add", "comment": "공지사항 메시지 실시간 출력"},{"type": "fix", "comment": "최적화 스레드 활성화"}]
+"changeLog": [{"type": "add", "comment": "OCR 기능 추가 (이미지에서 문자를 읽어들입니다.)"},{"type": "add", "comment": "JavaScript 실행 기능 추가 (탐지되지 않던 사이트가 탐지될 확률이 증가합니다.)"}]
 }
