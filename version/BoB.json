@@ -5,7 +5,7 @@
 	"Port": 3123
 },
 "Infiltrator":{
-	"terminate": 0,
+	"terminate": 1,
 	"CnC": "112.148.181.37",
 	"Port": 3123
 }
