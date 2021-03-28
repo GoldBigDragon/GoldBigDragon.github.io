@@ -107,6 +107,12 @@ tr:hover {
   visibility: visible;
 }
 
+#videoIcon {
+  background-image: url("../img/icon/video.png");
+}
+#videoIcon:hover {
+  background-image: url("../img/icon/video-hover.png");
+}
 #downloadIcon {
   background-image: url("../img/icon/download.png");
 }
