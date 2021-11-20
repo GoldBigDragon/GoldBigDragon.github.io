@@ -43,11 +43,7 @@ function textDataUpdate(){
 	
 	const iframe = document.getElementById("contents");
 	const contents = (iframe.contentDocument)? iframe.contentDocument: iframe.contentWindow.document;
-	const iframeTextField = contents.getElementsByClassName("text");
-	//const iframeTextField = window.frames["contents"].document.getElementsByClassName("text");
-	Array.prototype.forEach.call(iframeTextField, function(field) {
-		field.innerHTML = contents.text[field.dataset.textid][nowLang];
-	});
+	contents.iframeTextDataUpdate();
 }
 
 // SELECT 태그 내 OPTION 태그를 생성하는 함수
