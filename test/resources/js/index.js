@@ -46,7 +46,7 @@ function textDataUpdate(){
 	const iframeTextField = contents.getElementsByClassName("text");
 	//const iframeTextField = window.frames["contents"].document.getElementsByClassName("text");
 	Array.prototype.forEach.call(iframeTextField, function(field) {
-		field.innerHTML = text[field.dataset.textid][nowLang];
+		field.innerHTML = contents.text[field.dataset.textid][nowLang];
 	});
 }
 
