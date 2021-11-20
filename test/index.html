@@ -1,0 +1,50 @@
+<!-- 
+ Created : ‎2021‎.11.19 22:08:53
+ Author : GoldBigDragon (김태룡)
+ Contact : dnwndugod642@naver.com
+ Github : http://goldbigdragon.github.io
+
+ Purpose : Index page
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./resources/css/basic.css" />
+	<link rel="stylesheet" href="./resources/css/index.css" />
+	<link rel="stylesheet" href="./resources/css/theme_black.css" />
+	<title>GoldBigDragon</title>
+</head>
+<body style="background-color: #353535">
+	<div style="height: 100vh; text-align: center;">
+		<div id="leftMenu" class="hovering">
+			<table>
+				<tr>
+					<td>
+						<div class="text" data-textid="MENU_BUTTON_HOME"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="text" data-textid="MENU_BUTTON_INFO"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="text" data-textid="MENU_BUTTON_POSTING"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!-- http://goodthing.me/saucetip/4664 -->
+		<!-- https://strangelight.tistory.com/entry/iframe-%EB%B6%80%EB%AA%A8-%EC%9E%90%EC%8B%9D-%EC%A0%91%EA%B7%BC -->
+		<iframe id="contents" src="./home.html" style="height:100vh;overflow: auto;" frameborder="0"> </iframe>
+		<div id="rightMenu" class="hovering">
+		</div>
+	</div>
+	<div id="languageField" data-lang="e" onClick="changeLang()"></div>
+	<script src="./resources/datas/index.js"></script>
+	<script src="./resources/js/index.js"></script>
+</body>
+</html>

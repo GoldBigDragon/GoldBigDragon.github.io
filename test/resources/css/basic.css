@@ -1,0 +1,67 @@
+/**
+ * Created : ‎2021‎.11.19. 22:08:53
+ * Author : GoldBigDragon (김태룡)
+ * Contact : dnwndugod642@naver.com
+ * Github : http://goldbigdragon.github.io
+ * 
+ * Purpose : Basic style sheet.
+ **/
+
+@font-face {
+  font-family: "Roboto" sans-serif;
+  src: url(../font/Roboto-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat" sans-serif;
+  src: url(../font/Montserrat-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSans-Black" sans-serif;
+  src: url(../font/NotoSans-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSans-Bold" sans-serif;
+  src: url(../font/NotoSans-Bold.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSans-Light" sans-serif;
+  src: url(../font/NotoSans-Light.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSans-Medium" sans-serif;
+  src: url(../font/NotoSans-Medium.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSans-Regular" sans-serif;
+  src: url(../font/NotoSans-Regular.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSans-Thinr" sans-serif;
+  src: url(../font/NotoSans-Thin.ttf) format("truetype");
+}
+
+body {
+  margin: 0px;
+  background-color: transparent;
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #2f3542;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+	height: 15px;
+	background-color: rgba(221, 221, 221, 0.6);
+}

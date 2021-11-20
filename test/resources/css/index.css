@@ -1,0 +1,152 @@
+/**
+ * Created : ‎2021‎.11.19. 22:08:53
+ * Author : GoldBigDragon (김태룡)
+ * Contact : dnwndugod642@naver.com
+ * Github : http://goldbigdragon.github.io
+ * 
+ * Purpose : Basic style sheet.
+ **/
+
+@media (min-width: 2049px), handheld and (orientation: landscape) {
+	#leftMenu, #rightMenu{
+		width: 150px;
+	}
+	#languageField{
+		width: 120px;
+		height: 120px;
+		right: 15px;
+		bottom: 15px;
+	}
+	#contents{
+		width:calc(100% - 300px);
+	}
+}
+
+@media (max-width: 2048px), handheld and (orientation: portrait) {
+	#leftMenu, #rightMenu{
+		width: 120px;
+	}
+	#languageField{
+		width: 100px;
+		height: 100px;
+		right: 10px;
+		bottom: 10px;
+	}
+	#contents{
+		width:calc(100% - 240px);
+	}
+}
+
+@media (max-width: 1024px), handheld and (orientation: portrait) {
+	#leftMenu, #rightMenu{
+		width: 100px;
+	}
+	#languageField{
+		width: 80px;
+		height: 80px;
+		right: 10px;
+		bottom: 10px;
+	}
+	#contents{
+		width:calc(100% - 200px);
+	}
+}
+
+@media (max-width: 850px) {
+	#leftMenu, #rightMenu{
+		width: 70px;
+	}
+	#languageField{
+		width: 60px;
+		height: 60px;
+		right: 5px;
+		bottom: 5px;
+	}
+	#contents{
+		width:calc(100% - 140px);
+	}
+}
+
+@media (max-width: 425px) {
+	#leftMenu, #rightMenu{
+		width: 50px;
+	}
+	#languageField{
+		width: 40px;
+		height: 40px;
+		right: 5px;
+		bottom: 5px;
+	}
+	#contents{
+		width:calc(100% - 100px);
+	}
+}
+
+@media (max-width: 375px) {
+	#leftMenu, #rightMenu{
+		width: 40px;
+	}
+	#languageField{
+		width: 30px;
+		height: 30px;
+		right: 5px;
+		bottom: 5px;
+	}
+	#contents{
+		width:calc(100% - 80px);
+	}
+}
+
+@media (max-width: 320px) {
+	#leftMenu, #rightMenu{
+		width: 30px;
+	}
+	#languageField{
+		width: 20px;
+		height: 20px;
+		right: 5px;
+		bottom: 5px;
+	}
+	#contents{
+		width:calc(100% - 60px);
+	}
+}
+
+#languageField{
+	display: flex;
+	position: absolute;
+	border-radius: 10%;
+	background-image: url(../img/united_states_of_america.png);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+	opacity: 0.5;
+}
+#languageField:hover{
+	background-size: 80%;
+	opacity: 1;
+	transition: 0.2s;
+}
+#languageField:active{
+	transform: rotate(0.129turn) scaleX(0.6) scaleY(0.6);
+	transition: 0.2s;
+}
+
+#leftMenu {
+	display: grid;
+	height: 100vh;
+}
+#rightMenu{
+	display: inline-grid;
+	height: 100vh;
+}
+
+.hovering{
+	position: absolute;
+	opacity: 0.2;
+}
+.hovering:hover{
+	opacity: 1;
+	transition: 0.1s;
+}
