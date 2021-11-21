@@ -58,7 +58,5 @@ function optionCreator(target, value, title, isSelect, tooltip) {
 }
 
 window.onload = function() {
-	document.getElementById('contents').onload = function() {
-		textDataUpdate();
-	}
+	textDataUpdate();
 };

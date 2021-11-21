@@ -17,34 +17,58 @@
 	<title>GoldBigDragon</title>
 	<script src="./resources/datas/index.js"></script>
 </head>
-<body style="background-color: #353535">
+<body style="background-color: #131313">
 	<div style="height: 100vh; text-align: center;">
 		<div id="leftMenu" class="hovering">
-			<table>
+			<table class="menuBar">
 				<tr>
 					<td>
-						<div class="text" data-textid="MENU_BUTTON_HOME"></div>
+						<div id="home" class="menuButton"></div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="text" data-textid="MENU_BUTTON_INFO"></div>
+						<div id="info" class="menuButton"></div>
+					</td>
+				</tr
+				<tr>
+					<td>
+						<div id="code" class="menuButton"></div>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<div class="text" data-textid="MENU_BUTTON_POSTING"></div>
+						<div id="blog" class="menuButton"></div>
 					</td>
 				</tr>
 			</table>
 		</div>
-		<!-- http://goodthing.me/saucetip/4664 -->
-		<!-- https://strangelight.tistory.com/entry/iframe-%EB%B6%80%EB%AA%A8-%EC%9E%90%EC%8B%9D-%EC%A0%91%EA%B7%BC -->
 		<iframe id="contents" src="./home.html" style="height:100vh;overflow: auto;" frameborder="0"> </iframe>
 		<div id="rightMenu" class="hovering">
+			<table class="menuBar" style="align-self: end">
+				<tr>
+					<td>
+						<div id="languageField" class="menuButton" data-lang="e" onClick="changeLang()"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a target="_blank" rel="noopener noreferrer" href="https://github.com/GoldBigDragon"><div id="github" class="menuButton"></div></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a target="_blank" rel="noopener noreferrer" href="https://cafe.naver.com/goldbigdragon"><div id="naverCafe" class="menuButton"></div></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCIQteJPyepu7iaK8f7ow16g"><div id="youtube" class="menuButton"></div></a>
+					</td>
+				</tr>
+			</table>
 		</div>
 	</div>
-	<div id="languageField" data-lang="e" onClick="changeLang()"></div>
 	<script src="./resources/js/index.js"></script>
 </body>
 </html>
