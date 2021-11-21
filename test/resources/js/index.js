@@ -43,18 +43,8 @@ function textDataUpdate(){
 	document.getElementById("contents").contentWindow.iframeTextDataUpdate();
 }
 
-// SELECT 태그 내 OPTION 태그를 생성하는 함수
-function optionCreator(target, value, title, isSelect, tooltip) {
-	const option = document.createElement("option");
-	option.value = value;
-	option.innerHTML = "&nbsp;" + title + "&nbsp;";
-	if (isSelect) {
-		option.selected = "selected";
-	}
-	if (tooltip != null) {
-		option.title = tooltip;
-	}
-	target.appendChild(option);
+function iframeChange(url){
+    document.getElementById("contents").src = url;
 }
 
 window.onload = function() {
