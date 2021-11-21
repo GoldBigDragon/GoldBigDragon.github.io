@@ -169,13 +169,19 @@
 	background-image: url(../img/united_states_of_america.png);
 }
 
+#languageField:active{
+	transform: rotate(0.129turn) scaleX(0.6) scaleY(0.6);
+}
+
 #leftMenu {
 	display: grid;
 	height: 100vh;
+    background-color: #282828;
 }
 #rightMenu{
 	display: inline-grid;
 	height: 100vh;
+    background-color: #282828;
 }
 
 .hovering{
