@@ -17,10 +17,10 @@
 	<title>GoldBigDragon</title>
 	<script src="./resources/datas/index.js"></script>
 </head>
-<body style="background-color: #131313">
-	<div style="height: 100vh; text-align: center;">
-		<div id="leftMenu" class="hovering">
-			<table class="menuBar">
+<body style="background-color: #131313; overflow-y: hidden;">
+	<div>
+		<div id="leftMenu">
+			<table id="horizenMenuBar" class="menuBar">
 				<tr>
 					<td>
 						<div id="home" class="menuButton" onClick="iframeChange('./home.html')"></div>
@@ -30,7 +30,7 @@
 					<td>
 						<div id="info" class="menuButton" onClick="iframeChange('./info.html')"></div>
 					</td>
-				</tr
+				</tr>
 				<tr>
 					<td>
 						<div id="code" class="menuButton" onClick="iframeChange('./code.html')"></div>
@@ -41,11 +41,6 @@
 						<div id="blog" class="menuButton" onClick="iframeChange('./blog.html')"></div>
 					</td>
 				</tr>
-			</table>
-		</div>
-		<iframe id="contents" src="./home.html" style="height:100vh;overflow: auto;" frameborder="0"> </iframe>
-		<div id="rightMenu" class="hovering">
-			<table class="menuBar" style="align-self: end">
 				<tr>
 					<td>
 						<div id="languageField" class="menuButton" data-lang="e" onClick="changeLang()"></div>
@@ -67,6 +62,38 @@
 					</td>
 				</tr>
 			</table>
+			
+			<table id="verticalMenuBar" class="menuBar">
+				<tr>
+					<td>
+						<div id="home" class="menuButton" onClick="iframeChange('./home.html')"></div>
+					</td>
+					<td>
+						<div id="info" class="menuButton" onClick="iframeChange('./info.html')"></div>
+					</td>
+					<td>
+						<div id="code" class="menuButton" onClick="iframeChange('./code.html')"></div>
+					</td>
+					<td>
+						<div id="blog" class="menuButton" onClick="iframeChange('./blog.html')"></div>
+					</td>
+					<td>
+						<div id="languageField" class="menuButton" data-lang="e" onClick="changeLang()"></div>
+					</td>
+					<td>
+						<a target="_blank" rel="noopener noreferrer" href="https://github.com/GoldBigDragon"><div id="github" class="menuButton"></div></a>
+					</td>
+					<td>
+						<a target="_blank" rel="noopener noreferrer" href="https://cafe.naver.com/goldbigdragon"><div id="naverCafe" class="menuButton"></div></a>
+					</td>
+					<td>
+						<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCIQteJPyepu7iaK8f7ow16g"><div id="youtube" class="menuButton"></div></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="contentWrapper" style="display:inline-flex;">
+			<iframe id="contents" src="./home.html" style="height: calc(100vh - 2px); overflow: auto;" frameborder="0"> </iframe>
 		</div>
 	</div>
 	<script src="./resources/js/index.js"></script>

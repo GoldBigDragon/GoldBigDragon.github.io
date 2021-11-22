@@ -8,72 +8,112 @@
  **/
 
 @media (min-width: 2049px), handheld and (orientation: landscape) {
-	#leftMenu, #rightMenu{
-		width: 150px;
+	#leftMenu{
+		display: inline-block;
+		text-align: -webkit-center;
+		background-color: #282828;
+		opacity: 0.2;
+		height:100vh;
+		width: 120px;
+	}
+	#verticalMenuBar{
+		display:none;
 	}
 	.menuBar{
 		-webkit-border-vertical-spacing: 65px;
 	}
 	.menuButton{
-		width: 75px;
-		height: 75px;
+		width: 60px;
+		height: 60px;
 	}
-	#contents{
-		width:calc(100% - 300px);
+	#contentWrapper{
+		width: calc(100% - 130px);
 	}
 }
 
 @media (max-width: 2048px), handheld and (orientation: portrait) {
-	#leftMenu, #rightMenu{
-		width: 120px;
+	#leftMenu{
+		display: inline-block;
+		text-align: -webkit-center;
+		background-color: #282828;
+		opacity: 0.2;
+		height:100vh;
+		width: 80px;
+	}
+	#verticalMenuBar{
+		display:none;
 	}
 	.menuBar{
 		-webkit-border-vertical-spacing: 50px;
 	}
 	.menuButton{
-		width: 60px;
-		height: 60px;
+		width: 40px;
+		height: 40px;
 	}
-	#contents{
-		width:calc(100% - 240px);
+	#contentWrapper{
+		width: calc(100% - 90px);
 	}
 }
 
 @media (max-width: 1024px), handheld and (orientation: portrait) {
-	#leftMenu, #rightMenu{
-		width: 100px;
+	#leftMenu{
+		display: inline-block;
+		text-align: -webkit-center;
+		background-color: #282828;
+		opacity: 0.2;
+		height:100vh;
+		width: 70px;
+	}
+	#verticalMenuBar{
+		display:none;
 	}
 	.menuBar{
 		-webkit-border-vertical-spacing: 40px;
 	}
 	.menuButton{
-		width: 50px;
-		height: 50px;
+		width: 35px;
+		height: 35px;
 	}
-	#contents{
-		width:calc(100% - 200px);
+	#contentWrapper{
+		width: calc(100% - 80px);
 	}
 }
 
 @media (max-width: 850px) {
-	#leftMenu, #rightMenu{
-		width: 70px;
+	#leftMenu{
+		display: inline-block;
+		text-align: -webkit-center;
+		background-color: #282828;
+		opacity: 0.2;
+		height:100vh;
+		width: 60px;
+	}
+	#verticalMenuBar{
+		display:none;
 	}
 	.menuBar{
 		-webkit-border-vertical-spacing: 25px;
 	}
 	.menuButton{
-		width: 35px;
-		height: 35px;
+		width: 30px;
+		height: 30px;
 	}
-	#contents{
-		width:calc(100% - 140px);
+	#contentWrapper{
+		width: calc(100% - 70px);
 	}
 }
 
 @media (max-width: 425px) {
-	#leftMenu, #rightMenu{
+	#leftMenu{
+		display: inline-block;
+		text-align: -webkit-center;
+		background-color: #282828;
+		opacity: 0.2;
+		height:100vh;
 		width: 50px;
+	}
+	#verticalMenuBar{
+		display:none;
 	}
 	.menuBar{
 		-webkit-border-vertical-spacing: 15px;
@@ -82,14 +122,22 @@
 		width: 25px;
 		height: 25px;
 	}
-	#contents{
-		width:calc(100% - 100px);
+	#contentWrapper{
+		width: calc(100% - 60px);
 	}
 }
 
 @media (max-width: 375px) {
-	#leftMenu, #rightMenu{
+	#leftMenu{
+		display: inline-block;
+		text-align: -webkit-center;
+		background-color: #282828;
+		opacity: 0.2;
+		height:100vh;
 		width: 40px;
+	}
+	#verticalMenuBar{
+		display:none;
 	}
 	.menuBar{
 		-webkit-border-vertical-spacing: 10px;
@@ -98,24 +146,38 @@
 		width: 20px;
 		height: 20px;
 	}
-	#contents{
-		width:calc(100% - 80px);
+	#contentWrapper{
+		width: calc(100% - 50px);
 	}
 }
 
 @media (max-width: 320px) {
-	#leftMenu, #rightMenu{
-		width: 30px;
+	#leftMenu{
+		display:block;
+		text-align: left;
+		background-color: #282828;
+		opacity: 0.2;
+		width:100%;
+		height: 40px;
+	}
+	#horizenMenuBar{
+		display:none;
+	}
+	#verticalMenuBar{
+		display:unset;
 	}
 	.menuBar{
-		-webkit-border-vertical-spacing: 5px;
+		-webkit-border-horizontal-spacing: 10px;
 	}
 	.menuButton{
 		width: 15px;
 		height: 15px;
 	}
+	#contentWrapper{
+		width: 100%;
+	}
 	#contents{
-		width:calc(100% - 60px);
+		height: calc(100vh - 42px);
 	}
 }
 
@@ -173,22 +235,12 @@
 	transform: rotate(0.129turn) scaleX(0.6) scaleY(0.6);
 }
 
-#leftMenu {
-	display: grid;
-	height: 100vh;
-    background-color: #282828;
-}
-#rightMenu{
-	display: inline-grid;
-	height: 100vh;
-    background-color: #282828;
-}
-
-.hovering{
-	position: absolute;
-	opacity: 0.2;
-}
-.hovering:hover{
+#leftMenu:hover{
 	opacity: 1;
 	transition: 0.1s;
+}
+
+#contents{
+	display: inline-block;
+	width: 100%;
 }
