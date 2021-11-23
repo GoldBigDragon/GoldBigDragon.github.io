@@ -1,42 +1,46 @@
 function changeLang(){
 	const languageField = document.getElementById("languageField");
 	const nowLang = languageField.dataset.lang;
-	if(nowLang == "k") {
-		languageField.dataset.lang = "j";
-	} else if(nowLang == "j") {
-		languageField.dataset.lang = "c";
-	} else if(nowLang == "c") {
-		languageField.dataset.lang = "r";
-	} else if(nowLang == "e") {
-		languageField.dataset.lang = "k";
-	} else {
-		languageField.dataset.lang = "e";
-	}
-	changeLangIcon();
+	const langFields = document.getElementsByClassName("languageField");
+	Array.prototype.forEach.call(langFields, function(field) {
+		if(nowLang == "k") {
+			field.dataset.lang = "j";
+		} else if(nowLang == "j") {
+			field.dataset.lang = "c";
+		} else if(nowLang == "c") {
+			field.dataset.lang = "r";
+		} else if(nowLang == "e") {
+			field.dataset.lang = "k";
+		} else {
+			field.dataset.lang = "e";
+		}
+	});
+	changeLangIcon(nowLang);
 	textDataUpdate();
 }
 
-function changeLangIcon() {
-	const languageField = document.getElementById("languageField");
-	const nowLang = languageField.dataset.lang;
-	if(nowLang == "k") {
-		languageField.style.backgroundImage = "url(resources/img/korea.png)";
-	} else if(nowLang == "j") {
-		languageField.style.backgroundImage = "url(resources/img/japan.png)";
-	} else if(nowLang == "c") {
-		languageField.style.backgroundImage = "url(resources/img/china.png)";
-	} else if(nowLang == "r") {
-		languageField.style.backgroundImage = "url(resources/img/russia.png)";
-	} else {
-		languageField.style.backgroundImage = "url(resources/img/united_states_of_america.png)";
-	}
+function changeLangIcon(nowLang) {
+	const langFields = document.getElementsByClassName("languageField");
+	Array.prototype.forEach.call(langFields, function(field) {
+		if(nowLang == "k") {
+			field.style.backgroundImage = "url(resources/img/korea.png)";
+		} else if(nowLang == "j") {
+			field.style.backgroundImage = "url(resources/img/japan.png)";
+		} else if(nowLang == "c") {
+			field.style.backgroundImage = "url(resources/img/china.png)";
+		} else if(nowLang == "r") {
+			field.style.backgroundImage = "url(resources/img/russia.png)";
+		} else {
+			field.style.backgroundImage = "url(resources/img/united_states_of_america.png)";
+		}
+	});
 }
 
 function textDataUpdate(){
 	const languageField = document.getElementById("languageField");
 	const nowLang = languageField.dataset.lang;
 	const textField = document.getElementsByClassName("text");
-	changeLangIcon();
+	changeLangIcon(nowLang);
 	Array.prototype.forEach.call(textField, function(field) {
 		field.innerHTML = text[field.dataset.textid][nowLang];
 	});

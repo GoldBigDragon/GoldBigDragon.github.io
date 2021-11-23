@@ -11,20 +11,16 @@
 	#leftMenu{
 		display: inline-block;
 		text-align: -webkit-center;
-		background-color: #282828;
-		opacity: 0.2;
 		height:100vh;
 		width: 120px;
 	}
 	#verticalMenuBar{
 		display:none;
 	}
-	.menuBar{
-		-webkit-border-vertical-spacing: 65px;
-	}
 	.menuButton{
 		width: 60px;
 		height: 60px;
+		margin: 30px;
 	}
 	#contentWrapper{
 		width: calc(100% - 130px);
@@ -35,20 +31,16 @@
 	#leftMenu{
 		display: inline-block;
 		text-align: -webkit-center;
-		background-color: #282828;
-		opacity: 0.2;
 		height:100vh;
 		width: 80px;
 	}
 	#verticalMenuBar{
 		display:none;
 	}
-	.menuBar{
-		-webkit-border-vertical-spacing: 50px;
-	}
 	.menuButton{
 		width: 40px;
 		height: 40px;
+		margin: 20px;
 	}
 	#contentWrapper{
 		width: calc(100% - 90px);
@@ -59,20 +51,16 @@
 	#leftMenu{
 		display: inline-block;
 		text-align: -webkit-center;
-		background-color: #282828;
-		opacity: 0.2;
 		height:100vh;
 		width: 70px;
 	}
 	#verticalMenuBar{
 		display:none;
 	}
-	.menuBar{
-		-webkit-border-vertical-spacing: 40px;
-	}
 	.menuButton{
 		width: 35px;
 		height: 35px;
+		margin: 17.5px;
 	}
 	#contentWrapper{
 		width: calc(100% - 80px);
@@ -83,20 +71,16 @@
 	#leftMenu{
 		display: inline-block;
 		text-align: -webkit-center;
-		background-color: #282828;
-		opacity: 0.2;
 		height:100vh;
 		width: 60px;
 	}
 	#verticalMenuBar{
 		display:none;
 	}
-	.menuBar{
-		-webkit-border-vertical-spacing: 25px;
-	}
 	.menuButton{
 		width: 30px;
 		height: 30px;
+		margin: 15px;
 	}
 	#contentWrapper{
 		width: calc(100% - 70px);
@@ -107,20 +91,16 @@
 	#leftMenu{
 		display: inline-block;
 		text-align: -webkit-center;
-		background-color: #282828;
-		opacity: 0.2;
 		height:100vh;
 		width: 50px;
 	}
 	#verticalMenuBar{
 		display:none;
 	}
-	.menuBar{
-		-webkit-border-vertical-spacing: 15px;
-	}
 	.menuButton{
 		width: 25px;
 		height: 25px;
+		margin: 12.5px;
 	}
 	#contentWrapper{
 		width: calc(100% - 60px);
@@ -131,20 +111,16 @@
 	#leftMenu{
 		display: inline-block;
 		text-align: -webkit-center;
-		background-color: #282828;
-		opacity: 0.2;
 		height:100vh;
 		width: 40px;
 	}
 	#verticalMenuBar{
 		display:none;
 	}
-	.menuBar{
-		-webkit-border-vertical-spacing: 10px;
-	}
 	.menuButton{
 		width: 20px;
 		height: 20px;
+		margin: 10px;
 	}
 	#contentWrapper{
 		width: calc(100% - 50px);
@@ -155,8 +131,6 @@
 	#leftMenu{
 		display:block;
 		text-align: left;
-		background-color: #282828;
-		opacity: 0.2;
 		width:100%;
 		height: 40px;
 	}
@@ -166,12 +140,10 @@
 	#verticalMenuBar{
 		display:unset;
 	}
-	.menuBar{
-		-webkit-border-horizontal-spacing: 10px;
-	}
 	.menuButton{
 		width: 15px;
 		height: 15px;
+		margin: 7.5px;
 	}
 	#contentWrapper{
 		width: 100%;
@@ -179,6 +151,9 @@
 	#contents{
 		height: calc(100vh - 42px);
 	}
+}
+#leftMenu {
+	overflow-y: auto;
 }
 
 #home{
@@ -227,20 +202,25 @@
 	overflow: hidden;
 }
 
-#languageField{
+.languageField{
 	background-image: url(../img/united_states_of_america.png);
 }
 
-#languageField:active{
+.languageField:active{
 	transform: rotate(0.129turn) scaleX(0.6) scaleY(0.6);
-}
-
-#leftMenu:hover{
-	opacity: 1;
-	transition: 0.1s;
 }
 
 #contents{
 	display: inline-block;
 	width: 100%;
+}
+
+#leftMenu::-webkit-scrollbar-thumb {
+	width:0px;
+	height:0px;
+}
+
+#leftMenu::-webkit-scrollbar {
+	width:0px;
+	height:0px;
 }

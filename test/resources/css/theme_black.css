@@ -6,18 +6,14 @@
  * 
  * Purpose : Black theme style sheet.
  **/
-#contents {
-	background-color: #191919;
+#contents, body {
+	background-color: #36393F;
 }
 
 div{
 	color: #EEE;
 }
 
-.hovering{
-	background-color: #131313;
+#leftMenu{
+	background-color: #202225;
 }
-.hovering:hover{
-	background-color: #242424;
-}
- 
