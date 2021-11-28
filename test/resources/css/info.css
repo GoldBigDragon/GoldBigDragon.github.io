@@ -1,0 +1,173 @@
+/**
+ * Created : ‎2021‎.11.27. 12:13:04
+ * Author : GoldBigDragon (김태룡)
+ * Contact : dnwndugod642@naver.com
+ * Github : http://goldbigdragon.github.io
+ * 
+ * Purpose : Info page style sheet.
+ **/
+
+@media (min-width: 2049px), handheld and (orientation: landscape) {
+	.nameTable{
+		padding: 48px;
+	}
+	.mark{
+		width: 320px;
+		height: 320px;
+	}
+	.mark:hover{
+		box-shadow: 0px 0px 32px rgba(255, 191, 0, 0.5);
+	}
+	.markTooltip{
+		top: calc(50% - 50px);
+		width: 100%;
+		padding: 10px;
+	}
+}
+
+@media (max-width: 2048px), handheld and (orientation: portrait) {
+	.nameTable{
+		padding: 24px;
+	}
+	.mark{
+		width: 290px;
+		height: 290px;
+	}
+	.mark:hover{
+		box-shadow: 0px 0px 16px rgba(255, 191, 0, 0.5);
+	}
+	.markTooltip{
+		top: calc(50% - 45px);
+		width: 100%;
+		padding: 8px;
+	}
+}
+
+@media (max-width: 1024px), handheld and (orientation: portrait) {
+	.nameTable{
+		padding: 12px;
+	}
+	.mark{
+		width: 230px;
+		height: 230px;
+	}
+	.mark:hover{
+		box-shadow: 0px 0px 9px rgba(255, 191, 0, 0.5);
+	}
+	.markTooltip{
+		top: calc(50% - 40px);
+		width: 100%;
+		padding: 6px;
+	}
+}
+
+@media (max-width: 850px) {
+	.nameTable{
+		padding: 10px;
+	}
+	.mark{
+		width: 180px;
+		height: 180px;
+	}
+	.mark:hover{
+		box-shadow: 0px 0px 7.5px rgba(255, 191, 0, 0.5);
+	}
+	.markTooltip{
+		top: calc(50% - 32px);
+		width: 100%;
+		padding: 5px;
+	}
+}
+
+@media (max-width: 425px) {
+	.nameTable{
+		padding: 8px;
+	}
+	.mark{
+		width: 150px;
+		height: 150px;
+	}
+	.mark:hover{
+		box-shadow: 0px 0px 6.5px rgba(255, 191, 0, 0.5);
+	}
+	.markTooltip{
+		top: calc(50% - 28px);
+		width: 100%;
+		padding: 4px;
+	}
+}
+
+@media (max-width: 375px) {
+	.nameTable{
+		padding: 6px;
+	}
+	.mark{
+		width: 120px;
+		height: 120px;
+	}
+	.mark:hover{
+		box-shadow: 0px 0px 5.5px rgba(255, 191, 0, 0.5);
+	}
+	.markTooltip{
+		top: calc(50% - 26px);
+		width: 105%;
+		padding: 3px;
+	}
+}
+
+@media (max-width: 320px) {
+	.nameTable{
+		padding: 5px;
+	}
+	.mark{
+		width: 80px;
+		height: 80px;
+	}
+	.mark:hover{
+		box-shadow: 0px 0px 5px rgba(255, 191, 0, 0.5);
+	}
+	.markTooltip{
+		top: calc(50% - 25px);
+		width: 105%;
+		padding: 2px;
+	}
+}
+
+.mark:hover{
+	transform: scaleX(1.03) scaleY(1.03);
+	transition: 0.2s;
+}
+.mark:active{
+	transform: scaleX(0.997) scaleY(0.997);
+	transition: 0.2s;
+}
+
+.zoomHover:hover{
+	transform: scaleX(1.2) scaleY(1.2);
+	transition: 0.2s;
+}
+.zoomHover:active{
+	transform: scaleX(0.8) scaleY(0.8);
+	transition: 0.2s;
+}
+
+.infoArea{
+	padding: 10px;
+	margin:10px;
+	border-radius: 0.3rem;
+}
+
+.mark{
+	border-radius: 50%;
+	background-image: url(../img/mark.png);
+    border-radius: 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.markTooltip{
+	right: 110%;
+	background-color: black;
+	color: #fff;
+}

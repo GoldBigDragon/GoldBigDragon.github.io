@@ -188,6 +188,7 @@
 }
 
 .menuButton:hover{
+    border-radius: 10%;
 	transform: scaleX(1.5) scaleY(1.5);
 	transition: 0.2s;
 }
@@ -196,6 +197,8 @@
 	transition: 0.2s;
 }
 .menuButton{
+	background-color: #36393F;
+    border-radius: 50%;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
