@@ -23,31 +23,69 @@
 	<div class="categoryTitle">
 		<div class="titleBoard">
 			<div class="text h1" data-textid="TITLE" style="display:inline-flex"></div>
-			<div class="h2 categorySubTitle" style="display:inline-flex">&nbsp;|&nbsp;</div>
+			<div class="h2 categorySubTitle dimColor" style="display:inline-flex">&nbsp;|&nbsp;</div>
 			<div class="text h5 dimColor" data-textid="TITLE_DESCRIPTION" style="display:inline-flex"></div>
 		</div>
 	</div>
 	<div class="categoryMain">
+		<br>
 		<table class="nameTable blackBackground" style="border-radius: 1rem; width:100%;">
 			<tr>
 				<td style="width: 100%">
+					<div class="koreaFlag zoomHover" onClick="copyClipboardText('South Korea')"></div>
 					<div class="text h1 zoomHover" data-textid="NAME" onClick="copyClipboard(event)" style="display: inline-flex"></div>
 					<div class="text h3 dimColor zoomHover" data-textid="SUB_NAME" onClick="copyClipboard(event)" style="display: inline-flex"></div>
 				</td>
 				<td rowspan="2">
 					<div class="mark lightBackground tooltipContainer" onClick="copyClipboardText('GoldBigDragon')">
-						<span class="text h5 tooltip markTooltip" data-textid="GOLDBIGDRAGON_DESCRIPTION">Tooltip text</span>
+						<span class="text h5 tooltip markTooltip" data-textid="GOLDBIGDRAGON_DESCRIPTION"></span>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<table style="width:100%;">
+			<tr>
+				<td colspan="2">
+					<div class="infoArea blackBackground">
+						<div class="text h5 dimColor" data-textid="CHRONOLOGY" style="text-align:left; font-weight: bold;"></div>
 					</div>
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td style="width: 50%;">
+					<div class="infoArea blackBackground">
+						<div class="text h5 dimColor" data-textid="SKILL_DEVELOPMENT" style="text-align:left; font-weight: bold;"></div>
+					</div>
+				</td>
+				<td style="width: 50%;">
+					<div class="infoArea blackBackground">
+						<div class="text h5 dimColor" data-textid="SKILL_SECURITY" style="text-align:left; font-weight: bold;"></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="infoArea blackBackground">
+						<div class="text h5 dimColor" data-textid="SKILL_ETC" style="text-align:left; font-weight: bold;"></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="infoArea blackBackground">
+						<div class="text h5 dimColor" data-textid="AWARD" style="text-align:left; font-weight: bold;"></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="infoArea blackBackground">
+						<div class="text h5 dimColor" data-textid="ACHIEVEMENTS" style="text-align:left; font-weight: bold;"></div>
+					</div>
 				</td>
 			</tr>
 		</table>
-		<div class="infoArea">
-			<div class="text" data-textid="TITLE"></div>
-		</div>
 	</div>
 	<script src="./resources/js/data-reader-iframe.js"></script>
 </body>

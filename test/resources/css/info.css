@@ -8,6 +8,10 @@
  **/
 
 @media (min-width: 2049px), handheld and (orientation: landscape) {
+	.infoArea{
+		padding: 20px;
+		margin: 20px;
+	}
 	.nameTable{
 		padding: 48px;
 	}
@@ -23,9 +27,18 @@
 		width: 100%;
 		padding: 10px;
 	}
+	.koreaFlag{
+		width: 60px;
+		height: 38px;
+		margin-right: 30px;
+	}
 }
 
 @media (max-width: 2048px), handheld and (orientation: portrait) {
+	.infoArea{
+		padding: 12px;
+		margin: 12px;
+	}
 	.nameTable{
 		padding: 24px;
 	}
@@ -41,9 +54,18 @@
 		width: 100%;
 		padding: 8px;
 	}
+	.koreaFlag{
+		width: 44px;
+		height: 28px;
+		margin-right: 20px;
+	}
 }
 
 @media (max-width: 1024px), handheld and (orientation: portrait) {
+	.infoArea{
+		padding: 8px;
+		margin: 8px;
+	}
 	.nameTable{
 		padding: 12px;
 	}
@@ -59,9 +81,18 @@
 		width: 100%;
 		padding: 6px;
 	}
+	.koreaFlag{
+		width: 40px;
+		height: 28px;
+		margin-right: 16px;
+	}
 }
 
 @media (max-width: 850px) {
+	.infoArea{
+		padding: 6px;
+		margin: 6px;
+	}
 	.nameTable{
 		padding: 10px;
 	}
@@ -77,9 +108,18 @@
 		width: 100%;
 		padding: 5px;
 	}
+	.koreaFlag{
+		width: 36px;
+		height: 22px;
+		margin-right: 12px;
+	}
 }
 
 @media (max-width: 425px) {
+	.infoArea{
+		padding: 5px;
+		margin: 5px;
+	}
 	.nameTable{
 		padding: 8px;
 	}
@@ -95,9 +135,18 @@
 		width: 100%;
 		padding: 4px;
 	}
+	.koreaFlag{
+		width: 20px;
+		height: 16px;
+		margin-right: 8px;
+	}
 }
 
 @media (max-width: 375px) {
+	.infoArea{
+		padding: 4.5px;
+		margin: 4.5px;
+	}
 	.nameTable{
 		padding: 6px;
 	}
@@ -113,9 +162,18 @@
 		width: 105%;
 		padding: 3px;
 	}
+	.koreaFlag{
+		width: 18px;
+		height: 14px;
+		margin-right: 6px;
+	}
 }
 
 @media (max-width: 320px) {
+	.infoArea{
+		padding: 4px;
+		margin: 4px;
+	}
 	.nameTable{
 		padding: 5px;
 	}
@@ -130,6 +188,11 @@
 		top: calc(50% - 25px);
 		width: 105%;
 		padding: 2px;
+	}
+	.koreaFlag{
+		width: 16px;
+		height: 12px;
+		margin-right: 4px;
 	}
 }
 
@@ -152,8 +215,6 @@
 }
 
 .infoArea{
-	padding: 10px;
-	margin:10px;
 	border-radius: 0.3rem;
 }
 
@@ -170,4 +231,14 @@
 	right: 110%;
 	background-color: black;
 	color: #fff;
+}
+
+.koreaFlag{
+	display: inline-flex;
+	background-image: url(../img/flag_korea.png);
+    border-radius: 5%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
 }
