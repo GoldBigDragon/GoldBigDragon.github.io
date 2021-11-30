@@ -34,13 +34,6 @@ const text = {
 		"c": "金 = Gold<br>泰 = Big<br>龍 = Dragon",
 		"r": "Kim = Gold<br>Tae = Big<br>Ryong = Dragon"
 	},
-	"NATIVE": {
-		"e": "Native",
-		"k": "출신",
-		"j": "出身",
-		"c": "你來自哪裡",
-		"r": ""
-	},
 	"CHRONOLOGY": {
 		"e": "Chronology",
 		"k": "연대기",
@@ -75,6 +68,13 @@ const text = {
 		"j": "スキル - 等",
 		"c": "技能 - 等等",
 		"r": "Навыки и умения - И Т. Д"
+	},
+	"EDUCATION": {
+		"e": "Education",
+		"k": "교육",
+		"j": "教育",
+		"c": "教育",
+		"r": "Образование"
 	},
 	"AWARD": {
 		"e": "Award",
