@@ -44,7 +44,11 @@ function textDataUpdate(){
 	Array.prototype.forEach.call(textField, function(field) {
 		field.innerHTML = text[field.dataset.textid][nowLang];
 	});
-	document.getElementById("contents").contentWindow.iframeTextDataUpdate();
+	try{
+		document.getElementById("contents").contentWindow.iframeTextDataUpdate();
+	} catch(err) {
+		console.log(err);
+	}
 }
 
 function iframeChange(url){

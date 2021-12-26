@@ -1,41 +1,32 @@
-function addBadge(targetDivID, badgeImage, descriptionImage){
-	const container = document.getElementById(targetDivID);
+function addBadge(badgeData){
+	console.log(badgeData.container);
+	const container = document.getElementById(badgeData.container);
 	const targetDiv = document.createElement('div');
 	targetDiv.className = "badge";
-	targetDiv.style.backgroundImage = badgeImage;
+	targetDiv.style.backgroundImage = badgeData.background;
 	
 	const titleLabel = document.createElement('div');
-	titleLabel.className = "text label";
+	titleLabel.className = "label";
 	titleLabel.data.textid = "name";
 	
 	const descriptionPane = document.createElement('div');
 	descriptionPane.className = "descriptionPane";
 	
 	const description = document.createElement('div');
-	description.className = "text description";
+	description.className = "description";
 	description.data.textid = "description";
 	
 	const dateInfo = document.createElement('div');
-	dateInfo.className = "text dateInfo";
+	dateInfo.className = "dateInfo";
 	dateInfo.data.textid = "date";
 	
 	const descriptionImagePane = document.createElement('div');
 	descriptionImagePane.className = "descriptionImage";
-	descriptionImagePane.backgroundImage = descriptionImage;
+	descriptionImagePane.backgroundImage = badgeData.logo;
 	
-	Array.prototype.forEach.call(langFields, function(field) {
-		if(nowLang == "k") {
-			field.dataset.lang = "j";
-		} else if(nowLang == "j") {
-			field.dataset.lang = "c";
-		} else if(nowLang == "c") {
-			field.dataset.lang = "r";
-		} else if(nowLang == "e") {
-			field.dataset.lang = "k";
-		} else {
-			field.dataset.lang = "e";
-		}
-	});
-	changeLangIcon(nowLang);
 	textDataUpdate();
 }
+
+	Array.prototype.forEach.call(chronologyBadgeDatas, function(badgeData) {
+		addBadge(badgeData);
+	});
