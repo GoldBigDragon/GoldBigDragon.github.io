@@ -28,7 +28,6 @@ function iframeDataTextUpdate() {
 	const dataTextField = document.getElementsByClassName("datatextid");
 	Array.prototype.forEach.call(dataTextField, function(field) {
 		if(field.dataset.dataname === "chronologyBadgeDatas") {
-			console.log(chronologyBadgeDatas[field.dataset.datakey][field.dataset.datatextid]);
 			field.innerHTML = chronologyBadgeDatas[field.dataset.datakey][field.dataset.datatextid][nowLang];
 		}
 	});

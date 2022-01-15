@@ -21,9 +21,7 @@ function addBadge(dataKey, badgeData){
 	
 	const dateInfo = document.createElement('div');
 	dateInfo.className = "dateInfo datatextid";
-	dateInfo.dataset.dataname = badgeData.variableName;
-	dateInfo.dataset.datakey = dataKey;
-	dateInfo.dataset.datatextid = "date";
+	dateInfo.innerHTML = badgeData.date;
 	
 	const descriptionImagePane = document.createElement('div');
 	descriptionImagePane.className = "descriptionImage";
