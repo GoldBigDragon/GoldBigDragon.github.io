@@ -5,23 +5,22 @@ function addBadge(dataKey, badgeData){
 	targetDiv.style.backgroundImage = badgeData.background;
 	
 	const titleLabel = document.createElement('div');
-	titleLabel.className = "label";
+	titleLabel.className = "label datatextid";
 	titleLabel.dataset.dataname = badgeData.variableName;
 	titleLabel.dataset.datakey = dataKey;
 	titleLabel.dataset.datatextid = "name";
-	titleLabel.innerHTML = badgeData.name.k;
 	
 	const descriptionPane = document.createElement('div');
 	descriptionPane.className = "descriptionPane";
 	
 	const description = document.createElement('div');
-	description.className = "description";
+	description.className = "description datatextid";
 	description.dataset.dataname = badgeData.variableName;
 	description.dataset.datakey = dataKey;
 	description.dataset.datatextid = "description";
 	
 	const dateInfo = document.createElement('div');
-	dateInfo.className = "dateInfo";
+	dateInfo.className = "dateInfo datatextid";
 	dateInfo.dataset.dataname = badgeData.variableName;
 	dateInfo.dataset.datakey = dataKey;
 	dateInfo.dataset.datatextid = "date";
@@ -35,12 +34,11 @@ function addBadge(dataKey, badgeData){
 	targetDiv.appendChild(dateInfo);
 	targetDiv.appendChild(descriptionImagePane);
 	container.appendChild(targetDiv);
-	
-	//textDataUpdate();
 }
 
 function loadBadges(){
 	for (var i = 0; i < Object.keys(chronologyBadgeDatas).length; i++) {
 		addBadge(Object.keys(chronologyBadgeDatas)[i], chronologyBadgeDatas[Object.keys(chronologyBadgeDatas)[i]]);
 	};
+	iframeDataTextUpdate();
 }
