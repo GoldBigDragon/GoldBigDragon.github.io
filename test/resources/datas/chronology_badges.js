@@ -1,6 +1,7 @@
 const chronologyBadgeDatas = {
 	"ELEMENTARY_SCHOOL": {
 		"container": "chronology_container",
+		"variableName": "chronologyBadgeDatas",
 		"name":{
 			"e": "Kunam Elementary school",
 			"k": "구남 초등학교",
@@ -21,6 +22,7 @@ const chronologyBadgeDatas = {
 	},
 	"MIDDLE_SCHOOL":{
 		"container": "chronology_container",
+		"variableName": "chronologyBadgeDatas",
 		"name":{
 			"e": "Beomeo Middle school",
 			"k": "범어 중학교",
@@ -41,6 +43,7 @@ const chronologyBadgeDatas = {
 	},
 	"HIGH_SCHOOL":{
 		"container": "chronology_container",
+		"variableName": "chronologyBadgeDatas",
 		"name":{
 			"e": "Jinhae High school",
 			"k": "진해 고등학교",
@@ -61,6 +64,7 @@ const chronologyBadgeDatas = {
 	},
 	"University":{
 		"container": "chronology_container",
+		"variableName": "chronologyBadgeDatas",
 		"name":{
 			"e": "Youngsan University",
 			"k": "영산 대학교",
@@ -81,6 +85,7 @@ const chronologyBadgeDatas = {
 	},
 	"NURICOPS":{
 		"container": "chronology_container",
+		"variableName": "chronologyBadgeDatas",
 		"name":{
 			"e": "Nuricops",
 			"k": "누리캅스",
@@ -101,6 +106,7 @@ const chronologyBadgeDatas = {
 	},
 	"CORESECURITY":{
 		"container": "chronology_container",
+		"variableName": "chronologyBadgeDatas",
 		"name":{
 			"e": "Coresecurity",
 			"k": "코어시큐리티",
