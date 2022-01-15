@@ -17,4 +17,10 @@ function iframeTextDataUpdate(){
 			field.innerHTML = text[field.dataset.textid][nowLang];
 		});
 	}
+	const dataTextField = document.getElementsByClassName("datatextid");
+	Array.prototype.forEach.call(dataTextField, function(field) {
+		if(field.dataset.dataname === "chronologyBadgeDatas") {
+			field.innerHTML = chronologyBadgeDatas[field.dataset.datakey][field.datatextid][nowLang];
+		}
+	});
 }

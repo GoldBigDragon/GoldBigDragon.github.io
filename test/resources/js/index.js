@@ -46,12 +46,6 @@ function textDataUpdate(){
 	});
 	try{
 		document.getElementById("contents").contentWindow.iframeTextDataUpdate();
-		const dataTextField = document.getElementsByClassName("datatextid");
-		Array.prototype.forEach.call(dataTextField, function(field) {
-			if(field.dataset.dataname === "chronologyBadgeDatas") {
-				field.innerHTML = chronologyBadgeDatas[field.dataset.datakey][field.datatextid][nowLang];
-			}
-		});
 	} catch(err) {
 		console.log(err);
 	}
