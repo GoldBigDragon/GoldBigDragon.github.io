@@ -7,123 +7,23 @@
  * Purpose : Basic style sheet.
  **/
 
-@media (min-width: 2049px), handheld and (orientation: landscape) {
+@media (min-width: 321px), handheld and (orientation: landscape) {
 	#leftMenu{
 		display: inline-block;
 		text-align: -webkit-center;
 		height:100vh;
-		width: 120px;
+		width: 5rem;
+	}
+	#contentWrapper{
+		width: calc(100% - 5.4rem);
 	}
 	#verticalMenuBar{
 		display:none;
 	}
 	.menuButton{
-		width: 60px;
-		height: 60px;
-		margin: 30px;
-	}
-	#contentWrapper{
-		width: calc(100% - 130px);
-	}
-}
-
-@media (max-width: 2048px), handheld and (orientation: portrait) {
-	#leftMenu{
-		display: inline-block;
-		text-align: -webkit-center;
-		height:100vh;
-		width: 80px;
-	}
-	#verticalMenuBar{
-		display:none;
-	}
-	.menuButton{
-		width: 40px;
-		height: 40px;
-		margin: 20px;
-	}
-	#contentWrapper{
-		width: calc(100% - 90px);
-	}
-}
-
-@media (max-width: 1024px), handheld and (orientation: portrait) {
-	#leftMenu{
-		display: inline-block;
-		text-align: -webkit-center;
-		height:100vh;
-		width: 70px;
-	}
-	#verticalMenuBar{
-		display:none;
-	}
-	.menuButton{
-		width: 35px;
-		height: 35px;
-		margin: 17.5px;
-	}
-	#contentWrapper{
-		width: calc(100% - 80px);
-	}
-}
-
-@media (max-width: 850px) {
-	#leftMenu{
-		display: inline-block;
-		text-align: -webkit-center;
-		height:100vh;
-		width: 60px;
-	}
-	#verticalMenuBar{
-		display:none;
-	}
-	.menuButton{
-		width: 30px;
-		height: 30px;
-		margin: 15px;
-	}
-	#contentWrapper{
-		width: calc(100% - 70px);
-	}
-}
-
-@media (max-width: 425px) {
-	#leftMenu{
-		display: inline-block;
-		text-align: -webkit-center;
-		height:100vh;
-		width: 50px;
-	}
-	#verticalMenuBar{
-		display:none;
-	}
-	.menuButton{
-		width: 25px;
-		height: 25px;
-		margin: 12.5px;
-	}
-	#contentWrapper{
-		width: calc(100% - 60px);
-	}
-}
-
-@media (max-width: 375px) {
-	#leftMenu{
-		display: inline-block;
-		text-align: -webkit-center;
-		height:100vh;
-		width: 40px;
-	}
-	#verticalMenuBar{
-		display:none;
-	}
-	.menuButton{
-		width: 20px;
-		height: 20px;
-		margin: 10px;
-	}
-	#contentWrapper{
-		width: calc(100% - 50px);
+		width: 3rem;
+		height: 3rem;
+		margin: 0.5rem 0rem 0.5rem 0rem;
 	}
 }
 
@@ -132,7 +32,6 @@
 		display:block;
 		text-align: left;
 		width:100%;
-		height: 40px;
 	}
 	#horizenMenuBar{
 		display:none;
@@ -140,16 +39,13 @@
 	#verticalMenuBar{
 		display:unset;
 	}
-	.menuButton{
-		width: 15px;
-		height: 15px;
-		margin: 7.5px;
-	}
 	#contentWrapper{
 		width: 100%;
 	}
-	#contents{
-		height: calc(100vh - 42px);
+	.menuButton{
+		width: 2rem;
+		height: 2rem;
+		margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 	}
 }
 #leftMenu {
@@ -197,7 +93,7 @@
 	transition: 0.2s;
 }
 .menuButton{
-	background-color: #36393F;
+	background-color: transparent;
     border-radius: 50%;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -216,14 +112,4 @@
 #contents{
 	display: inline-block;
 	width: 100%;
-}
-
-#leftMenu::-webkit-scrollbar-thumb {
-	width:0px;
-	height:0px;
-}
-
-#leftMenu::-webkit-scrollbar {
-	width:0px;
-	height:0px;
 }
