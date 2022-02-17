@@ -1,0 +1,215 @@
+/**
+ * Created : ‎2022‎.02.16 20:46:36
+ * Author : GoldBigDragon (김태룡)
+ * Contact : dnwndugod642@naver.com
+ * Github : http://goldbigdragon.github.io
+ * 
+ * Purpose : index.html에 적용되는 스타일 시트
+ **/
+
+body{
+	height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+div, li{
+	-ms-user-select: none;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+li{
+	margin-bottom: 0.5rem;
+	padding: 0.5rem;
+    list-style-type: none;
+	color: #DDD;
+	font-size: 1rem;
+}
+
+li:hover{
+	transform: scaleX(1.05) scaleY(1.05);
+	transition: 0.2s;
+	color:white;
+	background-color: #36393F;
+}
+li:active{
+	transform: scaleX(0.95) scaleY(0.95);
+	transition: 0.2s;
+}
+
+table{
+	width: 100%;
+	height: 100%;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #151516;
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+	height: 15px;
+	background-color: transparent;
+}
+
+#menuPane{
+	background-color: #202225;
+    width: 2rem;
+    padding: 1rem;
+	border-right: 0.1rem solid #232428;
+	text-align:center;
+}
+
+#subMenuPane{
+    background-color: #2F3136;
+	transition: 0.2s;
+}
+
+.categoryIcon {
+    background-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+	border-radius: 2rem;
+	background-position: center;
+	background-repeat: no-repeat;
+    text-align:center;
+    margin: 1rem 0rem 1rem 0rem;
+	
+	background-color: #2F3136;
+}
+
+.categoryIcon:hover{
+	transform: scaleX(1.2) scaleY(1.2);
+	transition: 0.2s;
+	background-color: #36393F;
+}
+
+.categoryIcon:active{
+	transform: scaleX(0.8) scaleY(0.8) rotate(11.25deg);
+	transition: 0.2s;
+	background-color: #2F3136;
+}
+
+.homeCategory {
+  	background-image: url("../img/home.png");
+}
+.homeCategorySelected {
+  	background-image: url("../img/home_selected.png");
+	background-color: #36393F;
+}
+
+.dashboardCategory {
+  	background-image: url("../img/dashboard.png");
+}
+.dashboardCategorySelected {
+  	background-image: url("../img/dashboard_selected.png");
+	background-color: #36393F;
+}
+
+.caseCategory {
+  	background-image: url("../img/case.png");
+}
+.caseCategorySelected {
+  	background-image: url("../img/case_selected.png");
+	background-color: #36393F;
+}
+
+.userCategory {
+  	background-image: url("../img/user.png");
+}
+.userCategorySelected {
+  	background-image: url("../img/user_selected.png");
+	background-color: #36393F;
+}
+
+.groupCategory {
+  	background-image: url("../img/group.png");
+}
+.groupCategorySelected {
+  	background-image: url("../img/group_selected.png");
+	background-color: #36393F;
+}
+
+.reportCategory {
+  	background-image: url("../img/report.png");
+}
+.reportCategorySelected {
+  	background-image: url("../img/report_selected.png");
+	background-color: #36393F;
+}
+
+.optionCategory {
+  	background-image: url("../img/option.png");
+}
+.optionCategorySelected {
+  	background-image: url("../img/option_selected.png");
+	background-color: #36393F;
+}
+
+.smallIcon{
+    background-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+	border-radius: 1.5rem;
+	background-position: center;
+	background-repeat: no-repeat;
+    text-align:center;
+	display: inline-flex;
+}
+.smallIcon:hover{
+	transform: scaleX(1.2) scaleY(1.2);
+	transition: 0.2s;
+}
+
+.smallIcon:active{
+	transform: scaleX(0.8) scaleY(0.8) rotate(11.25deg);
+	transition: 0.2s;
+}
+.pin {
+  	background-image: url("../img/pin.png");
+}
+.pinSelected {
+  	background-image: url("../img/pin_selected.png");
+}
+
+.langE {
+  	background-image: url("../img/united_states_of_america.png");
+}
+.langK {
+  	background-image: url("../img/korea.png");
+}
+.langJ {
+  	background-image: url("../img/japan.png");
+}
+.langC {
+  	background-image: url("../img/china.png");
+}
+.langR {
+  	background-image: url("../img/russia.png");
+}
+
+.bigIcon{
+    background-size: 4rem;
+    width: 4rem;
+    height: 4rem;
+	background-position: center;
+	background-repeat: no-repeat;
+    text-align:center;
+	display: inline-flex;
+	border-radius: 1rem;
+	padding: 0.5rem;
+}
+#subCategory{
+	padding-left:0.2rem;
+}
+
+#categoryName{
+	font-size: 1.1rem;
+    font-weight: bold;
+	color:white;
+}
