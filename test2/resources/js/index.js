@@ -16,33 +16,33 @@ const CATEGORY_NAME = {"homeCategory":"Home", "dashboardCategory":"Dashboard", "
 const SUB_MENU = {
 		"homeCategory":
 		[
-			{"title":"홈",
+			{"title":{"E":"Home", "K":"홈", "J":"", "C":"", "R":""},
 			"link":"./submenu/home.html"},
-			{"title":"공지사항",
+			{"title":{"E":"Notice", "K":"공지사항", "J":"", "C":"", "R":""},
 			"link":"./submenu/home.html"},
 		], "dashboardCategory":
 		[
-			{"title":"대시보드",
+			{"title":{"E":"Dashboard", "K":"대시보드", "J":"", "C":"", "R":""},
 			"link":"./submenu/dashboard.html"},
 		], "caseCategory":
 		[
-			{"title":"케이스",
+			{"title":{"E":"Case", "K":"케이스", "J":"", "C":"", "R":""},
 			"link":"./submenu/case.html"},
 		], "userCategory":
 		[
-			{"title":"사용자 목록",
+			{"title":{"E":"User List", "K":"사용자 목록", "J":"", "C":"", "R":""},
 			"link":"./submenu/userList.html"}
 		], "groupCategory":
 		[
-			{"title":"그룹",
+			{"title":{"E":"Group", "K":"그룹", "J":"", "C":"", "R":""},
 			"link":"./submenu/group.html"}
 		], "reportCategory":
 		[
-			{"title":"보고서",
+			{"title":{"E":"Report", "K":"보고서", "J":"", "C":"", "R":""},
 			"link":"./submenu/report.html"}
 		], "optionCategory":
 		[
-			{"title":"설정",
+			{"title":{"E":"Option", "K":"설정", "J":"", "C":"", "R":""},
 			"link":"./submenu/option.html"}
 		]
 	};
@@ -60,6 +60,7 @@ function changeLanguage(e){
 		nowLang = "E";
 	}
 	e.target.className = "categoryIcon lang"+nowLang;
+	subCategoryUpdate();
 }
 
 function textDataUpdate(){
@@ -104,12 +105,15 @@ function clickCategory(e){
 	categoryName.innerText=CATEGORY_NAME[nowCategory];
 	const targetIcon = document.getElementById(nowCategory);
 	targetIcon.className="categoryIcon " + nowCategory +"Selected";
-	
+	subCategoryUpdate();
+}
+
+function subCategoryUpdate(){
 	const subCategory = document.getElementById("subCategory");
 	subCategory.innerHTML = "";
 	SUB_MENU[nowCategory].forEach(SUB_MENU_ELEMENT =>{
 		const newLi = document.createElement("li");
-		newLi.innerHTML = SUB_MENU_ELEMENT["title"];
+		newLi.innerHTML = SUB_MENU_ELEMENT["title"][nowLang];
 		newLi.setAttribute("onclick", "openPage(\""+SUB_MENU_ELEMENT["link"]+"\")");
 		subCategory.appendChild(newLi);
 	});
