@@ -26,7 +26,7 @@
 		if (headerElement) {
 			const headerElement = fetch('/templates/components/header.html');
 			headerElement.then((res) => res.text()).then((text) => {
-				headerElement.innerHTML = text;
+				document.querySelector('#header').innerHTML = text;
 				const style = document.createElement("link");
 				style.rel = 'stylesheet';
 				style.href = '/resources/css/header.css';
