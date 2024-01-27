@@ -1,0 +1,11 @@
+.menu-icon{
+	max-height: 2rem;
+	max-width: 2rem;
+	opacity: 0.4;
+	transition: 0.5s;
+	border-radius: 0.2rem;
+}
+.menu-icon:hover{
+	opacity: 1;
+	border-radius: 0rem;
+}
