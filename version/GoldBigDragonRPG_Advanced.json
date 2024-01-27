@@ -1,8 +1,0 @@
-{
-"program": "GoldBigDragonRPG",
-"lastVersion": "Advanced",
-"minecraftVersion": "1.12.2",
-"lastUpdate": "2020-10-24-01:30",
-"server": -1,
-"changeLog": [{"type": "§a패치", "comment": "사망 시 엔티티에게 밀려 사망GUI 조작이 힘들었던 현상 - 5블럭 이내 이동 가능"}]
-}
