@@ -2,7 +2,7 @@
 	max-height: 2rem;
 	max-width: 2rem;
 	opacity: 0.4;
-	transition: 0.5s;
+	transition: 0.25s;
 	border-radius: 0.2rem;
 }
 .menu-icon:hover{

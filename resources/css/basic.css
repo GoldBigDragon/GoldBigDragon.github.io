@@ -1,0 +1,26 @@
+body {
+	background-color: var(--bs-gray-900);
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--bs-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--bs-primary);
+    border-radius: 0.5rem;
+}
+
+.modal::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--bs-dark);
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: var(--bs-primary);
+    border-radius: 0.5rem;
+}
+

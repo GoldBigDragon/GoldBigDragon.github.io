@@ -1,28 +1,4 @@
 @charset "UTF-8";
-
-body::-webkit-scrollbar {
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: var(--bs-dark);
-}
-
-body::-webkit-scrollbar-thumb {
-    background: var(--bs-primary);
-    border-radius: 0.5rem;
-}
-
-.modal::-webkit-scrollbar {
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: var(--bs-dark);
-}
-
-.modal::-webkit-scrollbar-thumb {
-    background: var(--bs-primary);
-    border-radius: 0.5rem;
-}
-
-
 /*!
 * Start Bootstrap - Agency v7.0.11 (https://startbootstrap.com/theme/agency)
 * Copyright 2013-2022 Start Bootstrap
@@ -4651,8 +4627,8 @@ fieldset:disabled .btn {
 }
 
 .navbar-nav .nav-link {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
 }
 
 .navbar-nav .dropdown-menu {
