@@ -62,6 +62,10 @@ function loadFooter() {
 			lang.type = 'application/javascript';
 			lang.src = '/resources/lang/footer.js';
 			document.body.appendChild(lang);
+			const script = document.createElement('script');
+			script.type = 'module';
+			script.src = '/resources/js/header.js';
+			document.body.appendChild(script);
 		}).then((r) => { loadLanguage(); });
 	}
 }
