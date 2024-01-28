@@ -2,8 +2,8 @@
 	max-height: 2rem;
 	max-width: 2rem;
 	opacity: 0.4;
-	transition: 0.25s;
 	border-radius: 0.2rem;
+	transition: 0.25s !important;
 }
 .menu-icon:hover{
 	opacity: 1;
@@ -63,7 +63,7 @@
 
     #mainNav .navbar-brand img {
         height: 2rem;
-        transition: height 0.3s ease-in-out;
+        transition: 0.25s;
     }
 
     #mainNav.navbar-shrink {
