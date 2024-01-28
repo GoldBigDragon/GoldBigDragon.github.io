@@ -42,6 +42,7 @@ function loadHeader() {
 		});
 	}
 }
+
 function loadFooter() {
 	const footerElement = document.querySelector('#footer');
 	if (footerElement) {

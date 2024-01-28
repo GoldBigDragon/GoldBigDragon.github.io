@@ -15,6 +15,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #212529;
+	transition: 0.2s;
 }
 
 #mainNav .navbar-toggler {
@@ -53,7 +54,6 @@
     #mainNav {
         border: none;
         background-color: transparent;
-        transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
     }
 
     #mainNav .navbar-brand {
@@ -72,17 +72,13 @@
         background-color: #212529;
     }
 
-    #mainNav.navbar-shrink .navbar-brand {
-        font-size: 1.25em;
-    }
-
     #mainNav.navbar-shrink .navbar-brand svg,
     #mainNav.navbar-shrink .navbar-brand img {
         height: 1.5rem;
     }
 
     #mainNav .navbar-nav .nav-item {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
     }
 
     #mainNav .navbar-nav .nav-item:last-child {
