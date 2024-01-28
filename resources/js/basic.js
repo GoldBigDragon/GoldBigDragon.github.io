@@ -38,7 +38,7 @@ function loadHeader() {
 			style.href = '/resources/css/header.css';
 			document.head.appendChild(style);
 			const lang = document.createElement('script');
-			lang.type = 'module';
+			lang.type = 'application/javascript';
 			lang.src = '/resources/lang/header.js';
 			document.body.appendChild(lang);
 			const script = document.createElement('script');
@@ -60,7 +60,7 @@ function loadFooter() {
 			style.href = '/resources/css/footer.css';
 			document.head.appendChild(style);
 			const lang = document.createElement('script');
-			lang.type = 'module';
+			lang.type = 'application/javascript';
 			lang.src = '/resources/lang/footer.js';
 			document.body.appendChild(lang);
 			const script = document.createElement('script');
