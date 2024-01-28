@@ -24,3 +24,5 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 });
+
+LANGUAGE_OBJECT["HEADER_LANG"] = HEADER_LANG;
