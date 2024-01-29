@@ -18,7 +18,6 @@ function loadHeader() {
 			script.type = 'module';
 			script.src = '/resources/js/header.js';
 			document.body.appendChild(script);
-			LANGUAGE_OBJECT["HEADER_LANG"] = HEADER_LANG;
 		});
 	}
 }
@@ -37,13 +36,13 @@ function loadFooter() {
 			lang.type = 'application/javascript';
 			lang.src = '/resources/lang/footer.js';
 			document.body.appendChild(lang);
-			LANGUAGE_OBJECT["FOOTER_LANG"] = FOOTER_LANG;
+			const script = document.createElement('script');
+			script.type = 'module';
+			script.src = '/resources/js/footer.js';
+			document.body.appendChild(script);
 		});
 	}
 }
-
-loadHeader();
-loadFooter();
 
 function setCookie(name, value, exp) {
 	const date = new Date();
@@ -70,5 +69,8 @@ function loadLanguage() {
 		languageElement.innerHTML = LANGUAGE_OBJECT[languageElement.dataset.langVar][languageElement.dataset.lang][nowLang];
 	});
 }
+
+loadHeader();
+loadFooter();
 
 loadLanguage();

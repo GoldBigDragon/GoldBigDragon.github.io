@@ -63,3 +63,5 @@ function changeLanguage() {
 	}
 	loadLanguage();
 }
+
+LANGUAGE_OBJECT["HEADER_LANG"] = HEADER_LANG;
