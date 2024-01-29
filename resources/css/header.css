@@ -1,4 +1,5 @@
 .menu-icon{
+	cursor: pointer;
 	max-height: 1.4rem;
 	max-width: 1.4rem;
 	opacity: 0.4;
@@ -8,6 +9,11 @@
 .menu-icon:hover{
 	opacity: 1;
 	border-radius: 0rem;
+	transform: scaleX(1.5) scaleY(1.5);
+}
+
+.menu-icon:active{
+	transform: rotate(0.129turn) scaleX(0.6) scaleY(0.6);
 }
 
 

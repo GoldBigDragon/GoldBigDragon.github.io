@@ -1,5 +1,3 @@
-LANGUAGE_OBJECT["HEADER_LANG"] = HEADER_LANG;
-
 window.addEventListener('DOMContentLoaded', event => {
     const navbarShrink = function() {
         const navbarCollapsible = document.body.querySelector('#mainNav');

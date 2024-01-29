@@ -18,6 +18,7 @@ function loadHeader() {
 			script.type = 'module';
 			script.src = '/resources/js/header.js';
 			document.body.appendChild(script);
+			LANGUAGE_OBJECT["HEADER_LANG"] = HEADER_LANG;
 		});
 	}
 }
@@ -36,10 +37,7 @@ function loadFooter() {
 			lang.type = 'application/javascript';
 			lang.src = '/resources/lang/footer.js';
 			document.body.appendChild(lang);
-			const script = document.createElement('script');
-			script.type = 'module';
-			script.src = '/resources/js/header.js';
-			document.body.appendChild(script);
+			LANGUAGE_OBJECT["FOOTER_LANG"] = FOOTER_LANG;
 		});
 	}
 }
