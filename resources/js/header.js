@@ -1,3 +1,5 @@
+LANGUAGE_OBJECT["HEADER_LANG"] = HEADER_LANG;
+
 window.addEventListener('DOMContentLoaded', event => {
     const navbarShrink = function() {
         const navbarCollapsible = document.body.querySelector('#mainNav');
@@ -25,4 +27,41 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 });
 
-LANGUAGE_OBJECT["HEADER_LANG"] = HEADER_LANG;
+function checkLanguage(){
+	let nowLang = getCookie("lang");
+	const languageElement = document.getElementById("language");
+	if(nowLang == "ko") {
+		languageElement.src= "/resources/img/lang/ko.png";
+	} else if(nowLang == "jp") {
+		languageElement.src= "/resources/img/lang/jp.png";
+	} else if(nowLang == "cn") {
+		languageElement.src= "/resources/img/lang/cn.png";
+	} else if(nowLang == "ru") {
+		languageElement.src= "/resources/img/lang/ru.png";
+	} else {
+		setCookie("en");
+		languageElement.src= "/resources/img/lang/en.png";
+	}
+}
+
+function changeLanguage() {
+	let nowLang = getCookie("lang");
+	const languageElement = document.getElementById("language");
+	if(nowLang == "ko") {
+		setCookie("jp");
+		languageElement.src= "/resources/img/lang/jp.png";
+	} else if(nowLang == "jp") {
+		setCookie("cn");
+		languageElement.src= "/resources/img/lang/cn.png";
+	} else if(nowLang == "cn") {
+		setCookie("ru");
+		languageElement.src= "/resources/img/lang/ru.png";
+	} else if(nowLang == "ru") {
+		setCookie("en");
+		languageElement.src= "/resources/img/lang/en.png";
+	} else {
+		setCookie("ko");
+		languageElement.src= "/resources/img/lang/ko.png";
+	}
+	loadLanguage();
+}

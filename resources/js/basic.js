@@ -18,32 +18,6 @@ function loadHeader() {
 			script.type = 'module';
 			script.src = '/resources/js/header.js';
 			document.body.appendChild(script);
-		}).then((r) => { loadLanguage(); });
-		window.addEventListener('DOMContentLoaded', event => {
-			const navbarShrink = function() {
-				const navbarCollapsible = document.body.querySelector('#mainNav');
-				if (!navbarCollapsible) {
-					return;
-				}
-				if (window.scrollY === 0) {
-					navbarCollapsible.classList.remove('navbar-shrink')
-				} else {
-					navbarCollapsible.classList.add('navbar-shrink')
-				}
-			};
-			navbarShrink();
-			document.addEventListener('scroll', navbarShrink);
-			const navbarToggler = document.body.querySelector('.navbar-toggler');
-			const responsiveNavItems = [].slice.call(
-				document.querySelectorAll('#navbarResponsive .nav-link')
-			);
-			responsiveNavItems.map(function(responsiveNavItem) {
-				responsiveNavItem.addEventListener('click', () => {
-					if (window.getComputedStyle(navbarToggler).display !== 'none') {
-						navbarToggler.click();
-					}
-				});
-			});
 		});
 	}
 }
@@ -66,7 +40,7 @@ function loadFooter() {
 			script.type = 'module';
 			script.src = '/resources/js/header.js';
 			document.body.appendChild(script);
-		}).then((r) => { loadLanguage(); });
+		});
 	}
 }
 
