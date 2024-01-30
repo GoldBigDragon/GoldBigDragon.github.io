@@ -13,6 +13,10 @@
 }
 
 .menu-icon:active{
+	transform: rotate(0.02turn) scaleX(0.6) scaleY(0.6);
+}
+
+#lang:active{
 	transform: rotate(0.129turn) scaleX(0.6) scaleY(0.6);
 }
 

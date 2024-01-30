@@ -37,7 +37,7 @@ function checkLanguage(){
 	} else if(nowLang == "ru") {
 		languageElement.src= "/resources/img/lang/ru.png";
 	} else {
-		setCookie("en");
+		setCookie("lang", "en", 31);
 		languageElement.src= "/resources/img/lang/en.png";
 	}
 }
@@ -46,19 +46,19 @@ function changeLanguage() {
 	let nowLang = getCookie("lang");
 	const languageElement = document.getElementById("language");
 	if(nowLang == "ko") {
-		setCookie("jp");
+		setCookie("lang", "jp", 31);
 		languageElement.src= "/resources/img/lang/jp.png";
 	} else if(nowLang == "jp") {
-		setCookie("cn");
+		setCookie("lang", "cn", 31);
 		languageElement.src= "/resources/img/lang/cn.png";
 	} else if(nowLang == "cn") {
-		setCookie("ru");
+		setCookie("lang", "ru", 31);
 		languageElement.src= "/resources/img/lang/ru.png";
 	} else if(nowLang == "ru") {
-		setCookie("en");
+		setCookie("lang", "en", 31);
 		languageElement.src= "/resources/img/lang/en.png";
 	} else {
-		setCookie("ko");
+		setCookie("lang", "ko", 31);
 		languageElement.src= "/resources/img/lang/ko.png";
 	}
 	loadLanguage();
