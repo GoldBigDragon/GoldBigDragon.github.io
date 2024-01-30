@@ -25,3 +25,4 @@ const HEADER_LANG = {
 		"ru": " Меню <i class='fas fa-bars ms-1'></i>"
 	}
 }
+LANGUAGE_OBJECT["HEADER_LANG"] = HEADER_LANG;

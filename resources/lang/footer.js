@@ -7,3 +7,4 @@ const FOOTER_LANG = {
 		"ru": "© 2024 GoldBigDragon. Некоторые права защищены."
 	}
 }
+LANGUAGE_OBJECT["FOOTER_LANG"] = FOOTER_LANG;
