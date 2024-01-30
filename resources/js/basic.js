@@ -15,7 +15,7 @@ function loadHeader() {
 			lang.src = '/resources/lang/header.js';
 			document.body.appendChild(lang);
 			const script = document.createElement('script');
-			script.type = 'module';
+			script.type = 'application/javascript';
 			script.src = '/resources/js/header.js';
 			document.body.appendChild(script);
 		});
@@ -37,7 +37,7 @@ function loadFooter() {
 			lang.src = '/resources/lang/footer.js';
 			document.body.appendChild(lang);
 			const script = document.createElement('script');
-			script.type = 'module';
+			script.type = 'application/javascript';
 			script.src = '/resources/js/footer.js';
 			document.body.appendChild(script);
 		});
