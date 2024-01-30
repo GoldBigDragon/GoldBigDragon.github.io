@@ -73,4 +73,6 @@ function loadLanguage() {
 loadHeader();
 loadFooter();
 
-loadLanguage();
+window.onload = function() {
+    loadLanguage();
+};

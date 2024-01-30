@@ -63,3 +63,7 @@ function changeLanguage() {
 	}
 	loadLanguage();
 }
+
+window.onload = function() {
+	checkLanguage();
+};
