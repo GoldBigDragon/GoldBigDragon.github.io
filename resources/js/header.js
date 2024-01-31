@@ -63,3 +63,5 @@ function changeLanguage() {
 	}
 	loadLanguage();
 }
+
+setTimeout(checkLanguage, 0);
