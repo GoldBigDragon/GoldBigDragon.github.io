@@ -18,6 +18,7 @@ function loadHeader() {
 			script.type = 'application/javascript';
 			script.src = '/resources/js/header.js';
 			document.body.appendChild(script);
+			setTimeout(checkLanguage, 0);
 		});
 	}
 }
@@ -73,6 +74,4 @@ function loadLanguage() {
 loadHeader();
 loadFooter();
 
-window.onload = function() {
-    loadLanguage();
-};
+setTimeout(loadLanguage, 0);
