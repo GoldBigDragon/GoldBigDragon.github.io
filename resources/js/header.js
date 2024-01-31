@@ -66,4 +66,5 @@ function changeLanguage() {
 
 window.onload = function() {
 	checkLanguage();
+    loadLanguage();
 };
