@@ -72,5 +72,3 @@ function loadLanguage() {
 
 loadHeader();
 loadFooter();
-
-setTimeout(loadLanguage, 0);

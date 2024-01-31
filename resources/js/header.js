@@ -65,3 +65,4 @@ function changeLanguage() {
 }
 
 setTimeout(checkLanguage, 0);
+setTimeout(loadLanguage, 0);
