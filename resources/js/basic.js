@@ -70,5 +70,5 @@ function loadLanguage() {
 	});
 }
 
-loadHeader();
 loadFooter();
+loadHeader();
