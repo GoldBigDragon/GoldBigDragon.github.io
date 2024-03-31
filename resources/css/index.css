@@ -3,7 +3,7 @@
 }
 
 .dim-text {
-	color: var(--bs-gray-300);
+	color: var(--bs-gray-600);
 	font-size: 1.4rem;
 }
 
@@ -14,7 +14,8 @@
 }
 
 #profile-image{
-	padding: 2rem;
+	max-width: 16rem;
+	padding: 1rem;
     border: 2px solid var(--bs-gray-900);
     border-radius: 15rem;
 	margin-bottom: 1.5rem;
@@ -24,4 +25,8 @@
 	margin-top: 2rem;
 	background-color: var(--bs-gray-900);
     border-radius: 1rem;
+}
+
+.mb-1{
+	margin-bottom: 1rem;
 }
