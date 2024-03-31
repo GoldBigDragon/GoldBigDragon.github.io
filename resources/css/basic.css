@@ -20,3 +20,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 0.5rem;
 }
 
+#contents {
+	margin: 5rem 0rem;
+}
