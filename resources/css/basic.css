@@ -19,7 +19,3 @@ body::-webkit-scrollbar-thumb {
     background: var(--bs-primary);
     border-radius: 0.5rem;
 }
-
-#contents {
-	margin: 5rem 0rem;
-}
