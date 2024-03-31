@@ -1,5 +1,5 @@
 #contents{
-	max-width: 50rem;
+	max-width: 65rem;
 }
 
 .dim-text {
@@ -25,8 +25,4 @@
 	margin-top: 2rem;
 	background-color: var(--bs-gray-900);
     border-radius: 1rem;
-}
-
-.mb-1{
-	margin-bottom: 1rem;
 }
