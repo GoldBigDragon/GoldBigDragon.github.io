@@ -15,7 +15,7 @@ const INDEX_LANG = {
 	},
 	"country": {
 		"en": "Country:",
-		"ko": "국가:",
+		"ko": "국적:",
 		"jp": "国籍:",
 		"cn": "国籍:",
 		"ru": "Страна:"
