@@ -33,6 +33,6 @@ const INDEX_LANG = {
 		"jp": "連絡先",
 		"cn": "联系",
 		"ru": "Контакт"
-	},
+	}
 }
 LANGUAGE_OBJECT["INDEX_LANG"] = INDEX_LANG;

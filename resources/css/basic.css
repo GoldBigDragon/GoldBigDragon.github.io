@@ -19,3 +19,9 @@ body::-webkit-scrollbar-thumb {
     background: var(--bs-primary);
     border-radius: 0.5rem;
 }
+
+.center {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
