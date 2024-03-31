@@ -1,10 +1,10 @@
 const INDEX_LANG = {
 	"name": {
-		"en": "Name",
-		"ko": "이름",
-		"jp": "名前",
-		"cn": "姓名",
-		"ru": "Имя"
+		"en": "Name:",
+		"ko": "이름:",
+		"jp": "名前:",
+		"cn": "姓名:",
+		"ru": "Имя:"
 	},
 	"name-value": {
 		"en": "TaeRyong Kim",
@@ -14,11 +14,11 @@ const INDEX_LANG = {
 		"ru": "TaeRyong Kim"
 	},
 	"country": {
-		"en": "Country",
-		"ko": "국가",
-		"jp": "国籍",
-		"cn": "国籍",
-		"ru": "Страна"
+		"en": "Country:",
+		"ko": "국가:",
+		"jp": "国籍:",
+		"cn": "国籍:",
+		"ru": "Страна:"
 	},
 	"country-value": {
 		"en": "South Korea",
@@ -28,11 +28,32 @@ const INDEX_LANG = {
 		"ru": "Южная Корея"
 	},
 	"contact": {
-		"en": "Contact",
-		"ko": "연락처",
-		"jp": "連絡先",
-		"cn": "联系",
-		"ru": "Контакт"
+		"en": "Contact:",
+		"ko": "연락처:",
+		"jp": "連絡先:",
+		"cn": "联系:",
+		"ru": "Контакт:"
+	},
+	"career": {
+		"en": "Career",
+		"ko": "경력",
+		"jp": "キャリア",
+		"cn": "职业",
+		"ru": "Карьера"
+	},
+	"education": {
+		"en": "Education",
+		"ko": "교육",
+		"jp": "教育",
+		"cn": "教育",
+		"ru": "Образование"
+	},
+	"etc": {
+		"en": "ETC",
+		"ko": "기타",
+		"jp": "等",
+		"cn": "等等",
+		"ru": "И Т. Д"
 	}
 }
 LANGUAGE_OBJECT["INDEX_LANG"] = INDEX_LANG;
