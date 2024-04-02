@@ -26,3 +26,20 @@
 	background-color: var(--bs-gray-900);
     border-radius: 1rem;
 }
+
+.badge-box{
+	display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.badge-area{
+	display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+}
+.badge-title{
+	font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--bs-gray-600);
+}
