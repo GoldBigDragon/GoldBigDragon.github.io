@@ -49,9 +49,10 @@
 	font-size: 1.5rem;
 	font-weight: bold;
 	text-align: center;
-	display: none;
+	display: flex;
 	position: absolute;
-	background-color: rgba(0, 0, 0, 0.5);
+	color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
 	padding: 1rem;
 	border-radius: 15rem;
 	width: 256px;
@@ -63,5 +64,6 @@
 }
 
 .hover-text:hover{
-	display: flex;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
 }
