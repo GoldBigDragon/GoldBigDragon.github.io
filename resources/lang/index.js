@@ -54,6 +54,13 @@ const INDEX_LANG = {
 		"jp": "等",
 		"cn": "等等",
 		"ru": "И Т. Д"
+	},
+	"logo-description": {
+		"en": "Oriental<br>Dragon<br>Shape",
+		"ko": "동양 용 형상",
+		"jp": "東洋の龍形状",
+		"cn": "东方龙形",
+		"ru": "Форма<br>восточного<br>дракона"
 	}
 }
 LANGUAGE_OBJECT["INDEX_LANG"] = INDEX_LANG;
