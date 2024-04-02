@@ -52,7 +52,7 @@
 	display: flex;
 	position: absolute;
 	color: rgba(0, 0, 0, 0);
-	background-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.0001);
 	padding: 1rem;
 	border-radius: 15rem;
 	width: 256px;
