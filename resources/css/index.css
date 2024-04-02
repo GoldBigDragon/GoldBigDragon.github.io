@@ -45,3 +45,22 @@
     font-weight: bold;
     color: var(--bs-gray-600);
 }
+.hover-text{
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	display: none;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 1rem;
+	border-radius: 1rem;
+	width: 256px;
+	height: 256px;
+	margin-bottom: 1.5rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.hover-text:hover{
+	display: flex;
+}
