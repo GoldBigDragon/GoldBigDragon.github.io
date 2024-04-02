@@ -53,12 +53,13 @@
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 1rem;
-	border-radius: 1rem;
+	border-radius: 15rem;
 	width: 256px;
 	height: 256px;
 	margin-bottom: 1.5rem;
 	justify-content: center;
 	align-items: center;
+	transition: 0.2s;
 }
 
 .hover-text:hover{
