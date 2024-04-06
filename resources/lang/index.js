@@ -48,6 +48,13 @@ const INDEX_LANG = {
 		"cn": "教育",
 		"ru": "Образование"
 	},
+	"certificate": {
+		"en": "Certificate",
+		"ko": "자격증",
+		"jp": "証明書",
+		"cn": "证书",
+		"ru": "Сертификат"
+	},
 	"etc": {
 		"en": "ETC",
 		"ko": "기타",
