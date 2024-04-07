@@ -102,5 +102,57 @@ const DATA_CERTIFICATE = [
 			"ru":"Эксперт по цифровой<br>криминалистике(уровень 2)"
 		},
 		"proof":"/resources/img/index/proof/certificate/digital_forensic_expert.png"
+	},
+	{
+		"name":{
+			"en":"Microsoft Office Specialist: Microsoft Office Excel 2010",
+			"ko":"Microsoft Office Specialist: Microsoft Office Excel 2010",
+			"jp":"Microsoft Office Specialist: Microsoft Office Excel 2010",
+			"cn":"Microsoft Office Specialist: Microsoft Office Excel 2010",
+			"ru":"Microsoft Office Specialist: Microsoft Office Excel 2010"
+		},
+		"acquisition-date":"2014-11-15",
+		"issuing-authority":{
+			"en":"Microsoft",
+			"ko":"Microsoft",
+			"jp":"Microsoft",
+			"cn":"Microsoft",
+			"ru":"Microsoft"
+		},
+		"logo":"/resources/img/index/logo/certificate/excel.png",
+		"logo-title":{
+			"en":"MOS: Excel 2010",
+			"ko":"MOS: Excel 2010",
+			"jp":"MOS: Excel 2010",
+			"cn":"MOS: Excel 2010",
+			"ru":"MOS: Excel 2010"
+		},
+		"proof":"/resources/img/index/proof/certificate/mos_excel.png"
+	},
+	{
+		"name":{
+			"en":"Microsoft Office Specialist: Microsoft Office PowerPoint 2010",
+			"ko":"Microsoft Office Specialist: Microsoft Office PowerPoint 2010",
+			"jp":"Microsoft Office Specialist: Microsoft Office PowerPoint 2010",
+			"cn":"Microsoft Office Specialist: Microsoft Office PowerPoint 2010",
+			"ru":"Microsoft Office Specialist: Microsoft Office PowerPoint 2010"
+		},
+		"acquisition-date":"2014-11-01",
+		"issuing-authority":{
+			"en":"Microsoft",
+			"ko":"Microsoft",
+			"jp":"Microsoft",
+			"cn":"Microsoft",
+			"ru":"Microsoft"
+		},
+		"logo":"/resources/img/index/logo/certificate/powerpoint.png",
+		"logo-title":{
+			"en":"MOS: PowerPoint 2010",
+			"ko":"MOS: PowerPoint 2010",
+			"jp":"MOS: PowerPoint 2010",
+			"cn":"MOS: PowerPoint 2010",
+			"ru":"MOS: PowerPoint 2010"
+		},
+		"proof":"/resources/img/index/proof/certificate/mos_powerpoint.png"
 	}
 ];

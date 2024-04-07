@@ -187,6 +187,34 @@ const INDEX_LANG = {
 		"jp": "取得日",
 		"cn": "收购日期",
 		"ru": "Дата Приобретения"
+	},
+	"etc-award-name": {
+		"en": "Award name",
+		"ko": "상훈명",
+		"jp": "賞名",
+		"cn": "奖项名称",
+		"ru": "Название награды"
+	},
+	"etc-awarding-organization": {
+		"en": "Awarding organization",
+		"ko": "상훈기관",
+		"jp": "授与機関",
+		"cn": "颁奖机构",
+		"ru": "Награждающая организация"
+	},
+	"etc-award-date": {
+		"en": "Award date",
+		"ko": "수상일자",
+		"jp": "受賞日",
+		"cn": "颁奖日期",
+		"ru": "Дата награждения"
+	},
+	"etc-reason": {
+		"en": "Reason",
+		"ko": "사유",
+		"jp": "理由",
+		"cn": "原因",
+		"ru": "Причина"
 	}
 }
 LANGUAGE_OBJECT["INDEX_LANG"] = INDEX_LANG;

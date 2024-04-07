@@ -211,12 +211,12 @@ function openModal(category, index){
 		institutionDiv.appendChild(institution);
 		
 		modalBody.appendChild(proofDiv);
-		modalBody.appendChild(urlDiv);
-		modalBody.appendChild(periodDiv);
 		modalBody.appendChild(nameDiv);
 		modalBody.appendChild(departmentDiv);
 		modalBody.appendChild(degreeDiv);
+		modalBody.appendChild(periodDiv);
 		modalBody.appendChild(institutionDiv);
+		modalBody.appendChild(urlDiv);
 	} else if(category == "certificate"){
 		badgeData = DATA_CERTIFICATE[index];
 		
@@ -262,13 +262,71 @@ function openModal(category, index){
 		acquisitionDateDiv.appendChild(acquisitionDateDescription);
 		acquisitionDateDiv.appendChild(acquisitionDate);
 		
-		
 		modalBody.appendChild(proofDiv);
 		modalBody.appendChild(nameDiv);
 		modalBody.appendChild(issuingAuthorityDiv);
 		modalBody.appendChild(acquisitionDateDiv);
 	} else if(category == "etc"){
 		badgeData = DATA_ETC[index];
+		
+		const proofDiv = document.createElement("div");
+		proofDiv.className = "row modal-panel";
+		proofDiv.style.marginBottom = "1rem";
+		const proofLogo = document.createElement("img");
+		proofLogo.src = badgeData["proof"];
+		proofLogo.style.maxWidth = "20rem";
+		proofLogo.style.maxHeight = "25rem";
+		proofDiv.appendChild(proofLogo);
+		
+		const nameDiv = document.createElement("div");
+		nameDiv.className = "row modal-panel";
+		const nameDescription = document.createElement("div");
+		nameDescription.className = "col-3 key";
+		nameDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["etc-award-name"][NOW_LANG];
+		const name = document.createElement("div");
+		name.className = "col value";
+		name.innerHTML = badgeData["award-name"][NOW_LANG];
+		nameDiv.appendChild(nameDescription);
+		nameDiv.appendChild(name);
+		
+		const awardingOrganizationDiv = document.createElement("div");
+		awardingOrganizationDiv.className = "row modal-panel";
+		const awardingOrganizationDescription = document.createElement("div");
+		awardingOrganizationDescription.className = "col-3 key";
+		awardingOrganizationDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["etc-awarding-organization"][NOW_LANG];
+		const awardingOrganization = document.createElement("div");
+		awardingOrganization.className = "col value";
+		awardingOrganization.innerHTML = badgeData["awarding-organization"][NOW_LANG];
+		awardingOrganizationDiv.appendChild(awardingOrganizationDescription);
+		awardingOrganizationDiv.appendChild(awardingOrganization);
+		
+		const awardDateDiv = document.createElement("div");
+		awardDateDiv.className = "row modal-panel";
+		const awardDateDescription = document.createElement("div");
+		awardDateDescription.className = "col-3 key";
+		awardDateDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["etc-award-date"][NOW_LANG];
+		const awardDate = document.createElement("div");
+		awardDate.className = "col value";
+		awardDate.innerHTML = badgeData["award-date"];
+		awardDateDiv.appendChild(awardDateDescription);
+		awardDateDiv.appendChild(awardDate);
+		
+		const reasonDiv = document.createElement("div");
+		reasonDiv.className = "row modal-panel";
+		const reasonDescription = document.createElement("div");
+		reasonDescription.className = "col-3 key";
+		reasonDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["etc-reason"][NOW_LANG];
+		const reason = document.createElement("div");
+		reason.className = "col value";
+		reason.innerHTML = badgeData["reason"];
+		reasonDiv.appendChild(reasonDescription);
+		reasonDiv.appendChild(reason);
+		
+		modalBody.appendChild(proofDiv);
+		modalBody.appendChild(nameDiv);
+		modalBody.appendChild(awardingOrganizationDiv);
+		modalBody.appendChild(awardDateDiv);
+		modalBody.appendChild(reasonDiv);
 	}
 	if(badgeData != null) {
 		modalTitle.innerHTML = badgeData["logo-title"][NOW_LANG].replace("<br>", " ");
@@ -280,7 +338,6 @@ const careerBadgeArea = document.getElementById("career-badge-area");
 const educationBadgeArea = document.getElementById("education-badge-area");
 const certificateBadgeArea = document.getElementById("certificate-badge-area");
 const etcBadgeArea = document.getElementById("etc-badge-area");
-
 
 if(DATA_CAREER){
 	let index = 0;

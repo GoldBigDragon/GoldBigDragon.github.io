@@ -15,11 +15,11 @@ const DATA_EDUCATION = [
 			"ru":"Цифровая криминалистика (9th)"
 		},
 		"degree":{
-			"en":" ",
-			"ko":" ",
-			"jp":" ",
-			"cn":" ",
-			"ru":" "
+			"en":"　",
+			"ko":"　",
+			"jp":"　",
+			"cn":"　",
+			"ru":"　"
 		},
 		"educational-institution":{
 			"en":"Korea Information Technology Research Institute, Ministry of Science and ICT",
