@@ -39,7 +39,7 @@ const DATA_CAREER = [
 			"cn":"主任硏究員",
 			"ru":"Помощник инженера-исследователя"
 		},
-		"logo":"/resources/img/index/logo/carrer/coresecurity.png",
+		"logo":"/resources/img/index/logo/career/coresecurity.png",
 		"logo-title":{
 			"en":"Coresecurity",
 			"ko":"코어시큐리티",
@@ -82,7 +82,7 @@ const DATA_CAREER = [
 			"cn":"实习生",
 			"ru":"Стажер"
 		},
-		"logo":"/resources/img/index/logo/carrer/PLZ.png",
+		"logo":"/resources/img/index/logo/career/PLZ.png",
 		"logo-title":{
 			"en":"PLZ",
 			"ko":"피엘지",
