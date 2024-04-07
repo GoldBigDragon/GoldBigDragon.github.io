@@ -49,11 +49,11 @@ const DATA_ETC = [
 			"ru":"Корейское национальное полицейское управление"
 		},
 		"reason":{
-			"en":"<ul><li>Excellent reporting activity on harmful sites throughout 2020</li><li>Cumulative 100,000 reports</li></ul>",
-			"ko":"<ul><li>2020년 전체 기간 유해 사이트 신고 활동 우수</li><li>누적 10만 건 신고</li></ul>",
-			"jp":"<ul><li>2020年全期間有害サイト届出活動優秀</li><li>累積10万件の届出</li></ul>",
-			"cn":"<ul><li>2020年报告有害网站的出色活动</li><li>累计 100,000 份报告</li></ul>",
-			"ru":"<ul><li>Отличная активность по информированию о вредоносных сайтах на протяжении 2020 года.</li><li>Всего 100 000 отчетов</li></ul>"
+			"en":"<ul style='margin-bottom: 0rem;'><li>Excellent reporting activity on harmful sites throughout 2020</li><li>Cumulative 100,000 reports</li></ul>",
+			"ko":"<ul style='margin-bottom: 0rem;'><li>2020년 전체 기간 유해 사이트 신고 활동 우수</li><li>누적 10만 건 신고</li></ul>",
+			"jp":"<ul style='margin-bottom: 0rem;'><li>2020年全期間有害サイト届出活動優秀</li><li>累積10万件の届出</li></ul>",
+			"cn":"<ul style='margin-bottom: 0rem;'><li>2020年报告有害网站的出色活动</li><li>累计 100,000 份报告</li></ul>",
+			"ru":"<ul style='margin-bottom: 0rem;'><li>Отличная активность по информированию о вредоносных сайтах на протяжении 2020 года.</li><li>Всего 100 000 отчетов</li></ul>"
 		},
 		"logo":"/resources/img/index/logo/etc/knpa.png",
 		"logo-title":{
@@ -288,11 +288,11 @@ const DATA_ETC = [
 		},
 		"logo":"/resources/img/index/logo/etc/military_manpower_administration.png",
 		"logo-title":{
-			"en":"Service commendation certificate",
+			"en":"Service commendation<br>certificate",
 			"ko":"표창장",
 			"jp":"表彰状",
 			"cn":"荣誉证书",
-			"ru":"Благодарственная грамота за службу"
+			"ru":"Благодарственная<br>грамота за службу"
 		},
 		"proof":"/resources/img/index/proof/etc/2018_11_16_military_manpower_administration_gyeongnam_regional.jpg"
 	},
