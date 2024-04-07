@@ -1,0 +1,14 @@
+#contents{
+	max-width: 80rem;
+}
+
+.dim-text {
+	color: var(--bs-gray-600);
+	font-size: 1.4rem;
+}
+
+.bold-text {
+	color: white;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
