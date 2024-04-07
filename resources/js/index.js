@@ -16,11 +16,27 @@ function addBadge(targetArea, category, index, badgeData){
 		LANGUAGE_OBJECT["BADGE_LANG"][category] = {};
 		LANGUAGE_OBJECT["BADGE_LANG"][category][index] = badgeData["logo-title"];
 	}
-	badge.setAttribute("data-lang-var", "BADGE_LANG");
-	badge.setAttribute("data-lang", index);
+	badgeTitle.setAttribute("data-lang-var", "BADGE_LANG");
+	badgeTitle.setAttribute("data-lang", index);
 	badge.appendChild(badgeLogo);
 	badge.appendChild(badgeTitle);
 	targetArea.appendChild(badge);
+}
+
+function openModal(category, index){
+	let badgeData = null;
+	if(category == "career"){
+		badgeData = DATA_CAREER[index];
+	} else if(category == "education"){
+		badgeData = DATA_EDUCATION[index];
+	} else if(category == "certificate"){
+		badgeData = DATA_CERTIFICATE[index];
+	} else if(category == "etc"){
+		badgeData = DATA_ETC[index];
+	}
+	if(badgeData != null) {
+		badgeSubtitle.setAttribute("onClick", "$('#badgeDetailModal').modal('show')");
+	}
 }
 
 const careerBadgeArea = document.getElementById("career-badge-area");
@@ -53,9 +69,3 @@ if(DATA_ETC){
 		addBadge(etcBadgeArea, 'etc', index, DATA_ETC[index]);
 	}
 }
-
-/*
-Array.prototype.forEach.call(DATA_CAREER, (badgeData) => {
-});
-badgeSubtitle.setAttribute("onClick", "$('#badgeDetailModal').modal('show')");
-*/
