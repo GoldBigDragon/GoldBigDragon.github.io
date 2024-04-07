@@ -318,7 +318,7 @@ function openModal(category, index){
 		reasonDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["etc-reason"][NOW_LANG];
 		const reason = document.createElement("div");
 		reason.className = "col value";
-		reason.innerHTML = badgeData["reason"];
+		reason.innerHTML = badgeData["reason"][NOW_LANG];
 		reasonDiv.appendChild(reasonDescription);
 		reasonDiv.appendChild(reason);
 		

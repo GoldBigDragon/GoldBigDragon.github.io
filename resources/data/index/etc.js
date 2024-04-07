@@ -1,6 +1,39 @@
 const DATA_ETC = [
 	{
 		"award-name":{
+			"en":"",
+			"ko":"",
+			"jp":"",
+			"cn":"",
+			"ru":""
+		},
+		"award-date":"2023-08-11",
+		"awarding-organization":{
+			"en":"",
+			"ko":"",
+			"jp":"",
+			"cn":"",
+			"ru":""
+		},
+		"reason":{
+			"en":"",
+			"ko":"",
+			"jp":"",
+			"cn":"",
+			"ru":""
+		},
+		"logo":"/resources/img/index/logo/etc/knpa.png",
+		"logo-title":{
+			"en":"",
+			"ko":"",
+			"jp":"",
+			"cn":"",
+			"ru":""
+		},
+		"proof":"/resources/img/index/proof/etc/2016_04_27_knpa_ulsan.jpg"
+	},
+	{
+		"award-name":{
 			"en":"Community service commendation certificate",
 			"ko":"사회봉사 표창장",
 			"jp":"社会貢献表彰",
@@ -22,7 +55,7 @@ const DATA_ETC = [
 			"cn":"参加志愿者活动",
 			"ru":"Участие в волонтерской деятельности"
 		},
-		"logo":"/resources/img/index/logo/etc/archive_gold.png",
+		"logo":"/resources/img/index/logo/etc/redcross.png",
 		"logo-title":{
 			"en":"Red Cross Youth<br>commendation certificate",
 			"ko":"RCY 사회봉사 표창장",
@@ -55,7 +88,7 @@ const DATA_ETC = [
 			"cn":"参加志愿者活动",
 			"ru":"Участие в волонтерской деятельности"
 		},
-		"logo":"/resources/img/index/logo/etc/archive_silver.png",
+		"logo":"/resources/img/index/logo/etc/redcross.png",
 		"logo-title":{
 			"en":"Red Cross Youth<br>commendation certificate",
 			"ko":"RCY 사회봉사 표창장",
