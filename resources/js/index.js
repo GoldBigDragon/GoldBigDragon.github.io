@@ -20,7 +20,6 @@ function addBadge(targetArea, category, index, badgeData){
 	badge.setAttribute("data-lang", index);
 	badge.appendChild(badgeLogo);
 	badge.appendChild(badgeTitle);
-	badge.appendChild(badgeSubtitle);
 	targetArea.appendChild(badge);
 }
 
