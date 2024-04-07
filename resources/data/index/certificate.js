@@ -15,7 +15,7 @@ const DATA_CERTIFICATE = [
 			"cn":"Chainalysis",
 			"ru":"Chainalysis"
 		},
-		"logo":"/resources/img/index/career/PLZ.png",
+		"logo":"/resources/img/index/logo/certificate/chainalysis.png",
 		"logo-title":{
 			"en":"CRC",
 			"ko":"CRC",
@@ -41,7 +41,7 @@ const DATA_CERTIFICATE = [
 			"cn":"MITRE ENGENUITY",
 			"ru":"MITRE ENGENUITY"
 		},
-		"logo":"/resources/img/index/career/PLZ.png",
+		"logo":"/resources/img/index/logo/certificate/mad_soca.png",
 		"logo-title":{
 			"en":"MAD - SOCA",
 			"ko":"MAD - SOCA",
@@ -67,7 +67,7 @@ const DATA_CERTIFICATE = [
 			"cn":"MITRE ENGENUITY",
 			"ru":"MITRE ENGENUITY"
 		},
-		"logo":"/resources/img/index/career/PLZ.png",
+		"logo":"/resources/img/index/logo/certificate/mad_cti.png",
 		"logo-title":{
 			"en":"MAD - CTI",
 			"ko":"MAD - CTI",

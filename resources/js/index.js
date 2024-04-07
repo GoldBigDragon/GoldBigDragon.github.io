@@ -8,7 +8,7 @@ function addBadge(targetArea, category, index, badgeData){
 	badgeLogo.className = "badge-logo";
 	badgeLogo.src = badgeData["logo"];
 	const badgeTitle = document.createElement("div");
-	badgeTitle.className = "badge-name";
+	badgeTitle.className = "badge-name lang";
 	badgeTitle.innerHTML = badgeData["logo-title"][NOW_LANG];
 	LANGUAGE_OBJECT["BADGE_LANG"][category + "-" + index] = badgeData["logo-title"];
 	badgeTitle.setAttribute("data-lang-var", "BADGE_LANG");

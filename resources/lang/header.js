@@ -11,6 +11,12 @@ const HEADER_LANG = {
 		"jp": "音楽",
 		"cn": "音乐",
 		"ru": "Музыка"
+	}, "service": {
+		"en": "Service",
+		"ko": "서비스",
+		"jp": "奉仕",
+		"cn": "服务",
+		"ru": "Услуга"
 	}, "program": {
 		"en": "Program",
 		"ko": "프로그램",
