@@ -20,9 +20,92 @@ function addBadge(targetArea, category, index, badgeData){
 
 function openModal(category, index){
 	let badgeData = null;
+	const modalTitle = document.getElementById("badgeModalTitle");
+	const modalBody = document.getElementById("badgeModalBody");
+	modalTitle.innerHTML = "";
+	modalBody.innerHTML = "";
 	if(category == "career"){
 		badgeData = DATA_CAREER[index];
+		const companyLogoDiv = document.createElement("div");
+		companyLogoDiv.className = "row";
+		const companyLogo = document.createElement("img");
+		companyLogo.src = badgeData["logo"];
+		companyLogo.style.maxWidth = "10rem;";
+		companyLogo.style.maxHeight = "10rem;";
+		companyLogoDiv.appendChild(companyLogo);
 		
+		const companyNameDiv = document.createElement("div");
+		companyNameDiv.className = "row";
+		const companyNameDescription = document.createElement("div");
+		companyNameDescription.className = "col-2 key";
+		companyNameDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["company-name"][NOW_LANG];
+		const companyName = document.createElement("div");
+		companyName.className = "col value";
+		companyName.innerHTML = badgeData["company"];
+		companyNameDiv.appendChild(companyNameDescription);
+		companyNameDiv.appendChild(companyName);
+		
+		const companyUrlDiv = document.createElement("div");
+		companyUrlDiv.className = "row";
+		const companyUrlDescription = document.createElement("div");
+		companyUrlDescription.className = "col-2 key";
+		companyUrlDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["company-site"][NOW_LANG];
+		const companyUrl = document.createElement("div");
+		companyUrl.className = "col value";
+		companyUrl.innerHTML = badgeData["company-link"];
+		companyUrlDiv.appendChild(companyUrlDescription);
+		companyUrlDiv.appendChild(companyUrl);
+		
+		const companyEmploymentPeriodDiv = document.createElement("div");
+		companyEmploymentPeriodDiv.className = "row";
+		const companyEmploymentPeriodDescription = document.createElement("div");
+		companyEmploymentPeriodDescription.className = "col-2 key";
+		companyEmploymentPeriodDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["employment-period"][NOW_LANG];
+		const companyEmploymentPeriod = document.createElement("div");
+		companyEmploymentPeriod.className = "col value";
+		companyEmploymentPeriod.innerHTML = badgeData["start-date"] + " ~ " + badgeData["end-date"];
+		companyEmploymentPeriodDiv.appendChild(companyEmploymentPeriodDescription);
+		companyEmploymentPeriodDiv.appendChild(companyEmploymentPeriod);
+		
+		modalBody.appendChild(companyLogoDiv);
+		modalBody.appendChild(companyNameDiv);
+		modalBody.appendChild(companyUrlDiv);
+		modalBody.appendChild(companyEmploymentPeriodDiv);
+/*
+		부서
+		팀
+		직위
+		수행 업무
+		
+		"department":{
+			"en":"Research institute",
+			"ko":"부설연구소",
+			"jp":"附属研究所",
+			"cn":"附属研究所",
+			"ru":"Исследовательский институт"
+		},
+		"team": {
+			"en":"Development team",
+			"ko":"개발팀",
+			"jp":"開発チーム",
+			"cn":"开发团队",
+			"ru":"Команда разработчиков"
+		},
+		"task": {
+			"en":"Electronic document development",
+			"ko":"전자 문서 개발",
+			"jp":"電子文書開発",
+			"cn":"电子文档开发",
+			"ru":"Разработка электронного документа"
+		},
+		"position": {
+			"en":"Intern",
+			"ko":"인턴",
+			"jp":"インターン",
+			"cn":"实习生",
+			"ru":"Стажер"
+		},
+		*/
 	} else if(category == "education"){
 		badgeData = DATA_EDUCATION[index];
 	} else if(category == "certificate"){
@@ -31,6 +114,7 @@ function openModal(category, index){
 		badgeData = DATA_ETC[index];
 	}
 	if(badgeData != null) {
+		modalTitle.innerHTML = badgeData["logo-title"][NOW_LANG];
 		$('#badgeDetailModal').modal('show');
 	}
 }

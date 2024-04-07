@@ -75,6 +75,27 @@ const INDEX_LANG = {
 		"jp": "<i class='fa-solid fa-ban'></i>&nbsp;閉める",
 		"cn": "<i class='fa-solid fa-ban'></i>&nbsp;关闭",
 		"ru": "<i class='fa-solid fa-ban'></i>&nbsp;Закрывать"
+	},
+	"company-name": {
+		"en": "Company name",
+		"ko": "회사 이름",
+		"jp": "会社名",
+		"cn": "公司名称",
+		"ru": "Название компании"
+	},
+	"company-site": {
+		"en": "Link",
+		"ko": "홈페이지",
+		"jp": "リンク",
+		"cn": "连接",
+		"ru": "Связь"
+	},
+	"employment-period": {
+		"en": "Employment period",
+		"ko": "근무 기간",
+		"jp": "雇用期間",
+		"cn": "雇佣期限",
+		"ru": "Период трудоустройства"
 	}
 }
 LANGUAGE_OBJECT["INDEX_LANG"] = INDEX_LANG;

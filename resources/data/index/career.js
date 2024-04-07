@@ -1,8 +1,7 @@
 const DATA_CAREER = [
 	{
 		"company": "(주)코어시큐리티",
-		"company-subtitle":"(Coresecurity)",
-		"company-website":"https://coresec.co.kr/",
+		"company-link":"https://coresec.co.kr/",
 		"start-date":"2021-04-12",
 		"end-date":{
 			"en":"Currently working",
@@ -49,9 +48,8 @@ const DATA_CAREER = [
 		}
 	},
 	{
-		"company": "주식회사 피엘지",
-		"company-subtitle":"(PLZ Co.,Ltd.)",
-		"company-website":"https://pleaze.kr/",
+		"company": "주식회사 피엘지 (PLZ Co.,Ltd.)",
+		"company-link":"https://pleaze.kr/",
 		"start-date":"2018-11-28",
 		"end-date":"2019-06-28",
 		"department":{
