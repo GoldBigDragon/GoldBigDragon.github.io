@@ -28,6 +28,7 @@ function openModal(category, index){
 		badgeData = DATA_CAREER[index];
 		const companyLogoDiv = document.createElement("div");
 		companyLogoDiv.className = "row modal-panel";
+		companyLogoDiv.style.marginBottom = "1rem";
 		const companyLogo = document.createElement("img");
 		companyLogo.src = badgeData["logo"];
 		companyLogo.style.maxWidth = "10rem";
@@ -50,8 +51,9 @@ function openModal(category, index){
 		const companyUrlDescription = document.createElement("div");
 		companyUrlDescription.className = "col-3 key";
 		companyUrlDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["company-site"][NOW_LANG];
-		const companyUrl = document.createElement("div");
+		const companyUrl = document.createElement("a");
 		companyUrl.className = "col value";
+		companyUrl.href = badgeData["company-link"];
 		companyUrl.innerHTML = badgeData["company-link"];
 		companyUrlDiv.appendChild(companyUrlDescription);
 		companyUrlDiv.appendChild(companyUrl);
