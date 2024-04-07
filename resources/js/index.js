@@ -134,8 +134,8 @@ function openModal(category, index){
 		proofDiv.style.marginBottom = "1rem";
 		const proofLogo = document.createElement("img");
 		proofLogo.src = badgeData["proof"];
-		proofLogo.style.maxWidth = "30rem";
-		proofLogo.style.maxHeight = "60rem";
+		proofLogo.style.maxWidth = "20rem";
+		proofLogo.style.maxHeight = "25rem";
 		proofDiv.appendChild(proofLogo);
 		
 		const urlDiv = document.createElement("div");
@@ -219,6 +219,54 @@ function openModal(category, index){
 		modalBody.appendChild(institutionDiv);
 	} else if(category == "certificate"){
 		badgeData = DATA_CERTIFICATE[index];
+		
+		const proofDiv = document.createElement("div");
+		proofDiv.className = "row modal-panel";
+		proofDiv.style.marginBottom = "1rem";
+		const proofLogo = document.createElement("img");
+		proofLogo.src = badgeData["proof"];
+		proofLogo.style.maxWidth = "20rem";
+		proofLogo.style.maxHeight = "25rem";
+		proofDiv.appendChild(proofLogo);
+		
+		const nameDiv = document.createElement("div");
+		nameDiv.className = "row modal-panel";
+		const nameDescription = document.createElement("div");
+		nameDescription.className = "col-3 key";
+		nameDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["certificate-name"][NOW_LANG];
+		const name = document.createElement("div");
+		name.className = "col value";
+		name.innerHTML = badgeData["name"][NOW_LANG];
+		nameDiv.appendChild(nameDescription);
+		nameDiv.appendChild(name);
+		
+		const issuingAuthorityDiv = document.createElement("div");
+		issuingAuthorityDiv.className = "row modal-panel";
+		const issuingAuthorityDescription = document.createElement("div");
+		issuingAuthorityDescription.className = "col-3 key";
+		issuingAuthorityDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["certificate-issuing-authority"][NOW_LANG];
+		const issuingAuthority = document.createElement("div");
+		issuingAuthority.className = "col value";
+		issuingAuthority.innerHTML = badgeData["issuing-authority"][NOW_LANG];
+		issuingAuthorityDiv.appendChild(issuingAuthorityDescription);
+		issuingAuthorityDiv.appendChild(issuingAuthority);
+		
+		const acquisitionDateDiv = document.createElement("div");
+		acquisitionDateDiv.className = "row modal-panel";
+		const acquisitionDateDescription = document.createElement("div");
+		acquisitionDateDescription.className = "col-3 key";
+		acquisitionDateDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["certificate-acquisition-date"][NOW_LANG];
+		const acquisitionDate = document.createElement("div");
+		acquisitionDate.className = "col value";
+		acquisitionDate.innerHTML = badgeData["acquisition-date"];
+		acquisitionDateDiv.appendChild(acquisitionDateDescription);
+		acquisitionDateDiv.appendChild(acquisitionDate);
+		
+		
+		modalBody.appendChild(proofDiv);
+		modalBody.appendChild(nameDiv);
+		modalBody.appendChild(issuingAuthorityDiv);
+		modalBody.appendChild(acquisitionDateDiv);
 	} else if(category == "etc"){
 		badgeData = DATA_ETC[index];
 	}

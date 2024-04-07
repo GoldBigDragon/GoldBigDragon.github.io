@@ -25,11 +25,11 @@ const DATA_CAREER = [
 			"ru":"Группа исследования технологий угроз"
 		},
 		"task": {
-			"en":"<ul><li>Research and development of training scenarios based on the MITRE ATT&CK framework</li><li>Cryptocurrency tracing based on Chainalysis Reactor</li><li>Development of cryptocurrency tracing service based on Chainalysis IAPI</li><li>Maintenance of Learning Management System (LMS) based on vSphere</li><li>Development of Web Application Server (WAS) based on Spring Boot</li></ul>",
-			"ko":"<ul><li>MITRE ATT&CK 프레임워크 기반 훈련 시나리오 연구 및 개발</li><li>Chainlaysis Reactor 기반 암호화폐 추적</li><li>Chainlaysis IAPI 기반 암호화폐 추적 서비스 개발</li><li>vSphere 기반 Learning Management System (LMS) 유지보수</li><li>Spring Boot 기반 Web Application Server (WAS) 개발</li></ul>",
-			"jp":"<ul><li>MITRE ATT&CKフレームワークに基づくトレーニングシナリオの研究開発</li><li>Chainalysis Reactorを基にした仮想通貨のトレース</li><li>Chainlaysis IAPIベースの暗号通貨追跡サービスの開発</li><li>vSphere ベースの学習管理システム (LMS) の保守</li><li>Spring BootベースのWeb Application Server (WAS)開発</li></ul>",
-			"cn":"<ul><li>基于MITRE ATT&CK框架的培训场景研究和开发</li><li>基于Chainalysis Reactor的加密货币追踪</li><li>基于Chainalysis IAPI的加密货币追踪服务开发</li><li>基于vSphere的学习管理系统（LMS）的维护</li><li>基于Spring Boot的Web应用程序服务器（WAS）的开发</li></ul>",
-			"ru":"<ul><li>Исследование и разработка сценариев обучения на основе фреймворка MITRE ATT&CK</li><li>Отслеживание криптовалюты на основе Chainalysis Reactor</li><li>Разработка сервиса отслеживания криптовалюты на основе Chainalysis IAPI</li><li>Техническое обслуживание системы управления обучением (LMS) на базе vSphere</li><li>Разработка веб-приложения на основе Spring Boot</li></ul>"
+			"en":"<ul style='margin-bottom: 0rem;'><li>Research and development of training scenarios based on the MITRE ATT&CK framework</li><li>Cryptocurrency tracing based on Chainalysis Reactor</li><li>Development of cryptocurrency tracing service based on Chainalysis IAPI</li><li>Maintenance of Learning Management System (LMS) based on vSphere</li><li>Development of Web Application Server (WAS) based on Spring Boot</li></ul>",
+			"ko":"<ul style='margin-bottom: 0rem;'><li>MITRE ATT&CK 프레임워크 기반 훈련 시나리오 연구 및 개발</li><li>Chainlaysis Reactor 기반 암호화폐 추적</li><li>Chainlaysis IAPI 기반 암호화폐 추적 서비스 개발</li><li>vSphere 기반 Learning Management System (LMS) 유지보수</li><li>Spring Boot 기반 Web Application Server (WAS) 개발</li></ul>",
+			"jp":"<ul style='margin-bottom: 0rem;'><li>MITRE ATT&CKフレームワークに基づくトレーニングシナリオの研究開発</li><li>Chainalysis Reactorを基にした仮想通貨のトレース</li><li>Chainlaysis IAPIベースの暗号通貨追跡サービスの開発</li><li>vSphere ベースの学習管理システム (LMS) の保守</li><li>Spring BootベースのWeb Application Server (WAS)開発</li></ul>",
+			"cn":"<ul style='margin-bottom: 0rem;'><li>基于MITRE ATT&CK框架的培训场景研究和开发</li><li>基于Chainalysis Reactor的加密货币追踪</li><li>基于Chainalysis IAPI的加密货币追踪服务开发</li><li>基于vSphere的学习管理系统（LMS）的维护</li><li>基于Spring Boot的Web应用程序服务器（WAS）的开发</li></ul>",
+			"ru":"<ul style='margin-bottom: 0rem;'><li>Исследование и разработка сценариев обучения на основе фреймворка MITRE ATT&CK</li><li>Отслеживание криптовалюты на основе Chainalysis Reactor</li><li>Разработка сервиса отслеживания криптовалюты на основе Chainalysis IAPI</li><li>Техническое обслуживание системы управления обучением (LMS) на базе vSphere</li><li>Разработка веб-приложения на основе Spring Boot</li></ul>"
 		},
 		"position": {
 			"en":"Assistant Research Engineer",

@@ -166,6 +166,27 @@ const INDEX_LANG = {
 		"jp": "教育機関",
 		"cn": "教育机构",
 		"ru": "Образование учреждение"
+	},
+	"certificate-name": {
+		"en": "Certificate name",
+		"ko": "인증서 이름",
+		"jp": "証明書名",
+		"cn": "证书名称",
+		"ru": "Имя сертификата"
+	},
+	"certificate-issuing-authority": {
+		"en": "Issuing authority",
+		"ko": "발급기관",
+		"jp": "発行機関",
+		"cn": "发证机关",
+		"ru": "Орган, выдавший документ"
+	},
+	"certificate-acquisition-date": {
+		"en": "Acquisition date",
+		"ko": "취득일자",
+		"jp": "取得日",
+		"cn": "收购日期",
+		"ru": "Дата Приобретения"
 	}
 }
 LANGUAGE_OBJECT["INDEX_LANG"] = INDEX_LANG;

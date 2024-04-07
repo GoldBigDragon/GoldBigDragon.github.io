@@ -15,11 +15,11 @@ const DATA_EDUCATION = [
 			"ru":"Цифровая криминалистика (9th)"
 		},
 		"degree":{
-			"en":"",
-			"ko":"",
-			"jp":"",
-			"cn":"",
-			"ru":""
+			"en":" ",
+			"ko":" ",
+			"jp":" ",
+			"cn":" ",
+			"ru":" "
 		},
 		"educational-institution":{
 			"en":"Korea Information Technology Research Institute, Ministry of Science and ICT",
@@ -57,11 +57,11 @@ const DATA_EDUCATION = [
 			"ru":"Информационная безопасность"
 		},
 		"degree":{
-			"en":"Bachelor",
-			"ko":"학사",
-			"jp":"学士",
-			"cn":"学士",
-			"ru":"бакала́вр"
+			"en":"Bachelor of Engineering",
+			"ko":"공학사",
+			"jp":"工学士",
+			"cn":"工程学士",
+			"ru":"Бакалавр инженерии"
 		},
 		"educational-institution":{
 			"en":"Youngsan University",
