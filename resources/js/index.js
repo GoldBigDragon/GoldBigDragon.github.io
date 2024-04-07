@@ -38,19 +38,19 @@ if(DATA_CAREER){
 if(DATA_EDUCATION){
 	let index = 0;
 	for(index = 0; index < DATA_EDUCATION.length; index ++) {
-		addBadge(careerBadgeArea, 'education', index, DATA_EDUCATION[index]["logo-title"][nowLang], DATA_EDUCATION[index]["logo"]);
+		addBadge(educationBadgeArea, 'education', index, DATA_EDUCATION[index]);
 	}
 }
 if(DATA_CERTIFICATE){
 	let index = 0;
 	for(index = 0; index < DATA_CERTIFICATE.length; index ++) {
-		addBadge(careerBadgeArea, 'certificate', index, DATA_CERTIFICATE[index]["logo-title"][nowLang], DATA_CERTIFICATE[index]["logo"]);
+		addBadge(certificateBadgeArea, 'certificate', index, DATA_CERTIFICATE[index]);
 	}
 }
 if(DATA_ETC){
 	let index = 0;
 	for(index = 0; index < DATA_ETC.length; index ++) {
-		addBadge(careerBadgeArea, 'etc', index, DATA_ETC[index]["logo-title"][nowLang], DATA_ETC[index]["logo"]);
+		addBadge(etcBadgeArea, 'etc', index, DATA_ETC[index]);
 	}
 }
 

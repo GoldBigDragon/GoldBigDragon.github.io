@@ -15,7 +15,7 @@ const DATA_CERTIFICATE = [
 			"cn":"韩国互联网振兴院/韩国法医学会",
 			"ru":"Корейское агентство Интернета и безопасности/Корейский институт судебной экспертизы"
 		},
-		"logo":"/img/index/logo/certificate/PLZ.png",
+		"logo":"/resources/img/index/logo/certificate/PLZ.png",
 		"logo-title":{
 			"en":"Digital forensics",
 			"ko":"디지털포렌식",
@@ -23,7 +23,7 @@ const DATA_CERTIFICATE = [
 			"cn":"数字取证",
 			"ru":"Цифровая криминалистика"
 		},
-		"proof":"/img/index/proof/certificate/digital_forensic_expert.png"
+		"proof":"/resources/img/index/proof/certificate/digital_forensic_expert.png"
 	},
 	{
 		"name":{
@@ -41,7 +41,7 @@ const DATA_CERTIFICATE = [
 			"cn":"MITRE ENGENUITY",
 			"ru":"MITRE ENGENUITY"
 		},
-		"logo":"/img/index/carrer/PLZ.png",
+		"logo":"/resources/img/index/carrer/PLZ.png",
 		"logo-title":{
 			"en":"MAD - CTI",
 			"ko":"MAD - CTI",
@@ -49,7 +49,7 @@ const DATA_CERTIFICATE = [
 			"cn":"MAD - CTI",
 			"ru":"MAD - CTI"
 		},
-		"proof":"/img/index/proof/certificate/mad_cti.png"
+		"proof":"/resources/img/index/proof/certificate/mad_cti.png"
 	},
 	{
 		"name":{
@@ -67,7 +67,7 @@ const DATA_CERTIFICATE = [
 			"cn":"MITRE ENGENUITY",
 			"ru":"MITRE ENGENUITY"
 		},
-		"logo":"/img/index/carrer/PLZ.png",
+		"logo":"/resources/img/index/carrer/PLZ.png",
 		"logo-title":{
 			"en":"MAD - SOCA",
 			"ko":"MAD - SOCA",
@@ -75,7 +75,7 @@ const DATA_CERTIFICATE = [
 			"cn":"MAD - SOCA",
 			"ru":"MAD - SOCA"
 		},
-		"proof":"/img/index/proof/certificate/mad_soca.png"
+		"proof":"/resources/img/index/proof/certificate/mad_soca.png"
 	},
 	{
 		"name":{
@@ -93,7 +93,7 @@ const DATA_CERTIFICATE = [
 			"cn":"Chainalysis",
 			"ru":"Chainalysis"
 		},
-		"logo":"/img/index/carrer/PLZ.png",
+		"logo":"/resources/img/index/carrer/PLZ.png",
 		"logo-title":{
 			"en":"CRC",
 			"ko":"CRC",
@@ -101,6 +101,6 @@ const DATA_CERTIFICATE = [
 			"cn":"CRC",
 			"ru":"CRC"
 		},
-		"proof":"/img/index/proof/certificate/crc.jpg"
+		"proof":"/resources/img/index/proof/certificate/crc.jpg"
 	},
 ];
