@@ -22,6 +22,41 @@ function openModal(category, index){
 	let badgeData = null;
 	if(category == "career"){
 		badgeData = DATA_CAREER[index];
+		
+		
+		"company": "주식회사 피엘지",
+		"company-subtitle":"(PLZ Co.,Ltd.)",
+		"company-website":"https://pleaze.kr/",
+		"start-date":"2018-11-28",
+		"end-date":"2019-06-28",
+		"department":{
+			"en":"Research institute",
+			"ko":"부설연구소",
+			"jp":"附属研究所",
+			"cn":"附属研究所",
+			"ru":"Исследовательский институт"
+		},
+		"team": {
+			"en":"Development team",
+			"ko":"개발팀",
+			"jp":"開発チーム",
+			"cn":"开发团队",
+			"ru":"Команда разработчиков"
+		},
+		"task": {
+			"en":"Electronic document development",
+			"ko":"전자 문서 개발",
+			"jp":"電子文書開発",
+			"cn":"电子文档开发",
+			"ru":"Разработка электронного документа"
+		},
+		"position": {
+			"en":"Intern",
+			"ko":"인턴",
+			"jp":"インターン",
+			"cn":"实习生",
+			"ru":"Стажер"
+		},
 	} else if(category == "education"){
 		badgeData = DATA_EDUCATION[index];
 	} else if(category == "certificate"){
