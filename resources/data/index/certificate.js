@@ -93,7 +93,7 @@ const DATA_CERTIFICATE = [
 			"cn":"韩国互联网振兴院/韩国法医学会",
 			"ru":"Корейское агентство Интернета и безопасности/Корейский институт судебной экспертизы"
 		},
-		"logo":"/resources/img/index/logo/certificate/PLZ.png",
+		"logo":"/resources/img/index/logo/certificate/basic.png",
 		"logo-title":{
 			"en":"Digital forensics",
 			"ko":"디지털포렌식",

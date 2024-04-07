@@ -12,7 +12,7 @@ function addBadge(targetArea, category, index, badgeData){
 	badgeTitle.innerHTML = badgeData["logo-title"][NOW_LANG];
 	LANGUAGE_OBJECT["BADGE_LANG"][category + "-" + index] = badgeData["logo-title"];
 	badgeTitle.setAttribute("data-lang-var", "BADGE_LANG");
-	badgeTitle.setAttribute("data-lang", index);
+	badgeTitle.setAttribute("data-lang", category + "-" + index);
 	badge.appendChild(badgeLogo);
 	badge.appendChild(badgeTitle);
 	targetArea.appendChild(badge);
