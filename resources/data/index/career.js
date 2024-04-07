@@ -1,48 +1,5 @@
 const DATA_CAREER = [
 	{
-		"company": "주식회사 피엘지",
-		"company-subtitle":"(PLZ Co.,Ltd.)",
-		"company-website":"https://pleaze.kr/",
-		"start-date":"2018-11-28",
-		"end-date":"2019-06-28",
-		"department":{
-			"en":"Research institute",
-			"ko":"부설연구소",
-			"jp":"附属研究所",
-			"cn":"附属研究所",
-			"ru":"Исследовательский институт"
-		},
-		"team": {
-			"en":"Development team",
-			"ko":"개발팀",
-			"jp":"開発チーム",
-			"cn":"开发团队",
-			"ru":"Команда разработчиков"
-		},
-		"task": {
-			"en":"Electronic document development",
-			"ko":"전자 문서 개발",
-			"jp":"電子文書開発",
-			"cn":"电子文档开发",
-			"ru":"Разработка электронного документа"
-		},
-		"position": {
-			"en":"Intern",
-			"ko":"인턴",
-			"jp":"インターン",
-			"cn":"实习生",
-			"ru":"Стажер"
-		},
-		"logo":"/resources/img/index/logo/carrer/PLZ.png",
-		"logo-title":{
-			"en":"PLZ",
-			"ko":"피엘지",
-			"jp":"PLZ",
-			"cn":"PLZ",
-			"ru":"PLZ"
-		}
-	},
-	{
 		"company": "(주)코어시큐리티",
 		"company-subtitle":"(Coresecurity)",
 		"company-website":"https://coresec.co.kr/",
@@ -89,6 +46,49 @@ const DATA_CAREER = [
 			"jp":"Coresecurity",
 			"cn":"Coresecurity",
 			"ru":"Coresecurity"
+		}
+	},
+	{
+		"company": "주식회사 피엘지",
+		"company-subtitle":"(PLZ Co.,Ltd.)",
+		"company-website":"https://pleaze.kr/",
+		"start-date":"2018-11-28",
+		"end-date":"2019-06-28",
+		"department":{
+			"en":"Research institute",
+			"ko":"부설연구소",
+			"jp":"附属研究所",
+			"cn":"附属研究所",
+			"ru":"Исследовательский институт"
+		},
+		"team": {
+			"en":"Development team",
+			"ko":"개발팀",
+			"jp":"開発チーム",
+			"cn":"开发团队",
+			"ru":"Команда разработчиков"
+		},
+		"task": {
+			"en":"Electronic document development",
+			"ko":"전자 문서 개발",
+			"jp":"電子文書開発",
+			"cn":"电子文档开发",
+			"ru":"Разработка электронного документа"
+		},
+		"position": {
+			"en":"Intern",
+			"ko":"인턴",
+			"jp":"インターン",
+			"cn":"实习生",
+			"ru":"Стажер"
+		},
+		"logo":"/resources/img/index/logo/carrer/PLZ.png",
+		"logo-title":{
+			"en":"PLZ",
+			"ko":"피엘지",
+			"jp":"PLZ",
+			"cn":"PLZ",
+			"ru":"PLZ"
 		}
 	}
 ];

@@ -1,48 +1,6 @@
 const DATA_EDUCATION = [
 	{
 		"name":{
-			"en":"Youngsan University",
-			"ko":"영산대학교",
-			"jp":"霊山大学",
-			"cn":"靈山大學校",
-			"ru":"Университет Youngsan"
-		},
-		"department":{
-			"en":"Cyber Security",
-			"ko":"사이버보안학과",
-			"jp":"サイバーセキュリティ",
-			"cn":"网络安全",
-			"ru":"Информационная безопасность"
-		},
-		"degree":{
-			"en":"Bachelor",
-			"ko":"학사",
-			"jp":"学士",
-			"cn":"学士",
-			"ru":"бакала́вр"
-		},
-		"educational-institution":{
-			"en":"University",
-			"ko":"대학교",
-			"jp":"大学",
-			"cn":"大学",
-			"ru":"Университет"
-		},
-		"start-date":"2014-03-03",
-		"end-date":"2021-02-19",
-		"url":"https://www.ysu.ac.kr/",
-		"logo":"/resources/img/index/logo/education/ysu.png",
-		"logo-title":{
-			"en":"YSU",
-			"ko":"영산대학교",
-			"jp":"YSU",
-			"cn":"YSU",
-			"ru":"YSU"
-		},
-		"proof":"/resources/img/index/proof/education/ysu.jpg"
-	},
-	{
-		"name":{
 			"en":"Next-generation security leader training program (Best of the Best)",
 			"ko":"차세대 보안 리더 양성 프로그램 (Best of the Best)",
 			"jp":"次世代セキュリティリーダー養成プログラム (Best of the Best)",
@@ -83,4 +41,46 @@ const DATA_EDUCATION = [
 		},
 		"proof":"/resources/img/index/proof/education/bob.jpg"
 	},
+	{
+		"name":{
+			"en":"Youngsan University",
+			"ko":"영산대학교",
+			"jp":"霊山大学",
+			"cn":"靈山大學校",
+			"ru":"Университет Youngsan"
+		},
+		"department":{
+			"en":"Cyber Security",
+			"ko":"사이버보안학과",
+			"jp":"サイバーセキュリティ",
+			"cn":"网络安全",
+			"ru":"Информационная безопасность"
+		},
+		"degree":{
+			"en":"Bachelor",
+			"ko":"학사",
+			"jp":"学士",
+			"cn":"学士",
+			"ru":"бакала́вр"
+		},
+		"educational-institution":{
+			"en":"University",
+			"ko":"대학교",
+			"jp":"大学",
+			"cn":"大学",
+			"ru":"Университет"
+		},
+		"start-date":"2014-03-03",
+		"end-date":"2021-02-19",
+		"url":"https://www.ysu.ac.kr/",
+		"logo":"/resources/img/index/logo/education/ysu.png",
+		"logo-title":{
+			"en":"YSU",
+			"ko":"영산대학교",
+			"jp":"YSU",
+			"cn":"YSU",
+			"ru":"YSU"
+		},
+		"proof":"/resources/img/index/proof/education/ysu.jpg"
+	}
 ];
