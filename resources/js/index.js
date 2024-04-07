@@ -11,10 +11,9 @@ function addBadge(targetArea, category, index, badgeData){
 	badgeTitle.className = "badge-name";
 	badgeTitle.innerHTML = badgeData["logo-title"][NOW_LANG];
 	if(LANGUAGE_OBJECT["BADGE_LANG"].hasOwnProperty(category)) {
-		LANGUAGE_OBJECT["BADGE_LANG"][category][index] = badgeData["logo-title"];
+		LANGUAGE_OBJECT["BADGE_LANG"][category + "-" + index] = badgeData["logo-title"];
 	} else {
-		LANGUAGE_OBJECT["BADGE_LANG"][category] = {};
-		LANGUAGE_OBJECT["BADGE_LANG"][category][index] = badgeData["logo-title"];
+		LANGUAGE_OBJECT["BADGE_LANG"][category + "-" + index][index] = badgeData["logo-title"];
 	}
 	badgeTitle.setAttribute("data-lang-var", "BADGE_LANG");
 	badgeTitle.setAttribute("data-lang", index);
@@ -35,7 +34,7 @@ function openModal(category, index){
 		badgeData = DATA_ETC[index];
 	}
 	if(badgeData != null) {
-		badgeSubtitle.setAttribute("onClick", "$('#badgeDetailModal').modal('show')");
+		$('#badgeDetailModal').modal('show');
 	}
 }
 
