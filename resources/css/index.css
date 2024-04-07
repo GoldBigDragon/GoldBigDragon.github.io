@@ -23,6 +23,7 @@
 
 .category {
 	margin-bottom: 2rem;
+	padding: 1rem;
 	background-color: var(--bs-gray-900);
     border-radius: 1rem;
     align-items: center;
@@ -69,6 +70,7 @@
 	background-color: rgba(0, 0, 0, 0.5);
 }
 .badge {
+	margin: 1rem;
 	transition: 0.2s;
 	cursor: pointer;
 }
