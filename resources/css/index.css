@@ -29,6 +29,7 @@
     border-radius: 1rem;
     align-items: center;
     justify-content: center;
+	box-shadow: 0px 10px 10px black;
 }
 
 .badge-box{
