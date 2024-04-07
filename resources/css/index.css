@@ -87,3 +87,13 @@
 .badge-name {
     font-size: 0.9rem;
 }
+
+.modal-panel {
+	justify-content: center;
+    align-items: center;
+	padding: 1rem;
+}
+
+.key {
+	text-align: center;
+}

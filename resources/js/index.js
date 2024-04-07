@@ -27,17 +27,17 @@ function openModal(category, index){
 	if(category == "career"){
 		badgeData = DATA_CAREER[index];
 		const companyLogoDiv = document.createElement("div");
-		companyLogoDiv.className = "row";
+		companyLogoDiv.className = "row modal-panel";
 		const companyLogo = document.createElement("img");
 		companyLogo.src = badgeData["logo"];
-		companyLogo.style.maxWidth = "10rem;";
-		companyLogo.style.maxHeight = "10rem;";
+		companyLogo.style.maxWidth = "10rem";
+		companyLogo.style.maxHeight = "10rem";
 		companyLogoDiv.appendChild(companyLogo);
 		
 		const companyNameDiv = document.createElement("div");
-		companyNameDiv.className = "row";
+		companyNameDiv.className = "row modal-panel";
 		const companyNameDescription = document.createElement("div");
-		companyNameDescription.className = "col-2 key";
+		companyNameDescription.className = "col-3 key";
 		companyNameDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["company-name"][NOW_LANG];
 		const companyName = document.createElement("div");
 		companyName.className = "col value";
@@ -46,9 +46,9 @@ function openModal(category, index){
 		companyNameDiv.appendChild(companyName);
 		
 		const companyUrlDiv = document.createElement("div");
-		companyUrlDiv.className = "row";
+		companyUrlDiv.className = "row modal-panel";
 		const companyUrlDescription = document.createElement("div");
-		companyUrlDescription.className = "col-2 key";
+		companyUrlDescription.className = "col-3 key";
 		companyUrlDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["company-site"][NOW_LANG];
 		const companyUrl = document.createElement("div");
 		companyUrl.className = "col value";
@@ -57,13 +57,17 @@ function openModal(category, index){
 		companyUrlDiv.appendChild(companyUrl);
 		
 		const companyEmploymentPeriodDiv = document.createElement("div");
-		companyEmploymentPeriodDiv.className = "row";
+		companyEmploymentPeriodDiv.className = "row modal-panel";
 		const companyEmploymentPeriodDescription = document.createElement("div");
-		companyEmploymentPeriodDescription.className = "col-2 key";
+		companyEmploymentPeriodDescription.className = "col-3 key";
 		companyEmploymentPeriodDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["employment-period"][NOW_LANG];
 		const companyEmploymentPeriod = document.createElement("div");
 		companyEmploymentPeriod.className = "col value";
-		companyEmploymentPeriod.innerHTML = badgeData["start-date"] + " ~ " + badgeData["end-date"];
+		if(badgeData["end-date"].constructor == Object) {
+			companyEmploymentPeriod.innerHTML = badgeData["start-date"] + " ~ " + badgeData["end-date"][NOW_LANG];
+		} else {
+			companyEmploymentPeriod.innerHTML = badgeData["start-date"] + " ~ " + badgeData["end-date"];
+		}
 		companyEmploymentPeriodDiv.appendChild(companyEmploymentPeriodDescription);
 		companyEmploymentPeriodDiv.appendChild(companyEmploymentPeriod);
 		

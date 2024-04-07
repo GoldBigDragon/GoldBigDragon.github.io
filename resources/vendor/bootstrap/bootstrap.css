@@ -6390,9 +6390,6 @@ fieldset:disabled .btn {
 	position: relative;
 	flex: 1 1 auto;
 	padding: 1rem;
-	display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .modal-footer {
