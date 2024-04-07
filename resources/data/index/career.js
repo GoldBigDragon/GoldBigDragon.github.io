@@ -33,7 +33,14 @@ const DATA_CAREER = [
 			"c":"实习生",
 			"r":"Стажер"
 		},
-		"logo":"/img/index/carrer/PLZ.png"
+		"logo":"/img/index/logo/carrer/PLZ.png",
+		"logo-title":{
+			"e":"PLZ",
+			"k":"피엘지",
+			"j":"PLZ",
+			"c":"PLZ",
+			"r":"PLZ"
+		}
 	},
 	{
 		"company": "(주)코어시큐리티",
@@ -75,6 +82,13 @@ const DATA_CAREER = [
 			"c":"主任硏究員",
 			"r":"Помощник инженера-исследователя"
 		},
-		"logo":"/img/index/carrer/coresecurity.png"
+		"logo":"/img/index/logo/carrer/coresecurity.png",
+		"logo-title":{
+			"e":"Coresecurity",
+			"k":"코어시큐리티",
+			"j":"Coresecurity",
+			"c":"Coresecurity",
+			"r":"Coresecurity"
+		}
 	}
 ];

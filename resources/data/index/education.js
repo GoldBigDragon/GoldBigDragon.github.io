@@ -31,8 +31,15 @@ const DATA_EDUCATION = [
 		"start-date":"2014-03-03",
 		"end-date":"2021-02-19",
 		"url":"https://www.ysu.ac.kr/",
-		"image":"/img/index/education/ysu.png",
-		"logo":"/img/index/carrer/PLZ.png"
+		"logo":"/img/index/logo/education/ysu.png",
+		"logo-title":{
+			"e":"YSU",
+			"k":"영산대학교",
+			"j":"YSU",
+			"c":"YSU",
+			"r":"YSU"
+		},
+		"proof":"/img/index/proof/education/ysu.jpg"
 	},
 	{
 		"name":{
@@ -66,7 +73,14 @@ const DATA_EDUCATION = [
 		"start-date":"2020-07-01 ",
 		"end-date":"2021-03-26",
 		"url":"https://www.kitribob.kr/",
-		"image":"/img/index/education/bob.png",
-		"logo":"/img/index/carrer/PLZ.png"
+		"logo":"/img/index/logo/education/bob.png",
+		"logo-title":{
+			"e":"BoB 9th",
+			"k":"BoB 9기",
+			"j":"BoB 9期",
+			"c":"BoB 9期",
+			"r":"BoB 9th"
+		},
+		"proof":"/img/index/proof/education/bob.jpg"
 	},
 ];

@@ -60,7 +60,7 @@
 						<div class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="career">
 							Career
 						</div>
-						<div class="row badge-area">
+						<div id='career-badge-area' class="row badge-area">
 						</div>
 					</div>
 				</div>
@@ -69,7 +69,7 @@
 						<div class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="education">
 							Education
 						</div>
-						<div class="row badge-area">
+						<div id='education-badge-area' class="row badge-area">
 						</div>
 					</div>
 				</div>
@@ -78,7 +78,7 @@
 						<div class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="certificate">
 							Certificate
 						</div>
-						<div class="row badge-area">
+						<div id='certificate-badge-area' class="row badge-area">
 						</div>
 					</div>
 				</div>
@@ -87,12 +87,30 @@
 						<div class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="etc">
 							ETC
 						</div>
-						<div class="row badge-area">
+						<div id='etc-badge-area' class="row badge-area">
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-1"></div>
+		</div>
+		<div class="modal fade" id="badgeDetailModal" tabindex="-1" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-xl">
+				<div class="modal-content">
+					<div class="modal-header" style="display: flex;justify-content: flex-end;">
+						<button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+							<i class="fa-solid fa-xmark fa-xl"></i>
+						</button>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer" style="justify-content: flex-end;">
+						<button type="button" class="btn btn-secondary shadow-sm" data-bs-dismiss="modal" aria-label="Close" data-lang-var="INDEX_LANG" data-lang="close">
+							<i class="fa-solid fa-ban"></i>&nbsp;Close
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="row" id="footer"></div>
 	</body>
