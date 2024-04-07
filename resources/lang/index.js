@@ -90,40 +90,82 @@ const INDEX_LANG = {
 		"cn": "连接",
 		"ru": "Связь"
 	},
-	"employment-period": {
+	"company-employment-period": {
 		"en": "Employment period",
 		"ko": "근무 기간",
 		"jp": "雇用期間",
 		"cn": "雇佣期限",
 		"ru": "Период трудоустройства"
 	},
-	"department": {
+	"company-department": {
 		"en": "Department",
 		"ko": "부서",
 		"jp": "部",
 		"cn": "部",
 		"ru": "Отдел"
 	},
-	"team": {
+	"company-team": {
 		"en": "Team",
 		"ko": "팀",
 		"jp": "チーム",
 		"cn": "团队",
 		"ru": "Команда"
 	},
-	"position": {
+	"company-position": {
 		"en": "Position",
 		"ko": "직급",
 		"jp": "職級",
 		"cn": "秩",
 		"ru": "Позиция"
 	},
-	"task": {
+	"company-task": {
 		"en": "Task",
 		"ko": "수행 업무",
 		"jp": "業務",
 		"cn": "工作",
 		"ru": "Задача"
+	},
+	"education-name": {
+		"en": "Education name",
+		"ko": "교육 명",
+		"jp": "教育名",
+		"cn": "教育名称",
+		"ru": "Название образования"
+	},
+	"education-period": {
+		"en": "Period",
+		"ko": "교육 기간",
+		"jp": "教育期間",
+		"cn": "训练时期",
+		"ru": "Период обучения"
+	},
+	"education-link": {
+		"en": "Link",
+		"ko": "홈페이지",
+		"jp": "リンク",
+		"cn": "连接",
+		"ru": "Связь"
+	},
+	"education-department": {
+		"en": "Department",
+		"ko": "학과",
+		"jp": "学科",
+		"cn": "部门",
+		"ru": "Отделение"
+	},
+	"education-degree": {
+		"en": "Degree",
+		"ko": "학위",
+		"jp": "度",
+		"cn": "程度",
+		"ru": "Степень"
+	},
+	"education-institution": {
+		"en": "Education institution",
+		"ko": "교육기관",
+		"jp": "教育機関",
+		"cn": "教育机构",
+		"ru": "Образование учреждение"
 	}
 }
 LANGUAGE_OBJECT["INDEX_LANG"] = INDEX_LANG;

@@ -8,18 +8,18 @@ const DATA_EDUCATION = [
 			"ru":"Программа обучения лидеров безопасности нового поколения (Best of the Best)"
 		},
 		"department":{
-			"en":"Digital forensics",
-			"ko":"디지털포렌식",
-			"jp":"デジタルフォレンジック",
-			"cn":"数字取证",
-			"ru":"Цифровая криминалистика"
+			"en":"Digital forensics (9th)",
+			"ko":"디지털포렌식 (9기)",
+			"jp":"デジタルフォレンジック (9期)",
+			"cn":"数字取证 (9期)",
+			"ru":"Цифровая криминалистика (9th)"
 		},
 		"degree":{
-			"en":"9th",
-			"ko":"9기",
-			"jp":"9期",
-			"cn":"9期",
-			"ru":"9th"
+			"en":"",
+			"ko":"",
+			"jp":"",
+			"cn":"",
+			"ru":""
 		},
 		"educational-institution":{
 			"en":"Korea Information Technology Research Institute, Ministry of Science and ICT",
@@ -64,11 +64,11 @@ const DATA_EDUCATION = [
 			"ru":"бакала́вр"
 		},
 		"educational-institution":{
-			"en":"University",
-			"ko":"대학교",
-			"jp":"大学",
-			"cn":"大学",
-			"ru":"Университет"
+			"en":"Youngsan University",
+			"ko":"영산대학교",
+			"jp":"霊山大学",
+			"cn":"靈山大學校",
+			"ru":"Университет Youngsan"
 		},
 		"start-date":"2014-03-03",
 		"end-date":"2021-02-19",

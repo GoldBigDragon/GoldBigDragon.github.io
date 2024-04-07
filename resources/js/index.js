@@ -63,7 +63,7 @@ function openModal(category, index){
 		companyEmploymentPeriodDiv.className = "row modal-panel";
 		const companyEmploymentPeriodDescription = document.createElement("div");
 		companyEmploymentPeriodDescription.className = "col-3 key";
-		companyEmploymentPeriodDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["employment-period"][NOW_LANG];
+		companyEmploymentPeriodDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["company-employment-period"][NOW_LANG];
 		const companyEmploymentPeriod = document.createElement("div");
 		companyEmploymentPeriod.className = "col value";
 		if(badgeData["end-date"].constructor == Object) {
@@ -78,7 +78,7 @@ function openModal(category, index){
 		departmentDiv.className = "row modal-panel";
 		const departmentDescription = document.createElement("div");
 		departmentDescription.className = "col-3 key";
-		departmentDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["department"][NOW_LANG];
+		departmentDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["company-department"][NOW_LANG];
 		const department = document.createElement("div");
 		department.className = "col value";
 		department.innerHTML = badgeData["department"][NOW_LANG];
@@ -89,7 +89,7 @@ function openModal(category, index){
 		teamDiv.className = "row modal-panel";
 		const teamDescription = document.createElement("div");
 		teamDescription.className = "col-3 key";
-		teamDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["team"][NOW_LANG];
+		teamDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["company-team"][NOW_LANG];
 		const team = document.createElement("div");
 		team.className = "col value";
 		team.innerHTML = badgeData["team"][NOW_LANG];
@@ -100,7 +100,7 @@ function openModal(category, index){
 		positionDiv.className = "row modal-panel";
 		const positionDescription = document.createElement("div");
 		positionDescription.className = "col-3 key";
-		positionDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["position"][NOW_LANG];
+		positionDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["company-position"][NOW_LANG];
 		const position = document.createElement("div");
 		position.className = "col value";
 		position.innerHTML = badgeData["position"][NOW_LANG];
@@ -111,7 +111,7 @@ function openModal(category, index){
 		taskDiv.className = "row modal-panel";
 		const taskDescription = document.createElement("div");
 		taskDescription.className = "col-3 key";
-		taskDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["task"][NOW_LANG];
+		taskDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["company-task"][NOW_LANG];
 		const task = document.createElement("div");
 		task.className = "col value";
 		task.innerHTML = badgeData["task"][NOW_LANG];
@@ -128,6 +128,95 @@ function openModal(category, index){
 		modalBody.appendChild(taskDiv);
 	} else if(category == "education"){
 		badgeData = DATA_EDUCATION[index];
+		
+		const proofDiv = document.createElement("div");
+		proofDiv.className = "row modal-panel";
+		proofDiv.style.marginBottom = "1rem";
+		const proofLogo = document.createElement("img");
+		proofLogo.src = badgeData["proof"];
+		proofLogo.style.maxWidth = "30rem";
+		proofLogo.style.maxHeight = "60rem";
+		proofDiv.appendChild(proofLogo);
+		
+		const urlDiv = document.createElement("div");
+		urlDiv.className = "row modal-panel";
+		const urlDescription = document.createElement("div");
+		urlDescription.className = "col-3 key";
+		urlDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["education-link"][NOW_LANG];
+		const url = document.createElement("a");
+		url.className = "col value";
+		url.href = badgeData["url"];
+		url.target = "_blank";
+		url.innerHTML = badgeData["url"];
+		urlDiv.appendChild(urlDescription);
+		urlDiv.appendChild(url);
+		
+		const periodDiv = document.createElement("div");
+		periodDiv.className = "row modal-panel";
+		const periodDescription = document.createElement("div");
+		periodDescription.className = "col-3 key";
+		periodDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["education-period"][NOW_LANG];
+		const period = document.createElement("div");
+		period.className = "col value";
+		if(badgeData["end-date"].constructor == Object) {
+			period.innerHTML = badgeData["start-date"] + " ~ " + badgeData["end-date"][NOW_LANG];
+		} else {
+			period.innerHTML = badgeData["start-date"] + " ~ " + badgeData["end-date"];
+		}
+		periodDiv.appendChild(periodDescription);
+		periodDiv.appendChild(period);
+		
+		const nameDiv = document.createElement("div");
+		nameDiv.className = "row modal-panel";
+		const nameDescription = document.createElement("div");
+		nameDescription.className = "col-3 key";
+		nameDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["education-name"][NOW_LANG];
+		const name = document.createElement("div");
+		name.className = "col value";
+		name.innerHTML = badgeData["name"][NOW_LANG];
+		nameDiv.appendChild(nameDescription);
+		nameDiv.appendChild(name);
+		
+		const departmentDiv = document.createElement("div");
+		departmentDiv.className = "row modal-panel";
+		const departmentDescription = document.createElement("div");
+		departmentDescription.className = "col-3 key";
+		departmentDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["education-department"][NOW_LANG];
+		const department = document.createElement("div");
+		department.className = "col value";
+		department.innerHTML = badgeData["department"][NOW_LANG];
+		departmentDiv.appendChild(departmentDescription);
+		departmentDiv.appendChild(department);
+		
+		const degreeDiv = document.createElement("div");
+		degreeDiv.className = "row modal-panel";
+		const degreeDescription = document.createElement("div");
+		degreeDescription.className = "col-3 key";
+		degreeDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["education-degree"][NOW_LANG];
+		const degree = document.createElement("div");
+		degree.className = "col value";
+		degree.innerHTML = badgeData["degree"][NOW_LANG];
+		degreeDiv.appendChild(degreeDescription);
+		degreeDiv.appendChild(degree);
+		
+		const institutionDiv = document.createElement("div");
+		institutionDiv.className = "row modal-panel";
+		const institutionDescription = document.createElement("div");
+		institutionDescription.className = "col-3 key";
+		institutionDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["education-institution"][NOW_LANG];
+		const institution = document.createElement("div");
+		institution.className = "col value";
+		institution.innerHTML = badgeData["educational-institution"][NOW_LANG];
+		institutionDiv.appendChild(institutionDescription);
+		institutionDiv.appendChild(institution);
+		
+		modalBody.appendChild(proofDiv);
+		modalBody.appendChild(urlDiv);
+		modalBody.appendChild(periodDiv);
+		modalBody.appendChild(nameDiv);
+		modalBody.appendChild(departmentDiv);
+		modalBody.appendChild(degreeDiv);
+		modalBody.appendChild(institutionDiv);
 	} else if(category == "certificate"){
 		badgeData = DATA_CERTIFICATE[index];
 	} else if(category == "etc"){
