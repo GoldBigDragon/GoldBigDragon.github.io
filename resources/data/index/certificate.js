@@ -95,11 +95,11 @@ const DATA_CERTIFICATE = [
 		},
 		"logo":"/resources/img/index/logo/certificate/basic.png",
 		"logo-title":{
-			"en":"Digital forensics",
-			"ko":"디지털포렌식",
-			"jp":"デジタルフォレンジック",
-			"cn":"数字取证",
-			"ru":"Цифровая криминалистика"
+			"en":"Digital forensics<br>Expert(Level 2)",
+			"ko":"디지털포렌식<br>전문가(2급)",
+			"jp":"デジタルフォレンジック<br>専門家(2級)",
+			"cn":"数字取证专家(2级)",
+			"ru":"Эксперт по цифровой<br>криминалистике(уровень 2)"
 		},
 		"proof":"/resources/img/index/proof/certificate/digital_forensic_expert.png"
 	}
