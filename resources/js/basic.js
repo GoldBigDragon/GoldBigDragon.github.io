@@ -1,4 +1,5 @@
 const LANGUAGE_OBJECT = {};
+let NOW_LANG = "en";
 
 window.addEventListener('DOMContentLoaded', event => {
     var navbarShrink = function() {
@@ -87,13 +88,13 @@ function deleteCookie(name) {
 }
 
 function loadLanguage() {
-	let nowLang = getCookie("lang");
-	if(nowLang == null) {
-		nowLang = "en";
+	NOW_LANG = getCookie("lang");
+	if(NOW_LANG == null) {
+		NOW_LANG = "en";
 	}
 	const textField = document.getElementsByClassName("lang");
 	Array.prototype.forEach.call(textField, function(languageElement) {
-		languageElement.innerHTML = LANGUAGE_OBJECT[languageElement.dataset.langVar][languageElement.dataset.lang][nowLang];
+		languageElement.innerHTML = LANGUAGE_OBJECT[languageElement.dataset.langVar][languageElement.dataset.lang][NOW_LANG];
 	});
 }
 

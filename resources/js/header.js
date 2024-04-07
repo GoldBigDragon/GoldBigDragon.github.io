@@ -43,18 +43,18 @@ function checkLanguage(){
 }
 
 function changeLanguage() {
-	let nowLang = getCookie("lang");
+	NOW_LANG = getCookie("lang");
 	const languageElement = document.getElementById("language");
-	if(nowLang == "ko") {
+	if(NOW_LANG == "ko") {
 		setCookie("lang", "jp", 31);
 		languageElement.src= "/resources/img/lang/jp.png";
-	} else if(nowLang == "jp") {
+	} else if(NOW_LANG == "jp") {
 		setCookie("lang", "cn", 31);
 		languageElement.src= "/resources/img/lang/cn.png";
-	} else if(nowLang == "cn") {
+	} else if(NOW_LANG == "cn") {
 		setCookie("lang", "ru", 31);
 		languageElement.src= "/resources/img/lang/ru.png";
-	} else if(nowLang == "ru") {
+	} else if(NOW_LANG == "ru") {
 		setCookie("lang", "en", 31);
 		languageElement.src= "/resources/img/lang/en.png";
 	} else {
