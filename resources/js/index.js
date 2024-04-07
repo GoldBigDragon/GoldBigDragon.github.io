@@ -54,6 +54,7 @@ function openModal(category, index){
 		const companyUrl = document.createElement("a");
 		companyUrl.className = "col value";
 		companyUrl.href = badgeData["company-link"];
+		companyUrl.target = "_blank";
 		companyUrl.innerHTML = badgeData["company-link"];
 		companyUrlDiv.appendChild(companyUrlDescription);
 		companyUrlDiv.appendChild(companyUrl);
@@ -73,45 +74,58 @@ function openModal(category, index){
 		companyEmploymentPeriodDiv.appendChild(companyEmploymentPeriodDescription);
 		companyEmploymentPeriodDiv.appendChild(companyEmploymentPeriod);
 		
+		const departmentDiv = document.createElement("div");
+		departmentDiv.className = "row modal-panel";
+		const departmentDescription = document.createElement("div");
+		departmentDescription.className = "col-3 key";
+		departmentDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["department"][NOW_LANG];
+		const department = document.createElement("div");
+		department.className = "col value";
+		department.innerHTML = badgeData["department"][NOW_LANG];
+		departmentDiv.appendChild(departmentDescription);
+		departmentDiv.appendChild(department);
+		
+		const teamDiv = document.createElement("div");
+		teamDiv.className = "row modal-panel";
+		const teamDescription = document.createElement("div");
+		teamDescription.className = "col-3 key";
+		teamDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["team"][NOW_LANG];
+		const team = document.createElement("div");
+		team.className = "col value";
+		team.innerHTML = badgeData["team"][NOW_LANG];
+		teamDiv.appendChild(teamDescription);
+		teamDiv.appendChild(team);
+		
+		const positionDiv = document.createElement("div");
+		positionDiv.className = "row modal-panel";
+		const positionDescription = document.createElement("div");
+		positionDescription.className = "col-3 key";
+		positionDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["position"][NOW_LANG];
+		const position = document.createElement("div");
+		position.className = "col value";
+		position.innerHTML = badgeData["position"][NOW_LANG];
+		positionDiv.appendChild(positionDescription);
+		positionDiv.appendChild(position);
+		
+		const taskDiv = document.createElement("div");
+		taskDiv.className = "row modal-panel";
+		const taskDescription = document.createElement("div");
+		taskDescription.className = "col-3 key";
+		taskDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["task"][NOW_LANG];
+		const task = document.createElement("div");
+		task.className = "col value";
+		task.innerHTML = badgeData["task"][NOW_LANG];
+		taskDiv.appendChild(taskDescription);
+		taskDiv.appendChild(task);
+		
 		modalBody.appendChild(companyLogoDiv);
 		modalBody.appendChild(companyNameDiv);
 		modalBody.appendChild(companyUrlDiv);
 		modalBody.appendChild(companyEmploymentPeriodDiv);
-/*
-		부서
-		팀
-		직위
-		수행 업무
-		
-		"department":{
-			"en":"Research institute",
-			"ko":"부설연구소",
-			"jp":"附属研究所",
-			"cn":"附属研究所",
-			"ru":"Исследовательский институт"
-		},
-		"team": {
-			"en":"Development team",
-			"ko":"개발팀",
-			"jp":"開発チーム",
-			"cn":"开发团队",
-			"ru":"Команда разработчиков"
-		},
-		"task": {
-			"en":"Electronic document development",
-			"ko":"전자 문서 개발",
-			"jp":"電子文書開発",
-			"cn":"电子文档开发",
-			"ru":"Разработка электронного документа"
-		},
-		"position": {
-			"en":"Intern",
-			"ko":"인턴",
-			"jp":"インターン",
-			"cn":"实习生",
-			"ru":"Стажер"
-		},
-		*/
+		modalBody.appendChild(departmentDiv);
+		modalBody.appendChild(teamDiv);
+		modalBody.appendChild(positionDiv);
+		modalBody.appendChild(taskDiv);
 	} else if(category == "education"){
 		badgeData = DATA_EDUCATION[index];
 	} else if(category == "certificate"){
@@ -120,7 +134,7 @@ function openModal(category, index){
 		badgeData = DATA_ETC[index];
 	}
 	if(badgeData != null) {
-		modalTitle.innerHTML = badgeData["logo-title"][NOW_LANG];
+		modalTitle.innerHTML = badgeData["logo-title"][NOW_LANG].replace("<br>", " ");
 		$('#badgeDetailModal').modal('show');
 	}
 }

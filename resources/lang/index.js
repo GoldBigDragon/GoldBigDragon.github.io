@@ -96,6 +96,34 @@ const INDEX_LANG = {
 		"jp": "雇用期間",
 		"cn": "雇佣期限",
 		"ru": "Период трудоустройства"
+	},
+	"department": {
+		"en": "Department",
+		"ko": "부서",
+		"jp": "部",
+		"cn": "部",
+		"ru": "Отдел"
+	},
+	"team": {
+		"en": "Team",
+		"ko": "팀",
+		"jp": "チーム",
+		"cn": "团队",
+		"ru": "Команда"
+	},
+	"position": {
+		"en": "Position",
+		"ko": "직급",
+		"jp": "職級",
+		"cn": "秩",
+		"ru": "Позиция"
+	},
+	"task": {
+		"en": "Task",
+		"ko": "수행 업무",
+		"jp": "業務",
+		"cn": "工作",
+		"ru": "Задача"
 	}
 }
 LANGUAGE_OBJECT["INDEX_LANG"] = INDEX_LANG;
