@@ -2,7 +2,7 @@ LANGUAGE_OBJECT["COVER_LANG"] = {};
 
 function addCover(coverArea, coverData){
 	const cover = document.createElement("div");
-	cover.className = "cover";
+	cover.className = "cover col";
 	cover.setAttribute("onClick", "readCartoon('" + coverData["uid"] + "')");
 	const coverImage = document.createElement("img");
 	coverImage.className = "book-cover";
