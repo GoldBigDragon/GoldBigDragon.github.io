@@ -1,3 +1,5 @@
+LANGUAGE_OBJECT["COVER_LANG"] = {};
+
 function addCover(coverArea, coverData){
 	const cover = document.createElement("div");
 	cover.className = "cover";
