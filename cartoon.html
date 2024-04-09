@@ -21,29 +21,14 @@
 		<div class="row" style="margin-top:6rem; margin-bottom:1rem; display:flex; justify-content: center; align-items: flex-start;">
 			<div class="col-1"></div>
 			<div class="col" id="contents">
-				
-			</div>
-			<div class="col-1"></div>
-		</div>
-		<div class="modal fade" id="cartoonModal" tabindex="-1" role="dialog" aria-modal="true">
-			<div class="modal-dialog modal-xl">
-				<div class="modal-content">
-					<div class="modal-header" style="display: flex;">
-						<div id="cartoonTitle">
-						</div>
-						<button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close">
-							<i class="fa-solid fa-xmark fa-xl"></i>
-						</button>
-					</div>
-					<div id="cartoonBody" class="modal-body">
-					</div>
-					<div class="modal-footer" style="justify-content: flex-end;">
-						<button type="button" class="btn btn-secondary shadow-sm lang" data-bs-dismiss="modal" aria-label="Close" data-lang-var="CARTOON_LANG" data-lang="close">
-							<i class="fa-solid fa-ban"></i>&nbsp;Close
-						</button>
-					</div>
+				<div id="coverArea">
+					
+				</div>
+				<div id="book" class="row" hidden>
+					
 				</div>
 			</div>
+			<div class="col-1"></div>
 		</div>
 		<div class="row" id="footer"></div>
 	</body>
@@ -54,5 +39,7 @@
 	
 	<script src="/resources/js/basic.js"></script>
 	<script src="/resources/lang/cartoon.js"></script>
+	<script src="/resources/data/cartoon/cartoon_list.js"></script>
+	<script src="/resources/data/cartoon/daily_cartoon.js"></script>
 	<script src="/resources/js/cartoon.js"></script>
 </html>

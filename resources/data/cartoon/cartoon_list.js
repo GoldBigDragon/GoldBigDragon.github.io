@@ -7,7 +7,8 @@ const CARTOON_LIST = [
 			"cn":"",
 			"ru":""
 		},
-		"cover": "/resources/img/cartoon/daily/cover.png"
+		"cover": "/resources/img/cartoon/daily/cover.png",
+		"uid":"daily_cartoon"
 	},
 	{
 		"title":{
@@ -17,7 +18,8 @@ const CARTOON_LIST = [
 			"cn":"",
 			"ru":""
 		},
-		"cover": "/resources/img/cartoon/developer/cover.png"
+		"cover": "/resources/img/cartoon/developer/cover.png",
+		"uid":"developer"
 	},
 	{
 		"title":{
@@ -27,6 +29,7 @@ const CARTOON_LIST = [
 			"cn":"",
 			"ru":""
 		},
-		"cover": "/resources/img/cartoon/gamer/cover.png"
+		"cover": "/resources/img/cartoon/gamer/cover.png",
+		"uid":"gamer"
 	}
 ];
