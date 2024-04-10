@@ -26,6 +26,13 @@ function readCartoon(cartoonUid){
 	
 }
 
+function backToCartoonList() {
+	const book = document.getElementById("book");
+	book.setAttribute("hidden", "true");
+	const coverArea = document.getElementById("coverArea");
+	coverArea.removeAttribute("hidden");
+}
+
 const coverArea = document.getElementById("coverArea");
 if(CARTOON_LIST){
 	let index = 0;
