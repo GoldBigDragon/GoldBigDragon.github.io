@@ -46,6 +46,7 @@ function readCartoon(cartoonIndex){
 	let pageIndex = 0;
 	for(pageIndex = 0; pageIndex < pages.length; pageIndex ++) {
 		const optionElement = document.createElement("option");
+		optionElement.className = "lang";
 		optionElement.value = pageIndex;
 		optionElement.innerText = (pageIndex + 1) + ". " + pages[pageIndex]["title"][NOW_LANG];
 		LANGUAGE_OBJECT["COVER_LANG"][CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex] = pages[pageIndex]["title"];
