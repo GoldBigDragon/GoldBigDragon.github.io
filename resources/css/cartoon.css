@@ -43,6 +43,11 @@
     padding: 1rem;
     box-shadow: 0px 0px 10px white;
     background-color: white;
+	-webkit-touch-callout: none;
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
 }
 
 .page-mover {
