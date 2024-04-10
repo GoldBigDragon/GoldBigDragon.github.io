@@ -41,6 +41,16 @@ function readCartoon(cartoonIndex){
 	const pageInput = document.getElementById("page-input");
 	const maxPage = document.getElementById("max-page");
 	const pageArea = document.getElementById("pageArea");
+	const prevPage = document.createElement("div");
+	prevPage.className = "page-mover prev-page";
+	prevPage.innerHTML = "<i class='fa-solid fa-chevron-left'></i>";
+	prevPage.setAttribute("onClick", "goPage(" + (maxPageValue - 2) + ")");
+	const nextPage = document.createElement("div");
+	nextPage.className = "page-mover next-page";
+	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
+	
+	
+	
 	const maxPageValue = pages.length;
 	pageArea.innerHTML = null;
 	pageSelector.innerHTML = null;
@@ -76,7 +86,9 @@ function readCartoon(cartoonIndex){
 	};
 	img.setAttribute("data-lang-var", "COVER_LANG");
 	img.setAttribute("data-lang", "NOW_PAGE");
+	pageArea.appendChild(prevPage);
 	pageArea.appendChild(img);
+	pageArea.appendChild(nextPage);
 }
 
 function backToCartoonList() {
@@ -110,6 +122,19 @@ function goPage(page) {
 	const pageArea = document.getElementById("pageArea");
 	pageArea.innerHTML = null;
 	
+	const prevPage = document.createElement("div");
+	prevPage.className = "page-mover prev-page";
+	prevPage.innerHTML = "<i class='fa-solid fa-chevron-left'></i>";
+	if(page > 0) {
+		prevPage.setAttribute("onClick", "goPage(" + (page - 1) + ")");
+	}
+	const nextPage = document.createElement("div");
+	nextPage.className = "page-mover next-page";
+	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
+	if(page < pages.length -1){
+		nextPage.setAttribute("onClick", "goPage(" + (page + 1) + ")");
+	}
+	
 	const img = document.createElement("img");
 	img.className = "cartoon lang-src";
 	img.src = "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/" + NOW_LANG + "/" + pages[page]["img"];
@@ -122,7 +147,9 @@ function goPage(page) {
 	};
 	img.setAttribute("data-lang-var", "COVER_LANG");
 	img.setAttribute("data-lang", "NOW_PAGE");
+	pageArea.appendChild(prevPage);
 	pageArea.appendChild(img);
+	pageArea.appendChild(nextPage);
 }
 
 

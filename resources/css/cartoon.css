@@ -44,3 +44,31 @@
     box-shadow: 0px 0px 10px white;
     background-color: white;
 }
+
+.page-mover {
+	color: rgba(0, 0, 0, 0.00001);
+    position: absolute;
+    height: calc(100% - 19.5rem);
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.000001);
+	transition: 0.2s;
+}
+
+.page-mover:hover {
+	color: black;
+    background: rgb(0,0,0);
+	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+.next-page {
+    top: 12rem;
+    right: 10rem;
+}
+.prev-page {
+    top: 12rem;
+    left: 10rem;
+}
