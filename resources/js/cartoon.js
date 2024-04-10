@@ -41,15 +41,6 @@ function readCartoon(cartoonIndex){
 	const pageInput = document.getElementById("page-input");
 	const maxPage = document.getElementById("max-page");
 	const pageArea = document.getElementById("pageArea");
-	const prevPage = document.createElement("div");
-	prevPage.className = "page-mover prev-page";
-	prevPage.innerHTML = "<i class='fa-solid fa-chevron-left'></i>";
-	prevPage.setAttribute("onClick", "goPage(" + (maxPageValue - 2) + ")");
-	const nextPage = document.createElement("div");
-	nextPage.className = "page-mover next-page";
-	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
-	
-	
 	
 	const maxPageValue = pages.length;
 	pageArea.innerHTML = null;
@@ -86,6 +77,15 @@ function readCartoon(cartoonIndex){
 	};
 	img.setAttribute("data-lang-var", "COVER_LANG");
 	img.setAttribute("data-lang", "NOW_PAGE");
+	
+	const prevPage = document.createElement("div");
+	prevPage.className = "page-mover prev-page";
+	prevPage.innerHTML = "<i class='fa-solid fa-chevron-left'></i>";
+	prevPage.setAttribute("onClick", "goPage(" + (maxPageValue - 2) + ")");
+	const nextPage = document.createElement("div");
+	nextPage.className = "page-mover next-page";
+	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
+	
 	pageArea.appendChild(prevPage);
 	pageArea.appendChild(img);
 	pageArea.appendChild(nextPage);
