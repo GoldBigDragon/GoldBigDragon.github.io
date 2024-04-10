@@ -120,7 +120,7 @@ function goPage(page) {
 		page = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1;
 	}
 	const pageSelector = document.getElementById("page-selector");
-	pageSelector.children[pageSelector.children - (page+1)].selected = true;
+	pageSelector.children[pageSelector.children.length - (page+1)].selected = true;
 	
 	const pages = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"];
 	const pageInput = document.getElementById("page-input");
