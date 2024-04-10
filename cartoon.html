@@ -27,8 +27,15 @@
 				<div id="book" class="row" hidden>
 					<div class="col-1"></div>
 					<div class="col">
-						<div class="row">
-							
+					<div class="row" style="display: flex;align-items: center;justify-content: center;">
+						<div style="display: flex;align-items: center;justify-content: center;">
+							<select id="page-selector" style="margin-right: 1rem;max-width: 8rem;">
+							</select>
+							<input id="page-input" type="number" value="1" style="text-align: right;max-width: 6rem;">
+							<div style="margin: 0rem 1rem;">/</div>
+							<div id="max-page">0</div>
+							<button class="btn btn-secondary lang" style="margin: 0rem 1rem;" data-lang-var="CARTOON_LANG" data-lang="move"><i class='fa-solid fa-binoculars'></i>&nbsp;Go</button>
+						</div>
 						</div>
 						<div class="row" id="pageArea">
 						</div>

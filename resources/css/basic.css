@@ -30,3 +30,24 @@ body::-webkit-scrollbar-thumb {
     justify-content: flex-start;
     align-items: center;
 }
+
+select,
+input {
+	padding: 0.4rem;
+	outline: 0px;
+	border-radius: 0.3rem;
+}
+
+select:focus,
+input:focus {
+	border-color: var(--primary) !important;
+	outline-color: var(--primary);
+}
+
+button:active,
+input:active,
+select:active {
+	transform: scaleX(0.95) scaleY(0.95);
+	transition: 0.2s;
+	color: var(--highlightColor);
+}

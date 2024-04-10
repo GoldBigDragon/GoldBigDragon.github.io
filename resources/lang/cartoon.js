@@ -1,10 +1,10 @@
 const CARTOON_LANG = {
-	"close": {
-		"en": "<i class='fa-solid fa-ban'></i>&nbsp;Close",
-		"ko": "<i class='fa-solid fa-ban'></i>&nbsp;닫기",
-		"jp": "<i class='fa-solid fa-ban'></i>&nbsp;閉める",
-		"cn": "<i class='fa-solid fa-ban'></i>&nbsp;关闭",
-		"ru": "<i class='fa-solid fa-ban'></i>&nbsp;Закрывать"
+	"move": {
+		"en": "<i class='fa-solid fa-binoculars'></i>&nbsp;Go",
+		"ko": "<i class='fa-solid fa-binoculars'></i>&nbsp;이동",
+		"jp": "<i class='fa-solid fa-binoculars'></i>&nbsp;移動",
+		"cn": "<i class='fa-solid fa-binoculars'></i>&nbsp;移动",
+		"ru": "<i class='fa-solid fa-binoculars'></i>&nbsp;Идти"
 	}
 }
 LANGUAGE_OBJECT["CARTOON_LANG"] = CARTOON_LANG;
