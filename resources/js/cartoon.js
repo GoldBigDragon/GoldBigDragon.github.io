@@ -45,7 +45,7 @@ function readCartoon(cartoonIndex){
 	pageArea.innerHTML = null;
 	pageSelector.innerHTML = null;
 	let pageIndex = 0;
-	for(pageIndex = maxPageValue; pageIndex < pages.length; pageIndex --) {
+	for(pageIndex = maxPageValue; pageIndex > 0; pageIndex --) {
 		const optionElement = document.createElement("option");
 		optionElement.className = "lang";
 		optionElement.value = pageIndex-1;
@@ -87,6 +87,11 @@ function pageInputEnter() {
 		const pageInput = document.getElementById("page-input");
         goPage(pageInput.value - 1);
     }
+}
+
+function pageMove() {
+	const pageInput = document.getElementById("page-input");
+	goPage(pageInput.value - 1);
 }
 
 function goPage(page) {
