@@ -45,11 +45,11 @@ function readCartoon(cartoonIndex){
 	pageArea.innerHTML = null;
 	pageSelector.innerHTML = null;
 	let pageIndex = 0;
-	for(pageIndex = maxPageValue; pageIndex > 0; pageIndex --) {
+	for(pageIndex = maxPageValue-1; pageIndex >= 0; pageIndex --) {
 		const optionElement = document.createElement("option");
 		optionElement.className = "lang";
-		optionElement.value = pageIndex-1;
-		optionElement.innerText = pageIndex + ". " + pages[pageIndex]["title"][NOW_LANG];
+		optionElement.value = pageIndex;
+		optionElement.innerText = (pageIndex+1) + ". " + pages[pageIndex]["title"][NOW_LANG];
 		LANGUAGE_OBJECT["COVER_LANG"][CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex] = pages[pageIndex]["title"];
 		optionElement.setAttribute("data-lang-var", "COVER_LANG");
 		optionElement.setAttribute("data-lang", CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex);
