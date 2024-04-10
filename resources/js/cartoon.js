@@ -113,11 +113,15 @@ function pageMove() {
 }
 
 function goPage(page) {
-	const pageSelector = document.getElementById("page-selector");
-	pageSelector.children[CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - page].selected = true;
+	if(page < 0) {
+		page = 0;
+	}
 	if(page > CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1) {
 		page = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1;
 	}
+	const pageSelector = document.getElementById("page-selector");
+	pageSelector.children[CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - page].selected = true;
+	
 	const pages = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"];
 	const pageInput = document.getElementById("page-input");
 	pageInput.value = (parseInt(page) + 1);
