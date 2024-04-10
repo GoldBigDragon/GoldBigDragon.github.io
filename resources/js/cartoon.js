@@ -113,6 +113,8 @@ function pageMove() {
 }
 
 function goPage(page) {
+	const pageSelector = document.getElementById("page-selector");
+	pageSelector.children[page].selected = true;
 	if(page > CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1) {
 		page = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1;
 	}

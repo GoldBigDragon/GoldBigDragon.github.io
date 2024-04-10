@@ -58,17 +58,21 @@
 	transition: 0.2s;
 }
 
-.page-mover:hover {
+.next-page {
+    top: 12rem;
+    right: 0rem;
+}
+.next-page:hover {
 	color: black;
     background: rgb(0,0,0);
 	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
-
-.next-page {
-    top: 12rem;
-    right: 10rem;
-}
 .prev-page {
     top: 12rem;
-    left: 10rem;
+    left: 0rem;
+}
+.prev-page:hover {
+	color: black;
+    background: rgb(0,0,0);
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
