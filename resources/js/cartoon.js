@@ -21,6 +21,8 @@ function addCover(coverArea, coverData){
 function readCartoon(cartoonUid){
 	const book = document.getElementById("book");
 	book.removeAttribute("hidden");
+	const backButton = document.getElementById("button-back");
+	backButton.removeAttribute("hidden");
 	const coverArea = document.getElementById("coverArea");
 	coverArea.setAttribute("hidden", "true");
 	
@@ -29,6 +31,8 @@ function readCartoon(cartoonUid){
 function backToCartoonList() {
 	const book = document.getElementById("book");
 	book.setAttribute("hidden", "true");
+	const backButton = document.getElementById("button-back");
+	backButton.setAttribute("hidden", "true");
 	const coverArea = document.getElementById("coverArea");
 	coverArea.removeAttribute("hidden");
 }
