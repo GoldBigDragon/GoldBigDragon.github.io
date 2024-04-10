@@ -81,22 +81,29 @@ function backToCartoonList() {
 	coverArea.removeAttribute("hidden");
 }
 
+function pageInputEnter() {
+    if (window.event.keyCode == 13) {
+		const pageInput = document.getElementById("page-input");
+        goPage(pageInput.value - 1);
+    }
+}
+
 function goPage(page) {
 	const pages = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"];
 	const pageInput = document.getElementById("page-input");
-	pageInput.value = (page + 1);
+	pageInput.value = (parseInt(page) + 1);
 	const pageArea = document.getElementById("pageArea");
 	pageArea.innerHTML = null;
 	
 	const img = document.createElement("img");
 	img.className = "cartoon lang-src";
-	img.src = "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/" + NOW_LANG + "/" + pages[page]["img"];
+	img.src = "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/" + NOW_LANG + "/" + pages[page]["img"];
 	LANGUAGE_OBJECT["COVER_LANG"]["NOW_PAGE"] = {
-		"en": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/en/" + pages[page]["img"],
-		"kr": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/kr/" + pages[page]["img"],
-		"jp": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/jp/" + pages[page]["img"],
-		"cn": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/cn/" + pages[page]["img"],
-		"ru": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/ru/" + pages[page]["img"]
+		"en": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/en/" + pages[page]["img"],
+		"kr": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/kr/" + pages[page]["img"],
+		"jp": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/jp/" + pages[page]["img"],
+		"cn": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/cn/" + pages[page]["img"],
+		"ru": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/ru/" + pages[page]["img"]
 	};
 	img.setAttribute("data-lang-var", "COVER_LANG");
 	img.setAttribute("data-lang", "NOW_PAGE");
