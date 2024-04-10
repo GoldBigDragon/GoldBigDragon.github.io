@@ -50,7 +50,13 @@ function readCartoon(cartoonIndex){
 		optionElement.className = "lang";
 		optionElement.value = pageIndex;
 		optionElement.innerText = (pageIndex+1) + ". " + pages[pageIndex]["title"][NOW_LANG];
-		LANGUAGE_OBJECT["COVER_LANG"][CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex] = pages[pageIndex]["title"];
+		LANGUAGE_OBJECT["COVER_LANG"][CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex] = {
+			"en": (pageIndex+1) + ". " + pages[pageIndex]["title"]["en"],
+			"kr": (pageIndex+1) + ". " + pages[pageIndex]["title"]["kr"],
+			"jp": (pageIndex+1) + ". " + pages[pageIndex]["title"]["jp"],
+			"cn": (pageIndex+1) + ". " + pages[pageIndex]["title"]["cn"],
+			"ru": (pageIndex+1) + ". " + pages[pageIndex]["title"]["ru"]
+		};
 		optionElement.setAttribute("data-lang-var", "COVER_LANG");
 		optionElement.setAttribute("data-lang", CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex);
 		pageSelector.appendChild(optionElement);
