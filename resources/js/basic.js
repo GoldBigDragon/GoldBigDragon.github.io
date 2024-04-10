@@ -100,6 +100,14 @@ function loadLanguage() {
 			console.log(err);
 		}
 	});
+	const srcField = document.getElementsByClassName("lang-src");
+	Array.prototype.forEach.call(srcField, function(languageElement) {
+		try{
+			languageElement.src = LANGUAGE_OBJECT[languageElement.dataset.langVar][languageElement.dataset.lang][NOW_LANG];
+		} catch(err){
+			console.log(err);
+		}
+	});
 }
 
 loadFooter();

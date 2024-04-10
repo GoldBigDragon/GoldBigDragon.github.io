@@ -1,9 +1,9 @@
 LANGUAGE_OBJECT["COVER_LANG"] = {};
 
-function addCover(coverArea, coverData){
+function addCover(coverArea, coverData, index){
 	const cover = document.createElement("div");
 	cover.className = "cover col";
-	cover.setAttribute("onClick", "readCartoon('" + coverData["uid"] + "')");
+	cover.setAttribute("onClick", "readCartoon(" + index + ")");
 	const coverImage = document.createElement("img");
 	coverImage.className = "book-cover";
 	coverImage.src = coverData["cover"];
@@ -13,12 +13,20 @@ function addCover(coverArea, coverData){
 	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]] = coverData["title"];
 	coverTitle.setAttribute("data-lang-var", "COVER_LANG");
 	coverTitle.setAttribute("data-lang", coverData["uid"]);
+	const translating = document.createElement("div");
+	translating.className = "book-translating lang";
+	translating.innerHTML = coverData["translating"][NOW_LANG];
+	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]+"-translating"] = coverData["translating"];
+	translating.setAttribute("data-lang-var", "COVER_LANG");
+	translating.setAttribute("data-lang", coverData["uid"]+"-translating");
+	
 	cover.appendChild(coverImage);
 	cover.appendChild(coverTitle);
+	cover.appendChild(translating);
 	coverArea.appendChild(cover);
 }
 
-function readCartoon(cartoonUid){
+function readCartoon(cartoonIndex){
 	const book = document.getElementById("book");
 	book.removeAttribute("hidden");
 	const backButton = document.getElementById("button-back");
@@ -26,6 +34,38 @@ function readCartoon(cartoonUid){
 	const coverArea = document.getElementById("coverArea");
 	coverArea.setAttribute("hidden", "true");
 	
+	const pages = CARTOON_LIST[cartoonIndex]["pages"];
+	const pageSelector = document.getElementById("page-selector");
+	const pageInput = document.getElementById("page-input");
+	const maxPage = document.getElementById("max-page");
+	const pageArea = document.getElementById("pageArea");
+	pageArea.innerHTML = null;
+	pageSelector.innerHTML = null;
+	let pageIndex = 0;
+	for(pageIndex = 0; pageIndex < pages.length; pageIndex ++) {
+		const optionElement = document.createElement("option");
+		optionElement.value = pageIndex;
+		optionElement.innerText = (pageIndex + 1) + ". " + pages[pageIndex]["title"][NOW_LANG];
+		LANGUAGE_OBJECT["COVER_LANG"][CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex] = pages[pageIndex]["title"];
+		optionElement.setAttribute("data-lang-var", "COVER_LANG");
+		optionElement.setAttribute("data-lang", CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex);
+		pageSelector.appendChild(optionElement);
+	}
+	pageInput.value = pages.length;
+	maxPage.innerText = pages.length;
+	
+	const img = document.createElement("img");
+	img.className = "cartoon lang-src";
+	img.src = "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/" + NOW_LANG + "/" + pages[pages.length - 1]["img"];
+	LANGUAGE_OBJECT["COVER_LANG"]["NOW_PAGE"] = {
+		"en": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/en/" + pages[pages.length - 1]["img"],
+		"kr": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/kr/" + pages[pages.length - 1]["img"],
+		"jp": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/jp/" + pages[pages.length - 1]["img"],
+		"cn": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/cn/" + pages[pages.length - 1]["img"],
+		"ru": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/ru/" + pages[pages.length - 1]["img"]
+	};
+	img.setAttribute("data-lang-var", "COVER_LANG");
+	img.setAttribute("data-lang", "NOW_PAGE");
 }
 
 function backToCartoonList() {
@@ -37,10 +77,15 @@ function backToCartoonList() {
 	coverArea.removeAttribute("hidden");
 }
 
+function goPage(page) {
+	console.log(page);
+}
+
+
 const coverArea = document.getElementById("coverArea");
 if(CARTOON_LIST){
 	let index = 0;
 	for(index = 0; index < CARTOON_LIST.length; index ++) {
-		addCover(coverArea, CARTOON_LIST[index]);
+		addCover(coverArea, CARTOON_LIST[index], index);
 	}
 }
