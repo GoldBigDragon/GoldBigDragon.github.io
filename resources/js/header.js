@@ -28,8 +28,8 @@ window.addEventListener('DOMContentLoaded', event => {
 function checkLanguage(){
 	let nowLang = getCookie("lang");
 	const languageElement = document.getElementById("language");
-	if(nowLang == "ko") {
-		languageElement.src= "/resources/img/header/lang/ko.png";
+	if(nowLang == "kr") {
+		languageElement.src= "/resources/img/header/lang/kr.png";
 	} else if(nowLang == "jp") {
 		languageElement.src= "/resources/img/header/lang/jp.png";
 	} else if(nowLang == "cn") {
@@ -45,7 +45,7 @@ function checkLanguage(){
 function changeLanguage() {
 	NOW_LANG = getCookie("lang");
 	const languageElement = document.getElementById("language");
-	if(NOW_LANG == "ko") {
+	if(NOW_LANG == "kr") {
 		setCookie("lang", "jp", 31);
 		languageElement.src= "/resources/img/header/lang/jp.png";
 	} else if(NOW_LANG == "jp") {
@@ -58,8 +58,8 @@ function changeLanguage() {
 		setCookie("lang", "en", 31);
 		languageElement.src= "/resources/img/header/lang/en.png";
 	} else {
-		setCookie("lang", "ko", 31);
-		languageElement.src= "/resources/img/header/lang/ko.png";
+		setCookie("lang", "kr", 31);
+		languageElement.src= "/resources/img/header/lang/kr.png";
 	}
 	loadLanguage();
 }
