@@ -1,4 +1,5 @@
 LANGUAGE_OBJECT["COVER_LANG"] = {};
+let NOW_CARTOON_INDEX = 0;
 
 function addCover(coverArea, coverData, index){
 	const cover = document.createElement("div");
@@ -27,6 +28,7 @@ function addCover(coverArea, coverData, index){
 }
 
 function readCartoon(cartoonIndex){
+	NOW_CARTOON_INDEX = cartoonIndex;
 	const book = document.getElementById("book");
 	book.removeAttribute("hidden");
 	const backButton = document.getElementById("button-back");
@@ -66,6 +68,7 @@ function readCartoon(cartoonIndex){
 	};
 	img.setAttribute("data-lang-var", "COVER_LANG");
 	img.setAttribute("data-lang", "NOW_PAGE");
+	pageArea.appendChild(img);
 }
 
 function backToCartoonList() {
@@ -78,7 +81,25 @@ function backToCartoonList() {
 }
 
 function goPage(page) {
-	console.log(page);
+	const pages = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"];
+	const pageInput = document.getElementById("page-input");
+	pageInput.value = (page + 1);
+	const pageArea = document.getElementById("pageArea");
+	pageArea.innerHTML = null;
+	
+	const img = document.createElement("img");
+	img.className = "cartoon lang-src";
+	img.src = "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/" + NOW_LANG + "/" + pages[page]["img"];
+	LANGUAGE_OBJECT["COVER_LANG"]["NOW_PAGE"] = {
+		"en": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/en/" + pages[page]["img"],
+		"kr": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/kr/" + pages[page]["img"],
+		"jp": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/jp/" + pages[page]["img"],
+		"cn": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/cn/" + pages[page]["img"],
+		"ru": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/ru/" + pages[page]["img"]
+	};
+	img.setAttribute("data-lang-var", "COVER_LANG");
+	img.setAttribute("data-lang", "NOW_PAGE");
+	pageArea.appendChild(img);
 }
 
 
