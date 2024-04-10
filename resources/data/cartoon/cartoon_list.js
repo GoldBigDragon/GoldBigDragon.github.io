@@ -82,6 +82,127 @@ const CARTOON_LIST = [
 				},
 				"img": "0006.png",
 				"created-at": "2021-09-12"
+			},
+			{
+				"title": {
+					"en":"Look at my ULTRA COMPUTER!",
+					"kr":"내 어마무시한 콤푸타를 봐",
+					"jp":"この素晴らしいコンピュータを見てください",
+					"cn":"看看这台很酷的电脑",
+					"ru":"Посмотрите на этот потрясающий компьютер!"
+				},
+				"img": "0007.png",
+				"created-at": "2021-09-20"
+			},
+			{
+				"title": {
+					"en":"If I do this, you will come",
+					"kr":"이래도 안넘어 오실건가요?",
+					"jp":"それでもやってきませんか？",
+					"cn":"如果我这样做，你就会来",
+					"ru":"Если я сделаю это, ты придешь"
+				},
+				"img": "0008.png",
+				"created-at": "2021-09-20"
+			},
+			{
+				"title": {
+					"en":"Bulk spaghetti source",
+					"kr":"대용량 스파게티 소스",
+					"jp":"大容量スパゲッティソース",
+					"cn":"散装意粉酱",
+					"ru":"Bulk spaghetti source"
+				},
+				"img": "0009.png",
+				"created-at": "2021-10-04"
+			},
+			{
+				"title": {
+					"en":"The effort is pitiful (Korean homophones)",
+					"kr":"노력이 가상하여",
+					"jp":"努力が哀切だ (韓国の同音異義語)",
+					"cn":"努力可嘉 (朝鲜语同音异音)",
+					"ru":"Усилия жалеют (Гомофоны Кореи)"
+				},
+				"img": "0010.png",
+				"created-at": "2021-10-24"
+			},
+			{
+				"title": {
+					"en":"The dead developer is silent",
+					"kr":"죽은 개발자는 말이 없다",
+					"jp":"死んだ開発者は無口",
+					"cn":"死去的开发者不说话",
+					"ru":"Мёртвый разработчик молчал"
+				},
+				"img": "0011.png",
+				"created-at": "2021-10-24"
+			},
+			{
+				"title": {
+					"en":"A bad, closed personality",
+					"kr":"고약하고 폐쇄적인 성격",
+					"jp":"不届き、閉鎖的な性格",
+					"cn":"坏的和封闭的性格",
+					"ru":"Плохая, закрытая личность"
+				},
+				"img": "0012.png",
+				"created-at": "2021-10-24"
+			},
+			{
+				"title": {
+					"en":"Schrödinger's mosquitoes",
+					"kr":"슈뢰딩거의 모기",
+					"jp":"シュレーディンガーの蚊",
+					"cn":"薛定谔的蚊子",
+					"ru":"Комары Шрёдингера"
+				},
+				"img": "0013.png",
+				"created-at": "2021-10-24"
+			},
+			{
+				"title": {
+					"en":"Best negotiations tool",
+					"kr":"최고의 협상 도구",
+					"jp":"最高の交渉の道具",
+					"cn":"最佳谈判工具",
+					"ru":"Лучший инструмент переговоров"
+				},
+				"img": "0014.png",
+				"created-at": "2021-10-24"
+			},
+			{
+				"title": {
+					"en":"Apple fanatics",
+					"kr":"앱등이",
+					"jp":"Apple狂信者です",
+					"cn":"Apple狂热分子",
+					"ru":"Фанатики Apple"
+				},
+				"img": "0015.png",
+				"created-at": "2021-10-24"
+			},
+			{
+				"title": {
+					"en":"Temptation of graduate school",
+					"kr":"대학원 납치",
+					"jp":"大学院を拉致",
+					"cn":"研究生院绑架",
+					"ru":"Похищение аспирантуры"
+				},
+				"img": "0016.png",
+				"created-at": "2021-10-31"
+			},
+			{
+				"title": {
+					"en":"Developer's roulette",
+					"kr":"개발자 룰렛",
+					"jp":"開発者のルーレット",
+					"cn":"开发者轮盘赌",
+					"ru":"Рулетка разработчика"
+				},
+				"img": "0017.png",
+				"created-at": "2021-10-31"
 			}
 		]
 	}
