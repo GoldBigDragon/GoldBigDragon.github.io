@@ -8,7 +8,7 @@ function addCover(coverArea, coverData){
 	coverImage.className = "book-cover";
 	coverImage.src = coverData["cover"];
 	const coverTitle = document.createElement("div");
-	coverTitle.className = "badge-name lang";
+	coverTitle.className = "book-title lang";
 	coverTitle.innerHTML = coverData["title"][NOW_LANG];
 	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]] = coverData["title"];
 	coverTitle.setAttribute("data-lang-var", "COVER_LANG");
@@ -16,6 +16,14 @@ function addCover(coverArea, coverData){
 	cover.appendChild(coverImage);
 	cover.appendChild(coverTitle);
 	coverArea.appendChild(cover);
+}
+
+function readCartoon(cartoonUid){
+	const book = document.getElementById("book");
+	book.removeAttribute("hidden");
+	const coverArea = document.getElementById("coverArea");
+	coverArea.setAttribute("hidden", "true");
+	
 }
 
 const coverArea = document.getElementById("coverArea");

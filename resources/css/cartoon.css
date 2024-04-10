@@ -12,3 +12,21 @@
 	font-weight: bold;
 	font-size: 1.5rem;
 }
+
+.cover {
+	margin: 1rem;
+	transition: 0.2s;
+	cursor: pointer;
+}
+.cover:hover {
+	transform: scaleX(1.5) scaleY(1.5);
+}
+
+.book-cover {
+	max-width: 20rem;
+	max-height: 25rem;
+}
+
+.book-title{
+	text-align: center;
+}
