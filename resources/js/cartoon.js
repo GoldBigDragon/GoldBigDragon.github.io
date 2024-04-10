@@ -41,31 +41,32 @@ function readCartoon(cartoonIndex){
 	const pageInput = document.getElementById("page-input");
 	const maxPage = document.getElementById("max-page");
 	const pageArea = document.getElementById("pageArea");
+	const maxPageValue = pages.length;
 	pageArea.innerHTML = null;
 	pageSelector.innerHTML = null;
 	let pageIndex = 0;
-	for(pageIndex = 0; pageIndex < pages.length; pageIndex ++) {
+	for(pageIndex = maxPageValue; pageIndex < pages.length; pageIndex --) {
 		const optionElement = document.createElement("option");
 		optionElement.className = "lang";
-		optionElement.value = pageIndex;
-		optionElement.innerText = (pageIndex + 1) + ". " + pages[pageIndex]["title"][NOW_LANG];
+		optionElement.value = pageIndex-1;
+		optionElement.innerText = pageIndex + ". " + pages[pageIndex]["title"][NOW_LANG];
 		LANGUAGE_OBJECT["COVER_LANG"][CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex] = pages[pageIndex]["title"];
 		optionElement.setAttribute("data-lang-var", "COVER_LANG");
 		optionElement.setAttribute("data-lang", CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex);
 		pageSelector.appendChild(optionElement);
 	}
-	pageInput.value = pages.length;
-	maxPage.innerText = pages.length;
+	pageInput.value = maxPageValue;
+	maxPage.innerText = maxPageValue;
 	
 	const img = document.createElement("img");
 	img.className = "cartoon lang-src";
-	img.src = "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/" + NOW_LANG + "/" + pages[pages.length - 1]["img"];
+	img.src = "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/" + NOW_LANG + "/" + pages[maxPageValue - 1]["img"];
 	LANGUAGE_OBJECT["COVER_LANG"]["NOW_PAGE"] = {
-		"en": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/en/" + pages[pages.length - 1]["img"],
-		"kr": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/kr/" + pages[pages.length - 1]["img"],
-		"jp": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/jp/" + pages[pages.length - 1]["img"],
-		"cn": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/cn/" + pages[pages.length - 1]["img"],
-		"ru": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/ru/" + pages[pages.length - 1]["img"]
+		"en": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/en/" + pages[maxPageValue - 1]["img"],
+		"kr": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/kr/" + pages[maxPageValue - 1]["img"],
+		"jp": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/jp/" + pages[maxPageValue - 1]["img"],
+		"cn": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/cn/" + pages[maxPageValue - 1]["img"],
+		"ru": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/ru/" + pages[maxPageValue - 1]["img"]
 	};
 	img.setAttribute("data-lang-var", "COVER_LANG");
 	img.setAttribute("data-lang", "NOW_PAGE");
