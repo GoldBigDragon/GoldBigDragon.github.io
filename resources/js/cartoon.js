@@ -89,6 +89,9 @@ function pageInputEnter() {
 }
 
 function goPage(page) {
+	if(page > CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1) {
+		page = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1;
+	}
 	const pages = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"];
 	const pageInput = document.getElementById("page-input");
 	pageInput.value = (parseInt(page) + 1);
