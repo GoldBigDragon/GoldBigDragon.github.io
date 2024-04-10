@@ -81,7 +81,7 @@ function readCartoon(cartoonIndex){
 	const prevPage = document.createElement("div");
 	prevPage.className = "page-mover prev-page";
 	prevPage.innerHTML = "<i class='fa-solid fa-chevron-left'></i>";
-	prevPage.setAttribute("onClick", "goPage(" + (maxPageValue - 2) + ")");
+	prevPage.setAttribute("onClick", "goPage(" + (maxPageValue - 2) + ", false)");
 	const nextPage = document.createElement("div");
 	nextPage.className = "page-mover next-page";
 	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
@@ -103,24 +103,26 @@ function backToCartoonList() {
 function pageInputEnter() {
     if (window.event.keyCode == 13) {
 		const pageInput = document.getElementById("page-input");
-        goPage(pageInput.value - 1);
+        goPage(pageInput.value - 1, false);
     }
 }
 
 function pageMove() {
 	const pageInput = document.getElementById("page-input");
-	goPage(pageInput.value - 1);
+	goPage(pageInput.value - 1, false);
 }
 
-function goPage(page) {
+function goPage(page, isSelected) {
 	if(page < 0) {
 		page = 0;
 	}
 	if(page > CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1) {
 		page = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1;
 	}
-	const pageSelector = document.getElementById("page-selector");
-	pageSelector.children[pageSelector.children.length - (page+1)].selected = true;
+	if( ! isSelected){
+		const pageSelector = document.getElementById("page-selector");
+		pageSelector.children[pageSelector.children.length - (page+1)].selected = true;
+	}
 	
 	const pages = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"];
 	const pageInput = document.getElementById("page-input");
