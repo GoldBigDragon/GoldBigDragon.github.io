@@ -40,6 +40,7 @@
 
 #title {
 	color: white;
+	margin-right: 0.5rem;
 }
 #createdAt {
 	color: var(--bs-gray-600);
