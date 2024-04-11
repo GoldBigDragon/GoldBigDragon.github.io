@@ -1,5 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Created on 2024-04-10 19:52:14
+Last edit 2024-04-10 19:54:05
+@author: 김태룡 (GoldBigDragon)
+@purpose: Rename cartoon files.
+"""
+
 import os
+# Check cartoon folder
 CARTOON_LIST = ["./developer"]
+# Check cartoon language folder
 LANGUAGE_LIST = ["en","kr","jp","cn","ru"]
 
 for path in CARTOON_LIST:
