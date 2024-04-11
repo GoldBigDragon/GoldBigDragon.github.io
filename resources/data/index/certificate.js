@@ -49,7 +49,9 @@ const DATA_CERTIFICATE = [
 			"cn":"MAD - SOCA",
 			"ru":"MAD - SOCA"
 		},
-		"proof":"/resources/img/index/proof/certificate/mad_soca.png"
+		"proof":"/resources/img/index/proof/certificate/mad_soca.png",
+		"url":"https://mad20.io/",
+		"url2":"https://mitre-engenuity.org/mad/"
 	},
 	{
 		"name":{
@@ -75,7 +77,9 @@ const DATA_CERTIFICATE = [
 			"cn":"MAD - CTI",
 			"ru":"MAD - CTI"
 		},
-		"proof":"/resources/img/index/proof/certificate/mad_cti.png"
+		"proof":"/resources/img/index/proof/certificate/mad_cti.png",
+		"url":"https://mad20.io/",
+		"url2":"https://mitre-engenuity.org/mad/"
 	},
 	{
 		"name":{
