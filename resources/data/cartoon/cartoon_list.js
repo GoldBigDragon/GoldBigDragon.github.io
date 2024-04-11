@@ -848,7 +848,7 @@ const CARTOON_LIST = [
 					"kr": "고무호스 암호분석",
 					"jp": "ゴムホース暗号解読",
 					"cn": "橡胶管密码分析",
-					"ru": "Криптоанализ "резинового шланга"
+					"ru": "Криптоанализ резинового шланга"
 				},
 				"img": "0076.png",
 				"created-at": "2022-04-03"
@@ -1097,7 +1097,7 @@ const CARTOON_LIST = [
 			},
 			{
 				"title":{
-					"en": "Email Tail",
+					"en": "Email Queue",
 					"kr": "Email Queue",
 					"jp": "メールテール",
 					"cn": "电子邮件尾部",
@@ -2010,11 +2010,11 @@ const CARTOON_LIST = [
 			},
 			{
 				"title":{
-					"en": "쉼표",
+					"en": "Comma",
 					"kr": "쉼표",
-					"jp": "쉼표",
-					"cn": "쉼표",
-					"ru": "쉼표"
+					"jp": "カンマ",
+					"cn": "逗号",
+					"ru": "Запятая"
 				},
 				"img": "0182.png",
 				"created-at": "2023-05-15"
@@ -2265,8 +2265,8 @@ const CARTOON_LIST = [
 				"title":{
 					"en": "Exit 8",
 					"kr": "Exit 8",
-					"jp": "8番出口",
-					"cn": "8 号出口",
+					"jp": "出口8",
+					"cn": "出口8",
 					"ru": "Выход 8"
 				},
 				"img": "0205.png",
@@ -2329,7 +2329,7 @@ const CARTOON_LIST = [
 			},
 			{
 				"title":{
-					"en": "Coupon Tail",
+					"en": "Coupon Queue",
 					"kr": "Coupon Queue",
 					"jp": "テールクーポン",
 					"cn": "尾部优惠券",
@@ -2362,7 +2362,7 @@ const CARTOON_LIST = [
 			},
 			{
 				"title":{
-					"en": "Are you sure it's compilation that broke?",
+					"en": "Are you sure it's compilation that explode?",
 					"kr": "터진게 컴파일인 것이 확실한가요?",
 					"jp": "爆発したのがコンパイルであることは確かですか？",
 					"cn": "你确定是编译器坏了吗？",
@@ -2473,7 +2473,7 @@ const CARTOON_LIST = [
 			{
 				"title":{
 					"en": "Double the usual price",
-					"kr": "평소에 2배 가격",
+					"kr": "평소의 2배 가격",
 					"jp": "通常価格の2倍",
 					"cn": "价格是平时的两倍",
 					"ru": "Вдвое дороже обычной цены"
