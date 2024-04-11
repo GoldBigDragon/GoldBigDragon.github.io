@@ -38,6 +38,8 @@ function readCartoon(cartoonIndex){
 	
 	const pages = CARTOON_LIST[cartoonIndex]["pages"];
 	const pageSelector = document.getElementById("page-selector");
+	const title = document.getElementById("title");
+	const createdAt = document.getElementById("createdAt");
 	const pageInput = document.getElementById("page-input");
 	const maxPage = document.getElementById("max-page");
 	const pageArea = document.getElementById("pageArea");
@@ -77,6 +79,10 @@ function readCartoon(cartoonIndex){
 	};
 	img.setAttribute("data-lang-var", "COVER_LANG");
 	img.setAttribute("data-lang", "NOW_PAGE");
+	
+	title.innerHTML = pages[maxPageValue - 1]["title"][NOW_LANG];
+	createdAt.innerHTML = pages[maxPageValue - 1]["created-at"];
+	LANGUAGE_OBJECT["COVER_LANG"]["TITLE"] = pages[maxPageValue - 1]["title"];
 	
 	const prevPage = document.createElement("div");
 	prevPage.className = "page-mover prev-page";
@@ -155,6 +161,11 @@ function goPage(page, isSelected) {
 	};
 	img.setAttribute("data-lang-var", "COVER_LANG");
 	img.setAttribute("data-lang", "NOW_PAGE");
+	
+	title.innerHTML = pages[page]["title"][NOW_LANG];
+	createdAt.innerHTML = pages[page]["created-at"];
+	LANGUAGE_OBJECT["COVER_LANG"]["TITLE"] = pages[page]["title"];
+	
 	pageArea.appendChild(prevPage);
 	pageArea.appendChild(img);
 	pageArea.appendChild(nextPage);

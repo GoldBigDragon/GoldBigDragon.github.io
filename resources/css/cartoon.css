@@ -38,6 +38,13 @@
 	font-size: 1rem;
 }
 
+#title {
+	color: white;
+}
+#createdAt {
+	color: var(--bs-gray-600);
+}
+
 #pageArea {
 	margin: 2rem 0rem;
     padding: 1rem;
