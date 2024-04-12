@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат разработчиков"
 		},
 		"translating":{
-			"en":"Translating (7/225)",
+			"en":"Translating (12/225)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (7/225)",
-			"cn":"翻译 (7/225)",
-			"ru":"Перевод (7/225)"
+			"jp":"翻訳中 (12/225)",
+			"cn":"翻译 (12/225)",
+			"ru":"Перевод (12/225)"
 		},
 		"cover": "/resources/img/cartoon/developer/cover.png",
 		"uid":"developer",
