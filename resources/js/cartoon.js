@@ -119,52 +119,53 @@ function pageMove() {
 }
 
 function goPage(page, isSelected) {
-	if(page < 0) {
-		page = 0;
+	const pageInt = parseInt(page);
+	if(pageInt < 0) {
+		pageInt = 0;
 	}
-	if(page > CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1) {
-		page = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1;
+	if(pageInt > CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1) {
+		pageInt = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1;
 	}
 	if( ! isSelected){
 		const pageSelector = document.getElementById("page-selector");
-		pageSelector.children[pageSelector.children.length - (page+1)].selected = true;
+		pageSelector.children[pageSelector.children.length - (pageInt+1)].selected = true;
 	}
 	
 	const pages = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"];
 	const pageInput = document.getElementById("page-input");
-	pageInput.value = (parseInt(page) + 1);
+	pageInput.value = (parseInt(pageInt) + 1);
 	const pageArea = document.getElementById("pageArea");
 	pageArea.innerHTML = null;
 	
 	const prevPage = document.createElement("div");
 	prevPage.className = "page-mover prev-page";
 	prevPage.innerHTML = "<i class='fa-solid fa-chevron-left'></i>";
-	if(page > 0) {
-		prevPage.setAttribute("onClick", "goPage(" + (page - 1) + ")");
+	if(pageInt > 0) {
+		prevPage.setAttribute("onClick", "goPage(" + (pageInt - 1) + ")");
 	}
 	const nextPage = document.createElement("div");
 	nextPage.className = "page-mover next-page";
 	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
-	if(page < pages.length -1){
-		nextPage.setAttribute("onClick", "goPage(" + (page + 1) + ")");
+	if(pageInt < pages.length -1){
+		nextPage.setAttribute("onClick", "goPage(" + (pageInt + 1) + ")");
 	}
 	
 	const img = document.createElement("img");
 	img.className = "cartoon lang-src";
-	img.src = "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/" + NOW_LANG + "/" + pages[page]["img"];
+	img.src = "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/" + NOW_LANG + "/" + pages[pageInt]["img"];
 	LANGUAGE_OBJECT["COVER_LANG"]["NOW_PAGE"] = {
-		"en": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/en/" + pages[page]["img"],
-		"kr": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/kr/" + pages[page]["img"],
-		"jp": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/jp/" + pages[page]["img"],
-		"cn": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/cn/" + pages[page]["img"],
-		"ru": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/ru/" + pages[page]["img"]
+		"en": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/en/" + pages[pageInt]["img"],
+		"kr": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/kr/" + pages[pageInt]["img"],
+		"jp": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/jp/" + pages[pageInt]["img"],
+		"cn": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/cn/" + pages[pageInt]["img"],
+		"ru": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/ru/" + pages[pageInt]["img"]
 	};
 	img.setAttribute("data-lang-var", "COVER_LANG");
 	img.setAttribute("data-lang", "NOW_PAGE");
 	
-	title.innerHTML = pages[page]["title"][NOW_LANG];
-	createdAt.innerHTML = pages[page]["created-at"];
-	LANGUAGE_OBJECT["COVER_LANG"]["TITLE"] = pages[page]["title"];
+	title.innerHTML = pages[pageInt]["title"][NOW_LANG];
+	createdAt.innerHTML = pages[pageInt]["created-at"];
+	LANGUAGE_OBJECT["COVER_LANG"]["TITLE"] = pages[pageInt]["title"];
 	
 	pageArea.appendChild(prevPage);
 	pageArea.appendChild(img);
