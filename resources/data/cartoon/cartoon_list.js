@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат разработчиков"
 		},
 		"translating":{
-			"en":"Translating (3/225)",
+			"en":"Translating (7/225)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (3/225)",
-			"cn":"翻译 (3/225)",
-			"ru":"Перевод (3/225)"
+			"jp":"翻訳中 (7/225)",
+			"cn":"翻译 (7/225)",
+			"ru":"Перевод (7/225)"
 		},
 		"cover": "/resources/img/cartoon/developer/cover.png",
 		"uid":"developer",
@@ -256,7 +256,7 @@ const CARTOON_LIST = [
 					"cn":"交易",
 					"ru":"Транзакции"
 				},
-				"img": "0021.png",
+				"img": "0022.png",
 				"created-at": "2021-11-17"
 			},
 			{
@@ -267,7 +267,7 @@ const CARTOON_LIST = [
 					"cn": "原核代谢骨架",
 					"ru": "Скелет метаболизма прокариот"
 				},
-				"img": "0022.png",
+				"img": "0023.png",
 				"created-at": "2021-11-22"
 			},
 			{
@@ -278,7 +278,7 @@ const CARTOON_LIST = [
 					"cn": "苹果公司杀了人",
 					"ru": "Apple убила человека"
 				},
-				"img": "0023.png",
+				"img": "0024.png",
 				"created-at": "2021-11-22"
 			},
 			{
@@ -289,7 +289,7 @@ const CARTOON_LIST = [
 					"cn": "御宅族赚钱",
 					"ru": "Отаку зарабатывает деньги"
 				},
-				"img": "0024.png",
+				"img": "0025.png",
 				"created-at": "2021-11-22"
 			},
 			{
@@ -300,7 +300,7 @@ const CARTOON_LIST = [
 					"cn": "等待",
 					"ru": "Подождите"
 				},
-				"img": "0025.png",
+				"img": "0026.png",
 				"created-at": "2021-12-05"
 			},
 			{
@@ -311,7 +311,7 @@ const CARTOON_LIST = [
 					"cn": "健康二合一",
 					"ru": "Здоровье за два"
 				},
-				"img": "0026.png",
+				"img": "0027.png",
 				"created-at": "2021-12-05"
 			},
 			{

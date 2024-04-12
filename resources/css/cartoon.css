@@ -72,6 +72,7 @@
 }
 
 .next-page {
+	color: rgba(255, 255, 255, 0.25);
     top: 12rem;
     right: 0rem;
 }
@@ -81,6 +82,7 @@
 	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
 .prev-page {
+	color: rgba(255, 255, 255, 0.25);
     top: 12rem;
     left: 0rem;
 }

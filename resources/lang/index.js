@@ -21,7 +21,7 @@ const INDEX_LANG = {
 		"ru": "Страна:"
 	},
 	"country-value": {
-		"en": "South krrea",
+		"en": "South korea",
 		"kr": "대한민국",
 		"jp": "韓国",
 		"cn": "韩国",
