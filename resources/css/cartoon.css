@@ -61,6 +61,7 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-webkit-user-select: none;
+	justify-content: center;
 }
 
 .page-mover {
