@@ -6,8 +6,17 @@ function addCover(coverArea, coverData, index){
 	cover.className = "cover col";
 	cover.setAttribute("onClick", "readCartoon(" + index + ")");
 	const coverImage = document.createElement("img");
-	coverImage.className = "book-cover";
-	coverImage.src = coverData["cover"];
+	coverImage.className = "book-cover lang-src";
+	coverImage.src = "/resources/img/cartoon/"+coverData["uid"]+"/" + [NOW_LANG]+"/cover.png";
+	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]+"-cover"] = {
+		"en": "/resources/img/cartoon/"+coverData["uid"]+"/en/cover.png",
+		"kr": "/resources/img/cartoon/"+coverData["uid"]+"/kr/cover.png",
+		"jp": "/resources/img/cartoon/"+coverData["uid"]+"/jp/cover.png",
+		"cn": "/resources/img/cartoon/"+coverData["uid"]+"/cn/cover.png",
+		"ru": "/resources/img/cartoon/"+coverData["uid"]+"/ru/cover.png"
+	};
+	optionElement.setAttribute("data-lang-var", "COVER_LANG");
+	optionElement.setAttribute("data-lang", coverData["uid"]+"-cover");
 	const coverTitle = document.createElement("div");
 	coverTitle.className = "book-title lang";
 	coverTitle.innerHTML = coverData["title"][NOW_LANG];

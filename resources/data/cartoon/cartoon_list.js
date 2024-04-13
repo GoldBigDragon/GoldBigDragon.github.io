@@ -1,11 +1,11 @@
 const CARTOON_LIST = [
 	{
 		"title":{
-			"en":"Developer messenger chat",
-			"kr":"개발자 메신저 대화",
-			"jp":"開発者トーク",
-			"cn":"开发者聊天",
-			"ru":"Чат разработчиков"
+			"en":"Developer chat room",
+			"kr":"개발자 채팅방",
+			"jp":"開発者のチャットルーム",
+			"cn":"开发者聊天室",
+			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
 			"en":"Translating (16/225)",
@@ -14,7 +14,6 @@ const CARTOON_LIST = [
 			"cn":"翻译 (16/225)",
 			"ru":"Перевод (16/225)"
 		},
-		"cover": "/resources/img/cartoon/developer/cover.png",
 		"uid":"developer",
 		"pages": [
 			{
