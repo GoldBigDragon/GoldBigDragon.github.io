@@ -15,8 +15,8 @@ function addCover(coverArea, coverData, index){
 		"cn": "/resources/img/cartoon/"+coverData["uid"]+"/cn/cover.png",
 		"ru": "/resources/img/cartoon/"+coverData["uid"]+"/ru/cover.png"
 	};
-	optionElement.setAttribute("data-lang-var", "COVER_LANG");
-	optionElement.setAttribute("data-lang", coverData["uid"]+"-cover");
+	coverImage.setAttribute("data-lang-var", "COVER_LANG");
+	coverImage.setAttribute("data-lang", coverData["uid"]+"-cover");
 	const coverTitle = document.createElement("div");
 	coverTitle.className = "book-title lang";
 	coverTitle.innerHTML = coverData["title"][NOW_LANG];
