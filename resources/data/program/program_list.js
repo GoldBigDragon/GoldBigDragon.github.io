@@ -83,7 +83,7 @@ const PROGRAM_LIST = [
 			"Plugin",
 			"Resourcepack",
 			"Tool",
-			"Java"
+			"Java",
 			"Spigot"
 		],
 		"language": "Java 8",
