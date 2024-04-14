@@ -20,17 +20,20 @@
 		<div class="row" id="header"></div>
 		<div class="row" style="margin-top:6rem; margin-bottom:1rem; display:flex; justify-content: center; align-items: flex-start;">
 			<div class="col-1"></div>
-				<div class="col" id="contents">
-					<div class="row" style="display: flex;align-items: center;justify-content: center;">
-						<div style="display: flex;align-items: center;justify-content: center;">
-							<select id="search-category" style="max-width: 10rem;">
-								<option class="lang" value="name" data-lang-var="PROGRAM_LANG" data-lang="name">Name</option>
-								<option class="lang" value="tag" data-lang-var="PROGRAM_LANG" data-lang="tag">Tag</option>
-								<option class="lang" value="language" data-lang-var="PROGRAM_LANG" data-lang="language">Language</option>
-							</select>
-							<input id="search-input" type="text" style="text-align: left;max-width: 10rem;margin: 0rem 1rem;" onkeyup="searchEnter()">
-							<button class="btn btn-secondary" onclick="search()"><i class="fa-solid fa-binoculars"></i></button>
-						</div>
+			<div class="col" id="contents">
+				<div class="row" style="display: flex;align-items: center;justify-content: center;margin-bottom: 1rem;">
+					<div style="display: flex;align-items: center;justify-content: center;">
+						<select id="search-category" style="max-width: 10rem;">
+							<option class="lang" value="name" data-lang-var="PROGRAM_LANG" data-lang="name">Name</option>
+							<option class="lang" value="tag" data-lang-var="PROGRAM_LANG" data-lang="tag">Tag</option>
+							<option class="lang" value="language" data-lang-var="PROGRAM_LANG" data-lang="language">Language</option>
+						</select>
+						<input id="search-input" type="text" style="text-align: left;max-width: 10rem;margin: 0rem 1rem;" onkeyup="searchEnter()">
+						<button class="btn btn-secondary" onclick="search()"><i class="fa-solid fa-binoculars"></i></button>
+					</div>
+				</div>
+				<div class="row">
+					<div id="programArea" class="class">
 					</div>
 				</div>
 			</div>
