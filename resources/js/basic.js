@@ -108,6 +108,14 @@ function loadLanguage() {
 			console.log(err);
 		}
 	});
+	const placeholderField = document.getElementsByClassName("lang-placeholder");
+	Array.prototype.forEach.call(placeholderField, function(languageElement) {
+		try{
+			languageElement.placeholder = LANGUAGE_OBJECT[languageElement.dataset.langVar][languageElement.dataset.lang][NOW_LANG];
+		} catch(err){
+			console.log(err);
+		}
+	});
 }
 
 loadFooter();
