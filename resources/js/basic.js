@@ -119,6 +119,7 @@ function loadLanguage() {
 	const titleField = document.getElementsByClassName("lang-title");
 	Array.prototype.forEach.call(placeholderField, function(languageElement) {
 		try{
+			languageElement.removeAttribute("title");
 			languageElement.setAttribute("title", LANGUAGE_OBJECT[languageElement.dataset.langVar][languageElement.dataset.langTitle][NOW_LANG]);
 		} catch(err){
 			console.log(err);
