@@ -73,4 +73,17 @@
 	display: flex;
     align-items: center;
     justify-content: flex-start;
+	padding: 0rem 1rem;
+}
+
+.btn-icon{
+	color: white;
+	margin: 0.5rem;
+}
+
+.github,.document,.download{
+	background-color: gray;
+}
+.youtube,.video {
+	background-color: red;
 }

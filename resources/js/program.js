@@ -41,7 +41,7 @@ function search(){
 
 function addProgram(programArea, programData, index){
 	const row = document.createElement("div");
-	row.className = "row program";
+	row.className = "row program lang-title";
 	
 	const col3 = document.createElement("div");
 	col3.className = "col icon-box";
@@ -69,33 +69,23 @@ function addProgram(programArea, programData, index){
 	description.setAttribute("data-lang", programData["name"]["en"]+"-description");
 	col.appendChild(description);
 	
-	const dates = document.createElement("div");
-	dates.className = "row";
-	const updatedAtDesc = document.createElement("div");
-	updatedAtDesc.className = "lang";
-	updatedAtDesc.innerHTML = LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"][NOW_LANG];
-	updatedAtDesc.setAttribute("data-lang-var", "PROGRAM_LANG");
-	updatedAtDesc.setAttribute("data-lang", "updated-at");
-	dates.appendChild(updatedAtDesc);
-	const updatedAt = document.createElement("div");
-	updatedAt.innerHTML = programData["updated-at"];
-	dates.appendChild(updatedAt);
-	const createdAtDesc = document.createElement("div");
-	createdAtDesc.className = "lang";
-	createdAtDesc.innerHTML = LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"][NOW_LANG];
-	createdAtDesc.setAttribute("data-lang-var", "PROGRAM_LANG");
-	createdAtDesc.setAttribute("data-lang", "created-at");
-	dates.appendChild(createdAtDesc);
-	const createdAt = document.createElement("div");
-	createdAt.innerHTML = programData["created-at"];
-	dates.appendChild(createdAt);
-	col.appendChild(dates);
+	
+	row.title = LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"][NOW_LANG] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"][NOW_LANG] + " " + programData["created-at"];
+	row.setAttribute("data-lang-var", "PROGRAM_LANG");
+	row.setAttribute("data-lang-title", programData["name"]["en"]+"-title");
+	LANGUAGE_OBJECT["PROGRAM_LANG"][programData["name"]["en"]+"-title"] = {
+		"en": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["en"] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["en"] + " " + programData["created-at"],
+		"kr": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["kr"] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["kr"] + " " + programData["created-at"],
+		"jp": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["jp"] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["jp"] + " " + programData["created-at"],
+		"cn": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["cn"] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["cn"] + " " + programData["created-at"],
+		"ru": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["ru"] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["ru"] + " " + programData["created-at"],
+	};
 	
 	const icons = document.createElement("div");
 	icons.className = "row align-left";
 	if(programData["download"] != null){
 		const downloadButton = document.createElement("a");
-		downloadButton.className = "btn lang";
+		downloadButton.className = "btn lang download";
 		downloadButton.innerHTML = "<i class='fa-solid fa-cloud-arrow-down'></i> Download";
 		downloadButton.href = programData["download"];
 		downloadButton.setAttribute("data-lang-var", "PROGRAM_LANG");
@@ -104,7 +94,7 @@ function addProgram(programArea, programData, index){
 	}
 	if(programData["document"] != null){
 		const documentButton = document.createElement("a");
-		documentButton.className = "btn lang";
+		documentButton.className = "btn lang document";
 		documentButton.innerHTML = "<i class='fa-solid fa-file-lines'></i> Document";
 		documentButton.href = programData["document"];
 		documentButton.setAttribute("data-lang-var", "PROGRAM_LANG");
@@ -113,7 +103,7 @@ function addProgram(programArea, programData, index){
 	}
 	if(programData["youtube"] != null){
 		const youtubeButton = document.createElement("a");
-		youtubeButton.className = "btn";
+		youtubeButton.className = "btn youtube";
 		youtubeButton.innerHTML = "<i class='fa-brands fa-youtube'></i> Youtube";
 		youtubeButton.href = programData["youtube"];
 		youtubeButton.target = '_blank';
@@ -121,7 +111,7 @@ function addProgram(programArea, programData, index){
 	}
 	if(programData["video"] != null){
 		const videoButton = document.createElement("a");
-		videoButton.className = "btn lang";
+		videoButton.className = "btn lang video";
 		videoButton.innerHTML = "<i class='fa-solid fa-video'></i> Video";
 		videoButton.href = programData["video"];
 		videoButton.setAttribute("data-lang-var", "PROGRAM_LANG");
@@ -130,7 +120,7 @@ function addProgram(programArea, programData, index){
 	}
 	if(programData["github"] != null){
 		const githubButton = document.createElement("a");
-		githubButton.className = "btn";
+		githubButton.className = "btn github";
 		githubButton.innerHTML = "<i class='fa-brands fa-github'></i> Github";
 		githubButton.href = programData["github"];
 		githubButton.target = '_blank';
