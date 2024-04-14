@@ -3,7 +3,7 @@
 }
 
 .program{
-	margin: 1rem;
+	margin: 2rem 1rem;
     background-color: var(--bs-gray-900);
     border-radius: 0.5rem;
     padding: 1rem;
@@ -87,7 +87,7 @@
 	color: var(--bs-gray-200);
 }
 .youtube,.video {
-	background-color: red;
+	background-color: #a10000;
 	margin: 0.25rem;
-	color: #a10000;
+	color: white;
 }
