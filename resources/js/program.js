@@ -44,7 +44,7 @@ function addProgram(programArea, programData, index){
 	row.className = "row program";
 	
 	const col3 = document.createElement("div");
-	col3.className = "icon-box";
+	col3.className = "col icon-box";
 	const icon = document.createElement("img");
 	icon.className = "icon";
 	icon.src = programData["icon"];
@@ -52,7 +52,7 @@ function addProgram(programArea, programData, index){
 	row.appendChild(col3);
 	
 	const col = document.createElement("div");
-	col.className = "description-box";
+	col.className = "col description-box";
 	
 	const title = document.createElement("div");
 	title.className = "row lang program-name";
