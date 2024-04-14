@@ -70,16 +70,16 @@ function addProgram(programArea, programData, index){
 	col.appendChild(description);
 	
 	
-	row.setAttribute("title", LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"][NOW_LANG] + " " + programData["updated-at"] + " &#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"][NOW_LANG] + " " + programData["created-at"]);
+	row.setAttribute("title", LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"][NOW_LANG] + " " + programData["updated-at"] + "\u000d" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"][NOW_LANG] + " " + programData["created-at"]);
 	
 	row.setAttribute("data-lang-var", "PROGRAM_LANG");
 	row.setAttribute("data-lang-title", programData["name"]["en"]+"-title");
 	LANGUAGE_OBJECT["PROGRAM_LANG"][programData["name"]["en"]+"-title"] = {
-		"en": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["en"] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["en"] + " " + programData["created-at"],
-		"kr": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["kr"] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["kr"] + " " + programData["created-at"],
-		"jp": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["jp"] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["jp"] + " " + programData["created-at"],
-		"cn": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["cn"] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["cn"] + " " + programData["created-at"],
-		"ru": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["ru"] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["ru"] + " " + programData["created-at"],
+		"en": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["en"] + " " + programData["updated-at"] + "\u000d" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["en"] + " " + programData["created-at"],
+		"kr": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["kr"] + " " + programData["updated-at"] + "\u000d" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["kr"] + " " + programData["created-at"],
+		"jp": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["jp"] + " " + programData["updated-at"] + "\u000d" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["jp"] + " " + programData["created-at"],
+		"cn": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["cn"] + " " + programData["updated-at"] + "\u000d" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["cn"] + " " + programData["created-at"],
+		"ru": LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"]["ru"] + " " + programData["updated-at"] + "\u000d" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"]["ru"] + " " + programData["created-at"],
 	};
 	
 	const icons = document.createElement("div");
