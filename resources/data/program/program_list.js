@@ -103,11 +103,11 @@ const PROGRAM_LIST = [
 			"ru":"NuriCHAIN"
 		},
 		"description": {
-			"en":"To respond to the increasing illegal harmful information, the Cyber Bureau has created NuriCops group with police and citizens in 2007. I have been with NuriCops since 2014. And mainly monitoring and reporting harmful sites. During the monitoring activities, I noticed that there are patterns and trends on harmful sites. And since the summer of 2016, I developed harmful site search crawlers on the premise that 'harmful sites have patterns.'",
-			"kr":"증가하는 불법 유해정보에 적극 대응하기 위해 사이버안전국은 2007년 부터 경찰과 시민으로 결성된 사이버 명예경찰 집단인 누리캅스(NuriCops)를 창설하였습니다. 필자는 누리캅스 일원으로 써 2014년 부터 현재 까지 활동하고 있으며, 주로 유해 사이트 모니터링 및 신고활동을 하고 있습니다. 모니터링활동 중, 유해사이트는 패턴과 유행을 가지는 양상을 확인하여 '유해사이트는 패턴을 가졌다'를 전제로 2016년 여름부터 유해사이트 탐색 크롤러(Crawler)를 제작하게 되었습니다.",
-			"jp":"増加する不法有害情報に積極的に対応するためにサイバー安全局は2007年から警察と市民で結成されたサイバー名誉警察集団であるヌリコップス(NuriCops)を創設しました。 筆者はヌリカプスの一員として2014年から現在まで活動しており、主に有害サイトのモニタリングおよび申告活動を行っています。 モニタリング活動中、有害サイトはパターンと流行を持つ様相を確認し、「有害サイトはパターンを持つ」ことを前提に2016年夏から有害サイト探索クローラ(Crawler)を製作することになりました。",
-			"cn":"为了应对日益严重的非法有害信息,网络局于2007年成立了由警察和市民组成的NuriCops集团。 我自2014年以来一直在NuriCops工作。 主要是对有害场所进行监测和报告。 在监测活动中，我注意到有害网站存在模式和趋势。 自2016年夏天以来，我在'有害网站有模式'的前提下开发了有害的网站搜索爬虫。",
-			"ru":"Чтобы ответить на растущую незаконную вредную информацию, кибербюро создало группу NuriCops с полицией и гражданами в 2007 году. Я работаю с NuriCops с 2014 года. И в основном мониторинг и отчетность вредных сайтов. В ходе мониторинга я заметил, что существуют модели и тенденции на вредных сайтах. И с лета 2016 года я разработал вредные поисковые маршрутизаторы с предпосылкой, что «нарушительные сайты имеют узоры»."
+			"en":"This is a web page crawler created for the purpose of reporting harmful sites.",
+			"kr":"유해사이트 신고 목적으로 제작된 웹 페이지 크롤러(Crawler)입니다.",
+			"jp":"有害サイト申告目的で製作されたウェブページクローラ(Crawler)です。",
+			"cn":"以举报有害网站为目的制作的网页爬虫（Crawler）。",
+			"ru":"Это веб-страница Crawler, созданная с целью сообщения об опасных сайтах."
 		},
 		"tag": [
 			"NuriCops",
