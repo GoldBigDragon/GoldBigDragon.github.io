@@ -41,27 +41,28 @@ function search(){
 
 function addProgram(programArea, programData, index){
 	const row = document.createElement("div");
-	row.className = "row";
+	row.className = "row program";
 	
 	const col3 = document.createElement("div");
-	col3.className = "col-3";
+	col3.className = "col-3 icon-box";
 	const icon = document.createElement("img");
+	icon.className = "icon";
 	icon.src = programData["icon"];
 	col3.appendChild(icon);
 	row.appendChild(col3);
 	
 	const col = document.createElement("div");
-	col.className = "col";
+	col.className = "col description-box";
 	
 	const title = document.createElement("div");
-	title.className = "row";
+	title.className = "row lang program-name";
 	title.innerHTML = programData["name"][NOW_LANG];
 	LANGUAGE_OBJECT["PROGRAM_LANG"][programData["name"]["en"]+"-name"] = programData["name"];
 	title.setAttribute("data-lang-var", "PROGRAM_LANG");
 	title.setAttribute("data-lang", programData["name"]["en"]+"-name");
 	col.appendChild(title);
 	const description = document.createElement("div");
-	description.className = "row";
+	description.className = "row lang program-description";
 	description.innerHTML = programData["description"][NOW_LANG];
 	LANGUAGE_OBJECT["PROGRAM_LANG"][programData["name"]["en"]+"-description"] = programData["description"];
 	description.setAttribute("data-lang-var", "PROGRAM_LANG");
@@ -69,10 +70,12 @@ function addProgram(programArea, programData, index){
 	col.appendChild(description);
 	
 	const tags = document.createElement("div");
-	tags.className = "row";
+	tags.className = "row align-left";
 	for(index = 0; index < programData["tag"].length; index ++) {
 		const tag = document.createElement("div");
+		tag.className = "program-tag";
 		tag.innerHTML = programData["tag"][index];
+		tag.setAttribute("onClick", "setSearchTagValue('"+programData["tag"][index]+"'");
 		tags.appendChild(tag);
 	}
 	col.appendChild(tags);
@@ -86,11 +89,18 @@ function addProgram(programArea, programData, index){
 	col.appendChild(environment);
 	
 	const icons = document.createElement("div");
-	icons.className = "row";
+	icons.className = "row align-left";
 	col.appendChild(icons);
 	
 	row.appendChild(col);
 	programArea.appendChild(row);
+}
+
+function setSearchTagValue(tag){
+	const category = document.getElementById("search-category");
+	category.children[1].selected = true;
+	document.getElementById("search-input").value = tag;
+	search();
 }
 
 search();
