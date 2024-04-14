@@ -83,7 +83,11 @@
 
 .github,.document,.download{
 	background-color: gray;
+	margin: 0rem 0.25rem;
+	color: var(--bs-gray-200);
 }
 .youtube,.video {
 	background-color: red;
+	margin: 0rem 0.25rem;
+	color: white;
 }

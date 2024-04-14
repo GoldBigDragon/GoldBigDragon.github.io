@@ -70,7 +70,8 @@ function addProgram(programArea, programData, index){
 	col.appendChild(description);
 	
 	
-	row.title = LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"][NOW_LANG] + " " + programData["updated-at"] + "&#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"][NOW_LANG] + " " + programData["created-at"];
+	row.setAttribute("title", LANGUAGE_OBJECT["PROGRAM_LANG"]["updated-at"][NOW_LANG] + " " + programData["updated-at"] + " &#013;" + LANGUAGE_OBJECT["PROGRAM_LANG"]["created-at"][NOW_LANG] + " " + programData["created-at"]);
+	
 	row.setAttribute("data-lang-var", "PROGRAM_LANG");
 	row.setAttribute("data-lang-title", programData["name"]["en"]+"-title");
 	LANGUAGE_OBJECT["PROGRAM_LANG"][programData["name"]["en"]+"-title"] = {
@@ -101,13 +102,13 @@ function addProgram(programArea, programData, index){
 		documentButton.setAttribute("data-lang", "document");
 		icons.appendChild(documentButton);
 	}
-	if(programData["youtube"] != null){
-		const youtubeButton = document.createElement("a");
-		youtubeButton.className = "btn youtube";
-		youtubeButton.innerHTML = "<i class='fa-brands fa-youtube'></i> Youtube";
-		youtubeButton.href = programData["youtube"];
-		youtubeButton.target = '_blank';
-		icons.appendChild(youtubeButton);
+	if(programData["github"] != null){
+		const githubButton = document.createElement("a");
+		githubButton.className = "btn github";
+		githubButton.innerHTML = "<i class='fa-brands fa-github'></i> Github";
+		githubButton.href = programData["github"];
+		githubButton.target = '_blank';
+		icons.appendChild(githubButton);
 	}
 	if(programData["video"] != null){
 		const videoButton = document.createElement("a");
@@ -118,13 +119,13 @@ function addProgram(programArea, programData, index){
 		videoButton.setAttribute("data-lang", "video");
 		icons.appendChild(videoButton);
 	}
-	if(programData["github"] != null){
-		const githubButton = document.createElement("a");
-		githubButton.className = "btn github";
-		githubButton.innerHTML = "<i class='fa-brands fa-github'></i> Github";
-		githubButton.href = programData["github"];
-		githubButton.target = '_blank';
-		icons.appendChild(githubButton);
+	if(programData["youtube"] != null){
+		const youtubeButton = document.createElement("a");
+		youtubeButton.className = "btn youtube";
+		youtubeButton.innerHTML = "<i class='fa-brands fa-youtube'></i> Youtube";
+		youtubeButton.href = programData["youtube"];
+		youtubeButton.target = '_blank';
+		icons.appendChild(youtubeButton);
 	}
 	col.appendChild(icons);
 	
