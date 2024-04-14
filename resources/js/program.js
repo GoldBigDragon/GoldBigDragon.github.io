@@ -41,10 +41,10 @@ function search(){
 
 function addProgram(programArea, programData, index){
 	const row = document.createElement("div");
-	row.className = "program";
+	row.className = "row program";
 	
 	const col3 = document.createElement("div");
-	col3.className = "col-3 icon-box";
+	col3.className = "icon-box";
 	const icon = document.createElement("img");
 	icon.className = "icon";
 	icon.src = programData["icon"];
@@ -52,7 +52,7 @@ function addProgram(programArea, programData, index){
 	row.appendChild(col3);
 	
 	const col = document.createElement("div");
-	col.className = "col description-box";
+	col.className = "description-box";
 	
 	const title = document.createElement("div");
 	title.className = "row lang program-name";

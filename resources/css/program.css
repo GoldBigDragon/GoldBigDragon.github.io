@@ -15,13 +15,17 @@
 }
 
 .icon-box{
-	max-width: 10rem;
     padding: 1rem;
 	display: flex;
     align-items: center;
     justify-content: center;
 }
 
+@media (min-width: 700px) {
+	.icon-box{
+		max-width: 10rem;
+	}
+}
 .icon{
 	max-width: 8rem;
     max-height: 8rem;
