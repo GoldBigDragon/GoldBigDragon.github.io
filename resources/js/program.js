@@ -41,7 +41,7 @@ function search(){
 
 function addProgram(programArea, programData, index){
 	const row = document.createElement("div");
-	row.className = "row program";
+	row.className = "program";
 	
 	const col3 = document.createElement("div");
 	col3.className = "col-3 icon-box";
@@ -75,7 +75,7 @@ function addProgram(programArea, programData, index){
 		const tag = document.createElement("div");
 		tag.className = "program-tag";
 		tag.innerHTML = programData["tag"][index];
-		tag.setAttribute("onClick", "setSearchTagValue('"+programData["tag"][index]+"'");
+		tag.setAttribute("onClick", "setSearchTagValue('"+programData["tag"][index]+"')");
 		tags.appendChild(tag);
 	}
 	col.appendChild(tags);
