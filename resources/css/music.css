@@ -11,12 +11,42 @@
 	margin-bottom: 2rem;
     font-size: 1.2rem;
 }
+
 .tab:hover{
 	border-bottom: 2px solid var(--bs-primary);
 }
+
 .tab-selected{
 	border-bottom: 2px solid var(--bs-primary);
 }
+
 #musicArea{
 	min-height: calc(100vh - 21rem);
+}
+
+.music-element, .music-element-playing{
+    background-color: var(--bs-gray-900);
+	border: 1px solid var(--bs-gray-900);
+    border-radius: 0.5rem;
+	padding: 1.5rem;
+    margin: 1rem 0rem;
+	transition: 0.2s;
+}
+
+.music-element-playing{
+    background-color: var(--bs-primary);
+}
+
+.music-element:hover{
+	border: 1px solid var(--bs-gray-800);
+    background-color: var(--bs-gray-800);
+}
+
+.music-element-playing:hover{
+    background-color: var(--bs-gray-800);
+}
+
+.music-image{
+	width: 5rem;
+	height: 5rem;
 }

@@ -1,3 +1,7 @@
+const NOW_PLAY_LIST = [];
+const NOW_PLAY_PLAYLIST_TITLE = null;
+const NOW_PLAY_MUSIC_TITLE = null;
+
 function addMusic(musicArea, playlistData, index){
 }
 
@@ -82,7 +86,68 @@ function searchMusic(){
 	}
 }
 
+function setSearchPlaylistTagValue(tag){
+	const category = document.getElementById("search-playlist-category");
+	category.children[1].selected = true;
+	document.getElementById("search-playlist-input").value = tag;
+	searchPlaylist();
+}
+
 function addPlaylist(musicArea, playlistData, index){
+	const playlistElement = document.createElement("div");
+	
+	const imagePane = document.createElement("div");
+	imagePane.className = "col-3 music-image-pane";
+	const musicImage = document.createElement("img");
+	musicImage.className = "music-image";
+	musicImage.src = playlistData["image"];
+	const playButton = document.createElement("div");
+	const buttonIcon = document.createElement("i");
+	playButton.appendChild(buttonIcon);
+	imagePane.appendChild(musicImage);
+	imagePane.appendChild(playButton);
+	if(NOW_PLAY_PLAYLIST_TITLE == playlistData["title"]["en"]) {
+		playlistElement.className = "row music-element-playing";
+		buttonIcon.className = "fa-solid fa-pause";
+	} else {
+		playlistElement.className = "row music-element";
+		buttonIcon.className = "fa-solid fa-play";
+	}
+	playlistElement.appendChild(imagePane);
+	
+	const titlePane = document.createElement("div");
+	titlePane.className = "col music-title-pane";
+	const title = document.createElement("div");
+	title.className = "row";
+	title.innerHTML = playlistData["title"][NOW_LANG];
+	LANGUAGE_OBJECT["MUSIC_LANG"][playlistData["title"]["en"]+"-title"] = playlistData["title"];
+	title.setAttribute("data-lang-var", "MUSIC_LANG");
+	title.setAttribute("data-lang", playlistData["title"]["en"]+"-title");
+	const description = document.createElement("div");
+	description.className = "row";
+	description.innerHTML = playlistData["description"][NOW_LANG];
+	LANGUAGE_OBJECT["MUSIC_LANG"][playlistData["description"]["en"]+"-description"] = playlistData["description"];
+	description.setAttribute("data-lang-var", "MUSIC_LANG");
+	description.setAttribute("data-lang", playlistData["description"]["en"]+"-description");
+	
+	const tags = document.createElement("div");
+	tags.className = "row align-left";
+	for(index = 0; index < playlistData["tag"].length; index ++) {
+		const tag = document.createElement("div");
+		tag.className = "program-tag";
+		tag.innerHTML = playlistData["tag"][index];
+		tag.setAttribute("onClick", "setSearchPlaylistTagValue('"+playlistData["tag"][index]+"')");
+		tags.appendChild(tag);
+	}
+	
+	titlePane.appendChild(title);
+	titlePane.appendChild(description);
+	titlePane.appendChild(tags);
+	
+	playlistElement.appendChild(titlePane);
+	
+	
+	musicArea.appendChild(playlistElement);
 }
 
 function searchPlaylistEnter(){
