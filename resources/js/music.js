@@ -12,7 +12,7 @@ function runNextMusic(playlistTitle){
 		if(targetPane != null){
 			const buttonIcon = targetPane.getElementsByClassName("fa-play-button")[0];
 			targetPane.className = "row music-element";
-			buttonIcon.className = "fa-solid fa-play";
+			buttonIcon.innerHTML = "<i class='fa-solid fa-play'></i>";
 		}
 		return;
 	} else {
@@ -20,6 +20,8 @@ function runNextMusic(playlistTitle){
 		// audio.volume = 1;
 		audio.setAttribute("onLoadeddata", "setDuration()");
 		audio.setAttribute("onended", "runNextMusic('" + playlistTitle + "')");
+		const playerImage = document.getElementById("player-music-image");
+		playerImage.src = NOW_PLAY_LIST[NOW_PLAY_INDEX]["image"];
 	}
 }
 
@@ -38,9 +40,9 @@ function setPlayListAll(playlistTitle){
 	}
 	const targetPane = document.getElementById(playlistTitle);
 	if(targetPane != null){
-		const buttonIcon = targetPane.getElementsByClassName("fa-play-button")[0];
+		const buttonIcon = targetPane.getElementsByClassName("play-button")[0];
 		targetPane.className = "row music-element-playing";
-		buttonIcon.className = "fa-solid fa-pause";
+		buttonIcon.innerHTML = "<i class='fa-solid fa-pause'></i>";
 	}
 	runNextMusic(playlistTitle);
 }
@@ -130,7 +132,7 @@ function searchMusic(){
 	}
 }
 
-function setSearchMusicPlaylistValue(title){
+function setSearchMusicPlaylistValue(tag){
 	const category = document.getElementById("search-playlist-category");
 	category.children[1].selected = true;
 	document.getElementById("search-playlist-input").value = tag;
