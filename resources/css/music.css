@@ -139,3 +139,10 @@
 #player-music-play-button:hover{
 	color: white;
 }
+
+#timeline{
+	background-color: var(--bs-gray-900);
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+}
