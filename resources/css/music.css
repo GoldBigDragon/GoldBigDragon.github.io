@@ -194,3 +194,7 @@
     height: 5px;
 	background-color: var(--bs-primary);
 }
+
+#player-music-title{
+	margin-bottom: 0.5rem;
+}

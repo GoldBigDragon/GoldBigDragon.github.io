@@ -4,9 +4,29 @@ let NOW_PLAY_INDEX = -1;
 
 let audio = null;
 
+function stopMusic(){
+	if(audio != null){
+		audio.pause();
+		audio = null;
+	}
+	const playerImage = document.getElementById("player-music-image");
+	playerImage.src = "/resources/img/music/none.png";
+	const playButton = document.getElementById("player-music-play-button");
+	playButton.innerHTML = "<i class='fa-solid fa-play'></i>";
+	const musicTitle = document.getElementById("player-music-title");
+	musicTitle.innerHTML = " ";
+	const progressBar = document.getElementById("progress");
+	progressBar.style.width = "0%";
+	const currentTime = document.getElementById("current-time");
+	currentTime.innerText = "0:00";
+	const duration = document.getElementById("duration");
+	duration.innerText = "0:00";
+}
+
 function runNextMusic(playlistTitle){
 	NOW_PLAY_INDEX = NOW_PLAY_INDEX + 1;
 	if(NOW_PLAY_LIST.length <= NOW_PLAY_INDEX) {
+		stopMusic();
 		NOW_PLAY_INDEX = -1;
 		const targetPane = document.getElementById(playlistTitle);
 		if(targetPane != null){
@@ -41,6 +61,7 @@ function setDuration(){
 }
 
 function setPlayListAll(playlistTitle){
+	stopMusic();
 	NOW_PLAY_PLAYLIST_TITLE = playlistTitle;
 	NOW_PLAY_LIST.length = 0;
 	for(index = 0; index < MUSIC_LIST.length; index ++) {
@@ -169,15 +190,14 @@ function addPlaylist(musicArea, playlistData, index){
 	playButton.className = "play-button";
 	playButton.setAttribute("onClick", "setPlayListAll('" + playlistData["title"]["en"] + "')");
 	const buttonIcon = document.createElement("i");
+	buttonIcon.className = "fa-solid fa-eject";
 	playButton.appendChild(buttonIcon);
 	imagePane.appendChild(musicImage);
 	imagePane.appendChild(playButton);
 	if(NOW_PLAY_PLAYLIST_TITLE == playlistData["title"]["en"]) {
 		playlistElement.className = "row music-element-playing";
-		buttonIcon.className = "fa-solid fa-pause fa-play-button";
 	} else {
 		playlistElement.className = "row music-element";
-		buttonIcon.className = "fa-solid fa-play fa-play-button";
 	}
 	playlistElement.appendChild(imagePane);
 	
