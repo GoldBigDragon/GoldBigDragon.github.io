@@ -23,6 +23,7 @@ function stopMusic(){
 	const duration = document.getElementById("duration");
 	duration.innerText = "0:00";
 	NOW_PLAY_PLAYLIST_TITLE = null;
+	NOW_PLAY_MUSIC_TITLE = null;
 	NOW_PLAY_INDEX = -1;
 	NOW_PLAY_LIST.length = 0;
 }
@@ -58,6 +59,8 @@ function runNextMusic(playlistTitle, musicTitle){
 		const musicTitle = document.getElementById("player-music-title");
 		musicTitle.innerHTML = NOW_PLAY_LIST[NOW_PLAY_INDEX]["title"][NOW_LANG];
 		LANGUAGE_OBJECT["MUSIC_LANG"]["NOW-PLAYING-MUSIC"] = NOW_PLAY_LIST[NOW_PLAY_INDEX]["title"];
+		NOW_PLAY_PLAYLIST_TITLE = NOW_PLAY_LIST[NOW_PLAY_INDEX]['playlist-title-en'];
+		NOW_PLAY_MUSIC_TITLE = NOW_PLAY_LIST[NOW_PLAY_INDEX]['title']['en'];
 	}
 }
 
