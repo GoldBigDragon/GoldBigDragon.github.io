@@ -30,7 +30,7 @@ function setDuration(){
 
 function setPlayListAll(playlistTitle){
 	NOW_PLAY_PLAYLIST_TITLE = playlistTitle;
-	NOW_PLAY_LIST.clear();
+	NOW_PLAY_LIST.length = 0;
 	for(index = 0; index < MUSIC_LIST.length; index ++) {
 		if(MUSIC_LIST[index]["playlist-title-en"] == playlistTitle){
 			NOW_PLAY_LIST.push(MUSIC_LIST[index]);
