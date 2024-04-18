@@ -112,7 +112,7 @@ function addMusic(musicArea, musicData, index){
 	musicImage.src = musicData["image"];
 	const playButton = document.createElement("div");
 	playButton.className = "play-button";
-	playButton.setAttribute("onClick", "setPlayListAll('" + musicData["title"]["en"] + "')");
+	playButton.setAttribute("onClick", "setPlayList('" + musicData["title"]["en"] + "')");
 	const buttonIcon = document.createElement("i");
 	buttonIcon.className = "fa-solid fa-eject";
 	playButton.appendChild(buttonIcon);
@@ -199,35 +199,35 @@ function searchMusic(){
 			}
 		} else if(category == "playlist"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
-				if(MUSIC_LIST[index]["playlist-title-en"].includes(value) ||
-				MUSIC_LIST[index]["playlist-title-kr"].includes(value) ||
-				MUSIC_LIST[index]["playlist-title-jp"].includes(value) ||
-				MUSIC_LIST[index]["playlist-title-cn"].includes(value) ||
-				MUSIC_LIST[index]["playlist-title-ru"].includes(value)){
+				if(MUSIC_LIST[index]["playlist-title-en"].toLowerCase().includes(value) ||
+				MUSIC_LIST[index]["playlist-title-kr"].toLowerCase().includes(value) ||
+				MUSIC_LIST[index]["playlist-title-jp"].toLowerCase().includes(value) ||
+				MUSIC_LIST[index]["playlist-title-cn"].toLowerCase().includes(value) ||
+				MUSIC_LIST[index]["playlist-title-ru"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
 				}
 			}
 		} else if(category == "instrumentation"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
-				if(MUSIC_LIST[index]["instrumentation"].includes(value)){
+				if(MUSIC_LIST[index]["instrumentation"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
 				}
 			}
 		} else if(category == "key"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
-				if(MUSIC_LIST[index]["key"].includes(value)){
+				if(MUSIC_LIST[index]["key"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
 				}
 			}
 		} else if(category == "tempo"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
-				if(MUSIC_LIST[index]["tempo"].includes(value)){
+				if(MUSIC_LIST[index]["tempo"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
 				}
 			}
 		} else if(category == "meter"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
-				if(MUSIC_LIST[index]["meter"].includes(value)){
+				if(MUSIC_LIST[index]["meter"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
 				}
 			}
@@ -239,7 +239,7 @@ function searchMusic(){
 			}
 		} else if(category == "created-with"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
-				if(MUSIC_LIST[index]["created-with"].includes(value)){
+				if(MUSIC_LIST[index]["created-with"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
 				}
 			}
