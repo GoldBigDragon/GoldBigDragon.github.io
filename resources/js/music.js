@@ -21,6 +21,9 @@ function stopMusic(){
 	currentTime.innerText = "0:00";
 	const duration = document.getElementById("duration");
 	duration.innerText = "0:00";
+	NOW_PLAY_PLAYLIST_TITLE = null;
+	NOW_PLAY_INDEX = -1;
+	NOW_PLAY_LIST.length = 0;
 }
 
 function runNextMusic(playlistTitle){
@@ -71,9 +74,7 @@ function setPlayListAll(playlistTitle){
 	}
 	const targetPane = document.getElementById(playlistTitle);
 	if(targetPane != null){
-		const buttonIcon = targetPane.getElementsByClassName("play-button")[0];
 		targetPane.className = "row music-element-playing";
-		buttonIcon.innerHTML = "<i class='fa-solid fa-pause'></i>";
 	}
 	runNextMusic(playlistTitle);
 }
@@ -163,11 +164,21 @@ function searchMusic(){
 	}
 }
 
-function setSearchMusicPlaylistValue(tag){
-	const category = document.getElementById("search-playlist-category");
+function setSearchMusicPlaylistValue(playlistName){
+	const activeTab = document.getElementById("music-tab");
+	activeTab.className = "col tab-selected lang";
+	const inactiveTab = document.getElementById("playlist-tab");
+	inactiveTab.className = "col tab lang";
+	const activePane = document.getElementById("music-pane");
+	activePane.removeAttribute("hidden");
+	const inactivePane = document.getElementById("playlist-pane");
+	inactivePane.setAttribute("hidden", "true");
+	searchMusic();
+	
+	const category = document.getElementById("search-music-category");
 	category.children[1].selected = true;
-	document.getElementById("search-playlist-input").value = tag;
-	searchPlaylist();
+	document.getElementById("search-music-input").value = playlistName;
+	searchMusic();
 }
 
 function setSearchPlaylistTagValue(tag){
