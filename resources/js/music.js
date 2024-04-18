@@ -7,7 +7,7 @@ function searchMusicEnter(){
 function searchMusic(){
 	const category = document.getElementById("search-music-category").value;
 	const value = document.getElementById("search-music-input").value.toLowerCase();
-	const musicArea = document.getElementById("music-area");
+	const musicArea = document.getElementById("musicArea");
 }
 
 function searchPlaylistEnter(){
@@ -19,5 +19,5 @@ function searchPlaylistEnter(){
 function searchPlaylist(){
 	const category = document.getElementById("search-playlist-category").value;
 	const value = document.getElementById("search-playlist-input").value.toLowerCase();
-	const musicArea = document.getElementById("playlist-area");
+	const musicArea = document.getElementById("musicArea");
 }
