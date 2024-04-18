@@ -154,7 +154,7 @@ function addMusic(musicArea, musicData, index){
 		const tag = document.createElement("div");
 		tag.className = "tag";
 		tag.innerHTML = musicData["tag"][index2];
-		tag.setAttribute("onClick", "setSearchPlaylistTagValue('"+musicData["tag"][index2]+"')");
+		tag.setAttribute("onClick", "setSearchMusicTagValue('"+musicData["tag"][index2]+"')");
 		tags.appendChild(tag);
 	}
 	
@@ -164,6 +164,13 @@ function addMusic(musicArea, musicData, index){
 	playlistElement.appendChild(titlePane);
 	
 	musicArea.appendChild(playlistElement);
+}
+
+function setSearchMusicTagValue(tag){
+	const category = document.getElementById("search-music-category");
+	category.children[1].selected = true;
+	document.getElementById("search-music-input").value = tag;
+	searchMusic();
 }
 
 function searchMusicEnter(){
