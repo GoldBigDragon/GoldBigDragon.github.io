@@ -508,4 +508,5 @@ function showThisMusicDetails(){
 }
 
 function showDetails(musicName){
+	alert("Show '" + musicName + "' detail page (Download, Lyrics, Created-at, Created-with, Duration)");
 }
