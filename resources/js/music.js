@@ -1,5 +1,6 @@
 const NOW_PLAY_LIST = [];
 let NOW_PLAY_PLAYLIST_TITLE = null;
+let NOW_PLAY_MUSIC_TITLE = null;
 let NOW_PLAY_INDEX = -1;
 
 let audio = null;
@@ -26,7 +27,7 @@ function stopMusic(){
 	NOW_PLAY_LIST.length = 0;
 }
 
-function runNextMusic(playlistTitle){
+function runNextMusic(playlistTitle, musicTitle){
 	NOW_PLAY_INDEX = NOW_PLAY_INDEX + 1;
 	if(NOW_PLAY_LIST.length <= NOW_PLAY_INDEX) {
 		stopMusic();
@@ -35,12 +36,16 @@ function runNextMusic(playlistTitle){
 		if(targetPane != null){
 			targetPane.className = "row music-element";
 		}
+		const targetMusicPane = document.getElementById(musicTitle);
+		if(targetMusicPane != null){
+			targetMusicPane.className = "row music-element";
+		}
 		return;
 	} else {
 		audio = new Audio(NOW_PLAY_LIST[NOW_PLAY_INDEX]["mp3"]);
 		// audio.volume = 1;
 		audio.setAttribute("onLoadeddata", "setDuration()");
-		audio.setAttribute("onended", "runNextMusic('" + playlistTitle + "')");
+		audio.setAttribute("onended", "runNextMusic('" + playlistTitle + "', '" + NOW_PLAY_LIST[NOW_PLAY_INDEX]['title']['en'] + "')");
 		const playerImage = document.getElementById("player-music-image");
 		playerImage.src = NOW_PLAY_LIST[NOW_PLAY_INDEX]["image"];
 		const playButton = document.getElementById("player-music-play-button");
@@ -74,11 +79,92 @@ function setPlayListAll(playlistTitle){
 	if(targetPane != null){
 		targetPane.className = "row music-element-playing";
 	}
-	runNextMusic(playlistTitle);
+	runNextMusic(playlistTitle, NOW_PLAY_LIST[0]['title']['en']);
 }
 
+function setPlayList(musicTitle){
+	stopMusic();
+	NOW_PLAY_PLAYLIST_TITLE = null;
+	NOW_PLAY_MUSIC_TITLE = musicTitle;
+	NOW_PLAY_LIST.length = 0;
+	let index = 0;
+	for(index = 0; index < MUSIC_LIST.length; index ++) {
+		if(MUSIC_LIST[index]["title"]['en'] == musicTitle){
+			NOW_PLAY_LIST.push(MUSIC_LIST[index]);
+			break;
+		}
+	}
+	const targetPane = document.getElementById(musicTitle);
+	if(targetPane != null){
+		targetPane.className = "row music-element-playing";
+	}
+	runNextMusic(MUSIC_LIST[index]["playlist-title-en"], musicTitle);
+}
 
-function addMusic(musicArea, playlistData, index){
+function addMusic(musicArea, musicData, index){
+	const playlistElement = document.createElement("div");
+	playlistElement.id = musicData["title"]["en"];
+	
+	const imagePane = document.createElement("div");
+	imagePane.className = "col-3 music-image-pane";
+	const musicImage = document.createElement("img");
+	musicImage.className = "music-image";
+	musicImage.src = musicData["image"];
+	const playButton = document.createElement("div");
+	playButton.className = "play-button";
+	playButton.setAttribute("onClick", "setPlayListAll('" + musicData["title"]["en"] + "')");
+	const buttonIcon = document.createElement("i");
+	buttonIcon.className = "fa-solid fa-eject";
+	playButton.appendChild(buttonIcon);
+	imagePane.appendChild(musicImage);
+	imagePane.appendChild(playButton);
+	if(NOW_PLAY_MUSIC_TITLE == musicData["title"]["en"]) {
+		playlistElement.className = "row music-element-playing";
+	} else {
+		playlistElement.className = "row music-element";
+	}
+	playlistElement.appendChild(imagePane);
+	
+	const titlePane = document.createElement("div");
+	titlePane.className = "col music-title-pane";
+	const title = document.createElement("div");
+	title.className = "row music-title lang";
+	title.innerHTML = musicData["title"][NOW_LANG];
+	title.setAttribute("onClick", "showDetails('" + musicData["title"]['en'] + "')");
+	
+	LANGUAGE_OBJECT["MUSIC_LANG"][musicData["title"]["en"]+"-title"] = musicData["title"];
+	title.setAttribute("data-lang-var", "MUSIC_LANG");
+	title.setAttribute("data-lang", musicData["title"]["en"]+"-title");
+	
+	
+	/* Add download button here
+		"created-at": "2024-04-17",
+		"created-with": "udio",
+		"instrumentation": "rock",
+		"key": "unknown",
+		"tempo": "unknown",
+		"meter": "unknown",
+		"duration": 196,
+		"mp3": "/resources/files/music/Forging more than just swords, but a legacy wide.mp3",
+	*/
+	
+	const tags = document.createElement("div");
+	tags.className = "row align-left";
+	for(index2 = 0; index2 < musicData["tag"].length; index2 ++) {
+		const tag = document.createElement("div");
+		tag.className = "tag";
+		tag.innerHTML = musicData["tag"][index2];
+		tag.setAttribute("onClick", "setSearchPlaylistTagValue('"+musicData["tag"][index2]+"')");
+		tags.appendChild(tag);
+	}
+	
+	titlePane.appendChild(title);
+	titlePane.appendChild(description);
+	titlePane.appendChild(tags);
+	
+	playlistElement.appendChild(titlePane);
+	
+	musicArea.appendChild(playlistElement);
 }
 
 function searchMusicEnter(){
@@ -242,7 +328,6 @@ function addPlaylist(musicArea, playlistData, index){
 	titlePane.appendChild(tags);
 	
 	playlistElement.appendChild(titlePane);
-	
 	
 	musicArea.appendChild(playlistElement);
 }

@@ -83,13 +83,6 @@ const MUSIC_LANG = {
 		"cn": "作文工具",
 		"ru": "Создано с"
 	},
-	"player-music-title": {
-		"en": "",
-		"kr": "",
-		"jp": "",
-		"cn": "",
-		"ru": ""
-	},
 	"NOW-PLAYING-MUSIC": {
 		"en": "",
 		"kr": "",
