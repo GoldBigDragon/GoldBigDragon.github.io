@@ -53,11 +53,11 @@ function runNextMusic(playlistTitle, musicTitle){
 				prevMusicPane.className = "row music-element";
 			}
 		}
-		const nowPlaylistPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX-1]['playlist-title-en']);
+		const nowPlaylistPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX]['playlist-title-en']);
 		if(nowPlaylistPane != null){
 			nowPlaylistPane.className = "row music-element-playing";
 		}
-		const nowMusicPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX-1]['title']['en']);
+		const nowMusicPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX]['title']['en']);
 		if(nowMusicPane != null){
 			nowMusicPane.className = "row music-element-playing";
 		}
