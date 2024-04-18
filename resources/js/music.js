@@ -5,6 +5,7 @@ function searchMusicEnter(){
 }
 
 function searchMusic(){
+	musicArea.innerHTML = "";
 	const category = document.getElementById("search-music-category").value;
 	const value = document.getElementById("search-music-input").value.toLowerCase();
 	const musicArea = document.getElementById("musicArea");
@@ -17,9 +18,12 @@ function searchPlaylistEnter(){
 }
 
 function searchPlaylist(){
+	musicArea.innerHTML = "";
 	const category = document.getElementById("search-playlist-category").value;
 	const value = document.getElementById("search-playlist-input").value.toLowerCase();
 	const musicArea = document.getElementById("musicArea");
+	
+	
 }
 
 function showPlaylist(){
@@ -32,7 +36,7 @@ function showPlaylist(){
 	const inactivePane = document.getElementById("music-pane");
 	inactivePane.setAttribute("hidden", "true");
 	const musicArea = document.getElementById("musicArea");
-	musicArea.innerHTML = "";
+	searchPlaylist();
 }
 
 function showMusic(){
@@ -45,5 +49,5 @@ function showMusic(){
 	const inactivePane = document.getElementById("playlist-pane");
 	inactivePane.setAttribute("hidden", "true");
 	const musicArea = document.getElementById("musicArea");
-	musicArea.innerHTML = "";
+	searchMusic();
 }
