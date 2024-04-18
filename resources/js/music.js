@@ -21,3 +21,17 @@ function searchPlaylist(){
 	const value = document.getElementById("search-playlist-input").value.toLowerCase();
 	const musicArea = document.getElementById("musicArea");
 }
+
+function showPlaylist(){
+	const activeTab = document.getElementById("playlist-tab");
+	activeTab.removeAttribute("hidden");
+	activeTab.className = "col tab-selected lang";
+	const inactiveTab = document.getElementById("music-tab");
+	inactiveTab.setAttribute("hidden", "true");
+	inactiveTab.className = "col tab lang";
+	const musicArea = document.getElementById("musicArea");
+	musicArea.innerHTML = "";
+}
+
+function showMusic(){
+}

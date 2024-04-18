@@ -1,4 +1,18 @@
 const MUSIC_LANG = {
+	"playlist": {
+		"en": "Playlist",
+		"kr": "플레이 리스트",
+		"jp": "プレイリスト",
+		"cn": "播放列表",
+		"ru": "Плейлист"
+	},
+	"music": {
+		"en": "Music",
+		"kr": "음악",
+		"jp": "音楽",
+		"cn": "音乐",
+		"ru": "Музыка"
+	},
 	"name": {
 		"en": "Name",
 		"kr": "곡명",
