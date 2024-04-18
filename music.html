@@ -73,26 +73,22 @@
 				<div col="row">
 
 					<div id="timeline" onClick="jumpTimeline(event)">
-						<div id="progress"></div>
+						<div id="progress" style="background-color: var(--bs-primary);"></div>
 					</div>
 					<div id="controls">
-						<div>
-							<div id="toggle-play play">
-							</div>
-						</div>
 						<div id="time" style="display: flex;align-items: center;justify-content: space-between;">
 							<div id="current-time">0:00</div>
 							<div id="duration">0:00</div>
 						</div>
 						<div id="name">Music Song</div>
-						<div id="volume-container">
-							<div id="mute-button" onClick="toggleMute()">
-								<i class="fa-solid fa-volume-high"></i>
+							<div id="volume-container" style="display: flex;align-items: center;">
+								<div id="mute-button" onclick="toggleMute()" style="margin-right: 1rem;">
+									<i class="fa-solid fa-volume-high"></i>
+								</div>
+								<div id="volume-slider" onclick="setVolume(event)" style="height: 5px;width: 100%;background-color: white;">
+									<div id="volume-percentage" style="height: 5px;background-color: var(--bs-primary);"></div>
+								</div>
 							</div>
-							<div id="volume-slider" onClick="setVolume(event)">
-								<div id="volume-percentage"></div>
-							</div>
-						</div>
 					</div>
 
 

@@ -2,8 +2,7 @@ const NOW_PLAY_LIST = [];
 let NOW_PLAY_PLAYLIST_TITLE = null;
 const NOW_PLAY_INDEX = -1;
 
-let audio = new Audio();
-audio.volume = 1;
+let audio = null;
 
 function runNextMusic(playlistTitle){
 	NOW_PLAY_INDEX = NOW_PLAY_INDEX + 1;
@@ -18,6 +17,7 @@ function runNextMusic(playlistTitle){
 		return;
 	} else {
 		audio = new Audio(NOW_PLAY_LIST[NOW_PLAY_INDEX]["mp3"]);
+		// audio.volume = 1;
 		audio.setAttribute("onLoadeddata", "setDuration()");
 		audio.setAttribute("onended", "runNextMusic('" + playlistTitle + "')");
 	}
