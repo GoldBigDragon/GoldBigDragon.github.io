@@ -6,7 +6,7 @@ function searchEnter(){
 
 function search(){
 	const category = document.getElementById("search-category").value;
-	const value = document.getElementById("search-input").value;
+	const value = document.getElementById("search-input").value.toLowerCase();
 	const programArea = document.getElementById("programArea");
 	programArea.innerHTML = null;
 	
@@ -19,7 +19,7 @@ function search(){
 		let index = 0;
 		if(category == "name") {
 			for(index = 0; index < PROGRAM_LIST.length; index ++) {
-				if(PROGRAM_LIST[index]["name"][NOW_LANG].includes(value)){
+				if(PROGRAM_LIST[index]["name"][NOW_LANG].toLowerCase().includes(value)){
 					addProgram(programArea, PROGRAM_LIST[index], index);
 				}
 			}

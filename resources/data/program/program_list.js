@@ -15,12 +15,12 @@ const PROGRAM_LIST = [
 			"ru":"RPG Плагин Minecraft"
 		},
 		"tag": [
-			"Minecraft",
-			"Plugin",
-			"RPG",
-			"Game",
-			"Java",
-			"Spigot",
+			"minecraft",
+			"plugin",
+			"rpg",
+			"game",
+			"java",
+			"spigot",
 			"1.12.2"
 		],
 		"language": "Java 8",
@@ -47,13 +47,13 @@ const PROGRAM_LIST = [
 			"ru":"Уменьшите емкость файлов изображений и файлов .json в пакетах ресурсов Minecraft."
 		},
 		"tag": [
-			"Minecraft",
-			"Resourcepack",
-			"Compress",
-			"Image",
-			"Json",
-			"Tool",
-			"Java"
+			"minecraft",
+			"resourcepack",
+			"compress",
+			"image",
+			"json",
+			"tool",
+			"java"
 		],
 		"language": "Java 8",
 		"download": "/resources/files/program/Minecraft Resourcepack Compactor/Minecraft Resourcepack Compactor.zip",
@@ -79,12 +79,12 @@ const PROGRAM_LIST = [
 			"ru":"Воспроизведение файла .ogg в пакете ресурсов Minecraft игроку."
 		},
 		"tag": [
-			"Minecraft",
-			"Plugin",
-			"Resourcepack",
-			"Tool",
-			"Java",
-			"Spigot"
+			"minecraft",
+			"plugin",
+			"resourcepack",
+			"tool",
+			"java",
+			"spigot"
 		],
 		"language": "Java 8",
 		"download": "/resources/files/program/Minecraft Resourcepack Sound Player/MinecraftResourcepackSoundPlayer.jar",
@@ -110,12 +110,12 @@ const PROGRAM_LIST = [
 			"ru":"Это веб-страница Crawler, созданная с целью сообщения об опасных сайтах."
 		},
 		"tag": [
-			"NuriCops",
-			"Crime prevention",
-			"Crawler",
-			"Tool",
-			"Java",
-			"Java FX"
+			"nuri_cops",
+			"crime_prevention",
+			"crawler",
+			"tool",
+			"java",
+			"java_fx"
 		],
 		"language": "Java 8",
 		"download": "/resources/files/program/NuriCHAIN/NuriCHAIN_2019_11_25_21_06.zip",
@@ -141,10 +141,10 @@ const PROGRAM_LIST = [
 			"ru":"При вводе преступных данных и весов, это программа, которая определяет области, озабоченные преступностью, путем создания статистики по входным значениям."
 		},
 		"tag": [
-			"Crime prevention",
-			"Tool",
-			"Java",
-			"Java FX"
+			"crime_prevention",
+			"tool",
+			"java",
+			"java_fx"
 		],
 		"language": "Java 8",
 		"download": "/resources/files/program/Science Convergence Police Training Program/Science Convergence Police Training Program.zip",
@@ -170,12 +170,12 @@ const PROGRAM_LIST = [
 			"ru":"Это комментарий к вопросу Digital Forensics Challenge 2020 года."
 		},
 		"tag": [
-			"Encryption",
-			"Decryption",
-			"ARIA",
-			"Ransomware",
-			"Tool",
-			"Java"
+			"encryption",
+			"decryption",
+			"aria",
+			"ransomware",
+			"tool",
+			"java"
 		],
 		"language": "Java 8",
 		"download": "/resources/files/program/ARIA Algorithm Ransomware/DFC2020_301_ARIA_RANSOMWARE.zip",
