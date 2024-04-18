@@ -50,3 +50,52 @@
 	width: 5rem;
 	height: 5rem;
 }
+
+.music-image-pane{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 5.5rem;
+}
+
+.play-button {
+	position: absolute;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	transition: 0.2s;
+    background-color: rgba(0, 0, 0, 0.000000001);
+	color: rbga(0, 0, 0, 0);
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.play-button:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+.music-title{
+	font-size: 1.3rem;
+}
+
+.music-description{
+    font-size: 0.9rem;
+    color: var(--bs-gray-500);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.tag{
+    border: 1px solid var(--bs-gray-900);
+	background-color: black;
+    border-radius: 0.5rem;
+	font-size: 0.95rem;
+	margin: 0.25rem;
+	transition: 0.2s;
+	cursor: pointer;
+	color: var(--bs-gray-500);
+}

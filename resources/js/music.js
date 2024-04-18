@@ -102,6 +102,7 @@ function addPlaylist(musicArea, playlistData, index){
 	musicImage.className = "music-image";
 	musicImage.src = playlistData["image"];
 	const playButton = document.createElement("div");
+	playButton.className = "play-button";
 	const buttonIcon = document.createElement("i");
 	playButton.appendChild(buttonIcon);
 	imagePane.appendChild(musicImage);
@@ -118,13 +119,13 @@ function addPlaylist(musicArea, playlistData, index){
 	const titlePane = document.createElement("div");
 	titlePane.className = "col music-title-pane";
 	const title = document.createElement("div");
-	title.className = "row";
+	title.className = "row music-title lang";
 	title.innerHTML = playlistData["title"][NOW_LANG];
 	LANGUAGE_OBJECT["MUSIC_LANG"][playlistData["title"]["en"]+"-title"] = playlistData["title"];
 	title.setAttribute("data-lang-var", "MUSIC_LANG");
 	title.setAttribute("data-lang", playlistData["title"]["en"]+"-title");
 	const description = document.createElement("div");
-	description.className = "row";
+	description.className = "row music-description lang";
 	description.innerHTML = playlistData["description"][NOW_LANG];
 	LANGUAGE_OBJECT["MUSIC_LANG"][playlistData["description"]["en"]+"-description"] = playlistData["description"];
 	description.setAttribute("data-lang-var", "MUSIC_LANG");
@@ -134,7 +135,7 @@ function addPlaylist(musicArea, playlistData, index){
 	tags.className = "row align-left";
 	for(index = 0; index < playlistData["tag"].length; index ++) {
 		const tag = document.createElement("div");
-		tag.className = "program-tag";
+		tag.className = "tag";
 		tag.innerHTML = playlistData["tag"][index];
 		tag.setAttribute("onClick", "setSearchPlaylistTagValue('"+playlistData["tag"][index]+"')");
 		tags.appendChild(tag);
@@ -223,3 +224,5 @@ for(index = 0; index < PLAY_LIST.length; index ++) {
 		MUSIC_LIST.push(targetMusic);
 	}
 }
+
+showPlaylist();
