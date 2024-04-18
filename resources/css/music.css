@@ -141,18 +141,32 @@
 }
 
 #time{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	font-size: 0.85rem;
+    display: flex;
+    font-size: 0.9rem;
+    position: absolute;
+    align-items: center;
+    width: 255px;
+}
+
+#current-time {
+	position: absolute;
+    left: 5px;
+}
+
+#duration {
+	position: absolute;
+    right: 0;
 }
 
 #timeline{
 	background-color: var(--bs-gray-900);
     width: 100%;
     cursor: pointer;
+	display: flex;
+    align-items: center;
 }
 #progress{
+	height: 0.85rem;
 	background-color: var(--bs-primary);
 }
 
