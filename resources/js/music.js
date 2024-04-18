@@ -159,7 +159,6 @@ function addMusic(musicArea, musicData, index){
 	}
 	
 	titlePane.appendChild(title);
-	titlePane.appendChild(description);
 	titlePane.appendChild(tags);
 	
 	playlistElement.appendChild(titlePane);
@@ -472,4 +471,13 @@ function getTimeCodeFromNum(num) {
   return `${String(hours).padStart(2, 0)}:${minutes}:${String(
     seconds % 60
   ).padStart(2, 0)}`;
+}
+
+function showThisMusicDetails(){
+	if(NOW_PLAY_LIST.length > 0 && NOW_PLAY_INDEX >= 0) {
+		showDetails(NOW_PLAY_LIST[NOW_PLAY_INDEX]["title"]["en"]);
+	}
+}
+
+function showDetails(musicName){
 }
