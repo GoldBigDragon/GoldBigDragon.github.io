@@ -33,9 +33,7 @@ function runNextMusic(playlistTitle){
 		NOW_PLAY_INDEX = -1;
 		const targetPane = document.getElementById(playlistTitle);
 		if(targetPane != null){
-			const buttonIcon = targetPane.getElementsByClassName("play-button")[0];
 			targetPane.className = "row music-element";
-			buttonIcon.innerHTML = "<i class='fa-solid fa-play'></i>";
 		}
 		return;
 	} else {
