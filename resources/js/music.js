@@ -1,13 +1,26 @@
 const NOW_PLAY_LIST = [];
+let NOW_PLAY_PLAYLIST_TITLE = null;
 const NOW_PLAY_INDEX = -1;
 
 let audio = new Audio();
 audio.volume = 1;
 
-function runNextMusic(){
+function runNextMusic(playlistTitle){
 	NOW_PLAY_INDEX = NOW_PLAY_INDEX + 1;
-	audio = new Audio(NOW_PLAY_LIST[NOW_PLAY_INDEX]["mp3"]);
-	audio.setAttribute("onLoadeddata", "setDuration()");
+	if(NOW_PLAY_LIST.length <= NOW_PLAY_INDEX) {
+		NOW_PLAY_INDEX = -1;
+		const targetPane = document.getElementById(playlistTitle);
+		if(targetPane != null){
+			const buttonIcon = targetPane.getElementsByClassName("fa-play-button")[0];
+			targetPane.className = "row music-element";
+			buttonIcon.className = "fa-solid fa-play";
+		}
+		return;
+	} else {
+		audio = new Audio(NOW_PLAY_LIST[NOW_PLAY_INDEX]["mp3"]);
+		audio.setAttribute("onLoadeddata", "setDuration()");
+		audio.setAttribute("onended", "runNextMusic('" + playlistTitle + "')");
+	}
 }
 
 function setDuration(){
@@ -16,13 +29,20 @@ function setDuration(){
 }
 
 function setPlayListAll(playlistTitle){
+	NOW_PLAY_PLAYLIST_TITLE = playlistTitle;
 	NOW_PLAY_LIST.clear();
 	for(index = 0; index < MUSIC_LIST.length; index ++) {
 		if(MUSIC_LIST[index]["playlist-title-en"] == playlistTitle){
 			NOW_PLAY_LIST.push(MUSIC_LIST[index]);
 		}
 	}
-	runNextMusic();
+	const targetPane = document.getElementById(playlistTitle);
+	if(targetPane != null){
+		const buttonIcon = targetPane.getElementsByClassName("fa-play-button")[0];
+		targetPane.className = "row music-element-playing";
+		buttonIcon.className = "fa-solid fa-pause";
+	}
+	runNextMusic(playlistTitle);
 }
 
 
@@ -126,6 +146,7 @@ function setSearchPlaylistTagValue(tag){
 
 function addPlaylist(musicArea, playlistData, index){
 	const playlistElement = document.createElement("div");
+	playlistElement.id = playlistData["title"]["en"];
 	
 	const imagePane = document.createElement("div");
 	imagePane.className = "col-3 music-image-pane";
@@ -141,10 +162,10 @@ function addPlaylist(musicArea, playlistData, index){
 	imagePane.appendChild(playButton);
 	if(NOW_PLAY_PLAYLIST_TITLE == playlistData["title"]["en"]) {
 		playlistElement.className = "row music-element-playing";
-		buttonIcon.className = "fa-solid fa-pause";
+		buttonIcon.className = "fa-solid fa-pause fa-play-button";
 	} else {
 		playlistElement.className = "row music-element";
-		buttonIcon.className = "fa-solid fa-play";
+		buttonIcon.className = "fa-solid fa-play fa-play-button";
 	}
 	playlistElement.appendChild(imagePane);
 	
