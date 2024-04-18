@@ -29,7 +29,7 @@
 						Music
 					</div>
 				</div>
-				<div class="row" style="display: flex;align-items: center;justify-content: flex-start;margin: 0rem 1rem;" id="playlist-pane">
+				<div class="row" style="display: flex;align-items: center;justify-content: flex-start;" id="playlist-pane">
 					<div style="display: flex;align-items: center;justify-content: center;">
 						<select id="search-playlist-category" style="max-width: 10rem;">
 							<option class="lang" value="title" data-lang-var="MUSIC_LANG" data-lang="title">Title</option>
@@ -39,7 +39,7 @@
 						<button class="btn btn-secondary" onclick="searchPlaylist()"><i class="fa-solid fa-binoculars"></i></button>
 					</div>
 				</div>
-				<div class="row" style="display: flex;align-items: center;justify-content: flex-start;margin: 0rem 1rem;" id="music-pane" hidden>
+				<div class="row" style="display: flex;align-items: center;justify-content: flex-start;" id="music-pane" hidden>
 					<div style="display: flex;align-items: center;justify-content: center;">
 						<select id="search-music-category" style="max-width: 10rem;">
 							<option class="lang" value="title" data-lang-var="MUSIC_LANG" data-lang="title">Title</option>
@@ -62,14 +62,43 @@
 			<div class="col-1"></div>
 		</div>
 		<div id="player">
-			<div class="col-1">
-				<img id="player-music-image" src="">
-				<div id="player-music-play-button" onClick="togglePlayButton()">
+			<div class="col-1" style="display: flex;align-items: center;justify-content: center;max-width: 3.5rem;">
+				<img id="player-music-image" src="" style="width: 3rem;height: 3rem;">
+				<div id="player-music-play-button" onClick="togglePlayButton()" style="display: flex;height: 3rem;width: 3rem;position: absolute;align-items: center;justify-content: center;font-size:1.5rem;">
 					<i class="fa-solid fa-play"></i>
 				</div>
 			</div>
-			<div class="col">
-				<div id="player-music-title" data-lang-var="MUSIC_LANG" data-lang="player-music-title"></div>
+			<div class="col" style="padding-left: 1.5rem;">
+				<div col="row lang" id="player-music-title" data-lang-var="MUSIC_LANG" data-lang="player-music-title"></div>
+				<div col="row">
+
+					<div id="timeline" onClick="jumpTimeline(event)">
+						<div id="progress"></div>
+					</div>
+					<div id="controls">
+						<div>
+							<div id="toggle-play play">
+							</div>
+						</div>
+						<div id="time">
+							<div id="current-time">0:00</div>
+							<div>/</div>
+							<div id="duration"></div>
+						</div>
+						<div id="name">Music Song</div>
+						<div id="volume-container">
+							<div id="mute-button" onClick="toggleMute()">
+								<i class="fa-solid fa-volume-high"></i>
+							</div>
+							<div id="volume-slider" onClick="setVolume(event)">
+								<div id="volume-percentage"></div>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
 			</div>
 		</div>
 		<div class="row" id="footer"></div>

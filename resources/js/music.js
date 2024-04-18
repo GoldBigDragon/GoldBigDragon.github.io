@@ -1,6 +1,30 @@
 const NOW_PLAY_LIST = [];
-const NOW_PLAY_PLAYLIST_TITLE = null;
-const NOW_PLAY_MUSIC_TITLE = null;
+const NOW_PLAY_INDEX = -1;
+
+let audio = new Audio();
+audio.volume = 1;
+
+function runNextMusic(){
+	NOW_PLAY_INDEX = NOW_PLAY_INDEX + 1;
+	audio = new Audio(NOW_PLAY_LIST[NOW_PLAY_INDEX]["mp3"]);
+	audio.setAttribute("onLoadeddata", "setDuration()");
+}
+
+function setDuration(){
+	const duration = document.getElementById("duration");
+	duration.innerText = getTimeCodeFromNum(audio.duration);
+}
+
+function setPlayListAll(playlistTitle){
+	NOW_PLAY_LIST.clear();
+	for(index = 0; index < MUSIC_LIST.length; index ++) {
+		if(MUSIC_LIST[index]["playlist-title-en"] == playlistTitle){
+			NOW_PLAY_LIST.push(MUSIC_LIST[index]);
+		}
+	}
+	runNextMusic();
+}
+
 
 function addMusic(musicArea, playlistData, index){
 }
@@ -110,6 +134,7 @@ function addPlaylist(musicArea, playlistData, index){
 	musicImage.src = playlistData["image"];
 	const playButton = document.createElement("div");
 	playButton.className = "play-button";
+	playButton.setAttribute("onClick", "setPlayListAll(" + playlistData["title"]["en"] + ")");
 	const buttonIcon = document.createElement("i");
 	playButton.appendChild(buttonIcon);
 	imagePane.appendChild(musicImage);
@@ -235,3 +260,69 @@ for(index = 0; index < PLAY_LIST.length; index ++) {
 }
 
 showPlaylist();
+
+function jumpTimeline(event){
+	const timeline = document.getElementById("timeline");
+	const timelineWidth = window.getComputedStyle(timeline).width;
+	if(audio != null){
+		const timeToSeek = event.offsetX / parseInt(timelineWidth) * audio.duration;
+		audio.currentTime = timeToSeek;
+	}
+}
+
+function setVolume(event){
+	const volumeSlider = document.getElementById("volume-slider");
+	const volumePercentage = document.getElementById("volume-percentage");
+	const sliderWidth = window.getComputedStyle(volumeSlider).width;
+	const newVolume = event.offsetX / parseInt(sliderWidth);
+	if(audio != null){
+		audio.volume = newVolume;
+	}
+	volumePercentage.style.width = newVolume * 100 + '%';
+}
+
+setInterval(() => {
+	if(audio != null){
+		const progressBar = document.getElementById("progress");
+		progressBar.style.width = audio.currentTime / audio.duration * 100 + "%";
+		const currentTime = document.getElementById("current-time");
+		currentTime.innerText = getTimeCodeFromNum(audio.currentTime);
+	}
+}, 500);
+
+function togglePlayButton(){
+	if(audio != null){
+		const playButton = document.getElementById("player-music-play-button");
+		if (audio.paused) {
+			playButton.innerHTML = "<i class='fa-solid fa-pause'></i>";
+			audio.play();
+		} else {
+			playButton.innerHTML = "<i class='fa-solid fa-play'></i>";
+			audio.pause();
+		}
+	}
+}
+
+function toggleMute(){
+	if(audio != null){
+		const muteButton = document.getElementById("mute-button");
+		audio.muted = !audio.muted;
+		if (audio.muted) {
+			muteButton.innerHTML = "<i class='fa-solid fa-volume-xmark'></i>";
+		} else {
+			muteButton.innerHTML = "<i class='fa-solid fa-volume-high'></i>";
+		}
+	}
+}
+
+function getTimeCodeFromNum(num) {
+  let seconds = parseInt(num);
+  let minutes = parseInt(seconds / 60);
+  seconds -= minutes * 60;
+  const hours = parseInt(minutes / 60);
+  minutes -= hours * 60;
+  if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
+  return `${String(hours).padStart(2, 0)}:${minutes}:${String(
+    seconds % 60
+  ).padStart(2, 0)}`;
+}

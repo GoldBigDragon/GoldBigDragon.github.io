@@ -111,19 +111,31 @@
 }
 
 #player {
-	position: fixed;
-	bottom: 0rem;
-	margin: 1rem;
-	background-color: black;
-	padding: 1rem;
-	width: calc(100% - 3rem);
-	border-radius: 2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	opacity: 0.5;
+    position: fixed;
+    bottom: 0rem;
+    left: calc(50% - 175px);
+    margin: 1rem;
+    background-color: black;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    width: 350px;
+    border-radius: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
 }
 
 #player:hover {
 	opacity: 1;
+}
+
+#player-music-play-button{
+	color: rgba(0, 0, 0, 0.000001);
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+#player-music-play-button:hover{
+	color: white;
 }
