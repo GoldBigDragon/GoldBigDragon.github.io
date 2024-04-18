@@ -10,7 +10,7 @@ function runNextMusic(playlistTitle){
 		NOW_PLAY_INDEX = -1;
 		const targetPane = document.getElementById(playlistTitle);
 		if(targetPane != null){
-			const buttonIcon = targetPane.getElementsByClassName("fa-play-button")[0];
+			const buttonIcon = targetPane.getElementsByClassName("play-button")[0];
 			targetPane.className = "row music-element";
 			buttonIcon.innerHTML = "<i class='fa-solid fa-play'></i>";
 		}
@@ -22,6 +22,16 @@ function runNextMusic(playlistTitle){
 		audio.setAttribute("onended", "runNextMusic('" + playlistTitle + "')");
 		const playerImage = document.getElementById("player-music-image");
 		playerImage.src = NOW_PLAY_LIST[NOW_PLAY_INDEX]["image"];
+		const playButton = document.getElementById("player-music-play-button");
+		if (audio.paused) {
+			playButton.innerHTML = "<i class='fa-solid fa-pause'></i>";
+			audio.play();
+		} else {
+			playButton.innerHTML = "<i class='fa-solid fa-play'></i>";
+		}
+		const musicTitle = document.getElementById("player-music-title");
+		musicTitle.innerHTML = NOW_PLAY_LIST[NOW_PLAY_INDEX]["title"][NOW_LANG];
+		LANGUAGE_OBJECT["MUSIC_LANG"]["NOW-PLAYING-MUSIC"] = NOW_PLAY_LIST[NOW_PLAY_INDEX]["title"];
 	}
 }
 

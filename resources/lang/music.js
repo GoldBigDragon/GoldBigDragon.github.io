@@ -89,6 +89,13 @@ const MUSIC_LANG = {
 		"jp": "",
 		"cn": "",
 		"ru": ""
+	},
+	"NOW-PLAYING-MUSIC": {
+		"en": "",
+		"kr": "",
+		"jp": "",
+		"cn": "",
+		"ru": ""
 	}
 }
 LANGUAGE_OBJECT["MUSIC_LANG"] = MUSIC_LANG;
