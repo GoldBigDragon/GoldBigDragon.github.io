@@ -86,6 +86,13 @@ function searchMusic(){
 	}
 }
 
+function setSearchMusicPlaylistValue(title){
+	const category = document.getElementById("search-playlist-category");
+	category.children[1].selected = true;
+	document.getElementById("search-playlist-input").value = tag;
+	searchPlaylist();
+}
+
 function setSearchPlaylistTagValue(tag){
 	const category = document.getElementById("search-playlist-category");
 	category.children[1].selected = true;
@@ -121,6 +128,8 @@ function addPlaylist(musicArea, playlistData, index){
 	const title = document.createElement("div");
 	title.className = "row music-title lang";
 	title.innerHTML = playlistData["title"][NOW_LANG];
+	title.setAttribute("onClick", "setSearchMusicPlaylistValue('" + playlistData["title"][NOW_LANG] + "')");
+	
 	LANGUAGE_OBJECT["MUSIC_LANG"][playlistData["title"]["en"]+"-title"] = playlistData["title"];
 	title.setAttribute("data-lang-var", "MUSIC_LANG");
 	title.setAttribute("data-lang", playlistData["title"]["en"]+"-title");
@@ -133,11 +142,11 @@ function addPlaylist(musicArea, playlistData, index){
 	
 	const tags = document.createElement("div");
 	tags.className = "row align-left";
-	for(index = 0; index < playlistData["tag"].length; index ++) {
+	for(index2 = 0; index2 < playlistData["tag"].length; index2 ++) {
 		const tag = document.createElement("div");
 		tag.className = "tag";
-		tag.innerHTML = playlistData["tag"][index];
-		tag.setAttribute("onClick", "setSearchPlaylistTagValue('"+playlistData["tag"][index]+"')");
+		tag.innerHTML = playlistData["tag"][index2];
+		tag.setAttribute("onClick", "setSearchPlaylistTagValue('"+playlistData["tag"][index2]+"')");
 		tags.appendChild(tag);
 	}
 	

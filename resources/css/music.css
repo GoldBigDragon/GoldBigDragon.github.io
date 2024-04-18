@@ -67,7 +67,7 @@
     align-items: center;
 	transition: 0.2s;
     background-color: rgba(0, 0, 0, 0.000000001);
-	color: rbga(0, 0, 0, 0);
+	color: rgba(0, 0, 0, 0);
 	font-size: 2rem;
 	cursor: pointer;
 }
@@ -79,6 +79,12 @@
 
 .music-title{
 	font-size: 1.3rem;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.music-title:hover{
+	color: var(--bs-primary);
 }
 
 .music-description{
@@ -98,4 +104,26 @@
 	transition: 0.2s;
 	cursor: pointer;
 	color: var(--bs-gray-500);
+}
+
+.music-title-pane{
+	margin-left: 2rem;
+}
+
+#player {
+	position: fixed;
+	bottom: 0rem;
+	margin: 1rem;
+	background-color: black;
+	padding: 1rem;
+	width: calc(100% - 3rem);
+	border-radius: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.5;
+}
+
+#player:hover {
+	opacity: 1;
 }

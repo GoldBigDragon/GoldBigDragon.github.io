@@ -82,6 +82,13 @@ const MUSIC_LANG = {
 		"jp": "作曲道具",
 		"cn": "作文工具",
 		"ru": "Создано с"
+	},
+	"player-music-title": {
+		"en": "",
+		"kr": "",
+		"jp": "",
+		"cn": "",
+		"ru": ""
 	}
 }
 LANGUAGE_OBJECT["MUSIC_LANG"] = MUSIC_LANG;
