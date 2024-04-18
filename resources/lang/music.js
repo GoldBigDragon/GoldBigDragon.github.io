@@ -20,6 +20,13 @@ const MUSIC_LANG = {
 		"cn": "曲名",
 		"ru": "Имя песни"
 	},
+	"title": {
+		"en": "Title",
+		"kr": "제목",
+		"jp": "タイトル",
+		"cn": "标题",
+		"ru": "Заголовок"
+	},
 	"tag": {
 		"en": "Tag",
 		"kr": "태그",
@@ -68,6 +75,13 @@ const MUSIC_LANG = {
 		"jp": "曲の長さ",
 		"cn": "歌曲长度",
 		"ru": "Продолжительность"
+	},
+	"created-with": {
+		"en": "Created with",
+		"kr": "작곡 도구",
+		"jp": "作曲道具",
+		"cn": "作文工具",
+		"ru": "Создано с"
 	}
 }
 LANGUAGE_OBJECT["MUSIC_LANG"] = MUSIC_LANG;

@@ -23,7 +23,7 @@ const PROGRAM_LIST = [
 			"spigot",
 			"1.12.2"
 		],
-		"language": "Java 8",
+		"language": "java 8",
 		"download": "/resources/files/program/GoldBigDragon RPG/Advanced/GoldBigDragonRPG_Advanced_2020_10_24_01_30.zip",
 		"github": "https://github.com/GoldBigDragon/GoldBigDragonRPG",
 		"youtube": "https://youtu.be/slzghzo4My4",
@@ -55,7 +55,7 @@ const PROGRAM_LIST = [
 			"tool",
 			"java"
 		],
-		"language": "Java 8",
+		"language": "java 8",
 		"download": "/resources/files/program/Minecraft Resourcepack Compactor/Minecraft Resourcepack Compactor.zip",
 		"github": "https://github.com/GoldBigDragon/MinecraftResourcepackCompactor",
 		"youtube": "https://youtu.be/62uqfHo_SQE",
@@ -86,7 +86,7 @@ const PROGRAM_LIST = [
 			"java",
 			"spigot"
 		],
-		"language": "Java 8",
+		"language": "java 8",
 		"download": "/resources/files/program/Minecraft Resourcepack Sound Player/MinecraftResourcepackSoundPlayer.jar",
 		"github": "https://github.com/GoldBigDragon/Minecraft-Resourcepack-Sound-Player",
 		"video": "https://github.com/GoldBigDragon/Minecraft-Resourcepack-Sound-Player/raw/main/GLOBAL_README/06%20plugin%20test.mp4",
@@ -117,7 +117,7 @@ const PROGRAM_LIST = [
 			"java",
 			"java_fx"
 		],
-		"language": "Java 8",
+		"language": "java 8",
 		"download": "/resources/files/program/NuriCHAIN/NuriCHAIN_2019_11_25_21_06.zip",
 		"document": "/resources/files/program/NuriCHAIN/NuriCHAIN_Report.pdf",
 		"youtube": "https://youtu.be/BkHq69RD9l4",
@@ -146,7 +146,7 @@ const PROGRAM_LIST = [
 			"java",
 			"java_fx"
 		],
-		"language": "Java 8",
+		"language": "java 8",
 		"download": "/resources/files/program/Science Convergence Police Training Program/Science Convergence Police Training Program.zip",
 		"document": "/resources/files/program/Science Convergence Police Training Program/Science Convergence Police Training Program Development Report.pdf",
 		"youtube": "https://youtu.be/4Dzo4vluiL4",
@@ -177,7 +177,7 @@ const PROGRAM_LIST = [
 			"tool",
 			"java"
 		],
-		"language": "Java 8",
+		"language": "java 8",
 		"download": "/resources/files/program/ARIA Algorithm Ransomware/DFC2020_301_ARIA_RANSOMWARE.zip",
 		"github": "https://github.com/GoldBigDragon/DFC2020_301_ARIA_RANSOMWARE",
 		"icon": "/resources/img/program/ARIA Algorithm Ransomware/icon.png",

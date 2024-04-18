@@ -32,9 +32,8 @@
 				<div class="row" style="display: flex;align-items: center;justify-content: center;" id="playlist-pane">
 					<div style="display: flex;align-items: center;justify-content: center;">
 						<select id="search-playlist-category" style="max-width: 10rem;">
-							<option class="lang" value="name" data-lang-var="MUSIC_LANG" data-lang="name">Name</option>
+							<option class="lang" value="title" data-lang-var="MUSIC_LANG" data-lang="title">Title</option>
 							<option class="lang" value="tag" data-lang-var="MUSIC_LANG" data-lang="tag">Tag</option>
-							<option class="lang" value="mood" data-lang-var="MUSIC_LANG" data-lang="mood">Mood</option>
 						</select>
 						<input id="search-playlist-input" type="text" style="text-align: left;max-width: 10rem;margin: 0rem 1rem;" onkeyup="searchPlaylistEnter()">
 						<button class="btn btn-secondary" onclick="searchPlaylist()"><i class="fa-solid fa-binoculars"></i></button>
@@ -43,14 +42,15 @@
 				<div class="row" style="display: flex;align-items: center;justify-content: center;" id="music-pane" hidden>
 					<div style="display: flex;align-items: center;justify-content: center;">
 						<select id="search-music-category" style="max-width: 10rem;">
-							<option class="lang" value="name" data-lang-var="MUSIC_LANG" data-lang="name">Name</option>
+							<option class="lang" value="title" data-lang-var="MUSIC_LANG" data-lang="title">Title</option>
 							<option class="lang" value="tag" data-lang-var="MUSIC_LANG" data-lang="tag">Tag</option>
-							<option class="lang" value="mood" data-lang-var="MUSIC_LANG" data-lang="mood">Mood</option>
+							<option class="lang" value="playlist" data-lang-var="MUSIC_LANG" data-lang="playlist">Playlist</option>
 							<option class="lang" value="instrumentation" data-lang-var="MUSIC_LANG" data-lang="instrumentation">Instrumentation</option>
 							<option class="lang" value="key" data-lang-var="MUSIC_LANG" data-lang="key">Key</option>
 							<option class="lang" value="tempo" data-lang-var="MUSIC_LANG" data-lang="tempo">Tempo</option>
 							<option class="lang" value="meter" data-lang-var="MUSIC_LANG" data-lang="meter">Meter</option>
 							<option class="lang" value="duration" data-lang-var="MUSIC_LANG" data-lang="duration">Duration</option>
+							<option class="lang" value="created-with" data-lang-var="MUSIC_LANG" data-lang="created-with">Created with</option>
 						</select>
 						<input id="search-music-input" type="text" style="text-align: left;max-width: 10rem;margin: 0rem 1rem;" onkeyup="searchMusicEnter()">
 						<button class="btn btn-secondary" onclick="searchMusic()"><i class="fa-solid fa-binoculars"></i></button>

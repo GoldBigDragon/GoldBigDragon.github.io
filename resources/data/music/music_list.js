@@ -14,6 +14,7 @@ const PLAY_LIST = [
 			"cn": "尚未分类的音乐合集。",
 			"ru": "Коллекция музыки, которая еще не классифицирована."
 		},
+		"tag": ["noname"],
 		"image": "/resources/img/music/playlist/Noname/banner.jpg",
 		"music": [
 			{
@@ -33,6 +34,11 @@ const PLAY_LIST = [
 				},
 				"created-at": "2024-04-17",
 				"created-with": "udio",
+				"instrumentation": "rock",
+				"key": "unknown",
+				"tempo": "unknown",
+				"meter": "unknown",
+				"duration": 196,
 				"mp3": "/resources/files/music/Forging more than just swords, but a legacy wide.mp3",
 				"tag": ["blacksmith", "voice", "rock", "pop rock", "symphonic rock", "pop", "progressive", "uplifting", "progressive pop", "optimistic", "epic", "lush", "fantasy", "rpg", "npc", "dwarf"],
 				"image": "/resources/img/music/playlist/Noname/Forging more than just swords, but a legacy wide.avif"
