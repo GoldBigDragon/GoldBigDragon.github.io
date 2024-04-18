@@ -43,13 +43,15 @@ function runNextMusic(playlistTitle, musicTitle){
 		}
 		return;
 	} else {
-		const prevPlaylistPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX-1]['playlist-title-en']);
-		if(prevPlaylistPane != null){
-			prevPlaylistPane.className = "row music-element";
-		}
-		const prevMusicPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX-1]['title']['en']);
-		if(prevMusicPane != null){
-			prevMusicPane.className = "row music-element";
+		if(NOW_PLAY_INDEX > 0){
+			const prevPlaylistPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX-1]['playlist-title-en']);
+			if(prevPlaylistPane != null){
+				prevPlaylistPane.className = "row music-element";
+			}
+			const prevMusicPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX-1]['title']['en']);
+			if(prevMusicPane != null){
+				prevMusicPane.className = "row music-element";
+			}
 		}
 		const nowPlaylistPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX-1]['playlist-title-en']);
 		if(nowPlaylistPane != null){
@@ -285,7 +287,7 @@ function setSearchMusicPlaylistValue(playlistName){
 	searchMusic();
 	
 	const category = document.getElementById("search-music-category");
-	category.children[1].selected = true;
+	category.children[2].selected = true;
 	document.getElementById("search-music-input").value = playlistName;
 	searchMusic();
 }
