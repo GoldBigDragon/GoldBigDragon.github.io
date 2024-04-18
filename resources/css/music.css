@@ -8,6 +8,7 @@
 	transition: 0.2s;
 	border-bottom: 2px solid var(--bs-gray-800);
 	cursor: pointer;
+	margin-bottom: 2rem;
 }
 .tab:hover{
 	border-bottom: 2px solid var(--bs-primary);

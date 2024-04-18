@@ -22,14 +22,14 @@
 			<div class="col-1"></div>
 			<div class="col contents">
 				<div class="row">
-					<div class="col tab-selected lang" data-lang-var="MUSIC_LANG" data-lang="playlist" onClick="showPlaylist()">
+					<div class="col tab-selected lang" data-lang-var="MUSIC_LANG" data-lang="playlist" onClick="showPlaylist()" id="playlist-tab">
 						Playlist
 					</div>
-					<div class="col tab lang" data-lang-var="MUSIC_LANG" data-lang="music" onClick="showMusic()">
+					<div class="col tab lang" data-lang-var="MUSIC_LANG" data-lang="music" onClick="showMusic()" id="music-tab">
 						Music
 					</div>
 				</div>
-				<div class="row" style="display: flex;align-items: center;justify-content: center;" id="playlist-tab">
+				<div class="row" style="display: flex;align-items: center;justify-content: center;" id="playlist-pane">
 					<div style="display: flex;align-items: center;justify-content: center;">
 						<select id="search-playlist-category" style="max-width: 10rem;">
 							<option class="lang" value="name" data-lang-var="MUSIC_LANG" data-lang="name">Name</option>
@@ -40,7 +40,7 @@
 						<button class="btn btn-secondary" onclick="searchPlaylist()"><i class="fa-solid fa-binoculars"></i></button>
 					</div>
 				</div>
-				<div class="row" style="display: flex;align-items: center;justify-content: center;" id="music-tab" hidden>
+				<div class="row" style="display: flex;align-items: center;justify-content: center;" id="music-pane" hidden>
 					<div style="display: flex;align-items: center;justify-content: center;">
 						<select id="search-music-category" style="max-width: 10rem;">
 							<option class="lang" value="name" data-lang-var="MUSIC_LANG" data-lang="name">Name</option>

@@ -24,14 +24,26 @@ function searchPlaylist(){
 
 function showPlaylist(){
 	const activeTab = document.getElementById("playlist-tab");
-	activeTab.removeAttribute("hidden");
 	activeTab.className = "col tab-selected lang";
 	const inactiveTab = document.getElementById("music-tab");
-	inactiveTab.setAttribute("hidden", "true");
 	inactiveTab.className = "col tab lang";
+	const activePane = document.getElementById("playlist-pane");
+	activePane.removeAttribute("hidden");
+	const inactivePane = document.getElementById("music-pane");
+	inactivePane.setAttribute("hidden", "true");
 	const musicArea = document.getElementById("musicArea");
 	musicArea.innerHTML = "";
 }
 
 function showMusic(){
+	const activeTab = document.getElementById("music-tab");
+	activeTab.className = "col tab-selected lang";
+	const inactiveTab = document.getElementById("playlist-tab");
+	inactiveTab.className = "col tab lang";
+	const activePane = document.getElementById("music-pane");
+	activePane.removeAttribute("hidden");
+	const inactivePane = document.getElementById("playlist-pane");
+	inactivePane.setAttribute("hidden", "true");
+	const musicArea = document.getElementById("musicArea");
+	musicArea.innerHTML = "";
 }
