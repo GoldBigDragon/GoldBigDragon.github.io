@@ -155,7 +155,7 @@ function addPlaylist(musicArea, playlistData, index){
 	musicImage.src = playlistData["image"];
 	const playButton = document.createElement("div");
 	playButton.className = "play-button";
-	playButton.setAttribute("onClick", "setPlayListAll(" + playlistData["title"]["en"] + ")");
+	playButton.setAttribute("onClick", "setPlayListAll('" + playlistData["title"]["en"] + "')");
 	const buttonIcon = document.createElement("i");
 	playButton.appendChild(buttonIcon);
 	imagePane.appendChild(musicImage);
