@@ -1,6 +1,6 @@
 const NOW_PLAY_LIST = [];
 let NOW_PLAY_PLAYLIST_TITLE = null;
-const NOW_PLAY_INDEX = -1;
+let NOW_PLAY_INDEX = -1;
 
 let audio = null;
 
