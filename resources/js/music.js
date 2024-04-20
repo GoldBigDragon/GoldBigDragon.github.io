@@ -2,6 +2,7 @@ let NOW_PLAY_LIST_SIZE = 0;
 let NOW_PLAY_PLAYLIST_TITLE = null;
 let NOW_PLAY_MUSIC_TITLE = null;
 let NOW_PLAY_INDEX = -1;
+let MUSIC_SEARCH_RESULT = [];
 
 let audio = null;
 
@@ -67,7 +68,16 @@ function playMusic(){
 				}
 			}
 		} else {
-			musicIndex = NOW_PLAY_INDEX;
+			if(MUSIC_SEARCH_RESULT.length > 0) {
+				if(MUSIC_SEARCH_RESULT.length <= NOW_PLAY_INDEX) {
+					initPlaylist();
+					return;
+				} else {
+					musicIndex = MUSIC_SEARCH_RESULT[NOW_PLAY_INDEX];
+				}
+			} else {
+				musicIndex = NOW_PLAY_INDEX;
+			}
 		}
 		audio = new Audio(MUSIC_LIST[musicIndex]["mp3"]);
 		// audio.volume = 1;
@@ -136,16 +146,19 @@ function setPlayListAll(playlistTitle){
 function setPlayList(musicTitle){
 	initPlaylist();
 	NOW_PLAY_PLAYLIST_TITLE = null;
-	let searchIndex = 0;
-	for(musicIndex = 0; musicIndex < MUSIC_LIST.length; musicIndex ++) {
-		if(MUSIC_LIST[musicIndex]["title"]["en"] == musicTitle){
-			NOW_PLAY_INDEX = musicIndex;
-			break;
-		}
-	}
 	NOW_PLAY_MUSIC_TITLE = musicTitle;
-	NOW_PLAY_LIST_SIZE = 1;
-	
+	if(MUSIC_SEARCH_RESULT.length > 0) {
+		NOW_PLAY_LIST_SIZE = MUSIC_SEARCH_RESULT.length;
+		NOW_PLAY_INDEX = 0;
+	} else{
+		for(musicIndex = 0; musicIndex < MUSIC_LIST.length; musicIndex ++) {
+			if(MUSIC_LIST[musicIndex]["title"]["en"] == musicTitle){
+				NOW_PLAY_INDEX = musicIndex;
+				break;
+			}
+		}
+		NOW_PLAY_LIST_SIZE = MUSIC_LIST.length;
+	}
 	playMusic();
 }
 
@@ -228,6 +241,7 @@ function searchMusicEnter(){
 }
 
 function searchMusic(){
+	MUSIC_SEARCH_RESULT.length = 0;
 	const category = document.getElementById("search-music-category").value;
 	const value = document.getElementById("search-music-input").value.toLowerCase();
 	const musicArea = document.getElementById("musicArea");
@@ -244,12 +258,14 @@ function searchMusic(){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
 				if(MUSIC_LIST[index]["title"][NOW_LANG].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
+					MUSIC_SEARCH_RESULT.push(index);
 				}
 			}
 		} else if(category == "tag"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
 				if(MUSIC_LIST[index]["tag"].includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
+					MUSIC_SEARCH_RESULT.push(index);
 				}
 			}
 		} else if(category == "playlist"){
@@ -260,42 +276,49 @@ function searchMusic(){
 				MUSIC_LIST[index]["playlist-title-cn"].toLowerCase().includes(value) ||
 				MUSIC_LIST[index]["playlist-title-ru"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
+					MUSIC_SEARCH_RESULT.push(index);
 				}
 			}
 		} else if(category == "instrumentation"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
 				if(MUSIC_LIST[index]["instrumentation"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
+					MUSIC_SEARCH_RESULT.push(index);
 				}
 			}
 		} else if(category == "key"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
 				if(MUSIC_LIST[index]["key"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
+					MUSIC_SEARCH_RESULT.push(index);
 				}
 			}
 		} else if(category == "tempo"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
 				if(MUSIC_LIST[index]["tempo"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
+					MUSIC_SEARCH_RESULT.push(index);
 				}
 			}
 		} else if(category == "meter"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
 				if(MUSIC_LIST[index]["meter"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
+					MUSIC_SEARCH_RESULT.push(index);
 				}
 			}
 		} else if(category == "duration"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
 				if(MUSIC_LIST[index]["duration"]/60 == value/60){
 					addMusic(musicArea, MUSIC_LIST[index], index);
+					MUSIC_SEARCH_RESULT.push(index);
 				}
 			}
 		} else if(category == "created-with"){
 			for(index = 0; index < MUSIC_LIST.length; index ++) {
 				if(MUSIC_LIST[index]["created-with"].toLowerCase().includes(value)){
 					addMusic(musicArea, MUSIC_LIST[index], index);
+					MUSIC_SEARCH_RESULT.push(index);
 				}
 			}
 		}
@@ -422,6 +445,7 @@ function searchPlaylist(){
 }
 
 function showPlaylist(){
+	MUSIC_SEARCH_RESULT.length = 0;
 	const activeTab = document.getElementById("playlist-tab");
 	activeTab.className = "col tab-selected lang";
 	const inactiveTab = document.getElementById("music-tab");
@@ -434,6 +458,7 @@ function showPlaylist(){
 }
 
 function showMusic(){
+	MUSIC_SEARCH_RESULT.length = 0;
 	const activeTab = document.getElementById("music-tab");
 	activeTab.className = "col tab-selected lang";
 	const inactiveTab = document.getElementById("playlist-tab");
