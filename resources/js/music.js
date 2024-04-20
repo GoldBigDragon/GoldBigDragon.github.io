@@ -59,7 +59,7 @@ function playMusic(){
 		if(NOW_PLAY_PLAYLIST_TITLE != null) {
 			let searchIndex = 0;
 			for(musicIndex = 0; musicIndex < MUSIC_LIST.length; musicIndex ++) {
-				if(MUSIC_LIST["playlist-title-en"] == NOW_PLAY_PLAYLIST_TITLE){
+				if(MUSIC_LIST[musicIndex]["playlist-title-en"] == NOW_PLAY_PLAYLIST_TITLE){
 					if(NOW_PLAY_INDEX == searchIndex) {
 						 break;
 					}
@@ -136,9 +136,16 @@ function setPlayListAll(playlistTitle){
 function setPlayList(musicTitle){
 	initPlaylist();
 	NOW_PLAY_PLAYLIST_TITLE = null;
+	let searchIndex = 0;
+	for(musicIndex = 0; musicIndex < MUSIC_LIST.length; musicIndex ++) {
+		if(MUSIC_LIST[musicIndex]["title"]["en"] == musicTitle){
+			NOW_PLAY_INDEX = musicIndex;
+			break;
+		}
+	}
 	NOW_PLAY_MUSIC_TITLE = musicTitle;
 	NOW_PLAY_LIST_SIZE = 1;
-	NOW_PLAY_INDEX = 0;
+	
 	playMusic();
 }
 
