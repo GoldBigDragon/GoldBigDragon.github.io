@@ -564,9 +564,7 @@ function getTimeCodeFromNum(num) {
 }
 
 function showThisMusicDetails(){
-	if(NOW_PLAY_LIST.length > 0 && NOW_PLAY_INDEX >= 0) {
-		showDetails(NOW_PLAY_LIST[NOW_PLAY_INDEX]["title"]["en"]);
-	}
+	showDetails(NOW_PLAY_MUSIC_TITLE);
 }
 
 function showDetails(musicName){
