@@ -57,6 +57,8 @@ function jumpMusic(playlistTitle, musicTitle, isNext){
 		}
 		return;
 	} else {
+		audio.pause();
+		audio = null;
 		const elementPlayingArray = document.getElementsByClassName("music-element-playing");
 		let playingArrayIndex = 0;
 		for(playingArrayIndex = 0; playingArrayIndex < elementPlayingArray.length; playingArrayIndex ++) {
