@@ -39,6 +39,7 @@ function initPlaylist() {
 	NOW_PLAY_MUSIC_TITLE = null;
 	NOW_PLAY_INDEX = -1;
 	NOW_PLAY_LIST_SIZE = 0;
+	MUSIC_SEARCH_RESULT.length = 0;
 }
 
 function playMusic(){
@@ -118,7 +119,7 @@ function jumpMusic(isNext){
 	} else if {
 		NOW_PLAY_INDEX = NOW_PLAY_INDEX - 1;
 	}
-	if(NOW_PLAY_LIST_SIZE <= NOW_PLAY_INDEX || NOW_PLAY_INDEX < 0) {
+	if(NOW_PLAY_INDEX < 0 || NOW_PLAY_INDEX >= MUSIC_LIST.length || NOW_PLAY_INDEX >= NOW_PLAY_LIST_SIZE) {
 		initPlaylist();
 		return;
 	} else {
@@ -150,8 +151,14 @@ function setPlayList(musicTitle){
 	if(MUSIC_SEARCH_RESULT.length > 0) {
 		NOW_PLAY_LIST_SIZE = MUSIC_SEARCH_RESULT.length;
 		NOW_PLAY_INDEX = 0;
+		for(let musicIndex = 0; musicIndex < MUSIC_SEARCH_RESULT.length; musicIndex ++) {
+			if(MUSIC_LIST[MUSIC_SEARCH_RESULT[musicIndex]]["title"]["en"] == musicTitle){
+				NOW_PLAY_INDEX = MUSIC_SEARCH_RESULT[musicIndex];
+				break;
+			}
+		}
 	} else{
-		for(musicIndex = 0; musicIndex < MUSIC_LIST.length; musicIndex ++) {
+		for(let musicIndex = 0; musicIndex < MUSIC_LIST.length; musicIndex ++) {
 			if(MUSIC_LIST[musicIndex]["title"]["en"] == musicTitle){
 				NOW_PLAY_INDEX = musicIndex;
 				break;
