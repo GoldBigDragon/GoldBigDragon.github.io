@@ -14,6 +14,8 @@ function stopMusic(){
 	playerImage.src = "/resources/img/music/none.png";
 	const playButton = document.getElementById("player-music-play-button");
 	playButton.innerHTML = "<i class='fa-solid fa-play'></i>";
+	const playButton2 = document.getElementById("player-music-play-button2");
+	playButton2.className = "fa-solid fa-play control-button";
 	const musicTitle = document.getElementById("player-music-title");
 	musicTitle.innerHTML = " ";
 	const progressBar = document.getElementById("progress");
@@ -68,11 +70,14 @@ function runNextMusic(playlistTitle, musicTitle){
 		const playerImage = document.getElementById("player-music-image");
 		playerImage.src = NOW_PLAY_LIST[NOW_PLAY_INDEX]["image"];
 		const playButton = document.getElementById("player-music-play-button");
+		const playButton2 = document.getElementById("player-music-play-button2");
 		if (audio.paused) {
 			playButton.innerHTML = "<i class='fa-solid fa-pause'></i>";
+			playButton2.className = "fa-solid fa-pause control-button";
 			audio.play();
 		} else {
 			playButton.innerHTML = "<i class='fa-solid fa-play'></i>";
+			playButton2.className = "fa-solid fa-play control-button";
 		}
 		const musicTitle = document.getElementById("player-music-title");
 		musicTitle.innerHTML = NOW_PLAY_LIST[NOW_PLAY_INDEX]["title"][NOW_LANG];
@@ -104,6 +109,11 @@ function setPlayListAll(playlistTitle){
 }
 
 function setPlayList(musicTitle){
+	const elementPlayingArray = document.getElementsByClassName("music-element-playing");
+	for(index = 0; index < elementPlayingArray.length; index ++) {
+		elementPlayingArray[index].className = "row music-element";
+	}
+	
 	stopMusic();
 	NOW_PLAY_PLAYLIST_TITLE = null;
 	NOW_PLAY_MUSIC_TITLE = musicTitle;
@@ -467,11 +477,14 @@ setInterval(() => {
 function togglePlayButton(){
 	if(audio != null){
 		const playButton = document.getElementById("player-music-play-button");
+		const playButton2 = document.getElementById("player-music-play-button2");
 		if (audio.paused) {
 			playButton.innerHTML = "<i class='fa-solid fa-pause'></i>";
+			playButton2.className = "fa-solid fa-pause control-button";
 			audio.play();
 		} else {
 			playButton.innerHTML = "<i class='fa-solid fa-play'></i>";
+			playButton2.className = "fa-solid fa-play control-button";
 			audio.pause();
 		}
 	}
@@ -482,9 +495,9 @@ function toggleMute(){
 		const muteButton = document.getElementById("mute-button");
 		audio.muted = !audio.muted;
 		if (audio.muted) {
-			muteButton.innerHTML = "<i class='fa-solid fa-volume-xmark'></i>";
+			muteButton.innerHTML = "<i class='fa-solid fa-volume-xmark control-button'></i>";
 		} else {
-			muteButton.innerHTML = "<i class='fa-solid fa-volume-high'></i>";
+			muteButton.innerHTML = "<i class='fa-solid fa-volume-high control-button'></i>";
 		}
 	}
 }

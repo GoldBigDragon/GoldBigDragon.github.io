@@ -60,6 +60,20 @@
     max-width: 5.5rem;
 }
 
+.control-button{
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.control-button:hover{
+	color: var(--bs-primary);
+	transform: scale(1.05);
+}
+
+.control-button:active{
+	transform: scale(0.95);
+}
+
 .play-button {
 	position: absolute;
     width: 5rem;
@@ -115,8 +129,8 @@
 
 #player {
     position: fixed;
-    bottom: 0rem;
-    left: calc(50% - 175px);
+    bottom: 2rem;
+    left: calc(50% - 195px);
     margin: 1rem;
     background-color: black;
     padding: 1rem;
@@ -169,6 +183,7 @@
     cursor: pointer;
 	display: flex;
     align-items: center;
+	margin-bottom: 0.5rem;
 }
 #progress{
 	height: 0.85rem;
@@ -190,6 +205,7 @@
 	width: 100%;
 	background-color: white;
 	cursor: pointer;
+	max-width: 6rem;
 }
 
 #volume-percentage{
@@ -204,4 +220,11 @@
 }
 #player-music-title:hover{
 	color: var(--bs-primary);
+}
+
+#control-panel{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
