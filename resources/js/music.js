@@ -50,7 +50,7 @@ function playMusic(){
 			}
 		}
 		if(NOW_PLAY_MUSIC_TITLE != null){
-			const targetPane = document.getElementById(musicTitle);
+			const targetPane = document.getElementById(NOW_PLAY_MUSIC_TITLE);
 			if(targetPane != null){
 				targetPane.className = "row music-element-playing";
 			}
@@ -88,7 +88,6 @@ function playMusic(){
 		const musicTitle = document.getElementById("player-music-title");
 		musicTitle.innerHTML = MUSIC_LIST[musicIndex]["title"][NOW_LANG];
 		LANGUAGE_OBJECT["MUSIC_LANG"]["NOW-PLAYING-MUSIC"] = MUSIC_LIST[musicIndex]["title"];
-		NOW_PLAY_PLAYLIST_TITLE = MUSIC_LIST[musicIndex]['playlist-title-en'];
 		NOW_PLAY_MUSIC_TITLE = MUSIC_LIST[musicIndex]['title']['en'];
 	} else {
 		initPlaylist();
@@ -130,7 +129,6 @@ function setPlayListAll(playlistTitle){
 			NOW_PLAY_LIST_SIZE = NOW_PLAY_LIST_SIZE + 1;
 		}
 	}
-	NOW_PLAY_MUSIC_TITLE = musicTitle;
 	NOW_PLAY_INDEX = 0;
 	playMusic();
 }
