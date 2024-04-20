@@ -44,18 +44,6 @@ function initPlaylist() {
 function playMusic(){
 	if(NOW_PLAY_INDEX > -1) {
 		stopMusic();
-		if(NOW_PLAY_PLAYLIST_TITLE != null){
-			const targetPane = document.getElementById(NOW_PLAY_PLAYLIST_TITLE);
-			if(targetPane != null){
-				targetPane.className = "row music-element-playing";
-			}
-		}
-		if(NOW_PLAY_MUSIC_TITLE != null){
-			const targetPane = document.getElementById(NOW_PLAY_MUSIC_TITLE);
-			if(targetPane != null){
-				targetPane.className = "row music-element-playing";
-			}
-		}
 		let musicIndex = 0;
 		if(NOW_PLAY_PLAYLIST_TITLE != null) {
 			let searchIndex = 0;
@@ -99,6 +87,18 @@ function playMusic(){
 		musicTitle.innerHTML = MUSIC_LIST[musicIndex]["title"][NOW_LANG];
 		LANGUAGE_OBJECT["MUSIC_LANG"]["NOW-PLAYING-MUSIC"] = MUSIC_LIST[musicIndex]["title"];
 		NOW_PLAY_MUSIC_TITLE = MUSIC_LIST[musicIndex]['title']['en'];
+		if(NOW_PLAY_PLAYLIST_TITLE != null){
+			const targetPane = document.getElementById(NOW_PLAY_PLAYLIST_TITLE);
+			if(targetPane != null){
+				targetPane.className = "row music-element-playing";
+			}
+		}
+		if(NOW_PLAY_MUSIC_TITLE != null){
+			const targetPane = document.getElementById(NOW_PLAY_MUSIC_TITLE);
+			if(targetPane != null){
+				targetPane.className = "row music-element-playing";
+			}
+		}
 	} else {
 		initPlaylist();
 	}
@@ -115,15 +115,10 @@ function nextMusic(){
 function jumpMusic(isNext){
 	if(isNext){
 		NOW_PLAY_INDEX = NOW_PLAY_INDEX + 1;
-	} else if (NOW_PLAY_INDEX > 1){
+	} else {
 		NOW_PLAY_INDEX = NOW_PLAY_INDEX - 1;
 	}
-	if(NOW_PLAY_LIST_SIZE <= NOW_PLAY_INDEX || NOW_PLAY_INDEX < 0) {
-		initPlaylist();
-		return;
-	} else {
-		playMusic();
-	}
+	playMusic();
 }
 
 function setDuration(){
