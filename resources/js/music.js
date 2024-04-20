@@ -110,8 +110,9 @@ function setPlayListAll(playlistTitle){
 
 function setPlayList(musicTitle){
 	const elementPlayingArray = document.getElementsByClassName("music-element-playing");
-	for(index = 0; index < elementPlayingArray.length; index ++) {
-		elementPlayingArray[index].className = "row music-element";
+	let playingArrayIndex = 0;
+	for(playingArrayIndex = 0; playingArrayIndex < elementPlayingArray.length; playingArrayIndex ++) {
+		elementPlayingArray[playingArrayIndex].className = "row music-element";
 	}
 	
 	stopMusic();
