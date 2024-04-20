@@ -1,4 +1,4 @@
-const NOW_PLAY_LIST = [];
+let NOW_PLAY_LIST_SIZE = 0;
 let NOW_PLAY_PLAYLIST_TITLE = null;
 let NOW_PLAY_MUSIC_TITLE = null;
 let NOW_PLAY_INDEX = -1;
@@ -24,75 +24,92 @@ function stopMusic(){
 	currentTime.innerText = "0:00";
 	const duration = document.getElementById("duration");
 	duration.innerText = "0:00";
+	
+	const elementPlayingArray = document.getElementsByClassName("music-element-playing");
+	let playingArrayIndex = 0;
+	for(playingArrayIndex = 0; playingArrayIndex < elementPlayingArray.length; playingArrayIndex ++) {
+		elementPlayingArray[playingArrayIndex].className = "row music-element";
+	}
+}
+
+function initPlaylist() {
+	stopMusic();
 	NOW_PLAY_PLAYLIST_TITLE = null;
 	NOW_PLAY_MUSIC_TITLE = null;
 	NOW_PLAY_INDEX = -1;
-	NOW_PLAY_LIST.length = 0;
+	NOW_PLAY_LIST_SIZE = 0;
+}
+
+function playMusic(){
+	stopMusic();
+	if(NOW_PLAY_PLAYLIST_TITLE != null){
+		const targetPane = document.getElementById(NOW_PLAY_PLAYLIST_TITLE);
+		if(targetPane != null){
+			targetPane.className = "row music-element-playing";
+		}
+	}
+	if(NOW_PLAY_MUSIC_TITLE != null){
+		const targetPane = document.getElementById(musicTitle);
+		if(targetPane != null){
+			targetPane.className = "row music-element-playing";
+		}
+	}
+	let musicIndex = 0;
+	if(NOW_PLAY_PLAYLIST_TITLE != null) {
+		let searchIndex = 0;
+		for(musicIndex = 0; musicIndex < MUSIC_LIST.length; musicIndex ++) {
+			if(MUSIC_LIST["playlist-title-en"] == NOW_PLAY_PLAYLIST_TITLE){
+				if(NOW_PLAY_INDEX == searchIndex) {
+					 break;
+				}
+				searchIndex = searchIndex + 1;
+			}
+		}
+	} else {
+		musicIndex = NOW_PLAY_INDEX;
+	}
+	audio = new Audio(MUSIC_LIST[musicIndex]["mp3"]);
+	// audio.volume = 1;
+	audio.setAttribute("onLoadeddata", "setDuration()");
+	audio.setAttribute("onended", "jumpMusic(true)");
+	const playerImage = document.getElementById("player-music-image");
+	playerImage.src = MUSIC_LIST[musicIndex]["image"];
+	const playButton = document.getElementById("player-music-play-button");
+	const playButton2 = document.getElementById("player-music-play-button2");
+	if (audio.paused) {
+		playButton.innerHTML = "<i class='fa-solid fa-pause'></i>";
+		playButton2.className = "fa-solid fa-pause control-button";
+		audio.play();
+	} else {
+		playButton.innerHTML = "<i class='fa-solid fa-play'></i>";
+		playButton2.className = "fa-solid fa-play control-button";
+	}
+	const musicTitle = document.getElementById("player-music-title");
+	musicTitle.innerHTML = MUSIC_LIST[musicIndex]["title"][NOW_LANG];
+	LANGUAGE_OBJECT["MUSIC_LANG"]["NOW-PLAYING-MUSIC"] = MUSIC_LIST[musicIndex]["title"];
+	NOW_PLAY_PLAYLIST_TITLE = MUSIC_LIST[musicIndex]['playlist-title-en'];
+	NOW_PLAY_MUSIC_TITLE = MUSIC_LIST[musicIndex]['title']['en'];
 }
 
 function prevMusic(){
-	jumpMusic(NOW_PLAY_PLAYLIST_TITLE, NOW_PLAY_MUSIC_TITLE, false);
+	jumpMusic(false);
 }
 
 function nextMusic(){
-	jumpMusic(NOW_PLAY_PLAYLIST_TITLE, NOW_PLAY_MUSIC_TITLE, true);
+	jumpMusic(true);
 }
 
-function jumpMusic(playlistTitle, musicTitle, isNext){
+function jumpMusic(isNext){
 	if(isNext){
 		NOW_PLAY_INDEX = NOW_PLAY_INDEX + 1;
 	} else if (NOW_PLAY_INDEX > 1){
 		NOW_PLAY_INDEX = NOW_PLAY_INDEX - 1;
 	}
-	if(NOW_PLAY_LIST.length <= NOW_PLAY_INDEX) {
-		stopMusic();
-		NOW_PLAY_INDEX = -1;
-		const targetPane = document.getElementById(playlistTitle);
-		if(targetPane != null){
-			targetPane.className = "row music-element";
-		}
-		const targetMusicPane = document.getElementById(musicTitle);
-		if(targetMusicPane != null){
-			targetMusicPane.className = "row music-element";
-		}
+	if(NOW_PLAY_LIST_SIZE <= NOW_PLAY_INDEX || NOW_PLAY_INDEX < 0) {
+		initPlaylist();
 		return;
 	} else {
-		audio.pause();
-		audio = null;
-		const elementPlayingArray = document.getElementsByClassName("music-element-playing");
-		let playingArrayIndex = 0;
-		for(playingArrayIndex = 0; playingArrayIndex < elementPlayingArray.length; playingArrayIndex ++) {
-			elementPlayingArray[playingArrayIndex].className = "row music-element";
-		}
-		const nowPlaylistPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX]['playlist-title-en']);
-		if(nowPlaylistPane != null){
-			nowPlaylistPane.className = "row music-element-playing";
-		}
-		const nowMusicPane = document.getElementById(NOW_PLAY_LIST[NOW_PLAY_INDEX]['title']['en']);
-		if(nowMusicPane != null){
-			nowMusicPane.className = "row music-element-playing";
-		}
-		audio = new Audio(NOW_PLAY_LIST[NOW_PLAY_INDEX]["mp3"]);
-		// audio.volume = 1;
-		audio.setAttribute("onLoadeddata", "setDuration()");
-		audio.setAttribute("onended", "jumpMusic('" + playlistTitle + "', '" + NOW_PLAY_LIST[NOW_PLAY_INDEX]['title']['en'] + "', true)");
-		const playerImage = document.getElementById("player-music-image");
-		playerImage.src = NOW_PLAY_LIST[NOW_PLAY_INDEX]["image"];
-		const playButton = document.getElementById("player-music-play-button");
-		const playButton2 = document.getElementById("player-music-play-button2");
-		if (audio.paused) {
-			playButton.innerHTML = "<i class='fa-solid fa-pause'></i>";
-			playButton2.className = "fa-solid fa-pause control-button";
-			audio.play();
-		} else {
-			playButton.innerHTML = "<i class='fa-solid fa-play'></i>";
-			playButton2.className = "fa-solid fa-play control-button";
-		}
-		const musicTitle = document.getElementById("player-music-title");
-		musicTitle.innerHTML = NOW_PLAY_LIST[NOW_PLAY_INDEX]["title"][NOW_LANG];
-		LANGUAGE_OBJECT["MUSIC_LANG"]["NOW-PLAYING-MUSIC"] = NOW_PLAY_LIST[NOW_PLAY_INDEX]["title"];
-		NOW_PLAY_PLAYLIST_TITLE = NOW_PLAY_LIST[NOW_PLAY_INDEX]['playlist-title-en'];
-		NOW_PLAY_MUSIC_TITLE = NOW_PLAY_LIST[NOW_PLAY_INDEX]['title']['en'];
+		playMusic();
 	}
 }
 
@@ -102,44 +119,25 @@ function setDuration(){
 }
 
 function setPlayListAll(playlistTitle){
-	stopMusic();
+	initPlaylist();
 	NOW_PLAY_PLAYLIST_TITLE = playlistTitle;
-	NOW_PLAY_LIST.length = 0;
 	for(index = 0; index < MUSIC_LIST.length; index ++) {
 		if(MUSIC_LIST[index]["playlist-title-en"] == playlistTitle){
-			NOW_PLAY_LIST.push(MUSIC_LIST[index]);
+			NOW_PLAY_LIST_SIZE = NOW_PLAY_LIST_SIZE + 1;
 		}
 	}
-	const targetPane = document.getElementById(playlistTitle);
-	if(targetPane != null){
-		targetPane.className = "row music-element-playing";
-	}
-	jumpMusic(playlistTitle, NOW_PLAY_LIST[0]['title']['en'], true);
+	NOW_PLAY_MUSIC_TITLE = musicTitle;
+	NOW_PLAY_INDEX = 0;
+	playMusic();
 }
 
 function setPlayList(musicTitle){
-	const elementPlayingArray = document.getElementsByClassName("music-element-playing");
-	let playingArrayIndex = 0;
-	for(playingArrayIndex = 0; playingArrayIndex < elementPlayingArray.length; playingArrayIndex ++) {
-		elementPlayingArray[playingArrayIndex].className = "row music-element";
-	}
-	
-	stopMusic();
+	initPlaylist();
 	NOW_PLAY_PLAYLIST_TITLE = null;
 	NOW_PLAY_MUSIC_TITLE = musicTitle;
-	NOW_PLAY_LIST.length = 0;
-	let index = 0;
-	for(index = 0; index < MUSIC_LIST.length; index ++) {
-		if(MUSIC_LIST[index]["title"]['en'] == musicTitle){
-			NOW_PLAY_LIST.push(MUSIC_LIST[index]);
-			break;
-		}
-	}
-	const targetPane = document.getElementById(musicTitle);
-	if(targetPane != null){
-		targetPane.className = "row music-element-playing";
-	}
-	jumpMusic(MUSIC_LIST[index]["playlist-title-en"], musicTitle, true);
+	NOW_PLAY_LIST_SIZE = 1;
+	NOW_PLAY_INDEX = 0;
+	playMusic();
 }
 
 function addMusic(musicArea, musicData, index){
