@@ -115,10 +115,15 @@ function nextMusic(){
 function jumpMusic(isNext){
 	if(isNext){
 		NOW_PLAY_INDEX = NOW_PLAY_INDEX + 1;
-	} else {
+	} else if {
 		NOW_PLAY_INDEX = NOW_PLAY_INDEX - 1;
 	}
-	playMusic();
+	if(NOW_PLAY_LIST_SIZE <= NOW_PLAY_INDEX || NOW_PLAY_INDEX < 0) {
+		initPlaylist();
+		return;
+	} else {
+		playMusic();
+	}
 }
 
 function setDuration(){
