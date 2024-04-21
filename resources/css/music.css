@@ -241,3 +241,13 @@
 .download-btn {
 	margin: 0.5rem;
 }
+
+.key {
+	text-align: center;
+}
+
+.value {
+	background-color: var(--bs-gray-800);
+    padding: 0.7rem 1rem;
+    border-radius: 0.6rem;
+}
