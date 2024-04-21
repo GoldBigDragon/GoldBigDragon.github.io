@@ -607,13 +607,7 @@ function showDetails(musicName){
 			document.getElementById("music-details-duration").innerHTML = MUSIC_LIST[musicIndex]["duration"];
 			
 			const tagPane = document.getElementById("music-details-tag");
-			tagPane.innerHTML = "";
-			for(let tagIndex = 0; tagIndex < MUSIC_LIST[musicIndex]["tag"].length; tagIndex ++) {
-				const tag = document.createElement("div");
-				tag.className = "tag";
-				tag.innerHTML = MUSIC_LIST[musicIndex][tagIndex];
-				tagPane.appendChild(tag);
-			}
+			tagPane.innerHTML = MUSIC_LIST[musicIndex]["tag"].join(', ');
 			const mp3Download = document.getElementById("download-mp3");
 			const midiDownload = document.getElementById("download-midi");
 			const wavDownload = document.getElementById("download-wav");
