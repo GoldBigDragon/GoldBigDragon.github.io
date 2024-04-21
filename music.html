@@ -95,6 +95,85 @@
 			</div>
 		</div>
 		<div class="row" id="footer"></div>
+		<div class="modal fade" id="musicDetailModal" tabindex="-1" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-xl">
+				<div class="modal-content">
+					<div class="modal-header" style="display: flex;">
+						<div class="lang" data-lang-var="MUSIC_LANG" data-lang="music-details">
+							Music details
+						</div>
+						<button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close">
+							<i class="fa-solid fa-xmark fa-xl"></i>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="row modal-panel" style="margin-bottom: 1rem;">
+							<img id="music-details-image" style="max-width: 10rem; max-height: 10rem;"/>
+						</div>
+						<div class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="title">Title</div>
+							<div id="music-details-title" class="col value"></div>
+						</div>
+						<div id="music-details-lyrics-pane" class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="lyrics">Lyrics</div>
+							<div id="music-details-lyrics" class="col value"></div>
+						</div>
+						<div class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="composed-at">Composed at</div>
+							<div id="music-details-composed-at" class="col value"></div>
+						</div>
+						<div class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="composed-with">Composed with</div>
+							<div id="music-details-composed-with" class="col value"></div>
+						</div>
+						<div id="music-details-instrumentation-pane" class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="instrumentation">Instrumentation</div>
+							<div id="music-details-instrumentation" class="col value"></div>
+						</div>
+						<div id="music-details-key-pane" class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="key">Key</div>
+							<div id="music-details-key" class="col value"></div>
+						</div>
+						<div id="music-details-tempo-pane" class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="tempo">Tempo</div>
+							<div id="music-details-tempo" class="col value"></div>
+						</div>
+						<div id="music-details-meter-pane" class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="meter">Meter</div>
+							<div id="music-details-meter" class="col value"></div>
+						</div>
+						<div class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="duration">Duration</div>
+							<div id="music-details-duration" class="col value"></div>
+						</div>
+						<div class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="tag">Tag</div>
+							<div id="music-details-tag" class="col value"></div>
+						</div>
+						<div class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="download">Download</div>
+							<div id="music-details-download" class="col value">
+								<a id="download-mp3" class="btn lang download-btn"><i class="fa-solid fa-headphones"></i>&nbsp;MP3</a>
+								<a id="download-midi" class="btn lang download-btn"><i class="fa-solid fa-headphones"></i>&nbsp;MIDI</a>
+								<a id="download-wav" class="btn lang download-btn"><i class="fa-solid fa-headphones"></i>&nbsp;WAV</a>
+							</div>
+						</div>
+						<!--
+						<div class="row modal-panel">
+							<div class="col-3 key lang" data-lang-var="MUSIC_LANG" data-lang="license">License</div>
+							<div id="music-details-license" class="col value">
+							</div>
+						</div>
+						-->
+					</div>
+					<div class="modal-footer" style="justify-content: flex-end;">
+						<button type="button" class="btn btn-secondary shadow-sm lang" data-bs-dismiss="modal" aria-label="Close" data-lang-var="MUSIC_LANG" data-lang="close">
+							<i class="fa-solid fa-ban"></i>&nbsp;Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 	<script src="/resources/vendor/jquery/jquery.min.js"></script>
 	<script src="/resources/vendor/jquery/jquery.easing.min.js"></script>

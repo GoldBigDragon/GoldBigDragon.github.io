@@ -568,5 +568,76 @@ function showThisMusicDetails(){
 }
 
 function showDetails(musicName){
-	alert("Show '" + musicName + "' detail page (Download, Lyrics, Created-at, Created-with, Duration)");
+	for(let musicIndex = 0; musicIndex < MUSIC_LIST.length; musicIndex ++) {
+		if(MUSIC_LIST[musicIndex]["title"]["en"] == musicName){
+			document.getElementById("music-details-image").src = MUSIC_LIST[musicIndex]["image"];
+			document.getElementById("music-details-title").innerHTML = MUSIC_LIST[musicIndex]["title"][NOW_LANG];
+			if(MUSIC_LIST[musicIndex].hasOwnProperty("lyrics")){
+				document.getElementById("music-details-lyrics-pane").removeAttribute("hidden", "true");
+				document.getElementById("music-details-lyrics").innerHTML = MUSIC_LIST[musicIndex]["lyrics"][NOW_LANG];
+			} else {
+				document.getElementById("music-details-lyrics-pane").setAttribute("hidden", "true");
+			}
+			document.getElementById("music-details-composed-at").innerHTML = MUSIC_LIST[musicIndex]["composed-at"];
+			document.getElementById("music-details-composed-with").innerHTML = MUSIC_LIST[musicIndex]["composed-with"];
+			if(MUSIC_LIST[musicIndex].hasOwnProperty("instrumentation")){
+				document.getElementById("music-details-instrumentation-pane").removeAttribute("hidden", "true");
+				document.getElementById("music-details-instrumentation").innerHTML = MUSIC_LIST[musicIndex]["instrumentation"];
+			} else {
+				document.getElementById("music-details-instrumentation-pane").setAttribute("hidden", "true");
+			}
+			if(MUSIC_LIST[musicIndex].hasOwnProperty("key")){
+				document.getElementById("music-details-key-pane").removeAttribute("hidden", "true");
+				document.getElementById("music-details-key").innerHTML = MUSIC_LIST[musicIndex]["key"];
+			} else {
+				document.getElementById("music-details-key-pane").setAttribute("hidden", "true");
+			}
+			if(MUSIC_LIST[musicIndex].hasOwnProperty("tempo")){
+				document.getElementById("music-details-tempo-pane").removeAttribute("hidden", "true");
+				document.getElementById("music-details-tempo").innerHTML = MUSIC_LIST[musicIndex]["tempo"];
+			} else {
+				document.getElementById("music-details-tempo-pane").setAttribute("hidden", "true");
+			}
+			if(MUSIC_LIST[musicIndex].hasOwnProperty("meter")){
+				document.getElementById("music-details-meter-pane").removeAttribute("hidden", "true");
+				document.getElementById("music-details-meter").innerHTML = MUSIC_LIST[musicIndex]["meter"];
+			} else {
+				document.getElementById("music-details-meter-pane").setAttribute("hidden", "true");
+			}
+			document.getElementById("music-details-duration").innerHTML = MUSIC_LIST[musicIndex]["duration"];
+			
+			const tagPane = document.getElementById("music-details-tag");
+			tagPane.innerHTML = "";
+			for(let tagIndex = 0; tagIndex < MUSIC_LIST[musicIndex]["tag"].length; tagIndex ++) {
+				const tag = document.createElement("div");
+				tag.className = "tag";
+				tag.innerHTML = MUSIC_LIST[musicIndex][tagIndex];
+				tagPane.appendChild(tag);
+			}
+			const mp3Download = document.getElementById("download-mp3");
+			const midiDownload = document.getElementById("download-midi");
+			const wavDownload = document.getElementById("download-wav");
+			if(MUSIC_LIST[musicIndex].hasOwnProperty("mp3")){
+				mp3Download.removeAttribute("hidden");
+				mp3Download.href = MUSIC_LIST[musicIndex]["mp3"];
+			} else {
+				mp3Download.setAttribute("hidden", "true");
+			}
+			if(MUSIC_LIST[musicIndex].hasOwnProperty("midi")){
+				midiDownload.removeAttribute("hidden");
+				midiDownload.href = MUSIC_LIST[musicIndex]["midi"];
+			} else {
+				midiDownload.setAttribute("hidden", "true");
+			}
+			if(MUSIC_LIST[musicIndex].hasOwnProperty("wav")){
+				wavDownload.removeAttribute("hidden");
+				wavDownload.href = MUSIC_LIST[musicIndex]["wav"];
+			} else {
+				wavDownload.setAttribute("hidden", "true");
+			}
+			$('#musicDetailModal').modal('show');
+			break;
+		}
+	}
+	
 }

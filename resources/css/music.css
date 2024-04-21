@@ -123,6 +123,15 @@
 	color: var(--bs-gray-500);
 }
 
+.tag:hover{
+	transform: scale(1.1);
+	color: white;
+}
+
+.tag:active{
+	transform: scale(0.95);
+}
+
 .music-title-pane{
 	margin-left: 2rem;
 }
@@ -227,4 +236,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+}
+
+.download-btn {
+	margin: 0.5rem;
 }
