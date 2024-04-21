@@ -420,11 +420,11 @@ const DATA_ETC = [
 		},
 		"logo":"/resources/img/index/logo/etc/redcross.png",
 		"logo-title":{
-			"en":"Red Cross Youth<br>commendation certificate",
-			"kr":"RCY 사회봉사 표창장",
-			"jp":"RCY 表彰状",
-			"cn":"RCY 荣誉证书",
-			"ru":"Благодарственная грамота<br>молодежи Красного Креста."
+			"en":"Commendation certificate",
+			"kr":"사회봉사 표창장",
+			"jp":"表彰状",
+			"cn":"荣誉证书",
+			"ru":"Благодарственная грамота"
 		},
 		"proof":"/resources/img/index/proof/etc/2012_10_27_rcy.jpg"
 	},
@@ -453,11 +453,11 @@ const DATA_ETC = [
 		},
 		"logo":"/resources/img/index/logo/etc/redcross.png",
 		"logo-title":{
-			"en":"Red Cross Youth<br>commendation certificate",
-			"kr":"RCY 사회봉사 표창장",
-			"jp":"RCY 表彰状",
-			"cn":"RCY 荣誉证书",
-			"ru":"Благодарственная грамота<br>молодежи Красного Креста."
+			"en":"Commendation certificate",
+			"kr":"사회봉사 표창장",
+			"jp":"表彰状",
+			"cn":"荣誉证书",
+			"ru":"Благодарственная грамота"
 		},
 		"proof":"/resources/img/index/proof/etc/2011_11_11_rcy.jpg"
 	}
