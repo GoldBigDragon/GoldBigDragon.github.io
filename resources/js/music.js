@@ -580,6 +580,12 @@ function showDetails(musicName){
 			}
 			document.getElementById("music-details-composed-at").innerHTML = MUSIC_LIST[musicIndex]["composed-at"];
 			document.getElementById("music-details-composed-with").innerHTML = MUSIC_LIST[musicIndex]["composed-with"];
+			
+			if(CREATED_WITH[MUSIC_LIST[musicIndex]["composed-with"]].hasOwnProperty("profile")) {
+				document.getElementById("music-details-composed-with").href = CREATED_WITH[MUSIC_LIST[musicIndex]["composed-with"]]["profile"];
+			} else {
+				document.getElementById("music-details-composed-with").href = CREATED_WITH[MUSIC_LIST[musicIndex]["composed-with"]]["url"];
+			}
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("instrumentation")){
 				document.getElementById("music-details-instrumentation-pane").removeAttribute("hidden", "true");
 				document.getElementById("music-details-instrumentation").innerHTML = MUSIC_LIST[musicIndex]["instrumentation"];
@@ -604,7 +610,7 @@ function showDetails(musicName){
 			} else {
 				document.getElementById("music-details-meter-pane").setAttribute("hidden", "true");
 			}
-			document.getElementById("music-details-duration").innerHTML = MUSIC_LIST[musicIndex]["duration"];
+			document.getElementById("music-details-duration").innerHTML = MUSIC_LIST[musicIndex]["duration"] + "/s";
 			
 			const tagPane = document.getElementById("music-details-tag");
 			tagPane.innerHTML = MUSIC_LIST[musicIndex]["tag"].join(', ');
