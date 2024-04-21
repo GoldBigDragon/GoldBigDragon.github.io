@@ -1,3 +1,14 @@
+div::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--bs-dark);
+}
+
+div::-webkit-scrollbar-thumb {
+    background: var(--bs-primary);
+    border-radius: 0.5rem;
+}
+
 .contents{
 	max-width: 80rem;
 	text-align: center;
