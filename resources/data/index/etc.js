@@ -403,7 +403,7 @@ const DATA_ETC = [
 			"cn":"社区服务荣誉证书",
 			"ru":"Благодарность за общественные работы"
 		},
-		"award-date":"2023-08-11",
+		"award-date":"2012-10-27",
 		"awarding-organization":{
 			"en":"Korean Red Cross",
 			"kr":"대한적십자사",
@@ -436,7 +436,7 @@ const DATA_ETC = [
 			"cn":"社区服务荣誉证书",
 			"ru":"Благодарность за общественные работы"
 		},
-		"award-date":"2023-08-11",
+		"award-date":"2011-11-11",
 		"awarding-organization":{
 			"en":"Korean Red Cross Gyeongsangnam-do Governor",
 			"kr":"대한적십자사 경상남도지사",
