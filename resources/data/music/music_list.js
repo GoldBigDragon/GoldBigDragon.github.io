@@ -60,6 +60,50 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/Pour, bartender, pour.mp3",
 				"tag": ["tavern", "bartender", "voice", "rock", "passionate", "ethereal", "lush", "nocturnal", "poetic", "electronic", "fantasy", "rpg", "npc"],
 				"image": "/resources/img/music/music/Pour, bartender, pour.avif"
+			}, 
+			{
+				"title": {
+					"en": "Ancient library",
+					"kr": "고대 도서관",
+					"jp": "古代図書館",
+					"cn": "古代图书馆",
+					"ru": "Древняя библиотека"
+				},
+				"lyrics":{
+					"en": "Through arched windows, shafts of light<br>Rest on books with tales untold<br><br>A world within these ancient walls<br>Where secrets and the stories fold<br>(In the halls of silent lore)<br><br>In the halls of silent lore<br>Whispers roam<br>The knowledge holds<br><br>The knowledge holds you too<br>Between these rows (these rows)<br><br>A solace found in written word<br>Guardian of the bound truths<br>In her eyes, the world conferred<br>Through silent stacks, she roams<br>In the halls of silent lore<br><br>In her hands, the keys to time<br>Tales of love, of war, of crime<br>Turning pages, worlds unfold<br>In the library grand and old<br><br>In the echoes of the quiet place<br>She finds peace in the stories' embrace",
+					"kr": "Through arched windows, shafts of light<br>아치형 창문을 통해 들어오는 한 줄기 빛<br>Rest on books with tales untold<br>알려지지 않은 이야기가 담긴 책에서 휴식을 취하네<br><br>A world within these ancient walls<br>고대 성벽 안의 세계<br>Where secrets and the stories fold<br>비밀과 이야기가 함께 있는 곳<br>(In the halls of silent lore)<br>(고요한 지식의 전당에서)<br><br>In the halls of silent lore<br>고요한 지식의 전당에서<br>Whispers roam<br>속삭임이 배회하네<br>The knowledge holds<br>지식을 붙잡네<br><br>The knowledge holds you too<br>지식 또한 당신을 붙잡네<br>Between these rows (these rows)<br>이 문장들 사이로 (이 문장들)<br><br>A solace found in written word<br>쓰여진 단어에서 찾아낸 위안<br>Guardian of the bound truths<br>묶여있는 진실의 수호자<br>In her eyes, the world conferred<br>그녀의 눈에 세계가 담겨있네<br>Through silent stacks, she roams<br>고요한 책 더미 사이로 그녀가 배회하네<br>In the halls of silent lore<br>고요한 지식의 전당에서<br><br>In her hands, the keys to time<br>그녀의 손에는 시간의 열쇠가 있네<br>Tales of love, of war, of crime<br>사랑, 전쟁, 범죄의 이야기들<br>Turning pages, worlds unfold<br>책을 넘기면 세계가 펼쳐진다<br>In the library grand and old<br>웅장하고 오래된 도서관에서<br><br>In the echoes of the quiet place<br>조용한 곳의 메아리 속에<br>She finds peace in the stories' embrace<br>이야기 속에서 그녀는 평화를 찾네",
+					"jp": "Through arched windows, shafts of light<br>アーチ型の窓から差し込む一筋の光<br>Rest on books with tales untold<br>知られざる話が盛り込まれた本で休息を取る<br><br>A world within these ancient walls<br>古代の城壁の中の世界<br>Where secrets and the stories fold<br>秘密と物語が共にある所<br>(In the halls of silent lore)<br>(静かな知識の殿堂で)<br><br>In the halls of silent lore<br>静かな知識の殿堂で<br>Whispers roam<br>ささやきが徘徊する<br>The knowledge holds<br>知識をつかむね<br><br>The knowledge holds you too<br>知識もあなたを引き留める<br>Between these rows (these rows)<br>この文章の間に (この文章)<br><br>A solace found in written word<br>書かれた単語から捜し出した慰め<br>Guardian of the bound truths<br>縛られている真実の守護者<br>In her eyes, the world conferred<br>彼女の目に世界がこもっている<br>Through silent stacks, she roams<br>静かな本の山の中を彼女はうろついている<br>In the halls of silent lore<br>静かな知識の殿堂で<br><br>In her hands, the keys to time<br>彼女の手には時間の鍵がある<br>Tales of love, of war, of crime<br>愛, 戦争, 犯罪の物語<br>Turning pages, worlds unfold<br>本をめくると世界が広がる<br>In the library grand and old<br>雄大で古い図書館で<br><br>In the echoes of the quiet place<br>静かな所のこだまの中に<br>She finds peace in the stories' embrace<br>物語の中で彼女は平和を求める",
+					"cn": "Through arched windows, shafts of light<br>从拱形窗户射进的一束光<br>Rest on books with tales untold<br>在充满鲜为人知故事的书中休息<br><br>A world within these ancient walls<br>古城墙里的世界<br>Where secrets and the stories fold<br>秘密和故事在一起的地方<br>(In the halls of silent lore)<br>(在寂静的知识殿堂里)<br><br>In the halls of silent lore<br>在寂静的知识殿堂里<br>Whispers roam<br>悄声细语徘徊<br>The knowledge holds<br>抓住知识<br><br>The knowledge holds you too<br>知识也抓住你<br>Between these rows (these rows)<br>在这些句子之间 (这些句子)<br><br>A solace found in written word<br>从所写单词中找到的安慰<br>Guardian of the bound truths<br>被捆绑着的真相的守护者<br>In her eyes, the world conferred<br>她的眼中蕴含着世界<br>Through silent stacks, she roams<br>她徘徊在寂静的书堆之中<br>In the halls of silent lore<br>在寂静的知识殿堂里<br><br>In her hands, the keys to time<br>她地手上有时间地钥匙<br>Tales of love, of war, of crime<br>爱情、战争和犯罪的故事<br>Turning pages, worlds unfold<br>翻书世界就会展开<br>In the library grand and old<br>在雄伟古老地图书馆里<br><br>In the echoes of the quiet place<br>寂静地回声中<br>She finds peace in the stories' embrace<br>她在故事中寻找和平",
+					"ru": "Through arched windows, shafts of light<br>Свет, проникающий через арочное окно<br>Rest on books with tales untold<br>Я отдыхаю от книги с неизвестной историей.<br><br>A world within these ancient walls<br>Мир внутри древних стен<br>Where secrets and the stories fold<br>Где секреты и истории переплетаются<br>(In the halls of silent lore)<br>(В безмятежном Зале Знаний)<br><br>In the halls of silent lore<br>В безмятежном Зале Знаний<br>Whispers roam<br>Шепот бродят<br>The knowledge holds<br>Захватить знания<br><br>The knowledge holds you too<br>Знания также удерживают тебя<br>Between these rows (these rows)<br>Между этим предложением (этим предложением)<br><br>A solace found in written word<br>Утешение, найденное в написанных словах<br>Guardian of the bound truths<br>Стражи истины, связанные<br>In her eyes, the world conferred<br>В ее глазах запечатлен мир<br>Through silent stacks, she roams<br>Она блуждает среди кучи тихих книг<br>In the halls of silent lore<br>В безмятежном Зале Знаний<br><br>In her hands, the keys to time<br>В ее руках ключ к времени<br>Tales of love, of war, of crime<br>Истории любви, войны и преступности<br>Turning pages, worlds unfold<br>Перелистывая книгу, мир раскрывается<br>In the library grand and old<br>В великолепной старой библиотеке<br><br>In the echoes of the quiet place<br>В эхо тихого места<br>She finds peace in the stories' embrace<br>В рассказе она находит мир"
+				},
+				"composed-at": "2024-04-21",
+				"composed-with": "Udio",
+				"duration": 197,
+				"mp3": "/resources/files/music/Ancient library.mp3",
+				"tag": ["library", "voice", "ambient", "electroacoustic", "atmospheric", "calm", "ethereal", "meditative", "soothing", "surreal", "fantasy", "rpg", "npc"],
+				"image": "/resources/img/music/music/Ancient library.avif"
+			}, 
+			{
+				"title": {
+					"en": "Titanium mine",
+					"kr": "티타늄 광산",
+					"jp": "チタン鉱山",
+					"cn": "钛矿山",
+					"ru": "Титановый рудник"
+				},
+				"lyrics":{
+					"en": "In the heart of the land where the tough rocks hide<br>Buried deep, secrets old, where strength resides<br>Forged in earth, fire's breath, yielding titanium's shine<br>We delve the depths, for the metal so fine<br><br>Titanium, unyielding and strong<br>In the mine where it's been sleeping so long<br><br>Down the shaft, with our picks, we strike with might<br>Brave the dark, face our fears, day turns to night<br>Men of grit, muscles burn, we chase the vein<br>Through the risk, sweat and dust, we stake our claim<br><br>Titanium, our prize in the deep<br>Risking all for the treasures we keep",
+					"kr": "In the heart of the land where the tough rocks hide<br>거친 바위가 숨어 있는 땅의 중심부에<br>Buried deep, secrets old, where strength resides<br>깊이 묻힌 힘이 깃든 오래된 비밀들<br>Forged in earth, fire's breath, yielding titanium's shine<br>불의 숨결로 땅에서 제련된 티타늄이 빛을 발산하네<br>We delve the depths, for the metal so fine<br>희귀 광물을 따라 우리는 깊이 파내려가네<br><br>Titanium, unyielding and strong<br>견고하고 강한 티타늄<br>In the mine where it's been sleeping so long<br>오랫동안 잠들어 있던 광산에서<br><br>Down the shaft, with our picks, we strike with might<br>수갱 아래로, 우리는 곡괭이를 힘차게 내려치네<br>Brave the dark, face our fears, day turns to night<br>어둠과 두려움에 맞서며 낮이 밤으로 바뀌네<br>Men of grit, muscles burn, we chase the vein<br>투지와 근육이 불타오르는 우리는 광맥을 쫒아가네<br>Through the risk, sweat and dust, we stake our claim<br>위험과 땀과 먼지를 뚫고 우리는 우리의 권리를 주장하네<br><br>Titanium, our prize in the deep<br>티타늄, 지하 깊은 곳의 보물<br>Risking all for the treasures we keep<br>우리가 간직하고 있는 보물을 위해 모든 것을 거네",
+					"jp": "In the heart of the land where the tough rocks hide<br>荒々しい岩が隠れている土地の中心部に<br>Buried deep, secrets old, where strength resides<br>深く秘められた力のこもった古い秘密<br>Forged in earth, fire's breath, yielding titanium's shine<br>火の息遣いで、地面から製錬されたチタンが光を放ちます<br>We delve the depths, for the metal so fine<br>珍しい鉱物に沿って深く掘り下げる<br><br>Titanium, unyielding and strong<br>丈夫で強いチタン<br>In the mine where it's been sleeping so long<br>長い間眠っていた鉱山で<br><br>Down the shaft, with our picks, we strike with might<br>シャフトの下に, 私たちはつるはしを勢いよくたたきつける<br>Brave the dark, face our fears, day turns to night<br>闇と恐怖に立ち向かって昼が夜に変わる<br>Men of grit, muscles burn, we chase the vein<br>闘志と筋肉が燃え上がる私たちは鉱脈を追いかけていく<br>Through the risk, sweat and dust, we stake our claim<br>危険と汗とほこりを突き抜けて、 私たちは私たちの権利を主張する<br><br>Titanium, our prize in the deep<br>チタニウム、地下深くの宝物<br>Risking all for the treasures we keep<br>私たちが大切にしている宝物のために全てを賭ける",
+					"cn": "In the heart of the land where the tough rocks hide<br>在一片荒石掩藏的地心，<br>Buried deep, secrets old, where strength resides<br>蕴藏力量地古老秘密<br>Forged in earth, fire's breath, yielding titanium's shine<br>在火地气息中提炼地钛散发光芒<br>We delve the depths, for the metal so fine<br>我们沿着珍稀矿物深深地挖下去<br><br>Titanium, unyielding and strong<br>坚固坚固的钛<br>In the mine where it's been sleeping so long<br>在沉睡已久的矿山里<br><br>Down the shaft, with our picks, we strike with might<br>隧道下，我们奋力砍下镐头<br>Brave the dark, face our fears, day turns to night<br>面对黑暗和恐惧 白天变成了黑夜<br>Men of grit, muscles burn, we chase the vein<br>斗志和肌肉燃烧的我们追逐着矿脉<br>Through the risk, sweat and dust, we stake our claim<br>冒着危险，汗水和灰尘，我们主张我们地权利<br><br>Titanium, our prize in the deep<br>钛，地下深处的宝藏<br>Risking all for the treasures we keep<br>为了我们珍藏的宝物不惜一切",
+					"ru": "In the heart of the land where the tough rocks hide<br>В центре земли, где скрываются грубые камни<br>Buried deep, secrets old, where strength resides<br>Глубоко спрятанные старые секреты<br>Forged in earth, fire's breath, yielding titanium's shine<br>Под землей светит титан, расплавленный огненным дыханием<br>We delve the depths, for the metal so fine<br>По редким минералам мы копаем глубоко.<br><br>Titanium, unyielding and strong<br>Твердый и сильный титан<br>In the mine where it's been sleeping so long<br>В шахте, где он спит так долго<br><br>Down the shaft, with our picks, we strike with might<br>Вниз вала, с нашими пиками, мы ударим с силой<br>Brave the dark, face our fears, day turns to night<br>Храбрый темноту, сталкивайся с нашими страхами, день превращается<br>Men of grit, muscles burn, we chase the vein<br>Мы ходим за минералами, где горит боевой дух и мышцы.<br>Through the risk, sweat and dust, we stake our claim<br>Через риск, пота и пыль, мы ставим свои претензии<br><br>Titanium, our prize in the deep<br>Титан, сокровище глубоко под землей<br>Risking all for the treasures we keep<br>рискуя всем за сокровища, которые мы храним"
+				},
+				"composed-at": "2024-04-23",
+				"composed-with": "Udio",
+				"duration": 131,
+				"mp3": "/resources/files/music/Titanium mine.mp3",
+				"tag": ["mine", "miner", "voice", "industrial", "post-industrial", "industrial rock", "electronic", "energetic", "breakbeat", "fantasy", "rpg", "npc"],
+				"image": "/resources/img/music/music/Titanium mine.avif"
 			}
 		]
 	}
@@ -68,7 +112,7 @@ const PLAY_LIST = [
 const CREATED_WITH = {
 	"Udio":{
 		"url":"https://www.udio.com/",
-		"profile": "https://www.udio.com/users/vsrteWZe3Ju4bPzY2ReH98",
+		"profile": "https://www.udio.com/creators/GoldBigDragon",
 		"icon":"/resources/img/music/composed-with/udio.png",
 		"subscribed":"false"
 	},
