@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
-			"en":"Translating (49/227)",
+			"en":"Translating (51/229)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (49/227)",
-			"cn":"翻译 (49/227)",
-			"ru":"Перевод (49/227)"
+			"jp":"翻訳中 (51/229)",
+			"cn":"翻译 (51/229)",
+			"ru":"Перевод (51/229)"
 		},
 		"uid":"developer",
 		"pages": [
@@ -2512,6 +2512,28 @@ const CARTOON_LIST = [
 				},
 				"img": "0227.png",
 				"created-at": "2024-04-21"
+			},
+			{
+				"title":{
+					"en": "Secretly filming",
+					"kr": "도촬",
+					"jp": "盗撮",
+					"cn": "偷窥狂",
+					"ru": "Тайно снимаю"
+				},
+				"img": "0228.png",
+				"created-at": "2024-04-27"
+			},
+			{
+				"title":{
+					"en": "Replication of research environment",
+					"kr": "연구환경 복제",
+					"jp": "研究環境の複製",
+					"cn": "研究环境复制",
+					"ru": "Репликация исследовательской среды"
+				},
+				"img": "0229.png",
+				"created-at": "2024-04-27"
 			}
 		]
 	}
