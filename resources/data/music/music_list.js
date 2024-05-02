@@ -19,6 +19,48 @@ const PLAY_LIST = [
 		"music": [
 			{
 				"title": {
+					"en": "Ruins and rains",
+					"kr": "폐허와 비",
+					"jp": "廃墟と雨",
+					"cn": "废墟和雨水",
+					"ru": "Руины и дожди"
+				},
+				"lyrics":{
+					"en": "",
+					"kr": "",
+					"jp": "",
+					"cn": "",
+					"ru": ""
+				},
+				"composed-at": "2024-05-03",
+				"composed-with": "Udio",
+				"duration": 162,
+				"mp3": "/resources/files/music/Ruins and rains.mp3",
+				"tag": ["instrumental", "atmospheric", "abstract", "poetic", "emotional", "acoustic guitar", "strings", "lonely"],
+				"image": "/resources/img/music/music/Ruins and rains.avif"
+			}
+		]
+	},
+	{
+		"title": {
+			"en": "RPG - Medieval Fantasy",
+			"kr": "RPG - 중세 판타지",
+			"jp": "RPG - 中世ファンタジー",
+			"cn": "角色扮演游戏 - 中世纪奇幻",
+			"ru": "RPG - Средневековое фэнтези"
+		},
+		"description": {
+			"en": "A collection of music with a medieval fantasy game feel.",
+			"kr": "중세 판타지 게임 느낌의 음악 모음입니다.",
+			"jp": "中世のファンタジーゲーム感のある音楽のコレクションです。",
+			"cn": "具有中世纪奇幻游戏感觉的音乐合集。",
+			"ru": "Сборник музыки в духе средневековой фэнтезийной игры."
+		},
+		"tag": ["rpg", "medival", "fantasy"],
+		"image": "/resources/img/music/playlist/RPG - Medieval Fantasy.jpg",
+		"music": [
+			{
+				"title": {
 					"en": "Forging more than just swords, but a legacy wide",
 					"kr": "단순한 검이 아닌, 그 이상의 전설을 제작할 것입니다",
 					"jp": "単なる剣ではなく、それ以上の伝説を制作します",
@@ -104,6 +146,50 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/Titanium mine.mp3",
 				"tag": ["mine", "miner", "voice", "industrial", "post-industrial", "industrial rock", "electronic", "energetic", "breakbeat", "fantasy", "rpg", "npc"],
 				"image": "/resources/img/music/music/Titanium mine.avif"
+			}, 
+			{
+				"title": {
+					"en": "Compass and breeze",
+					"kr": "나침반과 산들바람",
+					"jp": "羅針盤とそよ風",
+					"cn": "指南针和微风",
+					"ru": "Компас и ветер"
+				},
+				"lyrics":{
+					"en": "",
+					"kr": "",
+					"jp": "",
+					"cn": "",
+					"ru": ""
+				},
+				"composed-at": "2024-04-30",
+				"composed-with": "Udio",
+				"duration": 130,
+				"mp3": "/resources/files/music/Compass and breeze.mp3",
+				"tag": ["instrumental", "folk", "melodic", "mellow", "acoustic", "melancholic", "poetic", "bittersweet", "introspective", "sentimental", "autumn", "soft", "soothing", "acoustic guitar", "fantasy", "rpg", "field"],
+				"image": "/resources/img/music/music/Compass and breeze.avif"
+			}, 
+			{
+				"title": {
+					"en": "Wandering merchant at noon",
+					"kr": "정오의 떠돌이 상인",
+					"jp": "昼下がりの放浪商人",
+					"cn": "游荡的商人在中午",
+					"ru": "Прогуливающийся торговец в полдень"
+				},
+				"lyrics":{
+					"en": "",
+					"kr": "",
+					"jp": "",
+					"cn": "",
+					"ru": ""
+				},
+				"composed-at": "2024-05-02",
+				"composed-with": "Udio",
+				"duration": 97,
+				"mp3": "/resources/files/music/Wandering merchant at noon.mp3",
+				"tag": ["merchant", "instrumental", "celtic folk music", "melodic", "lute", "flute", "fantasy", "rpg", "npc"],
+				"image": "/resources/img/music/music/Wandering merchant at noon.avif"
 			}
 		]
 	}
