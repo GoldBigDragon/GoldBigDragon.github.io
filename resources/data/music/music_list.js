@@ -78,7 +78,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 196,
 				"mp3": "/resources/files/music/Forging more than just swords, but a legacy wide.mp3",
-				"tag": ["blacksmith", "voice", "rock", "pop rock", "symphonic rock", "pop", "progressive", "uplifting", "progressive pop", "optimistic", "epic", "lush", "fantasy", "rpg", "npc", "dwarf", "medieval"],
+				"tag": ["voice", "blacksmith", "rock", "pop rock", "symphonic rock", "pop", "progressive", "uplifting", "progressive pop", "optimistic", "epic", "lush", "fantasy", "rpg", "npc", "dwarf", "medieval"],
 				"image": "/resources/img/music/music/Forging more than just swords, but a legacy wide.avif"
 			}, 
 			{
@@ -100,7 +100,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 163,
 				"mp3": "/resources/files/music/Pour, bartender, pour.mp3",
-				"tag": ["tavern", "bartender", "voice", "rock", "passionate", "ethereal", "lush", "nocturnal", "poetic", "electronic", "fantasy", "rpg", "npc", "medieval"],
+				"tag": ["voice", "tavern", "bartender", "rock", "passionate", "ethereal", "lush", "nocturnal", "poetic", "electronic", "fantasy", "rpg", "npc", "medieval"],
 				"image": "/resources/img/music/music/Pour, bartender, pour.avif"
 			}, 
 			{
@@ -122,7 +122,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 197,
 				"mp3": "/resources/files/music/Ancient library.mp3",
-				"tag": ["library", "voice", "ambient", "electroacoustic", "atmospheric", "calm", "ethereal", "meditative", "soothing", "surreal", "fantasy", "rpg", "npc", "medieval"],
+				"tag": ["voice", "library", "ambient", "electroacoustic", "atmospheric", "calm", "ethereal", "meditative", "soothing", "surreal", "fantasy", "rpg", "npc", "medieval"],
 				"image": "/resources/img/music/music/Ancient library.avif"
 			}, 
 			{
@@ -144,7 +144,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 131,
 				"mp3": "/resources/files/music/Titanium mine.mp3",
-				"tag": ["mine", "miner", "voice", "industrial", "post-industrial", "industrial rock", "electronic", "energetic", "breakbeat", "fantasy", "rpg", "npc", "medieval"],
+				"tag": ["voice", "mine", "miner", "industrial", "post-industrial", "industrial rock", "electronic", "energetic", "breakbeat", "fantasy", "rpg", "npc", "medieval"],
 				"image": "/resources/img/music/music/Titanium mine.avif"
 			}, 
 			{
@@ -188,7 +188,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 97,
 				"mp3": "/resources/files/music/Wandering merchant at noon.mp3",
-				"tag": ["merchant", "instrumental", "celtic folk music", "melodic", "lute", "flute", "fantasy", "rpg", "npc", "medieval"],
+				"tag": ["instrumental", "merchant", "celtic folk music", "melodic", "lute", "flute", "fantasy", "rpg", "npc", "medieval"],
 				"image": "/resources/img/music/music/Wandering merchant at noon.avif"
 			}
 		]

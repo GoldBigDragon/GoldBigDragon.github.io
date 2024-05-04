@@ -118,7 +118,7 @@ const PROGRAM_LIST = [
 			"java_fx"
 		],
 		"language": "java 8",
-		"download": "/resources/files/program/NuriCHAIN/NuriCHAIN_2019_11_25_21_06.zip",
+		"download": "https://drive.google.com/file/d/1fb3Y-WQqqH0s9mvhMNdo_DfOuPs0MBk_/view?usp=sharing",
 		"document": "/resources/files/program/NuriCHAIN/NuriCHAIN_Report.pdf",
 		"youtube": "https://youtu.be/BkHq69RD9l4",
 		"icon": "/resources/img/program/NuriCHAIN/icon.png",
