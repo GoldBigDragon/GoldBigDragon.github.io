@@ -38,6 +38,72 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/Ruins and rains.mp3",
 				"tag": ["instrumental", "atmospheric", "abstract", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
 				"image": "/resources/img/music/music/Ruins and rains.avif"
+			},
+			{
+				"title": {
+					"en": "Command and control room",
+					"kr": "지휘통제실",
+					"jp": "指揮統制室",
+					"cn": "指挥控制室",
+					"ru": "Комната управления и контроля"
+				},
+				"lyrics":{
+					"en": "",
+					"kr": "",
+					"jp": "",
+					"cn": "",
+					"ru": ""
+				},
+				"composed-at": "2024-05-04",
+				"composed-with": "Udio",
+				"duration": 130,
+				"mp3": "/resources/files/music/Command and control room.mp3",
+				"tag": ["instrumental", "industrial & noise", "post-industrial", "electro-industrial", "mechanical", "nocturnal", "cybernetic", "bunker", "tactics", "techniques"],
+				"image": "/resources/img/music/music/Command and control room.avif"
+			},
+			{
+				"title": {
+					"en": "Creative intro",
+					"kr": "Creative intro",
+					"jp": "Creative intro",
+					"cn": "Creative intro",
+					"ru": "Creative intro"
+				},
+				"lyrics":{
+					"en": "",
+					"kr": "",
+					"jp": "",
+					"cn": "",
+					"ru": ""
+				},
+				"composed-at": "2024-05-12",
+				"composed-with": "Udio",
+				"duration": 65,
+				"mp3": "/resources/files/music/Creative intro.mp3",
+				"tag": ["instrumental", "shorts", "intro", "complextro", "pop", "k-pop", "contemporary r&b", "complextro"],
+				"image": "/resources/img/music/music/Creative intro.avif"
+			},
+			{
+				"title": {
+					"en": "One target, one bullet",
+					"kr": "One target, one bullet",
+					"jp": "One target, one bullet",
+					"cn": "One target, one bullet",
+					"ru": "One target, one bullet"
+				},
+				"lyrics":{
+					"en": "",
+					"kr": "",
+					"jp": "",
+					"cn": "",
+					"ru": ""
+				},
+				"composed-at": "2024-05-15",
+				"composed-with": "Udio",
+				"duration": 130,
+				"mp3": "/resources/files/music/One target, one bullet.mp3",
+				"tag": ["instrumental", "post-industrial", "industrial & noise", "ebm", "electronic", "dark", "synth-pop"],
+				"image": "/resources/img/music/music/One target, one bullet.avif"
 			}
 		]
 	},
