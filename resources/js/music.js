@@ -180,7 +180,7 @@ function addMusic(musicArea, musicData, index){
 	musicImage.src = musicData["image"];
 	const playButton = document.createElement("div");
 	playButton.className = "play-button";
-	playButton.setAttribute("onClick", "setPlayList('" + musicData["title"]["en"].replace("'", "\'") + "')");
+	playButton.setAttribute("onClick", "setPlayList('" + musicData["title"]["en"].replace("'", "\\'") + "')");
 	const buttonIcon = document.createElement("i");
 	buttonIcon.className = "fa-solid fa-eject";
 	playButton.appendChild(buttonIcon);
@@ -198,7 +198,7 @@ function addMusic(musicArea, musicData, index){
 	const title = document.createElement("div");
 	title.className = "row music-title lang";
 	title.innerHTML = musicData["title"][NOW_LANG];
-	title.setAttribute("onClick", "showDetails('" + musicData["title"]['en'].replace("'", "\'") + "')");
+	title.setAttribute("onClick", "showDetails('" + musicData["title"]['en'].replace("'", "\\'") + "')");
 	
 	LANGUAGE_OBJECT["MUSIC_LANG"][musicData["title"]["en"]+"-title"] = musicData["title"];
 	title.setAttribute("data-lang-var", "MUSIC_LANG");
@@ -367,7 +367,7 @@ function addPlaylist(musicArea, playlistData, index){
 	musicImage.src = playlistData["image"];
 	const playButton = document.createElement("div");
 	playButton.className = "play-button";
-	playButton.setAttribute("onClick", "setPlayListAll('" + playlistData["title"]["en"].replace("'", "\'") + "')");
+	playButton.setAttribute("onClick", "setPlayListAll('" + playlistData["title"]["en"].replace("'", "\\'") + "')");
 	const buttonIcon = document.createElement("i");
 	buttonIcon.className = "fa-solid fa-eject";
 	playButton.appendChild(buttonIcon);
@@ -385,7 +385,7 @@ function addPlaylist(musicArea, playlistData, index){
 	const title = document.createElement("div");
 	title.className = "row music-title lang";
 	title.innerHTML = playlistData["title"][NOW_LANG];
-	title.setAttribute("onClick", "setSearchMusicPlaylistValue('" + playlistData["title"][NOW_LANG].replace("'", "\'") + "')");
+	title.setAttribute("onClick", "setSearchMusicPlaylistValue('" + playlistData["title"][NOW_LANG].replace("'", "\\'") + "')");
 	
 	LANGUAGE_OBJECT["MUSIC_LANG"][playlistData["title"]["en"]+"-title"] = playlistData["title"];
 	title.setAttribute("data-lang-var", "MUSIC_LANG");
