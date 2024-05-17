@@ -126,7 +126,29 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/The Diamond Sutra.mp3",
 				"tag": ["voice", "trance", "progressive house", "electronic dance music", "tech house", "house", "electronic", "electro house", "hypnotic", "repetitive", "uplifting", "melodic", "party", "atmospheric", "playful", "minimalistic", "energetic", "rhythmic", "bittersweet", "ethereal", "lush"],
 				"image": "/resources/img/music/music/The Diamond Sutra.avif"
-			}
+			},
+			{
+				"title": {
+					"en": "Impatient knight's adventure",
+					"kr": "참을성 없는 기사의 모험",
+					"jp": "忍耐強い記事の冒険",
+					"cn": "不耐烦的骑士的冒险",
+					"ru": "Приключение нетерпеливого рыцаря"
+				},
+				"lyrics":{
+					"en": "",
+					"kr": "",
+					"jp": "",
+					"cn": "",
+					"ru": ""
+				},
+				"composed-at": "2024-05-17",
+				"composed-with": "Udio",
+				"duration": 130,
+				"mp3": "/resources/files/music/Impatient knight's adventure.mp3",
+				"tag": ["instrumental", "chiptune", "dungeon", "electronic", "bit music", "rpg"],
+				"image": "/resources/img/music/music/Impatient knight's adventure.avif"
+			},
 		]
 	},
 	{
