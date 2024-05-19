@@ -25,41 +25,12 @@ const PLAY_LIST = [
 					"cn": "废墟和雨水",
 					"ru": "Руины и дожди"
 				},
-				"lyrics":{
-					"en": "",
-					"kr": "",
-					"jp": "",
-					"cn": "",
-					"ru": ""
-				},
 				"composed-at": "2024-05-03",
 				"composed-with": "Udio",
 				"duration": 162,
-				"mp3": "/resources/files/music/Ruins and rains.mp3",
+				"mp3": "/resources/files/music/udio/Ruins and rains.mp3",
 				"tag": ["instrumental", "atmospheric", "abstract", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
-				"image": "/resources/img/music/music/Ruins and rains.avif"
-			},
-			{
-				"title": {
-					"en": "Command and control room",
-					"kr": "지휘통제실",
-					"jp": "指揮統制室",
-					"cn": "指挥控制室",
-					"ru": "Комната управления и контроля"
-				},
-				"lyrics":{
-					"en": "",
-					"kr": "",
-					"jp": "",
-					"cn": "",
-					"ru": ""
-				},
-				"composed-at": "2024-05-04",
-				"composed-with": "Udio",
-				"duration": 130,
-				"mp3": "/resources/files/music/Command and control room.mp3",
-				"tag": ["instrumental", "industrial & noise", "post-industrial", "electro-industrial", "mechanical", "nocturnal", "cybernetic", "bunker", "tactics", "techniques"],
-				"image": "/resources/img/music/music/Command and control room.avif"
+				"image": "/resources/img/music/music/udio/Ruins and rains.avif"
 			},
 			{
 				"title": {
@@ -69,19 +40,12 @@ const PLAY_LIST = [
 					"cn": "Creative intro",
 					"ru": "Creative intro"
 				},
-				"lyrics":{
-					"en": "",
-					"kr": "",
-					"jp": "",
-					"cn": "",
-					"ru": ""
-				},
 				"composed-at": "2024-05-12",
 				"composed-with": "Udio",
 				"duration": 65,
-				"mp3": "/resources/files/music/Creative intro.mp3",
+				"mp3": "/resources/files/music/udio/Creative intro.mp3",
 				"tag": ["instrumental", "shorts", "intro", "complextro", "pop", "k-pop", "contemporary r&b", "complextro"],
-				"image": "/resources/img/music/music/Creative intro.avif"
+				"image": "/resources/img/music/music/udio/Creative intro.avif"
 			},
 			{
 				"title": {
@@ -91,19 +55,12 @@ const PLAY_LIST = [
 					"cn": "One target, one bullet",
 					"ru": "One target, one bullet"
 				},
-				"lyrics":{
-					"en": "",
-					"kr": "",
-					"jp": "",
-					"cn": "",
-					"ru": ""
-				},
 				"composed-at": "2024-05-15",
 				"composed-with": "Udio",
 				"duration": 130,
-				"mp3": "/resources/files/music/One target, one bullet.mp3",
+				"mp3": "/resources/files/music/udio/One target, one bullet.mp3",
 				"tag": ["instrumental", "post-industrial", "industrial & noise", "ebm", "electronic", "dark", "synth-pop"],
-				"image": "/resources/img/music/music/One target, one bullet.avif"
+				"image": "/resources/img/music/music/udio/One target, one bullet.avif"
 			},
 			{
 				"title": {
@@ -123,9 +80,9 @@ const PLAY_LIST = [
 				"composed-at": "2024-05-16",
 				"composed-with": "Udio",
 				"duration": 294,
-				"mp3": "/resources/files/music/The Diamond Sutra.mp3",
+				"mp3": "/resources/files/music/udio/The Diamond Sutra.mp3",
 				"tag": ["voice", "trance", "progressive house", "electronic dance music", "tech house", "house", "electronic", "electro house", "hypnotic", "repetitive", "uplifting", "melodic", "party", "atmospheric", "playful", "minimalistic", "energetic", "rhythmic", "bittersweet", "ethereal", "lush"],
-				"image": "/resources/img/music/music/The Diamond Sutra.avif"
+				"image": "/resources/img/music/music/udio/The Diamond Sutra.avif"
 			}
 		]
 	},
@@ -165,9 +122,9 @@ const PLAY_LIST = [
 				"composed-at": "2024-04-17",
 				"composed-with": "Udio",
 				"duration": 196,
-				"mp3": "/resources/files/music/Forging more than just swords, but a legacy wide.mp3",
+				"mp3": "/resources/files/music/udio/Forging more than just swords, but a legacy wide.mp3",
 				"tag": ["voice", "blacksmith", "rock", "pop rock", "symphonic rock", "pop", "progressive", "uplifting", "progressive pop", "optimistic", "epic", "lush", "fantasy", "rpg", "npc", "dwarf", "medieval"],
-				"image": "/resources/img/music/music/Forging more than just swords, but a legacy wide.avif"
+				"image": "/resources/img/music/music/udio/Forging more than just swords, but a legacy wide.avif"
 			}, 
 			{
 				"title": {
@@ -187,9 +144,9 @@ const PLAY_LIST = [
 				"composed-at": "2024-04-20",
 				"composed-with": "Udio",
 				"duration": 163,
-				"mp3": "/resources/files/music/Pour, bartender, pour.mp3",
+				"mp3": "/resources/files/music/udio/Pour, bartender, pour.mp3",
 				"tag": ["voice", "tavern", "bartender", "rock", "passionate", "ethereal", "lush", "nocturnal", "poetic", "electronic", "fantasy", "rpg", "npc", "medieval"],
-				"image": "/resources/img/music/music/Pour, bartender, pour.avif"
+				"image": "/resources/img/music/music/udio/Pour, bartender, pour.avif"
 			}, 
 			{
 				"title": {
@@ -209,9 +166,9 @@ const PLAY_LIST = [
 				"composed-at": "2024-04-21",
 				"composed-with": "Udio",
 				"duration": 197,
-				"mp3": "/resources/files/music/Ancient library.mp3",
+				"mp3": "/resources/files/music/udio/Ancient library.mp3",
 				"tag": ["voice", "library", "ambient", "electroacoustic", "atmospheric", "calm", "ethereal", "meditative", "soothing", "surreal", "fantasy", "rpg", "npc", "medieval"],
-				"image": "/resources/img/music/music/Ancient library.avif"
+				"image": "/resources/img/music/music/udio/Ancient library.avif"
 			}, 
 			{
 				"title": {
@@ -231,9 +188,9 @@ const PLAY_LIST = [
 				"composed-at": "2024-04-23",
 				"composed-with": "Udio",
 				"duration": 131,
-				"mp3": "/resources/files/music/Titanium mine.mp3",
+				"mp3": "/resources/files/music/udio/Titanium mine.mp3",
 				"tag": ["voice", "mine", "miner", "industrial", "post-industrial", "industrial rock", "electronic", "energetic", "breakbeat", "fantasy", "rpg", "npc", "medieval"],
-				"image": "/resources/img/music/music/Titanium mine.avif"
+				"image": "/resources/img/music/music/udio/Titanium mine.avif"
 			}, 
 			{
 				"title": {
@@ -243,19 +200,12 @@ const PLAY_LIST = [
 					"cn": "指南针和微风",
 					"ru": "Компас и ветер"
 				},
-				"lyrics":{
-					"en": "",
-					"kr": "",
-					"jp": "",
-					"cn": "",
-					"ru": ""
-				},
 				"composed-at": "2024-04-30",
 				"composed-with": "Udio",
 				"duration": 130,
-				"mp3": "/resources/files/music/Compass and breeze.mp3",
+				"mp3": "/resources/files/music/udio/Compass and breeze.mp3",
 				"tag": ["instrumental", "folk", "melodic", "mellow", "acoustic", "melancholic", "poetic", "bittersweet", "introspective", "sentimental", "autumn", "soft", "soothing", "acoustic guitar", "fantasy", "rpg", "field", "medieval"],
-				"image": "/resources/img/music/music/Compass and breeze.avif"
+				"image": "/resources/img/music/music/udio/Compass and breeze.avif"
 			}, 
 			{
 				"title": {
@@ -265,19 +215,12 @@ const PLAY_LIST = [
 					"cn": "游荡的商人在中午",
 					"ru": "Прогуливающийся торговец в полдень"
 				},
-				"lyrics":{
-					"en": "",
-					"kr": "",
-					"jp": "",
-					"cn": "",
-					"ru": ""
-				},
 				"composed-at": "2024-05-02",
 				"composed-with": "Udio",
 				"duration": 97,
-				"mp3": "/resources/files/music/Wandering merchant at noon.mp3",
+				"mp3": "/resources/files/music/udio/Wandering merchant at noon.mp3",
 				"tag": ["instrumental", "merchant", "celtic folk music", "melodic", "lute", "flute", "fantasy", "rpg", "npc", "medieval"],
-				"image": "/resources/img/music/music/Wandering merchant at noon.avif"
+				"image": "/resources/img/music/music/udio/Wandering merchant at noon.avif"
 			},
 			{
 				"title": {
@@ -287,19 +230,788 @@ const PLAY_LIST = [
 					"cn": "不耐烦的骑士的冒险",
 					"ru": "Приключение нетерпеливого рыцаря"
 				},
-				"lyrics":{
-					"en": "",
-					"kr": "",
-					"jp": "",
-					"cn": "",
-					"ru": ""
-				},
 				"composed-at": "2024-05-17",
 				"composed-with": "Udio",
 				"duration": 130,
-				"mp3": "/resources/files/music/Impatient knight's adventure.mp3",
+				"mp3": "/resources/files/music/udio/Impatient knight's adventure.mp3",
 				"tag": ["instrumental", "chiptune", "dungeon", "electronic", "bit music", "rpg"],
-				"image": "/resources/img/music/music/Impatient knight's adventure.avif"
+				"image": "/resources/img/music/music/udio/Impatient knight's adventure.avif"
+			},
+			{
+				"title": {
+					"en": "Outdoor hot springs",
+					"kr": "야외 온천",
+					"jp": "露天風呂",
+					"cn": "露天温泉",
+					"ru": "Открытые горячие источники"
+				},
+				"composed-at": "2021-07-16",
+				"composed-with": "AIVA",
+				"duration": 131,
+				"meter": "4/4",
+				"tempo": "80",
+				"key": "E Major",
+				"mp3": "/resources/files/music/aiva/Outdoor hot springs/Outdoor hot springs.mp3",
+				"wav": "/resources/files/music/aiva/Outdoor hot springs/Outdoor hot springs.wav",
+				"midi": "/resources/files/music/aiva/Outdoor hot springs/Outdoor hot springs_midi.7z",
+				"stem": "/resources/files/music/aiva/Outdoor hot springs/Outdoor hot springs_stem.7z",
+				"tag": ["instrumental", "rpg", "ambient", "chinese", "field"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Stronghold",
+					"kr": "요새",
+					"jp": "Stronghold",
+					"cn": "Stronghold",
+					"ru": "Stronghold"
+				},
+				"composed-at": "2021-07-19",
+				"composed-with": "AIVA",
+				"duration": 113,
+				"meter": "3/4",
+				"tempo": "160",
+				"key": "E Minor",
+				"instrumentation": "Symphonic Orchestra",
+				"mp3": "/resources/files/music/aiva/Stronghold/Stronghold.mp3",
+				"wav": "/resources/files/music/aiva/Stronghold/Stronghold.wav",
+				"midi": "/resources/files/music/aiva/Stronghold/Stronghold_midi.7z",
+				"stem": "/resources/files/music/aiva/Stronghold/Stronghold_stem.7z",
+				"tag": ["instrumental", "rpg", "castle"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Temple",
+					"kr": "사원",
+					"jp": "Temple",
+					"cn": "Temple",
+					"ru": "Temple"
+				},
+				"composed-at": "2021-07-20",
+				"composed-with": "AIVA",
+				"duration": 113,
+				"meter": "4/4",
+				"tempo": "85",
+				"key": "F Major",
+				"mp3": "/resources/files/music/aiva/Temple/Temple.mp3",
+				"wav": "/resources/files/music/aiva/Temple/Temple.wav",
+				"midi": "/resources/files/music/aiva/Temple/Temple_midi.7z",
+				"stem": "/resources/files/music/aiva/Temple/Temple_stem.7z",
+				"tag": ["instrumental", "rpg", "temple"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Chapel",
+					"kr": "예배당",
+					"jp": "礼拝堂",
+					"cn": "教堂",
+					"ru": "Часовня"
+				},
+				"composed-at": "2021-07-20",
+				"composed-with": "AIVA",
+				"duration": 138,
+				"meter": "4/4",
+				"tempo": "85",
+				"key": "F Major",
+				"instrumentation": "Soft Piano Solo",
+				"mp3": "/resources/files/music/aiva/Chapel/Chapel.mp3",
+				"wav": "/resources/files/music/aiva/Chapel/Chapel.wav",
+				"midi": "/resources/files/music/aiva/Chapel/Chapel_midi.7z",
+				"stem": "/resources/files/music/aiva/Chapel/Chapel_stem.7z",
+				"tag": ["instrumental", "rpg", "ambient", "field"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Abandoned altar",
+					"kr": "버려진 제단",
+					"jp": "放棄された祭壇",
+					"cn": "废弃的祭坛",
+					"ru": "Заброшенный алтарь"
+				},
+				"composed-at": "2021-07-27",
+				"composed-with": "AIVA",
+				"duration": 154,
+				"meter": "4/4",
+				"tempo": "30",
+				"key": "B Minor",
+				"instrumentation": "Meditation Ensemble",
+				"mp3": "/resources/files/music/aiva/Abandoned altar/Abandoned altar.mp3",
+				"wav": "/resources/files/music/aiva/Abandoned altar/Abandoned altar.wav",
+				"midi": "/resources/files/music/aiva/Abandoned altar/Abandoned altar_midi.7z",
+				"stem": "/resources/files/music/aiva/Abandoned altar/Abandoned altar_stem.7z",
+				"tag": ["instrumental", "rpg", "ambient", "field"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Raconteur",
+					"kr": "이야기꾼",
+					"jp": "語り手",
+					"cn": "讲故事者",
+					"ru": "Рассказчик"
+				},
+				"composed-at": "2021-08-11",
+				"composed-with": "AIVA",
+				"duration": 131,
+				"meter": "4/4",
+				"tempo": "120",
+				"key": "G# Minor",
+				"instrumentation": "Soft Piano Solo",
+				"mp3": "/resources/files/music/aiva/Raconteur/Raconteur.mp3",
+				"wav": "/resources/files/music/aiva/Raconteur/Raconteur.wav",
+				"midi": "/resources/files/music/aiva/Raconteur/Raconteur_midi.7z",
+				"stem": "/resources/files/music/aiva/Raconteur/Raconteur_stem.7z",
+				"tag": ["instrumental", "rpg", "npc", "strings", "woodwinds"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "The story has begun",
+					"kr": "이야기는 시작되었다",
+					"jp": "物語が始まりました",
+					"cn": "故事开始了",
+					"ru": "История началась"
+				},
+				"composed-at": "2022-07-11",
+				"composed-with": "AIVA",
+				"duration": 95,
+				"meter": "4/4",
+				"tempo": "120",
+				"key": "A Minor",
+				"instrumentation": "Small Tavern Band",
+				"mp3": "/resources/files/music/aiva/The story has begun/The story has begun.mp3",
+				"wav": "/resources/files/music/aiva/The story has begun/The story has begun.wav",
+				"midi": "/resources/files/music/aiva/The story has begun/The story has begun_midi.7z",
+				"stem": "/resources/files/music/aiva/The story has begun/The story has begun_stem.7z",
+				"tag": ["instrumental", "rpg", "npc", "tavern"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Windmill",
+					"kr": "풍차",
+					"jp": "風車",
+					"cn": "风车",
+					"ru": "Ветряная мельница"
+				},
+				"composed-at": "2022-06-28",
+				"composed-with": "AIVA",
+				"duration": 77,
+				"meter": "4/4",
+				"tempo": "125",
+				"key": "F Minor",
+				"instrumentation": "Lo-Fi Ensemble",
+				"mp3": "/resources/files/music/aiva/windmil/windmil.mp3",
+				"wav": "/resources/files/music/aiva/windmil/windmil.wav",
+				"midi": "/resources/files/music/aiva/windmil/windmil_midi.7z",
+				"stem": "/resources/files/music/aiva/windmil/windmil_stem.7z",
+				"tag": ["instrumental", "rpg", "field"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Forest's aria",
+					"kr": "숲의 아리아",
+					"jp": "森のアリア",
+					"cn": "森林的咏叹调",
+					"ru": "Ария Фореста"
+				},
+				"composed-at": "2021-12-12",
+				"composed-with": "AIVA",
+				"duration": 156,
+				"meter": "4/4",
+				"tempo": "85",
+				"key": "F Major",
+				"instrumentation": "Epic Emotional Ensemble",
+				"mp3": "/resources/files/music/aiva/Forest's aria/Forest's aria.mp3",
+				"wav": "/resources/files/music/aiva/Forest's aria/Forest's aria.wav",
+				"midi": "/resources/files/music/aiva/Forest's aria/Forest's aria_midi.7z",
+				"stem": "/resources/files/music/aiva/Forest's aria/Forest's aria_stem.7z",
+				"tag": ["instrumental", "rpg"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			}
+		]
+	},
+	{
+		"title": {
+			"en": "Modern",
+			"kr": "현대",
+			"jp": "モダンな",
+			"cn": "现代的",
+			"ru": "Современный"
+		},
+		"description": {
+			"en": "A collection of music with a modern feel.",
+			"kr": "현대적인 느낌의 음악 모음입니다.",
+			"jp": "モダンな雰囲気を持った音楽を集めたコレクション。",
+			"cn": "具有现代感的音乐合集。",
+			"ru": "Сборник музыки в современном стиле."
+		},
+		"tag": ["modern"],
+		"image": "/resources/img/music/playlist/Modern.jpg",
+		"music": [
+			{
+				"title": {
+					"en": "Dewy morning",
+					"kr": "이슬 맺힌 아침",
+					"jp": "露に濡れた朝",
+					"cn": "露水的早晨",
+					"ru": "Росистое утро"
+				},
+				"composed-at": "2022-01-11",
+				"composed-with": "AIVA",
+				"duration": 95,
+				"meter": "4/4",
+				"tempo": "110",
+				"key": "D Major",
+				"instrumentation": "Bedroom Ensemble",
+				"mp3": "/resources/files/music/aiva/Dewy morning/Dewy morning.mp3",
+				"wav": "/resources/files/music/aiva/Dewy morning/Dewy morning.wav",
+				"midi": "/resources/files/music/aiva/Dewy morning/Dewy morning_midi.7z",
+				"stem": "/resources/files/music/aiva/Dewy morning/Dewy morning_stem.7z",
+				"tag": ["instrumental", "modern", "field", "pop"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Until you come",
+					"kr": "당신이 올 때까지",
+					"jp": "あなたが来るまで",
+					"cn": "直到你来",
+					"ru": "Пока ты не придешь"
+				},
+				"composed-at": "2021-07-27",
+				"composed-with": "AIVA",
+				"duration": 144,
+				"meter": "4/4",
+				"tempo": "100",
+				"key": "G Major",
+				"instrumentation": "Lo-Fi Ensemble",
+				"mp3": "/resources/files/music/aiva/Until you come/Until you come.mp3",
+				"wav": "/resources/files/music/aiva/Until you come/Until you come.wav",
+				"midi": "/resources/files/music/aiva/Until you come/Until you come_midi.7z",
+				"stem": "/resources/files/music/aiva/Until you come/Until you come_stem.7z",
+				"tag": ["instrumental", "modern", "jazz", "lo-fi"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Innovative Algorithm",
+					"kr": "혁신적인 알고리즘",
+					"jp": "革新的なアルゴリズム",
+					"cn": "创新算法",
+					"ru": "Инновационный алгоритм"
+				},
+				"composed-at": "2022-01-06",
+				"composed-with": "AIVA",
+				"duration": 40,
+				"meter": "4/4",
+				"tempo": "140",
+				"key": "E Minor",
+				"instrumentation": "French House Ensemble",
+				"mp3": "/resources/files/music/aiva/Innovative Algorithm/Innovative Algorithm.mp3",
+				"wav": "/resources/files/music/aiva/Innovative Algorithm/Innovative Algorithm.wav",
+				"midi": "/resources/files/music/aiva/Innovative Algorithm/Innovative Algorithm_midi.7z",
+				"stem": "/resources/files/music/aiva/Innovative Algorithm/Innovative Algorithm_stem.7z",
+				"tag": ["instrumental", "modern", "house"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			}
+		]
+	},
+	{
+		"title": {
+			"en": "RPG - Sci-Fi",
+			"kr": "RPG - 공상과학",
+			"jp": "RPG - Sci-Fi",
+			"cn": "RPG - 科幻",
+			"ru": "RPG - Научная фантастика"
+		},
+		"description": {
+			"en": "A collection of music with a sci-fi feel.",
+			"kr": "공상과학 느낌의 음악 모음입니다.",
+			"jp": "SF感あふれる音楽集。",
+			"cn": "具有科幻感的音乐合集。",
+			"ru": "Сборник музыки в научно-фантастическом стиле."
+		},
+		"tag": ["rpg", "sci-fi", "fantasy", "sf", "computer", "cybernetic"],
+		"image": "/resources/img/music/playlist/SciFi.jpg",
+		"music": [
+			{
+				"title": {
+					"en": "Command and control room",
+					"kr": "지휘통제실",
+					"jp": "指揮統制室",
+					"cn": "指挥控制室",
+					"ru": "Комната управления и контроля"
+				},
+				"composed-at": "2024-05-04",
+				"composed-with": "Udio",
+				"duration": 130,
+				"mp3": "/resources/files/music/udio/Command and control room.mp3",
+				"tag": ["instrumental", "industrial & noise", "post-industrial", "electro-industrial", "mechanical", "nocturnal", "cybernetic", "bunker", "tactics", "techniques"],
+				"image": "/resources/img/music/music/udio/Command and control room.avif"
+			},
+			{
+				"title": {
+					"en": "New program dispatching",
+					"kr": "New program dispatching",
+					"jp": "New program dispatching",
+					"cn": "New program dispatching",
+					"ru": "New program dispatching"
+				},
+				"composed-at": "2021-07-15",
+				"composed-with": "AIVA",
+				"duration": 166,
+				"meter": "4/4",
+				"tempo": "40",
+				"key": "E Minor",
+				"instrumentation": "Cyberpunk Ensemble",
+				"mp3": "/resources/files/music/aiva/New program dispatching/New program dispatching.mp3",
+				"wav": "/resources/files/music/aiva/New program dispatching/New program dispatching.wav",
+				"midi": "/resources/files/music/aiva/New program dispatching/New program dispatching_midi.7z",
+				"stem": "/resources/files/music/aiva/New program dispatching/New program dispatching_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "cyberpunk"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Waiting suspended mode",
+					"kr": "Waiting suspended mode",
+					"jp": "Waiting suspended mode",
+					"cn": "Waiting suspended mode",
+					"ru": "Waiting suspended mode"
+				},
+				"composed-at": "2021-07-24",
+				"composed-with": "AIVA",
+				"duration": 103,
+				"meter": "4/4",
+				"tempo": "90",
+				"key": "E Major",
+				"instrumentation": "Downtempo Ensemble",
+				"mp3": "/resources/files/music/aiva/Waiting suspended mode/Waiting suspended mode.mp3",
+				"wav": "/resources/files/music/aiva/Waiting suspended mode/Waiting suspended mode.wav",
+				"midi": "/resources/files/music/aiva/Waiting suspended mode/Waiting suspended mode_midi.7z",
+				"stem": "/resources/files/music/aiva/Waiting suspended mode/Waiting suspended mode_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "downtempo", "electronic"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "SYN Flood",
+					"kr": "SYN Flood",
+					"jp": "SYN Flood",
+					"cn": "SYN Flood",
+					"ru": "SYN Flood"
+				},
+				"composed-at": "2022-01-02",
+				"composed-with": "AIVA",
+				"duration": 98,
+				"meter": "4/4",
+				"tempo": "130",
+				"key": "G# Minor",
+				"instrumentation": "Cyberpunk Ensemble",
+				"mp3": "/resources/files/music/aiva/SYN Flood/SYN Flood.mp3",
+				"wav": "/resources/files/music/aiva/SYN Flood/SYN Flood.wav",
+				"midi": "/resources/files/music/aiva/SYN Flood/SYN Flood_midi.7z",
+				"stem": "/resources/files/music/aiva/SYN Flood/SYN Flood_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "cyberpunk", "electronic", "dark"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Gray world, Gray people, Gray hat",
+					"kr": "Gray world, Gray people, Gray hat",
+					"jp": "Gray world, Gray people, Gray hat",
+					"cn": "Gray world, Gray people, Gray hat",
+					"ru": "Gray world, Gray people, Gray hat"
+				},
+				"composed-at": "2022-01-03",
+				"composed-with": "AIVA",
+				"duration": 164,
+				"meter": "3/4",
+				"tempo": "90",
+				"key": "D Minor",
+				"instrumentation": "Modern Cinematic",
+				"mp3": "/resources/files/music/aiva/Gray world, Gray people, Gray hat/Gray world, Gray people, Gray hat.mp3",
+				"wav": "/resources/files/music/aiva/Gray world, Gray people, Gray hat/Gray world, Gray people, Gray hat.wav",
+				"midi": "/resources/files/music/aiva/Gray world, Gray people, Gray hat/Gray world, Gray people, Gray hat_midi.7z",
+				"stem": "/resources/files/music/aiva/Gray world, Gray people, Gray hat/Gray world, Gray people, Gray hat_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "cyberpunk", "modern", "cinematic", "dark"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Power on",
+					"kr": "Power on",
+					"jp": "Power on",
+					"cn": "Power on",
+					"ru": "Power on"
+				},
+				"composed-at": "2022-01-03",
+				"composed-with": "AIVA",
+				"duration": 31,
+				"meter": "4/4",
+				"tempo": "80",
+				"key": "C Major",
+				"instrumentation": "Modern Cinematic",
+				"mp3": "/resources/files/music/aiva/Power on/Power on.mp3",
+				"wav": "/resources/files/music/aiva/Power on/Power on.wav",
+				"midi": "/resources/files/music/aiva/Power on/Power on_midi.7z",
+				"stem": "/resources/files/music/aiva/Power on/Power on_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "cyberpunk", "modern", "cinematic"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Time attack",
+					"kr": "Time attack",
+					"jp": "Time attack",
+					"cn": "Time attack",
+					"ru": "Time attack"
+				},
+				"composed-at": "2022-01-03",
+				"composed-with": "AIVA",
+				"duration": 106,
+				"meter": "4/4",
+				"tempo": "105",
+				"key": "D Minor",
+				"mp3": "/resources/files/music/aiva/Time attack/Time attack.mp3",
+				"wav": "/resources/files/music/aiva/Time attack/Time attack.wav",
+				"midi": "/resources/files/music/aiva/Time attack/Time attack_midi.7z",
+				"stem": "/resources/files/music/aiva/Time attack/Time attack_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Unknown Artifacts",
+					"kr": "Unknown Artifacts",
+					"jp": "Unknown Artifacts",
+					"cn": "Unknown Artifacts",
+					"ru": "Unknown Artifacts"
+				},
+				"composed-at": "2022-01-11",
+				"composed-with": "AIVA",
+				"duration": 29,
+				"meter": "4/4",
+				"tempo": "80",
+				"key": "G Minor",
+				"instrumentation": "Cyberpunk Ensemble",
+				"mp3": "/resources/files/music/aiva/Unknown Artifacts/Unknown Artifacts.mp3",
+				"wav": "/resources/files/music/aiva/Unknown Artifacts/Unknown Artifacts.wav",
+				"midi": "/resources/files/music/aiva/Unknown Artifacts/Unknown Artifacts_midi.7z",
+				"stem": "/resources/files/music/aiva/Unknown Artifacts/Unknown Artifacts_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "cyberpunk", "modern", "cinematic"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Data analyze",
+					"kr": "Data analyze",
+					"jp": "Data analyze",
+					"cn": "Data analyze",
+					"ru": "Data analyze"
+				},
+				"composed-at": "2022-02-08",
+				"composed-with": "AIVA",
+				"duration": 143,
+				"meter": "4/4",
+				"tempo": "120",
+				"key": "G Minor",
+				"instrumentation": "Techno Ensemble",
+				"mp3": "/resources/files/music/aiva/Data analyze/Data analyze.mp3",
+				"wav": "/resources/files/music/aiva/Data analyze/Data analyze.wav",
+				"midi": "/resources/files/music/aiva/Data analyze/Data analyze_midi.7z",
+				"stem": "/resources/files/music/aiva/Data analyze/Data analyze_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "techno", "electronic"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Vaporized artifacts",
+					"kr": "Vaporized artifacts",
+					"jp": "Vaporized artifacts",
+					"cn": "Vaporized artifacts",
+					"ru": "Vaporized artifacts"
+				},
+				"composed-at": "2022-02-10",
+				"composed-with": "AIVA",
+				"duration": 126,
+				"meter": "4/4",
+				"tempo": "120",
+				"key": "D# Minor",
+				"instrumentation": "Techno Ensemble",
+				"mp3": "/resources/files/music/aiva/Vaporized artifacts/Vaporized artifacts.mp3",
+				"wav": "/resources/files/music/aiva/Vaporized artifacts/Vaporized artifacts.wav",
+				"midi": "/resources/files/music/aiva/Vaporized artifacts/Vaporized artifacts_midi.7z",
+				"stem": "/resources/files/music/aiva/Vaporized artifacts/Vaporized artifacts_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "techno", "electronic"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Voyage",
+					"kr": "Voyage",
+					"jp": "Voyage",
+					"cn": "Voyage",
+					"ru": "Voyage"
+				},
+				"composed-at": "2022-08-26",
+				"composed-with": "AIVA",
+				"duration": 114,
+				"meter": "4/4",
+				"tempo": "50",
+				"key": "C Minor",
+				"instrumentation": "GP Ensemble",
+				"mp3": "/resources/files/music/aiva/Voyage/Voyage.mp3",
+				"wav": "/resources/files/music/aiva/Voyage/Voyage.wav",
+				"midi": "/resources/files/music/aiva/Voyage/Voyage_midi.7z",
+				"stem": "/resources/files/music/aiva/Voyage/Voyage_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "cyberpunk", "alternative", "harmonies"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Lab",
+					"kr": "Lab",
+					"jp": "Lab",
+					"cn": "Lab",
+					"ru": "Lab"
+				},
+				"composed-at": "2022-09-14",
+				"composed-with": "AIVA",
+				"duration": 324,
+				"meter": "4/4",
+				"tempo": "105",
+				"key": "F Major",
+				"instrumentation": "GP Ensemble",
+				"mp3": "/resources/files/music/aiva/Lab/Lab.mp3",
+				"wav": "/resources/files/music/aiva/Lab/Lab.wav",
+				"midi": "/resources/files/music/aiva/Lab/Lab_midi.7z",
+				"stem": "https://drive.google.com/file/d/1jB7WeO8cCgugVPIGcxwndB6bQBU4bMzC/view?usp=sharing",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "techno"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Lab - Evolver",
+					"kr": "Lab - Evolver",
+					"jp": "Lab - Evolver",
+					"cn": "Lab - Evolver",
+					"ru": "Lab - Evolver"
+				},
+				"composed-at": "2022-09-14",
+				"composed-with": "AIVA",
+				"duration": 121,
+				"meter": "4/4",
+				"tempo": "110",
+				"key": "C Minor",
+				"instrumentation": "GP Ensemble",
+				"mp3": "/resources/files/music/aiva/Lab - Evolver/Lab - Evolver.mp3",
+				"wav": "/resources/files/music/aiva/Lab - Evolver/Lab - Evolver.wav",
+				"midi": "/resources/files/music/aiva/Lab - Evolver/Lab - Evolver_midi.7z",
+				"stem": "/resources/files/music/aiva/Lab - Evolver/Lab - Evolver_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "techno"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Dreaming code",
+					"kr": "Dreaming code",
+					"jp": "Dreaming code",
+					"cn": "Dreaming code",
+					"ru": "Dreaming code"
+				},
+				"composed-at": "2022-09-19",
+				"composed-with": "AIVA",
+				"duration": 44,
+				"meter": "4/4",
+				"tempo": "90",
+				"key": "F# Minor",
+				"mp3": "/resources/files/music/aiva/Dreaming code/Dreaming code.mp3",
+				"wav": "/resources/files/music/aiva/Dreaming code/Dreaming code.wav",
+				"midi": "/resources/files/music/aiva/Dreaming code/Dreaming code_midi.7z",
+				"stem": "/resources/files/music/aiva/Dreaming code/Dreaming code_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "techno"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Test Room",
+					"kr": "Test Room",
+					"jp": "Test Room",
+					"cn": "Test Room",
+					"ru": "Test Room"
+				},
+				"composed-at": "2022-10-04",
+				"composed-with": "AIVA",
+				"duration": 266,
+				"meter": "4/4",
+				"tempo": "120",
+				"key": "G Major",
+				"instrumentation": "GP Ensemble",
+				"mp3": "/resources/files/music/aiva/Test Room/Test Room.mp3",
+				"wav": "/resources/files/music/aiva/Test Room/Test Room.wav",
+				"midi": "/resources/files/music/aiva/Test Room/Test Room_midi.7z",
+				"stem": "/resources/files/music/aiva/Test Room/Test Room_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "techno", "tangerine"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Smooth Awakening",
+					"kr": "Smooth Awakening",
+					"jp": "Smooth Awakening",
+					"cn": "Smooth Awakening",
+					"ru": "Smooth Awakening"
+				},
+				"composed-at": "2022-10-26",
+				"composed-with": "AIVA",
+				"duration": 127,
+				"meter": "4/4",
+				"tempo": "120",
+				"key": "D# Major",
+				"instrumentation": "EDM Ensemble",
+				"mp3": "/resources/files/music/aiva/Smooth Awakening/Smooth Awakening.mp3",
+				"wav": "/resources/files/music/aiva/Smooth Awakening/Smooth Awakening.wav",
+				"midi": "/resources/files/music/aiva/Smooth Awakening/Smooth Awakening_midi.7z",
+				"stem": "/resources/files/music/aiva/Smooth Awakening/Smooth Awakening_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "edm"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Lingering update",
+					"kr": "Lingering update",
+					"jp": "Lingering update",
+					"cn": "Lingering update",
+					"ru": "Lingering update"
+				},
+				"composed-at": "2022-11-01",
+				"composed-with": "AIVA",
+				"duration": 87,
+				"meter": "4/4",
+				"tempo": "95",
+				"key": "D# Minor",
+				"mp3": "/resources/files/music/aiva/Lingering update/Lingering update.mp3",
+				"wav": "/resources/files/music/aiva/Lingering update/Lingering update.wav",
+				"midi": "/resources/files/music/aiva/Lingering update/Lingering update_midi.7z",
+				"stem": "/resources/files/music/aiva/Lingering update/Lingering update_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "techno"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Pure ISO",
+					"kr": "Pure ISO",
+					"jp": "Pure ISO",
+					"cn": "Pure ISO",
+					"ru": "Pure ISO"
+				},
+				"composed-at": "2022-12-05",
+				"composed-with": "AIVA",
+				"duration": 207,
+				"meter": "4/4",
+				"tempo": "95",
+				"key": "Eb Major",
+				"instrumentation": "GP Ensemble",
+				"mp3": "/resources/files/music/aiva/Pure ISO/Pure ISO.mp3",
+				"wav": "/resources/files/music/aiva/Pure ISO/Pure ISO.wav",
+				"midi": "/resources/files/music/aiva/Pure ISO/Pure ISO_midi.7z",
+				"stem": "/resources/files/music/aiva/Pure ISO/Pure ISO_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "techno"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "CPU hall",
+					"kr": "CPU hall",
+					"jp": "CPU hall",
+					"cn": "CPU hall",
+					"ru": "CPU hall"
+				},
+				"composed-at": "2022-12-07",
+				"composed-with": "AIVA",
+				"duration": 137,
+				"meter": "4/4",
+				"tempo": "80",
+				"key": "A# Minor",
+				"instrumentation": "GP Ensemble",
+				"mp3": "/resources/files/music/aiva/CPU hall/CPU hall.mp3",
+				"wav": "/resources/files/music/aiva/CPU hall/CPU hall.wav",
+				"midi": "/resources/files/music/aiva/CPU hall/CPU hall_midi.7z",
+				"stem": "/resources/files/music/aiva/CPU hall/CPU hall_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "techno"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Dispatch",
+					"kr": "Dispatch",
+					"jp": "Dispatch",
+					"cn": "Dispatch",
+					"ru": "Dispatch"
+				},
+				"composed-at": "2022-12-08",
+				"composed-with": "AIVA",
+				"duration": 56,
+				"meter": "4/4",
+				"tempo": "110",
+				"key": "Bb Minor",
+				"instrumentation": "GP Ensemble",
+				"mp3": "/resources/files/music/aiva/Dispatch/Dispatch.mp3",
+				"wav": "/resources/files/music/aiva/Dispatch/Dispatch.wav",
+				"midi": "/resources/files/music/aiva/Dispatch/Dispatch_midi.7z",
+				"stem": "/resources/files/music/aiva/Dispatch/Dispatch_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "pop", "techno"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Kernel hub",
+					"kr": "Kernel hub",
+					"jp": "Kernel hub",
+					"cn": "Kernel hub",
+					"ru": "Kernel hub"
+				},
+				"composed-at": "2023-05-11",
+				"composed-with": "AIVA",
+				"duration": 317,
+				"meter": "4/4",
+				"tempo": "95",
+				"key": "F Minor",
+				"instrumentation": "GP Ensemble",
+				"mp3": "/resources/files/music/aiva/Kernel hub/Kernel hub.mp3",
+				"wav": "/resources/files/music/aiva/Kernel hub/Kernel hub.wav",
+				"midi": "/resources/files/music/aiva/Kernel hub/Kernel hub_midi.7z",
+				"stem": "/resources/files/music/aiva/Kernel hub/Kernel hub_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "techno"],
+				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Web exploration",
+					"kr": "Web exploration",
+					"jp": "Web exploration",
+					"cn": "Web exploration",
+					"ru": "Web exploration"
+				},
+				"composed-at": "2024-01-28",
+				"composed-with": "AIVA",
+				"duration": 111,
+				"meter": "4/4",
+				"tempo": "85",
+				"key": "D Minor",
+				"instrumentation": "GP Ensemble",
+				"mp3": "/resources/files/music/aiva/Web exploration/Web exploration.mp3",
+				"wav": "/resources/files/music/aiva/Web exploration/Web exploration.wav",
+				"midi": "/resources/files/music/aiva/Web exploration/Web exploration_midi.7z",
+				"stem": "/resources/files/music/aiva/Web exploration/Web exploration_stem.7z",
+				"tag": ["instrumental", "sci-fi", "computer", "ambient", "synthwave"],
+				"image": "/resources/img/music/music/no-img.jpg"
 			}
 		]
 	}
@@ -316,6 +1028,7 @@ const CREATED_WITH = {
 		"url":"https://www.aiva.ai/",
 		"profile":"",
 		"icon":"/resources/img/music/composed-with/AIVA.png",
-		"subscribed":"false"
+		"subscribed":"true",
+		"subscribed-at":"2024-05-19"
 	}
 };

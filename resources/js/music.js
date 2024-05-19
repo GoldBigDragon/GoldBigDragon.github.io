@@ -573,7 +573,7 @@ function showDetails(musicName){
 			document.getElementById("music-details-image").src = MUSIC_LIST[musicIndex]["image"];
 			document.getElementById("music-details-title").innerHTML = MUSIC_LIST[musicIndex]["title"][NOW_LANG];
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("lyrics")){
-				document.getElementById("music-details-lyrics-pane").removeAttribute("hidden", "true");
+				document.getElementById("music-details-lyrics-pane").removeAttribute("hidden");
 				document.getElementById("music-details-lyrics").innerHTML = MUSIC_LIST[musicIndex]["lyrics"][NOW_LANG];
 			} else {
 				document.getElementById("music-details-lyrics-pane").setAttribute("hidden", "true");
@@ -587,25 +587,25 @@ function showDetails(musicName){
 				document.getElementById("music-details-composed-with").href = CREATED_WITH[MUSIC_LIST[musicIndex]["composed-with"]]["url"];
 			}
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("instrumentation")){
-				document.getElementById("music-details-instrumentation-pane").removeAttribute("hidden", "true");
+				document.getElementById("music-details-instrumentation-pane").removeAttribute("hidden");
 				document.getElementById("music-details-instrumentation").innerHTML = MUSIC_LIST[musicIndex]["instrumentation"];
 			} else {
 				document.getElementById("music-details-instrumentation-pane").setAttribute("hidden", "true");
 			}
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("key")){
-				document.getElementById("music-details-key-pane").removeAttribute("hidden", "true");
+				document.getElementById("music-details-key-pane").removeAttribute("hidden");
 				document.getElementById("music-details-key").innerHTML = MUSIC_LIST[musicIndex]["key"];
 			} else {
 				document.getElementById("music-details-key-pane").setAttribute("hidden", "true");
 			}
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("tempo")){
-				document.getElementById("music-details-tempo-pane").removeAttribute("hidden", "true");
+				document.getElementById("music-details-tempo-pane").removeAttribute("hidden");
 				document.getElementById("music-details-tempo").innerHTML = MUSIC_LIST[musicIndex]["tempo"];
 			} else {
 				document.getElementById("music-details-tempo-pane").setAttribute("hidden", "true");
 			}
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("meter")){
-				document.getElementById("music-details-meter-pane").removeAttribute("hidden", "true");
+				document.getElementById("music-details-meter-pane").removeAttribute("hidden");
 				document.getElementById("music-details-meter").innerHTML = MUSIC_LIST[musicIndex]["meter"];
 			} else {
 				document.getElementById("music-details-meter-pane").setAttribute("hidden", "true");
@@ -617,6 +617,7 @@ function showDetails(musicName){
 			const mp3Download = document.getElementById("download-mp3");
 			const midiDownload = document.getElementById("download-midi");
 			const wavDownload = document.getElementById("download-wav");
+			const stemDownload = document.getElementById("download-stem");
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("mp3")){
 				mp3Download.removeAttribute("hidden");
 				mp3Download.href = MUSIC_LIST[musicIndex]["mp3"];
@@ -634,6 +635,12 @@ function showDetails(musicName){
 				wavDownload.href = MUSIC_LIST[musicIndex]["wav"];
 			} else {
 				wavDownload.setAttribute("hidden", "true");
+			}
+			if(MUSIC_LIST[musicIndex].hasOwnProperty("stem")){
+				stemDownload.removeAttribute("hidden");
+				stemDownload.href = MUSIC_LIST[musicIndex]["stem"];
+			} else {
+				stemDownload.setAttribute("hidden", "true");
 			}
 			$('#musicDetailModal').modal('show');
 			break;
