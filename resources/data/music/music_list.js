@@ -256,7 +256,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/Outdoor hot springs/Outdoor hot springs_midi.7z",
 				"stem": "/resources/files/music/aiva/Outdoor hot springs/Outdoor hot springs_stem.7z",
 				"tag": ["instrumental", "rpg", "ambient", "chinese", "field"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Outdoor hot springs.jpg"
 			},
 			{
 				"title": {
@@ -278,7 +278,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/Stronghold/Stronghold_midi.7z",
 				"stem": "/resources/files/music/aiva/Stronghold/Stronghold_stem.7z",
 				"tag": ["instrumental", "rpg", "castle"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Stronghold.jpg"
 			},
 			{
 				"title": {
@@ -299,7 +299,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/Temple/Temple_midi.7z",
 				"stem": "/resources/files/music/aiva/Temple/Temple_stem.7z",
 				"tag": ["instrumental", "rpg", "temple"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Temple.jpg"
 			},
 			{
 				"title": {
@@ -321,7 +321,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/Chapel/Chapel_midi.7z",
 				"stem": "/resources/files/music/aiva/Chapel/Chapel_stem.7z",
 				"tag": ["instrumental", "rpg", "ambient", "field"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Chapel.jpg"
 			},
 			{
 				"title": {
@@ -343,7 +343,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/Abandoned altar/Abandoned altar_midi.7z",
 				"stem": "/resources/files/music/aiva/Abandoned altar/Abandoned altar_stem.7z",
 				"tag": ["instrumental", "rpg", "ambient", "field"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Abandoned altar.jpg"
 			},
 			{
 				"title": {
@@ -365,7 +365,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/Raconteur/Raconteur_midi.7z",
 				"stem": "/resources/files/music/aiva/Raconteur/Raconteur_stem.7z",
 				"tag": ["instrumental", "rpg", "npc", "strings", "woodwinds"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Raconteur.jpg"
 			},
 			{
 				"title": {
@@ -387,7 +387,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/The story has begun/The story has begun_midi.7z",
 				"stem": "/resources/files/music/aiva/The story has begun/The story has begun_stem.7z",
 				"tag": ["instrumental", "rpg", "npc", "tavern"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/The story has begun.jpg"
 			},
 			{
 				"title": {
@@ -409,7 +409,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/windmil/windmil_midi.7z",
 				"stem": "/resources/files/music/aiva/windmil/windmil_stem.7z",
 				"tag": ["instrumental", "rpg", "field"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Windmill.jpg"
 			},
 			{
 				"title": {
@@ -431,7 +431,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/Forest's aria/Forest's aria_midi.7z",
 				"stem": "/resources/files/music/aiva/Forest's aria/Forest's aria_stem.7z",
 				"tag": ["instrumental", "rpg"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Forest's aria.jpg"
 			}
 		]
 	},
@@ -473,7 +473,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/Dewy morning/Dewy morning_midi.7z",
 				"stem": "/resources/files/music/aiva/Dewy morning/Dewy morning_stem.7z",
 				"tag": ["instrumental", "modern", "field", "pop"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Dewy morning.jpg"
 			},
 			{
 				"title": {
@@ -495,7 +495,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/Until you come/Until you come_midi.7z",
 				"stem": "/resources/files/music/aiva/Until you come/Until you come_stem.7z",
 				"tag": ["instrumental", "modern", "jazz", "lo-fi"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Until you come.jpg"
 			},
 			{
 				"title": {
@@ -517,7 +517,7 @@ const PLAY_LIST = [
 				"midi": "/resources/files/music/aiva/Innovative Algorithm/Innovative Algorithm_midi.7z",
 				"stem": "/resources/files/music/aiva/Innovative Algorithm/Innovative Algorithm_stem.7z",
 				"tag": ["instrumental", "modern", "house"],
-				"image": "/resources/img/music/music/no-img.jpg"
+				"image": "/resources/img/music/music/aiva/Innovative Algorithm.jpg"
 			}
 		]
 	},
