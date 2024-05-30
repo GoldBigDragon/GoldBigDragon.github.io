@@ -183,5 +183,32 @@ const PROGRAM_LIST = [
 		"icon": "/resources/img/program/ARIA Algorithm Ransomware/icon.png",
 		"created-at": "2020-03-20",
 		"updated-at": "2020-06-23",
+	},
+	{
+		"name": {
+			"en":"dcinside crawler",
+			"kr":"디씨인사이드 크롤러",
+			"jp":"dcinside crawler",
+			"cn":"dcinside crawler",
+			"ru":"dcinside crawler"
+		},
+		"description": {
+			"en":"Created this because a police officer I know said he needed a web crawler for the dcinside.",
+			"kr":"지인 경찰분이 디씨인사이드를 대상으로한 크롤러가 필요하다고 부탁하여 개발하게 되었습니다.",
+			"jp":"知人の警察からdcinsideを対象にしたウェブクローラーが必要だと頼まれて開発することになりました。",
+			"cn":"熟人警察要求需要以dcinside为对象的帖子收集工具，所以开发了。",
+			"ru":"Я разработал его по просьбе знакомого полицейского, который сказал, что ему нужен инструмент сбора сообщений для dcinside."
+		},
+		"tag": [
+			"crawler",
+			"web",
+			"python"
+		],
+		"language": "Python 3.12.0",
+		"download": "https://github.com/GoldBigDragon/dcinside-crawler/archive/refs/heads/main.zip",
+		"github": "https://github.com/GoldBigDragon/dcinside-crawler",
+		"icon": "/resources/img/program/dcinside crawler/icon.png",
+		"created-at": "2024-05-29",
+		"updated-at": "2024-05-29",
 	}
 ];
