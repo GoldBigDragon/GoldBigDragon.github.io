@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
-			"en":"Translating (61/231)",
+			"en":"Translating (61/234)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (61/231)",
-			"cn":"翻译 (61/231)",
-			"ru":"Перевод (61/231)"
+			"jp":"翻訳中 (61/234)",
+			"cn":"翻译 (61/234)",
+			"ru":"Перевод (61/234)"
 		},
 		"uid":"developer",
 		"pages": [
@@ -2556,6 +2556,39 @@ const CARTOON_LIST = [
 				},
 				"img": "0231.png",
 				"created-at": "2024-05-11"
+			},
+			{
+				"title":{
+					"en": "Breakthrough compression technology",
+					"kr": "획기적인 압축 기술",
+					"jp": "画期的な圧縮技術",
+					"cn": "突破性的压缩技术",
+					"ru": "Революционная технология сжатия"
+				},
+				"img": "0232.png",
+				"created-at": "2024-06-02"
+			},
+			{
+				"title":{
+					"en": "A restraining order",
+					"kr": "접근 금지",
+					"jp": "接近禁止です",
+					"cn": "禁止靠近",
+					"ru": "Запрет на доступ"
+				},
+				"img": "0233.png",
+				"created-at": "2024-06-02"
+			},
+			{
+				"title":{
+					"en": "Twisted fan sentiment",
+					"kr": "뒤틀린 팬심",
+					"jp": "歪んだファン心",
+					"cn": "扭曲的粉丝心",
+					"ru": "Извращенный фанат"
+				},
+				"img": "0234.png",
+				"created-at": "2024-06-02"
 			}
 		]
 	}
