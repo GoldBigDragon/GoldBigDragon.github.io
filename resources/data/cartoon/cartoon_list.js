@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
-			"en":"Translating (69/234)",
+			"en":"Translating (69/236)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (69/234)",
-			"cn":"翻译 (69/234)",
-			"ru":"Перевод (69/234)"
+			"jp":"翻訳中 (69/236)",
+			"cn":"翻译 (69/236)",
+			"ru":"Перевод (69/236)"
 		},
 		"uid":"developer",
 		"pages": [
@@ -2589,6 +2589,28 @@ const CARTOON_LIST = [
 				},
 				"img": "0234.png",
 				"created-at": "2024-06-02"
+			},
+			{
+				"title":{
+					"en": "Mabinogi player",
+					"kr": "마비노기 유저",
+					"jp": "マビノギ プレーヤー",
+					"cn": "<洛奇Mabinogi>游戏玩家",
+					"ru": "Mabinogi Игрок"
+				},
+				"img": "0235.png",
+				"created-at": "2024-06-09"
+			},
+			{
+				"title":{
+					"en": "Cause provider",
+					"kr": "원인 제공자",
+					"jp": "原因提供者",
+					"cn": "原因提供者",
+					"ru": "Поставщик причин"
+				},
+				"img": "0236.png",
+				"created-at": "2024-06-09"
 			}
 		]
 	}
