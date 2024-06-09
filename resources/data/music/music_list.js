@@ -432,6 +432,21 @@ const PLAY_LIST = [
 				"stem": "/resources/files/music/aiva/Forest's aria/Forest's aria_stem.7z",
 				"tag": ["instrumental", "rpg"],
 				"image": "/resources/img/music/music/aiva/Forest's aria.jpg"
+			},
+			{
+				"title": {
+					"en": "Luminous mushroom yard at midnight",
+					"kr": "한밤의 야광 버섯 마당",
+					"jp": "真夜中に光るキノコの庭",
+					"cn": "午夜发光的蘑菇院",
+					"ru": "Светящийся грибной двор в полночь"
+				},
+				"composed-at": "2024-06-10",
+				"composed-with": "Udio",
+				"duration": 195,
+				"mp3": "/resources/files/music/udio/Luminous mushroom yard at midnight.mp3",
+				"tag": ["instrumental", "electronic", "synthpop", "quirky", "playful", "futuristic", "melodic", "uplifting", "exotica", "eclectic", "lush", "field", "calm", "midnight", "rpg"],
+				"image": "/resources/img/music/music/udio/Luminous mushroom yard at midnight.avif"
 			}
 		]
 	},
