@@ -29,6 +29,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 162,
 				"mp3": "/resources/files/music/udio/Ruins and rains.mp3",
+				"wav": "/resources/files/music/udio/Ruins and rains.wav",
 				"tag": ["instrumental", "atmospheric", "abstract", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
 				"image": "/resources/img/music/music/udio/Ruins and rains.avif"
 			},
@@ -44,6 +45,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 65,
 				"mp3": "/resources/files/music/udio/Creative intro.mp3",
+				"wav": "/resources/files/music/udio/Creative intro.wav",
 				"tag": ["instrumental", "shorts", "intro", "complextro", "pop", "k-pop", "contemporary r&b", "complextro"],
 				"image": "/resources/img/music/music/udio/Creative intro.avif"
 			},
@@ -59,6 +61,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 130,
 				"mp3": "/resources/files/music/udio/One target, one bullet.mp3",
+				"wav": "/resources/files/music/udio/One target, one bullet.wav",
 				"tag": ["instrumental", "post-industrial", "industrial & noise", "ebm", "electronic", "dark", "synth-pop"],
 				"image": "/resources/img/music/music/udio/One target, one bullet.avif"
 			},
@@ -81,6 +84,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 294,
 				"mp3": "/resources/files/music/udio/The Diamond Sutra.mp3",
+				"wav": "https://drive.google.com/file/d/1-fICoHtfhEmGI1qWZkl1i0ovfG5dwKuZ/view?usp=sharing",
 				"tag": ["voice", "trance", "progressive house", "electronic dance music", "tech house", "house", "electronic", "electro house", "hypnotic", "repetitive", "uplifting", "melodic", "party", "atmospheric", "playful", "minimalistic", "energetic", "rhythmic", "bittersweet", "ethereal", "lush"],
 				"image": "/resources/img/music/music/udio/The Diamond Sutra.avif"
 			}
@@ -123,6 +127,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 196,
 				"mp3": "/resources/files/music/udio/Forging more than just swords, but a legacy wide.mp3",
+				"wav": "/resources/files/music/udio/Forging more than just swords, but a legacy wide.wav",
 				"tag": ["voice", "blacksmith", "rock", "pop rock", "symphonic rock", "pop", "progressive", "uplifting", "progressive pop", "optimistic", "epic", "lush", "fantasy", "rpg", "npc", "dwarf", "medieval"],
 				"image": "/resources/img/music/music/udio/Forging more than just swords, but a legacy wide.avif"
 			}, 
@@ -145,6 +150,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 163,
 				"mp3": "/resources/files/music/udio/Pour, bartender, pour.mp3",
+				"wav": "/resources/files/music/udio/Pour, bartender, pour.wav",
 				"tag": ["voice", "tavern", "bartender", "rock", "passionate", "ethereal", "lush", "nocturnal", "poetic", "electronic", "fantasy", "rpg", "npc", "medieval"],
 				"image": "/resources/img/music/music/udio/Pour, bartender, pour.avif"
 			}, 
@@ -167,6 +173,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 197,
 				"mp3": "/resources/files/music/udio/Ancient library.mp3",
+				"wav": "/resources/files/music/udio/Ancient library.wav",
 				"tag": ["voice", "library", "ambient", "electroacoustic", "atmospheric", "calm", "ethereal", "meditative", "soothing", "surreal", "fantasy", "rpg", "npc", "medieval"],
 				"image": "/resources/img/music/music/udio/Ancient library.avif"
 			}, 
@@ -189,6 +196,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 131,
 				"mp3": "/resources/files/music/udio/Titanium mine.mp3",
+				"wav": "/resources/files/music/udio/Titanium mine.wav",
 				"tag": ["voice", "mine", "miner", "industrial", "post-industrial", "industrial rock", "electronic", "energetic", "breakbeat", "fantasy", "rpg", "npc", "medieval"],
 				"image": "/resources/img/music/music/udio/Titanium mine.avif"
 			}, 
@@ -204,6 +212,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 130,
 				"mp3": "/resources/files/music/udio/Compass and breeze.mp3",
+				"wav": "/resources/files/music/udio/Compass and breeze.wav",
 				"tag": ["instrumental", "folk", "melodic", "mellow", "acoustic", "melancholic", "poetic", "bittersweet", "introspective", "sentimental", "autumn", "soft", "soothing", "acoustic guitar", "fantasy", "rpg", "field", "medieval"],
 				"image": "/resources/img/music/music/udio/Compass and breeze.avif"
 			}, 
@@ -219,6 +228,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 97,
 				"mp3": "/resources/files/music/udio/Wandering merchant at noon.mp3",
+				"wav": "/resources/files/music/udio/Wandering merchant at noon.wav",
 				"tag": ["instrumental", "merchant", "celtic folk music", "melodic", "lute", "flute", "fantasy", "rpg", "npc", "medieval"],
 				"image": "/resources/img/music/music/udio/Wandering merchant at noon.avif"
 			},
@@ -234,6 +244,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 130,
 				"mp3": "/resources/files/music/udio/Impatient knight's adventure.mp3",
+				"wav": "/resources/files/music/udio/Impatient knight's adventure.wav",
 				"tag": ["instrumental", "chiptune", "dungeon", "electronic", "bit music", "rpg"],
 				"image": "/resources/img/music/music/udio/Impatient knight's adventure.avif"
 			},
@@ -445,6 +456,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 195,
 				"mp3": "/resources/files/music/udio/Luminous mushroom yard at midnight.mp3",
+				"wav": "/resources/files/music/udio/Luminous mushroom yard at midnight.wav",
 				"tag": ["instrumental", "electronic", "synthpop", "quirky", "playful", "futuristic", "melodic", "uplifting", "exotica", "eclectic", "lush", "field", "calm", "midnight", "rpg"],
 				"image": "/resources/img/music/music/udio/Luminous mushroom yard at midnight.avif"
 			}
@@ -566,6 +578,7 @@ const PLAY_LIST = [
 				"composed-with": "Udio",
 				"duration": 130,
 				"mp3": "/resources/files/music/udio/Command and control room.mp3",
+				"wav": "/resources/files/music/udio/Command and control room.wav",
 				"tag": ["instrumental", "industrial & noise", "post-industrial", "electro-industrial", "mechanical", "nocturnal", "cybernetic", "bunker", "tactics", "techniques"],
 				"image": "/resources/img/music/music/udio/Command and control room.avif"
 			},
