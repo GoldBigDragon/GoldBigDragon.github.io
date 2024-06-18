@@ -17,11 +17,11 @@ const DATA_CERTIFICATE = [
 		},
 		"logo":"/resources/img/index/logo/certificate/national_technical_certificate.png",
 		"logo-title":{
-			"en":"Engineer",
-			"kr":"기사",
-			"jp":"技師",
-			"cn":"技士",
-			"ru":"Инженер"
+			"en":"Engineer<br>Information Processing",
+			"kr":"정보처리<br>기사",
+			"jp":"情報処理<br>技師",
+			"cn":"情報處理<br>技士",
+			"ru":"Инженер<br>по обработке информации"
 		},
 		"proof":"/resources/img/index/proof/certificate/Engineer Information Processing.png"
 	},
@@ -43,11 +43,11 @@ const DATA_CERTIFICATE = [
 		},
 		"logo":"/resources/img/index/logo/certificate/national_technical_certificate.png",
 		"logo-title":{
-			"en":"Industrial Engineer",
-			"kr":"산업기사",
-			"jp":"産業技師",
-			"cn":"産業技士",
-			"ru":"Промышленный инженер"
+			"en":"Industrial Engineer<br>Information Processing",
+			"kr":"정보처리<br>산업기사",
+			"jp":"情報処理<br>産業技師",
+			"cn":"情報處理<br>産業技士",
+			"ru":"Промышленный инженер<br>по обработке информации"
 		},
 		"proof":"/resources/img/index/proof/certificate/Industrial Engineer Information Processing.png"
 	},
