@@ -1054,7 +1054,6 @@ const CREATED_WITH = {
 	},
 	"AIVA":{
 		"url":"https://www.aiva.ai/",
-		"profile":"",
 		"icon":"/resources/img/music/composed-with/AIVA.png",
 		"subscribed":"true",
 		"subscribed-at":"2024-05-19"

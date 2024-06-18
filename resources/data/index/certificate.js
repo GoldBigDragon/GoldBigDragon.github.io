@@ -1,6 +1,58 @@
 const DATA_CERTIFICATE = [
 	{
 		"name":{
+			"en":"Engineer Information Processing",
+			"kr":"정보처리기사",
+			"jp":"情報処理技師",
+			"cn":"情報處理技士",
+			"ru":"Инженер по обработке информации"
+		},
+		"acquisition-date":"2024-06-18",
+		"issuing-authority":{
+			"en":"Human Resources Development Service of Korea",
+			"kr":"한국산업인력공단",
+			"jp":"韓国産業人力公団",
+			"cn":"韓國産業人力公團",
+			"ru":"Служба развития человеческих ресурсов Кореи"
+		},
+		"logo":"/resources/img/index/logo/certificate/national_technical_certificate.png",
+		"logo-title":{
+			"en":"Engineer",
+			"kr":"기사",
+			"jp":"技師",
+			"cn":"技士",
+			"ru":"Инженер"
+		},
+		"proof":"/resources/img/index/proof/certificate/Engineer Information Processing.png"
+	},
+	{
+		"name":{
+			"en":"Industrial Engineer Information Processing",
+			"kr":"정보처리산업기사",
+			"jp":"情報処理産業技師",
+			"cn":"情報處理産業技士",
+			"ru":"Промышленный инженер по обработке информации"
+		},
+		"acquisition-date":"2024-06-18",
+		"issuing-authority":{
+			"en":"Human Resources Development Service of Korea",
+			"kr":"한국산업인력공단",
+			"jp":"韓国産業人力公団",
+			"cn":"韓國産業人力公團",
+			"ru":"Служба развития человеческих ресурсов Кореи"
+		},
+		"logo":"/resources/img/index/logo/certificate/national_technical_certificate.png",
+		"logo-title":{
+			"en":"Industrial Engineer",
+			"kr":"산업기사",
+			"jp":"産業技師",
+			"cn":"産業技士",
+			"ru":"Промышленный инженер"
+		},
+		"proof":"/resources/img/index/proof/certificate/Industrial Engineer Information Processing.png"
+	},
+	{
+		"name":{
 			"en":"Chainalysis Reactor Certification",
 			"kr":"Chainalysis Reactor Certification",
 			"jp":"Chainalysis Reactor Certification",
