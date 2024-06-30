@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
-			"en":"Translating (74/236)",
+			"en":"Translating (74/238)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (74/236)",
-			"cn":"翻译 (74/236)",
-			"ru":"Перевод (74/236)"
+			"jp":"翻訳中 (74/238)",
+			"cn":"翻译 (74/238)",
+			"ru":"Перевод (74/238)"
 		},
 		"uid":"developer",
 		"pages": [
@@ -2611,6 +2611,28 @@ const CARTOON_LIST = [
 				},
 				"img": "0236.png",
 				"created-at": "2024-06-09"
+			},
+			{
+				"title":{
+					"en": "Weather coin",
+					"kr": "날씨 코인",
+					"jp": "天気コイン",
+					"cn": "天气币",
+					"ru": "Погодная монета"
+				},
+				"img": "0237.png",
+				"created-at": "2024-06-30"
+			},
+			{
+				"title":{
+					"en": "Development universalism",
+					"kr": "개발 만능주의",
+					"jp": "開発万能主義",
+					"cn": "发展的普遍主义",
+					"ru": "Универсализм развития"
+				},
+				"img": "0238.png",
+				"created-at": "2024-06-30"
 			}
 		]
 	}
