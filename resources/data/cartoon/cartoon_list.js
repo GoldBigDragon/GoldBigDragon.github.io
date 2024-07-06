@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
-			"en":"Translating (74/238)",
+			"en":"Translating (80/240)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (74/238)",
-			"cn":"翻译 (74/238)",
-			"ru":"Перевод (74/238)"
+			"jp":"翻訳中 (80/240)",
+			"cn":"翻译 (80/240)",
+			"ru":"Перевод (80/240)"
 		},
 		"uid":"developer",
 		"pages": [
@@ -2633,6 +2633,28 @@ const CARTOON_LIST = [
 				},
 				"img": "0238.png",
 				"created-at": "2024-06-30"
+			},
+			{
+				"title":{
+					"en": "How to summon the professor",
+					"kr": "교수님 소환 방법",
+					"jp": "教授の召喚方法",
+					"cn": "传唤教授的方法",
+					"ru": "Как вызвать профессора"
+				},
+				"img": "0239.png",
+				"created-at": "2024-07-06"
+			},
+			{
+				"title":{
+					"en": "Continuous playback",
+					"kr": "연속 재생",
+					"jp": "連続再生",
+					"cn": "连续播放",
+					"ru": "Продолжить воспроизведение"
+				},
+				"img": "0240.png",
+				"created-at": "2024-07-06"
 			}
 		]
 	}
