@@ -459,6 +459,22 @@ const PLAY_LIST = [
 				"wav": "/resources/files/music/udio/Luminous mushroom yard at midnight.wav",
 				"tag": ["instrumental", "electronic", "synthpop", "quirky", "playful", "futuristic", "melodic", "uplifting", "exotica", "eclectic", "lush", "field", "calm", "midnight", "rpg"],
 				"image": "/resources/img/music/music/udio/Luminous mushroom yard at midnight.avif"
+			},
+			{
+				"title": {
+					"en": "Dusty siege",
+					"kr": "먼지가 흩날리는 공성전",
+					"jp": "塵の舞う攻城戦",
+					"cn": "尘土飞扬的空城战",
+					"ru": "Осада, рассеивающая пыль"
+				},
+				"composed-at": "2024-06-11",
+				"composed-with": "Udio",
+				"duration": 228,
+				"mp3": "/resources/files/music/udio/Dusty siege.mp3",
+				"wav": "/resources/files/music/udio/Dusty siege.wav",
+				"tag": ["instrumental", "medieval", "film score", "atmospheric", "suspenseful", "ominous", "melodic", "epic", "rpg"],
+				"image": "/resources/img/music/music/udio/Dusty siege.avif"
 			}
 		]
 	},
@@ -545,6 +561,22 @@ const PLAY_LIST = [
 				"stem": "/resources/files/music/aiva/Innovative Algorithm/Innovative Algorithm_stem.7z",
 				"tag": ["instrumental", "modern", "house"],
 				"image": "/resources/img/music/music/aiva/Innovative Algorithm.jpg"
+			},
+			{
+				"title": {
+					"en": "Riverside Parade",
+					"kr": "강변 행진곡",
+					"jp": "川辺行進曲",
+					"cn": "江边进行曲",
+					"ru": "Парад на Риверсайде"
+				},
+				"composed-at": "2024-06-13",
+				"composed-with": "Udio",
+				"duration": 130,
+				"mp3": "/resources/files/music/udio/Riverside Parade.mp3",
+				"wav": "/resources/files/music/udio/Riverside Parade.wav",
+				"tag": ["instrumental", "ska", "big band", "happy", "uplifting", "melodic", "playful"],
+				"image": "/resources/img/music/music/udio/Riverside Parade.avif"
 			}
 		]
 	},
@@ -1040,6 +1072,22 @@ const PLAY_LIST = [
 				"stem": "/resources/files/music/aiva/Web exploration/Web exploration_stem.7z",
 				"tag": ["instrumental", "sci-fi", "computer", "ambient", "synthwave"],
 				"image": "/resources/img/music/music/no-img.jpg"
+			},
+			{
+				"title": {
+					"en": "Old game memory - Tactical Commanders (Shattered Galaxy) Remix",
+					"kr": "고전 게임 - 택티컬 커맨더스 Remix",
+					"jp": "古いゲーム - Tactical Commanders (Shattered Galaxy) Remix",
+					"cn": "旧游戏 - Tactical Commanders (Shattered Galaxy) Remix",
+					"ru": "Старая игра - Tactical Commanders (Shattered Galaxy) Remix"
+				},
+				"composed-at": "2024-06-20",
+				"composed-with": "Udio",
+				"duration": 138,
+				"mp3": "/resources/files/music/udio/Old game memory - Tactical Commanders (Shattered Galaxy).mp3",
+				"wav": "/resources/files/music/udio/Old game memory - Tactical Commanders (Shattered Galaxy).wav",
+				"tag": ["instrumental", "rock", "metal", "symphonic metal", "melodic", "epic", "orchestral"],
+				"image": "/resources/img/music/music/udio/Old game memory - Tactical Commanders (Shattered Galaxy).avif"
 			}
 		]
 	}
