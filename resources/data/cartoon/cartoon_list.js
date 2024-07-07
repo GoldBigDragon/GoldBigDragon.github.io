@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
-			"en":"Translating (80/240)",
+			"en":"Translating (80/242)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (80/240)",
-			"cn":"翻译 (80/240)",
-			"ru":"Перевод (80/240)"
+			"jp":"翻訳中 (80/242)",
+			"cn":"翻译 (80/242)",
+			"ru":"Перевод (80/242)"
 		},
 		"uid":"developer",
 		"pages": [
@@ -2655,6 +2655,28 @@ const CARTOON_LIST = [
 				},
 				"img": "0240.png",
 				"created-at": "2024-07-06"
+			},
+			{
+				"title":{
+					"en": "I'm taking it well",
+					"kr": "잘 털어갑니다",
+					"jp": "ちゃんと持っていきます",
+					"cn": "拿走了",
+					"ru": "Заберу"
+				},
+				"img": "0241.png",
+				"created-at": "2024-07-07"
+			},
+			{
+				"title":{
+					"en": "Compulsory daily records",
+					"kr": "일상 박제",
+					"jp": "日常剥製",
+					"cn": "日常剥制",
+					"ru": "Принудительная ежедневная запись"
+				},
+				"img": "0242.png",
+				"created-at": "2024-07-07"
 			}
 		]
 	}
