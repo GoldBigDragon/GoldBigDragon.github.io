@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
-			"en":"Translating (80/242)",
+			"en":"Translating (82/242)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (80/242)",
-			"cn":"翻译 (80/242)",
-			"ru":"Перевод (80/242)"
+			"jp":"翻訳中 (82/242)",
+			"cn":"翻译 (82/242)",
+			"ru":"Перевод (82/242)"
 		},
 		"uid":"developer",
 		"pages": [
@@ -700,7 +700,7 @@ const CARTOON_LIST = [
 			},
 			{
 				"title":{
-					"en": "Broken",
+					"en": "Rotten",
 					"kr": "상했습니다",
 					"jp": "賞味期限切れになりました",
 					"cn": "溺爱",

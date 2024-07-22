@@ -1,6 +1,39 @@
 const DATA_ETC = [
 	{
 		"award-name":{
+			"en":"Certificate of Appreciation",
+			"kr":"감사장",
+			"jp":"感謝状",
+			"cn":"感谢状",
+			"ru":"Благодарность"
+		},
+		"award-date":"2024-06-28",
+		"awarding-organization":{
+			"en":"Korean National Police Agency - Ulsan Provincial",
+			"kr":"울산지방경찰청",
+			"jp":"蔚山警察庁",
+			"cn":"蔚山警察厅",
+			"ru":"Корейское национальное полицейское управление - провинциальное Ulsan"
+		},
+		"reason":{
+			"en":"Excellent activity in reporting harmful sites in May 2024",
+			"kr":"2024년 5월 유해 사이트 신고 활동 우수",
+			"jp":"2024年5月有害サイト届出活動優秀",
+			"cn":"2024年5月报告有害网站的出色活动",
+			"ru":"Отличная активность по сообщению о вредоносных сайтах в мае 2024 г."
+		},
+		"logo":"/resources/img/index/logo/etc/knpa.png",
+		"logo-title":{
+			"en":"Certificate of<br>Appreciation",
+			"kr":"감사장",
+			"jp":"感謝状",
+			"cn":"感谢状",
+			"ru":"Благодарность"
+		},
+		"proof":"/resources/img/index/proof/etc/2024_06_28_knpa_ulsan.jpg"
+	},
+	{
+		"award-name":{
 			"en":"Appreciation plaque",
 			"kr":"감사패",
 			"jp":"感謝楯",
