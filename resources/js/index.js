@@ -240,6 +240,17 @@ function openModal(category, index){
 		nameDiv.appendChild(nameDescription);
 		nameDiv.appendChild(name);
 		
+		const certificateNoDiv = document.createElement("div");
+		certificateNoDiv.className = "row modal-panel";
+		const certificateNoDescription = document.createElement("div");
+		certificateNoDescription.className = "col-3 key";
+		certificateNoDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["certificate-no"][NOW_LANG];
+		const certificateNo = document.createElement("div");
+		certificateNo.className = "col value";
+		certificateNo.innerHTML = badgeData["certificate-no"][NOW_LANG];
+		certificateNoDiv.appendChild(certificateNoDescription);
+		certificateNoDiv.appendChild(certificateNo);
+		
 		const issuingAuthorityDiv = document.createElement("div");
 		issuingAuthorityDiv.className = "row modal-panel";
 		const issuingAuthorityDescription = document.createElement("div");

@@ -181,6 +181,13 @@ const INDEX_LANG = {
 		"cn": "发证机关",
 		"ru": "Орган, выдавший документ"
 	},
+	"certificate-no": {
+		"en": "Certificate number",
+		"kr": "자격증 번호",
+		"jp": "资格证书编号",
+		"cn": "資格番号",
+		"ru": "Номер лицензии"
+	},
 	"certificate-acquisition-date": {
 		"en": "Acquisition date",
 		"kr": "취득일자",
