@@ -247,7 +247,7 @@ function openModal(category, index){
 		certificateNoDescription.innerHTML = LANGUAGE_OBJECT["INDEX_LANG"]["certificate-no"][NOW_LANG];
 		const certificateNo = document.createElement("div");
 		certificateNo.className = "col value";
-		certificateNo.innerHTML = badgeData["certificate-no"][NOW_LANG];
+		certificateNo.innerHTML = badgeData["certificate-no"];
 		certificateNoDiv.appendChild(certificateNoDescription);
 		certificateNoDiv.appendChild(certificateNo);
 		
