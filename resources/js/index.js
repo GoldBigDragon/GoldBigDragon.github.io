@@ -276,6 +276,7 @@ function openModal(category, index){
 		modalBody.appendChild(proofDiv);
 		modalBody.appendChild(nameDiv);
 		modalBody.appendChild(issuingAuthorityDiv);
+		modalBody.appendChild(certificateNoDiv);
 		modalBody.appendChild(acquisitionDateDiv);
 	} else if(category == "etc"){
 		badgeData = DATA_ETC[index];
