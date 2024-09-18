@@ -2710,6 +2710,28 @@ const CARTOON_LIST = [
 				},
 				"img": "0245.png",
 				"created-at": "2024-07-29"
+			},
+			{
+				"title":{
+					"en": "INFJ",
+					"kr": "INFJ",
+					"jp": "INFJ",
+					"cn": "INFJ",
+					"ru": "INFJ"
+				},
+				"img": "0246.png",
+				"created-at": "2024-08-18"
+			},
+			{
+				"title":{
+					"en": "ETC",
+					"kr": "기타",
+					"jp": "等",
+					"cn": "等等",
+					"ru": "И Т. Д"
+				},
+				"img": "0247.png",
+				"created-at": "2024-08-18"
 			}
 		]
 	}
