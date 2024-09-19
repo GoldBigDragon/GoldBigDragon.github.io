@@ -9,16 +9,16 @@ const ICO_CONVERTER_LANG = {
 	"container": {
 		"en": "Drag & Drop your image files here or click to select files",
 		"kr": "변환할 파일을 드래그 드랍 하세요.",
-		"jp": "画像ファイルをここにドラッグ＆ドロップするか、クリックしてファイルを選択してください",
+		"jp": "画像ファイルをここにドラッグ＆ドロップするか、<br>クリックしてファイルを選択してください",
 		"cn": "将图像文件拖放到此处或单击以选择文件",
 		"ru": "Перетащите сюда файлы изображений или нажмите, чтобы выбрать файлы"
 	},
 	"absolute_size": {
-		"en": "<i class='fa-solid fa-up-right-and-down-left-from-center'></i>&nbsp;Absolute Size",
-		"kr": "<i class='fa-solid fa-up-right-and-down-left-from-center'></i>&nbsp;절대적 크기",
-		"jp": "<i class='fa-solid fa-up-right-and-down-left-from-center'></i>&nbsp;絶対サイズ",
-		"cn": "<i class='fa-solid fa-up-right-and-down-left-from-center'></i>&nbsp;绝对大小",
-		"ru": "<i class='fa-solid fa-up-right-and-down-left-from-center'></i>&nbsp;Абсолютный размер"
+		"en": "Absolute Size",
+		"kr": "절대적 크기",
+		"jp": "絶対サイズ",
+		"cn": "绝对大小",
+		"ru": "Абсолютный размер"
 	},
 	"relative_size": {
 		"en": "Relative Size",

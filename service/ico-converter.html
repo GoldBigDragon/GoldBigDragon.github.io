@@ -30,26 +30,38 @@
 				</div>
 
 				<div class="radio-buttons">
-					<div class="lang radio-button selected" id="absoluteSizeButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="absolute_size">
-						<i class="fa-solid fa-up-right-and-down-left-from-center"></i>&nbsp;Absolute Size
+					<div class="radio-button selected" id="absoluteSizeButton">
+						<i class="fa-solid fa-up-right-and-down-left-from-center"></i>&nbsp;
+						<p class="lang"  data-lang-var="ICO_CONVERTER_LANG" data-lang="absolute_size">Absolute Size</p>
 					</div>
-					<div class="lang radio-button" id="relativeSizeButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="relative_size">
-						<i class="fa-solid fa-percent"></i>&nbsp;Relative Size
+					<div class="radio-button" id="relativeSizeButton">
+						<i class="fa-solid fa-percent"></i>&nbsp;
+						<p class="lang"  data-lang-var="ICO_CONVERTER_LANG" data-lang="relative_size">Relative Size</p>
 					</div>
 				</div>
 				<br>
 				<div id="absoluteSizeInputs" style="display: block;">
-					<label class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="width">Width: </label><input type="number" id="widthInput" value="64">&nbsp;&nbsp;&nbsp;&nbsp;
-					<label class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="height">Height: </label><input type="number" id="heightInput" value="64">
+					<label class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="width">Width: </label>
+					<input type="number" id="widthInput" value="64">
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<label class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="height">Height: </label>
+					<input type="number" id="heightInput" value="64">
 				</div>
 				<div id="relativeSizeInputs" style="display: none;">
-					<label class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="percentage">Percentage: <input type="number" id="percentageInput" value="100">%</label>
+					<label class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="percentage">Percentage: </label>
+					<input type="number" id="percentageInput" value="100">%
 				</div>
 				
 				<br>
 				<div id="historyController">
-					<button class="lang" id="clearHistoryButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="clear"><i class="fa-solid fa-trash"></i>&nbsp;Clear history</button>
-					<button class="lang" id="downloadAllButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip" disabled><i class="fa-solid fa-file-zipper"></i>&nbps;Download all(.zip)</button>
+					<button id="clearHistoryButton">
+						<i class="fa-solid fa-trash"></i>&nbsp;
+						<p class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="clear">Clear history</p>
+					</button>
+					<button id="downloadAllButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip" disabled>
+						<i class="fa-solid fa-file-zipper"></i>&nbps;
+						<p class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip">Download all(.zip)</p>
+					</button>
 				</div>
 
 				<!-- 다운로드 링크가 표시될 테이블 영역 -->
@@ -65,7 +77,10 @@
 					<tbody id="downloadLinks"></tbody>
 				</table>
 				<br>
-				<button class="lang" id="downloadAllButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip" style="width: 100%;" disabled>&nbps;Download all(.zip)</button>
+				<button id="downloadAllButton" style="width: 100%;" disabled>
+					<i class="fa-solid fa-file-zipper"></i>&nbps;
+					<p class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip">Download all(.zip)</p>
+				</button>
 			</div>
 		</div>
 
