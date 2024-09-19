@@ -85,6 +85,7 @@ const dropZone = document.getElementById("dropZone");
 const fileInput = document.getElementById("imageInput");
 const downloadLinks = document.getElementById("downloadLinks");
 const downloadAllButton = document.getElementById("downloadAllButton");
+const downloadAllButton2 = document.getElementById("downloadAllButton2");
 const clearHistoryButton = document.getElementById("clearHistoryButton");
 
 // 드래그 앤 드롭 및 클릭을 통한 파일 첨부 처리
@@ -209,27 +210,32 @@ async function handleFiles(files) {
 		if (completedCount === fileArray.length) {
 			// 변환 완료 후 전체 다운로드 버튼 활성화
 			downloadAllButton.disabled = false;
+			downloadAllButton2.disabled = false;
 
 			// 전체 다운로드 버튼 클릭 시 ZIP 파일 생성
-			downloadAllButton.addEventListener('click', async function() {
-				const currentUTC = new Date().toISOString().replace(/[:.-]/g, "_");
-				const zipFileName = `${currentUTC}_converted_ico.zip`;
-
-				const zipBlob = await zip.generateAsync({ type: 'blob' });
-				const link = document.createElement("a");
-				link.href = URL.createObjectURL(zipBlob);
-				link.download = zipFileName;
-				link.click();
-			});
+			downloadAllButton.addEventListener('click', downloadAll());
+			// 전체 다운로드 버튼 클릭 시 ZIP 파일 생성
+			downloadAllButton2.addEventListener('click', downloadAll());
 		}
 	} catch (error) {
 		showToast(`파일 처리 중 오류가 발생했습니다: ${error.message}`);
 	}
 }
 
+async function downloadAll(){
+	const currentUTC = new Date().toISOString().replace(/[:.-]/g, "_");
+	const zipFileName = `${currentUTC}_converted_ico.zip`;
+	const zipBlob = await zip.generateAsync({ type: 'blob' });
+	const link = document.createElement("a");
+	link.href = URL.createObjectURL(zipBlob);
+	link.download = zipFileName;
+	link.click();
+}
+
 // 히스토리 제거 버튼 클릭 시 처리
 clearHistoryButton.addEventListener('click', function() {
 	downloadLinks.innerHTML = ''; // 다운로드 링크 제거
 	downloadAllButton.disabled = true; // 전체 다운로드 버튼 비활성화
+	downloadAllButton2.disabled = true; // 전체 다운로드 버튼 비활성화
 	fileInput.value = ''; // 파일 입력 초기화
 });

@@ -8,6 +8,12 @@ input {
 	border-radius: 0.5rem;
 	text-align: right;
 }
+button {
+	height: 2rem;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #container {
 	width: 100%;
 	max-width: 60rem;
@@ -56,6 +62,8 @@ input {
 }
 #historyController {
 	text-align: right;
+	display: flex;
+    justify-content: flex-end;
 }
 table {
 	width: 100%;
