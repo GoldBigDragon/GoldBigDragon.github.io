@@ -181,7 +181,7 @@ async function handleFiles(files) {
 
 				const downloadCell = document.createElement("td");
 				const downloadButton = document.createElement("button");
-				downloadButton.textContent = "Download";
+				downloadButton.innerHTML = "<i class='fa-solid fa-cloud-arrow-down'></i> Download";
 				downloadButton.addEventListener("click", () => {
 					link.click();
 				});

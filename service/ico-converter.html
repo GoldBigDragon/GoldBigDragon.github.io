@@ -21,7 +21,6 @@
 		<div class="row" id="header"></div>
 		<div id="container">
 			<h1 class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="title">Image to ICO Converter (Drag & Drop)</h1>
-
 			<div id="fileAttachmentSection">
 				<div style="display: flex;justify-content: center;align-items: center;">
 					<div id="dropZone">
@@ -32,15 +31,15 @@
 
 				<div class="radio-buttons">
 					<div class="lang radio-button selected" id="absoluteSizeButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="absolute_size">
-						Absolute Size
+						<i class="fa-solid fa-up-right-and-down-left-from-center"></i>&nbsp;Absolute Size
 					</div>
 					<div class="lang radio-button" id="relativeSizeButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="relative_size">
-						Relative Size
+						<i class="fa-solid fa-percent"></i>&nbsp;Relative Size
 					</div>
 				</div>
 				<br>
 				<div id="absoluteSizeInputs" style="display: block;">
-					<label class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="width">Width: <input type="number" id="widthInput" value="64"></label>
+					<label class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="width">Width: <input type="number" id="widthInput" value="64"></label>&nbsp;&nbsp;&nbsp;&nbsp;
 					<label class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="height">Height: <input type="number" id="heightInput" value="64"></label>
 				</div>
 				<div id="relativeSizeInputs" style="display: none;">
@@ -49,8 +48,8 @@
 				
 				<br>
 				<div id="historyController">
-					<button class="lang" id="clearHistoryButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="clear">Clear history</button>
-					<button class="lang" id="downloadAllButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip" disabled>Download(.zip)</button>
+					<button class="lang" id="clearHistoryButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="clear"><i class="fa-solid fa-trash"></i>&nbsp;Clear history</button>
+					<button class="lang" id="downloadAllButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip" disabled><i class="fa-solid fa-file-zipper"></i>&nbps;Download all(.zip)</button>
 				</div>
 
 				<!-- 다운로드 링크가 표시될 테이블 영역 -->
@@ -65,7 +64,8 @@
 					</thead>
 					<tbody id="downloadLinks"></tbody>
 				</table>
-				<button class="lang" id="downloadAllButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip" disabled>Download(.zip)</button>
+				<br>
+				<button class="lang" id="downloadAllButton" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip" style="width: 100%;" disabled>&nbps;Download all(.zip)</button>
 			</div>
 		</div>
 

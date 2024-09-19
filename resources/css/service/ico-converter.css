@@ -2,31 +2,34 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
-	background-color: #f5f5f5;
 }
 input {
-	max-width: 3rem;
+	min-width: 4.8rem;
+	border-radius: 0.5rem;
+	text-align: right;
 }
 #container {
 	width: 100%;
-	max-width: 800px;
+	max-width: 60rem;
 	margin: 0 auto;
+	margin-top: 4.5rem;
 	padding: 20px;
 }
 #fileAttachmentSection {
 	width: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
-	border: 2px solid #ddd;
-	border-radius: 10px;
-	background-color: #fff;
-	padding: 2rem;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 2px solid var(--bs-gray-800);
+    border-radius: 10px;
+    background-color: var(--bs-gray-900);
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 #dropZone {
 	width: 100%;
 	height: 10rem;
-	border: 2px dashed #ccc;
+	border: 3px dashed var(--bs-primary);
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
@@ -42,7 +45,7 @@ input {
 }
 #dropZone:hover {
 	transform: scaleY(1.06);
-	background-color: #f0f0f0;
+	background-color: var(--bs-gray-800);
 }
 #dropZone.hover {
 	transform: scaleY(1.06);
@@ -67,7 +70,9 @@ th, td {
 	text-align: center;
 }
 th {
-	text-align: center;
+    text-align: center;
+    background-color: var(--bs-gray-900);
+    border: 1px solid var(--bs-gray-700);
 }
 td {
 	text-align: center;
