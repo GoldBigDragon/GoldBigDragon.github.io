@@ -83,12 +83,12 @@ td {
 .file-size {
 	text-align: right;
 }
-img {
+.preview {
 	width: 2rem;
 	height: 2rem;
 	transition: transform 0.2s ease-in-out;
 }
-img:hover {
+.preview:hover {
 	transform: scale(10); /* 20rem로 확대되도록 */
 	border: 1px solid black;
 }

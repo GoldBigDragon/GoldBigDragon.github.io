@@ -160,6 +160,7 @@ async function handleFiles(files) {
 
 				// 미리보기 이미지 생성
 				const previewImage = document.createElement("img");
+				previewImage.className = "preview";
 				previewImage.src = URL.createObjectURL(icoBlob);
 
 				// 테이블에 행 추가

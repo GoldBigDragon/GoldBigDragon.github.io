@@ -23,9 +23,9 @@ const ICO_CONVERTER_LANG = {
 	"relative_size": {
 		"en": "Relative Size",
 		"kr": "상대적 크기",
-		"jp": "Absolute Size",
-		"cn": "Absolute Size",
-		"ru": "Absolute Size"
+		"jp": "Relative Size",
+		"cn": "Relative Size",
+		"ru": "Relative Size"
 	},
 	"width": {
 		"en": "Width: ",
