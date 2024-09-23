@@ -123,7 +123,6 @@ async function handleFiles(files) {
 	const isAbsoluteSize = absoluteSizeButton.classList.contains("selected");
 	let width, height;
 
-	zip = new JSZip();
 	let completedCount = 0;
 
 	try {
