@@ -117,12 +117,13 @@ fileInput.addEventListener("change", function() {
 	handleFiles(fileInput.files);
 });
 
+let zip = new JSZip();
 async function handleFiles(files) {
 	const fileArray = Array.from(files);
 	const isAbsoluteSize = absoluteSizeButton.classList.contains("selected");
 	let width, height;
 
-	const zip = new JSZip();
+	zip = new JSZip();
 	let completedCount = 0;
 
 	try {
@@ -189,7 +190,7 @@ async function handleFiles(files) {
 				const downloadCell = document.createElement("td");
 				downloadCell.style.textAlign = "-webkit-center"
 				const downloadButton = document.createElement("button");
-				downloadButton.innerHTML = "<i class='fa-solid fa-cloud-arrow-down'></i> Download";
+				downloadButton.innerHTML = "<i class='fa-solid fa-cloud-arrow-down'></i>";
 				downloadButton.addEventListener("click", () => {
 					link.click();
 				});
@@ -219,34 +220,24 @@ async function handleFiles(files) {
 			// Activate zip download button after conversion is complete
 			downloadAllButton.disabled = false;
 			downloadAllButton2.disabled = false;
-
-			// Add all file download event
-			downloadAllButton.addEventListener('click', async function() {
-				const currentUTC = new Date().toISOString().replace(/[:.-]/g, "_");
-				const zipFileName = `${currentUTC}_converted_ico.zip`;
-				const zipBlob = await zip.generateAsync({ type: 'blob' });
-				const link = document.createElement("a");
-				link.href = URL.createObjectURL(zipBlob);
-				link.download = zipFileName;
-				link.click();
-			});
-			// Add all file download event
-			downloadAllButton2.addEventListener('click', async function() {
-				const currentUTC = new Date().toISOString().replace(/[:.-]/g, "_");
-				const zipFileName = `${currentUTC}_converted_ico.zip`;
-				const zipBlob = await zip.generateAsync({ type: 'blob' });
-				const link = document.createElement("a");
-				link.href = URL.createObjectURL(zipBlob);
-				link.download = zipFileName;
-				link.click();
-			});
 		}
 	} catch (error) {
 		showToast(`An error occurred: ${error.message}`);
 	}
 }
 
+async function downloadAll(){
+	const currentUTC = new Date().toISOString().replace(/[:.-]/g, "_");
+	const zipFileName = `${currentUTC}_converted_ico.zip`;
+	const zipBlob = await zip.generateAsync({ type: 'blob' });
+	const link = document.createElement("a");
+	link.href = URL.createObjectURL(zipBlob);
+	link.download = zipFileName;
+	link.click();
+}
+
 function clearHistory(){
+	zip = new JSZip();
 	const downloadAllButton = document.getElementById("downloadAllButton");
 	const downloadAllButton2 = document.getElementById("downloadAllButton2");
 	const downloadLinks = document.getElementById("downloadLinks");
