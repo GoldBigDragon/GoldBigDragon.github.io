@@ -30,12 +30,12 @@
 				</div>
 
 				<div id="radio-buttons">
-					<button class="radio-button selected" id="absoluteSizeButton">
+					<button class="radio-button selected" id="absoluteSizeButton" onClick="setAbsoluteSize()">
 						<i class="fa-solid fa-up-right-and-down-left-from-center"></i>&nbsp;
 						<div class="lang"  data-lang-var="ICO_CONVERTER_LANG" data-lang="absolute_size">Absolute Size</div>
 					</button>
 					&nbsp;&nbsp;
-					<button class="radio-button" id="relativeSizeButton">
+					<button class="radio-button" id="relativeSizeButton" onClick="setRelativeSize()">
 						<i class="fa-solid fa-percent"></i>&nbsp;
 						<div class="lang"  data-lang-var="ICO_CONVERTER_LANG" data-lang="relative_size">Relative Size</div>
 					</button>
@@ -55,7 +55,7 @@
 				
 				<br>
 				<div id="historyController">
-					<button id="clearHistoryButton">
+					<button id="clearHistoryButton" onClick="clearHistory()">
 						<i class="fa-solid fa-trash"></i>&nbsp;
 						<div class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="clear">Clear history</div>
 					</button>
