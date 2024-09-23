@@ -3,11 +3,23 @@ body {
 	padding: 0;
 	font-family: Arial, sans-serif;
 }
+
 input {
 	width: 5rem;
 	border-radius: 0.5rem;
 	text-align: right;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 button {
 	display: flex;
 	gap: 0.2rem;
@@ -39,6 +51,10 @@ button:active {
 }
 .radio-button:not(.selected) {
 	background-color: #adb5bd;
+}
+
+#radio-buttons{
+	display: flex;
 }
 
 #container {

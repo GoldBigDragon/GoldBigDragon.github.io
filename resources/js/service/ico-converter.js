@@ -113,12 +113,12 @@ fileInput.addEventListener("change", function() {
 	handleFiles(fileInput.files);
 });
 
+const zip = new JSZip();
 async function handleFiles(files) {
 	const fileArray = Array.from(files);
 	const isAbsoluteSize = absoluteSizeButton.classList.contains("selected");
 	let width, height;
 
-	const zip = new JSZip();
 	let completedCount = 0;
 
 	try {
