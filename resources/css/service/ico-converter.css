@@ -48,9 +48,16 @@ button:active {
 
 .radio-button.selected {
 	background-color: #faa802;
+	color: var(--bs-gray-900);
 }
 .radio-button:not(.selected) {
 	background-color: #adb5bd;
+	color: var(--bs-gray-200);
+}
+
+#title{
+	text-align: center;
+    padding: 1rem 2rem 3rem 2rem;
 }
 
 #radio-buttons{

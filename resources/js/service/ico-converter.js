@@ -113,7 +113,6 @@ fileInput.addEventListener("change", function() {
 	handleFiles(fileInput.files);
 });
 
-const zip = new JSZip();
 async function handleFiles(files) {
 	const fileArray = Array.from(files);
 	const isAbsoluteSize = absoluteSizeButton.classList.contains("selected");
@@ -121,6 +120,7 @@ async function handleFiles(files) {
 
 	let completedCount = 0;
 
+	const zip = new JSZip();
 	try {
 		// 각 파일을 비동기적으로 처리
 		const convertPromises = fileArray.map(async (file) => {
@@ -182,6 +182,7 @@ async function handleFiles(files) {
 				row.appendChild(sizeCell);
 
 				const downloadCell = document.createElement("td");
+				downloadCell.style.textAlign = "-webkit-center"
 				const downloadButton = document.createElement("button");
 				downloadButton.innerHTML = "<i class='fa-solid fa-cloud-arrow-down'></i> Download";
 				downloadButton.addEventListener("click", () => {
@@ -223,6 +224,7 @@ async function handleFiles(files) {
 }
 
 async function downloadAll(){
+	const zip = new JSZip();
 	const currentUTC = new Date().toISOString().replace(/[:.-]/g, "_");
 	const zipFileName = `${currentUTC}_converted_ico.zip`;
 	const zipBlob = await zip.generateAsync({ type: 'blob' });
