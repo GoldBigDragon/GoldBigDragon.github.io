@@ -2734,5 +2734,35 @@ const CARTOON_LIST = [
 				"created-at": "2024-08-18"
 			}
 		]
+	},
+	{
+		"title":{
+			"en":"Gameplay",
+			"kr":"게임플레이",
+			"jp":"ゲームプレイ",
+			"cn":"游戏内容",
+			"ru":"Игровой процесс"
+		},
+		"translating":{
+			"en":"Translated",
+			"kr":"번역 완료",
+			"jp":"翻訳完了",
+			"cn":"翻译完成",
+			"ru":"Перевод завершен"
+		},
+		"uid":"gameplay",
+		"pages": [
+			{
+				"title":{
+					"en": "[HELLDIVERS 2] Which",
+					"kr": "[헬다이버즈 2] Which",
+					"jp": "[HELLDIVERS 2] Which",
+					"cn": "[绝地潜兵2] Which",
+					"ru": "[HELLDIVERS 2] Which"
+				},
+				"img": "HELLDIVERS_2_001.png",
+				"created-at": "2024-10-06"
+			}
+		]
 	}
 ];

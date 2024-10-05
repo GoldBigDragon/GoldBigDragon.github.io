@@ -1,7 +1,7 @@
 const SERVICE_LIST = [
 	{
 		"url": "/service/ico-converter.html"
-		"title": {
+		"name": {
 			"en": "ICO Converter",
 			"kr": "ICO 변환",
 			"jp": "ICOコンバーター",
@@ -16,6 +16,6 @@ const SERVICE_LIST = [
 			"ru": "Преобразование различных форматов изображений, таких как JPEG, PNG и других, в формат ICO."
 		},
 		"tag": ["image", "converter"],
-		"image": "/resources/img/service/logo/ico-converter.png",
+		"icon": "/resources/img/service/logo/ico-converter.png",
 	}
 ];

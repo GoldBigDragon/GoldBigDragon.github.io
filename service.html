@@ -20,7 +20,20 @@
 		<div class="row" id="header"></div>
 		<div class="row" style="margin-top:6rem; margin-bottom:1rem; display:flex; justify-content: center; align-items: flex-start;">
 			<div class="col-1"></div>
-			<div class="col" id="contents"></div>
+			<div class="col" id="contents">
+				<div class="row" style="display: flex;align-items: center;justify-content: flex-start;margin: 0rem 1rem;">
+					<div style="display: flex;align-items: center;justify-content: center;">
+						<select id="search-category" style="max-width: 10rem;">
+							<option class="lang" value="name" data-lang-var="SERVICE_LANG" data-lang="name">Name</option>
+							<option class="lang" value="tag" data-lang-var="SERVICE_LANG" data-lang="tag">Tag</option>
+						</select>
+						<input id="search-input" type="text" style="text-align: left;max-width: 10rem;margin: 0rem 1rem;" onkeyup="searchEnter()">
+						<button class="btn btn-secondary" onclick="search()"><i class="fa-solid fa-binoculars"></i></button>
+					</div>
+				</div>
+				<div id="serviceArea">
+				</div>
+			</div>
 			<div class="col-1"></div>
 		</div>
 		<div class="row" id="footer"></div>

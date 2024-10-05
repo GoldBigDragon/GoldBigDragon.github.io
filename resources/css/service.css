@@ -1,3 +1,77 @@
 #contents{
 	max-width: 80rem;
 }
+
+.service{
+	margin: 2rem 1rem;
+    background-color: var(--bs-gray-900);
+    border-radius: 0.5rem;
+    padding: 1rem;
+	box-shadow: 0px 5px 10px black;
+	transition: 0.2s;
+}
+.service:hover{
+    background-color: var(--bs-gray-800);
+}
+
+.icon-box{
+    padding: 1rem;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 700px) {
+	.icon-box{
+		max-width: 10rem;
+	}
+}
+.icon{
+	max-width: 8rem;
+    max-height: 8rem;
+}
+
+.description-box{
+    padding: 1rem;
+	font-size: 1.1rem;
+	min-width: 250px;
+}
+
+.service-name{
+    color: var(--bs-gray-100);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 10px var(--bs-gray-900);
+}
+
+.service-description{
+	color: var(--bs-gray-500);
+    margin: 0.5rem;
+}
+
+.service-tag{
+    border: 1px solid var(--bs-gray-900);
+	background-color: black;
+    border-radius: 0.5rem;
+	font-size: 0.95rem;
+	margin: 0.25rem;
+	transition: 0.2s;
+	cursor: pointer;
+	color: var(--bs-gray-500);
+}
+
+.service-tag:hover{
+	transform: scale(1.1);
+	color: white;
+}
+
+.service-tag:active{
+	transform: scale(0.95);
+}
+
+.align-left{
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+	padding: 0rem 1rem;
+}
