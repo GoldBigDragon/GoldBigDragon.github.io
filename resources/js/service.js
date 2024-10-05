@@ -36,13 +36,13 @@ function search(){
 function addService(serviceArea, serviceData, index){
 	const row = document.createElement("div");
 	row.className = "row service lang-title";
-	row.setAttribute("onClick", "window.location.href='" + serviceData["url"] + "';");
 	
 	const col3 = document.createElement("div");
 	col3.className = "col icon-box";
 	const icon = document.createElement("img");
 	icon.className = "icon";
 	icon.src = serviceData["icon"];
+	icon.setAttribute("onClick", "window.location.href='" + serviceData["url"] + "';");
 	col3.appendChild(icon);
 	row.appendChild(col3);
 	
@@ -52,6 +52,7 @@ function addService(serviceArea, serviceData, index){
 	const title = document.createElement("div");
 	title.className = "row lang service-name";
 	title.innerHTML = serviceData["name"][NOW_LANG];
+	title.setAttribute("onClick", "window.location.href='" + serviceData["url"] + "';");
 	LANGUAGE_OBJECT["SERVICE_LANG"][serviceData["name"]["en"]+"-name"] = serviceData["name"];
 	title.setAttribute("data-lang-var", "SERVICE_LANG");
 	title.setAttribute("data-lang", serviceData["name"]["en"]+"-name");

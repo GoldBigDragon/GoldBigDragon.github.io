@@ -2760,6 +2760,7 @@ const CARTOON_LIST = [
 					"cn": "[绝地潜兵2] Which",
 					"ru": "[HELLDIVERS 2] Which"
 				},
+				"background-color": "rgb(39, 39, 39)",
 				"img": "HELLDIVERS_2_001.png",
 				"created-at": "2024-10-06"
 			}

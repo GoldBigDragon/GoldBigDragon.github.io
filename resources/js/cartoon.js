@@ -176,6 +176,14 @@ function goPage(page, isSelected) {
 	createdAt.innerHTML = pages[pageInt]["created-at"];
 	LANGUAGE_OBJECT["COVER_LANG"]["TITLE"] = pages[pageInt]["title"];
 	
+	if("background-color" in pages[pageInt]) {
+		pageArea.style.backgroundColor = pages[pageInt]["background-color"];
+		pageArea.style.boxShadow = "0px 0px 10px " + pages[pageInt]["background-color"];
+	} else {
+		pageArea.style.backgroundColor = "white";
+		pageArea.style.boxShadow = "0px 0px 10px white";
+	}
+	
 	pageArea.appendChild(prevPage);
 	pageArea.appendChild(img);
 	pageArea.appendChild(nextPage);
