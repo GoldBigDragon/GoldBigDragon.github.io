@@ -16,6 +16,8 @@ const SERVICE_LIST = [
 			"ru": "Преобразование различных форматов изображений, таких как JPEG, PNG и других, в формат ICO."
 		},
 		"tag": ["image", "converter"],
-		"icon": "/resources/img/service/logo/ico-converter.png"
+		"icon": "/resources/img/service/logo/ico-converter.png",
+		"created-at": "2024-10-06",
+		"updated-at": "2024-10-06"
 	}
 ];

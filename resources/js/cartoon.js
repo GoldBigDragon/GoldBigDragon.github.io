@@ -101,6 +101,14 @@ function readCartoon(cartoonIndex){
 	nextPage.className = "page-mover next-page";
 	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
 	
+	if("background-color" in pages[maxPageValue - 1]) {
+		pageArea.style.backgroundColor = pages[maxPageValue - 1]["background-color"];
+		pageArea.style.boxShadow = "0px 0px 10px " + pages[maxPageValue - 1]["background-color"];
+	} else {
+		pageArea.style.backgroundColor = "white";
+		pageArea.style.boxShadow = "0px 0px 10px white";
+	}
+	
 	pageArea.appendChild(prevPage);
 	pageArea.appendChild(img);
 	pageArea.appendChild(nextPage);
