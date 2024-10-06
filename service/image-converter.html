@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="author" content="GoldBigDragon" />
+		<meta name="description" content="Index Page" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/x-icon" href="/resources/img/service/logo/image-converter.ico" />
+		<title>GoldBigDragon - Image converter</title>
+		<script src="/resources/vendor/jszip/jszip.min_3.6.0.js"></script>
+		<link rel="stylesheet" href="/resources/vendor/fontawesome-free/css/all.min.css" />
+		<link rel="stylesheet" href="/resources/vendor/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" href="/resources/css/service/image-converter.css" />
+		<link rel="stylesheet" href="/resources/css/basic.css" />
+	</head>
+	<body>
+		<div class="row" id="header"></div>
+		<div id="container">
+			<h1 id="title" class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="title">Image Converter</h1>
+			<div id="fileAttachmentSection">
+				<div style="display: flex;justify-content: center;align-items: center;">
+					<div id="dropZone">
+						<span class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="container">Drag & Drop your image files here or click to select files</span>
+						<input type="file" id="imageInput" accept="image/png, image/jpeg, image/jpg, image/gif" multiple>
+					</div>
+				</div>
+				
+				<table>
+					<tbody>
+						<tr>
+							<td style="width: 8rem;" class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="convert_format">
+								Format
+							</td>
+							<td colspan="2">
+								<div style="display: flex;">
+									<button class="radio-button format-button selected" id="png" onClick="setFormat('png')">
+										<i class="fa-solid fa-percent"></i>&nbsp;
+										<div>.PNG</div>
+									</button>
+									<button class="radio-button format-button" id="jpg" onClick="setFormat('jpg')">
+										<i class="fa-solid fa-up-right-and-down-left-from-center"></i>&nbsp;
+										<div>.JPG</div>
+									</button>
+									<button class="radio-button format-button" id="ico" onClick="setFormat('ico')">
+										<i class="fa-solid fa-up-right-and-down-left-from-center"></i>&nbsp;
+										<div>.ICO</div>
+									</button>
+									<button class="radio-button format-button" id="webp" onClick="setFormat('webp')">
+										<i class="fa-solid fa-up-right-and-down-left-from-center"></i>&nbsp;
+										<div>.WEBP</div>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="2" class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="image_size">
+								Size
+							</td>
+							<td>
+								<div style="display: flex;">
+									<button class="radio-button selected" id="relativeSizeButton" onClick="setRelativeSize()">
+										<i class="fa-solid fa-percent"></i>&nbsp;
+										<div class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="relative_size">Relative Size</div>
+									</button>
+									<button class="radio-button" id="absoluteSizeButton" onClick="setAbsoluteSize()">
+										<i class="fa-solid fa-up-right-and-down-left-from-center"></i>&nbsp;
+										<div class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="absolute_size">Absolute Size</div>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div style="display: flex;">
+									<div id="relativeSizeInputs" style="display: block;">
+										<label class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="percentage">Percentage: </label>
+										<select type="number" id="percentageInput">
+											<option value="100">100%</option>
+											<option value="75">75%</option>
+											<option value="50">50%</option>
+											<option value="25">25%</option>
+										</select>
+									</div>
+									<div id="absoluteSizeInputs" class="row" style="display: none;">
+										<label class="lang col" data-lang-var="ICO_CONVERTER_LANG" data-lang="width" style="width: 5rem;">Width: </label>
+										<input class="col" type="number" id="widthInput" value="64">px
+										<br>
+										<label class="lang col" data-lang-var="ICO_CONVERTER_LANG" data-lang="height" style="width: 5rem;">Height: </label>
+										<input class="col" type="number" id="heightInput" value="64" style="margin-top: 0.5rem;">px
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="image_compress">
+								Compress
+							</td>
+							<td>
+								<div style="display: flex;">
+									<select id="compressStrength">
+										<option value="0" class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="compress_0">No compression</option>
+										<option value="1" class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="compress_1">Slight compression</option>
+										<option value="2" class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="compress_2">Moderate compression</option>
+										<option value="3" class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="compress_3">Compressed</option>
+										<option value="4" class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="compress_4">Heavily compressed</option>
+										<option value="5" class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="compress_5">Maximum compression</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				
+				<div id="historyController">
+					<button id="clearHistoryButton" onClick="clearHistory()">
+						<i class="fa-solid fa-trash"></i>&nbsp;
+						<div class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="clear">Clear history</div>
+					</button>
+					&nbsp;&nbsp;
+					<button id="downloadAllButton" onClick="downloadAll()" disabled>
+						<i class="fa-solid fa-file-zipper"></i>&nbsp;
+						<div class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip">Download all(.zip)</div>
+					</button>
+				</div>
+
+				<!-- 다운로드 링크가 표시될 테이블 영역 -->
+				<table id="downloadTable">
+					<thead>
+						<tr>
+							<th class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="preview">Preview</th>
+							<th class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="filename">File Name</th>
+							<th class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="size">Size</th>
+							<th class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="download">Download</th>
+						</tr>
+					</thead>
+					<tbody id="downloadLinks"></tbody>
+				</table>
+				<br>
+				<button id="downloadAllButton2" style="width: 100%;" onClick="downloadAll()" disabled>
+					<i class="fa-solid fa-file-zipper"></i>&nbsp;
+					<div class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="download_zip">Download all(.zip)</div>
+				</button>
+			</div>
+			<br>
+			<h4 id="description" class="lang" data-lang-var="ICO_CONVERTER_LANG" data-lang="description">Uploaded and converted image files can only be downloaded by you and will not be shared anywhere.</h4>
+			<br>
+		</div>
+
+		<!-- 토스트 알림 컨테이너 -->
+		<div id="toastContainer" class="toast-container"></div>
+		<div class="row" id="footer"></div>
+	</body>
+	<script src="/resources/vendor/jquery/jquery.min.js"></script>
+	<script src="/resources/vendor/jquery/jquery.easing.min.js"></script>
+	<script src="/resources/vendor/popper/popper.min.js"></script>
+	<script src="/resources/vendor/bootstrap/bootstrap.5.1.3.bundle.min.js"></script>
+	
+	<script src="/resources/js/basic.js"></script>
+	<script src="/resources/lang/service/image-converter.js"></script>
+	<script src="/resources/js/service/image-converter.js"></script>
+</html>
