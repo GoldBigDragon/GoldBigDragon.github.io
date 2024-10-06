@@ -7,11 +7,11 @@ const ICO_CONVERTER_LANG = {
 		"ru": "Конвертер изображений"
 	},
 	"description": {
-		"en": "Uploaded and converted image files can only be downloaded by you and will not be shared anywhere.",
-		"kr": "업로드 및 변환 된 이미지 파일은 당신만 다운로드받을 수 있으며, 어디에도 공유되지 않습니다.",
-		"jp": "アップロードおよび変換された画像ファイルは、あなただけがダウンロードでき、どこにも共有されません。",
-		"cn": "上传和转换后的图像文件只能由您下载，不会在任何地方共享。",
-		"ru": "Загруженные и преобразованные файлы изображений можете скачать только вы и они не будут нигде опубликованы."
+		"en": "Uploaded images are not recorded on the site.",
+		"kr": "업로드 된 이미지는 사이트에 기록되지 않습니다.",
+		"jp": "アップロードされた画像はサイトに記録されません。",
+		"cn": "上传的图片不会写入站点。",
+		"ru": "Загруженные изображения не будут записаны на сайте."
 	},
 	"container": {
 		"en": "Drag & Drop your image files here or click to select files",
