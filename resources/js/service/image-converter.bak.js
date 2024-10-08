@@ -222,37 +222,24 @@ async function compressImage(img, width, height, format) {
 function compressRGB(canvas, ctx, width, height, quality, extension) {
     const imageData = ctx.getImageData(0, 0, width, height);
     const data = imageData.data;
-    const difference = 5 * quality;
+    const diffrence = 5 * quality;
 
     const processed = new Array(width * height).fill(false);
 
     function rgbDifference(r1, g1, b1, r2, g2, b2) {
-        return Math.abs(r1 - r2) <= difference &&
-               Math.abs(g1 - g2) <= difference &&
-               Math.abs(b1 - b2) <= difference;
+        return Math.abs(r1 - r2) <= diffrence && Math.abs(g1 - g2) <= diffrence && Math.abs(b1 - b2) <= diffrence;
     }
 
-    // Calc color average
-    function averageColor(colors) {
-        const total = colors.length;
-        const avg = colors.reduce((acc, { r, g, b }) => {
-            acc.r += r;
-            acc.g += g;
-            acc.b += b;
-            return acc;
-        }, { r: 0, g: 0, b: 0 });
-
-        return {
-            r: Math.round(avg.r / total),
-            g: Math.round(avg.g / total),
-            b: Math.round(avg.b / total)
-        };
-    }
-
-    // Calc pixel group
-    function processPixelGroup(x, y, initialColor) {
-        const stack = [[x, y]];
-        const colors = [];
+    function processPixelGroup(x, y, r, g, b) {
+        const stack = [
+            [x, y]
+        ];
+        const directions = [
+            [1, 0],
+            [-1, 0],
+            [0, 1],
+            [0, -1]
+        ];
 
         while (stack.length > 0) {
             const [px, py] = stack.pop();
@@ -260,16 +247,13 @@ function compressRGB(canvas, ctx, width, height, quality, extension) {
 
             if (processed[py * width + px]) continue;
 
-            const r = data[index];
-            const g = data[index + 1];
-            const b = data[index + 2];
-
-            colors.push({ r, g, b });
+            data[index] = r;
+            data[index + 1] = g;
+            data[index + 2] = b;
 
             processed[py * width + px] = true;
 
-            // Search near pixel
-            for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+            for (let [dx, dy] of directions) {
                 const nx = px + dx;
                 const ny = py + dy;
 
@@ -279,21 +263,12 @@ function compressRGB(canvas, ctx, width, height, quality, extension) {
                     const ng = data[neighborIndex + 1];
                     const nb = data[neighborIndex + 2];
 
-                    if (!processed[ny * width + nx] && rgbDifference(initialColor.r, initialColor.g, initialColor.b, nr, ng, nb)) {
+                    if (!processed[ny * width + nx] && rgbDifference(r, g, b, nr, ng, nb)) {
                         stack.push([nx, ny]);
                     }
                 }
             }
         }
-
-        // Calc average color
-        const averagedColor = averageColor(colors);
-        colors.forEach(({ x, y }) => {
-            const index = (y * width + x) * 4;
-            data[index] = averagedColor.r;
-            data[index + 1] = averagedColor.g;
-            data[index + 2] = averagedColor.b;
-        });
     }
 
     for (let y = 0; y < height; y++) {
@@ -303,14 +278,14 @@ function compressRGB(canvas, ctx, width, height, quality, extension) {
                 const r = data[index];
                 const g = data[index + 1];
                 const b = data[index + 2];
-                processPixelGroup(x, y, { r, g, b });
+                processPixelGroup(x, y, r, g, b);
             }
         }
     }
+
     ctx.putImageData(imageData, 0, 0);
     return canvas.toDataURL('image/' + extension);
 }
-
 
 // Helper function to create download link
 function addDownloadLink(container, blob, fileName, sizeInKB) {

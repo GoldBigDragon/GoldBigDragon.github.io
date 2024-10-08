@@ -60,6 +60,7 @@ function addService(serviceArea, serviceData, index){
 	const description = document.createElement("div");
 	description.className = "row lang service-description";
 	description.innerHTML = serviceData["description"][NOW_LANG];
+	description.setAttribute("onClick", "window.location.href='" + serviceData["url"] + "';");
 	LANGUAGE_OBJECT["SERVICE_LANG"][serviceData["name"]["en"]+"-description"] = serviceData["description"];
 	description.setAttribute("data-lang-var", "SERVICE_LANG");
 	description.setAttribute("data-lang", serviceData["name"]["en"]+"-description");
