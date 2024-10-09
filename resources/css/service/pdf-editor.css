@@ -131,10 +131,13 @@ button:active {
 }
 #exportPng {
 	background-color: var(--bs-primary);
+	color: var(--bs-gray-900);
 }
 
 #loading {
 	color: transparent;
+	text-align: center;
+    margin-bottom: 1rem;
 }
 
 .pdf-item {
