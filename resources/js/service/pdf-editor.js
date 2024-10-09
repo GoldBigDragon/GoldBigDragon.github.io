@@ -42,6 +42,7 @@ const exportPngBtn = document.getElementById('exportPng');
 const resetButton = document.getElementById('resetButton');
 let pagesData = [];
 let filesLoaded = 0;
+let pageIdCounter = 0;
 
 dropZone.addEventListener('click', () => {
 	const input = document.createElement('input');
@@ -71,8 +72,6 @@ async function handleFiles(event) {
 	filesLoaded = 0;
 	toggleLoading(true);
 	const files = event.target.files || event.dataTransfer.files;
-	pagesData = [];
-	pageIdCounter = 0;
 	for (const file of files) {
 		if (!['application/pdf'].includes(file.type)) {
 			showToast(`${file.name} is an unsupported type.`);
@@ -157,8 +156,6 @@ function updatePagesDataOrder() {
 		pagesData = newPagesData;
 	}
 }
-
-let pageIdCounter = 0;
 
 function makeDraggable(item) {
 	item.setAttribute('draggable', true);
