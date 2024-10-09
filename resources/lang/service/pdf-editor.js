@@ -27,19 +27,19 @@ const PDF_EDITOR_LANG = {
 		"cn": "清除历史",
 		"ru": "Очистить историю"
 	},
-	"download_zip": {
-		"en": "Download(.zip)",
-		"kr": "다운로드(.zip)",
-		"jp": "ダウンロード(.zip)",
-		"cn": "下载(.zip)",
-		"ru": "Скачать(.zip)"
+	"export_pdf": {
+		"en": "Export PDF",
+		"kr": "PDF로 추출",
+		"jp": "PDFで抽出",
+		"cn": "导出 PDF",
+		"ru": "Экспорт PDF"
 	},
-	"preview": {
-		"en": "Preview",
-		"kr": "미리보기",
-		"jp": "プレビュー",
-		"cn": "预览",
-		"ru": "Предварительный просмотр"
+	"export_png": {
+		"en": "Export PNG",
+		"kr": "PNG로 추출",
+		"jp": "PNGで抽出",
+		"cn": "导出 PNG",
+		"ru": "Экспорт PNG"
 	}
 }
 LANGUAGE_OBJECT["PDF_EDITOR_LANG"] = PDF_EDITOR_LANG;
