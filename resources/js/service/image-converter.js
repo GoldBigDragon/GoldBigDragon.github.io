@@ -204,7 +204,7 @@ async function compressImage(img, width, height, format) {
 	if (quality == 0) {
 		compressedDataUrl = canvas.toDataURL('image/' + extension);
 	} else {
-		if (format === 'png' || format === 'ico') {
+		if (format === 'png' || format === 'ico' || format === 'jpg') {
 			compressedDataUrl = compressRGB(canvas, ctx, width, height, quality, extension);
 		} else {
 			quality = 1 - (quality * 0.15)
