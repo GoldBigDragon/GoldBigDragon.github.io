@@ -209,7 +209,8 @@ function toggleLoading(isLoading) {
 	exportPngBtn.disabled = isLoading;
 }
 
-document.getElementById('exportPdf').addEventListener('click', async () => {
+async function exportPDF(){
+	exportPdfBtn.disabled = true;
 	const mergedPdf = await PDFLib.PDFDocument.create();
 	for (const pageInfo of pagesData) {
 		if (!pageInfo.removed) {
@@ -221,47 +222,49 @@ document.getElementById('exportPdf').addEventListener('click', async () => {
 	}
 	const mergedPdfBytes = await mergedPdf.save();
 	download(mergedPdfBytes, 'merged.pdf', 'application/pdf');
-});
+	exportPdfBtn.disabled = false;
+}
 
-document.getElementById('exportPng').addEventListener('click', async () => {
-	const zip = new JSZip();
-	const pngPromises = [];
-	let pageCount = 1;
+async function exportPNG(){
+	exportPngBtn.disabled = true;
+	const mergedPdf = await PDFLib.PDFDocument.create();
 	for (const pageInfo of pagesData) {
 		if (!pageInfo.removed) {
-			const page = await pageInfo.pdf.getPage(pageInfo.pageNum);
-			const canvas = document.createElement('canvas');
-			const context = canvas.getContext('2d');
-			const viewport = page.getViewport({
-				scale: 2
-			});
-			canvas.height = viewport.height;
-			canvas.width = viewport.width;
-
-			await page.render({
-				canvasContext: context,
-				viewport
-			}).promise;
-
-			const promise = new Promise((resolve) => {
-				canvas.toBlob(blob => {
-					if (blob) {
-						zip.file(`page_${pageCount}.png`, blob);
-						pageCount = pageCount + 1;
-					}
-					resolve();
-				}, 'image/png');
-			});
-			pngPromises.push(promise);
+			const arrayBuffer = await pageInfo.pdf.getData();
+			const loadedPdf = await PDFLib.PDFDocument.load(arrayBuffer);
+			const [page] = await mergedPdf.copyPages(loadedPdf, [pageInfo.pageNum - 1]);
+			mergedPdf.addPage(page);
 		}
+	}
+	const mergedPdfBytes = await mergedPdf.save();
+	
+	const zip = new JSZip();
+	const pngPromises = [];
+	const pdfDoc = await pdfjsLib.getDocument({ data: mergedPdfBytes }).promise;
+	const numPages = pdfDoc.numPages;
+
+	for (let i = 1; i <= numPages; i++) {
+		pngPromises.push((async () => {
+			const page = await pdfDoc.getPage(i);
+			const viewport = page.getViewport({ scale: 2 });
+			const canvas = document.createElement('canvas');
+			canvas.width = viewport.width;
+			canvas.height = viewport.height;
+			const context = canvas.getContext('2d');
+
+			await page.render({ canvasContext: context, viewport: viewport }).promise;
+			const pngDataUrl = canvas.toDataURL('image/png');
+			const response = await fetch(pngDataUrl);
+			const blob = await response.blob();
+			zip.file(`page_${i}.png`, blob);
+		})());
 	}
 
 	await Promise.all(pngPromises);
-	const zipContent = await zip.generateAsync({
-		type: 'blob'
-	});
+	const zipContent = await zip.generateAsync({ type: 'blob' });
 	saveAs(zipContent, 'pages.zip');
-});
+	exportPngBtn.disabled = false;
+}
 
 function download(data, filename, type) {
 	const blob = new Blob([data], {
