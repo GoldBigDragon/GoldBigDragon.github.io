@@ -136,7 +136,7 @@ async function handleFiles(files) {
 		const convertPromises = fileArray.map(async (file) => {
 			try {
 				const fileType = file.type;
-				if (!['image/png', 'image/jpeg', 'image/jpg', 'image/gif'].includes(fileType)) {
+				if (!['image/png', 'image/jpeg', 'image/jpg', 'image/gif', 'image/x-icon'].includes(fileType)) {
 					showToast(`${file.name} is an unsupported type.`);
 					return;
 				}
@@ -200,9 +200,6 @@ async function compressImage(img, width, height, format) {
 
 	let compressedDataUrl;
 	let extension = format;
-	if (format == "jpg") {
-		extension = "jpeg";
-	}
 
 	if (quality == 0) {
 		compressedDataUrl = canvas.toDataURL('image/' + extension);
