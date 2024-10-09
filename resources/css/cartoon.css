@@ -39,7 +39,7 @@
 
 .book-translating {
 	text-align: center;
-    color: var(--bs-gray-600);
+	color: var(--bs-gray-600);
 	font-size: 1rem;
 }
 
@@ -53,9 +53,9 @@
 
 #pageArea {
 	margin: 2rem 0rem;
-    padding: 1rem;
-    box-shadow: 0px 0px 10px white;
-    background-color: white;
+	padding: 1rem;
+	box-shadow: 0px 0px 10px white;
+	background-color: white;
 	-webkit-touch-callout: none;
 	user-select: none;
 	-moz-user-select: none;
@@ -66,35 +66,35 @@
 
 .page-mover {
 	color: rgba(0, 0, 0, 0.00001);
-    position: absolute;
-    height: calc(100% - 19.5rem);
-    width: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.000001);
+	position: absolute;
+	height: calc(100% - 19.5rem);
+	width: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.000001);
 	transition: 0.2s;
 }
 
 .next-page {
 	color: rgba(255, 255, 255, 0.25);
-    top: 12rem;
-    right: 0rem;
+	top: 12rem;
+	right: 0rem;
 }
 .next-page:hover {
 	color: gray;
-    background: rgb(0,0,0);
+	background: rgb(0,0,0);
 	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
 .prev-page {
 	color: rgba(255, 255, 255, 0.25);
-    top: 12rem;
-    left: 0rem;
+	top: 12rem;
+	left: 0rem;
 }
 .prev-page:hover {
 	color: gray;
-    background: rgb(0,0,0);
+	background: rgb(0,0,0);
 	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
 

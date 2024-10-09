@@ -7,8 +7,8 @@ body {
 button {
 	display: flex;
 	gap: 0.2rem;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 	border-radius: 5px;
 	padding: 0.5rem;
 	cursor: pointer;
@@ -28,7 +28,7 @@ button:active {
 
 #title{
 	text-align: center;
-    padding: 1rem 2rem 3rem 2rem;
+	padding: 1rem 2rem 3rem 2rem;
 }
 
 #container {
@@ -42,34 +42,34 @@ button:active {
 #fileAttachmentSection {
 	width: 100%;
 	min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    border: 2px solid var(--bs-gray-800);
-    border-radius: 10px;
-    background-color: var(--bs-gray-900);
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow-x: hidden;
+	overflow-y: auto;
+	border: 2px solid var(--bs-gray-800);
+	border-radius: 10px;
+	background-color: var(--bs-gray-900);
+	padding: 2rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #scrollContainer {
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    margin-bottom: 20px;
-    background-color: #f0f0f0;
-    height: 30rem;
+	width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+	height: 30rem;
 	border-radius: 0.5rem;
 }
 
 #scrollContainer::-webkit-scrollbar {
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: var(--bs-dark);
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: var(--bs-dark);
 }
 
 #scrollContainer::-webkit-scrollbar-thumb {
-    background: var(--bs-primary);
-    border-radius: 0.5rem;
+	background: var(--bs-primary);
+	border-radius: 0.5rem;
 }
 
 #pdfContainer {
@@ -78,6 +78,8 @@ button:active {
 }
 
 #button-container {
+	display: flex;
+	justify-content: center;
 	gap: 10px;
 }
 
@@ -112,17 +114,17 @@ button:active {
 #historyController {
 	text-align: right;
 	display: flex;
-    justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 #resetButton {
 	background-color: var(--bs-red);
-    color: var(--bs-gray-200);
+	color: var(--bs-gray-200);
 }
 
 #exportPdf {
 	background-color: var(--bs-red);
-    color: var(--bs-gray-200);
+	color: var(--bs-gray-200);
 }
 #exportPng {
 	background-color: var(--bs-primary);

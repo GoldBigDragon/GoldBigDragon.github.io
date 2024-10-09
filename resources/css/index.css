@@ -17,8 +17,8 @@
 #profile-image{
 	max-width: 16rem;
 	padding: 1rem;
-    border: 2px solid var(--bs-gray-900);
-    border-radius: 15rem;
+	border: 2px solid var(--bs-gray-900);
+	border-radius: 15rem;
 	margin-bottom: 1.5rem;
 	box-shadow: 0px 0px 10px black;
 }
@@ -27,27 +27,27 @@
 	margin-bottom: 2rem;
 	padding: 1rem;
 	background-color: var(--bs-gray-900);
-    border-radius: 1rem;
-    align-items: center;
-    justify-content: center;
+	border-radius: 1rem;
+	align-items: center;
+	justify-content: center;
 	box-shadow: 0px 10px 10px black;
 }
 
 .badge-box{
 	display: flex;
-    align-items: flex-start;
-    justify-content: center;
+	align-items: flex-start;
+	justify-content: center;
 }
 .badge-area{
 	display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1rem;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 1rem;
 }
 .badge-title{
 	font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--bs-gray-600);
+	font-weight: bold;
+	color: var(--bs-gray-600);
 	margin: 0.6rem 0.1rem;
 	margin-top: 4rem;
 }
@@ -84,17 +84,17 @@
 
 .badge-logo {
 	max-width: 5rem;
-    max-height: 5rem;
-    margin: 0.5rem;
+	max-height: 5rem;
+	margin: 0.5rem;
 }
 
 .badge-name {
-    font-size: 0.9rem;
+	font-size: 0.9rem;
 }
 
 .modal-panel {
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 	padding: 1rem;
 }
 
@@ -104,6 +104,6 @@
 
 .value {
 	background-color: var(--bs-gray-800);
-    padding: 0.7rem 1rem;
-    border-radius: 0.6rem;
+	padding: 0.7rem 1rem;
+	border-radius: 0.6rem;
 }

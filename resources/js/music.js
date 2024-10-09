@@ -242,9 +242,9 @@ function setSearchMusicTagValue(tag){
 }
 
 function searchMusicEnter(){
-    if (window.event.keyCode == 13) {
+	if (window.event.keyCode == 13) {
 		searchMusic();
-    }
+	}
 }
 
 function searchMusic(){
@@ -417,9 +417,9 @@ function addPlaylist(musicArea, playlistData, index){
 }
 
 function searchPlaylistEnter(){
-    if (window.event.keyCode == 13) {
+	if (window.event.keyCode == 13) {
 		searchPlaylist();
-    }
+	}
 }
 
 function searchPlaylist(){
@@ -559,7 +559,7 @@ function getTimeCodeFromNum(num) {
   minutes -= hours * 60;
   if (hours === 0) return `${minutes}:${String(seconds % 60).padStart(2, 0)}`;
   return `${String(hours).padStart(2, 0)}:${minutes}:${String(
-    seconds % 60
+	seconds % 60
   ).padStart(2, 0)}`;
 }
 

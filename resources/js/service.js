@@ -1,7 +1,7 @@
 function searchEnter(){
-    if (window.event.keyCode == 13) {
+	if (window.event.keyCode == 13) {
 		search();
-    }
+	}
 }
 
 function search(){

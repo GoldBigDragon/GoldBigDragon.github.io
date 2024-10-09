@@ -1,12 +1,12 @@
 div::-webkit-scrollbar {
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: var(--bs-dark);
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: var(--bs-dark);
 }
 
 div::-webkit-scrollbar-thumb {
-    background: var(--bs-primary);
-    border-radius: 0.5rem;
+	background: var(--bs-primary);
+	border-radius: 0.5rem;
 }
 
 .contents{
@@ -15,12 +15,12 @@ div::-webkit-scrollbar-thumb {
 }
 
 .tab,.tab-selected{
-    padding: 1rem;
+	padding: 1rem;
 	transition: 0.2s;
 	border-bottom: 2px solid var(--bs-gray-800);
 	cursor: pointer;
 	margin-bottom: 2rem;
-    font-size: 1.2rem;
+	font-size: 1.2rem;
 }
 
 .tab:hover{
@@ -36,27 +36,27 @@ div::-webkit-scrollbar-thumb {
 }
 
 .music-element, .music-element-playing{
-    background-color: var(--bs-gray-900);
+	background-color: var(--bs-gray-900);
 	border: 1px solid var(--bs-gray-900);
-    border-radius: 0.5rem;
+	border-radius: 0.5rem;
 	padding: 1.5rem;
-    margin: 1rem 0rem;
+	margin: 1rem 0rem;
 	transition: 0.2s;
 	box-shadow: 0px 5px 5px black;
 }
 
 .music-element-playing{
-    border: 1px solid var(--bs-primary);
-    box-shadow: 0px 0px 20px rgba(var(--bs-primary-rgb), 0.5);
+	border: 1px solid var(--bs-primary);
+	box-shadow: 0px 0px 20px rgba(var(--bs-primary-rgb), 0.5);
 }
 
 .music-element:hover{
 	border: 1px solid var(--bs-gray-800);
-    background-color: var(--bs-gray-800);
+	background-color: var(--bs-gray-800);
 }
 
 .music-element-playing:hover{
-    background-color: var(--bs-gray-800);
+	background-color: var(--bs-gray-800);
 }
 
 .music-image{
@@ -66,9 +66,9 @@ div::-webkit-scrollbar-thumb {
 
 .music-image-pane{
 	display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 5.5rem;
+	align-items: center;
+	justify-content: center;
+	max-width: 5.5rem;
 }
 
 .control-button{
@@ -87,20 +87,20 @@ div::-webkit-scrollbar-thumb {
 
 .play-button {
 	position: absolute;
-    width: 5rem;
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	width: 5rem;
+	height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	transition: 0.2s;
-    background-color: rgba(0, 0, 0, 0.000000001);
+	background-color: rgba(0, 0, 0, 0.000000001);
 	color: rgba(0, 0, 0, 0);
 	font-size: 2rem;
 	cursor: pointer;
 }
 
 .play-button:hover{
-    background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
 }
 
@@ -116,17 +116,17 @@ div::-webkit-scrollbar-thumb {
 }
 
 .music-description{
-    font-size: 0.9rem;
-    color: var(--bs-gray-500);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
+	font-size: 0.9rem;
+	color: var(--bs-gray-500);
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 0.5rem;
 }
 
 .tag{
-    border: 1px solid var(--bs-gray-900);
+	border: 1px solid var(--bs-gray-900);
 	background-color: black;
-    border-radius: 0.5rem;
+	border-radius: 0.5rem;
 	font-size: 0.95rem;
 	margin: 0.25rem;
 	transition: 0.2s;
@@ -148,19 +148,19 @@ div::-webkit-scrollbar-thumb {
 }
 
 #player {
-    position: fixed;
-    bottom: 2rem;
-    left: calc(50% - 195px);
-    margin: 1rem;
-    background-color: black;
-    padding: 1rem;
-    padding-left: 1.5rem;
-    width: 350px;
-    border-radius: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.5;
+	position: fixed;
+	bottom: 2rem;
+	left: calc(50% - 195px);
+	margin: 1rem;
+	background-color: black;
+	padding: 1rem;
+	padding-left: 1.5rem;
+	width: 350px;
+	border-radius: 1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.5;
 }
 
 #player:hover {
@@ -178,31 +178,31 @@ div::-webkit-scrollbar-thumb {
 }
 
 #time{
-    display: flex;
-    font-size: 0.9rem;
-    position: absolute;
-    align-items: center;
-    width: 233px;
+	display: flex;
+	font-size: 0.9rem;
+	position: absolute;
+	align-items: center;
+	width: 233px;
 	z-index: 999;
 	pointer-events: none; 
 }
 
 #current-time {
 	position: absolute;
-    left: 5px;
+	left: 5px;
 }
 
 #duration {
 	position: absolute;
-    right: 0;
+	right: 0;
 }
 
 #timeline{
 	background-color: var(--bs-gray-900);
-    width: 100%;
-    cursor: pointer;
+	width: 100%;
+	cursor: pointer;
 	display: flex;
-    align-items: center;
+	align-items: center;
 	margin-bottom: 0.5rem;
 }
 #progress{
@@ -211,17 +211,17 @@ div::-webkit-scrollbar-thumb {
 }
 
 #mute-button{
-    cursor: pointer;
+	cursor: pointer;
 	margin-right: 1rem;
 }
 
 #volume-container{
-    display: flex;
+	display: flex;
 	align-items: center;
 }
 
 #volume-slider{
-    height: 5px;
+	height: 5px;
 	width: 100%;
 	background-color: white;
 	cursor: pointer;
@@ -229,7 +229,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 #volume-percentage{
-    height: 5px;
+	height: 5px;
 	background-color: var(--bs-primary);
 }
 
@@ -255,7 +255,7 @@ div::-webkit-scrollbar-thumb {
 
 .modal-panel {
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 	padding: 1rem;
 }
 
@@ -265,6 +265,6 @@ div::-webkit-scrollbar-thumb {
 
 .value {
 	background-color: var(--bs-gray-800);
-    padding: 0.7rem 1rem;
-    border-radius: 0.6rem;
+	padding: 0.7rem 1rem;
+	border-radius: 0.6rem;
 }

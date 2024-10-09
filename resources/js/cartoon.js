@@ -124,10 +124,10 @@ function backToCartoonList() {
 }
 
 function pageInputEnter() {
-    if (window.event.keyCode == 13) {
+	if (window.event.keyCode == 13) {
 		const pageInput = document.getElementById("page-input");
-        goPage(pageInput.value - 1, false);
-    }
+		goPage(pageInput.value - 1, false);
+	}
 }
 
 function pageMove() {
