@@ -99,19 +99,22 @@ async function renderPage(page, pageData) {
 	canvas.width = viewport.width;
 	canvas.classList.add('pdf-page');
 
-	await page.render({ canvasContext: context, viewport }).promise;
+	await page.render({
+		canvasContext: context,
+		viewport
+	}).promise;
 
 	const pdfItem = document.createElement('div');
 	pdfItem.classList.add('pdf-item');
-	pdfItem.dataset.pageId = pageIdCounter++;
+	pdfItem.dataset.pageId = pageData.pageId;
+
 	pdfItem.appendChild(canvas);
 
 	const controls = document.createElement('div');
 	controls.classList.add('controls');
 
 	const removeButton = document.createElement('button');
-	removeButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
-	removeButton.className = "pdf-delete";
+	removeButton.textContent = '제거';
 	removeButton.addEventListener('click', () => {
 		pageData.removed = true;
 		pdfItem.remove();
@@ -136,7 +139,7 @@ function makeDraggable(item) {
 
 	item.addEventListener('dragstart', (e) => {
 		e.dataTransfer.effectAllowed = 'move';
-		e.dataTransfer.setData('text/plain', item.dataset.pageId); // pageId 전송
+		e.dataTransfer.setData('text/plain', item.dataset.pageId);
 		item.classList.add('dragging');
 	});
 
@@ -153,7 +156,6 @@ function makeDraggable(item) {
 		const draggingItem = document.querySelector('.dragging');
 
 		if (currentItem && draggingItem && draggingItem !== currentItem) {
-			// 드래그 중인 아이템을 현재 위치에 삽입하기 위한 논리 수정
 			const bounding = currentItem.getBoundingClientRect();
 			const offset = e.clientY - bounding.top + (bounding.height / 2);
 
@@ -186,10 +188,20 @@ function toggleLoading(isLoading) {
 
 function updatePagesDataOrder() {
 	const pdfItems = pdfContainer.querySelectorAll('.pdf-item');
-	pagesData = Array.from(pdfItems).map((item) => {
+	const newPagesData = [];
+
+	pdfItems.forEach((item) => {
 		const pageId = parseInt(item.dataset.pageId);
-		return pagesData.find(pageData => pageData.pageId === pageId);
+		const pageData = pagesData.find(pageData => pageData.pageId === pageId);
+
+		if (pageData) {
+			newPagesData.push(pageData);
+		}
 	});
+
+	if (newPagesData.length === pdfItems.length) {
+		pagesData = newPagesData;
+	}
 }
 
 document.getElementById('exportPdf').addEventListener('click', async () => {
@@ -209,22 +221,28 @@ document.getElementById('exportPdf').addEventListener('click', async () => {
 document.getElementById('exportPng').addEventListener('click', async () => {
 	const zip = new JSZip();
 	const pngPromises = [];
-
+	let pageCount = 1;
 	for (const pageInfo of pagesData) {
 		if (!pageInfo.removed) {
 			const page = await pageInfo.pdf.getPage(pageInfo.pageNum);
 			const canvas = document.createElement('canvas');
 			const context = canvas.getContext('2d');
-			const viewport = page.getViewport({ scale: 2 });
+			const viewport = page.getViewport({
+				scale: 2
+			});
 			canvas.height = viewport.height;
 			canvas.width = viewport.width;
 
-			await page.render({ canvasContext: context, viewport }).promise;
+			await page.render({
+				canvasContext: context,
+				viewport
+			}).promise;
 
 			const promise = new Promise((resolve) => {
 				canvas.toBlob(blob => {
 					if (blob) {
-						zip.file(`page_${pageInfo.pageNum}.png`, blob);
+						zip.file(`page_${pageCount}.png`, blob);
+						pageCount = pageCount + 1;
 					}
 					resolve();
 				}, 'image/png');
@@ -234,12 +252,16 @@ document.getElementById('exportPng').addEventListener('click', async () => {
 	}
 
 	await Promise.all(pngPromises);
-	const zipContent = await zip.generateAsync({ type: 'blob' });
+	const zipContent = await zip.generateAsync({
+		type: 'blob'
+	});
 	saveAs(zipContent, 'pages.zip');
 });
 
 function download(data, filename, type) {
-	const blob = new Blob([data], { type });
+	const blob = new Blob([data], {
+		type
+	});
 	const link = document.createElement('a');
 	link.href = URL.createObjectURL(blob);
 	link.download = filename;
