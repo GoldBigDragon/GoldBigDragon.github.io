@@ -52,13 +52,16 @@ button:active {
 }
 
 #scrollContainer {
+	display: flex;
+    align-items: center;
 	width: 100%;
 	overflow-x: auto;
+	overflow-y: hidden;
 	white-space: nowrap;
 	margin-bottom: 20px;
-	background-color: #f0f0f0;
 	height: 30rem;
 	border-radius: 0.5rem;
+	background-color: var(--bs-gray-800);
 }
 
 #scrollContainer::-webkit-scrollbar {
