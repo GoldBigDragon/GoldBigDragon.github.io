@@ -3,7 +3,7 @@ const SERVICE_LIST = [
 		"url": "/service/image-converter.html",
 		"name": {
 			"en": "Image Converter",
-			"kr": "이미지 변환기",
+			"kr": "이미지 변환",
 			"jp": "画像コンバーター",
 			"cn": "图像转换器",
 			"ru": "Конвертер изображений"
@@ -24,7 +24,7 @@ const SERVICE_LIST = [
 		"url": "/service/pdf-editor.html",
 		"name": {
 			"en": "PDF Editor",
-			"kr": "PDF 편집기",
+			"kr": "PDF 편집",
 			"jp": "PDFエディタ",
 			"cn": "PDF编辑器",
 			"ru": "PDF-редактор"

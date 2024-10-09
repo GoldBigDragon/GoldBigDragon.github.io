@@ -39,13 +39,37 @@ button:active {
 	padding: 20px;
 }
 
+#fileAttachmentSection {
+	width: 100%;
+	min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 2px solid var(--bs-gray-800);
+    border-radius: 10px;
+    background-color: var(--bs-gray-900);
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 #scrollContainer {
-	width: 80%;
-	overflow-x: auto;
-	white-space: nowrap;
-	margin-bottom: 20px;
-	background-color: #f0f0f0;
-	min-height: 200px;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    height: 30rem;
+	border-radius: 0.5rem;
+}
+
+#scrollContainer::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--bs-dark);
+}
+
+#scrollContainer::-webkit-scrollbar-thumb {
+    background: var(--bs-primary);
+    border-radius: 0.5rem;
 }
 
 #pdfContainer {
@@ -91,7 +115,7 @@ button:active {
     justify-content: flex-end;
 }
 
-#clearHistoryButton {
+#resetButton {
 	background-color: var(--bs-red);
     color: var(--bs-gray-200);
 }
@@ -102,6 +126,26 @@ button:active {
 }
 #exportPng {
 	background-color: var(--bs-primary);
+}
+
+.pdf-item {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+.pdf-page {
+	border: 1px solid #ccc;
+	max-height: 28.5rem;
+	cursor: pointer;
+	border-radius: 0.3rem;
+}
+.controls {
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 5px;
 }
 
 .toast {
