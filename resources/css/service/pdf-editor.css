@@ -130,16 +130,29 @@ button:active {
 	background-color: var(--bs-primary);
 }
 
+#loading {
+	color: transparent;
+}
+
 .pdf-item {
 	display: inline-block;
 	text-align: center;
 	position: relative;
+	transition: transform 0.3s ease;
+}
+.pdf-item:hover {
+	transform: scale(1.02);
 }
 .pdf-page {
 	border: 1px solid #ccc;
 	max-height: 28.5rem;
-	cursor: pointer;
+	cursor: grab;
 	border-radius: 0.3rem;
+}
+.pdf-delete {
+	border-radius: 0.3rem;
+	background-color: var(--bs-red);
+	color: var(--bs-gray-200);
 }
 .controls {
 	position: absolute;
@@ -148,6 +161,12 @@ button:active {
 	transform: translateX(-50%);
 	display: flex;
 	gap: 5px;
+}
+
+.dragging {
+	opacity: 0.5;
+	transform: scale(1.05);
+	cursor: grabbing;
 }
 
 .toast {

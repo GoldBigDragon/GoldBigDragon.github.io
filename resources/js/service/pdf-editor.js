@@ -103,6 +103,7 @@ async function renderPage(page, pageData) {
 
 	const pdfItem = document.createElement('div');
 	pdfItem.classList.add('pdf-item');
+	pdfItem.dataset.pageId = pageIdCounter++;
 	pdfItem.appendChild(canvas);
 
 	const controls = document.createElement('div');
@@ -110,25 +111,85 @@ async function renderPage(page, pageData) {
 
 	const removeButton = document.createElement('button');
 	removeButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+	removeButton.className = "pdf-delete";
 	removeButton.addEventListener('click', () => {
 		pageData.removed = true;
 		pdfItem.remove();
+		updatePagesDataOrder();
 	});
 
 	controls.appendChild(removeButton);
 	pdfItem.appendChild(controls);
 	pdfContainer.appendChild(pdfItem);
 
+	makeDraggable(pdfItem);
 	filesLoaded++;
 	if (filesLoaded === pagesData.length) {
 		toggleLoading(false);
 	}
 }
 
+let pageIdCounter = 0;
+
+function makeDraggable(item) {
+	item.setAttribute('draggable', true);
+
+	item.addEventListener('dragstart', (e) => {
+		e.dataTransfer.effectAllowed = 'move';
+		e.dataTransfer.setData('text/plain', item.dataset.pageId); // pageId 전송
+		item.classList.add('dragging');
+	});
+
+	item.addEventListener('dragend', () => {
+		item.classList.remove('dragging');
+		updatePagesDataOrder();
+	});
+
+	item.addEventListener('dragover', (e) => {
+		e.preventDefault();
+		e.dataTransfer.dropEffect = 'move';
+
+		const currentItem = e.target.closest('.pdf-item');
+		const draggingItem = document.querySelector('.dragging');
+
+		if (currentItem && draggingItem && draggingItem !== currentItem) {
+			// 드래그 중인 아이템을 현재 위치에 삽입하기 위한 논리 수정
+			const bounding = currentItem.getBoundingClientRect();
+			const offset = e.clientY - bounding.top + (bounding.height / 2);
+
+			if (offset > bounding.height / 2) {
+				pdfContainer.insertBefore(draggingItem, currentItem.nextSibling);
+			} else {
+				pdfContainer.insertBefore(draggingItem, currentItem);
+			}
+		}
+	});
+
+	item.addEventListener('drop', (e) => {
+		e.preventDefault();
+		const draggedPageId = e.dataTransfer.getData('text/plain');
+		const draggedItem = document.querySelector(`[data-page-id='${draggedPageId}']`);
+
+		const currentItem = e.target.closest('.pdf-item');
+		if (draggedItem && currentItem && draggedItem !== currentItem) {
+			pdfContainer.insertBefore(draggedItem, currentItem);
+		}
+		updatePagesDataOrder();
+	});
+}
+
 function toggleLoading(isLoading) {
 	loading.style.color = isLoading ? 'black' : 'transparent';
 	exportPdfBtn.disabled = isLoading;
 	exportPngBtn.disabled = isLoading;
+}
+
+function updatePagesDataOrder() {
+	const pdfItems = pdfContainer.querySelectorAll('.pdf-item');
+	pagesData = Array.from(pdfItems).map((item) => {
+		const pageId = parseInt(item.dataset.pageId);
+		return pagesData.find(pageData => pageData.pageId === pageId);
+	});
 }
 
 document.getElementById('exportPdf').addEventListener('click', async () => {
