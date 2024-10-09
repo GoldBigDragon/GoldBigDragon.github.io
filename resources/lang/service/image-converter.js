@@ -1,4 +1,4 @@
-const ICO_CONVERTER_LANG = {
+const IMAGE_CONVERTER_LANG = {
 	"title": {
 		"en": "Image Converter",
 		"kr": "이미지 변환기",
@@ -161,4 +161,4 @@ const ICO_CONVERTER_LANG = {
 		"ru": "Максимальное сжатие"
 	}
 }
-LANGUAGE_OBJECT["ICO_CONVERTER_LANG"] = ICO_CONVERTER_LANG;
+LANGUAGE_OBJECT["IMAGE_CONVERTER_LANG"] = IMAGE_CONVERTER_LANG;

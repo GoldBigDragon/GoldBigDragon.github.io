@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="author" content="GoldBigDragon" />
+		<meta name="description" content="Index Page" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/x-icon" href="/resources/img/service/logo/pdf-editor.ico" />
+		<title>GoldBigDragon - PDF Editor</title>
+		<script src="/resources/vendor/pdf.2.10.377.min.js"></script>
+		<script src="/resources/vendor/pdf-lib.1.17.1.min.js"></script>
+		<script src="/resources/vendor/jszip/jszip.3.7.1.min.js"></script>
+		<script src="/resources/vendor/FileSaver.2.0.5.min.js"></script>
+		<link rel="stylesheet" href="/resources/vendor/fontawesome-free/css/all.min.css" />
+		<link rel="stylesheet" href="/resources/vendor/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" href="/resources/css/service/pdf-editor.css" />
+		<link rel="stylesheet" href="/resources/css/basic.css" />
+	</head>
+	<body>
+		<div class="row" id="header"></div>
+		<div id="container">
+			<h1 id="title" class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="title">PDF Editor</h1>
+			<div id="fileAttachmentSection">
+				<div style="display: flex;justify-content: center;align-items: center;">
+					<div id="dropZone">
+						<span class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="container">Drag & Drop your PDF files here or click to select files</span>
+					</div>
+				</div>
+				<br>
+
+				<div id="historyController">
+					<button id="resetButton" onClick="clearHistory()">
+						<i class="fa-solid fa-trash"></i>&nbsp;
+						<div class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="clear">Clear history</div>
+					</button>
+				</div>
+				<br>
+
+				<div id="scrollContainer">
+					<div id="pdfContainer"></div>
+				</div>
+				<div id="loading">로딩 중...</div>
+				<div id="button-container">
+					<button id="exportPdf" disabled>PDF로 추출</button>
+					<button id="exportPng" disabled>PNG로 추출</button>
+				</div>
+			</div>
+			<br>
+			<h6 id="description" class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="description">Uploaded and converted image files can only be downloaded by you and will not be shared anywhere.</h6>
+			<br>
+		</div>
+
+		<!-- 토스트 알림 컨테이너 -->
+		<div id="toastContainer" class="toast-container"></div>
+		<div class="row" id="footer"></div>
+	</body>
+	<script src="/resources/vendor/jquery/jquery.min.js"></script>
+	<script src="/resources/vendor/jquery/jquery.easing.min.js"></script>
+	<script src="/resources/vendor/popper/popper.min.js"></script>
+	<script src="/resources/vendor/bootstrap/bootstrap.5.1.3.bundle.min.js"></script>
+	
+	<script src="/resources/js/basic.js"></script>
+	<script src="/resources/lang/service/pdf-editor.js"></script>
+	<script src="/resources/js/service/pdf-editor.js"></script>
+</html>

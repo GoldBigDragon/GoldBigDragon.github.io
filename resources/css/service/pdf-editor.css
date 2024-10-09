@@ -1,0 +1,132 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+button {
+	display: flex;
+	gap: 0.2rem;
+    align-items: center;
+    justify-content: center;
+	border-radius: 5px;
+	padding: 0.5rem;
+	cursor: pointer;
+	font-weight: bold;
+	text-align: center;
+	transition: transform 0.2s ease-in-out;
+	border: none;
+}
+
+button:hover {
+	transform: scaleY(1.05);
+}
+
+button:active {
+	transform: scaleY(0.95);
+}
+
+#title{
+	text-align: center;
+    padding: 1rem 2rem 3rem 2rem;
+}
+
+#pdfContainer {
+	display: inline-flex;
+	gap: 10px;
+}
+#button-container {
+	gap: 10px;
+}
+
+#dropZone {
+	width: 100%;
+	height: 10rem;
+	border: 3px dashed var(--bs-primary);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #888;
+	font-size: 1.2rem;
+	cursor: pointer;
+	position: relative;
+	margin-bottom: 20px;
+	background-color: rgba(0, 0, 0, 0);
+	transition: transform 0.4s ease-in-out;
+}
+#dropZone:hover {
+	transform: scaleY(1.06);
+	background-color: var(--bs-gray-800);
+}
+#dropZone.hover {
+	transform: scaleY(1.06);
+	background-color: #f0f0f0;
+}
+#dropZone input[type="file"] {
+	display: none;
+}
+#historyController {
+	text-align: right;
+	display: flex;
+    justify-content: flex-end;
+}
+
+#clearHistoryButton {
+	background-color: var(--bs-red);
+    color: var(--bs-gray-200);
+}
+
+#exportPdf {
+	background-color: var(--bs-red);
+    color: var(--bs-gray-200);
+}
+#exportPng {
+	background-color: var(--bs-primary);
+}
+
+.toast {
+	font-size: 0.7rem;
+	visibility: hidden;
+	min-width: 250px;
+	max-width: 250px;
+	min-height: 3rem;
+	max-height: 3rem;
+	margin-left: -15px;
+	padding: 0.5rem;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.6s ease-in-out, bottom 0.6s ease-in-out;
+	margin-bottom: 10px; /* 토스트 메시지 간의 마진 */
+	cursor: pointer;
+}
+.toast:hover {
+	background-color: #803333;
+}
+.toast.show {
+	visibility: visible;
+	opacity: 1;
+}
+.toast.fade-out {
+	opacity: 0;
+	transition: opacity 3s ease-in;
+}
+.toast-container {
+	position: fixed;
+	bottom: 0;
+	left: calc(0% + 150px);
+	transform: translateX(-50%);
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
