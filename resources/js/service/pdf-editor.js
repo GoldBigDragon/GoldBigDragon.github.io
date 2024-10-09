@@ -98,7 +98,6 @@ async function handleFiles(event) {
 	}
 }
 
-
 async function renderPage(page, pageData) {
 	const viewport = page.getViewport({ scale: 1 });
 	const canvas = document.createElement('canvas');
@@ -123,6 +122,7 @@ async function renderPage(page, pageData) {
 
 	const removeButton = document.createElement('button');
 	removeButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+	removeButton.className = "pdf-delete";
 	removeButton.addEventListener('click', () => {
 		pageData.removed = true;
 		pdfItem.remove();
