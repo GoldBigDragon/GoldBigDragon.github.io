@@ -72,6 +72,7 @@ async function handleFiles(event) {
 	toggleLoading(true);
 	const files = event.target.files || event.dataTransfer.files;
 	pagesData = [];
+	pageIdCounter = 0;
 	for (const file of files) {
 		if (!['application/pdf'].includes(file.type)) {
 			showToast(`${file.name} is an unsupported type.`);
@@ -80,16 +81,23 @@ async function handleFiles(event) {
 			const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
 			for (let i = 1; i <= pdf.numPages; i++) {
 				const page = await pdf.getPage(i);
-				const pageData = { fileName: file.name, pageNum: i, pdf, removed: false };
+				const pageData = {
+					fileName: file.name,
+					pageNum: i,
+					pdf,
+					removed: false,
+					pageId: pageIdCounter++
+				};
 				pagesData.push(pageData);
 				renderPage(page, pageData);
 			}
 		}
 	}
-	if(filesLoaded == 0 ){
+	if (filesLoaded === 0) {
 		toggleLoading(false);
 	}
 }
+
 
 async function renderPage(page, pageData) {
 	const viewport = page.getViewport({ scale: 1 });
@@ -114,7 +122,7 @@ async function renderPage(page, pageData) {
 	controls.classList.add('controls');
 
 	const removeButton = document.createElement('button');
-	removeButton.textContent = '제거';
+	removeButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
 	removeButton.addEventListener('click', () => {
 		pageData.removed = true;
 		pdfItem.remove();
@@ -132,6 +140,24 @@ async function renderPage(page, pageData) {
 	}
 }
 
+function updatePagesDataOrder() {
+	const pdfItems = pdfContainer.querySelectorAll('.pdf-item');
+	const newPagesData = [];
+
+	pdfItems.forEach((item) => {
+		const pageId = parseInt(item.dataset.pageId);
+		const pageData = pagesData.find(pageData => pageData.pageId === pageId);
+
+		if (pageData) {
+			newPagesData.push(pageData);
+		}
+	});
+
+	if (newPagesData.length === pdfItems.length) {
+		pagesData = newPagesData;
+	}
+}
+
 let pageIdCounter = 0;
 
 function makeDraggable(item) {
@@ -139,7 +165,7 @@ function makeDraggable(item) {
 
 	item.addEventListener('dragstart', (e) => {
 		e.dataTransfer.effectAllowed = 'move';
-		e.dataTransfer.setData('text/plain', item.dataset.pageId);
+		e.dataTransfer.setData('text/plain', item.dataset.pageId); // pageId 전송
 		item.classList.add('dragging');
 	});
 
@@ -184,24 +210,6 @@ function toggleLoading(isLoading) {
 	loading.style.color = isLoading ? 'black' : 'transparent';
 	exportPdfBtn.disabled = isLoading;
 	exportPngBtn.disabled = isLoading;
-}
-
-function updatePagesDataOrder() {
-	const pdfItems = pdfContainer.querySelectorAll('.pdf-item');
-	const newPagesData = [];
-
-	pdfItems.forEach((item) => {
-		const pageId = parseInt(item.dataset.pageId);
-		const pageData = pagesData.find(pageData => pageData.pageId === pageId);
-
-		if (pageData) {
-			newPagesData.push(pageData);
-		}
-	});
-
-	if (newPagesData.length === pdfItems.length) {
-		pagesData = newPagesData;
-	}
 }
 
 document.getElementById('exportPdf').addEventListener('click', async () => {
