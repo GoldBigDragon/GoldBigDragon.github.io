@@ -84,13 +84,18 @@ workers.forEach(worker => {
 	worker.onmessage = (event) => {
 		const { name, size, md5, sha1, sha256 } = event.data;
 		const fileSize = formatFileSize(size);
+		let fileName = name;
+		if(fileName.length > 15) {
+			fileName = name.slice(0, 10) + "..." + name.slice(-5);
+		}
+		
 		const fileInfo = `
 		<tr class="file-info">
-			<td>${name}</td>
-			<td>${fileSize}</td>
-			<td class="hash" onclick="copyToClipboard('${md5}')" title="Copy ${md5}">${md5.slice(0, 10)}...${md5.slice(-5)}</td>
-			<td class="hash" onclick="copyToClipboard('${sha1}')" title="Copy ${sha1}">${sha1.slice(0, 10)}...${sha1.slice(-5)}</td>
-			<td class="hash" onclick="copyToClipboard('${sha256}')" title="Copy ${sha256}">${sha256.slice(0, 10)}...${sha256.slice(-5)}</td>
+			<td style="text-align: left;">${fileName}</td>
+			<td style="text-align: right;">${fileSize}</td>
+			<td class="hash" onclick="copyToClipboard('${md5}')" title="Copy ${md5}" style="text-align: left;">${md5.slice(0, 10)}...${md5.slice(-5)}</td>
+			<td class="hash" onclick="copyToClipboard('${sha1}')" title="Copy ${sha1}" style="text-align: left;">${sha1.slice(0, 10)}...${sha1.slice(-5)}</td>
+			<td class="hash" onclick="copyToClipboard('${sha256}')" title="Copy ${sha256}" style="text-align: left;">${sha256.slice(0, 10)}...${sha256.slice(-5)}</td>
 		</tr>
 		`;
 		hashes[name] = {"size": fileSize,
@@ -113,20 +118,24 @@ function handleFiles(files) {
 		if (fileQueue.length === 0) return;
 		const file = fileQueue.shift();
 		if (file.size > 128 * 1024 * 1024) {
-			showToast(`File ${file.name } is too large (Up to 128MB)`)
+			showToast(`File ${file.name} is too large (Up to 128MB)`)
 			const fileSize = formatFileSize(file.size);
+			let fileName = file.name;
+			if(fileName.length > 15) {
+				fileName = file.name.slice(0, 10) + "..." + file.name.slice(-5);
+			}
 			const error = `
 			<tr class="file-info">
-				<td>${name}</td>
-				<td>${fileSize}</td>
-				<td>File is too large (Up to 128MB)</td>
-				<td>File is too large (Up to 128MB)</td>
-				<td>File is too large (Up to 128MB)</td>
+				<td style="text-align: left;">${fileName}</td>
+				<td style="text-align: right;">${fileSize}</td>
+				<td style="text-align: left;">File is too large (Up to 128MB)</td>
+				<td style="text-align: left;">File is too large (Up to 128MB)</td>
+				<td style="text-align: left;">File is too large (Up to 128MB)</td>
 			</tr>
 			`;
 			downloadLinks.innerHTML += error;
 			processNextFile();
-			hashes[name] = {"size": fileSize,
+			hashes[file.name] = {"size": fileSize,
 			"MD5": "File is too large (Up to 128MB)",
 			"SHA-1": "File is too large (Up to 128MB)",
 			"SHA-256": "File is too large (Up to 128MB)"};
