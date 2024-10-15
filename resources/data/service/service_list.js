@@ -40,5 +40,26 @@ const SERVICE_LIST = [
 		"icon": "/resources/img/service/logo/pdf-editor.png",
 		"created-at": "2024-10-09",
 		"updated-at": "2024-10-09"
+	},
+	{
+		"url": "/service/hash-check.html",
+		"name": {
+			"en": "Hash Check",
+			"kr": "해시 검사",
+			"jp": "ハッシュチェック",
+			"cn": "哈希检验",
+			"ru": "Проверка хэша"
+		},
+		"description": {
+			"en": "You can check MD5, SHA1, SHA256 hashes for files.",
+			"kr": "파일에 대한 MD5, SHA1, SHA256 해시를 확인할 수 있습니다.",
+			"jp": "ファイルに対するMD5、SHA1、SHA256 ハッシュを確認することができます。",
+			"cn": "您可以检查文件的 MD5、SHA1、SHA256 哈希值。",
+			"ru": "Вы можете проверить хэши MD5, SHA1, SHA256 для файлов."
+		},
+		"tag": ["md5", "sha1", "sha256", "forensic", "hash"],
+		"icon": "/resources/img/service/logo/hash-check.png",
+		"created-at": "2024-10-15",
+		"updated-at": "2024-10-15"
 	}
 ];

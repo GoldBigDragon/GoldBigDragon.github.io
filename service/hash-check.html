@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="author" content="GoldBigDragon" />
+		<meta name="description" content="Index Page" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/x-icon" href="/resources/img/service/logo/hash-check.ico" />
+		<title>GoldBigDragon - Hash Check</title>
+		<script src="/resources/vendor/crypto-js.4.1.1.min.js"></script>
+		<link rel="stylesheet" href="/resources/vendor/fontawesome-free/css/all.min.css" />
+		<link rel="stylesheet" href="/resources/vendor/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" href="/resources/css/service/hash-check.css" />
+		<link rel="stylesheet" href="/resources/css/basic.css" />
+	</head>
+	<body>
+		<div class="row" id="header"></div>
+		<div id="container">
+			<h1 id="title" class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="title">Hash Check</h1>
+			<div id="fileAttachmentSection">
+				<div style="display: flex;justify-content: center;align-items: center;">
+					<div id="dropZone">
+						<span class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="container">Drag & Drop your files here or click to select files</span>
+						<input type="file" id="fileInput" multiple>
+					</div>
+				</div>
+				<br>
+				<div id="historyController">
+					<button id="clearHistoryButton" onClick="clearHistory()">
+						<i class="fa-solid fa-trash"></i>&nbsp;
+						<div class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="clear">Clear history</div>
+					</button>
+					&nbsp;&nbsp;
+					<button class="downloadAllButton" onClick="downloadTXT()" disabled>
+						<i class="fa-solid fa-cloud-arrow-down"></i>&nbsp;
+						<div>TXT</div>
+					</button>
+					<button class="downloadAllButton" onClick="downloadJSON()" disabled>
+						<i class="fa-solid fa-cloud-arrow-down"></i>&nbsp;
+						<div>JSON</div>
+					</button>
+				</div>
+
+				<table id="downloadTable">
+					<thead>
+						<tr>
+							<th class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="filename">File Name</th>
+							<th class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="size">Size</th>
+							<th>MD5</th>
+							<th>SHA-1</th>
+							<th>SHA-256</th>
+						</tr>
+					</thead>
+					<tbody id="downloadLinks"></tbody>
+				</table>
+				<br>
+				<button class="downloadAllButton" onClick="downloadTXT()" disabled>
+					<i class="fa-solid fa-cloud-arrow-down"></i>&nbsp;
+					<div>TXT</div>
+				</button>
+				<button class="downloadAllButton" onClick="downloadJSON()" disabled>
+					<i class="fa-solid fa-cloud-arrow-down"></i>&nbsp;
+					<div>JSON</div>
+				</button>
+			</div>
+			<br>
+			<h6 id="description" class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="description">Uploaded files are not recorded on the site.</h6>
+			<br>
+		</div>
+
+		<!-- 토스트 알림 컨테이너 -->
+		<div id="toastContainer" class="toast-container"></div>
+		<div class="row" id="footer"></div>
+	</body>
+	<script src="/resources/vendor/jquery/jquery.min.js"></script>
+	<script src="/resources/vendor/jquery/jquery.easing.min.js"></script>
+	<script src="/resources/vendor/popper/popper.min.js"></script>
+	<script src="/resources/vendor/bootstrap/bootstrap.5.1.3.bundle.min.js"></script>
+	
+	<script src="/resources/js/basic.js"></script>
+	<script src="/resources/lang/service/hash-check.js"></script>
+	<script src="/resources/js/service/hash-check.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5483159539162475" crossorigin="anonymous"></script>
+</html>
