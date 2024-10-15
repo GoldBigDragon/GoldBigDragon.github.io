@@ -88,9 +88,9 @@ workers.forEach(worker => {
 		<tr class="file-info">
 			<td>${name}</td>
 			<td>${fileSize}</td>
-			<td class="hash" onclick="copyToClipboard('${md5}')">${md5.slice(0, 10)}...${md5.slice(-5)}</td>
-			<td class="hash" onclick="copyToClipboard('${sha1}')">${sha1.slice(0, 10)}...${sha1.slice(-5)}</td>
-			<td class="hash" onclick="copyToClipboard('${sha256}')">${sha256.slice(0, 10)}...${sha256.slice(-5)}</td>
+			<td class="hash" onclick="copyToClipboard('${md5}')" title="Copy ${md5}">${md5.slice(0, 10)}...${md5.slice(-5)}</td>
+			<td class="hash" onclick="copyToClipboard('${sha1}')" title="Copy ${sha1}">${sha1.slice(0, 10)}...${sha1.slice(-5)}</td>
+			<td class="hash" onclick="copyToClipboard('${sha256}')" title="Copy ${sha256}">${sha256.slice(0, 10)}...${sha256.slice(-5)}</td>
 		</tr>
 		`;
 		hashes[name] = {"size": fileSize,
@@ -104,6 +104,10 @@ workers.forEach(worker => {
 function handleFiles(files) {
 	let workerIndex = 0;
 	const fileQueue = Array.from(files);
+	const downloadAllButtons = document.getElementsByClassName("downloadAllButton");
+	Array.prototype.forEach.call(downloadAllButtons, function(downloadAllButton) {
+		downloadAllButton.disabled = false;
+	});
 
 	const processNextFile = () => {
 		if (fileQueue.length === 0) return;
@@ -139,10 +143,6 @@ function handleFiles(files) {
 	for (let i = 0; i < Math.min(MAX_WORKERS, fileQueue.length); i++) {
 		processNextFile();
 	}
-	const downloadAllButtons = document.getElementsByClassName("downloadAllButton");
-	Array.prototype.forEach.call(downloadAllButtons, function(downloadAllButton) {
-		downloadAllButton.disabled = false;
-	});
 }
 
 function formatFileSize(size) {
@@ -165,7 +165,7 @@ function copyToClipboard(text) {
 	});
 }
 
-async function downloadJSON() {
+function downloadJSON() {
 	let jsonStr = JSON.stringify(hashes, null, 2);
 	let blob = new Blob([jsonStr], { type: 'application/json' });
 	let link = document.createElement('a');
@@ -176,7 +176,7 @@ async function downloadJSON() {
 	document.body.removeChild(link);
 }
 
-async function downloadCSV() {
+function downloadCSV() {
 	let csvContent = "Name,Size,MD5,SHA-1,SHA-256\n";
 	for (const [fileName, fileData] of Object.entries(hashes)) {
 		csvContent += `${fileName},${fileData.size},${fileData.MD5},${fileData["SHA-1"]},${fileData["SHA-256"]}\n`;
