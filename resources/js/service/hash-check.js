@@ -94,9 +94,9 @@ workers.forEach(worker => {
 		</tr>
 		`;
 		hashes[name] = {"size": fileSize,
-		"MD5": "File is too large (Up to 128MB)",
-		"SHA-1": "File is too large (Up to 128MB)",
-		"SHA-256": "File is too large (Up to 128MB)"};
+		"MD5": md5,
+		"SHA-1": sha1,
+		"SHA-256": sha256};
 		downloadLinks.innerHTML += fileInfo;
 	};
 });
