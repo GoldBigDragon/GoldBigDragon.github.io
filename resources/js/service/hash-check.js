@@ -55,6 +55,7 @@ fileInput.addEventListener("change", () => handleFiles(fileInput.files));
 const downloadLinks = document.getElementById("downloadLinks");
 const workers = [];
 const MAX_WORKERS = 4;
+let hashes = {};
 
 function createWorker() {
 	const workerBlob = new Blob([`
@@ -83,7 +84,6 @@ workers.forEach(worker => {
 	worker.onmessage = (event) => {
 		const { name, size, md5, sha1, sha256 } = event.data;
 		const fileSize = formatFileSize(size);
-		
 		const fileInfo = `
 		<tr class="file-info">
 			<td>${name}</td>
@@ -93,6 +93,10 @@ workers.forEach(worker => {
 			<td class="hash" onclick="copyToClipboard('${sha256}')">${sha256.slice(0, 10)}...${sha256.slice(-5)}</td>
 		</tr>
 		`;
+		hashes[name] = {"size": fileSize,
+		"MD5": "File is too large (Up to 128MB)",
+		"SHA-1": "File is too large (Up to 128MB)",
+		"SHA-256": "File is too large (Up to 128MB)"};
 		downloadLinks.innerHTML += fileInfo;
 	};
 });
@@ -106,6 +110,7 @@ function handleFiles(files) {
 		const file = fileQueue.shift();
 		if (file.size > 128 * 1024 * 1024) {
 			showToast(`File ${file.name } is too large (Up to 128MB)`)
+			const fileSize = formatFileSize(file.size);
 			const error = `
 			<tr class="file-info">
 				<td>${name}</td>
@@ -117,6 +122,10 @@ function handleFiles(files) {
 			`;
 			downloadLinks.innerHTML += error;
 			processNextFile();
+			hashes[name] = {"size": fileSize,
+			"MD5": "File is too large (Up to 128MB)",
+			"SHA-1": "File is too large (Up to 128MB)",
+			"SHA-256": "File is too large (Up to 128MB)"};
 			return;
 		}
 		const reader = new FileReader();
@@ -130,6 +139,10 @@ function handleFiles(files) {
 	for (let i = 0; i < Math.min(MAX_WORKERS, fileQueue.length); i++) {
 		processNextFile();
 	}
+	const downloadAllButtons = document.getElementsByClassName("downloadAllButton");
+	Array.prototype.forEach.call(downloadAllButtons, function(downloadAllButton) {
+		downloadAllButton.disabled = false;
+	});
 }
 
 function formatFileSize(size) {
@@ -152,24 +165,37 @@ function copyToClipboard(text) {
 	});
 }
 
-async function downloadAll() {
-	const currentUTC = new Date().toISOString().replace(/[:.-]/g, "_");
-	const zipFileName = `${currentUTC}_converted_ico.zip`;
-	const zipBlob = await zip.generateAsync({
-		type: 'blob'
-	});
-	const link = document.createElement("a");
-	link.href = URL.createObjectURL(zipBlob);
-	link.download = zipFileName;
+async function downloadJSON() {
+	let jsonStr = JSON.stringify(hashes, null, 2);
+	let blob = new Blob([jsonStr], { type: 'application/json' });
+	let link = document.createElement('a');
+	link.href = URL.createObjectURL(blob);
+	link.download = 'hashes.json';
+	document.body.appendChild(link);
 	link.click();
+	document.body.removeChild(link);
+}
+
+async function downloadCSV() {
+	let csvContent = "Name,Size,MD5,SHA-1,SHA-256\n";
+	for (const [fileName, fileData] of Object.entries(hashes)) {
+		csvContent += `${fileName},${fileData.size},${fileData.MD5},${fileData["SHA-1"]},${fileData["SHA-256"]}\n`;
+	}
+	let blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+	let link = document.createElement('a');
+	link.href = URL.createObjectURL(blob);
+	link.download = 'hashes.csv';
+	document.body.appendChild(link);
+	link.click();
+	document.body.removeChild(link);
 }
 
 function clearHistory() {
-	zip = new JSZip();
 	const downloadAllButtons = document.getElementsByClassName("downloadAllButton");
 	Array.prototype.forEach.call(downloadAllButtons, function(downloadAllButton) {
 		downloadAllButton.disabled = true;
 	});
 	downloadLinks.innerHTML = '';
 	fileInput.value = '';
+	hashes = {};
 }

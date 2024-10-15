@@ -35,12 +35,13 @@
 						<div class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="clear">Clear history</div>
 					</button>
 					&nbsp;&nbsp;
-					<button class="downloadAllButton" onClick="downloadTXT()" disabled>
-						<i class="fa-solid fa-cloud-arrow-down"></i>&nbsp;
-						<div>TXT</div>
+					<button class="downloadAllButton" onClick="downloadCSV()" disabled>
+						<i class="fa-solid fa-file-csv"></i>&nbsp;
+						<div>CSV</div>
 					</button>
+					&nbsp;&nbsp;
 					<button class="downloadAllButton" onClick="downloadJSON()" disabled>
-						<i class="fa-solid fa-cloud-arrow-down"></i>&nbsp;
+						<i class="fa-solid fa-file-lines"></i>&nbsp;
 						<div>JSON</div>
 					</button>
 				</div>
@@ -58,14 +59,16 @@
 					<tbody id="downloadLinks"></tbody>
 				</table>
 				<br>
-				<button class="downloadAllButton" onClick="downloadTXT()" disabled>
-					<i class="fa-solid fa-cloud-arrow-down"></i>&nbsp;
-					<div>TXT</div>
-				</button>
-				<button class="downloadAllButton" onClick="downloadJSON()" disabled>
-					<i class="fa-solid fa-cloud-arrow-down"></i>&nbsp;
-					<div>JSON</div>
-				</button>
+				<div id="historyController" style="justify-content: space-between;">
+					<button class="downloadAllButton" onClick="downloadCSV()" style="width:49%;" disabled>
+						<i class="fa-solid fa-file-csv"></i>&nbsp;
+						<div>CSV</div>
+					</button>
+					<button class="downloadAllButton" onClick="downloadJSON()" style="width:49%;" disabled>
+						<i class="fa-solid fa-file-lines"></i>&nbsp;
+						<div>JSON</div>
+					</button>
+				</div>
 			</div>
 			<br>
 			<h6 id="description" class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="description">Uploaded files are not recorded on the site.</h6>
