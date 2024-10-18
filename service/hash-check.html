@@ -46,18 +46,20 @@
 					</button>
 				</div>
 
-				<table id="downloadTable">
-					<thead>
-						<tr>
-							<th class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="filename">File Name</th>
-							<th class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="size">Size</th>
-							<th>MD5</th>
-							<th>SHA-1</th>
-							<th>SHA-256</th>
-						</tr>
-					</thead>
-					<tbody id="downloadLinks"></tbody>
-				</table>
+				<div style="overflow-x: auto;width: 100%;">
+					<table id="downloadTable">
+						<thead>
+							<tr>
+								<th class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="filename">File Name</th>
+								<th class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="size">Size</th>
+								<th>MD5</th>
+								<th>SHA-1</th>
+								<th>SHA-256</th>
+							</tr>
+						</thead>
+						<tbody id="downloadLinks"></tbody>
+					</table>
+				</div>
 				<br>
 				<div id="historyController" style="justify-content: space-between;">
 					<button class="downloadAllButton" onClick="downloadCSV()" style="width:49%;" disabled>

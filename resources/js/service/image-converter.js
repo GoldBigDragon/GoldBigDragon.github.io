@@ -138,39 +138,37 @@ async function handleFiles(files) {
 				const fileType = file.type;
 				if (!['image/png', 'image/jpeg', 'image/jpg', 'image/gif', 'image/x-icon'].includes(fileType)) {
 					showToast(`${file.name} is an unsupported type.`);
-					return;
-				}
-
-				const img = document.createElement('img');
-				img.src = URL.createObjectURL(file);
-				await new Promise((resolve) => img.onload = resolve);
-
-				// Set size based on user's choice (absolute or percentage)
-				if (isAbsoluteSize) {
-					width = parseInt(document.getElementById("widthInput").value);
-					height = parseInt(document.getElementById("heightInput").value);
 				} else {
-					const percentage = parseFloat(document.getElementById("percentageInput").value) / 100;
-					width = Math.round(img.width * percentage);
-					height = Math.round(img.height * percentage);
+					const img = document.createElement('img');
+					img.src = URL.createObjectURL(file);
+					await new Promise((resolve) => img.onload = resolve);
+
+					// Set size based on user's choice (absolute or percentage)
+					if (isAbsoluteSize) {
+						width = parseInt(document.getElementById("widthInput").value);
+						height = parseInt(document.getElementById("heightInput").value);
+					} else {
+						const percentage = parseFloat(document.getElementById("percentageInput").value) / 100;
+						width = Math.round(img.width * percentage);
+						height = Math.round(img.height * percentage);
+					}
+
+					// Compress image based on selected format
+					const compressedBlob = await compressImage(img, width, height, format);
+
+					// Create download link
+					const compressedFileName = file.name.replace(/\.[^/.]+$/, `.${format}`);
+					const compressedSizeInKB = (compressedBlob.size / 1024).toFixed(2);
+					addDownloadLink(downloadLinks, compressedBlob, compressedFileName, compressedSizeInKB);
+
+					// Add files to ZIP
+					zip.file(compressedFileName, compressedBlob);
 				}
-
-				// Compress image based on selected format
-				const compressedBlob = await compressImage(img, width, height, format);
-
-				// Create download link
-				const compressedFileName = file.name.replace(/\.[^/.]+$/, `.${format}`);
-				const compressedSizeInKB = (compressedBlob.size / 1024).toFixed(2);
-				addDownloadLink(downloadLinks, compressedBlob, compressedFileName, compressedSizeInKB);
-
-				// Add files to ZIP
-				zip.file(compressedFileName, compressedBlob);
-
-				completedCount++;
 			} catch (error) {
 				console.log(error);
 				showToast(`An error occurred while processing ${file.name}.`);
 			}
+			completedCount++;
 		});
 
 		await Promise.all(convertPromises);

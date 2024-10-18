@@ -29,95 +29,97 @@
 					</div>
 				</div>
 				
-				<table>
-					<tbody>
-						<tr>
-							<td style="width: 8rem;" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="convert_format">
-								Format
-							</td>
-							<td colspan="2">
-								<div style="display: flex;">
-									<button class="radio-button format-button selected" id="png" onClick="setFormat('png')">
-										<i class="fa-regular fa-file-image"></i>&nbsp;
-										<div>.PNG</div>
-									</button>
-									<button class="radio-button format-button" id="jpg" onClick="setFormat('jpg')">
-										<i class="fa-solid fa-file-image"></i>&nbsp;
-										<div>.JPG</div>
-									</button>
-									<button class="radio-button format-button" id="jpeg" onClick="setFormat('jpeg')">
-										<i class="fa-solid fa-file-image"></i>&nbsp;
-										<div>.JPEG</div>
-									</button>
-									<button class="radio-button format-button" id="ico" onClick="setFormat('ico')">
-										<i class="fa-solid fa-icons"></i>&nbsp;
-										<div>.ICO</div>
-									</button>
-									<button class="radio-button format-button" id="webp" onClick="setFormat('webp')">
-										<i class="fa-solid fa-globe"></i>&nbsp;
-										<div>.WEBP</div>
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td rowspan="2" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="image_size">
-								Size
-							</td>
-							<td>
-								<div style="display: flex;">
-									<button class="radio-button selected" id="relativeSizeButton" onClick="setRelativeSize()">
-										<i class="fa-solid fa-percent"></i>&nbsp;
-										<div class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="relative_size">Relative Size</div>
-									</button>
-									<button class="radio-button" id="absoluteSizeButton" onClick="setAbsoluteSize()">
-										<i class="fa-solid fa-up-right-and-down-left-from-center"></i>&nbsp;
-										<div class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="absolute_size">Absolute Size</div>
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div style="display: flex;">
-									<div id="relativeSizeInputs" style="display: block;">
-										<label class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="percentage">Percentage: </label>
-										<select type="number" id="percentageInput">
-											<option value="100">100%</option>
-											<option value="75">75%</option>
-											<option value="50">50%</option>
-											<option value="25">25%</option>
+				<div style="overflow-x: auto;width: 100%;">
+					<table>
+						<tbody>
+							<tr>
+								<td style="width: 8rem;" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="convert_format">
+									Format
+								</td>
+								<td colspan="2">
+									<div style="display: flex;">
+										<button class="radio-button format-button selected" id="png" onClick="setFormat('png')">
+											<i class="fa-regular fa-file-image"></i>&nbsp;
+											<div>.PNG</div>
+										</button>
+										<button class="radio-button format-button" id="jpg" onClick="setFormat('jpg')">
+											<i class="fa-solid fa-file-image"></i>&nbsp;
+											<div>.JPG</div>
+										</button>
+										<button class="radio-button format-button" id="jpeg" onClick="setFormat('jpeg')">
+											<i class="fa-solid fa-file-image"></i>&nbsp;
+											<div>.JPEG</div>
+										</button>
+										<button class="radio-button format-button" id="ico" onClick="setFormat('ico')">
+											<i class="fa-solid fa-icons"></i>&nbsp;
+											<div>.ICO</div>
+										</button>
+										<button class="radio-button format-button" id="webp" onClick="setFormat('webp')">
+											<i class="fa-solid fa-globe"></i>&nbsp;
+											<div>.WEBP</div>
+										</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="2" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="image_size">
+									Size
+								</td>
+								<td>
+									<div style="display: flex;">
+										<button class="radio-button selected" id="relativeSizeButton" onClick="setRelativeSize()">
+											<i class="fa-solid fa-percent"></i>&nbsp;
+											<div class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="relative_size">Relative Size</div>
+										</button>
+										<button class="radio-button" id="absoluteSizeButton" onClick="setAbsoluteSize()">
+											<i class="fa-solid fa-up-right-and-down-left-from-center"></i>&nbsp;
+											<div class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="absolute_size">Absolute Size</div>
+										</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div style="display: flex;">
+										<div id="relativeSizeInputs" style="display: block;">
+											<label class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="percentage">Percentage: </label>
+											<select type="number" id="percentageInput">
+												<option value="100">100%</option>
+												<option value="75">75%</option>
+												<option value="50">50%</option>
+												<option value="25">25%</option>
+											</select>
+										</div>
+										<div id="absoluteSizeInputs" class="row" style="display: none;">
+											<label class="lang col" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="width" style="width: 5rem;">Width: </label>
+											<input class="col" type="number" id="widthInput" value="64">px
+											<br>
+											<label class="lang col" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="height" style="width: 5rem;">Height: </label>
+											<input class="col" type="number" id="heightInput" value="64" style="margin-top: 0.5rem;">px
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="image_compress">
+									Compress
+								</td>
+								<td>
+									<div style="display: flex;">
+										<select id="compressStrength">
+											<option value="0" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_0">No compression</option>
+											<option value="1" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_1">Slight compression</option>
+											<option value="2" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_2">Moderate compression</option>
+											<option value="3" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_3">Compressed</option>
+											<option value="4" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_4">Heavily compressed</option>
+											<option value="5" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_5">Maximum compression</option>
 										</select>
 									</div>
-									<div id="absoluteSizeInputs" class="row" style="display: none;">
-										<label class="lang col" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="width" style="width: 5rem;">Width: </label>
-										<input class="col" type="number" id="widthInput" value="64">px
-										<br>
-										<label class="lang col" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="height" style="width: 5rem;">Height: </label>
-										<input class="col" type="number" id="heightInput" value="64" style="margin-top: 0.5rem;">px
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="image_compress">
-								Compress
-							</td>
-							<td>
-								<div style="display: flex;">
-									<select id="compressStrength">
-										<option value="0" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_0">No compression</option>
-										<option value="1" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_1">Slight compression</option>
-										<option value="2" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_2">Moderate compression</option>
-										<option value="3" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_3">Compressed</option>
-										<option value="4" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_4">Heavily compressed</option>
-										<option value="5" class="lang" data-lang-var="IMAGE_CONVERTER_LANG" data-lang="compress_5">Maximum compression</option>
-									</select>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 				<br>
 				
 				<div id="historyController">
