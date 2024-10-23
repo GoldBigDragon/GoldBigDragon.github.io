@@ -49,10 +49,10 @@ function addService(serviceArea, serviceData, index){
 	const col = document.createElement("div");
 	col.className = "col description-box";
 	
-	const title = document.createElement("div");
+	const title = document.createElement("a");
 	title.className = "row lang service-name";
 	title.innerHTML = serviceData["name"][NOW_LANG];
-	title.setAttribute("onClick", "window.location.href='" + serviceData["url"] + "';");
+	title.setAttribute("href", serviceData["url"]);
 	LANGUAGE_OBJECT["SERVICE_LANG"][serviceData["name"]["en"]+"-name"] = serviceData["name"];
 	title.setAttribute("data-lang-var", "SERVICE_LANG");
 	title.setAttribute("data-lang", serviceData["name"]["en"]+"-name");
