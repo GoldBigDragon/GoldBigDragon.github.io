@@ -2741,6 +2741,7 @@ const CARTOON_LIST = [
 					"cn": "递归函数",
 					"ru": "Pекурсивная функция"
 				},
+				"background-color": "rgb(49, 51, 56)",
 				"img": "0248.png",
 				"created-at": "2024-10-27"
 			},
@@ -2752,6 +2753,7 @@ const CARTOON_LIST = [
 					"cn": "绑架可能",
 					"ru": "Возможно похищение"
 				},
+				"background-color": "rgb(49, 51, 56)",
 				"img": "0249.png",
 				"created-at": "2024-10-27"
 			}
