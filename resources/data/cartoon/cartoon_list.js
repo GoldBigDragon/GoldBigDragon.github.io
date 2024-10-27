@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
-			"en":"Translating (98/247)",
+			"en":"Translating (100/249)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (98/247)",
-			"cn":"翻译 (98/247)",
-			"ru":"Перевод (98/247)"
+			"jp":"翻訳中 (100/249)",
+			"cn":"翻译 (100/249)",
+			"ru":"Перевод (100/249)"
 		},
 		"uid":"developer",
 		"pages": [
@@ -2732,6 +2732,28 @@ const CARTOON_LIST = [
 				},
 				"img": "0247.png",
 				"created-at": "2024-08-18"
+			},
+			{
+				"title":{
+					"en": "Recursive function",
+					"kr": "재귀 함수",
+					"jp": "再帰関数",
+					"cn": "递归函数",
+					"ru": "Pекурсивная функция"
+				},
+				"img": "0248.png",
+				"created-at": "2024-10-27"
+			},
+			{
+				"title":{
+					"en": "Kidnapping possible",
+					"kr": "납치able",
+					"jp": "誘拐可能",
+					"cn": "绑架可能",
+					"ru": "Возможно похищение"
+				},
+				"img": "0249.png",
+				"created-at": "2024-10-27"
 			}
 		]
 	},
