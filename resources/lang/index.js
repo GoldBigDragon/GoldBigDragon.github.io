@@ -1,10 +1,10 @@
 const INDEX_LANG = {
 	"name": {
-		"en": "Name:",
-		"kr": "이름:",
-		"jp": "名前:",
-		"cn": "姓名:",
-		"ru": "Имя:"
+		"en": "<i class='fa-solid fa-tags'></i> Name:",
+		"kr": "<i class='fa-solid fa-tags'></i> 이름:",
+		"jp": "<i class='fa-solid fa-tags'></i> 名前:",
+		"cn": "<i class='fa-solid fa-tags'></i> 姓名:",
+		"ru": "<i class='fa-solid fa-tags'></i> Имя:"
 	},
 	"name-value": {
 		"en": "TaeRyong Kim",
@@ -14,11 +14,11 @@ const INDEX_LANG = {
 		"ru": "TaeRyong Kim"
 	},
 	"country": {
-		"en": "Country:",
-		"kr": "국적:",
-		"jp": "国籍:",
-		"cn": "国籍:",
-		"ru": "Страна:"
+		"en": "<i class='fa-solid fa-globe'></i> Country:",
+		"kr": "<i class='fa-solid fa-globe'></i> 국적:",
+		"jp": "<i class='fa-solid fa-globe'></i> 国籍:",
+		"cn": "<i class='fa-solid fa-globe'></i> 国籍:",
+		"ru": "<i class='fa-solid fa-globe'></i> Страна:"
 	},
 	"country-value": {
 		"en": "South korea",
@@ -28,39 +28,39 @@ const INDEX_LANG = {
 		"ru": "Южная Корея"
 	},
 	"contact": {
-		"en": "Contact:",
-		"kr": "연락처:",
-		"jp": "連絡先:",
-		"cn": "联系:",
-		"ru": "Контакт:"
+		"en": "<i class='fa-solid fa-envelope'></i> Contact:",
+		"kr": "<i class='fa-solid fa-envelope'></i> 연락처:",
+		"jp": "<i class='fa-solid fa-envelope'></i> 連絡先:",
+		"cn": "<i class='fa-solid fa-envelope'></i> 联系:",
+		"ru": "<i class='fa-solid fa-envelope'></i> Контакт:"
 	},
 	"career": {
-		"en": "Career",
-		"kr": "경력",
-		"jp": "キャリア",
-		"cn": "职业",
-		"ru": "Карьера"
+		"en": "<i class='fa-solid fa-building'></i> Career",
+		"kr": "<i class='fa-solid fa-building'></i> 경력",
+		"jp": "<i class='fa-solid fa-building'></i> キャリア",
+		"cn": "<i class='fa-solid fa-building'></i> 职业",
+		"ru": "<i class='fa-solid fa-building'></i> Карьера"
 	},
 	"education": {
-		"en": "Education",
-		"kr": "교육",
-		"jp": "教育",
-		"cn": "教育",
-		"ru": "Образование"
+		"en": "<i class='fa-solid fa-graduation-cap'></i> Education",
+		"kr": "<i class='fa-solid fa-graduation-cap'></i> 교육",
+		"jp": "<i class='fa-solid fa-graduation-cap'></i> 教育",
+		"cn": "<i class='fa-solid fa-graduation-cap'></i> 教育",
+		"ru": "<i class='fa-solid fa-graduation-cap'></i> Образование"
 	},
 	"certificate": {
-		"en": "Certificate",
-		"kr": "자격증",
-		"jp": "証明書",
-		"cn": "证书",
-		"ru": "Сертификат"
+		"en": "<i class='fa-solid fa-award'></i> Certificate",
+		"kr": "<i class='fa-solid fa-award'></i> 자격증",
+		"jp": "<i class='fa-solid fa-award'></i> 証明書",
+		"cn": "<i class='fa-solid fa-award'></i> 证书",
+		"ru": "<i class='fa-solid fa-award'></i> Сертификат"
 	},
 	"etc": {
-		"en": "ETC",
-		"kr": "기타",
-		"jp": "等",
-		"cn": "等等",
-		"ru": "И Т. Д"
+		"en": "<i class='fa-solid fa-trophy'></i> ETC",
+		"kr": "<i class='fa-solid fa-trophy'></i> 기타",
+		"jp": "<i class='fa-solid fa-trophy'></i> 等",
+		"cn": "<i class='fa-solid fa-trophy'></i> 等等",
+		"ru": "<i class='fa-solid fa-trophy'></i> И Т. Д"
 	},
 	"logo-description": {
 		"en": "Oriental<br>Dragon<br>Shape",
