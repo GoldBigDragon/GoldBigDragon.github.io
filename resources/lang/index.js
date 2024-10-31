@@ -1,10 +1,10 @@
 const INDEX_LANG = {
 	"name": {
-		"en": "<i class='fa-solid fa-tags'></i> Name:",
-		"kr": "<i class='fa-solid fa-tags'></i> 이름:",
-		"jp": "<i class='fa-solid fa-tags'></i> 名前:",
-		"cn": "<i class='fa-solid fa-tags'></i> 姓名:",
-		"ru": "<i class='fa-solid fa-tags'></i> Имя:"
+		"en": "<i class='fa-solid fa-tags'></i>&nbsp;Name:",
+		"kr": "<i class='fa-solid fa-tags'></i>&nbsp;이름:",
+		"jp": "<i class='fa-solid fa-tags'></i>&nbsp;名前:",
+		"cn": "<i class='fa-solid fa-tags'></i>&nbsp;姓名:",
+		"ru": "<i class='fa-solid fa-tags'></i>&nbsp;Имя:"
 	},
 	"name-value": {
 		"en": "TaeRyong Kim",
@@ -14,11 +14,11 @@ const INDEX_LANG = {
 		"ru": "TaeRyong Kim"
 	},
 	"country": {
-		"en": "<i class='fa-solid fa-globe'></i> Country:",
-		"kr": "<i class='fa-solid fa-globe'></i> 국적:",
-		"jp": "<i class='fa-solid fa-globe'></i> 国籍:",
-		"cn": "<i class='fa-solid fa-globe'></i> 国籍:",
-		"ru": "<i class='fa-solid fa-globe'></i> Страна:"
+		"en": "<i class='fa-solid fa-globe'></i>&nbsp;Country:",
+		"kr": "<i class='fa-solid fa-globe'></i>&nbsp;국적:",
+		"jp": "<i class='fa-solid fa-globe'></i>&nbsp;国籍:",
+		"cn": "<i class='fa-solid fa-globe'></i>&nbsp;国籍:",
+		"ru": "<i class='fa-solid fa-globe'></i>&nbsp;Страна:"
 	},
 	"country-value": {
 		"en": "South korea",
@@ -28,11 +28,11 @@ const INDEX_LANG = {
 		"ru": "Южная Корея"
 	},
 	"contact": {
-		"en": "<i class='fa-solid fa-envelope'></i> Contact:",
-		"kr": "<i class='fa-solid fa-envelope'></i> 연락처:",
-		"jp": "<i class='fa-solid fa-envelope'></i> 連絡先:",
-		"cn": "<i class='fa-solid fa-envelope'></i> 联系:",
-		"ru": "<i class='fa-solid fa-envelope'></i> Контакт:"
+		"en": "<i class='fa-solid fa-envelope'></i>&nbsp;Contact:",
+		"kr": "<i class='fa-solid fa-envelope'></i>&nbsp;연락처:",
+		"jp": "<i class='fa-solid fa-envelope'></i>&nbsp;連絡先:",
+		"cn": "<i class='fa-solid fa-envelope'></i>&nbsp;联系:",
+		"ru": "<i class='fa-solid fa-envelope'></i>&nbsp;Контакт:"
 	},
 	"career": {
 		"en": "<i class='fa-solid fa-building'></i> Career",
