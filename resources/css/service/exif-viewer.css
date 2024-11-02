@@ -155,8 +155,8 @@ td {
 	text-align: right;
 }
 .preview {
-	width: 2rem;
-	height: 2rem;
+	width: 4rem;
+	height: 4rem;
 	transition: transform 0.2s ease-in-out;
 }
 .preview:hover {
@@ -220,4 +220,10 @@ td {
     background-color: var(--bs-gray-900);
     padding: 0.2rem 0.5rem;
     margin-bottom: 0.3rem;
+}
+.value-bar-no-bottom-margin{
+	display: block;
+    text-align: left;
+    background-color: var(--bs-gray-900);
+    padding: 0.2rem 0.5rem;
 }

@@ -194,6 +194,7 @@ function addDownloadLink(container, blob, fileInfo) {
 
 		const googleMap = document.createElement("a");
 		googleMap.href=`https://www.google.com/maps/place/${latitude}+${longitude}`;
+		googleMap.target = "_blank";
 		googleMap.innerHTML = '<i class="fa-solid fa-map-location-dot"></i> Google Map';
 		gpsInfoValue.appendChild(googleMap);
 	}
@@ -207,7 +208,7 @@ function addDownloadLink(container, blob, fileInfo) {
 	allInfoTitle.className = "info-bar";
 	allInfoTitle.id = "allInfoTitle" + HISTORY_COUNT;
 	allInfoTitle.setAttribute("onClick", "toggleInfo('allInfo', " + HISTORY_COUNT + ")");
-	allInfoValue.className = "value-bar";
+	allInfoValue.className = "value-bar-no-bottom-margin";
 	allInfoValue.id = "allInfoValue" + HISTORY_COUNT;
 	allInfoValue.style.display = "none";
 	for (const [key, value] of Object.entries(exif)) {
