@@ -138,7 +138,8 @@ function addDownloadLink(container, blob, fileInfo) {
 	
 	const cameraInfoTitle = document.createElement("div");
 	const cameraInfoValue = document.createElement("div");
-	cameraInfoTitle.innerText = "Camera Info ▲ ";
+	
+	cameraInfoTitle.innerText = LANGUAGE_OBJECT["EXIF_VIEWER_LANG"][NOW_LANG]["camera-info"]+" ▲ ";
 	cameraInfoTitle.className = "info-bar";
 	cameraInfoTitle.id = "cameraInfoTitle" + HISTORY_COUNT;
 	cameraInfoTitle.setAttribute("onClick", "toggleInfo('cameraInfo', " + HISTORY_COUNT + ")");
@@ -148,15 +149,19 @@ function addDownloadLink(container, blob, fileInfo) {
 		exif.Make || '',
 		exif.Model || ''
 	].join(' ').trim();
-	exif_data["camera"] = cameraInfoValueText;
-	cameraInfoValue.innerText = cameraInfoValueText;
+	if(cameraInfoValueText.size > 0) {
+		exif_data["camera"] = cameraInfoValueText;
+		cameraInfoValue.innerText = cameraInfoValueText;
+	} else {
+		cameraInfoValue.innerText = "-";
+	}
 	exifCell.appendChild(cameraInfoTitle);
 	exifCell.appendChild(cameraInfoValue);
 	
 	const gpsInfoTitle = document.createElement("div");
 	const gpsInfoValue = document.createElement("div");
-	gpsInfoTitle.innerText = "GPS Info ▲ ";
-	gpsInfoTitle.className = "info-bar";
+	gpsInfoTitle.innerText = LANGUAGE_OBJECT["EXIF_VIEWER_LANG"][NOW_LANG]["gps-info"]+" ▲ ";
+	gpsInfoTitle.className = "info-bar border-top";
 	gpsInfoTitle.id = "gpsInfoTitle" + HISTORY_COUNT;
 	gpsInfoTitle.setAttribute("onClick", "toggleInfo('gpsInfo', " + HISTORY_COUNT + ")");
 	gpsInfoValue.className = "value-bar";
@@ -197,6 +202,8 @@ function addDownloadLink(container, blob, fileInfo) {
 		googleMap.target = "_blank";
 		googleMap.innerHTML = '<i class="fa-solid fa-map-location-dot"></i> Google Map';
 		gpsInfoValue.appendChild(googleMap);
+	} else {
+		gpsInfoValue.innerHTML = "-";
 	}
 
 	exifCell.appendChild(gpsInfoTitle);
@@ -204,18 +211,27 @@ function addDownloadLink(container, blob, fileInfo) {
 
 	const allInfoTitle = document.createElement("div");
 	const allInfoValue = document.createElement("div");
-	allInfoTitle.innerText = "All Info ▼ ";
-	allInfoTitle.className = "info-bar";
+	allInfoTitle.innerText = LANGUAGE_OBJECT["EXIF_VIEWER_LANG"][NOW_LANG]["all-info"]+" ▼ ";
+	allInfoTitle.className = "info-bar border-top";
 	allInfoTitle.id = "allInfoTitle" + HISTORY_COUNT;
 	allInfoTitle.setAttribute("onClick", "toggleInfo('allInfo', " + HISTORY_COUNT + ")");
 	allInfoValue.className = "value-bar-no-bottom-margin";
 	allInfoValue.id = "allInfoValue" + HISTORY_COUNT;
 	allInfoValue.style.display = "none";
+	let flagAmount = 0;
 	for (const [key, value] of Object.entries(exif)) {
-		const valueString = Array.isArray(value) ? value.join(', ') : value;
-		const exifInfo = document.createElement('div');
-		exifInfo.innerText = `${key}: ${valueString}`;
-		allInfoValue.appendChild(exifInfo);
+		if(key != "MakerNote") {
+			const valueString = Array.isArray(value) ? value.join(', ') : value;
+			const exifInfo = document.createElement('div');
+			exifInfo.innerText = `${LANGUAGE_OBJECT["EXIF_VIEWER_LANG"][NOW_LANG]["exif-"+key]}: ${valueString}`;
+			allInfoValue.appendChild(exifInfo);
+			flagAmount += 1;
+		}
+	}
+	if(flagAmount < 1){
+		allInfoValue.innerText = "-";
+	} else {
+		allInfoValue.style.textAlign = "left";
 	}
 	exifCell.appendChild(allInfoTitle);
 	exifCell.appendChild(allInfoValue);
