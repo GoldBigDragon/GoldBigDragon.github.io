@@ -69,21 +69,14 @@ async function handleFiles(files) {
 		const convertPromises = fileArray.map(async (file) => {
 			try {
 				const fileType = file.type;
-				if (file.type.startsWith('image/')) {
+				if (! file.type.startsWith('image/')) {
 					showToast(`${file.name} is an unsupported type.`);
 				} else {
 					const reader = new FileReader();
 					reader.onload = function(e) {
 						const createdAt = new Date(file.lastModified);
 						EXIF.getData(file, function() {
-							const exifData = {
-								'Make': this.exifdata.make,
-								'Model': this.exifdata.model,
-								'DateTimeOriginal': this.exifdata.dateTimeOriginal
-							};
-							
-							let exifOutput = 'EXIF 데이터:\n' + JSON.stringify(this, null, 4);
-							addDownloadLink(downloadLinks, URL.createObjectURL(file), file.name, this);
+							addDownloadLink(downloadLinks, URL.createObjectURL(file), this);
 						});
 					};
 					reader.readAsArrayBuffer(file);
@@ -111,9 +104,8 @@ async function handleFiles(files) {
 }
 
 function toggleInfo(target, index){
-	title = document.getElementById(target + "Title" + index);
-	value = document.getElementById(target + "Value" + index);
 	const title = document.getElementById(target + "Title" + index);
+	const value = document.getElementById(target + "Value" + index);
 	if (title && title.textContent.includes('▼')) {
 		title.textContent = title.textContent.replace(/▼/g, '▲');
 		value.style.display = "block";
@@ -124,8 +116,9 @@ function toggleInfo(target, index){
 }
 
 // Helper function to create download link
-function addDownloadLink(container, blob, fileName, exif) {
-	exif_data = {"file": fileName, "camera": null, "gps": null, "EXIF": exif};
+function addDownloadLink(container, blob, fileInfo) {
+	const exif = fileInfo['exifdata'];
+	let exif_data = {"name": fileInfo.name, "size": fileInfo.size, "type": fileInfo.type, "exif": exif, "iptcdata": fileInfo.iptcdata,"lastModifiedDate": fileInfo.lastModifiedDate, "lastModified": fileInfo.lastModified};
 
 	const row = document.createElement("tr");
 	// Generate preview image
@@ -138,54 +131,83 @@ function addDownloadLink(container, blob, fileName, exif) {
 
 	const nameCell = document.createElement("td");
 	nameCell.className = "file-name";
-	nameCell.textContent = fileName;
+	nameCell.textContent = fileInfo.name;
 	row.appendChild(nameCell);
 
 	const exifCell = document.createElement("td");
 	
 	const cameraInfoTitle = document.createElement("div");
 	const cameraInfoValue = document.createElement("div");
-	cameraInfoTitle.innerText = "Camera info ▲ ";
+	cameraInfoTitle.innerText = "Camera Info ▲ ";
 	cameraInfoTitle.className = "info-bar";
 	cameraInfoTitle.id = "cameraInfoTitle" + HISTORY_COUNT;
 	cameraInfoTitle.setAttribute("onClick", "toggleInfo('cameraInfo', " + HISTORY_COUNT + ")");
+	cameraInfoValue.className = "value-bar";
 	cameraInfoValue.id = "cameraInfoValue" + HISTORY_COUNT;
 	const cameraInfoValueText = [
 		exif.Make || '',
 		exif.Model || ''
 	].join(' ').trim();
+	exif_data["camera"] = cameraInfoValueText;
 	cameraInfoValue.innerText = cameraInfoValueText;
 	exifCell.appendChild(cameraInfoTitle);
 	exifCell.appendChild(cameraInfoValue);
 	
 	const gpsInfoTitle = document.createElement("div");
 	const gpsInfoValue = document.createElement("div");
-	gpsInfoTitle.innerText = "Camera info ▲ ";
+	gpsInfoTitle.innerText = "GPS Info ▲ ";
 	gpsInfoTitle.className = "info-bar";
 	gpsInfoTitle.id = "gpsInfoTitle" + HISTORY_COUNT;
 	gpsInfoTitle.setAttribute("onClick", "toggleInfo('gpsInfo', " + HISTORY_COUNT + ")");
+	gpsInfoValue.className = "value-bar";
 	gpsInfoValue.id = "gpsInfoValue" + HISTORY_COUNT;
-	if('GPSLatitude' in exif && 'GPSLatitudeRef' in exif && 'GPSLongitude' in exif && 'GPSLongitudeRef' in exif){
+	if ('GPSLatitude' in exif && 'GPSLatitudeRef' in exif && 'GPSLongitude' in exif && 'GPSLongitudeRef' in exif) {
 		const gpsText = document.createElement("div");
+
+		// 위도와 경도를 DMS 형식으로 가져오기
 		const latitude = `${exif.GPSLatitude[0]}°${exif.GPSLatitude[1]}'${exif.GPSLatitude[2].toFixed(1)}"${exif.GPSLatitudeRef}`;
 		const longitude = `${exif.GPSLongitude[0]}°${exif.GPSLongitude[1].toString().padStart(2, '0')}'${exif.GPSLongitude[2].toFixed(1)}"${exif.GPSLongitudeRef}`;
 		gpsText.innerText = `${latitude} ${longitude}`;
 
-		const googleMap = document.createElement("iframe");
-		googleMap.src = `https://www.google.com/maps/place/${latitude}+${longitude}`;
-		
+		exif_data["gps"] = `${latitude} ${longitude}`;
 		gpsInfoValue.appendChild(gpsText);
+		
+		/*
+			// 위도와 경도를 10진수 형태로 변환
+			const latDecimal = exif.GPSLatitude[0] + exif.GPSLatitude[1] / 60 + exif.GPSLatitude[2] / 3600;
+			const lonDecimal = exif.GPSLongitude[0] + exif.GPSLongitude[1] / 60 + exif.GPSLongitude[2] / 3600;
+
+			// 북위, 동경인지 확인하여 부호 설정
+			const lat = exif.GPSLatitudeRef === "S" ? -latDecimal : latDecimal;
+			const lon = exif.GPSLongitudeRef === "W" ? -lonDecimal : lonDecimal;
+
+			// Google 지도 iframe 생성
+			const googleMap = document.createElement("iframe");
+			googleMap.src = `https://www.google.com/maps/embed/v1/view?key=YOUR_API_KEY&center=${lat},${lon}&zoom=15`;
+			googleMap.width = "600";
+			googleMap.height = "450";
+			googleMap.style.border = "0";
+			googleMap.allowFullscreen = "";
+			googleMap.loading = "lazy";
+			gpsInfoValue.appendChild(googleMap);
+		*/
+
+		const googleMap = document.createElement("a");
+		googleMap.href=`https://www.google.com/maps/place/${latitude}+${longitude}`;
+		googleMap.innerHTML = '<i class="fa-solid fa-map-location-dot"></i> Google Map';
 		gpsInfoValue.appendChild(googleMap);
 	}
+
 	exifCell.appendChild(gpsInfoTitle);
 	exifCell.appendChild(gpsInfoValue);
 
 	const allInfoTitle = document.createElement("div");
 	const allInfoValue = document.createElement("div");
-	allInfoTitle.innerText = "Camera info ▼ ";
+	allInfoTitle.innerText = "All Info ▼ ";
 	allInfoTitle.className = "info-bar";
 	allInfoTitle.id = "allInfoTitle" + HISTORY_COUNT;
-	allInfoTitle.setAttribute("onClick", "toggleInfo('cameraInfo', " + HISTORY_COUNT + ")");
+	allInfoTitle.setAttribute("onClick", "toggleInfo('allInfo', " + HISTORY_COUNT + ")");
+	allInfoValue.className = "value-bar";
 	allInfoValue.id = "allInfoValue" + HISTORY_COUNT;
 	allInfoValue.style.display = "none";
 	for (const [key, value] of Object.entries(exif)) {
@@ -194,8 +216,6 @@ function addDownloadLink(container, blob, fileName, exif) {
 		exifInfo.innerText = `${key}: ${valueString}`;
 		allInfoValue.appendChild(exifInfo);
 	}
-	
-	allInfoValue.innerText = allInfoValue;
 	exifCell.appendChild(allInfoTitle);
 	exifCell.appendChild(allInfoValue);
 	row.appendChild(exifCell);

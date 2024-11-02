@@ -78,7 +78,7 @@ const SERVICE_LIST = [
 			"cn": "您可以查看映像文件中包含的EXIF信息。",
 			"ru": "Вы можете проверить информацию EXIF, содержащуюся в файле изображения."
 		},
-		"tag": ["image", "viewer", "forensic"],
+		"tag": ["image", "viewer", "exif", "gps", "location", "forensic"],
 		"icon": "/resources/img/service/logo/exif-viewer.png",
 		"created-at": "2024-11-01",
 		"updated-at": "2024-11-01"
