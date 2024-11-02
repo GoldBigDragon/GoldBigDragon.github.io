@@ -61,11 +61,7 @@ let HISTORY_COUNT = 0;
 // Main function to handle files
 async function handleFiles(files) {
 	const fileArray = Array.from(files);
-	const isAbsoluteSize = document.getElementById("absoluteSizeButton").classList.contains("selected");
-	let width, height;
-
 	let completedCount = 0;
-
 	try {
 		const downloadLinks = document.getElementById("downloadLinks");
 
