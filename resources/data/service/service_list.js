@@ -61,5 +61,26 @@ const SERVICE_LIST = [
 		"icon": "/resources/img/service/logo/hash-check.png",
 		"created-at": "2024-10-15",
 		"updated-at": "2024-10-15"
+	},
+	{
+		"url": "/service/exif-viewer.html",
+		"name": {
+			"en": "EXIF Viewer",
+			"kr": "EXIF 뷰어",
+			"jp": "EXIF ビューア",
+			"cn": "EXIF 查看器",
+			"ru": "EXIF Просмотрщик"
+		},
+		"description": {
+			"en": "You can check the EXIF information included in the image file.",
+			"kr": "이미지 파일에 포함된 EXIF 정보를 확인할 수 있습니다.",
+			"jp": "画像ファイルに含まれるEXIF情報を確認することができます。",
+			"cn": "您可以查看映像文件中包含的EXIF信息。",
+			"ru": "Вы можете проверить информацию EXIF, содержащуюся в файле изображения."
+		},
+		"tag": ["image", "viewer", "forensic"],
+		"icon": "/resources/img/service/logo/exif-viewer.png",
+		"created-at": "2024-11-01",
+		"updated-at": "2024-11-01"
 	}
 ];

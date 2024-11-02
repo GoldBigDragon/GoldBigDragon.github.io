@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
-			"en":"Translating (100/249)",
+			"en":"Translating (103/252)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (100/249)",
-			"cn":"翻译 (100/249)",
-			"ru":"Перевод (100/249)"
+			"jp":"翻訳中 (103/252)",
+			"cn":"翻译 (103/252)",
+			"ru":"Перевод (103/252)"
 		},
 		"uid":"developer",
 		"pages": [
@@ -2756,6 +2756,42 @@ const CARTOON_LIST = [
 				"background-color": "rgb(49, 51, 56)",
 				"img": "0249.png",
 				"created-at": "2024-10-27"
+			},
+			{
+				"title":{
+					"en": "Topical Black Hole",
+					"kr": "주제 블랙홀",
+					"jp": "主題のブラックホール",
+					"cn": "主题黑洞",
+					"ru": "Тема разговора чёрная дыра"
+				},
+				"background-color": "rgb(49, 51, 56)",
+				"img": "0250.png",
+				"created-at": "2024-11-02"
+			},
+			{
+				"title":{
+					"en": "Reincarnated",
+					"kr": "회귀",
+					"jp": "回帰",
+					"cn": "回归",
+					"ru": "Возрождение"
+				},
+				"background-color": "rgb(49, 51, 56)",
+				"img": "0251.png",
+				"created-at": "2024-11-02"
+			},
+			{
+				"title":{
+					"en": "Relative sense of happiness",
+					"kr": "상대적 해피",
+					"jp": "相対的幸福感",
+					"cn": "相对幸福感",
+					"ru": "Относительная эйфория"
+				},
+				"background-color": "rgb(49, 51, 56)",
+				"img": "0252.png",
+				"created-at": "2024-11-02"
 			}
 		]
 	},
