@@ -227,6 +227,6 @@ td {
     background-color: var(--bs-gray-900);
     padding: 0.2rem 0.5rem;
 }
-.border-top{
+.border-top-gray{
 	border-top: 3px solid var(--bs-gray-800);
 }

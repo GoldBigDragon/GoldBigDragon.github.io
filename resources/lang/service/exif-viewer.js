@@ -44,23 +44,23 @@ const EXIF_VIEWER_LANG = {
 	"camera-info": {
 		"en": "Camera Info",
 		"kr": "카메라 정보",
-		"jp": "",
-		"cn": "",
-		"ru": ""
+		"jp": "カメラ情報",
+		"cn": "相机信息",
+		"ru": "Информация о камере"
 	},
 	"gps-info": {
 		"en": "GPS Info",
 		"kr": "위치 정보",
-		"jp": "",
-		"cn": "",
-		"ru": ""
+		"jp": "GPS情報",
+		"cn": "GPS信息",
+		"ru": "Информация о GPS"
 	},
 	"all-info": {
 		"en": "All Info",
 		"kr": "전체 정보",
-		"jp": "",
-		"cn": "",
-		"ru": ""
+		"jp": "すべての情報",
+		"cn": "所有信息",
+		"ru": "Вся информация"
 	},
 	"exif-ExifVersion": {
 		"en": "Exif Version",

@@ -139,7 +139,7 @@ function addDownloadLink(container, blob, fileInfo) {
 	const cameraInfoTitle = document.createElement("div");
 	const cameraInfoValue = document.createElement("div");
 	
-	cameraInfoTitle.innerText = LANGUAGE_OBJECT["EXIF_VIEWER_LANG"][NOW_LANG]["camera-info"]+" ▲ ";
+	cameraInfoTitle.innerText = LANGUAGE_OBJECT["EXIF_VIEWER_LANG"]["camera-info"][NOW_LANG]+" ▲ ";
 	cameraInfoTitle.className = "info-bar";
 	cameraInfoTitle.id = "cameraInfoTitle" + HISTORY_COUNT;
 	cameraInfoTitle.setAttribute("onClick", "toggleInfo('cameraInfo', " + HISTORY_COUNT + ")");
@@ -149,7 +149,7 @@ function addDownloadLink(container, blob, fileInfo) {
 		exif.Make || '',
 		exif.Model || ''
 	].join(' ').trim();
-	if(cameraInfoValueText.size > 0) {
+	if(cameraInfoValueText) {
 		exif_data["camera"] = cameraInfoValueText;
 		cameraInfoValue.innerText = cameraInfoValueText;
 	} else {
@@ -160,8 +160,8 @@ function addDownloadLink(container, blob, fileInfo) {
 	
 	const gpsInfoTitle = document.createElement("div");
 	const gpsInfoValue = document.createElement("div");
-	gpsInfoTitle.innerText = LANGUAGE_OBJECT["EXIF_VIEWER_LANG"][NOW_LANG]["gps-info"]+" ▲ ";
-	gpsInfoTitle.className = "info-bar border-top";
+	gpsInfoTitle.innerText = LANGUAGE_OBJECT["EXIF_VIEWER_LANG"]["gps-info"][NOW_LANG]+" ▲ ";
+	gpsInfoTitle.className = "info-bar border-top-gray";
 	gpsInfoTitle.id = "gpsInfoTitle" + HISTORY_COUNT;
 	gpsInfoTitle.setAttribute("onClick", "toggleInfo('gpsInfo', " + HISTORY_COUNT + ")");
 	gpsInfoValue.className = "value-bar";
@@ -211,8 +211,8 @@ function addDownloadLink(container, blob, fileInfo) {
 
 	const allInfoTitle = document.createElement("div");
 	const allInfoValue = document.createElement("div");
-	allInfoTitle.innerText = LANGUAGE_OBJECT["EXIF_VIEWER_LANG"][NOW_LANG]["all-info"]+" ▼ ";
-	allInfoTitle.className = "info-bar border-top";
+	allInfoTitle.innerText = LANGUAGE_OBJECT["EXIF_VIEWER_LANG"]["all-info"][NOW_LANG]+" ▼ ";
+	allInfoTitle.className = "info-bar border-top-gray";
 	allInfoTitle.id = "allInfoTitle" + HISTORY_COUNT;
 	allInfoTitle.setAttribute("onClick", "toggleInfo('allInfo', " + HISTORY_COUNT + ")");
 	allInfoValue.className = "value-bar-no-bottom-margin";
@@ -220,12 +220,14 @@ function addDownloadLink(container, blob, fileInfo) {
 	allInfoValue.style.display = "none";
 	let flagAmount = 0;
 	for (const [key, value] of Object.entries(exif)) {
-		if(key != "MakerNote") {
+		if(key != "MakerNote" && key !== undefined) {
 			const valueString = Array.isArray(value) ? value.join(', ') : value;
 			const exifInfo = document.createElement('div');
-			exifInfo.innerText = `${LANGUAGE_OBJECT["EXIF_VIEWER_LANG"][NOW_LANG]["exif-"+key]}: ${valueString}`;
-			allInfoValue.appendChild(exifInfo);
-			flagAmount += 1;
+			if("exif-"+key in LANGUAGE_OBJECT["EXIF_VIEWER_LANG"]){
+				exifInfo.innerText = `${LANGUAGE_OBJECT["EXIF_VIEWER_LANG"]["exif-"+key][NOW_LANG]}: ${valueString}`;
+				allInfoValue.appendChild(exifInfo);
+				flagAmount += 1;
+			}
 		}
 	}
 	if(flagAmount < 1){
