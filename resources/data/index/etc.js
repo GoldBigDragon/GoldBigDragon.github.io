@@ -1,6 +1,39 @@
 const DATA_ETC = [
 	{
 		"award-name":{
+			"en":"Appreciation plaque",
+			"kr":"감사패",
+			"jp":"感謝楯",
+			"cn":"感谢牌",
+			"ru":"Благодарственная табличка"
+		},
+		"award-date":"2024-12-12",
+		"awarding-organization":{
+			"en":"Korean National Police Agency - Ulsan Provincial",
+			"kr":"울산지방경찰청",
+			"jp":"蔚山警察庁",
+			"cn":"蔚山警察厅",
+			"ru":"Корейское национальное полицейское управление - провинциальное Ulsan"
+		},
+		"reason":{
+			"en":"Excellent activity in reporting harmful sites in 2024",
+			"kr":"2024년 유해 사이트 신고 활동 우수",
+			"jp":"2024年有害サイト届出活動優秀",
+			"cn":"2024年报告有害网站的出色活动",
+			"ru":"Отличная активность по сообщению о вредоносных сайтах в 2024 г."
+		},
+		"logo":"/resources/img/index/logo/etc/knpa.png",
+		"logo-title":{
+			"en":"Appreciation<br>plaque",
+			"kr":"감사패",
+			"jp":"感謝楯",
+			"cn":"感谢牌",
+			"ru":"Благодарственная<br>табличка"
+		},
+		"proof":"/resources/img/index/proof/etc/2024_12_12_knpa_ulsan.jpg"
+	},
+	{
+		"award-name":{
 			"en":"Certificate of Appreciation",
 			"kr":"감사장",
 			"jp":"感謝状",
@@ -57,11 +90,11 @@ const DATA_ETC = [
 		},
 		"logo":"/resources/img/index/logo/etc/knpa.png",
 		"logo-title":{
-			"en":"Appreciation plaque",
+			"en":"Appreciation<br>plaque",
 			"kr":"감사패",
 			"jp":"感謝楯",
 			"cn":"感谢牌",
-			"ru":"Благодарственная табличка"
+			"ru":"Благодарственная<br>табличка"
 		},
 		"proof":"/resources/img/index/proof/etc/2022_12_23_knpa.jpg"
 	},
