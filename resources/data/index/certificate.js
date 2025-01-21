@@ -167,6 +167,60 @@ const DATA_CERTIFICATE = [
 	},
 	{
 		"name":{
+			"en":"Microsoft Office Specialist: Microsoft Office Word 2010 Expert",
+			"kr":"Microsoft Office Specialist: Microsoft Office Word 2010 Expert",
+			"jp":"Microsoft Office Specialist: Microsoft Office Word 2010 Expert",
+			"cn":"Microsoft Office Specialist: Microsoft Office Word 2010 Expert",
+			"ru":"Microsoft Office Specialist: Microsoft Office Word 2010 Expert"
+		},
+		"acquisition-date":"2015-11-18",
+		"issuing-authority":{
+			"en":"Microsoft",
+			"kr":"Microsoft",
+			"jp":"Microsoft",
+			"cn":"Microsoft",
+			"ru":"Microsoft"
+		},
+		"logo":"/resources/img/index/logo/certificate/word.png",
+		"logo-title":{
+			"en":"MOS: Word 2010<br>Expert",
+			"kr":"MOS: Word 2010<br>Expert",
+			"jp":"MOS: Word 2010<br>Expert",
+			"cn":"MOS: Word 2010<br>Expert",
+			"ru":"MOS: Word 2010<br>Expert"
+		},
+		"certificate-no":"chDA-uG4J",
+		"proof":"/resources/img/index/proof/certificate/mos_word_2010_expert.png"
+	},
+	{
+		"name":{
+			"en":"Microsoft Office Specialist: Microsoft Office Word 2010",
+			"kr":"Microsoft Office Specialist: Microsoft Office Word 2010",
+			"jp":"Microsoft Office Specialist: Microsoft Office Word 2010",
+			"cn":"Microsoft Office Specialist: Microsoft Office Word 2010",
+			"ru":"Microsoft Office Specialist: Microsoft Office Word 2010"
+		},
+		"acquisition-date":"2015-11-04",
+		"issuing-authority":{
+			"en":"Microsoft",
+			"kr":"Microsoft",
+			"jp":"Microsoft",
+			"cn":"Microsoft",
+			"ru":"Microsoft"
+		},
+		"logo":"/resources/img/index/logo/certificate/word.png",
+		"logo-title":{
+			"en":"MOS: Word 2010",
+			"kr":"MOS: Word 2010",
+			"jp":"MOS: Word 2010",
+			"cn":"MOS: Word 2010",
+			"ru":"MOS: Word 2010"
+		},
+		"certificate-no":"waa6V-FMnr",
+		"proof":"/resources/img/index/proof/certificate/mos_word_2010.png"
+	},
+	{
+		"name":{
 			"en":"Microsoft Office Specialist: Microsoft Office Excel 2010",
 			"kr":"Microsoft Office Specialist: Microsoft Office Excel 2010",
 			"jp":"Microsoft Office Specialist: Microsoft Office Excel 2010",
@@ -189,8 +243,8 @@ const DATA_CERTIFICATE = [
 			"cn":"MOS: Excel 2010",
 			"ru":"MOS: Excel 2010"
 		},
-		"certificate-no":"20128257",
-		"proof":"/resources/img/index/proof/certificate/mos_excel.png"
+		"certificate-no":"eKkv-FVrP",
+		"proof":"/resources/img/index/proof/certificate/mos_excel_2010.png"
 	},
 	{
 		"name":{
@@ -216,7 +270,7 @@ const DATA_CERTIFICATE = [
 			"cn":"MOS: PowerPoint 2010",
 			"ru":"MOS: PowerPoint 2010"
 		},
-		"certificate-no":"20233612",
-		"proof":"/resources/img/index/proof/certificate/mos_powerpoint.png"
+		"certificate-no":"ePK9-FV7w",
+		"proof":"/resources/img/index/proof/certificate/mos_powerpoint_2010.png"
 	}
 ];
