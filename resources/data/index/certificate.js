@@ -190,7 +190,7 @@ const DATA_CERTIFICATE = [
 			"ru":"Эксперт по цифровой<br>криминалистике(уровень 2)"
 		},
 		"certificate-no":"2016-07-2-061",
-		"proof":"/resources/img/index/proof/certificate/digital_forensic_expert.png"
+		"proof":"/resources/img/index/proof/certificate/digital_forensic_expert.jpg"
 	},
 	{
 		"name":{
