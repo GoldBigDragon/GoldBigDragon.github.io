@@ -1,6 +1,33 @@
 const DATA_CERTIFICATE = [
 	{
 		"name":{
+			"en": "PILOT OF AN ULTRA LIGHT VEHICLE 4th CLASS(UNMANNED MULTICOPTER)",
+			"kr": "초경량비행장치 조종자 4종(무인멀티콥터)",
+			"jp": "超軽量飛行装置操縦者4種 (無人マルチコプター)",
+			"cn": "超轻型飞行器驾驶员4类 (无人多旋翼飞行器)",
+			"ru": "Пилот сверхлегкого летательного аппарата 4-го класса (беспилотный мультикоптер)"
+		},
+		"acquisition-date":"2025-03-10",
+		"issuing-authority":{
+			"en":"Korea Transportation Safety Authority",
+			"kr":"한국교통안전공단",
+			"jp":"韓国交通安全公団",
+			"cn":"韓國交通安全公團",
+			"ru":"Управление транспортной безопасности Кореи"
+		},
+		"logo":"/resources/img/index/logo/certificate/ktsa.png",
+		"logo-title":{
+			"en":"PILOT OF AN<br>ULTRA LIGHT VEHICLE<br>4th CLASS",
+			"kr":"초경량비행장치<br>조종자 4종",
+			"jp":"超軽量飛行装置<br>操縦者4種",
+			"cn":"超轻型飞行器<br>驾驶员4类",
+			"ru":"Пилот сверхлегкого<br>летательного аппарата<br>4-го класса"
+		},
+		"certificate-no":"2025-항공-1084386",
+		"proof":"/resources/img/index/proof/certificate/pilot_of_an_ultra_light_vehicle_4th_class_unmanned_multicopter.png"
+	},
+	{
+		"name":{
 			"en":"Engineer Information Processing",
 			"kr":"정보처리기사",
 			"jp":"情報処理技師",
