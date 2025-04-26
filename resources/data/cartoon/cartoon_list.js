@@ -8,11 +8,11 @@ const CARTOON_LIST = [
 			"ru":"Чат- комната разработчиков"
 		},
 		"translating":{
-			"en":"Translating (103/252)",
+			"en":"Translating (106/255)",
 			"kr":"번역 완료",
-			"jp":"翻訳中 (103/252)",
-			"cn":"翻译 (103/252)",
-			"ru":"Перевод (103/252)"
+			"jp":"翻訳中 (106/255)",
+			"cn":"翻译 (106/255)",
+			"ru":"Перевод (106/255)"
 		},
 		"uid":"developer",
 		"pages": [
@@ -2814,7 +2814,7 @@ const CARTOON_LIST = [
 					"ru": "Chill Guy"
 				},
 				"background-color": "rgb(16, 16, 17)",
-				"img": "0253.png",
+				"img": "0254.png",
 				"created-at": "2025-04-27"
 			},
 			{
@@ -2826,7 +2826,7 @@ const CARTOON_LIST = [
 					"ru": "QA"
 				},
 				"background-color": "rgb(16, 16, 17)",
-				"img": "0253.png",
+				"img": "0255.png",
 				"created-at": "2025-04-27"
 			}
 		]
