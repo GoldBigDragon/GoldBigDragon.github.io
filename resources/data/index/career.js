@@ -3,13 +3,7 @@ const DATA_CAREER = [
 		"company": "(주)코어시큐리티",
 		"company-link":"https://coresec.co.kr/",
 		"start-date":"2021-04-12",
-		"end-date":{
-			"en":"Currently working",
-			"kr":"재직 중",
-			"jp":"今、働いている",
-			"cn":"正在工作",
-			"ru":"Работает в настоящее время"
-		},
+		"end-date":"2025-04-18",
 		"department":{
 			"en":"Security Technology Research Institute",
 			"kr":"보안기술연구소",

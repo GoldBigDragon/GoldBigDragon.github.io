@@ -2792,6 +2792,42 @@ const CARTOON_LIST = [
 				"background-color": "rgb(49, 51, 56)",
 				"img": "0252.png",
 				"created-at": "2024-11-02"
+			},
+			{
+				"title":{
+					"en": "First patient",
+					"kr": "제 1 병자",
+					"jp": "第一患者",
+					"cn": "第一病人",
+					"ru": "Первый пациент"
+				},
+				"background-color": "rgb(16, 16, 17)",
+				"img": "0253.png",
+				"created-at": "2025-04-27"
+			},
+			{
+				"title":{
+					"en": "Chill Guy",
+					"kr": "Chill Guy",
+					"jp": "Chill Guy",
+					"cn": "Chill Guy",
+					"ru": "Chill Guy"
+				},
+				"background-color": "rgb(16, 16, 17)",
+				"img": "0253.png",
+				"created-at": "2025-04-27"
+			},
+			{
+				"title":{
+					"en": "QA",
+					"kr": "QA",
+					"jp": "QA",
+					"cn": "QA",
+					"ru": "QA"
+				},
+				"background-color": "rgb(16, 16, 17)",
+				"img": "0253.png",
+				"created-at": "2025-04-27"
 			}
 		]
 	},
