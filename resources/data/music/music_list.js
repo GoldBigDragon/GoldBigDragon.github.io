@@ -30,7 +30,7 @@ const PLAY_LIST = [
 				"duration": 162,
 				"mp3": "/resources/files/music/udio/Ruins and rains.mp3",
 				"wav": "/resources/files/music/udio/Ruins and rains.wav",
-				"tag": ["instrumental", "atmospheric", "abstract", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
+				"tag": ["instrumental", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
 				"image": "/resources/img/music/music/udio/Ruins and rains.avif"
 			},
 			{
@@ -87,7 +87,30 @@ const PLAY_LIST = [
 				"wav": "https://drive.google.com/file/d/1-fICoHtfhEmGI1qWZkl1i0ovfG5dwKuZ/view?usp=sharing",
 				"tag": ["voice", "trance", "progressive house", "electronic dance music", "tech house", "house", "electronic", "electro house", "hypnotic", "repetitive", "uplifting", "melodic", "party", "atmospheric", "playful", "minimalistic", "energetic", "rhythmic", "bittersweet", "ethereal", "lush"],
 				"image": "/resources/img/music/music/udio/The Diamond Sutra.avif"
-			}
+			},
+			{
+				"title": {
+					"en": "Time to plan",
+					"kr": "계획할 시간",
+					"jp": "計画の時",
+					"cn": "是时候制定计划了",
+					"ru": "Время планировать"
+				},
+				"lyrics":{
+					"en": "(This piece was composed with the image of a protagonist who, after escaping to a safe place in the early stage of a disaster, begins to plan for the future.)",
+					"kr": "(재난 직후, 주인공이 안전한 장소에 피신한 뒤 앞으로의 계획을 구상하는 모습을 떠올리며 작곡한 곡입니다.)",
+					"jp": "(災害直後、安全な場所へ避難した主人公が今後の計画を立てる姿を思い描きながら作曲しました。)",
+					"cn": "(这首曲子描绘了灾难发生初期，主角成功逃到安全地带后开始筹划未来的情景。)",
+					"ru": "(Эта композиция написана с воображением главного героя, который, укрывшись в безопасном месте после начала катастрофы, начинает строить планы на будущее.)"
+				},
+				"composed-at": "2025-07-29",
+				"composed-with": "Suno",
+				"duration": 298,
+				"mp3": "/resources/files/music/suno/Time to plan.mp3",
+				"wav": "/resources/files/music/suno/Time to plan.wav",
+				"tag": ["instrumental", "folk", "dystopian", "acoustic guitar", "strings", "lonely", "modern"],
+				"image": "/resources/img/music/music/suno/Time to plan.png"
+			},
 		]
 	},
 	{
@@ -1103,7 +1126,13 @@ const CREATED_WITH = {
 	"AIVA":{
 		"url":"https://www.aiva.ai/",
 		"icon":"/resources/img/music/composed-with/AIVA.png",
-		"subscribed":"true",
+		"subscribed":"false",
 		"subscribed-at":"2024-05-19"
+	},
+	"Suno":{
+		"url":"https://suno.com/",
+		"icon":"/resources/img/music/composed-with/Suno.png",
+		"subscribed":"true",
+		"subscribed-at":"2025-07-29"
 	}
 };
