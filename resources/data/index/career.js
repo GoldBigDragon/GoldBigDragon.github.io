@@ -1,7 +1,7 @@
 const DATA_CAREER = [
 	{
-		"company": "(주)코어시큐리티",
-		"company-link":"https://coresec.co.kr/",
+		"company": "",
+		"company-link":"",
 		"start-date":"2025-04-19",
 		"end-date":{
 			"en":"Currently working",
