@@ -2,6 +2,54 @@ const DATA_CAREER = [
 	{
 		"company": "(주)코어시큐리티",
 		"company-link":"https://coresec.co.kr/",
+		"start-date":"2025-04-19",
+		"end-date":{
+			"en":"Currently working",
+			"kr":"재직 중",
+			"jp":"今、働いている",
+			"cn":"正在工作",
+			"ru":"Работает в настоящее время"
+		},
+		"department":{
+			"en":"",
+			"kr":"",
+			"jp":"",
+			"cn":"",
+			"ru":""
+		},
+		"team": {
+			"en":"",
+			"kr":"",
+			"jp":"",
+			"cn":"",
+			"ru":""
+		},
+		"task": {
+			"en":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>Period: 2025-08-01 ~ 2025-11-15</li><li>Total of 38 questions for preliminaries and finals<br>(Digital Forensics 20, Virtual Assets 10, OSINT 8)</li><li>CTF competition infrastructure setup</li></ul>",
+			"kr":"[코어시큐리티] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>기간: 2025-08-01 ~ 2025-11-15</li><li>예선, 본선 총 38문제 출제<br>(디지털포렌식 20문항, 가상자산 10문항, OSINT 8문항)</li><li>CTF 대회 인프라 구축</li></ul>",
+			"jp":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>期間: 2025-08-01 ～ 2025-11-15</li><li>予選・本選 合計38問出題<br>(デジタルフォレンジック20問、暗号資産10問、OSINT 8問)</li><li>CTF大会インフラ構築</li></ul>",
+			"cn":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>期间：2025-08-01 ~ 2025-11-15</li><li>预选赛和决赛共38题<br>（数字取证20题、虚拟资产10题、OSINT 8题）</li><li>CTF比赛基础设施搭建</li></ul>",
+			"ru":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>Период: 2025-08-01 ~ 2025-11-15</li><li>Всего 38 заданий для отбора и финала<br>(Цифровая криминалистика 20, Виртуальные активы 10, OSINT 8)</li><li>Развертывание инфраструктуры CTF-соревнования</li></ul>"
+		},
+		"position": {
+			"en":"Freelancer",
+			"kr":"프리랜서",
+			"jp":"フリーランサー",
+			"cn":"自由契約者",
+			"ru":"фрила́нсер"
+		},
+		"logo":"/resources/img/index/logo/career/freelancer.png",
+		"logo-title":{
+			"en":"Freelancer",
+			"kr":"프리랜서",
+			"jp":"フリーランサー",
+			"cn":"自由契約者",
+			"ru":"фрила́нсер"
+		}
+	},
+	{
+		"company": "(주)코어시큐리티",
+		"company-link":"https://coresec.co.kr/",
 		"start-date":"2021-04-12",
 		"end-date":"2025-04-18",
 		"department":{
