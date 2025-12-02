@@ -25,11 +25,11 @@ const DATA_CAREER = [
 			"ru":""
 		},
 		"task": {
-			"en":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>Period: 2025-08-01 ~ 2025-11-15</li><li>Total of 38 questions for preliminaries and finals<br>(Digital Forensics 20, Virtual Assets 10, OSINT 8)</li><li>CTF competition infrastructure setup</li></ul>",
+			"en":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>Period: 2025-08-01 ~ 2025-11-15</li><li>Created total 38 questions for preliminaries and finals<br>(Digital Forensics 20, Virtual Assets 10, OSINT 8)</li><li>CTF competition infrastructure setup</li></ul>",
 			"kr":"[코어시큐리티] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>기간: 2025-08-01 ~ 2025-11-15</li><li>예선, 본선 총 38문제 출제<br>(디지털포렌식 20문항, 가상자산 10문항, OSINT 8문항)</li><li>CTF 대회 인프라 구축</li></ul>",
 			"jp":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>期間: 2025-08-01 ～ 2025-11-15</li><li>予選・本選 合計38問出題<br>(デジタルフォレンジック20問、暗号資産10問、OSINT 8問)</li><li>CTF大会インフラ構築</li></ul>",
-			"cn":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>期间：2025-08-01 ~ 2025-11-15</li><li>预选赛和决赛共38题<br>（数字取证20题、虚拟资产10题、OSINT 8题）</li><li>CTF比赛基础设施搭建</li></ul>",
-			"ru":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>Период: 2025-08-01 ~ 2025-11-15</li><li>Всего 38 заданий для отбора и финала<br>(Цифровая криминалистика 20, Виртуальные активы 10, OSINT 8)</li><li>Развертывание инфраструктуры CTF-соревнования</li></ul>"
+			"cn":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>期间：2025-08-01 ~ 2025-11-15</li><li>预选赛和决赛共出题38题<br>（数字取证20题、虚拟资产10题、OSINT 8题）</li><li>CTF比赛基础设施搭建</li></ul>",
+			"ru":"[Coresecurity] 2025 폴 사이버 챌린지<ul style='margin-bottom: 0rem;'><li>Период: 2025-08-01 ~ 2025-11-15</li><li>Всего создано 38 заданий для отбора и финала<br>(Цифровая криминалистика 20, Виртуальные активы 10, OSINT 8)</li><li>Развертывание инфраструктуры CTF-соревнования</li></ul>"
 		},
 		"position": {
 			"en":"Freelancer",
