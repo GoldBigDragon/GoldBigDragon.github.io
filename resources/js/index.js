@@ -42,8 +42,7 @@ function addBadge(targetArea, category, index, badgeData){
 
 	const badgeTitle = document.createElement("div");
 	badgeTitle.className = "badge-name lang";
-	// XSS 방지: innerHTML 대신 textContent 사용
-	badgeTitle.textContent = badgeData["logo-title"][NOW_LANG];
+	badgeTitle.innerHTML = badgeData["logo-title"][NOW_LANG];
 	LANGUAGE_OBJECT["BADGE_LANG"][category + "-" + index] = badgeData["logo-title"];
 	badgeTitle.setAttribute("data-lang-var", "BADGE_LANG");
 	badgeTitle.setAttribute("data-lang", category + "-" + index);
@@ -74,11 +73,11 @@ function createModalRow(keyText, value, isLink = false, isImage = false) {
 
 	const keyDiv = document.createElement("div");
 	keyDiv.className = "col-3 key";
-	keyDiv.textContent = keyText;
+	keyDiv.innerHTML = keyText;
 
 	const valueDiv = document.createElement(isLink ? "a" : "div");
 	valueDiv.className = "col value";
-	valueDiv.textContent = value;
+	valueDiv.innerHTML = value;
 
 	if (isLink) {
 		valueDiv.href = value;
@@ -259,8 +258,7 @@ function openModal(category, index){
 		// 성능 최적화: 한 번에 DOM에 추가
 		modalBody.appendChild(fragment);
 
-		// XSS 방지: textContent 사용
-		modalTitle.textContent = badgeData["logo-title"][NOW_LANG].replace("<br>", " ");
+		modalTitle.innerHTML = badgeData["logo-title"][NOW_LANG].replace("<br>", " ");
 		$('#badgeDetailModal').modal('show');
 
 		// 접근성: 모달 열렸을 때 포커스 이동

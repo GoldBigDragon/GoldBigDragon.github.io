@@ -149,8 +149,7 @@ function loadLanguage() {
 	const textField = document.getElementsByClassName("lang");
 	Array.prototype.forEach.call(textField, function(languageElement) {
 		try{
-			// XSS 방지: innerHTML 대신 textContent 사용
-			languageElement.textContent = LANGUAGE_OBJECT[languageElement.dataset.langVar][languageElement.dataset.lang][NOW_LANG];
+			languageElement.innerHTML = LANGUAGE_OBJECT[languageElement.dataset.langVar][languageElement.dataset.lang][NOW_LANG];
 		} catch(err){
 			console.error('Language loading error:', err);
 		}

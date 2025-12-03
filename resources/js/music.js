@@ -742,8 +742,7 @@ function showDetails(musicName){
 			document.getElementById("music-details-title").textContent = MUSIC_LIST[musicIndex]["title"][NOW_LANG];
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("lyrics")){
 				document.getElementById("music-details-lyrics-pane").removeAttribute("hidden");
-				// 가사는 줄바꿈이 필요하므로 textContent 사용 (innerHTML은 XSS 위험)
-				document.getElementById("music-details-lyrics").textContent = MUSIC_LIST[musicIndex]["lyrics"][NOW_LANG];
+				document.getElementById("music-details-lyrics").innerHTML = MUSIC_LIST[musicIndex]["lyrics"][NOW_LANG];
 			} else {
 				document.getElementById("music-details-lyrics-pane").setAttribute("hidden", "true");
 			}
