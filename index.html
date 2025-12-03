@@ -8,7 +8,8 @@
 		<meta http-equiv="Expires" content="-1">
 		<meta http-equiv="Pragma" content="no-cache">
 		<meta http-equiv="Cache-Control" content="no-cache">
-		<meta charset="UTF-8" />
+		<!-- Content Security Policy: XSS 방지 -->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://pagead2.googlesyndication.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://www.google.com; frame-src https://www.google.com;">
 		<link rel="icon" type="image/x-icon" href="/resources/img/favicon.ico" />
 		<title>GoldBigDragon</title>
 		<link rel="stylesheet" href="/resources/vendor/fontawesome-free/css/all.min.css" />
@@ -18,82 +19,96 @@
 	</head>
 	<body>
 		<div class="row" id="header"></div>
-		<div class="row" style="margin-top:6rem; margin-bottom:1rem; display:flex; justify-content: center; align-items: flex-start;">
+		<main class="row" style="margin-top:6rem; margin-bottom:1rem; display:flex; justify-content: center; align-items: flex-start;">
 			<div class="col-1"></div>
 			<div class="col" id="contents">
-				<div class="row" style="display:flex;justify-content:center;align-items:center;margin-bottom: 2rem;">
+				<!-- 접근성: 프로필 섹션 -->
+				<section class="row" style="display:flex;justify-content:center;align-items:center;margin-bottom: 2rem;" role="region" aria-labelledby="profile-heading">
+					<h1 id="profile-heading" class="visually-hidden">Profile Information</h1>
 					<div class="col center" style="max-width: 20rem;">
-						<div class="hover-text lang" data-lang-var="INDEX_LANG" data-lang="logo-description">Oriental<br>Dragon<br>Shape</div>
-						<img id="profile-image" src="/resources/img/index/profile-image.png"></img>
+						<div class="hover-text lang" data-lang-var="INDEX_LANG" data-lang="logo-description" aria-hidden="true">Oriental<br>Dragon<br>Shape</div>
+						<img id="profile-image" src="/resources/img/index/profile-image.png" alt="GoldBigDragon profile image" loading="lazy">
 					</div>
 					<div class="col" style="min-width: 16rem;display: flex;align-items: center;">
-						<div style="width: 100%;">
-							<div class="row mb-3">
+						<div style="width: 100%;" role="list" aria-label="Profile details">
+							<div class="row mb-3" role="listitem">
 								<div class="col-3 lang dim-text center" data-lang-var="INDEX_LANG" data-lang="name">
-									<i class="fa-solid fa-tags"></i>&nbsp;Name:
+									<i class="fa-solid fa-tags" aria-hidden="true"></i>&nbsp;Name:
 								</div>
 								<div class="col lang bold-text left" data-lang-var="INDEX_LANG" data-lang="name-value">
 									TaeRyong Kim
 								</div>
 							</div>
-							<div class="row mb-3">
+							<div class="row mb-3" role="listitem">
 								<div class="col-3 lang dim-text center" data-lang-var="INDEX_LANG" data-lang="country">
-									<i class="fa-solid fa-globe"></i>&nbsp;Country:
+									<i class="fa-solid fa-globe" aria-hidden="true"></i>&nbsp;Country:
 								</div>
 								<div class="col lang bold-text left" data-lang-var="INDEX_LANG" data-lang="country-value">
 									South Korea
 								</div>
 							</div>
-							<div class="row mb-3">
+							<div class="row mb-3" role="listitem">
 								<div class="col-3 lang dim-text center" data-lang-var="INDEX_LANG" data-lang="contact">
-									<i class="fa-solid fa-envelope"></i>&nbsp;Contact:
+									<i class="fa-solid fa-envelope" aria-hidden="true"></i>&nbsp;Contact:
 								</div>
 								<div class="col bold-text left">
-									<a class="btn btn-dark btn-social" aria-label="E-mail" href="mailto:dnwndugod642@naver.com"><i class="fa fa-envelope"></i></a>
+									<a class="btn btn-dark btn-social" aria-label="Send email to dnwndugod642@naver.com" href="mailto:dnwndugod642@naver.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="career">
-					<i class="fa-solid fa-building"></i>&nbsp;Career
-				</div>
-				<div class="row category">
-					<div class="badge-box">
-						<div id='career-badge-area' class="row badge-area">
+				</section>
+				<!-- 접근성: Career 섹션 -->
+				<section role="region" aria-labelledby="career-heading">
+					<h2 id="career-heading" class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="career">
+						<i class="fa-solid fa-building" aria-hidden="true"></i>&nbsp;Career
+					</h2>
+					<div class="row category">
+						<div class="badge-box">
+							<div id='career-badge-area' class="row badge-area" role="list" aria-label="Career badges">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="education">
-					<i class="fa-solid fa-graduation-cap"></i>&nbsp;Education
-				</div>
-				<div class="row category">
-					<div class="badge-box">
-						<div id='education-badge-area' class="row badge-area">
+				</section>
+				<!-- 접근성: Education 섹션 -->
+				<section role="region" aria-labelledby="education-heading">
+					<h2 id="education-heading" class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="education">
+						<i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>&nbsp;Education
+					</h2>
+					<div class="row category">
+						<div class="badge-box">
+							<div id='education-badge-area' class="row badge-area" role="list" aria-label="Education badges">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="certificate">
-					<i class='fa-solid fa-award'></i>&nbsp;Certificate
-				</div>
-				<div class="row category">
-					<div class="badge-box">
-						<div id='certificate-badge-area' class="row badge-area">
+				</section>
+				<!-- 접근성: Certificate 섹션 -->
+				<section role="region" aria-labelledby="certificate-heading">
+					<h2 id="certificate-heading" class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="certificate">
+						<i class='fa-solid fa-award' aria-hidden="true"></i>&nbsp;Certificate
+					</h2>
+					<div class="row category">
+						<div class="badge-box">
+							<div id='certificate-badge-area' class="row badge-area" role="list" aria-label="Certificate badges">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="etc">
-					<i class="fa-solid fa-trophy"></i>&nbsp;ETC
-				</div>
-				<div class="row category">
-					<div class="badge-box">
-						<div id='etc-badge-area' class="row badge-area">
+				</section>
+				<!-- 접근성: ETC 섹션 -->
+				<section role="region" aria-labelledby="etc-heading">
+					<h2 id="etc-heading" class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="etc">
+						<i class="fa-solid fa-trophy" aria-hidden="true"></i>&nbsp;ETC
+					</h2>
+					<div class="row category">
+						<div class="badge-box">
+							<div id='etc-badge-area' class="row badge-area" role="list" aria-label="Achievement badges">
+							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
 			<div class="col-1"></div>
-		</div>
+		</main>
 		<div class="modal fade" id="badgeDetailModal" tabindex="-1" role="dialog" aria-modal="true">
 			<div class="modal-dialog modal-xl">
 				<div class="modal-content">
@@ -122,6 +137,7 @@
 	<script src="/resources/vendor/bootstrap/bootstrap.5.1.3.bundle.min.js"></script>
 	
 	<script src="/resources/js/basic.js"></script>
+	<script src="/resources/js/utils/navbar.js"></script>
 	<script src="/resources/lang/index.js"></script>
 	<script src="/resources/data/index/career.js"></script>
 	<script src="/resources/data/index/education.js"></script>

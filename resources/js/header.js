@@ -1,29 +1,8 @@
-window.addEventListener('DOMContentLoaded', event => {
-	const navbarShrink = function() {
-		const navbarCollapsible = document.body.querySelector('#mainNav');
-		if (!navbarCollapsible) {
-			return;
-		}
-		if (window.scrollY === 0) {
-			navbarCollapsible.classList.remove('navbar-shrink')
-		} else {
-			navbarCollapsible.classList.add('navbar-shrink')
-		}
-	};
-	navbarShrink();
-	document.addEventListener('scroll', navbarShrink);
-	const navbarToggler = document.body.querySelector('.navbar-toggler');
-	const responsiveNavItems = [].slice.call(
-		document.querySelectorAll('#navbarResponsive .nav-link')
-	);
-	responsiveNavItems.map(function(responsiveNavItem) {
-		responsiveNavItem.addEventListener('click', () => {
-			if (window.getComputedStyle(navbarToggler).display !== 'none') {
-				navbarToggler.click();
-			}
-		});
-	});
-});
+/**
+ * Header 스크립트
+ * 언어 선택 및 변경 기능
+ * Navbar 초기화는 navbar.js에서 처리
+ */
 
 function checkLanguage(){
 	let nowLang = getCookie("lang");

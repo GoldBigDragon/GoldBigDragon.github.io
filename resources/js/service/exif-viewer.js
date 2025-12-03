@@ -1,35 +1,6 @@
 /*
-	Toast utility
+	Toast 유틸리티는 /resources/js/utils/toast.js에서 로드됨
 */
-let toastId = 0;
-
-function removeToast(toastId) {
-	const toast = document.getElementById("toast-" + toastId);
-	const toastContainer = document.getElementById("toastContainer");
-	if (toastContainer.contains(toast)) {
-		toastContainer.removeChild(toast);
-	}
-}
-
-function showToast(message) {
-	const toastContainer = document.getElementById("toastContainer");
-	const toast = document.createElement("div");
-	toast.id = "toast-" + toastId;
-	toast.setAttribute("onClick", "removeToast(" + toastId + ")");
-	toastId = toastId + 1;
-	toast.className = "toast show";
-	toast.textContent = message;
-
-	toastContainer.appendChild(toast);
-	setTimeout(() => {
-		toast.classList.add("fade-out");
-		setTimeout(() => {
-			if (toastContainer.contains(toast)) {
-				toastContainer.removeChild(toast);
-			}
-		}, 3000); // Wait until fade-out animation end
-	}, 3000); // Start fade-out after 3 seconds
-}
 
 /*
 	File drag&drop upload handler

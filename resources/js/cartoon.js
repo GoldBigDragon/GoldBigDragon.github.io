@@ -1,13 +1,156 @@
 LANGUAGE_OBJECT["COVER_LANG"] = {};
+
+/**
+ * 만화 읽기 상태 관리
+ */
 let NOW_CARTOON_INDEX = 0;
 
-function addCover(coverArea, coverData, index){
+// 접근성: 포커스 관리
+let lastFocusedElement = null;
+
+/**
+ * 페이지 렌더링 헬퍼 함수 (코드 중복 제거)
+ * 성능 최적화: 중복 코드 제거
+ */
+function renderPage(pageIndex, pages, cartoonUID) {
+	const pageInt = parseInt(pageIndex);
+	const pageArea = document.getElementById("pageArea");
+	const title = document.getElementById("title");
+	const createdAt = document.getElementById("createdAt");
+	const pageInput = document.getElementById("page-input");
+	const pageSelector = document.getElementById("page-selector");
+
+	// XSS 방지: textContent 사용
+	pageInput.value = (pageInt + 1);
+	pageArea.innerHTML = null;
+
+	// 이전 페이지 버튼
+	const prevPage = document.createElement("div");
+	prevPage.className = "page-mover prev-page";
+	prevPage.innerHTML = "<i class='fa-solid fa-chevron-left'></i>";
+	prevPage.setAttribute("role", "button");
+	prevPage.setAttribute("tabindex", "0");
+	prevPage.setAttribute("aria-label", "Previous page");
+
+	if(pageInt > 0) {
+		const handlePrevPage = function() {
+			goPage(pageInt - 1, false);
+		};
+		prevPage.addEventListener('click', handlePrevPage);
+		prevPage.addEventListener('keydown', function(e) {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				handlePrevPage();
+			}
+		});
+	} else {
+		prevPage.style.cursor = 'not-allowed';
+		prevPage.setAttribute("aria-disabled", "true");
+	}
+
+	// 다음 페이지 버튼
+	const nextPage = document.createElement("div");
+	nextPage.className = "page-mover next-page";
+	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
+	nextPage.setAttribute("role", "button");
+	nextPage.setAttribute("tabindex", "0");
+	nextPage.setAttribute("aria-label", "Next page");
+
+	if(pageInt < pages.length - 1) {
+		const handleNextPage = function() {
+			goPage(pageInt + 1, false);
+		};
+		nextPage.addEventListener('click', handleNextPage);
+		nextPage.addEventListener('keydown', function(e) {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				handleNextPage();
+			}
+		});
+	} else {
+		nextPage.style.cursor = 'not-allowed';
+		nextPage.setAttribute("aria-disabled", "true");
+	}
+
+	// 만화 이미지
+	const img = document.createElement("img");
+	img.className = "cartoon lang-src";
+	img.src = "/resources/img/cartoon/" + cartoonUID + "/" + NOW_LANG + "/" + pages[pageInt]["img"];
+	img.loading = "lazy"; // 성능 최적화
+	img.alt = pages[pageInt]["title"][NOW_LANG] + " - Page " + (pageInt + 1); // 접근성
+
+	LANGUAGE_OBJECT["COVER_LANG"]["NOW_PAGE"] = {
+		"en": "/resources/img/cartoon/" + cartoonUID + "/en/" + pages[pageInt]["img"],
+		"kr": "/resources/img/cartoon/" + cartoonUID + "/kr/" + pages[pageInt]["img"],
+		"jp": "/resources/img/cartoon/" + cartoonUID + "/jp/" + pages[pageInt]["img"],
+		"cn": "/resources/img/cartoon/" + cartoonUID + "/cn/" + pages[pageInt]["img"],
+		"ru": "/resources/img/cartoon/" + cartoonUID + "/ru/" + pages[pageInt]["img"]
+	};
+	img.setAttribute("data-lang-var", "COVER_LANG");
+	img.setAttribute("data-lang", "NOW_PAGE");
+
+	// XSS 방지: textContent 사용
+	title.textContent = pages[pageInt]["title"][NOW_LANG];
+	createdAt.textContent = pages[pageInt]["created-at"];
+	LANGUAGE_OBJECT["COVER_LANG"]["TITLE"] = pages[pageInt]["title"];
+
+	// 배경색 설정
+	if("background-color" in pages[pageInt]) {
+		pageArea.style.backgroundColor = pages[pageInt]["background-color"];
+		pageArea.style.boxShadow = "0px 0px 10px " + pages[pageInt]["background-color"];
+	} else {
+		pageArea.style.backgroundColor = "white";
+		pageArea.style.boxShadow = "0px 0px 10px white";
+	}
+
+	// 페이지 셀렉터 업데이트
+	if(pageSelector && pageSelector.children.length > 0) {
+		pageSelector.children[pageSelector.children.length - (pageInt + 1)].selected = true;
+	}
+
+	// DOM에 추가
+	pageArea.appendChild(prevPage);
+	pageArea.appendChild(img);
+	pageArea.appendChild(nextPage);
+}
+
+/**
+ * 만화 표지 추가 함수
+ * 성능 최적화: 이미지 lazy loading 적용
+ * 접근성: role, tabindex, aria-label 추가
+ */
+function addCover(targetArea, coverData, index){
 	const cover = document.createElement("div");
 	cover.className = "cover col";
-	cover.setAttribute("onClick", "readCartoon(" + index + ")");
+
+	// 접근성: role 및 tabindex 추가
+	cover.setAttribute("role", "button");
+	cover.setAttribute("tabindex", "0");
+	cover.setAttribute("aria-label", `Read ${coverData["title"]["en"]}`);
+
+	// XSS 방지: onClick 속성 대신 addEventListener 사용
+	const handleCoverClick = function() {
+		readCartoon(index);
+	};
+
+	cover.addEventListener('click', handleCoverClick);
+
+	// 접근성: 키보드 네비게이션 (Enter/Space)
+	cover.addEventListener('keydown', function(e) {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			handleCoverClick();
+		}
+	});
+
 	const coverImage = document.createElement("img");
 	coverImage.className = "book-cover lang-src";
-	coverImage.src = "/resources/img/cartoon/"+coverData["uid"]+"/" + [NOW_LANG]+"/cover.png";
+	coverImage.src = "/resources/img/cartoon/"+coverData["uid"]+"/" + NOW_LANG+"/cover.png";
+	// 성능 최적화: lazy loading 적용
+	coverImage.loading = "lazy";
+	// 접근성: alt 속성 추가
+	coverImage.alt = coverData["title"]["en"] + " cover";
+
 	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]+"-cover"] = {
 		"en": "/resources/img/cartoon/"+coverData["uid"]+"/en/cover.png",
 		"kr": "/resources/img/cartoon/"+coverData["uid"]+"/kr/cover.png",
@@ -17,26 +160,36 @@ function addCover(coverArea, coverData, index){
 	};
 	coverImage.setAttribute("data-lang-var", "COVER_LANG");
 	coverImage.setAttribute("data-lang", coverData["uid"]+"-cover");
+
 	const coverTitle = document.createElement("div");
 	coverTitle.className = "book-title lang";
-	coverTitle.innerHTML = coverData["title"][NOW_LANG];
+	// XSS 방지: textContent 사용
+	coverTitle.textContent = coverData["title"][NOW_LANG];
 	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]] = coverData["title"];
 	coverTitle.setAttribute("data-lang-var", "COVER_LANG");
 	coverTitle.setAttribute("data-lang", coverData["uid"]);
+
 	const translating = document.createElement("div");
 	translating.className = "book-translating lang";
-	translating.innerHTML = coverData["translating"][NOW_LANG];
+	// XSS 방지: textContent 사용
+	translating.textContent = coverData["translating"][NOW_LANG];
 	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]+"-translating"] = coverData["translating"];
 	translating.setAttribute("data-lang-var", "COVER_LANG");
 	translating.setAttribute("data-lang", coverData["uid"]+"-translating");
-	
+
 	cover.appendChild(coverImage);
 	cover.appendChild(coverTitle);
 	cover.appendChild(translating);
-	coverArea.appendChild(cover);
+	targetArea.appendChild(cover);
 }
 
+/**
+ * 만화 읽기 시작
+ */
 function readCartoon(cartoonIndex){
+	// 접근성: 모달 열기 전 현재 포커스 요소 저장
+	lastFocusedElement = document.activeElement;
+
 	NOW_CARTOON_INDEX = cartoonIndex;
 	const book = document.getElementById("book");
 	book.removeAttribute("hidden");
@@ -44,24 +197,22 @@ function readCartoon(cartoonIndex){
 	backButton.removeAttribute("hidden");
 	const coverArea = document.getElementById("coverArea");
 	coverArea.setAttribute("hidden", "true");
-	
+
 	const pages = CARTOON_LIST[cartoonIndex]["pages"];
 	const pageSelector = document.getElementById("page-selector");
-	const title = document.getElementById("title");
-	const createdAt = document.getElementById("createdAt");
-	const pageInput = document.getElementById("page-input");
 	const maxPage = document.getElementById("max-page");
-	const pageArea = document.getElementById("pageArea");
-	
+
 	const maxPageValue = pages.length;
-	pageArea.innerHTML = null;
 	pageSelector.innerHTML = null;
-	let pageIndex = 0;
-	for(pageIndex = maxPageValue-1; pageIndex >= 0; pageIndex --) {
+
+	// 성능 최적화: DocumentFragment 사용
+	const fragment = document.createDocumentFragment();
+	for(let pageIndex = maxPageValue - 1; pageIndex >= 0; pageIndex--) {
 		const optionElement = document.createElement("option");
 		optionElement.className = "lang";
 		optionElement.value = pageIndex;
-		optionElement.innerText = (pageIndex+1) + ". " + pages[pageIndex]["title"][NOW_LANG];
+		// XSS 방지: textContent 사용
+		optionElement.textContent = (pageIndex+1) + ". " + pages[pageIndex]["title"][NOW_LANG];
 		LANGUAGE_OBJECT["COVER_LANG"][CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex] = {
 			"en": (pageIndex+1) + ". " + pages[pageIndex]["title"]["en"],
 			"kr": (pageIndex+1) + ". " + pages[pageIndex]["title"]["kr"],
@@ -71,49 +222,31 @@ function readCartoon(cartoonIndex){
 		};
 		optionElement.setAttribute("data-lang-var", "COVER_LANG");
 		optionElement.setAttribute("data-lang", CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex);
-		pageSelector.appendChild(optionElement);
+		fragment.appendChild(optionElement);
 	}
-	pageInput.value = maxPageValue;
-	maxPage.innerText = maxPageValue;
-	
-	const img = document.createElement("img");
-	img.className = "cartoon lang-src";
-	img.src = "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/" + NOW_LANG + "/" + pages[maxPageValue - 1]["img"];
-	LANGUAGE_OBJECT["COVER_LANG"]["NOW_PAGE"] = {
-		"en": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/en/" + pages[maxPageValue - 1]["img"],
-		"kr": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/kr/" + pages[maxPageValue - 1]["img"],
-		"jp": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/jp/" + pages[maxPageValue - 1]["img"],
-		"cn": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/cn/" + pages[maxPageValue - 1]["img"],
-		"ru": "/resources/img/cartoon/" + CARTOON_LIST[cartoonIndex]["uid"] + "/ru/" + pages[maxPageValue - 1]["img"]
-	};
-	img.setAttribute("data-lang-var", "COVER_LANG");
-	img.setAttribute("data-lang", "NOW_PAGE");
-	
-	title.innerHTML = pages[maxPageValue - 1]["title"][NOW_LANG];
-	createdAt.innerHTML = pages[maxPageValue - 1]["created-at"];
-	LANGUAGE_OBJECT["COVER_LANG"]["TITLE"] = pages[maxPageValue - 1]["title"];
-	
-	const prevPage = document.createElement("div");
-	prevPage.className = "page-mover prev-page";
-	prevPage.innerHTML = "<i class='fa-solid fa-chevron-left'></i>";
-	prevPage.setAttribute("onClick", "goPage(" + (maxPageValue - 2) + ", false)");
-	const nextPage = document.createElement("div");
-	nextPage.className = "page-mover next-page";
-	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
-	
-	if("background-color" in pages[maxPageValue - 1]) {
-		pageArea.style.backgroundColor = pages[maxPageValue - 1]["background-color"];
-		pageArea.style.boxShadow = "0px 0px 10px " + pages[maxPageValue - 1]["background-color"];
-	} else {
-		pageArea.style.backgroundColor = "white";
-		pageArea.style.boxShadow = "0px 0px 10px white";
-	}
-	
-	pageArea.appendChild(prevPage);
-	pageArea.appendChild(img);
-	pageArea.appendChild(nextPage);
+	pageSelector.appendChild(fragment);
+
+	// XSS 방지: textContent 사용
+	maxPage.textContent = maxPageValue;
+
+	// 마지막 페이지 렌더링
+	renderPage(maxPageValue - 1, pages, CARTOON_LIST[cartoonIndex]["uid"]);
+
+	// 접근성: 책 섹션으로 포커스 이동
+	setTimeout(() => {
+		const bookSection = document.getElementById("book");
+		const focusableElements = bookSection.querySelectorAll(
+			'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+		);
+		if (focusableElements.length > 0) {
+			focusableElements[0].focus();
+		}
+	}, 100);
 }
 
+/**
+ * 만화 목록으로 돌아가기
+ */
 function backToCartoonList() {
 	const book = document.getElementById("book");
 	book.setAttribute("hidden", "true");
@@ -121,87 +254,115 @@ function backToCartoonList() {
 	backButton.setAttribute("hidden", "true");
 	const coverArea = document.getElementById("coverArea");
 	coverArea.removeAttribute("hidden");
-}
 
-function pageInputEnter() {
-	if (window.event.keyCode == 13) {
-		const pageInput = document.getElementById("page-input");
-		goPage(pageInput.value - 1, false);
+	// 접근성: 포커스 복원
+	if (lastFocusedElement) {
+		lastFocusedElement.focus();
+		lastFocusedElement = null;
 	}
 }
 
-function pageMove() {
-	const pageInput = document.getElementById("page-input");
-	goPage(pageInput.value - 1, false);
-}
+/**
+ * 페이지 이동
+ */
+function goPage(page, isSelected = false) {
+	let pageInt = parseInt(page);
+	const maxPageIndex = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1;
 
-function goPage(page, isSelected) {
-	const pageInt = parseInt(page);
+	// 페이지 범위 검증
 	if(pageInt < 0) {
 		pageInt = 0;
 	}
-	if(pageInt > CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1) {
-		pageInt = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1;
+	if(pageInt > maxPageIndex) {
+		pageInt = maxPageIndex;
 	}
-	if( ! isSelected){
-		const pageSelector = document.getElementById("page-selector");
-		pageSelector.children[pageSelector.children.length - (pageInt+1)].selected = true;
-	}
-	
+
 	const pages = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"];
+	renderPage(pageInt, pages, CARTOON_LIST[NOW_CARTOON_INDEX]["uid"]);
+}
+
+/**
+ * 초기화 및 이벤트 리스너 설정
+ */
+document.addEventListener('DOMContentLoaded', function() {
+	const coverArea = document.getElementById("coverArea");
+
+	// 성능 최적화: DocumentFragment 사용하여 표지 목록 렌더링
+	if(CARTOON_LIST && coverArea){
+		const fragment = document.createDocumentFragment();
+		const tempArea = document.createElement('div');
+		tempArea.className = 'row';
+		for(let index = 0; index < CARTOON_LIST.length; index++) {
+			addCover(tempArea, CARTOON_LIST[index], index);
+		}
+		coverArea.appendChild(tempArea);
+	}
+
+	// 뒤로가기 버튼 이벤트 리스너
+	const backButton = document.getElementById("button-back");
+	if(backButton) {
+		backButton.addEventListener('click', backToCartoonList);
+	}
+
+	// 페이지 셀렉터 이벤트 리스너
+	const pageSelector = document.getElementById("page-selector");
+	if(pageSelector) {
+		pageSelector.addEventListener('change', function() {
+			goPage(this.value, true);
+		});
+	}
+
+	// 페이지 입력 이벤트 리스너
 	const pageInput = document.getElementById("page-input");
-	pageInput.value = (parseInt(pageInt) + 1);
-	const pageArea = document.getElementById("pageArea");
-	pageArea.innerHTML = null;
-	
-	const prevPage = document.createElement("div");
-	prevPage.className = "page-mover prev-page";
-	prevPage.innerHTML = "<i class='fa-solid fa-chevron-left'></i>";
-	if(pageInt > 0) {
-		prevPage.setAttribute("onClick", "goPage(" + (pageInt - 1) + ")");
+	if(pageInput) {
+		pageInput.addEventListener('keydown', function(e) {
+			if (e.key === 'Enter') {
+				e.preventDefault();
+				goPage(this.value - 1, false);
+			}
+		});
 	}
-	const nextPage = document.createElement("div");
-	nextPage.className = "page-mover next-page";
-	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
-	if(pageInt < pages.length -1){
-		nextPage.setAttribute("onClick", "goPage(" + (pageInt + 1) + ")");
-	}
-	
-	const img = document.createElement("img");
-	img.className = "cartoon lang-src";
-	img.src = "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/" + NOW_LANG + "/" + pages[pageInt]["img"];
-	LANGUAGE_OBJECT["COVER_LANG"]["NOW_PAGE"] = {
-		"en": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/en/" + pages[pageInt]["img"],
-		"kr": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/kr/" + pages[pageInt]["img"],
-		"jp": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/jp/" + pages[pageInt]["img"],
-		"cn": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/cn/" + pages[pageInt]["img"],
-		"ru": "/resources/img/cartoon/" + CARTOON_LIST[NOW_CARTOON_INDEX]["uid"] + "/ru/" + pages[pageInt]["img"]
-	};
-	img.setAttribute("data-lang-var", "COVER_LANG");
-	img.setAttribute("data-lang", "NOW_PAGE");
-	
-	title.innerHTML = pages[pageInt]["title"][NOW_LANG];
-	createdAt.innerHTML = pages[pageInt]["created-at"];
-	LANGUAGE_OBJECT["COVER_LANG"]["TITLE"] = pages[pageInt]["title"];
-	
-	if("background-color" in pages[pageInt]) {
-		pageArea.style.backgroundColor = pages[pageInt]["background-color"];
-		pageArea.style.boxShadow = "0px 0px 10px " + pages[pageInt]["background-color"];
-	} else {
-		pageArea.style.backgroundColor = "white";
-		pageArea.style.boxShadow = "0px 0px 10px white";
-	}
-	
-	pageArea.appendChild(prevPage);
-	pageArea.appendChild(img);
-	pageArea.appendChild(nextPage);
-}
 
-
-const coverArea = document.getElementById("coverArea");
-if(CARTOON_LIST){
-	let index = 0;
-	for(index = 0; index < CARTOON_LIST.length; index ++) {
-		addCover(coverArea, CARTOON_LIST[index], index);
+	// 페이지 이동 버튼 이벤트 리스너
+	const pageMoveButton = document.getElementById("page-move-button");
+	if(pageMoveButton) {
+		pageMoveButton.addEventListener('click', function() {
+			const pageInput = document.getElementById("page-input");
+			goPage(pageInput.value - 1, false);
+		});
 	}
-}
+
+	// 접근성: 키보드 네비게이션 (화살표 키로 페이지 이동)
+	document.addEventListener('keydown', function(e) {
+		const book = document.getElementById("book");
+
+		// 책을 읽고 있을 때만 화살표 키 네비게이션 활성화
+		if(book && !book.hasAttribute('hidden')) {
+			// 입력 필드에 포커스가 있을 때는 화살표 키 비활성화
+			if(document.activeElement.tagName === 'INPUT' ||
+			   document.activeElement.tagName === 'SELECT') {
+				return;
+			}
+
+			if (e.key === 'ArrowLeft') {
+				e.preventDefault();
+				const pageInput = document.getElementById("page-input");
+				const currentPage = parseInt(pageInput.value) - 1;
+				if(currentPage > 0) {
+					goPage(currentPage - 1, false);
+				}
+			} else if (e.key === 'ArrowRight') {
+				e.preventDefault();
+				const pageInput = document.getElementById("page-input");
+				const maxPage = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length;
+				const currentPage = parseInt(pageInput.value) - 1;
+				if(currentPage < maxPage - 1) {
+					goPage(currentPage + 1, false);
+				}
+			} else if (e.key === 'Escape') {
+				e.preventDefault();
+				backToCartoonList();
+			}
+		}
+	});
+});
