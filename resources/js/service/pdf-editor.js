@@ -18,7 +18,7 @@ function showToast(message) {
 	toast.setAttribute("onClick", "removeToast(" + toastId + ")");
 	toastId = toastId + 1;
 	toast.className = "toast show";
-	toast.textContent = message;
+	toast.innerHTML = message;
 
 	toastContainer.appendChild(toast);
 	setTimeout(() => {

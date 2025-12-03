@@ -21,7 +21,7 @@ function stopMusic(){
 	const playButton2 = document.getElementById("player-music-play-button2");
 	playButton2.className = "fa-solid fa-play control-button";
 	const musicTitle = document.getElementById("player-music-title");
-	musicTitle.textContent = " ";
+	musicTitle.innerHTML = " ";
 	const progressBar = document.getElementById("progress");
 	progressBar.style.width = "0%";
 	const currentTime = document.getElementById("current-time");
@@ -90,8 +90,7 @@ function playMusic(){
 			playButton2.className = "fa-solid fa-play control-button";
 		}
 		const musicTitle = document.getElementById("player-music-title");
-		// XSS 방지: textContent 사용
-		musicTitle.textContent = MUSIC_LIST[musicIndex]["title"][NOW_LANG];
+		musicTitle.innerHTML = MUSIC_LIST[musicIndex]["title"][NOW_LANG];
 		LANGUAGE_OBJECT["MUSIC_LANG"]["NOW-PLAYING-MUSIC"] = MUSIC_LIST[musicIndex]["title"];
 		NOW_PLAY_MUSIC_TITLE = MUSIC_LIST[musicIndex]['title']['en'];
 		if(NOW_PLAY_PLAYLIST_TITLE != null){
@@ -208,8 +207,7 @@ function addMusic(musicArea, musicData, index){
 	titlePane.className = "col music-title-pane";
 	const title = document.createElement("div");
 	title.className = "row music-title lang";
-	// XSS 방지: textContent 사용
-	title.textContent = musicData["title"][NOW_LANG];
+	title.innerHTML = musicData["title"][NOW_LANG];
 	// XSS 방지: addEventListener 사용
 	title.addEventListener('click', function() {
 		showDetails(musicData["title"]['en']);
@@ -236,7 +234,7 @@ function addMusic(musicArea, musicData, index){
 	for(index2 = 0; index2 < musicData["tag"].length; index2 ++) {
 		const tag = document.createElement("div");
 		tag.className = "tag";
-		tag.textContent = musicData["tag"][index2];
+		tag.innerHTML = musicData["tag"][index2];
 		// XSS 방지: addEventListener 사용
 		(function(tagValue) {
 			tag.addEventListener('click', function() {
@@ -386,7 +384,7 @@ function searchMusic(){
 
 		// 접근성: 검색 결과 개수 알림
 		if (resultsStatus) {
-			resultsStatus.textContent = `Found ${resultCount} music ${resultCount === 1 ? 'track' : 'tracks'}`;
+			resultsStatus.innerHTML = `Found ${resultCount} music ${resultCount === 1 ? 'track' : 'tracks'}`;
 		}
 	}, 100); // 100ms 지연으로 UI 블로킹 방지
 }
@@ -448,8 +446,7 @@ function addPlaylist(musicArea, playlistData, index){
 	titlePane.className = "col music-title-pane";
 	const title = document.createElement("div");
 	title.className = "row music-title lang";
-	// XSS 방지: textContent 사용
-	title.textContent = playlistData["title"][NOW_LANG];
+	title.innerHTML = playlistData["title"][NOW_LANG];
 	// XSS 방지: addEventListener 사용
 	title.addEventListener('click', function() {
 		setSearchMusicPlaylistValue(playlistData["title"][NOW_LANG]);
@@ -460,8 +457,7 @@ function addPlaylist(musicArea, playlistData, index){
 	title.setAttribute("data-lang", playlistData["title"]["en"]+"-title");
 	const description = document.createElement("div");
 	description.className = "row music-description lang";
-	// XSS 방지: textContent 사용
-	description.textContent = playlistData["description"][NOW_LANG];
+	description.innerHTML = playlistData["description"][NOW_LANG];
 	LANGUAGE_OBJECT["MUSIC_LANG"][playlistData["description"]["en"]+"-description"] = playlistData["description"];
 	description.setAttribute("data-lang-var", "MUSIC_LANG");
 	description.setAttribute("data-lang", playlistData["description"]["en"]+"-description");
@@ -471,7 +467,7 @@ function addPlaylist(musicArea, playlistData, index){
 	for(index2 = 0; index2 < playlistData["tag"].length; index2 ++) {
 		const tag = document.createElement("div");
 		tag.className = "tag";
-		tag.textContent = playlistData["tag"][index2];
+		tag.innerHTML = playlistData["tag"][index2];
 		// XSS 방지: addEventListener 사용
 		(function(tagValue) {
 			tag.addEventListener('click', function() {
@@ -552,7 +548,7 @@ function searchPlaylist(){
 
 		// 접근성: 검색 결과 개수 알림
 		if (resultsStatus) {
-			resultsStatus.textContent = `Found ${resultCount} ${resultCount === 1 ? 'playlist' : 'playlists'}`;
+			resultsStatus.innerHTML = `Found ${resultCount} ${resultCount === 1 ? 'playlist' : 'playlists'}`;
 		}
 	}, 100); // 100ms 지연으로 UI 블로킹 방지
 }
@@ -647,7 +643,7 @@ function updateProgress() {
 
 		if (progressBar && currentTime && audio.duration) {
 			progressBar.style.width = (audio.currentTime / audio.duration * 100) + "%";
-			currentTime.textContent = getTimeCodeFromNum(audio.currentTime);
+			currentTime.innerHTML = getTimeCodeFromNum(audio.currentTime);
 		}
 
 		// 다음 프레임에서 다시 호출
@@ -738,16 +734,15 @@ function showDetails(musicName){
 	for(let musicIndex = 0; musicIndex < MUSIC_LIST.length; musicIndex ++) {
 		if(MUSIC_LIST[musicIndex]["title"]["en"] == musicName){
 			document.getElementById("music-details-image").src = MUSIC_LIST[musicIndex]["image"];
-			// XSS 방지: textContent 사용
-			document.getElementById("music-details-title").textContent = MUSIC_LIST[musicIndex]["title"][NOW_LANG];
+			document.getElementById("music-details-title").innerHTML = MUSIC_LIST[musicIndex]["title"][NOW_LANG];
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("lyrics")){
 				document.getElementById("music-details-lyrics-pane").removeAttribute("hidden");
 				document.getElementById("music-details-lyrics").innerHTML = MUSIC_LIST[musicIndex]["lyrics"][NOW_LANG];
 			} else {
 				document.getElementById("music-details-lyrics-pane").setAttribute("hidden", "true");
 			}
-			document.getElementById("music-details-composed-at").textContent = MUSIC_LIST[musicIndex]["composed-at"];
-			document.getElementById("music-details-composed-with").textContent = MUSIC_LIST[musicIndex]["composed-with"];
+			document.getElementById("music-details-composed-at").innerHTML = MUSIC_LIST[musicIndex]["composed-at"];
+			document.getElementById("music-details-composed-with").innerHTML = MUSIC_LIST[musicIndex]["composed-with"];
 
 			if(CREATED_WITH[MUSIC_LIST[musicIndex]["composed-with"]].hasOwnProperty("profile")) {
 				document.getElementById("music-details-composed-with").href = CREATED_WITH[MUSIC_LIST[musicIndex]["composed-with"]]["profile"];
@@ -756,33 +751,32 @@ function showDetails(musicName){
 			}
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("instrumentation")){
 				document.getElementById("music-details-instrumentation-pane").removeAttribute("hidden");
-				document.getElementById("music-details-instrumentation").textContent = MUSIC_LIST[musicIndex]["instrumentation"];
+				document.getElementById("music-details-instrumentation").innerHTML = MUSIC_LIST[musicIndex]["instrumentation"];
 			} else {
 				document.getElementById("music-details-instrumentation-pane").setAttribute("hidden", "true");
 			}
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("key")){
 				document.getElementById("music-details-key-pane").removeAttribute("hidden");
-				document.getElementById("music-details-key").textContent = MUSIC_LIST[musicIndex]["key"];
+				document.getElementById("music-details-key").innerHTML = MUSIC_LIST[musicIndex]["key"];
 			} else {
 				document.getElementById("music-details-key-pane").setAttribute("hidden", "true");
 			}
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("tempo")){
 				document.getElementById("music-details-tempo-pane").removeAttribute("hidden");
-				document.getElementById("music-details-tempo").textContent = MUSIC_LIST[musicIndex]["tempo"];
+				document.getElementById("music-details-tempo").innerHTML = MUSIC_LIST[musicIndex]["tempo"];
 			} else {
 				document.getElementById("music-details-tempo-pane").setAttribute("hidden", "true");
 			}
 			if(MUSIC_LIST[musicIndex].hasOwnProperty("meter")){
 				document.getElementById("music-details-meter-pane").removeAttribute("hidden");
-				document.getElementById("music-details-meter").textContent = MUSIC_LIST[musicIndex]["meter"];
+				document.getElementById("music-details-meter").innerHTML = MUSIC_LIST[musicIndex]["meter"];
 			} else {
 				document.getElementById("music-details-meter-pane").setAttribute("hidden", "true");
 			}
-			document.getElementById("music-details-duration").textContent = MUSIC_LIST[musicIndex]["duration"] + "/s";
+			document.getElementById("music-details-duration").innerHTML = MUSIC_LIST[musicIndex]["duration"] + "/s";
 
 			const tagPane = document.getElementById("music-details-tag");
-			// XSS 방지: textContent 사용
-			tagPane.textContent = MUSIC_LIST[musicIndex]["tag"].join(', ');
+			tagPane.innerHTML = MUSIC_LIST[musicIndex]["tag"].join(', ');
 			const mp3Download = document.getElementById("download-mp3");
 			const midiDownload = document.getElementById("download-midi");
 			const wavDownload = document.getElementById("download-wav");

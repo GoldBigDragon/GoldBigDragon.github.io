@@ -1,6 +1,5 @@
 /**
  * 서비스 검색 및 표시
- * 성능 최적화, 접근성 개선, XSS 방지
  */
 
 /**
@@ -108,8 +107,7 @@ function addService(serviceArea, serviceData, index){
 
 	const title = document.createElement("a");
 	title.className = "row lang service-name";
-	// XSS 방지: textContent 사용
-	title.textContent = serviceData["name"][NOW_LANG];
+	title.innerHTML = serviceData["name"][NOW_LANG];
 	title.setAttribute("href", serviceData["url"]);
 	title.setAttribute("target", "_blank");
 	title.setAttribute("rel", "noopener noreferrer");
@@ -121,8 +119,7 @@ function addService(serviceArea, serviceData, index){
 
 	const description = document.createElement("div");
 	description.className = "row lang service-description";
-	// XSS 방지: textContent 사용
-	description.textContent = serviceData["description"][NOW_LANG];
+	description.innerHTML = serviceData["description"][NOW_LANG];
 
 	// XSS 방지: onClick 속성 대신 addEventListener 사용
 	const handleDescriptionClick = function() {
@@ -144,8 +141,7 @@ function addService(serviceArea, serviceData, index){
 	for(let tagIndex = 0; tagIndex < serviceData["tag"].length; tagIndex++) {
 		const tag = document.createElement("div");
 		tag.className = "service-tag";
-		// XSS 방지: textContent 사용
-		tag.textContent = serviceData["tag"][tagIndex];
+		tag.innerHTML = serviceData["tag"][tagIndex];
 
 		// 접근성: role 및 tabindex 추가
 		tag.setAttribute("role", "button");

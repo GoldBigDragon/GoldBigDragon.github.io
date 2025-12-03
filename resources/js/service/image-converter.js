@@ -273,12 +273,12 @@ function addDownloadLink(container, blob, fileName, sizeInKB) {
 
 	const nameCell = document.createElement("td");
 	nameCell.className = "file-name";
-	nameCell.textContent = fileName;
+	nameCell.innerHTML = fileName;
 	row.appendChild(nameCell);
 
 	const sizeCell = document.createElement("td");
 	sizeCell.className = "file-size";
-	sizeCell.textContent = `${sizeInKB} KB`;
+	sizeCell.innerHTML = `${sizeInKB} KB`;
 	row.appendChild(sizeCell);
 
 	const downloadCell = document.createElement("td");

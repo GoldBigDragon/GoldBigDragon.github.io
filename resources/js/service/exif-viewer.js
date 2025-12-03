@@ -77,11 +77,11 @@ async function handleFiles(files) {
 function toggleInfo(target, index){
 	const title = document.getElementById(target + "Title" + index);
 	const value = document.getElementById(target + "Value" + index);
-	if (title && title.textContent.includes('▼')) {
-		title.textContent = title.textContent.replace(/▼/g, '▲');
+	if (title && title.innerHTML.includes('▼')) {
+		title.innerHTML = title.innerHTML.replace(/▼/g, '▲');
 		value.style.display = "block";
 	} else {
-		title.textContent = title.textContent.replace(/▲/g, '▼');
+		title.innerHTML = title.innerHTML.replace(/▲/g, '▼');
 		value.style.display = "none";
 	}
 }
@@ -102,7 +102,7 @@ function addDownloadLink(container, blob, fileInfo) {
 
 	const nameCell = document.createElement("td");
 	nameCell.className = "file-name";
-	nameCell.textContent = fileInfo.name;
+	nameCell.innerHTML = fileInfo.name;
 	row.appendChild(nameCell);
 
 	const exifCell = document.createElement("td");
@@ -517,7 +517,7 @@ function h(e) {
 					}
 					t[u].push(p(r))
 				}
-			} else t = e.textContent;
+			} else t = e.innerHTML;
 		return t
 	} catch (e) {
 		console.log(e.message)

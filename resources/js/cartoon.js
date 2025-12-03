@@ -20,7 +20,6 @@ function renderPage(pageIndex, pages, cartoonUID) {
 	const pageInput = document.getElementById("page-input");
 	const pageSelector = document.getElementById("page-selector");
 
-	// XSS 방지: textContent 사용
 	pageInput.value = (pageInt + 1);
 	pageArea.innerHTML = null;
 
@@ -89,9 +88,8 @@ function renderPage(pageIndex, pages, cartoonUID) {
 	img.setAttribute("data-lang-var", "COVER_LANG");
 	img.setAttribute("data-lang", "NOW_PAGE");
 
-	// XSS 방지: textContent 사용
-	title.textContent = pages[pageInt]["title"][NOW_LANG];
-	createdAt.textContent = pages[pageInt]["created-at"];
+	title.innerHTML = pages[pageInt]["title"][NOW_LANG];
+	createdAt.innerHTML = pages[pageInt]["created-at"];
 	LANGUAGE_OBJECT["COVER_LANG"]["TITLE"] = pages[pageInt]["title"];
 
 	// 배경색 설정
@@ -128,7 +126,6 @@ function addCover(targetArea, coverData, index){
 	cover.setAttribute("tabindex", "0");
 	cover.setAttribute("aria-label", `Read ${coverData["title"]["en"]}`);
 
-	// XSS 방지: onClick 속성 대신 addEventListener 사용
 	const handleCoverClick = function() {
 		readCartoon(index);
 	};
@@ -163,16 +160,14 @@ function addCover(targetArea, coverData, index){
 
 	const coverTitle = document.createElement("div");
 	coverTitle.className = "book-title lang";
-	// XSS 방지: textContent 사용
-	coverTitle.textContent = coverData["title"][NOW_LANG];
+	coverTitle.innerHTML = coverData["title"][NOW_LANG];
 	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]] = coverData["title"];
 	coverTitle.setAttribute("data-lang-var", "COVER_LANG");
 	coverTitle.setAttribute("data-lang", coverData["uid"]);
 
 	const translating = document.createElement("div");
 	translating.className = "book-translating lang";
-	// XSS 방지: textContent 사용
-	translating.textContent = coverData["translating"][NOW_LANG];
+	translating.innerHTML = coverData["translating"][NOW_LANG];
 	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]+"-translating"] = coverData["translating"];
 	translating.setAttribute("data-lang-var", "COVER_LANG");
 	translating.setAttribute("data-lang", coverData["uid"]+"-translating");
@@ -211,8 +206,7 @@ function readCartoon(cartoonIndex){
 		const optionElement = document.createElement("option");
 		optionElement.className = "lang";
 		optionElement.value = pageIndex;
-		// XSS 방지: textContent 사용
-		optionElement.textContent = (pageIndex+1) + ". " + pages[pageIndex]["title"][NOW_LANG];
+		optionElement.innerHTML = (pageIndex+1) + ". " + pages[pageIndex]["title"][NOW_LANG];
 		LANGUAGE_OBJECT["COVER_LANG"][CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex] = {
 			"en": (pageIndex+1) + ". " + pages[pageIndex]["title"]["en"],
 			"kr": (pageIndex+1) + ". " + pages[pageIndex]["title"]["kr"],
@@ -226,8 +220,7 @@ function readCartoon(cartoonIndex){
 	}
 	pageSelector.appendChild(fragment);
 
-	// XSS 방지: textContent 사용
-	maxPage.textContent = maxPageValue;
+	maxPage.innerHTML = maxPageValue;
 
 	// 마지막 페이지 렌더링
 	renderPage(maxPageValue - 1, pages, CARTOON_LIST[cartoonIndex]["uid"]);

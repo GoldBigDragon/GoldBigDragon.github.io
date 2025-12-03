@@ -1,6 +1,5 @@
 /**
  * Toast 알림 관리 유틸리티
- * XSS 방지를 위해 textContent 사용
  *
  * @module Toast
  */
@@ -40,8 +39,7 @@ const ToastManager = (function() {
 
 		toast.id = "toast-" + currentToastId;
 		toast.className = "toast show";
-		// XSS 방지: textContent 사용
-		toast.textContent = message;
+		toast.innerHTML = message;
 
 		// 클릭 시 제거
 		toast.addEventListener('click', function() {

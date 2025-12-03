@@ -1,6 +1,5 @@
 /**
  * 프로그램 검색 및 표시
- * 성능 최적화, 접근성 개선, XSS 방지
  */
 
 /**
@@ -99,8 +98,7 @@ function addProgram(programArea, programData, index){
 
 	const title = document.createElement("div");
 	title.className = "row lang program-name";
-	// XSS 방지: textContent 사용
-	title.textContent = programData["name"][NOW_LANG];
+	title.innerHTML = programData["name"][NOW_LANG];
 	LANGUAGE_OBJECT["PROGRAM_LANG"][programData["name"]["en"]+"-name"] = programData["name"];
 	title.setAttribute("data-lang-var", "PROGRAM_LANG");
 	title.setAttribute("data-lang", programData["name"]["en"]+"-name");
@@ -108,8 +106,7 @@ function addProgram(programArea, programData, index){
 
 	const description = document.createElement("div");
 	description.className = "row lang program-description";
-	// XSS 방지: textContent 사용
-	description.textContent = programData["description"][NOW_LANG];
+	description.innerHTML = programData["description"][NOW_LANG];
 	LANGUAGE_OBJECT["PROGRAM_LANG"][programData["name"]["en"]+"-description"] = programData["description"];
 	description.setAttribute("data-lang-var", "PROGRAM_LANG");
 	description.setAttribute("data-lang", programData["name"]["en"]+"-description");
@@ -198,8 +195,7 @@ function addProgram(programArea, programData, index){
 	for(let tagIndex = 0; tagIndex < programData["tag"].length; tagIndex++) {
 		const tag = document.createElement("div");
 		tag.className = "program-tag";
-		// XSS 방지: textContent 사용
-		tag.textContent = programData["tag"][tagIndex];
+		tag.innerHTML = programData["tag"][tagIndex];
 
 		// 접근성: role 및 tabindex 추가
 		tag.setAttribute("role", "button");
