@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="GoldBigDragon - Portfolio">
+	<meta name="author" content="GoldBigDragon">
+	<title>GoldBigDragon</title>
+	<link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico">
+	<link rel="stylesheet" href="./resources/vendor/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="./resources/css/minimal-theme.css">
+</head>
+<body>
+	<!-- Header -->
+	<header class="header">
+		<div class="header-content">
+			<a href="#" class="logo">GOLDBIGDRAGON</a>
+
+			<nav>
+				<ul class="nav" id="nav">
+					<li><a href="#" class="nav-link active" data-lang="nav-home">Home</a></li>
+					<li><a href="./cartoon.html" class="nav-link" data-lang="nav-cartoon">Cartoon</a></li>
+					<li><a href="./music.html" class="nav-link" data-lang="nav-music">Music</a></li>
+					<li><a href="./service.html" class="nav-link" data-lang="nav-service">Service</a></li>
+					<li><a href="./program.html" class="nav-link" data-lang="nav-program">Program</a></li>
+				</ul>
+			</nav>
+
+			<div class="lang-switch">
+				<button class="lang-btn active" data-lang="en">EN</button>
+				<button class="lang-btn" data-lang="kr">KR</button>
+				<button class="lang-btn" data-lang="jp">JP</button>
+				<button class="lang-btn" data-lang="cn">CN</button>
+				<button class="lang-btn" data-lang="ru">RU</button>
+			</div>
+
+			<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<main class="main">
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="hero-image">
+				<div class="hero-image-inner">
+					<img src="./resources/img/index/profile-image.png"
+						 alt="Profile"
+						 class="profile-img">
+				</div>
+			</div>
+
+			<div class="hero-content">
+				<h1 class="hero-title">
+					<span data-lang="hero-greeting">Hello, I'm</span><br>
+					<span class="accent" data-lang="name-value">TaeRyong Kim</span>
+				</h1>
+
+				<div class="hero-meta">
+					<div class="hero-meta-item">
+						<span class="hero-meta-label" data-lang="meta-name">NAME</span>
+						<span class="hero-meta-value" data-lang="name-value">TaeRyong Kim</span>
+					</div>
+					<div class="hero-meta-item">
+						<span class="hero-meta-label" data-lang="meta-country">COUNTRY</span>
+						<span class="hero-meta-value" data-lang="country-value">South Korea</span>
+					</div>
+				</div>
+
+				<a href="mailto:dnwndugod642@naver.com" class="hero-contact">
+					<i class="fa fa-envelope"></i>
+					<span data-lang="contact-btn">Contact Me</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- Career Section -->
+		<section class="section">
+			<div class="section-header">
+				<div class="section-number">01</div>
+				<h2 class="section-title" data-lang="section-career">Career</h2>
+			</div>
+			<div class="cards" id="career-cards"></div>
+		</section>
+
+		<!-- Education Section -->
+		<section class="section">
+			<div class="section-header">
+				<div class="section-number">02</div>
+				<h2 class="section-title" data-lang="section-education">Education</h2>
+			</div>
+			<div class="cards" id="education-cards"></div>
+		</section>
+
+		<!-- Certificate Section -->
+		<section class="section">
+			<div class="section-header">
+				<div class="section-number">03</div>
+				<h2 class="section-title" data-lang="section-certificate">Certificate</h2>
+			</div>
+			<div class="cards" id="certificate-cards"></div>
+		</section>
+
+		<!-- ETC Section -->
+		<section class="section">
+			<div class="section-header">
+				<div class="section-number">04</div>
+				<h2 class="section-title" data-lang="section-etc">Awards & Achievements</h2>
+			</div>
+			<div class="cards" id="etc-cards"></div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<p>&copy; 2025 GoldBigDragon. All rights reserved.</p>
+	</footer>
+
+	<!-- Modal -->
+	<div class="modal" id="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title" id="modalTitle">Details</h3>
+				<button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+			</div>
+			<div class="modal-body" id="modalBody"></div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="./resources/lang/index.js"></script>
+	<script src="./resources/data/index/career.js"></script>
+	<script src="./resources/data/index/education.js"></script>
+	<script src="./resources/data/index/certificate.js"></script>
+	<script src="./resources/data/index/etc.js"></script>
+	<script src="./resources/js/minimal-app.js"></script>
+</body>
+</html>

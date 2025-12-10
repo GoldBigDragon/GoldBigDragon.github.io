@@ -45,3 +45,4 @@ Temporary Items
 # Claude
 Claude.md
 *.claude*
+serve.py

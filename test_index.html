@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="GoldBigDragon">
+	<meta name="description" content="GoldBigDragon - Futuristic Portfolio">
+	<title>GoldBigDragon - Portfolio</title>
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="./resources/vendor/fontawesome-free/css/all.min.css">
+
+	<!-- Custom Futuristic Theme -->
+	<link rel="stylesheet" href="./resources/css/test-theme.css">
+</head>
+<body>
+	<!-- Navbar -->
+	<nav class="futuristic-navbar" id="navbar">
+		<div class="navbar-container">
+			<!-- Brand -->
+			<a href="#" class="navbar-brand">GoldBigDragon</a>
+
+			<!-- Navigation Menu -->
+			<ul class="navbar-menu">
+				<li class="navbar-item">
+					<a href="#" class="navbar-link active">
+						<i class="fas fa-home"></i> <span class="lang" data-lang-key="home">Home</span>
+					</a>
+				</li>
+				<li class="navbar-item">
+					<a href="./cartoon.html" class="navbar-link">
+						<i class="fas fa-book"></i> <span class="lang" data-lang-key="cartoon">Cartoon</span>
+					</a>
+				</li>
+				<li class="navbar-item">
+					<a href="./music.html" class="navbar-link">
+						<i class="fas fa-music"></i> <span class="lang" data-lang-key="music">Music</span>
+					</a>
+				</li>
+				<li class="navbar-item">
+					<a href="./service.html" class="navbar-link">
+						<i class="fas fa-tools"></i> <span class="lang" data-lang-key="service">Service</span>
+					</a>
+				</li>
+				<li class="navbar-item">
+					<a href="./program.html" class="navbar-link">
+						<i class="fas fa-code"></i> <span class="lang" data-lang-key="program">Program</span>
+					</a>
+				</li>
+			</ul>
+
+			<!-- Language Selector -->
+			<div class="lang-selector">
+				<button class="lang-btn active" data-lang="en">EN</button>
+				<button class="lang-btn" data-lang="kr">KR</button>
+				<button class="lang-btn" data-lang="jp">JP</button>
+				<button class="lang-btn" data-lang="cn">CN</button>
+				<button class="lang-btn" data-lang="ru">RU</button>
+			</div>
+
+			<!-- Mobile Menu Toggle -->
+			<button class="mobile-menu-toggle" aria-label="Toggle menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</nav>
+
+	<!-- Main Container -->
+	<main class="main-container">
+		<!-- Profile Section -->
+		<section class="profile-section">
+			<!-- Profile Image -->
+			<div class="profile-image-container">
+				<div class="profile-image-wrapper">
+					<div class="profile-image-bg"></div>
+					<img src="./resources/img/index/profile-image.png"
+						 alt="GoldBigDragon Profile"
+						 class="profile-image"
+						 loading="lazy">
+					<div class="profile-logo-text lang" data-lang-key="logo-description">
+						Oriental<br>Dragon<br>Shape
+					</div>
+				</div>
+			</div>
+
+			<!-- Profile Info -->
+			<div class="profile-info">
+				<div class="profile-info-item">
+					<div class="profile-info-label">
+						<i class="fa-solid fa-tags"></i>
+						<span class="lang" data-lang-key="name">Name:</span>
+					</div>
+					<div class="profile-info-value lang" data-lang-key="name-value">
+						TaeRyong Kim
+					</div>
+				</div>
+
+				<div class="profile-info-item">
+					<div class="profile-info-label">
+						<i class="fa-solid fa-globe"></i>
+						<span class="lang" data-lang-key="country">Country:</span>
+					</div>
+					<div class="profile-info-value lang" data-lang-key="country-value">
+						South Korea
+					</div>
+				</div>
+
+				<div class="profile-info-item">
+					<div class="profile-info-label">
+						<i class="fa-solid fa-envelope"></i>
+						<span class="lang" data-lang-key="contact">Contact:</span>
+					</div>
+					<div class="profile-info-value">
+						<a href="mailto:dnwndugod642@naver.com"
+						   class="contact-btn"
+						   aria-label="Send email">
+							<i class="fa fa-envelope"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Career Section -->
+		<section class="section">
+			<h2 class="section-title">
+				<i class="fa-solid fa-building"></i>
+				<span class="lang" data-lang-key="career">Career</span>
+			</h2>
+			<div class="badge-grid" id="career-grid">
+				<!-- Badges will be dynamically inserted here -->
+			</div>
+		</section>
+
+		<!-- Education Section -->
+		<section class="section">
+			<h2 class="section-title">
+				<i class="fa-solid fa-graduation-cap"></i>
+				<span class="lang" data-lang-key="education">Education</span>
+			</h2>
+			<div class="badge-grid" id="education-grid">
+				<!-- Badges will be dynamically inserted here -->
+			</div>
+		</section>
+
+		<!-- Certificate Section -->
+		<section class="section">
+			<h2 class="section-title">
+				<i class="fa-solid fa-award"></i>
+				<span class="lang" data-lang-key="certificate">Certificate</span>
+			</h2>
+			<div class="badge-grid" id="certificate-grid">
+				<!-- Badges will be dynamically inserted here -->
+			</div>
+		</section>
+
+		<!-- ETC Section -->
+		<section class="section">
+			<h2 class="section-title">
+				<i class="fa-solid fa-trophy"></i>
+				<span class="lang" data-lang-key="etc">ETC</span>
+			</h2>
+			<div class="badge-grid" id="etc-grid">
+				<!-- Badges will be dynamically inserted here -->
+			</div>
+		</section>
+	</main>
+
+	<!-- Modal -->
+	<div class="modal-overlay" id="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title" id="modal-title">Details</h3>
+				<button class="modal-close" id="modal-close" aria-label="Close modal">
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="modal-body" id="modal-body">
+				<!-- Modal content will be dynamically inserted here -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="./resources/vendor/jquery/jquery.min.js"></script>
+
+	<!-- Language Data -->
+	<script src="./resources/lang/index.js"></script>
+
+	<!-- Badge Data -->
+	<script src="./resources/data/index/career.js"></script>
+	<script src="./resources/data/index/education.js"></script>
+	<script src="./resources/data/index/certificate.js"></script>
+	<script src="./resources/data/index/etc.js"></script>
+
+	<!-- Custom Scripts -->
+	<script src="./resources/js/test-index.js"></script>
+</body>
+</html>

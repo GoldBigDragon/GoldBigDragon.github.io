@@ -17,7 +17,11 @@ async function loadHeader() {
 	}
 
 	try {
-		const response = await fetch('/templates/components/header.html');
+		// 현재 페이지의 경로 깊이 계산
+		const depth = window.location.pathname.split('/').filter(segment => segment && !segment.includes('.html')).length;
+		const basePath = depth > 0 ? '../'.repeat(depth) : './';
+
+		const response = await fetch(`${basePath}templates/components/header.html`);
 
 		if (!response.ok) {
 			throw new Error(`HTTP error! status: ${response.status}`);
@@ -29,24 +33,26 @@ async function loadHeader() {
 		// CSS 로드
 		const style = document.createElement("link");
 		style.rel = 'stylesheet';
-		style.href = '/resources/css/header.css';
+		style.href = `${basePath}resources/css/header.css`;
 		document.head.appendChild(style);
 
 		// 언어 스크립트 로드
 		const lang = document.createElement('script');
 		lang.type = 'application/javascript';
-		lang.src = '/resources/lang/header.js';
+		lang.src = `${basePath}resources/lang/header.js`;
 		document.body.appendChild(lang);
 
 		// Header 스크립트 로드
 		const script = document.createElement('script');
 		script.type = 'application/javascript';
-		script.src = '/resources/js/header.js';
+		script.src = `${basePath}resources/js/header.js`;
 		document.body.appendChild(script);
 	} catch (error) {
 		console.error('Failed to load header:', error);
 		// 폴백: 기본 헤더 표시
-		headerElement.innerHTML = '<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"><div class="container"><a class="navbar-brand" href="/">GoldBigDragon</a></div></nav>';
+		const depth = window.location.pathname.split('/').filter(segment => segment && !segment.includes('.html')).length;
+		const basePath = depth > 0 ? '../'.repeat(depth) : './';
+		headerElement.innerHTML = `<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"><div class="container"><a class="navbar-brand" href="${basePath}index.html">GoldBigDragon</a></div></nav>`;
 	}
 }
 
@@ -62,7 +68,11 @@ async function loadFooter() {
 	}
 
 	try {
-		const response = await fetch('/templates/components/footer.html');
+		// 현재 페이지의 경로 깊이 계산
+		const depth = window.location.pathname.split('/').filter(segment => segment && !segment.includes('.html')).length;
+		const basePath = depth > 0 ? '../'.repeat(depth) : './';
+
+		const response = await fetch(`${basePath}templates/components/footer.html`);
 
 		if (!response.ok) {
 			throw new Error(`HTTP error! status: ${response.status}`);
@@ -74,19 +84,19 @@ async function loadFooter() {
 		// CSS 로드
 		const style = document.createElement("link");
 		style.rel = 'stylesheet';
-		style.href = '/resources/css/footer.css';
+		style.href = `${basePath}resources/css/footer.css`;
 		document.head.appendChild(style);
 
 		// 언어 스크립트 로드
 		const lang = document.createElement('script');
 		lang.type = 'application/javascript';
-		lang.src = '/resources/lang/footer.js';
+		lang.src = `${basePath}resources/lang/footer.js`;
 		document.body.appendChild(lang);
 
 		// Footer 스크립트 로드
 		const script = document.createElement('script');
 		script.type = 'application/javascript';
-		script.src = '/resources/js/footer.js';
+		script.src = `${basePath}resources/js/footer.js`;
 		document.body.appendChild(script);
 	} catch (error) {
 		console.error('Failed to load footer:', error);

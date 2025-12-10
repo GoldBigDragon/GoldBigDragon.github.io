@@ -11,12 +11,12 @@
 		<!-- Content Security Policy: XSS 방지 -->
 		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://pagead2.googlesyndication.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://www.google.com; frame-src https://www.google.com;">
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/x-icon" href="/resources/img/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico" />
 		<title>GoldBigDragon - Music</title>
-		<link rel="stylesheet" href="/resources/vendor/fontawesome-free/css/all.min.css" />
-		<link rel="stylesheet" href="/resources/vendor/bootstrap/bootstrap.css" />
-		<link rel="stylesheet" href="/resources/css/music.css" />
-		<link rel="stylesheet" href="/resources/css/basic.css" />
+		<link rel="stylesheet" href="./resources/vendor/fontawesome-free/css/all.min.css" />
+		<link rel="stylesheet" href="./resources/vendor/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" href="./resources/css/music.css" />
+		<link rel="stylesheet" href="./resources/css/basic.css" />
 	</head>
 	<body>
 		<div class="row" id="header"></div>
@@ -78,7 +78,7 @@
 		</div>
 		<div id="player" role="region" aria-label="Music player">
 			<div class="col-1" style="display: flex;align-items: center;justify-content: center;max-width: 3.5rem;width: 3rem;height: 3rem;">
-				<img id="player-music-image" src="/resources/img/music/none.png" style="width: 3rem;height: 3rem;" alt="Current playing music cover">
+				<img id="player-music-image" src="./resources/img/music/none.png" style="width: 3rem;height: 3rem;" alt="Current playing music cover">
 				<button id="player-music-play-button" style="display: flex;height: 3rem;width: 3rem;position: absolute;align-items: center;justify-content: center;font-size:1.5rem;background:transparent;border:none;cursor:pointer;" aria-label="Play music">
 					<i class="fa-solid fa-play" aria-hidden="true"></i>
 				</button>
@@ -191,16 +191,16 @@
 			</div>
 		</div>
 	</body>
-	<script src="/resources/vendor/jquery/jquery.min.js"></script>
-	<script src="/resources/vendor/jquery/jquery.easing.min.js"></script>
-	<script src="/resources/vendor/popper/popper.min.js"></script>
-	<script src="/resources/vendor/bootstrap/bootstrap.5.1.3.bundle.min.js"></script>
+	<script src="./resources/vendor/jquery/jquery.min.js"></script>
+	<script src="./resources/vendor/jquery/jquery.easing.min.js"></script>
+	<script src="./resources/vendor/popper/popper.min.js"></script>
+	<script src="./resources/vendor/bootstrap/bootstrap.5.1.3.bundle.min.js"></script>
 	
-	<script src="/resources/js/basic.js"></script>
-	<script src="/resources/js/utils/navbar.js"></script>
-	<script src="/resources/js/utils/debounce.js"></script>
-	<script src="/resources/lang/music.js"></script>
-	<script src="/resources/data/music/music_list.js"></script>
-	<script src="/resources/js/music.js"></script>
+	<script src="./resources/js/basic.js"></script>
+	<script src="./resources/js/utils/navbar.js"></script>
+	<script src="./resources/js/utils/debounce.js"></script>
+	<script src="./resources/lang/music.js"></script>
+	<script src="./resources/data/music/music_list.js"></script>
+	<script src="./resources/js/music.js"></script>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5483159539162475" crossorigin="anonymous"></script>
 </html>
