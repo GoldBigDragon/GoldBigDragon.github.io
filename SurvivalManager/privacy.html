@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="GoldBigDragon" />
+    <meta name="description" content="Survival Manager Application Privacy" />
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://pagead2.googlesyndication.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://www.google.com; frame-src https://www.google.com;">
+    <link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico" />
+    <title>Survival Manager - Privacy</title>
+    <style>
+        /* CSS Variables for Light/Dark Mode */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --btn-bg: #f0f0f0;
+            --btn-border: #cccccc;
+            --btn-hover: #e0e0e0;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --btn-bg: #333333;
+            --btn-border: #555555;
+            --btn-hover: #444444;
+        }
+
+        /* Basic Styling */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Top Controls Styling */
+        .controls {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--btn-border);
+        }
+
+        button, select {
+            background-color: var(--btn-bg);
+            color: var(--text-color);
+            border: 1px solid var(--btn-border);
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        button:hover, select:hover {
+            background-color: var(--btn-hover);
+        }
+
+        h1 { font-size: 1.8rem; margin-top: 10px; }
+        h2 { font-size: 1.3rem; margin-top: 30px; border-left: 4px solid var(--text-color); padding-left: 10px; }
+        div { margin-bottom: 10px; }
+        ul { margin-top: 5px; padding-left: 30px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top Controls -->
+        <div class="controls">
+            <select id="lang-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ko">한국어 (Korean)</option>
+                <option value="zh">简体中文 (Chinese)</option>
+                <option value="ja">日本語 (Japanese)</option>
+                <option value="ru">Русский (Russian)</option>
+            </select>
+            <button id="theme-toggle" onclick="toggleTheme()">Dark</button>
+        </div>
+        <h1 id="title">[Survival Manager] Privacy Policy</h1>
+        <h2 id="h1">1. Purpose and Categories of Personal Data Processing</h2>
+        <div id="p1">&nbsp;&nbsp;Survival Manager (hereinafter referred to as the 'Company' or 'Service') does not transmit, store, or share users' personal information, nor does it collect or use any personal information during the use of the Service. There is no membership registration process, and no personally identifiable data is transmitted to or stored on any server.</div>
+        <h2 id="h2">2. Device Access Permissions and Local Data Processing</h2>
+        <div id="p2">&nbsp;&nbsp;The Service may request the following device permissions to provide seamless functionality, but all data is stored and processed locally on the device and is never transmitted to external servers.</div>
+        <ul>
+            <li id="li2_1">Camera: Scanning QR code ration tickets, etc.</li>
+            <li id="li2_2">Microphone: Morse code sound recognition and translation, etc.</li>
+            <li id="li2_3">Storage (Photos/Media/Files): Loading offline map images, data backup and restoration, etc.</li>
+            <li id="li2_4">Location: Displaying location in astronomy tools and offline maps, etc. (GPS data is calculated locally and not collected)</li>
+            <li id="li2_5">Bluetooth: Short-range group chat via Bluetooth, etc. (Messages are encrypted and visible only to the chat group)</li>
+        </ul>
+        <h2 id="h3">3. Installation, Operation, and Refusal of Automatic Data Collection Devices</h2>
+        <div id="p3">&nbsp;&nbsp;The Service does not use 'cookies' that store and retrieve user usage information, nor does it collect any advertising identifiers (ADID/IDFA) for personalized advertising.</div>
+        <h2 id="h4">4. Third-Party Provision and Entrustment of Personal Information</h2>
+        <div id="p4">&nbsp;&nbsp;Since the Service does not collect any personal information, under no circumstances will personal information be provided to third parties or outsourced for external processing.</div>
+        <h2 id="h5">5. Rights, Duties, and Exercise Methods of Users and Legal Representatives</h2>
+        <div id="p5">&nbsp;&nbsp;As the Service does not collect or retain personal information, there is no subject matter for requests regarding viewing, correcting, deleting, or suspending processing. However, if you have general inquiries regarding the use of the Service, please contact the developer below.</div>
+        <h2 id="h6">6. Privacy Officer and Grievance Handling Department</h2>
+        <div id="p6">&nbsp;&nbsp;The developer has designated the following contact method to collect feedback and handle complaints from users.</div>
+        <ul>
+            <li id="li6_1">Email: goldbigdragon@gmail.com</li>
+        </ul>
+        <h2 id="h7">7. Changes to the Privacy Policy</h2>
+        <div id="p7">&nbsp;&nbsp;This Privacy Policy takes effect on September 1, 2026. Should it become necessary to collect personal information due to future service updates, we will clearly notify you and obtain your consent in advance in accordance with applicable laws.</div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('theme-toggle');
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                btn.innerText = 'Dark';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                btn.innerText = 'Light';
+            }
+        }
+
+        const i18n = {
+            "ko": {
+                "title": "[재난 대비] 개인정보 처리방침",
+                "h1": "1. 개인정보의 처리 목적 및 항목",
+                "p1": "&nbsp;&nbsp;재난 대비(이하 '회사' 또는 '서비스')는 이용자의 개인정보를 전송, 저장, 공유하지 않으며, 서비스 이용 과정에서 어떠한 개인정보도 수집하거나 이용하지 않습니다. 회원가입 절차가 없으며, 사용자의 식별이 가능한 어떠한 데이터도 서버로 전송되거나 저장되지 않습니다.",
+                "h2": "2. 기기 접근 권한 및 로컬 데이터 처리",
+                "p2": "&nbsp;&nbsp;서비스는 원활한 기능 제공을 위해 아래와 같은 기기 권한을 요청할 수 있으나, 모든 데이터는 기기 내부에만(Local) 저장 및 처리되며 외부 서버로 전송되지 않습니다.",
+                "li2_1": "카메라: 배급표 QR코드 스캔 등",
+                "li2_2": "마이크: 모스부호 소리 인식 및 번역 등",
+                "li2_3": "저장소(사진/미디어/파일): 오프라인 지도 이미지 불러오기, 데이터 백업 및 복원 등",
+                "li2_4": "위치 정보: 천문 도구 및 오프라인 지도 내 위치 표시 등 (GPS 데이터는 로컬에서만 연산되며 수집되지 않음)",
+                "li2_5": "블루투스: 블루투스를 이용한 단거리 그룹 채팅 등 (메시지 내용은 암호화 되어 채팅 그룹 끼리만 알아볼 수 있음)",
+                "h3": "3. 인터넷 접속 정보 등 자동 수집 장치의 설치·운영 및 거부에 관한 사항",
+                "p3": "&nbsp;&nbsp;서비스는 이용자의 이용 정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’ 등을 사용하지 않으며, 맞춤형 광고 등을 위한 광고 식별자(ADID/IDFA)를 일절 수집하지 않습니다.",
+                "h4": "4. 개인정보의 제3자 제공 및 위탁",
+                "p4": "&nbsp;&nbsp;서비스는 이용자의 개인정보를 수집하지 않으므로, 어떠한 경우에도 제3자에게 개인정보를 제공하거나 외부에 처리를 위탁하는 일이 발생하지 않습니다.",
+                "h5": "5. 이용자 및 법정대리인의 권리·의무 및 행사방법",
+                "p5": "&nbsp;&nbsp;서비스는 개인정보를 수집·보유하고 있지 않으므로 열람, 정정, 삭제, 처리 정지 등의 요구에 대한 대상 자체가 존재하지 않습니다. 다만, 서비스 이용 중 발생한 일반 문의 사항은 아래의 개발자에게 연락하시면 성실히 답변해 드리겠습니다.",
+                "h6": "6. 개인정보 보호책임자 및 고충처리 부서",
+                "p6": "&nbsp;&nbsp;개발자는 서비스를 이용하시는 분들의 의견을 수렴하고 불만을 처리하기 위해 아래와 같은 연락 수단을 지정해 두었습니다.",
+                "li6_1": "Email: goldbigdragon@gmail.com",
+                "h7": "7. 개인정보 처리방침의 변경",
+                "p7": "&nbsp;&nbsp;이 개인정보 처리방침은 2026년 09월 01일부터 적용됩니다. 향후 서비스 업데이트 등으로 인해 부득이하게 개인정보를 수집하게 될 경우, 법령에 따라 사전에 명확히 공지하고 동의를 받을 예정입니다."
+            },
+            "en": {
+                "title": "[Survival Manager] Privacy Policy",
+                "h1": "1. Purpose and Categories of Personal Data Processing",
+                "p1": "&nbsp;&nbsp;Survival Manager (hereinafter referred to as the 'Company' or 'Service') does not transmit, store, or share users' personal information, nor does it collect or use any personal information during the use of the Service. There is no membership registration process, and no personally identifiable data is transmitted to or stored on any server.",
+                "h2": "2. Device Access Permissions and Local Data Processing",
+                "p2": "&nbsp;&nbsp;The Service may request the following device permissions to provide seamless functionality, but all data is stored and processed locally on the device and is never transmitted to external servers.",
+                "li2_1": "Camera: Scanning QR code ration tickets, etc.",
+                "li2_2": "Microphone: Morse code sound recognition and translation, etc.",
+                "li2_3": "Storage (Photos/Media/Files): Loading offline map images, data backup and restoration, etc.",
+                "li2_4": "Location: Displaying location in astronomy tools and offline maps, etc. (GPS data is calculated locally and not collected)",
+                "li2_5": "Bluetooth: Short-range group chat via Bluetooth, etc. (Messages are encrypted and visible only to the chat group)",
+                "h3": "3. Installation, Operation, and Refusal of Automatic Data Collection Devices",
+                "p3": "&nbsp;&nbsp;The Service does not use 'cookies' that store and retrieve user usage information, nor does it collect any advertising identifiers (ADID/IDFA) for personalized advertising.",
+                "h4": "4. Third-Party Provision and Entrustment of Personal Information",
+                "p4": "&nbsp;&nbsp;Since the Service does not collect any personal information, under no circumstances will personal information be provided to third parties or outsourced for external processing.",
+                "h5": "5. Rights, Duties, and Exercise Methods of Users and Legal Representatives",
+                "p5": "&nbsp;&nbsp;As the Service does not collect or retain personal information, there is no subject matter for requests regarding viewing, correcting, deleting, or suspending processing. However, if you have general inquiries regarding the use of the Service, please contact the developer below.",
+                "h6": "6. Privacy Officer and Grievance Handling Department",
+                "p6": "&nbsp;&nbsp;The developer has designated the following contact method to collect feedback and handle complaints from users.",
+                "li6_1": "Email: goldbigdragon@gmail.com",
+                "h7": "7. Changes to the Privacy Policy",
+                "p7": "&nbsp;&nbsp;This Privacy Policy takes effect on September 1, 2026. Should it become necessary to collect personal information due to future service updates, we will clearly notify you and obtain your consent in advance in accordance with applicable laws."
+            },
+            "zh": {
+                "title": "[灾害准备] 隐私政策",
+                "h1": "1. 个人信息的处理目的及项目",
+                "p1": "&nbsp;&nbsp;灾害准备（以下简称“公司”或“服务”）不传输、存储或共享用户的个人信息，也不在服务使用过程中收集或使用任何个人信息。本服务无注册流程，任何可识别用户身份的数据均不会被传输或存储至服务器。",
+                "h2": "2. 设备访问权限及本地数据处理",
+                "p2": "&nbsp;&nbsp;为了提供流畅的功能，本服务可能会请求以下设备权限，但所有数据仅在设备本地存储和处理，绝不会传输至外部服务器。",
+                "li2_1": "相机：扫描配给票二维码等",
+                "li2_2": "麦克风：摩斯密码声音识别及翻译等",
+                "li2_3": "存储（照片/媒体/文件）：加载离线地图图片、数据备份与恢复等",
+                "li2_4": "位置信息：天文工具及离线地图中的位置显示等（GPS数据仅在本地计算，绝不收集）",
+                "li2_5": "蓝牙：使用蓝牙进行短距离群聊等（消息内容已加密，仅聊天群组成员可见）",
+                "h3": "3. 自动收集装置的安装、运行及拒绝事项",
+                "p3": "&nbsp;&nbsp;本服务不使用存储并随时调用用户使用信息的“Cookie”等技术，且绝对不收集用于个性化广告的广告标识符（ADID/IDFA）。",
+                "h4": "4. 个人信息的第三方提供与委托",
+                "p4": "&nbsp;&nbsp;由于本服务不收集用户的个人信息，因此在任何情况下都不会向第三方提供个人信息，也不会将处理工作委托给外部。",
+                "h5": "5. 用户及法定代理人的权利、义务及行使方法",
+                "p5": "&nbsp;&nbsp;本服务不收集且不保留个人信息，因此不存在要求查阅、更正、删除、暂停处理等权利的对象。但在使用服务过程中产生的任何一般性问题，请联系下方的开发者，我们将诚挚为您解答。",
+                "h6": "6. 个人信息保护负责人及投诉处理",
+                "p6": "&nbsp;&nbsp;开发者指定了以下联系方式，以听取用户的意见并处理投诉。",
+                "li6_1": "Email: goldbigdragon@gmail.com",
+                "h7": "7. 隐私政策的变更",
+                "p7": "&nbsp;&nbsp;本隐私政策自 2026 年 09 月 01 日起生效。若未来因服务更新等原因不可避免地需要收集个人信息时，我们将依法提前明确公告并征得您的同意。"
+            },
+            "ja": {
+                "title": "[災害対策] プライバシーポリシー",
+                "h1": "1. 個人情報の処理目的および項目",
+                "p1": "&nbsp;&nbsp;災害対策（以下「当社」または「サービス」）は、ユーザーの個人情報を送信、保存、共有せず、サービスの利用過程でいかなる個人情報も収集または利用しません。会員登録手続きはなく、ユーザーを特定できるいかなるデータもサーバーに送信または保存されません。",
+                "h2": "2. デバイスへのアクセス権限とローカルデータ処理",
+                "p2": "&nbsp;&nbsp;サービスは円滑な機能提供のために以下のデバイス権限を要求する場合がありますが、すべてのデータはデバイス内部（ローカル）でのみ保存および処理され、外部サーバーには送信されません。",
+                "li2_1": "カメラ：配給チケットのQRコードスキャンなど",
+                "li2_2": "マイク：モールス信号の音声認識および翻訳など",
+                "li2_3": "ストレージ（写真/メディア/ファイル）：オフラインマップ画像の読み込み、データのバックアップと復元など",
+                "li2_4": "位置情報：天文ツールおよびオフラインマップでの位置表示など（GPSデータはローカルでのみ演算され、収集されません）",
+                "li2_5": "Bluetooth：Bluetoothを利用した近距離グループチャットなど（メッセージ内容は暗号化され、チャットグループ内でのみ解読可能）",
+                "h3": "3. 自動収集装置の設置・運営および拒否に関する事項",
+                "p3": "&nbsp;&nbsp;サービスは、ユーザーの利用情報を保存し随時呼び出す「クッキー（cookie）」などを使用せず、カスタマイズ広告などのための広告識別子（ADID/IDFA）を一切収集しません。",
+                "h4": "4. 個人情報の第三者提供および委託",
+                "p4": "&nbsp;&nbsp;サービスはユーザーの個人情報を収集しないため、いかなる場合でも第三者に個人情報を提供したり、外部に処理を委託することはありません。",
+                "h5": "5. ユーザーおよび法定代理人の権利・義務ならびに行使方法",
+                "p5": "&nbsp;&nbsp;サービスは個人情報を収集・保有していないため、閲覧、訂正、削除、処理停止などの要求に対する対象自体が存在しません。ただし、サービス利用中に発生した一般的なお問い合わせについては、以下の開発者にご連絡いただければ誠実にお答えいたします。",
+                "h6": "6. 個人情報保護責任者および苦情処理",
+                "p6": "&nbsp;&nbsp;開発者は、サービスをご利用になる方々の意見を収集し、苦情を処理するために、以下の連絡手段を指定しています。",
+                "li6_1": "Email: goldbigdragon@gmail.com",
+                "h7": "7. プライバシーポリシーの変更",
+                "p7": "&nbsp;&nbsp;本プライバシーポリシーは2026年09月01日から適用されます。今後のサービスアップデートなどにより、やむを得ず個人情報を収集することになった場合は、法令に従い事前にお知らせし、同意を得る予定です。"
+            },
+            "ru": {
+                "title": "Политика конфиденциальности [Менеджер по выживанию]",
+                "h1": "1. Цель и категории обработки персональных данных",
+                "p1": "&nbsp;&nbsp;Менеджер по выживанию (далее «Компания» или «Сервис») не передает, не хранит и не делится личными данными пользователей, а также не собирает и не использует их в процессе использования Сервиса. Процедура регистрации отсутствует, и никакие данные, позволяющие идентифицировать пользователя, не передаются и не сохраняются на серверах.",
+                "h2": "2. Права доступа к устройству и обработка локальных данных",
+                "p2": "&nbsp;&nbsp;Для обеспечения бесперебойной работы Сервис может запрашивать следующие разрешения устройства, однако все данные сохраняются и обрабатываются исключительно локально на устройстве и не передаются на внешние серверы.",
+                "li2_1": "Камера: Сканирование QR-кодов талонов на пайки и т.д.",
+                "li2_2": "Микрофон: Распознавание и перевод звуков азбуки Морзе и т.д.",
+                "li2_3": "Хранилище (Фото/Медиа/Файлы): Загрузка изображений для офлайн-карт, резервное копирование и восстановление данных и т.д.",
+                "li2_4": "Местоположение: Отображение локации в астрономических инструментах и картах (данные GPS вычисляются только локально и не собираются).",
+                "li2_5": "Bluetooth: Групповой чат на коротких расстояниях (сообщения зашифрованы и доступны только участникам группы).",
+                "h3": "3. Установка, использование и отказ от средств автоматического сбора данных",
+                "p3": "&nbsp;&nbsp;Сервис не использует файлы «cookie», которые сохраняют информацию об использовании, а также абсолютно не собирает рекламные идентификаторы (ADID/IDFA) для персонализированной рекламы.",
+                "h4": "4. Передача третьим лицам и поручение обработки персональных данных",
+                "p4": "&nbsp;&nbsp;Поскольку Сервис не собирает личные данные, ни при каких обстоятельствах личная информация не передается третьим лицам и не поручается для внешней обработки.",
+                "h5": "5. Права, обязанности и способы их осуществления пользователями",
+                "p5": "&nbsp;&nbsp;Так как Сервис не собирает и не хранит персональные данные, объект для запросов на просмотр, исправление или удаление отсутствует. Тем не менее, по любым вопросам, возникшим в процессе использования Сервиса, вы можете связаться с разработчиком по указанным ниже контактам.",
+                "h6": "6. Ответственный за защиту данных и обработку жалоб",
+                "p6": "&nbsp;&nbsp;Разработчик определил следующие способы связи для сбора отзывов и рассмотрения жалоб пользователей Сервиса.",
+                "li6_1": "Email: goldbigdragon@gmail.com",
+                "h7": "7. Изменения в политике конфиденциальности",
+                "p7": "&nbsp;&nbsp;Настоящая Политика вступает в силу 1 сентября 2026 года. В случае необходимости сбора персональных данных в связи с обновлениями, мы заранее уведомим об этом и получим ваше согласие."
+            }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById('lang-select').value;
+            const data = i18n[lang];
+            
+            document.documentElement.lang = lang;
+            document.title = data.title;
+            
+            for (const key in data) {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.innerHTML = data[key];
+                }
+            }
+        }
+    </script>
+</body>
+</html>
