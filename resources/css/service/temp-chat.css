@@ -93,6 +93,7 @@
   image-rendering: crisp-edges;
   background: transparent;
   border-radius: 2px;
+  zoom: 4;
 }
 .chat-meta {
   font-size: 0.7rem;
