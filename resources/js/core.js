@@ -121,9 +121,96 @@
     document.cookie = s;
   }
 
+  function mapLocale(raw) {
+    if (!raw) return null;
+    const primary = String(raw).toLowerCase().replace(/_/g, "-").split("-")[0];
+    if (primary === "ko") return "kr";
+    if (primary === "ja") return "jp";
+    if (primary === "zh") return "cn";
+    if (primary === "ru") return "ru";
+    if (primary === "en") return "en";
+    return null;
+  }
+
+  function inspectNavigator() {
+    const list = [];
+    try {
+      if (Array.isArray(navigator.languages)) list.push.apply(list, navigator.languages);
+    } catch (_) {}
+    try {
+      if (navigator.language) list.push(navigator.language);
+    } catch (_) {}
+    try {
+      if (navigator.userLanguage) list.push(navigator.userLanguage);
+    } catch (_) {}
+    let strong = null;
+    let hasEn = false;
+    for (let i = 0; i < list.length; i++) {
+      const mapped = mapLocale(list[i]);
+      if (mapped === "en") hasEn = true;
+      else if (mapped && !strong) strong = mapped;
+    }
+    return { strong, hasEn };
+  }
+
+  function mapCountry(code) {
+    const c = String(code || "").toUpperCase();
+    if (c === "KR") return "kr";
+    if (c === "JP") return "jp";
+    if (c === "CN" || c === "TW" || c === "HK" || c === "MO") return "cn";
+    if (c === "RU") return "ru";
+    if (c) return "en";
+    return null;
+  }
+
+  async function detectFromIP() {
+    const sources = [
+      ["https://get.geojs.io/v1/ip/country.json", function (d) { return d && d.country; }],
+      ["https://ipapi.co/json/", function (d) { return d && d.country_code; }],
+      ["https://ipwho.is/", function (d) { return d && d.country_code; }]
+    ];
+    for (let i = 0; i < sources.length; i++) {
+      const ctrl = new AbortController();
+      const timer = setTimeout(function () { ctrl.abort(); }, 1600);
+      try {
+        const res = await fetch(sources[i][0], { signal: ctrl.signal, credentials: "omit" });
+        if (!res.ok) continue;
+        const lang = mapCountry(sources[i][1](await res.json()));
+        if (lang) return lang;
+      } catch (_) {
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+    return null;
+  }
+
+  let guessedLang = null;
+
+  function bootstrapLang() {
+    if (getCookie(COOKIE)) return;
+    const nav = inspectNavigator();
+    if (nav.strong) {
+      guessedLang = nav.strong;
+      setCookie(COOKIE, nav.strong, 31);
+      return;
+    }
+    guessedLang = nav.hasEn ? "en" : "kr";
+    detectFromIP().then(function (ipLang) {
+      if (getCookie(COOKIE)) return;
+      const lang = ipLang || guessedLang || "kr";
+      guessedLang = lang;
+      setCookie(COOKIE, lang, 31);
+      applyI18n();
+      document.dispatchEvent(new CustomEvent("gbd:lang", { detail: lang }));
+    });
+  }
+
   function getLang() {
     const v = getCookie(COOKIE);
-    return LANGS.includes(v) ? v : "kr";
+    if (LANGS.includes(v)) return v;
+    if (guessedLang && LANGS.includes(guessedLang)) return guessedLang;
+    return "kr";
   }
   function t(key) {
     const row = I18N[key];
@@ -310,7 +397,7 @@
   }
 
   function mountChrome() {
-    if (!getCookie(COOKIE)) setCookie(COOKIE, "kr", 31);
+    bootstrapLang();
     global.NOW_LANG = getLang();
 
     const menuBtn = document.getElementById("menuBtn");
