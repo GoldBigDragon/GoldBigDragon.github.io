@@ -7,6 +7,7 @@
   let audio = null;
   let raf = null;
   let tab = "playlist";
+  let playGen = 0;
 
   function flatten() {
     MUSIC_LIST.length = 0;
@@ -28,6 +29,7 @@
   }
 
   function stop() {
+    playGen += 1;
     if (raf) cancelAnimationFrame(raf);
     raf = null;
     if (audio) {
@@ -48,12 +50,46 @@
     return `${m}:${s}`;
   }
 
-  function tick() {
-    if (audio && !audio.paused && audio.duration) {
-      document.getElementById("progress").style.width = (audio.currentTime / audio.duration) * 100 + "%";
+  function currentTrack() {
+    return cursor >= 0 && queue[cursor] ? queue[cursor] : null;
+  }
+
+  function trackKey(track) {
+    return (track && (track.mp3 || track.title && track.title.en)) || "";
+  }
+
+  function paintPlaying() {
+    const key = trackKey(currentTrack());
+    document.querySelectorAll(".item-card[data-track]").forEach((el) => {
+      el.classList.toggle("is-playing", Boolean(key) && el.dataset.track === key);
+    });
+  }
+
+  function updateProgress() {
+    if (!audio) return;
+    const dur = audio.duration;
+    if (dur && isFinite(dur) && dur > 0) {
+      document.getElementById("progress").style.width = (audio.currentTime / dur) * 100 + "%";
       document.getElementById("curTime").textContent = fmt(audio.currentTime);
-      raf = requestAnimationFrame(tick);
+      document.getElementById("durTime").textContent = fmt(dur);
+    } else {
+      const track = currentTrack();
+      if (track && track.duration) {
+        document.getElementById("durTime").textContent = fmt(track.duration);
+      }
     }
+  }
+
+  function tick() {
+    raf = null;
+    if (!audio) return;
+    updateProgress();
+    if (!audio.paused && !audio.ended) raf = requestAnimationFrame(tick);
+  }
+
+  function startTicker() {
+    if (raf) cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(tick);
   }
 
   function playAt(index) {
@@ -61,19 +97,36 @@
     cursor = ((index % queue.length) + queue.length) % queue.length;
     const track = queue[cursor];
     stop();
+    const gen = playGen;
     audio = new Audio(track.mp3);
     audio.addEventListener("loadedmetadata", () => {
-      document.getElementById("durTime").textContent = fmt(audio.duration || track.duration);
+      if (gen !== playGen) return;
+      updateProgress();
     });
-    audio.addEventListener("ended", () => playAt(cursor + 1));
+    audio.addEventListener("timeupdate", () => {
+      if (gen !== playGen) return;
+      updateProgress();
+    });
+    audio.addEventListener("playing", () => {
+      if (gen !== playGen) return;
+      startTicker();
+    });
+    audio.addEventListener("ended", () => {
+      if (gen !== playGen) return;
+      playAt(cursor + 1);
+    });
     document.getElementById("playerArt").src = track.image || "";
     document.getElementById("playerTitle").textContent = GBD.pick(track.title);
     document.getElementById("playBtn").innerHTML = GBD.ICON.pause;
-    audio.play();
-    raf = requestAnimationFrame(tick);
-    document.querySelectorAll(".item-card").forEach((el) => {
-      el.classList.toggle("is-playing", el.dataset.en === track.title.en);
-    });
+    paintPlaying();
+    const started = audio.play();
+    if (started && typeof started.then === "function") {
+      started.then(startTicker).catch(() => {
+        document.getElementById("playBtn").innerHTML = GBD.ICON.play;
+      });
+    } else {
+      startTicker();
+    }
   }
 
   function toggle() {
@@ -82,14 +135,16 @@
       return;
     }
     if (audio.paused) {
-      audio.play();
+      const started = audio.play();
       document.getElementById("playBtn").innerHTML = GBD.ICON.pause;
-      raf = requestAnimationFrame(tick);
+      if (started && typeof started.then === "function") started.then(startTicker);
+      else startTicker();
     } else {
       audio.pause();
       document.getElementById("playBtn").innerHTML = GBD.ICON.play;
       if (raf) cancelAnimationFrame(raf);
       raf = null;
+      updateProgress();
     }
   }
 
@@ -97,6 +152,7 @@
     if (!audio || !audio.duration) return;
     const rect = e.currentTarget.getBoundingClientRect();
     audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+    updateProgress();
   }
 
   function renderPlaylists(filter) {
@@ -128,7 +184,7 @@
       const play = document.createElement("button");
       play.type = "button";
       play.className = "chip primary";
-      play.textContent = GBD.t("playlist");
+      play.textContent = GBD.t("play");
       play.addEventListener("click", () => {
         queue = MUSIC_LIST.filter((t) => t.playlistIndex === PLAY_LIST.indexOf(pl));
         playAt(0);
@@ -231,7 +287,7 @@
     list.forEach((track) => {
       const card = document.createElement("article");
       card.className = "item-card";
-      card.dataset.en = track.title.en;
+      card.dataset.track = trackKey(track);
       const img = document.createElement("img");
       img.src = track.image;
       img.alt = GBD.pick(track.title);
@@ -246,7 +302,7 @@
       const play = document.createElement("button");
       play.type = "button";
       play.className = "chip primary";
-      play.textContent = GBD.t("music");
+      play.textContent = GBD.t("play");
       play.addEventListener("click", () => {
         queue = list;
         playAt(list.indexOf(track));
@@ -283,6 +339,7 @@
     const field = document.getElementById("searchField").value;
     if (tab === "playlist") renderPlaylists(q);
     else renderTracks(q, field);
+    paintPlaying();
   }
 
   function setTab(next) {
@@ -310,6 +367,10 @@
       document.getElementById("modal").hidden = true;
     });
     setTab("playlist");
-    document.addEventListener("gbd:lang", run);
+    document.addEventListener("gbd:lang", () => {
+      run();
+      const track = currentTrack();
+      if (track) document.getElementById("playerTitle").textContent = GBD.pick(track.title);
+    });
   });
 })();

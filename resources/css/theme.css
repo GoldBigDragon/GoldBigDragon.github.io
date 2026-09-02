@@ -757,6 +757,9 @@ body.is-reading .page-head .crumb:hover {
   transition: border-color var(--motion-quick) var(--ease-out);
 }
 .item-card:hover { border-color: color-mix(in oklab, var(--gold) 50%, var(--border)); }
+.item-card.is-playing {
+  border-color: var(--gold);
+}
 .item-card img {
   width: 72px;
   height: 72px;

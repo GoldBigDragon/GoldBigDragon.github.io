@@ -53,6 +53,7 @@
     created: { en: "Created", kr: "등록일", jp: "登録日", cn: "创建日期", ru: "Создано" },
     playlist: { en: "Playlist", kr: "플레이리스트", jp: "プレイリスト", cn: "播放列表", ru: "Плейлист" },
     tracks: { en: "Tracks", kr: "곡", jp: "曲", cn: "曲目", ru: "Треки" },
+    play: { en: "Play", kr: "재생", jp: "再生", cn: "播放", ru: "Играть" },
     lyrics: { en: "Lyrics", kr: "가사", jp: "歌詞", cn: "歌词", ru: "Текст" },
     composedAt: { en: "Composed", kr: "작곡일", jp: "作曲日", cn: "作曲日期", ru: "Написано" },
     composedWith: { en: "Tool", kr: "작곡 도구", jp: "ツール", cn: "工具", ru: "Инструмент" },
@@ -66,7 +67,13 @@
     translating: { en: "Translation", kr: "번역", jp: "翻訳", cn: "翻译", ru: "Перевод" },
     page: { en: "Page", kr: "페이지", jp: "ページ", cn: "页", ru: "Страница" },
     unfinished: { en: "This tool is not finished yet.", kr: "아직 완성되지 않은 도구입니다.", jp: "未完成のツールです。", cn: "该工具尚未完成。", ru: "Этот инструмент ещё не готов." },
-    logoDescription: { en: "동양 용 문양", kr: "동양 용 문양", jp: "동양 용 문양", cn: "동양 용 문양", ru: "동양 용 문양" }
+    logoDescription: {
+      en: "East Asian dragon motif",
+      kr: "동양 용 문양",
+      jp: "東洋の龍文様",
+      cn: "东方龙纹",
+      ru: "Восточный драконий узор"
+    }
   };
 
   function svg(path, view) {
