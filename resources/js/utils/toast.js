@@ -39,7 +39,7 @@ const ToastManager = (function() {
 
 		toast.id = "toast-" + currentToastId;
 		toast.className = "toast show";
-		toast.innerHTML = message;
+		toast.textContent = String(message == null ? "" : message);
 
 		// 클릭 시 제거
 		toast.addEventListener('click', function() {

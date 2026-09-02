@@ -42,11 +42,6 @@
   }
 
   function apiBase() {
-    if (typeof window.GBD_CHAT_API === "string" && window.GBD_CHAT_API) return window.GBD_CHAT_API;
-    try {
-      var stored = localStorage.getItem("gbd_chat_api");
-      if (stored) return stored;
-    } catch (_) {}
     return "/api/chat";
   }
 
@@ -59,6 +54,16 @@
   var RATE_MS = 60000;
   var MAX_AGE_MS = 259200000;
   var NTFY_INLINE = 3500;
+  var GROUP_FIELD_MAX = 16;
+  var NICK_MAX = 16;
+  var TEXT_MAX = 1024;
+  var MAX_CIPHERTEXT = 32 * 1024;
+  var ROOM_HASH_RE = /^[a-f0-9]{64}$/;
+  var CLIENT_ID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+  var ALLOWED_IMAGE_TYPE = /^image\/(jpeg|jpg|png|gif|webp|bmp)$/i;
+  var MAX_IMAGE_BYTES = 8 * 1024 * 1024;
+  var BIDI = /[\u202A-\u202E\u2066-\u2069\u200B-\u200F\uFEFF]/g;
+  var ALLOWED_TTL = { 60: 1, 600: 1, 1800: 1, 3600: 1, 21600: 1, 86400: 1, 259200: 1 };
   var aesCache = Object.create(null);
   var hashCache = Object.create(null);
   var rowCache = Object.create(null);
@@ -68,7 +73,65 @@
   var rateMem = null;
 
   function topicOf(hash) {
-    return "gbd" + String(hash).slice(0, 40);
+    var h = String(hash || "").toLowerCase();
+    if (!ROOM_HASH_RE.test(h)) h = "0000000000000000000000000000000000000000000000000000000000000000";
+    return "gbd" + h.slice(0, 40);
+  }
+
+  function isNtfyUrl(url) {
+    try {
+      var u = new URL(url);
+      return u.protocol === "https:" && (u.hostname === "ntfy.sh" || u.hostname.slice(-8) === ".ntfy.sh");
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function stripUnsafe(text, allowNewline) {
+    var src = String(text || "").replace(BIDI, "");
+    var out = "";
+    for (var i = 0; i < src.length; i++) {
+      var c = src.charCodeAt(i);
+      if (c === 10) {
+        if (allowNewline) out += "\n";
+        continue;
+      }
+      if (c < 32 || c === 127) continue;
+      out += src[i];
+    }
+    return out;
+  }
+
+  function clampField(text, max, opts) {
+    opts = opts || {};
+    var s = stripUnsafe(String(text || "").normalize("NFC"), Boolean(opts.newline));
+    if (opts.trim) s = s.trim();
+    if (s.length > max) s = s.slice(0, max);
+    return s;
+  }
+
+  function clampGroupField(text, trim) {
+    return clampField(text, GROUP_FIELD_MAX, { trim: trim, newline: false });
+  }
+
+  function sanitizeIp(ip) {
+    var s = String(ip || "").trim().slice(0, 45);
+    if (/^(?:\d{1,3}\.){3}\d{1,3}$/.test(s) || /^[0-9a-f:.]{2,45}$/i.test(s)) return s;
+    return "0.0.0.0";
+  }
+
+  function validCiphertext(value) {
+    if (typeof value !== "string" || !value || value.length > MAX_CIPHERTEXT) return false;
+    if (value.length % 4 !== 0) return false;
+    return /^[A-Za-z0-9+/]+=*$/.test(value);
+  }
+
+  function validTimestamp(value) {
+    return typeof value === "string" && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$/.test(value);
+  }
+
+  function isAllowedTtl(n) {
+    return ALLOWED_TTL[n] === 1;
   }
 
   function withRetry(fn, times) {
@@ -87,11 +150,17 @@
   }
 
   function ntfyFetch(url, init) {
+    if (!isNtfyUrl(url)) return Promise.reject(new Error("error"));
     var opts = init ? Object.assign({}, init) : {};
     opts.headers = Object.assign({ Accept: "application/json" }, opts.headers || {});
     opts.signal = opts.signal || AbortSignal.timeout(12000);
+    opts.credentials = "omit";
+    opts.mode = "cors";
+    opts.referrerPolicy = "no-referrer";
+    opts.redirect = "follow";
     return withRetry(function () {
       return fetch(url, opts).then(function (res) {
+        if (!isNtfyUrl(res.url || url)) throw new Error("error");
         if (res.status === 502 || res.status === 503 || res.status === 429) {
           throw new Error(res.status === 429 ? "rate" : "error");
         }
@@ -105,7 +174,7 @@
     return fetch("https://get.geojs.io/v1/ip.json", { signal: AbortSignal.timeout(8000) }).then(function (res) {
       return res.json();
     }).then(function (d) {
-      cachedIp = String((d && d.ip) || "").trim() || "0.0.0.0";
+      cachedIp = sanitizeIp(String((d && d.ip) || ""));
       cachedIpAt = Date.now();
       return cachedIp;
     }).catch(function () {
@@ -161,12 +230,12 @@
       }
     }
     if (!obj || typeof obj !== "object") return null;
-    if (typeof obj.c !== "string" || !obj.c) return null;
+    if (!validCiphertext(obj.c)) return null;
     return {
       ciphertext: obj.c,
-      ip: typeof obj.ip === "string" && obj.ip ? obj.ip : "0.0.0.0",
-      createdAt: obj.createdAt,
-      expiresAt: obj.expiresAt
+      ip: sanitizeIp(obj.ip),
+      createdAt: validTimestamp(obj.createdAt) ? obj.createdAt : undefined,
+      expiresAt: validTimestamp(obj.expiresAt) ? obj.expiresAt : undefined
     };
   }
 
@@ -196,6 +265,7 @@
     if (rowCache[ev.id]) return Promise.resolve(rowCache[ev.id]);
     var att = ev.attachment && ev.attachment.url;
     if (att) {
+      if (!isNtfyUrl(String(att))) return Promise.resolve(null);
       return ntfyFetch(att).then(function (res) {
         if (!res.ok) return null;
         return res.text();
@@ -254,7 +324,10 @@
   }
 
   function kvPost(hash, ciphertext, ttl) {
-    var ms = Math.min(MAX_AGE_MS, Math.max(60000, Number(ttl) * 1000 || 86400000));
+    if (!ROOM_HASH_RE.test(hash) || !validCiphertext(ciphertext) || !isAllowedTtl(ttl)) {
+      return Promise.reject(new Error("error"));
+    }
+    var ms = Math.min(MAX_AGE_MS, Math.max(60000, ttl * 1000));
     var createdAt = new Date().toISOString();
     var expiresAt = new Date(Date.now() + ms).toISOString();
     if (rateWaitMs() > 0) return Promise.reject(new Error("rate"));
@@ -344,7 +417,7 @@
   }
 
   function groupPassphrase(title, password) {
-    return String(title).normalize("NFC") + GROUP_SEP + String(password).normalize("NFC");
+    return clampGroupField(title, true) + GROUP_SEP + clampGroupField(password, false);
   }
 
   function roomHash(passphrase) {
@@ -362,9 +435,25 @@
   }
 
   function encryptPayload(passphrase, payload) {
+    var safe = {
+      v: 1,
+      kind: payload.kind === "welcome" ? "welcome" : "chat",
+      nick: clampField(payload.nick, NICK_MAX, { trim: true }),
+      text: clampField(payload.text, payload.kind === "welcome" ? GROUP_FIELD_MAX : TEXT_MAX, {
+        trim: payload.kind === "welcome",
+        newline: payload.kind === "chat"
+      }),
+      clientId: clampField(payload.clientId, 36),
+      at: Number(payload.at) || Date.now()
+    };
+    if (payload.img) {
+      var img = validImg(payload.img);
+      if (img) safe.img = img;
+    }
+    if (safe.kind === "chat" && !safe.text && !safe.img) return Promise.reject(new Error("empty"));
     return aesKey(passphrase).then(function (key) {
       var iv = crypto.getRandomValues(new Uint8Array(12));
-      return crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, key, te.encode(JSON.stringify(payload))).then(function (ctBuf) {
+      return crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, key, te.encode(JSON.stringify(safe))).then(function (ctBuf) {
         var ct = new Uint8Array(ctBuf);
         var out = new Uint8Array(12 + ct.byteLength);
         out.set(iv, 0);
@@ -392,11 +481,13 @@
     h = h | 0;
     if (w < 1 || h < 1 || w > 32 || h > 32) return null;
     if (typeof img.p !== "string" || !img.p) return null;
+    if (!/^[A-Za-z0-9+/]+=*$/.test(img.p)) return null;
     if (b64DecodedLen(img.p) !== w * h * 4) return null;
     return { w: w, h: h, p: img.p };
   }
 
   function decryptPayload(passphrase, b64) {
+    if (!validCiphertext(b64)) return Promise.resolve(null);
     var raw;
     try {
       raw = b64ToBytes(b64);
@@ -412,8 +503,17 @@
       var obj = JSON.parse(td.decode(pt));
       if (!obj || obj.v !== 1 || typeof obj.nick !== "string" || typeof obj.text !== "string") return null;
       if (obj.kind !== "chat" && obj.kind !== "welcome") return null;
+      if (typeof obj.clientId !== "string") return null;
+      obj.nick = clampField(obj.nick, NICK_MAX, { trim: true });
+      obj.text = clampField(obj.text, obj.kind === "welcome" ? GROUP_FIELD_MAX : TEXT_MAX, {
+        trim: obj.kind === "welcome",
+        newline: obj.kind === "chat"
+      });
+      obj.clientId = clampField(obj.clientId, 36);
+      obj.at = Number(obj.at) || 0;
       obj.img = validImg(obj.img);
       if (obj.kind === "chat" && !obj.text && !obj.img) return null;
+      if (obj.kind === "welcome" && !obj.text) return null;
       return obj;
     }).catch(function () {
       return null;
@@ -422,7 +522,7 @@
 
   function getClientId() {
     var id = getCookie(UID_COOKIE);
-    if (id && id.length >= 8) return id;
+    if (id && CLIENT_ID_RE.test(id)) return id;
     id = crypto.randomUUID();
     setCookie(UID_COOKIE, id, 365);
     return id;
@@ -430,7 +530,7 @@
 
   function formatStamp(iso) {
     var d = new Date(iso);
-    if (isNaN(d.getTime())) return iso;
+    if (isNaN(d.getTime())) return "";
     function p(n) { return String(n).padStart(2, "0"); }
     return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()) + " " + p(d.getHours()) + ":" + p(d.getMinutes()) + ":" + p(d.getSeconds());
   }
@@ -444,13 +544,14 @@
   }
 
   function apiGet(hash, query) {
+    if (!ROOM_HASH_RE.test(hash)) return Promise.resolve([]);
     if (onPages()) return kvGet(hash, query);
     var u = new URL(apiBase(), location.origin);
     u.searchParams.set("roomHash", hash);
     u.searchParams.set("limit", String(query.limit));
     if (query.before) u.searchParams.set("before", query.before);
     if (query.after) u.searchParams.set("after", query.after);
-    return fetch(u.toString()).then(function (res) {
+    return fetch(u.pathname + u.search, { credentials: "same-origin", mode: "same-origin" }).then(function (res) {
       return res.json().then(function (data) {
         if (!res.ok) throw new Error(data.error || "error");
         return data.messages || [];
@@ -459,9 +560,12 @@
   }
 
   function apiPost(hash, ciphertext, ttl) {
+    if (!ROOM_HASH_RE.test(hash) || !isAllowedTtl(ttl)) return Promise.reject(new Error("error"));
     if (onPages()) return kvPost(hash, ciphertext, ttl);
     return fetch(apiBase(), {
       method: "POST",
+      credentials: "same-origin",
+      mode: "same-origin",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ roomHash: hash, ciphertext: ciphertext, ttl: ttl })
     }).then(function (res) {
@@ -482,7 +586,7 @@
           nick: payload.nick,
           text: payload.text,
           img: payload.img || null,
-          ip: row.ip,
+          ip: sanitizeIp(row.ip),
           createdAt: row.createdAt,
           mine: payload.clientId === clientId,
           kind: payload.kind
@@ -504,7 +608,7 @@
   }
 
   function pixelCanvas(img) {
-    var parsed = img && img.w && img.h && img.p ? img : validImg(img);
+    var parsed = validImg(img);
     if (!parsed) return null;
     var bytes;
     try {
@@ -524,7 +628,7 @@
 
   function loadImageFile(file) {
     return new Promise(function (resolve, reject) {
-      if (!file || !String(file.type || "").startsWith("image/")) {
+      if (!file || file.size > MAX_IMAGE_BYTES || !ALLOWED_IMAGE_TYPE.test(String(file.type || ""))) {
         reject(new Error("type"));
         return;
       }
@@ -709,12 +813,16 @@
     var nickField = field("nick", t("nick"));
     var nickInput = document.createElement("input");
     nickInput.type = "text";
-    nickInput.maxLength = 16;
+    nickInput.maxLength = NICK_MAX;
     nickInput.id = "chatNick";
     nickInput.autocomplete = "nickname";
+    nickInput.spellcheck = false;
+    nickInput.addEventListener("input", function () {
+      nickInput.value = clampField(nickInput.value, NICK_MAX);
+    });
     try {
       var saved = localStorage.getItem("gbd_chat_nick");
-      if (saved) nickInput.value = saved.slice(0, 16);
+      if (saved) nickInput.value = clampField(saved, NICK_MAX, { trim: true });
     } catch (_) {}
     nickField.appendChild(nickInput);
     var ttlField = field("ttl", t("expiry"));
@@ -733,10 +841,11 @@
     msgField.querySelector("span").id = "chatCount";
     var area = document.createElement("textarea");
     area.id = "chatText";
-    area.maxLength = 1024;
+    area.maxLength = TEXT_MAX;
     area.rows = 3;
     area.addEventListener("input", function () {
-      document.getElementById("chatCount").textContent = t("message") + " · " + area.value.length + "/1024";
+      area.value = clampField(area.value, TEXT_MAX, { newline: true });
+      document.getElementById("chatCount").textContent = t("message") + " · " + area.value.length + "/" + TEXT_MAX;
     });
     area.addEventListener("keydown", onComposerKey);
     msgField.appendChild(area);
@@ -746,7 +855,7 @@
     var actions = el("div", "chat-composer-actions");
     var file = document.createElement("input");
     file.type = "file";
-    file.accept = "image/*";
+    file.accept = "image/jpeg,image/png,image/gif,image/webp,image/bmp";
     file.id = "chatFile";
     file.className = "chat-file";
     file.addEventListener("change", function () {
@@ -956,16 +1065,23 @@
     var titleField = field("", t("roomTitle"));
     var titleIn = document.createElement("input");
     titleIn.type = "text";
-    titleIn.maxLength = 64;
+    titleIn.maxLength = GROUP_FIELD_MAX;
     titleIn.id = "groupTitle";
     titleIn.autocomplete = "off";
+    titleIn.spellcheck = false;
+    titleIn.addEventListener("input", function () {
+      titleIn.value = clampField(titleIn.value, GROUP_FIELD_MAX);
+    });
     titleField.appendChild(titleIn);
     var pwField = field("", t("password"));
     var pwIn = document.createElement("input");
     pwIn.type = "password";
-    pwIn.maxLength = 128;
+    pwIn.maxLength = GROUP_FIELD_MAX;
     pwIn.id = "groupPassword";
     pwIn.autocomplete = "new-password";
+    pwIn.addEventListener("input", function () {
+      pwIn.value = clampField(pwIn.value, GROUP_FIELD_MAX);
+    });
     pwField.appendChild(pwIn);
     var err = el("p", "chat-notice");
     err.id = "groupError";
@@ -994,8 +1110,8 @@
     var titleIn = document.getElementById("groupTitle");
     var pwIn = document.getElementById("groupPassword");
     var err = document.getElementById("groupError");
-    var roomTitle = ((titleIn && titleIn.value) || "").trim().normalize("NFC");
-    var pw = ((pwIn && pwIn.value) || "").normalize("NFC");
+    var roomTitle = clampGroupField((titleIn && titleIn.value) || "", true);
+    var pw = clampGroupField((pwIn && pwIn.value) || "", false);
     function fail(msg) {
       if (err) {
         err.hidden = false;
@@ -1143,11 +1259,13 @@
     var nickEl = document.getElementById("chatNick");
     var textEl = document.getElementById("chatText");
     var ttlEl = document.getElementById("chatTtl");
-    var name = (nickEl && nickEl.value || "").trim();
-    var body = (textEl && textEl.value || "").trim();
+    var name = clampField(nickEl && nickEl.value || "", NICK_MAX, { trim: true });
+    var body = clampField(textEl && textEl.value || "", TEXT_MAX, { newline: true }).trim();
     var img = state.pendingImg;
     if (!name) return showNotice(t("needNick"));
     if (!body && !img) return showNotice(t("needText"));
+    var ttl = Number(ttlEl && ttlEl.value || 86400);
+    if (!isAllowedTtl(ttl)) ttl = 86400;
     state.busy = true;
     updateSendButton();
     showNotice("");
@@ -1155,21 +1273,21 @@
     var payload = {
       v: 1,
       kind: "chat",
-      nick: name.slice(0, 16),
-      text: body.slice(0, 1024),
+      nick: name,
+      text: body.slice(0, TEXT_MAX),
       clientId: state.clientId,
       at: Date.now()
     };
     if (img) payload.img = img;
     encryptPayload(state.room.passphrase, payload).then(function (ciphertext) {
-      return apiPost(state.room.hash, ciphertext, Number(ttlEl && ttlEl.value || 86400));
+      return apiPost(state.room.hash, ciphertext, ttl);
     }).then(function (row) {
       var view = {
         id: row.id,
         nick: payload.nick,
         text: payload.text,
         img: img,
-        ip: row.ip,
+        ip: sanitizeIp(row.ip),
         createdAt: row.createdAt,
         mine: true,
         kind: "chat"
