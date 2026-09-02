@@ -1,147 +1,72 @@
 <!DOCTYPE html>
-<html lang="ko">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<meta name="author" content="GoldBigDragon" />
-		<meta name="description" content="Index Page" />
-		<meta http-equiv="Expires" content="-1">
-		<meta http-equiv="Pragma" content="no-cache">
-		<meta http-equiv="Cache-Control" content="no-cache">
-		<!-- Content Security Policy: XSS 방지 -->
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://pagead2.googlesyndication.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://www.google.com; frame-src https://www.google.com;">
-		<link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico" />
-		<title>GoldBigDragon</title>
-		<link rel="stylesheet" href="./resources/vendor/fontawesome-free/css/all.min.css" />
-		<link rel="stylesheet" href="./resources/vendor/bootstrap/bootstrap.css" />
-		<link rel="stylesheet" href="./resources/css/index.css" />
-		<link rel="stylesheet" href="./resources/css/basic.css" />
-	</head>
-	<body>
-		<div class="row" id="header"></div>
-		<main class="row" style="margin-top:6rem; margin-bottom:1rem; display:flex; justify-content: center; align-items: flex-start;">
-			<div class="col-1"></div>
-			<div class="col" id="contents">
-				<!-- 접근성: 프로필 섹션 -->
-				<section class="row" style="display:flex;justify-content:center;align-items:center;margin-bottom: 2rem;" role="region" aria-labelledby="profile-heading">
-					<h1 id="profile-heading" class="visually-hidden">Profile Information</h1>
-					<div class="col center" style="max-width: 20rem;">
-						<div class="hover-text lang" data-lang-var="INDEX_LANG" data-lang="logo-description" aria-hidden="true">Oriental<br>Dragon<br>Shape</div>
-						<img id="profile-image" src="./resources/img/index/profile-image.png" alt="GoldBigDragon profile image" loading="lazy">
-					</div>
-					<div class="col" style="min-width: 16rem;display: flex;align-items: center;">
-						<div style="width: 100%;" role="list" aria-label="Profile details">
-							<div class="row mb-3" role="listitem">
-								<div class="col-3 lang dim-text center" data-lang-var="INDEX_LANG" data-lang="name">
-									<i class="fa-solid fa-tags" aria-hidden="true"></i>&nbsp;Name:
-								</div>
-								<div class="col lang bold-text left" data-lang-var="INDEX_LANG" data-lang="name-value">
-									TaeRyong Kim
-								</div>
-							</div>
-							<div class="row mb-3" role="listitem">
-								<div class="col-3 lang dim-text center" data-lang-var="INDEX_LANG" data-lang="country">
-									<i class="fa-solid fa-globe" aria-hidden="true"></i>&nbsp;Country:
-								</div>
-								<div class="col lang bold-text left" data-lang-var="INDEX_LANG" data-lang="country-value">
-									South Korea
-								</div>
-							</div>
-							<div class="row mb-3" role="listitem">
-								<div class="col-3 lang dim-text center" data-lang-var="INDEX_LANG" data-lang="contact">
-									<i class="fa-solid fa-envelope" aria-hidden="true"></i>&nbsp;Contact:
-								</div>
-								<div class="col bold-text left">
-									<a class="btn btn-dark btn-social" aria-label="Send email to dnwndugod642@naver.com" href="mailto:dnwndugod642@naver.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- 접근성: Career 섹션 -->
-				<section role="region" aria-labelledby="career-heading">
-					<h2 id="career-heading" class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="career">
-						<i class="fa-solid fa-building" aria-hidden="true"></i>&nbsp;Career
-					</h2>
-					<div class="row category">
-						<div class="badge-box">
-							<div id='career-badge-area' class="row badge-area" role="list" aria-label="Career badges">
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- 접근성: Education 섹션 -->
-				<section role="region" aria-labelledby="education-heading">
-					<h2 id="education-heading" class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="education">
-						<i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>&nbsp;Education
-					</h2>
-					<div class="row category">
-						<div class="badge-box">
-							<div id='education-badge-area' class="row badge-area" role="list" aria-label="Education badges">
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- 접근성: Certificate 섹션 -->
-				<section role="region" aria-labelledby="certificate-heading">
-					<h2 id="certificate-heading" class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="certificate">
-						<i class='fa-solid fa-award' aria-hidden="true"></i>&nbsp;Certificate
-					</h2>
-					<div class="row category">
-						<div class="badge-box">
-							<div id='certificate-badge-area' class="row badge-area" role="list" aria-label="Certificate badges">
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- 접근성: ETC 섹션 -->
-				<section role="region" aria-labelledby="etc-heading">
-					<h2 id="etc-heading" class="row lang badge-title" data-lang-var="INDEX_LANG" data-lang="etc">
-						<i class="fa-solid fa-trophy" aria-hidden="true"></i>&nbsp;ETC
-					</h2>
-					<div class="row category">
-						<div class="badge-box">
-							<div id='etc-badge-area' class="row badge-area" role="list" aria-label="Achievement badges">
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-			<div class="col-1"></div>
-		</main>
-		<div class="modal fade" id="badgeDetailModal" tabindex="-1" role="dialog" aria-modal="true">
-			<div class="modal-dialog modal-xl">
-				<div class="modal-content">
-					<div class="modal-header" style="display: flex;">
-						<div id="badgeModalTitle">
-						</div>
-						<button type="button" class="btn text-white" data-bs-dismiss="modal" aria-label="Close">
-							<i class="fa-solid fa-xmark fa-xl"></i>
-						</button>
-					</div>
-					<div id="badgeModalBody" class="modal-body">
-					</div>
-					<div class="modal-footer" style="justify-content: flex-end;">
-						<button type="button" class="btn btn-secondary shadow-sm lang" data-bs-dismiss="modal" aria-label="Close" data-lang-var="INDEX_LANG" data-lang="close">
-							<i class="fa-solid fa-ban"></i>&nbsp;Close
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row" id="footer"></div>
-	</body>
-	<script src="./resources/vendor/jquery/jquery.min.js"></script>
-	<script src="./resources/vendor/jquery/jquery.easing.min.js"></script>
-	<script src="./resources/vendor/popper/popper.min.js"></script>
-	<script src="./resources/vendor/bootstrap/bootstrap.5.1.3.bundle.min.js"></script>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="author" content="GoldBigDragon">
+  <meta name="description" content="GoldBigDragon — TaeRyong Kim">
+  <meta name="theme-color" content="#0c0c0e">
+  <title>GoldBigDragon</title>
+  <link rel="icon" href="/resources/img/favicon.ico">
+  <link rel="stylesheet" href="/resources/css/theme.css">
+</head>
+<body data-page="home">
+  <button type="button" class="corner tl" id="menuBtn" aria-expanded="false" aria-controls="menuOverlay"></button>
+  <button type="button" class="corner tr" id="langBtn" aria-expanded="false" aria-controls="langOverlay"></button>
 
-	<script src="./resources/js/basic.js"></script>
-	<script src="./resources/js/utils/navbar.js"></script>
-	<script src="./resources/lang/index.js"></script>
-	<script src="./resources/data/index/career.js"></script>
-	<script src="./resources/data/index/education.js"></script>
-	<script src="./resources/data/index/certificate.js"></script>
-	<script src="./resources/data/index/etc.js"></script>
-	<script src="./resources/js/index.js"></script>
+  <nav class="dock" aria-label="Portfolio">
+    <button type="button" class="dock-btn" data-cat="career" aria-label="Career"></button>
+    <button type="button" class="dock-btn" data-cat="education" aria-label="Education"></button>
+    <button type="button" class="dock-btn" data-cat="certificate" aria-label="Certificate"></button>
+    <button type="button" class="dock-btn" data-cat="etc" aria-label="Awards"></button>
+  </nav>
+
+  <main class="stage">
+    <section class="calling-card">
+      <div class="portrait">
+        <img src="/resources/img/index/profile-image.png" width="220" height="220" alt="GoldBigDragon">
+      </div>
+      <div class="identity">
+        <h1 data-i18n="nameValue">TaeRyong Kim</h1>
+        <div class="meta" data-i18n="countryValue">South Korea</div>
+      </div>
+      <a class="mail-link" href="mailto:dnwndugod642@naver.com">
+        <span data-i18n="contact">Contact</span>
+        <span>dnwndugod642@naver.com</span>
+      </a>
+      <div class="social">
+        <a href="https://cafe.naver.com/goldbigdragon" target="_blank" rel="noopener noreferrer" aria-label="Naver Cafe" id="linkCafe"></a>
+        <a href="https://www.youtube.com/@GoldBigDragon" target="_blank" rel="noopener noreferrer" aria-label="YouTube" id="linkYt"></a>
+        <a href="https://github.com/GoldBigDragon" target="_blank" rel="noopener noreferrer" aria-label="GitHub" id="linkGh"></a>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <button type="button" class="icon-btn" id="modalBack" hidden></button>
+        <h2 id="modalTitle"></h2>
+        <button type="button" class="icon-btn" id="modalClose"></button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="/resources/js/core.js"></script>
+  <script src="/resources/js/home.js"></script>
+  <script>
+    document.getElementById("linkCafe").innerHTML = GBD.ICON.cafe;
+    document.getElementById("linkYt").innerHTML = GBD.ICON.youtube;
+    document.getElementById("linkGh").innerHTML = GBD.ICON.github;
+    document.querySelector('[data-cat="career"]').innerHTML = GBD.ICON.briefcase;
+    document.querySelector('[data-cat="education"]').innerHTML = GBD.ICON.education;
+    document.querySelector('[data-cat="certificate"]').innerHTML = GBD.ICON.medal;
+    document.querySelector('[data-cat="etc"]').innerHTML = GBD.ICON.trophy;
+    document.getElementById("modalBack").innerHTML = GBD.ICON.back;
+    document.getElementById("modalClose").innerHTML = GBD.ICON.close;
+    document.querySelector(".mail-link").insertAdjacentHTML("afterbegin", GBD.ICON.mail);
+  </script>
+</body>
 </html>

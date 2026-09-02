@@ -1,83 +1,56 @@
 <!DOCTYPE html>
-<html lang="ko">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<meta name="author" content="GoldBigDragon" />
-		<meta name="description" content="Index Page" />
-		<meta http-equiv="Expires" content="-1">
-		<meta http-equiv="Pragma" content="no-cache">
-		<meta http-equiv="Cache-Control" content="no-cache">
-		<!-- Content Security Policy: XSS 방지 -->
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://pagead2.googlesyndication.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://www.google.com; frame-src https://www.google.com;">
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico" />
-		<title>GoldBigDragon - Cartoon</title>
-		<link rel="stylesheet" href="./resources/vendor/fontawesome-free/css/all.min.css" />
-		<link rel="stylesheet" href="./resources/vendor/bootstrap/bootstrap.css" />
-		<link rel="stylesheet" href="./resources/css/cartoon.css" />
-		<link rel="stylesheet" href="./resources/css/basic.css" />
-	</head>
-	<body>
-		<div class="row" id="header"></div>
-		<main class="row" style="margin-top:6rem; margin-bottom:1rem; display:flex; justify-content: center; align-items: flex-start;">
-			<div class="col-1"></div>
-			<div class="col" id="contents">
-				<!-- 접근성: 뒤로가기 버튼 -->
-				<div class="row" style="margin-bottom: 1rem;">
-					<button id="button-back" class="btn btn-secondary" aria-label="Back to cartoon list" hidden>
-						<i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-					</button>
-				</div>
-				<!-- 접근성: 만화 커버 목록 섹션 -->
-				<section id="coverArea" class="row" role="region" aria-label="Cartoon list">
-				</section>
-				<!-- 접근성: 만화 읽기 섹션 -->
-				<section id="book" class="row" role="region" aria-label="Cartoon reader" hidden>
-					<div class="col-1"></div>
-					<div class="col">
-						<!-- 접근성: 페이지 네비게이션 -->
-						<nav class="row" style="display: flex;align-items: center;justify-content: center;" aria-label="Page navigation">
-							<div style="display: flex;align-items: center;justify-content: center;">
-								<label for="page-selector" class="visually-hidden">Select page</label>
-								<select id="page-selector" style="margin-right: 1rem;max-width: 8rem;" aria-label="Page selector">
-								</select>
-								<label for="page-input" class="visually-hidden">Page number</label>
-								<input id="page-input" type="number" value="1" min="1" style="text-align: right;max-width: 6rem;" aria-label="Enter page number">
-								<div style="margin: 0rem 1rem;" aria-hidden="true">/</div>
-								<div id="max-page" aria-label="Total pages">0</div>
-								<button id="page-move-button" class="btn btn-secondary" style="margin: 0rem 1rem;" aria-label="Go to page">
-									<i class='fa-solid fa-binoculars' aria-hidden="true"></i>
-								</button>
-							</div>
-						</nav>
-						<!-- 접근성: 페이지 제목 및 날짜 -->
-						<div class="row" style="display: flex;align-items: center;justify-content: center;margin-top: 1rem;">
-							<div style="display: flex;align-items: center;justify-content: center;">
-								<h1 id="title" class="lang" data-lang-var="COVER_LANG" data-lang="TITLE" style="font-size: 1.5rem; margin: 0;"></h1>
-								<time id="createdAt" style="margin-left: 0.5rem;"></time>
-							</div>
-						</div>
-						<!-- 접근성: 만화 페이지 영역 (우클릭, 드래그, 선택 방지) -->
-						<div class="row" id="pageArea" role="img" aria-label="Cartoon page">
-						</div>
-					</div>
-					<div class="col-1"></div>
-				</section>
-			</div>
-			<div class="col-1"></div>
-		</main>
-		<div class="row" id="footer"></div>
-	</body>
-	<script src="./resources/vendor/jquery/jquery.min.js"></script>
-	<script src="./resources/vendor/jquery/jquery.easing.min.js"></script>
-	<script src="./resources/vendor/popper/popper.min.js"></script>
-	<script src="./resources/vendor/bootstrap/bootstrap.5.1.3.bundle.min.js"></script>
-	
-	<script src="./resources/js/basic.js"></script>
-	<script src="./resources/js/utils/navbar.js"></script>
-	<script src="./resources/lang/cartoon.js"></script>
-	<script src="./resources/data/cartoon/cartoon_list.js"></script>
-	<script src="./resources/js/cartoon.js"></script>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5483159539162475" crossorigin="anonymous"></script>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="author" content="GoldBigDragon">
+  <meta name="description" content="GoldBigDragon — Cartoon">
+  <meta name="theme-color" content="#0c0c0e">
+  <title>GoldBigDragon — Cartoon</title>
+  <link rel="icon" href="/resources/img/favicon.ico">
+  <link rel="stylesheet" href="/resources/css/theme.css">
+</head>
+<body data-page="cartoon">
+  <button type="button" class="corner tl" id="menuBtn" aria-expanded="false"></button>
+  <button type="button" class="corner tr" id="langBtn" aria-expanded="false"></button>
+
+  <main class="page">
+    <header class="page-head">
+      <div class="kicker">GoldBigDragon</div>
+      <h1 data-i18n="cartoon">Cartoon</h1>
+    </header>
+
+    <section class="cover-grid covers" id="coverArea"></section>
+
+    <section class="reader" id="reader" hidden>
+      <div class="reader-nav">
+        <button type="button" class="icon-btn" id="readerBack"></button>
+        <select id="pageSelect" aria-label="Page"></select>
+        <input id="pageInput" type="number" min="1" value="1" aria-label="Page number">
+        <span>/</span>
+        <span id="maxPage">0</span>
+        <button type="button" class="icon-btn" id="pageGo"></button>
+      </div>
+      <div class="reader-title">
+        <h2 id="readerTitle"></h2>
+        <time id="readerDate"></time>
+      </div>
+      <div class="page-frame" id="pageFrame">
+        <button type="button" class="page-mover" id="prevPage" aria-label="Previous"></button>
+        <img id="pageImage" alt="">
+        <button type="button" class="page-mover" id="nextPage" aria-label="Next"></button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/resources/js/core.js"></script>
+  <script src="/resources/data/cartoon/cartoon_list.js"></script>
+  <script src="/resources/js/cartoon.js"></script>
+  <script>
+    document.getElementById("readerBack").innerHTML = GBD.ICON.back;
+    document.getElementById("pageGo").innerHTML = GBD.ICON.search;
+    document.getElementById("prevPage").innerHTML = GBD.ICON.back;
+    document.getElementById("nextPage").innerHTML = GBD.ICON.next;
+  </script>
+</body>
 </html>

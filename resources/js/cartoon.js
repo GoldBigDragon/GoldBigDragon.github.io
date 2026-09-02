@@ -1,361 +1,116 @@
-LANGUAGE_OBJECT["COVER_LANG"] = {};
+(function () {
+  "use strict";
 
-/**
- * 만화 읽기 상태 관리
- */
-let NOW_CARTOON_INDEX = 0;
+  let current = 0;
+  let lastFocus = null;
 
-// 접근성: 포커스 관리
-let lastFocusedElement = null;
+  function coverSrc(uid) {
+    return `/resources/img/cartoon/${uid}/${GBD.getLang()}/cover.png`;
+  }
+  function pageSrc(uid, file) {
+    return `/resources/img/cartoon/${uid}/${GBD.getLang()}/${file}`;
+  }
 
-/**
- * 페이지 렌더링 헬퍼 함수 (코드 중복 제거)
- * 성능 최적화: 중복 코드 제거
- */
-function renderPage(pageIndex, pages, cartoonUID) {
-	const pageInt = parseInt(pageIndex);
-	const pageArea = document.getElementById("pageArea");
-	const title = document.getElementById("title");
-	const createdAt = document.getElementById("createdAt");
-	const pageInput = document.getElementById("page-input");
-	const pageSelector = document.getElementById("page-selector");
+  function renderCovers() {
+    const area = document.getElementById("coverArea");
+    area.replaceChildren();
+    CARTOON_LIST.forEach((item, index) => {
+      const el = document.createElement("article");
+      el.className = "cover";
+      el.tabIndex = 0;
+      el.setAttribute("role", "button");
+      const img = document.createElement("img");
+      img.src = coverSrc(item.uid);
+      img.alt = GBD.pick(item.title);
+      img.loading = "lazy";
+      const h = document.createElement("h3");
+      h.textContent = GBD.pick(item.title);
+      const sub = document.createElement("div");
+      sub.className = "sub";
+      sub.textContent = GBD.pick(item.translating);
+      el.append(img, h, sub);
+      const open = () => openReader(index);
+      el.addEventListener("click", open);
+      el.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          open();
+        }
+      });
+      area.appendChild(el);
+    });
+  }
 
-	pageInput.value = (pageInt + 1);
-	pageArea.innerHTML = null;
+  function openReader(index) {
+    lastFocus = document.activeElement;
+    current = index;
+    const item = CARTOON_LIST[index];
+    document.getElementById("coverArea").hidden = true;
+    document.getElementById("reader").hidden = false;
+    const sel = document.getElementById("pageSelect");
+    sel.replaceChildren();
+    item.pages.forEach((p, i) => {
+      const opt = document.createElement("option");
+      opt.value = String(i);
+      opt.textContent = `${i + 1}. ${GBD.pick(p.title)}`;
+      sel.appendChild(opt);
+    });
+    document.getElementById("maxPage").textContent = String(item.pages.length);
+    goPage(0);
+    document.getElementById("readerBack").focus();
+  }
 
-	// 이전 페이지 버튼
-	const prevPage = document.createElement("div");
-	prevPage.className = "page-mover prev-page";
-	prevPage.innerHTML = "<i class='fa-solid fa-chevron-left'></i>";
-	prevPage.setAttribute("role", "button");
-	prevPage.setAttribute("tabindex", "0");
-	prevPage.setAttribute("aria-label", "Previous page");
+  function closeReader() {
+    document.getElementById("reader").hidden = true;
+    document.getElementById("coverArea").hidden = false;
+    if (lastFocus) lastFocus.focus();
+  }
 
-	if(pageInt > 0) {
-		const handlePrevPage = function() {
-			goPage(pageInt - 1, false);
-		};
-		prevPage.addEventListener('click', handlePrevPage);
-		prevPage.addEventListener('keydown', function(e) {
-			if (e.key === 'Enter' || e.key === ' ') {
-				e.preventDefault();
-				handlePrevPage();
-			}
-		});
-	} else {
-		prevPage.style.cursor = 'not-allowed';
-		prevPage.setAttribute("aria-disabled", "true");
-	}
+  function goPage(n) {
+    const item = CARTOON_LIST[current];
+    const max = item.pages.length - 1;
+    n = Math.max(0, Math.min(max, n));
+    const page = item.pages[n];
+    document.getElementById("pageInput").value = String(n + 1);
+    document.getElementById("pageSelect").value = String(n);
+    document.getElementById("readerTitle").textContent = GBD.pick(page.title);
+    document.getElementById("readerDate").textContent = page["created-at"] || "";
+    const img = document.getElementById("pageImage");
+    img.src = pageSrc(item.uid, page.img);
+    img.alt = GBD.pick(page.title);
+    img.draggable = false;
+    img.oncontextmenu = (e) => e.preventDefault();
+    const frame = document.getElementById("pageFrame");
+    frame.style.background = page["background-color"] || "#fff";
+    document.getElementById("prevPage").setAttribute("aria-disabled", n <= 0 ? "true" : "false");
+    document.getElementById("nextPage").setAttribute("aria-disabled", n >= max ? "true" : "false");
+  }
 
-	// 다음 페이지 버튼
-	const nextPage = document.createElement("div");
-	nextPage.className = "page-mover next-page";
-	nextPage.innerHTML = "<i class='fa-solid fa-chevron-right'></i>";
-	nextPage.setAttribute("role", "button");
-	nextPage.setAttribute("tabindex", "0");
-	nextPage.setAttribute("aria-label", "Next page");
+  function currentPageIndex() {
+    return parseInt(document.getElementById("pageInput").value, 10) - 1;
+  }
 
-	if(pageInt < pages.length - 1) {
-		const handleNextPage = function() {
-			goPage(pageInt + 1, false);
-		};
-		nextPage.addEventListener('click', handleNextPage);
-		nextPage.addEventListener('keydown', function(e) {
-			if (e.key === 'Enter' || e.key === ' ') {
-				e.preventDefault();
-				handleNextPage();
-			}
-		});
-	} else {
-		nextPage.style.cursor = 'not-allowed';
-		nextPage.setAttribute("aria-disabled", "true");
-	}
-
-	// 만화 이미지
-	const img = document.createElement("img");
-	img.className = "cartoon lang-src";
-	img.src = "/resources/img/cartoon/" + cartoonUID + "/" + NOW_LANG + "/" + pages[pageInt]["img"];
-	img.loading = "lazy"; // 성능 최적화
-	img.alt = pages[pageInt]["title"][NOW_LANG] + " - Page " + (pageInt + 1); // 접근성
-
-	LANGUAGE_OBJECT["COVER_LANG"]["NOW_PAGE"] = {
-		"en": "/resources/img/cartoon/" + cartoonUID + "/en/" + pages[pageInt]["img"],
-		"kr": "/resources/img/cartoon/" + cartoonUID + "/kr/" + pages[pageInt]["img"],
-		"jp": "/resources/img/cartoon/" + cartoonUID + "/jp/" + pages[pageInt]["img"],
-		"cn": "/resources/img/cartoon/" + cartoonUID + "/cn/" + pages[pageInt]["img"],
-		"ru": "/resources/img/cartoon/" + cartoonUID + "/ru/" + pages[pageInt]["img"]
-	};
-	img.setAttribute("data-lang-var", "COVER_LANG");
-	img.setAttribute("data-lang", "NOW_PAGE");
-
-	title.innerHTML = pages[pageInt]["title"][NOW_LANG];
-	createdAt.innerHTML = pages[pageInt]["created-at"];
-	LANGUAGE_OBJECT["COVER_LANG"]["TITLE"] = pages[pageInt]["title"];
-
-	// 배경색 설정
-	if("background-color" in pages[pageInt]) {
-		pageArea.style.backgroundColor = pages[pageInt]["background-color"];
-		pageArea.style.boxShadow = "0px 0px 10px " + pages[pageInt]["background-color"];
-	} else {
-		pageArea.style.backgroundColor = "white";
-		pageArea.style.boxShadow = "0px 0px 10px white";
-	}
-
-	// 페이지 셀렉터 업데이트
-	if(pageSelector && pageSelector.children.length > 0) {
-		pageSelector.children[pageSelector.children.length - (pageInt + 1)].selected = true;
-	}
-
-	// DOM에 추가
-	pageArea.appendChild(prevPage);
-	pageArea.appendChild(img);
-	pageArea.appendChild(nextPage);
-}
-
-/**
- * 만화 표지 추가 함수
- * 성능 최적화: 이미지 lazy loading 적용
- * 접근성: role, tabindex, aria-label 추가
- */
-function addCover(targetArea, coverData, index){
-	const cover = document.createElement("div");
-	cover.className = "cover col";
-
-	// 접근성: role 및 tabindex 추가
-	cover.setAttribute("role", "button");
-	cover.setAttribute("tabindex", "0");
-	cover.setAttribute("aria-label", `Read ${coverData["title"]["en"]}`);
-
-	const handleCoverClick = function() {
-		readCartoon(index);
-	};
-
-	cover.addEventListener('click', handleCoverClick);
-
-	// 접근성: 키보드 네비게이션 (Enter/Space)
-	cover.addEventListener('keydown', function(e) {
-		if (e.key === 'Enter' || e.key === ' ') {
-			e.preventDefault();
-			handleCoverClick();
-		}
-	});
-
-	const coverImage = document.createElement("img");
-	coverImage.className = "book-cover lang-src";
-	coverImage.src = "/resources/img/cartoon/"+coverData["uid"]+"/" + NOW_LANG+"/cover.png";
-	// 성능 최적화: lazy loading 적용
-	coverImage.loading = "lazy";
-	// 접근성: alt 속성 추가
-	coverImage.alt = coverData["title"]["en"] + " cover";
-
-	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]+"-cover"] = {
-		"en": "/resources/img/cartoon/"+coverData["uid"]+"/en/cover.png",
-		"kr": "/resources/img/cartoon/"+coverData["uid"]+"/kr/cover.png",
-		"jp": "/resources/img/cartoon/"+coverData["uid"]+"/jp/cover.png",
-		"cn": "/resources/img/cartoon/"+coverData["uid"]+"/cn/cover.png",
-		"ru": "/resources/img/cartoon/"+coverData["uid"]+"/ru/cover.png"
-	};
-	coverImage.setAttribute("data-lang-var", "COVER_LANG");
-	coverImage.setAttribute("data-lang", coverData["uid"]+"-cover");
-
-	const coverTitle = document.createElement("div");
-	coverTitle.className = "book-title lang";
-	coverTitle.innerHTML = coverData["title"][NOW_LANG];
-	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]] = coverData["title"];
-	coverTitle.setAttribute("data-lang-var", "COVER_LANG");
-	coverTitle.setAttribute("data-lang", coverData["uid"]);
-
-	const translating = document.createElement("div");
-	translating.className = "book-translating lang";
-	translating.innerHTML = coverData["translating"][NOW_LANG];
-	LANGUAGE_OBJECT["COVER_LANG"][coverData["uid"]+"-translating"] = coverData["translating"];
-	translating.setAttribute("data-lang-var", "COVER_LANG");
-	translating.setAttribute("data-lang", coverData["uid"]+"-translating");
-
-	cover.appendChild(coverImage);
-	cover.appendChild(coverTitle);
-	cover.appendChild(translating);
-	targetArea.appendChild(cover);
-}
-
-/**
- * 만화 읽기 시작
- */
-function readCartoon(cartoonIndex){
-	// 접근성: 모달 열기 전 현재 포커스 요소 저장
-	lastFocusedElement = document.activeElement;
-
-	NOW_CARTOON_INDEX = cartoonIndex;
-	const book = document.getElementById("book");
-	book.removeAttribute("hidden");
-	const backButton = document.getElementById("button-back");
-	backButton.removeAttribute("hidden");
-	const coverArea = document.getElementById("coverArea");
-	coverArea.setAttribute("hidden", "true");
-
-	const pages = CARTOON_LIST[cartoonIndex]["pages"];
-	const pageSelector = document.getElementById("page-selector");
-	const maxPage = document.getElementById("max-page");
-
-	const maxPageValue = pages.length;
-	pageSelector.innerHTML = null;
-
-	// 성능 최적화: DocumentFragment 사용
-	const fragment = document.createDocumentFragment();
-	for(let pageIndex = maxPageValue - 1; pageIndex >= 0; pageIndex--) {
-		const optionElement = document.createElement("option");
-		optionElement.className = "lang";
-		optionElement.value = pageIndex;
-		optionElement.innerHTML = (pageIndex+1) + ". " + pages[pageIndex]["title"][NOW_LANG];
-		LANGUAGE_OBJECT["COVER_LANG"][CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex] = {
-			"en": (pageIndex+1) + ". " + pages[pageIndex]["title"]["en"],
-			"kr": (pageIndex+1) + ". " + pages[pageIndex]["title"]["kr"],
-			"jp": (pageIndex+1) + ". " + pages[pageIndex]["title"]["jp"],
-			"cn": (pageIndex+1) + ". " + pages[pageIndex]["title"]["cn"],
-			"ru": (pageIndex+1) + ". " + pages[pageIndex]["title"]["ru"]
-		};
-		optionElement.setAttribute("data-lang-var", "COVER_LANG");
-		optionElement.setAttribute("data-lang", CARTOON_LIST[cartoonIndex]["uid"]+"-page-"+pageIndex);
-		fragment.appendChild(optionElement);
-	}
-	pageSelector.appendChild(fragment);
-
-	maxPage.innerHTML = maxPageValue;
-
-	// 마지막 페이지 렌더링
-	renderPage(maxPageValue - 1, pages, CARTOON_LIST[cartoonIndex]["uid"]);
-
-	// 접근성: 책 섹션으로 포커스 이동
-	setTimeout(() => {
-		const bookSection = document.getElementById("book");
-		const focusableElements = bookSection.querySelectorAll(
-			'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-		);
-		if (focusableElements.length > 0) {
-			focusableElements[0].focus();
-		}
-	}, 100);
-}
-
-/**
- * 만화 목록으로 돌아가기
- */
-function backToCartoonList() {
-	const book = document.getElementById("book");
-	book.setAttribute("hidden", "true");
-	const backButton = document.getElementById("button-back");
-	backButton.setAttribute("hidden", "true");
-	const coverArea = document.getElementById("coverArea");
-	coverArea.removeAttribute("hidden");
-
-	// 접근성: 포커스 복원
-	if (lastFocusedElement) {
-		lastFocusedElement.focus();
-		lastFocusedElement = null;
-	}
-}
-
-/**
- * 페이지 이동
- */
-function goPage(page, isSelected = false) {
-	let pageInt = parseInt(page);
-	const maxPageIndex = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length - 1;
-
-	// 페이지 범위 검증
-	if(pageInt < 0) {
-		pageInt = 0;
-	}
-	if(pageInt > maxPageIndex) {
-		pageInt = maxPageIndex;
-	}
-
-	const pages = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"];
-	renderPage(pageInt, pages, CARTOON_LIST[NOW_CARTOON_INDEX]["uid"]);
-}
-
-/**
- * 초기화 및 이벤트 리스너 설정
- */
-document.addEventListener('DOMContentLoaded', function() {
-	const coverArea = document.getElementById("coverArea");
-
-	// 성능 최적화: DocumentFragment 사용하여 표지 목록 렌더링
-	if(CARTOON_LIST && coverArea){
-		const fragment = document.createDocumentFragment();
-		const tempArea = document.createElement('div');
-		tempArea.className = 'row';
-		for(let index = 0; index < CARTOON_LIST.length; index++) {
-			addCover(tempArea, CARTOON_LIST[index], index);
-		}
-		coverArea.appendChild(tempArea);
-	}
-
-	// 뒤로가기 버튼 이벤트 리스너
-	const backButton = document.getElementById("button-back");
-	if(backButton) {
-		backButton.addEventListener('click', backToCartoonList);
-	}
-
-	// 페이지 셀렉터 이벤트 리스너
-	const pageSelector = document.getElementById("page-selector");
-	if(pageSelector) {
-		pageSelector.addEventListener('change', function() {
-			goPage(this.value, true);
-		});
-	}
-
-	// 페이지 입력 이벤트 리스너
-	const pageInput = document.getElementById("page-input");
-	if(pageInput) {
-		pageInput.addEventListener('keydown', function(e) {
-			if (e.key === 'Enter') {
-				e.preventDefault();
-				goPage(this.value - 1, false);
-			}
-		});
-	}
-
-	// 페이지 이동 버튼 이벤트 리스너
-	const pageMoveButton = document.getElementById("page-move-button");
-	if(pageMoveButton) {
-		pageMoveButton.addEventListener('click', function() {
-			const pageInput = document.getElementById("page-input");
-			goPage(pageInput.value - 1, false);
-		});
-	}
-
-	// 접근성: 키보드 네비게이션 (화살표 키로 페이지 이동)
-	document.addEventListener('keydown', function(e) {
-		const book = document.getElementById("book");
-
-		// 책을 읽고 있을 때만 화살표 키 네비게이션 활성화
-		if(book && !book.hasAttribute('hidden')) {
-			// 입력 필드에 포커스가 있을 때는 화살표 키 비활성화
-			if(document.activeElement.tagName === 'INPUT' ||
-			   document.activeElement.tagName === 'SELECT') {
-				return;
-			}
-
-			if (e.key === 'ArrowLeft') {
-				e.preventDefault();
-				const pageInput = document.getElementById("page-input");
-				const currentPage = parseInt(pageInput.value) - 1;
-				if(currentPage > 0) {
-					goPage(currentPage - 1, false);
-				}
-			} else if (e.key === 'ArrowRight') {
-				e.preventDefault();
-				const pageInput = document.getElementById("page-input");
-				const maxPage = CARTOON_LIST[NOW_CARTOON_INDEX]["pages"].length;
-				const currentPage = parseInt(pageInput.value) - 1;
-				if(currentPage < maxPage - 1) {
-					goPage(currentPage + 1, false);
-				}
-			} else if (e.key === 'Escape') {
-				e.preventDefault();
-				backToCartoonList();
-			}
-		}
-	});
-});
+  document.addEventListener("DOMContentLoaded", () => {
+    renderCovers();
+    document.getElementById("readerBack").addEventListener("click", closeReader);
+    document.getElementById("pageSelect").addEventListener("change", (e) => goPage(parseInt(e.target.value, 10)));
+    document.getElementById("pageGo").addEventListener("click", () => goPage(currentPageIndex()));
+    document.getElementById("pageInput").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") goPage(currentPageIndex());
+    });
+    document.getElementById("prevPage").addEventListener("click", () => goPage(currentPageIndex() - 1));
+    document.getElementById("nextPage").addEventListener("click", () => goPage(currentPageIndex() + 1));
+    document.addEventListener("keydown", (e) => {
+      const reader = document.getElementById("reader");
+      if (reader.hidden) return;
+      if (["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
+      if (e.key === "ArrowLeft") goPage(currentPageIndex() - 1);
+      if (e.key === "ArrowRight") goPage(currentPageIndex() + 1);
+      if (e.key === "Escape") closeReader();
+    });
+    document.addEventListener("gbd:lang", () => {
+      renderCovers();
+      if (!document.getElementById("reader").hidden) goPage(currentPageIndex());
+    });
+  });
+})();
