@@ -32,7 +32,8 @@
   };
 
   function t(key) {
-    var pack = (window.TEMP_CHAT_LANG || {})[key];
+    var bag = ((window.LANGUAGE_OBJECT || {}).TEMP_CHAT_LANG) || window.TEMP_CHAT_LANG || {};
+    var pack = bag[key];
     return pack ? GBD.pick(pack) : key;
   }
 
@@ -89,23 +90,23 @@
   }
 
   function checkRate(ip) {
-    var url = BLOB + "/rate";
     var now = Date.now();
-    return blobGet(url).catch(function () {
-      return [];
-    }).then(function (rows) {
-      var list = rows || [];
-      var recent = 0;
-      list.forEach(function (r) {
-        var at = Number(r.at);
-        if (r.ip === ip && now - at < RATE_MS) recent += 1;
-        else if (r._id && now - at >= RATE_MS) {
-          fetch(url + "/" + r._id, { method: "DELETE" }).catch(function () {});
-        }
-      });
-      if (recent >= RATE_MAX) throw new Error("rate");
-      return blobPost(url, { ip: ip, at: now });
+    var key = "gbd_chat_rate";
+    var list = [];
+    try {
+      list = JSON.parse(localStorage.getItem(key) || "[]");
+      if (!Array.isArray(list)) list = [];
+    } catch (_) {
+      list = [];
+    }
+    list = list.filter(function (r) {
+      return r && now - Number(r.at) < RATE_MS;
     });
+    if (list.length >= RATE_MAX) throw new Error("rate");
+    list.push({ ip: ip || "", at: now });
+    try {
+      localStorage.setItem(key, JSON.stringify(list));
+    } catch (_) {}
   }
 
   function kvGet(hash, query) {
@@ -147,7 +148,16 @@
     var createdAt = new Date().toISOString();
     var expiresAt = new Date(Date.now() + ms).toISOString();
     return writerIp().then(function (ip) {
-      return checkRate(ip).then(function () {
+      checkRate(ip);
+      return blobGet(blobCol(hash)).catch(function () {
+        return [];
+      }).then(function (rows) {
+        var now = Date.now();
+        var recent = 0;
+        (rows || []).forEach(function (r) {
+          if (r.ip === ip && now - Date.parse(r.createdAt) < RATE_MS) recent += 1;
+        });
+        if (recent >= RATE_MAX) throw new Error("rate");
         return blobPost(blobCol(hash), {
           roomHash: hash,
           ciphertext: ciphertext,
@@ -673,7 +683,7 @@
           }
         });
       }).catch(function () {});
-    }, 4000);
+    }, onPages() ? 8000 : 4000);
   }
 
   function stopPoll() {
