@@ -18,11 +18,37 @@
   let view = { category: null, index: null };
   let lastFocus = null;
 
+  function readLoaded(key) {
+    let value = window[key];
+    try {
+      switch (key) {
+        case "DATA_CAREER":
+          if (typeof DATA_CAREER !== "undefined") value = DATA_CAREER;
+          break;
+        case "DATA_EDUCATION":
+          if (typeof DATA_EDUCATION !== "undefined") value = DATA_EDUCATION;
+          break;
+        case "DATA_CERTIFICATE":
+          if (typeof DATA_CERTIFICATE !== "undefined") value = DATA_CERTIFICATE;
+          break;
+        case "DATA_ETC":
+          if (typeof DATA_ETC !== "undefined") value = DATA_ETC;
+          break;
+      }
+    } catch (_) {}
+    if (!Array.isArray(value) || value.length === 0) {
+      try {
+        value = eval(key);
+      } catch (_) {}
+    }
+    return Array.isArray(value) ? value : [];
+  }
+
   async function ensure(category) {
     if (cache[category]) return cache[category];
     const spec = FILES[category];
     await GBD.loadScript(spec.src);
-    cache[category] = window[spec.key] || [];
+    cache[category] = readLoaded(spec.key);
     return cache[category];
   }
 

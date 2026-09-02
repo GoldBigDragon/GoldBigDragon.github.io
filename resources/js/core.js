@@ -65,7 +65,8 @@
     empty: { en: "No results", kr: "결과가 없습니다", jp: "結果がありません", cn: "没有结果", ru: "Нет результатов" },
     translating: { en: "Translation", kr: "번역", jp: "翻訳", cn: "翻译", ru: "Перевод" },
     page: { en: "Page", kr: "페이지", jp: "ページ", cn: "页", ru: "Страница" },
-    unfinished: { en: "This tool is not finished yet.", kr: "아직 완성되지 않은 도구입니다.", jp: "未完成のツールです。", cn: "该工具尚未完成。", ru: "Этот инструмент ещё не готов." }
+    unfinished: { en: "This tool is not finished yet.", kr: "아직 완성되지 않은 도구입니다.", jp: "未完成のツールです。", cn: "该工具尚未完成。", ru: "Этот инструмент ещё не готов." },
+    logoDescription: { en: "Oriental\nDragon\nShape", kr: "동양 용 문양", jp: "東洋の龍形状", cn: "东方龙形", ru: "Форма\nвосточного\nдракона" }
   };
 
   function svg(path, view) {
@@ -145,11 +146,7 @@
         if (bag && bag[el.dataset.lang]) el.src = bag[el.dataset.lang][lang];
       } catch (_) {}
     });
-    const langBtn = document.getElementById("langBtn");
-    if (langBtn) {
-      const code = langBtn.querySelector(".lang-code");
-      if (code) code.textContent = lang.toUpperCase();
-    }
+    paintLangBtn();
   }
 
   function setLang(next) {
@@ -236,14 +233,41 @@
     });
   }
 
+  function flagUrl(code) {
+    return "/resources/img/header/lang/" + code + ".png";
+  }
+
+  function paintLangBtn() {
+    const langBtn = document.getElementById("langBtn");
+    if (!langBtn) return;
+    const lang = getLang();
+    let img = langBtn.querySelector("img.lang-flag");
+    if (!img) {
+      langBtn.replaceChildren();
+      img = document.createElement("img");
+      img.className = "lang-flag";
+      img.alt = "";
+      img.width = 28;
+      img.height = 28;
+      const sr = document.createElement("span");
+      sr.className = "sr-only";
+      sr.setAttribute("data-i18n", "language");
+      langBtn.append(img, sr);
+    }
+    img.src = flagUrl(lang);
+    langBtn.setAttribute("aria-label", t("language"));
+  }
+
   function buildLangMenu() {
     const overlay = document.createElement("div");
     overlay.className = "overlay";
     overlay.id = "langOverlay";
+    const names = { en: "English", kr: "한국어", jp: "日本語", cn: "中文", ru: "Русский" };
     const items = LANGS.map((code) => {
-      const names = { en: "English", kr: "한국어", jp: "日本語", cn: "中文", ru: "Русский" };
       return `<button type="button" class="lang-option${code === getLang() ? " is-active" : ""}" data-lang="${code}">
-        <span>${code.toUpperCase()}</span><span>${names[code]}</span>
+        <img class="lang-flag" src="${flagUrl(code)}" alt="" width="20" height="20">
+        <span class="lang-code">${code.toUpperCase()}</span>
+        <span class="lang-name">${names[code]}</span>
       </button>`;
     }).join("");
     overlay.innerHTML = `<div class="lang-panel" role="listbox" aria-label="${escapeHtml(t("language"))}">${items}</div>`;
@@ -287,8 +311,7 @@
       menuBtn.addEventListener("click", () => toggleOverlay("menuOverlay", menuBtn));
     }
     if (langBtn) {
-      langBtn.innerHTML = `<span class="lang-code">${getLang().toUpperCase()}</span>`;
-      langBtn.setAttribute("aria-label", t("language"));
+      paintLangBtn();
       langBtn.addEventListener("click", () => toggleOverlay("langOverlay", langBtn));
     }
     buildMenu();
@@ -361,7 +384,8 @@
     loadScript,
     mountChrome,
     closeOverlays,
-    currentPage
+    currentPage,
+    flagUrl
   };
   global.NOW_LANG = getLang();
   global.loadLanguage = () => applyI18n();
