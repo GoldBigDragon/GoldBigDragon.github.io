@@ -1,0 +1,9 @@
+name = "goldbigdragon-chat"
+main = "temp-chat.js"
+compatibility_date = "2026-09-01"
+
+# Create a KV namespace and paste the id:
+#   npx wrangler kv namespace create CHAT_KV
+[[kv_namespaces]]
+binding = "CHAT_KV"
+id = "replace-with-kv-namespace-id"

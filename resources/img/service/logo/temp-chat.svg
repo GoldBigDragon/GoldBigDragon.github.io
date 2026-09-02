@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Temporary Chat">
+  <rect width="64" height="64" rx="14" fill="#141416"/>
+  <path fill="#ffd010" d="M13 17h30a8 8 0 0 1 8 8v13a8 8 0 0 1-8 8H30l-11 9v-9h-6a8 8 0 0 1-8-8V25a8 8 0 0 1 8-8z"/>
+  <circle cx="24" cy="31.5" r="2.4" fill="#101011"/>
+  <circle cx="32" cy="31.5" r="2.4" fill="#101011"/>
+  <circle cx="40" cy="31.5" r="2.4" fill="#101011"/>
+</svg>
