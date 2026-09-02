@@ -205,7 +205,6 @@
   function toast(msg) {
     if (window.ToastManager && ToastManager.show) ToastManager.show(msg);
     else window.alert(msg);
-    else window.alert(msg);
   }
 
   function setTitle(text) {
