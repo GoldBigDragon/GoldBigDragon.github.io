@@ -86,7 +86,8 @@
   function setHead(showBack, title) {
     const back = document.getElementById("modalBack");
     back.hidden = !showBack;
-    document.getElementById("modalTitle").textContent = title;
+    const plain = String(title || "").replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, "");
+    document.getElementById("modalTitle").textContent = plain;
   }
 
   function renderBadges(category, data) {
@@ -98,13 +99,13 @@
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "badge";
-      btn.setAttribute("aria-label", GBD.pick(item["logo-title"]));
+      btn.setAttribute("aria-label", String(GBD.pick(item["logo-title"]) || "").replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, ""));
       const img = document.createElement("img");
       img.src = item.logo;
       img.alt = "";
       img.loading = "lazy";
       const cap = document.createElement("span");
-      cap.textContent = GBD.pick(item["logo-title"]);
+      cap.innerHTML = GBD.safeHtml(GBD.pick(item["logo-title"]));
       btn.append(img, cap);
       btn.addEventListener("click", () => showDetail(category, index));
       grid.appendChild(btn);

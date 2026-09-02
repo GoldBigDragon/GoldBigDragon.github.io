@@ -159,6 +159,27 @@ const IMAGE_CONVERTER_LANG = {
 		"jp": "最大圧縮",
 		"cn": "最大压缩",
 		"ru": "Максимальное сжатие"
+	},
+	"remove_bg": {
+		"en": "Remove background",
+		"kr": "배경 제거",
+		"jp": "背景を削除",
+		"cn": "去除背景",
+		"ru": "Удалить фон"
+	},
+	"skipped": {
+		"en": "kept original (smaller)",
+		"kr": "원본 유지 (더 작음)",
+		"jp": "元ファイルを維持",
+		"cn": "保留原文件",
+		"ru": "оригинал сохранён"
+	},
+	"unsupported": {
+		"en": "Unsupported file type.",
+		"kr": "지원하지 않는 파일 형식입니다.",
+		"jp": "未対応のファイル形式です。",
+		"cn": "不支持的文件类型。",
+		"ru": "Неподдерживаемый тип файла."
 	}
 }
 LANGUAGE_OBJECT["IMAGE_CONVERTER_LANG"] = IMAGE_CONVERTER_LANG;

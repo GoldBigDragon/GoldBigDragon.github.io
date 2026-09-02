@@ -7,56 +7,50 @@
   <meta name="description" content="GoldBigDragon — PDF Editor">
   <meta name="theme-color" content="#0c0c0e">
   <title>GoldBigDragon — PDF Editor</title>
-  <link rel="icon" href="../resources/img/service/logo/pdf-editor.ico">
-  <script src="../resources/vendor/pdf.2.10.377.min.js"></script>
-  <script src="../resources/vendor/pdf-lib.1.17.1.min.js"></script>
-  <script src="../resources/vendor/jszip/jszip.3.7.1.min.js"></script>
-  <script src="../resources/vendor/FileSaver.2.0.5.min.js"></script>
-  <link rel="stylesheet" href="../resources/vendor/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="../resources/css/theme.css?v=3">
-  <link rel="stylesheet" href="../resources/css/service/pdf-editor.css">
+  <link rel="icon" href="/resources/img/service/logo/pdf-editor.ico">
+  <script src="/resources/vendor/pdf.2.10.377.min.js"></script>
+  <script src="/resources/vendor/pdf-lib.1.17.1.min.js"></script>
+  <link rel="stylesheet" href="/resources/css/theme.css?v=4">
+  <link rel="stylesheet" href="/resources/css/service/pdf-editor.css?v=4">
 </head>
 <body data-page="service">
   <button type="button" class="corner tl" id="menuBtn" aria-expanded="false"></button>
   <button type="button" class="corner tr" id="langBtn" aria-expanded="false">
     <img class="lang-flag" src="/resources/img/header/lang/kr.png" alt="" width="28" height="28">
   </button>
-  <div class="tool-wrap">
-<div id="container">
-			<h1 id="title" class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="title">PDF Editor</h1>
-			<div id="fileAttachmentSection">
-				<div style="display: flex;justify-content: center;align-items: center;">
-					<div id="dropZone">
-						<span class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="container">Drag & Drop your PDF files here or click to select files</span>
-					</div>
-				</div>
-				<br>
-
-				<div id="historyController">
-					<button id="resetButton" onClick="clearHistory()">
-						<i class="fa-solid fa-trash"></i>&nbsp;
-						<div class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="clear">Clear history</div>
-					</button>
-				</div>
-				<br>
-
-				<div id="scrollContainer">
-					<div id="pdfContainer"></div>
-				</div>
-				<div id="loading">Loading...</div>
-				<div id="button-container">
-					<button id="exportPdf" class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="export_pdf" onClick="exportPDF()" disabled>Export PDF</button>
-					<button id="exportPng" class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="export_png" onClick="exportPNG()" disabled>Export PNG</button>
-				</div>
-			</div>
-			<br>
-			<h6 id="description" class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="description">Uploaded PDF files are not recorded on the site.</h6>
-			<br>
-		</div>
-  </div>
+  <main class="page">
+    <header class="page-head">
+      <h1 class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="title">PDF Editor</h1>
+    </header>
+    <div class="tool">
+      <label class="dropzone" id="dropZone">
+        <span class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="container">Drop PDF files here or tap to select</span>
+        <input type="file" id="pdfInput" accept="application/pdf" multiple>
+      </label>
+      <div class="tool-bar">
+        <button type="button" class="btn danger" id="resetButton">
+          <span class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="clear">Clear</span>
+        </button>
+        <button type="button" class="btn primary" id="exportPdf" disabled>
+          <span class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="export_pdf">Export PDF</span>
+        </button>
+        <button type="button" class="btn" id="exportPng" disabled>
+          <span class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="export_png">Export PNG</span>
+        </button>
+      </div>
+      <div id="loading" class="loading" hidden>
+        <div class="spinner"></div>
+        <div class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="working">Working…</div>
+      </div>
+      <div class="pdf-grid" id="pdfContainer"></div>
+      <p class="note lang" data-lang-var="PDF_EDITOR_LANG" data-lang="description">Files stay on this device. Drag pages to reorder.</p>
+    </div>
+  </main>
   <div id="toastContainer" class="toast-container"></div>
-  <script src="../resources/js/core.js?v=3"></script>
-  <script src="../resources/lang/service/pdf-editor.js"></script>
-  <script src="../resources/js/service/pdf-editor.js"></script>
+  <script src="/resources/js/core.js?v=4"></script>
+  <script src="/resources/js/utils/toast.js"></script>
+  <script src="/resources/js/service/image-compress.js?v=4"></script>
+  <script src="/resources/lang/service/pdf-editor.js?v=4"></script>
+  <script src="/resources/js/service/pdf-editor.js?v=4"></script>
 </body>
 </html>

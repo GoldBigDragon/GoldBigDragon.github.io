@@ -11,6 +11,18 @@
     return `/resources/img/cartoon/${uid}/${GBD.getLang()}/${file}`;
   }
 
+  function setCrumb(seriesTitle) {
+    const sep = document.getElementById("crumbSep");
+    const leaf = document.getElementById("crumbLeaf");
+    const head = document.getElementById("pageHead");
+    const reading = Boolean(seriesTitle);
+    sep.hidden = !reading;
+    leaf.hidden = !reading;
+    leaf.textContent = seriesTitle || "";
+    document.body.classList.toggle("is-reading", reading);
+    if (head) head.classList.toggle("is-reading", reading);
+  }
+
   function renderCovers() {
     const area = document.getElementById("coverArea");
     area.replaceChildren();
@@ -47,6 +59,7 @@
     const item = CARTOON_LIST[index];
     document.getElementById("coverArea").hidden = true;
     document.getElementById("reader").hidden = false;
+    setCrumb(GBD.pick(item.title));
     const sel = document.getElementById("pageSelect");
     sel.replaceChildren();
     item.pages.forEach((p, i) => {
@@ -57,12 +70,12 @@
     });
     document.getElementById("maxPage").textContent = String(item.pages.length);
     goPage(0);
-    document.getElementById("readerBack").focus();
   }
 
   function closeReader() {
     document.getElementById("reader").hidden = true;
     document.getElementById("coverArea").hidden = false;
+    setCrumb("");
     if (lastFocus) lastFocus.focus();
   }
 
@@ -78,12 +91,16 @@
     const img = document.getElementById("pageImage");
     img.src = pageSrc(item.uid, page.img);
     img.alt = GBD.pick(page.title);
-    img.draggable = false;
-    img.oncontextmenu = (e) => e.preventDefault();
     const frame = document.getElementById("pageFrame");
-    frame.style.background = page["background-color"] || "#fff";
-    document.getElementById("prevPage").setAttribute("aria-disabled", n <= 0 ? "true" : "false");
-    document.getElementById("nextPage").setAttribute("aria-disabled", n >= max ? "true" : "false");
+    frame.style.background = page["background-color"] || "transparent";
+    const disabledPrev = n <= 0 ? "true" : "false";
+    const disabledNext = n >= max ? "true" : "false";
+    ["prevPage", "prevPageBar"].forEach((id) => {
+      document.getElementById(id).setAttribute("aria-disabled", disabledPrev);
+    });
+    ["nextPage", "nextPageBar"].forEach((id) => {
+      document.getElementById(id).setAttribute("aria-disabled", disabledNext);
+    });
   }
 
   function currentPageIndex() {
@@ -92,25 +109,34 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     renderCovers();
-    document.getElementById("readerBack").addEventListener("click", closeReader);
+    document.getElementById("pageTitle").addEventListener("click", () => {
+      if (!document.getElementById("reader").hidden) closeReader();
+    });
     document.getElementById("pageSelect").addEventListener("change", (e) => goPage(parseInt(e.target.value, 10)));
     document.getElementById("pageGo").addEventListener("click", () => goPage(currentPageIndex()));
     document.getElementById("pageInput").addEventListener("keydown", (e) => {
       if (e.key === "Enter") goPage(currentPageIndex());
     });
-    document.getElementById("prevPage").addEventListener("click", () => goPage(currentPageIndex() - 1));
-    document.getElementById("nextPage").addEventListener("click", () => goPage(currentPageIndex() + 1));
+    const prev = () => goPage(currentPageIndex() - 1);
+    const next = () => goPage(currentPageIndex() + 1);
+    document.getElementById("prevPage").addEventListener("click", prev);
+    document.getElementById("nextPage").addEventListener("click", next);
+    document.getElementById("prevPageBar").addEventListener("click", prev);
+    document.getElementById("nextPageBar").addEventListener("click", next);
     document.addEventListener("keydown", (e) => {
       const reader = document.getElementById("reader");
       if (reader.hidden) return;
       if (["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
-      if (e.key === "ArrowLeft") goPage(currentPageIndex() - 1);
-      if (e.key === "ArrowRight") goPage(currentPageIndex() + 1);
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
       if (e.key === "Escape") closeReader();
     });
     document.addEventListener("gbd:lang", () => {
       renderCovers();
-      if (!document.getElementById("reader").hidden) goPage(currentPageIndex());
+      if (!document.getElementById("reader").hidden) {
+        setCrumb(GBD.pick(CARTOON_LIST[current].title));
+        goPage(currentPageIndex());
+      }
     });
   });
 })();

@@ -40,6 +40,20 @@ const PDF_EDITOR_LANG = {
 		"jp": "PNGで抽出",
 		"cn": "导出 PNG",
 		"ru": "Экспорт PNG"
+	},
+	"unsupported": {
+		"en": "Not a PDF file.",
+		"kr": "PDF 파일이 아닙니다.",
+		"jp": "PDFファイルではありません。",
+		"cn": "不是 PDF 文件。",
+		"ru": "Это не PDF."
+	},
+	"working": {
+		"en": "Working…",
+		"kr": "처리 중…",
+		"jp": "処理中…",
+		"cn": "处理中…",
+		"ru": "Обработка…"
 	}
 }
 LANGUAGE_OBJECT["PDF_EDITOR_LANG"] = PDF_EDITOR_LANG;

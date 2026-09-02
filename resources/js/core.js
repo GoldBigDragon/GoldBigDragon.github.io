@@ -94,7 +94,9 @@
     pause: svg('<rect x="6" y="5" width="4" height="14" fill="currentColor" stroke="none"/><rect x="14" y="5" width="4" height="14" fill="currentColor" stroke="none"/>'),
     prev: svg('<path d="M18 5L9 12l9 7M6 5v14"/>'),
     next: svg('<path d="M6 5l9 7-9 7M18 5v14"/>'),
-    info: svg('<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 8h.01"/>')
+    info: svg('<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 8h.01"/>'),
+    download: svg('<path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/>'),
+    trash: svg('<path d="M4 7h16M9 7V5h6v2M6 7l1 14h10l1-14"/>')
   };
 
   const LANGUAGE_OBJECT = global.LANGUAGE_OBJECT || {};

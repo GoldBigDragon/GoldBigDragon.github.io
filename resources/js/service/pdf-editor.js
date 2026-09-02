@@ -1,286 +1,217 @@
-/*
-	Toast utility
-*/
-let toastId = 0;
+(function () {
+  "use strict";
 
-function removeToast(toastId) {
-	const toast = document.getElementById("toast-" + toastId);
-	const toastContainer = document.getElementById("toastContainer");
-	if (toastContainer.contains(toast)) {
-		toastContainer.removeChild(toast);
-	}
-}
+  var pagesData = [];
+  var pageIdCounter = 0;
 
-function showToast(message) {
-	const toastContainer = document.getElementById("toastContainer");
-	const toast = document.createElement("div");
-	toast.id = "toast-" + toastId;
-	toast.setAttribute("onClick", "removeToast(" + toastId + ")");
-	toastId = toastId + 1;
-	toast.className = "toast show";
-	toast.innerHTML = message;
+  function L(key) {
+    var bag = (window.LANGUAGE_OBJECT || {}).PDF_EDITOR_LANG;
+    var lang = GBD.getLang();
+    return (bag && bag[key] && (bag[key][lang] || bag[key].en)) || key;
+  }
 
-	toastContainer.appendChild(toast);
-	setTimeout(() => {
-		toast.classList.add("fade-out");
-		setTimeout(() => {
-			if (toastContainer.contains(toast)) {
-				toastContainer.removeChild(toast);
-			}
-		}, 3000); // Wait until fade-out animation end
-	}, 3000); // Start fade-out after 3 seconds
-}
+  function toast(msg) {
+    if (typeof showToast === "function") showToast(msg);
+  }
 
-/*
-	File drag&drop upload handler
-*/
-const dropZone = document.getElementById('dropZone');
-const pdfContainer = document.getElementById('pdfContainer');
-const loading = document.getElementById('loading');
-const exportPdfBtn = document.getElementById('exportPdf');
-const exportPngBtn = document.getElementById('exportPng');
-const resetButton = document.getElementById('resetButton');
-let pagesData = [];
-let filesLoaded = 0;
-let pageIdCounter = 0;
+  function setBusy(on) {
+    document.getElementById("loading").hidden = !on;
+    document.getElementById("exportPdf").disabled = on || !pagesData.length;
+    document.getElementById("exportPng").disabled = on || !pagesData.length;
+  }
 
-dropZone.addEventListener('click', () => {
-	const input = document.createElement('input');
-	input.type = 'file';
-	input.accept = 'application/pdf';
-	input.multiple = true;
-	input.addEventListener('change', handleFiles);
-	input.click();
-});
+  function refreshButtons() {
+    var empty = !pagesData.length;
+    document.getElementById("exportPdf").disabled = empty;
+    document.getElementById("exportPng").disabled = empty;
+  }
 
-dropZone.addEventListener('dragover', (event) => {
-	event.preventDefault();
-	dropZone.classList.add('hover');
-});
+  async function addPdfFile(file) {
+    if (file.type !== "application/pdf" && !/\.pdf$/i.test(file.name)) {
+      toast(file.name + " — " + L("unsupported"));
+      return;
+    }
+    if (typeof pdfjsLib === "undefined") {
+      toast("PDF.js is not available.");
+      return;
+    }
+    pdfjsLib.disableWorker = true;
+    var buf = await file.arrayBuffer();
+    var pdf = await pdfjsLib.getDocument({ data: buf.slice(0) }).promise;
+    for (var i = 1; i <= pdf.numPages; i++) {
+      var page = await pdf.getPage(i);
+      var item = {
+        fileName: file.name,
+        pageNum: i,
+        bytes: buf.slice(0),
+        removed: false,
+        pageId: pageIdCounter++
+      };
+      pagesData.push(item);
+      await renderThumb(page, item);
+    }
+  }
 
-dropZone.addEventListener('dragleave', () => {
-	dropZone.classList.remove('hover');
-});
+  async function renderThumb(page, pageData) {
+    var viewport = page.getViewport({ scale: 0.35 });
+    var canvas = document.createElement("canvas");
+    canvas.width = viewport.width;
+    canvas.height = viewport.height;
+    await page.render({ canvasContext: canvas.getContext("2d"), viewport: viewport }).promise;
 
-dropZone.addEventListener('drop', (event) => {
-	event.preventDefault();
-	dropZone.classList.remove('hover');
-	handleFiles(event);
-});
+    var card = document.createElement("article");
+    card.className = "pdf-card";
+    card.draggable = true;
+    card.dataset.pageId = String(pageData.pageId);
+    var cap = document.createElement("div");
+    cap.className = "pdf-cap";
+    var label = document.createElement("span");
+    label.textContent = pageData.fileName.replace(/\.pdf$/i, "") + " · " + pageData.pageNum;
+    var del = document.createElement("button");
+    del.type = "button";
+    del.className = "pdf-del";
+    del.setAttribute("aria-label", L("clear"));
+    del.innerHTML = (window.GBD && GBD.ICON && GBD.ICON.close) || "×";
+    del.addEventListener("click", function (e) {
+      e.stopPropagation();
+      pagesData = pagesData.filter(function (p) { return p.pageId !== pageData.pageId; });
+      card.remove();
+      refreshButtons();
+    });
+    cap.append(label, del);
+    card.append(canvas, cap);
+    makeDraggable(card);
+    document.getElementById("pdfContainer").appendChild(card);
+  }
 
-async function handleFiles(event) {
-	filesLoaded = 0;
-	toggleLoading(true);
-	const files = event.target.files || event.dataTransfer.files;
-	for (const file of files) {
-		if (!['application/pdf'].includes(file.type)) {
-			showToast(`${file.name} is an unsupported type.`);
-		} else {
-			const arrayBuffer = await file.arrayBuffer();
-			const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-			for (let i = 1; i <= pdf.numPages; i++) {
-				const page = await pdf.getPage(i);
-				const pageData = {
-					fileName: file.name,
-					pageNum: i,
-					pdf,
-					removed: false,
-					pageId: pageIdCounter++
-				};
-				pagesData.push(pageData);
-				renderPage(page, pageData);
-			}
-		}
-	}
-	if (filesLoaded === 0) {
-		toggleLoading(false);
-	}
-}
+  function updateOrder() {
+    var cards = document.querySelectorAll("#pdfContainer .pdf-card");
+    var next = [];
+    cards.forEach(function (card) {
+      var id = parseInt(card.dataset.pageId, 10);
+      var found = pagesData.find(function (p) { return p.pageId === id; });
+      if (found) next.push(found);
+    });
+    if (next.length === pagesData.length) pagesData = next;
+  }
 
-async function renderPage(page, pageData) {
-	const viewport = page.getViewport({ scale: 1 });
-	const canvas = document.createElement('canvas');
-	const context = canvas.getContext('2d');
-	canvas.height = viewport.height;
-	canvas.width = viewport.width;
-	canvas.classList.add('pdf-page');
+  function makeDraggable(item) {
+    item.addEventListener("dragstart", function (e) {
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", item.dataset.pageId);
+      item.classList.add("dragging");
+    });
+    item.addEventListener("dragend", function () {
+      item.classList.remove("dragging");
+      updateOrder();
+    });
+    item.addEventListener("dragover", function (e) {
+      e.preventDefault();
+      var dragging = document.querySelector(".pdf-card.dragging");
+      var over = e.target.closest(".pdf-card");
+      if (!dragging || !over || dragging === over) return;
+      var box = over.getBoundingClientRect();
+      var before = e.clientY < box.top + box.height / 2;
+      var grid = document.getElementById("pdfContainer");
+      grid.insertBefore(dragging, before ? over : over.nextSibling);
+    });
+  }
 
-	await page.render({
-		canvasContext: context,
-		viewport
-	}).promise;
+  async function handleFiles(fileList) {
+    var files = Array.from(fileList || []);
+    if (!files.length) return;
+    setBusy(true);
+    for (var i = 0; i < files.length; i++) {
+      try { await addPdfFile(files[i]); }
+      catch (err) { toast(files[i].name + ": " + (err.message || err)); }
+    }
+    setBusy(false);
+    refreshButtons();
+  }
 
-	const pdfItem = document.createElement('div');
-	pdfItem.classList.add('pdf-item');
-	pdfItem.dataset.pageId = pageData.pageId;
+  function downloadBlob(blob, name) {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+  }
 
-	pdfItem.appendChild(canvas);
+  async function exportPDF() {
+    if (!pagesData.length || typeof PDFLib === "undefined") return;
+    setBusy(true);
+    try {
+      var out = await PDFLib.PDFDocument.create();
+      for (var i = 0; i < pagesData.length; i++) {
+        var info = pagesData[i];
+        var src = await PDFLib.PDFDocument.load(info.bytes);
+        var copied = await out.copyPages(src, [info.pageNum - 1]);
+        out.addPage(copied[0]);
+      }
+      var bytes = await out.save();
+      downloadBlob(new Blob([bytes], { type: "application/pdf" }), "edited.pdf");
+    } catch (err) {
+      toast(err.message || String(err));
+    }
+    setBusy(false);
+    refreshButtons();
+  }
 
-	const controls = document.createElement('div');
-	controls.classList.add('controls');
+  async function exportPNG() {
+    if (!pagesData.length) return;
+    setBusy(true);
+    try {
+      pdfjsLib.disableWorker = true;
+      var files = [];
+      for (var i = 0; i < pagesData.length; i++) {
+        var info = pagesData[i];
+        var pdf = await pdfjsLib.getDocument({ data: info.bytes.slice(0) }).promise;
+        var page = await pdf.getPage(info.pageNum);
+        var viewport = page.getViewport({ scale: 2 });
+        var canvas = document.createElement("canvas");
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        await page.render({ canvasContext: canvas.getContext("2d"), viewport: viewport }).promise;
+        var blob = await new Promise(function (res) { canvas.toBlob(res, "image/png"); });
+        files.push({
+          name: "page_" + String(i + 1).padStart(2, "0") + ".png",
+          data: new Uint8Array(await blob.arrayBuffer())
+        });
+      }
+      downloadBlob(GBDCompress.zipStore(files), "pages.zip");
+    } catch (err) {
+      toast(err.message || String(err));
+    }
+    setBusy(false);
+    refreshButtons();
+  }
 
-	const removeButton = document.createElement('button');
-	removeButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
-	removeButton.className = "pdf-delete";
-	removeButton.addEventListener('click', () => {
-		pageData.removed = true;
-		pdfItem.remove();
-		updatePagesDataOrder();
-	});
+  function clearHistory() {
+    pagesData = [];
+    document.getElementById("pdfContainer").replaceChildren();
+    document.getElementById("pdfInput").value = "";
+    refreshButtons();
+  }
 
-	controls.appendChild(removeButton);
-	pdfItem.appendChild(controls);
-	pdfContainer.appendChild(pdfItem);
-
-	makeDraggable(pdfItem);
-	filesLoaded++;
-	if (filesLoaded === pagesData.length) {
-		toggleLoading(false);
-	}
-}
-
-function updatePagesDataOrder() {
-	const pdfItems = pdfContainer.querySelectorAll('.pdf-item');
-	const newPagesData = [];
-
-	pdfItems.forEach((item) => {
-		const pageId = parseInt(item.dataset.pageId);
-		const pageData = pagesData.find(pageData => pageData.pageId === pageId);
-
-		if (pageData) {
-			newPagesData.push(pageData);
-		}
-	});
-
-	if (newPagesData.length === pdfItems.length) {
-		pagesData = newPagesData;
-	}
-}
-
-function makeDraggable(item) {
-	item.setAttribute('draggable', true);
-
-	item.addEventListener('dragstart', (e) => {
-		e.dataTransfer.effectAllowed = 'move';
-		e.dataTransfer.setData('text/plain', item.dataset.pageId); // pageId 전송
-		item.classList.add('dragging');
-	});
-
-	item.addEventListener('dragend', () => {
-		item.classList.remove('dragging');
-		updatePagesDataOrder();
-	});
-
-	item.addEventListener('dragover', (e) => {
-		e.preventDefault();
-		e.dataTransfer.dropEffect = 'move';
-
-		const currentItem = e.target.closest('.pdf-item');
-		const draggingItem = document.querySelector('.dragging');
-
-		if (currentItem && draggingItem && draggingItem !== currentItem) {
-			const bounding = currentItem.getBoundingClientRect();
-			const offset = e.clientY - bounding.top + (bounding.height / 2);
-
-			if (offset > bounding.height / 2) {
-				pdfContainer.insertBefore(draggingItem, currentItem.nextSibling);
-			} else {
-				pdfContainer.insertBefore(draggingItem, currentItem);
-			}
-		}
-	});
-
-	item.addEventListener('drop', (e) => {
-		e.preventDefault();
-		const draggedPageId = e.dataTransfer.getData('text/plain');
-		const draggedItem = document.querySelector(`[data-page-id='${draggedPageId}']`);
-
-		const currentItem = e.target.closest('.pdf-item');
-		if (draggedItem && currentItem && draggedItem !== currentItem) {
-			pdfContainer.insertBefore(draggedItem, currentItem);
-		}
-		updatePagesDataOrder();
-	});
-}
-
-function toggleLoading(isLoading) {
-	loading.style.color = isLoading ? 'black' : 'transparent';
-	exportPdfBtn.disabled = isLoading;
-	exportPngBtn.disabled = isLoading;
-}
-
-async function exportPDF(){
-	exportPdfBtn.disabled = true;
-	const mergedPdf = await PDFLib.PDFDocument.create();
-	for (const pageInfo of pagesData) {
-		if (!pageInfo.removed) {
-			const arrayBuffer = await pageInfo.pdf.getData();
-			const loadedPdf = await PDFLib.PDFDocument.load(arrayBuffer);
-			const [page] = await mergedPdf.copyPages(loadedPdf, [pageInfo.pageNum - 1]);
-			mergedPdf.addPage(page);
-		}
-	}
-	const mergedPdfBytes = await mergedPdf.save();
-	download(mergedPdfBytes, 'merged.pdf', 'application/pdf');
-	exportPdfBtn.disabled = false;
-}
-
-async function exportPNG(){
-	exportPngBtn.disabled = true;
-	const mergedPdf = await PDFLib.PDFDocument.create();
-	for (const pageInfo of pagesData) {
-		if (!pageInfo.removed) {
-			const arrayBuffer = await pageInfo.pdf.getData();
-			const loadedPdf = await PDFLib.PDFDocument.load(arrayBuffer);
-			const [page] = await mergedPdf.copyPages(loadedPdf, [pageInfo.pageNum - 1]);
-			mergedPdf.addPage(page);
-		}
-	}
-	const mergedPdfBytes = await mergedPdf.save();
-	
-	const zip = new JSZip();
-	const pngPromises = [];
-	const pdfDoc = await pdfjsLib.getDocument({ data: mergedPdfBytes }).promise;
-	const numPages = pdfDoc.numPages;
-
-	for (let i = 1; i <= numPages; i++) {
-		pngPromises.push((async () => {
-			const page = await pdfDoc.getPage(i);
-			const viewport = page.getViewport({ scale: 2 });
-			const canvas = document.createElement('canvas');
-			canvas.width = viewport.width;
-			canvas.height = viewport.height;
-			const context = canvas.getContext('2d');
-
-			await page.render({ canvasContext: context, viewport: viewport }).promise;
-			const pngDataUrl = canvas.toDataURL('image/png');
-			const response = await fetch(pngDataUrl);
-			const blob = await response.blob();
-			zip.file(`page_${i}.png`, blob);
-		})());
-	}
-
-	await Promise.all(pngPromises);
-	const zipContent = await zip.generateAsync({ type: 'blob' });
-	saveAs(zipContent, 'pages.zip');
-	exportPngBtn.disabled = false;
-}
-
-function download(data, filename, type) {
-	const blob = new Blob([data], {
-		type
-	});
-	const link = document.createElement('a');
-	link.href = URL.createObjectURL(blob);
-	link.download = filename;
-	link.click();
-}
-
-function clearHistory(){
-	pagesData = [];
-	pdfContainer.innerHTML = '';
-	exportPdfBtn.disabled = true;
-	exportPngBtn.disabled = true;
-	printPdfBtn.disabled = true;
-	toggleLoading(false);
-}
+  document.addEventListener("DOMContentLoaded", function () {
+    var drop = document.getElementById("dropZone");
+    var input = document.getElementById("pdfInput");
+    drop.addEventListener("dragover", function (e) {
+      e.preventDefault();
+      drop.classList.add("is-over");
+    });
+    drop.addEventListener("dragleave", function () { drop.classList.remove("is-over"); });
+    drop.addEventListener("drop", function (e) {
+      e.preventDefault();
+      drop.classList.remove("is-over");
+      handleFiles(e.dataTransfer.files);
+    });
+    input.addEventListener("change", function () {
+      handleFiles(input.files);
+      input.value = "";
+    });
+    document.getElementById("resetButton").addEventListener("click", clearHistory);
+    document.getElementById("exportPdf").addEventListener("click", exportPDF);
+    document.getElementById("exportPng").addEventListener("click", exportPNG);
+  });
+})();

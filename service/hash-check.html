@@ -7,80 +7,42 @@
   <meta name="description" content="GoldBigDragon — Hash Check">
   <meta name="theme-color" content="#0c0c0e">
   <title>GoldBigDragon — Hash Check</title>
-  <link rel="icon" href="../resources/img/service/logo/hash-check.ico">
-  <script src="../resources/vendor/crypto-js.4.1.1.min.js"></script>
-  <link rel="stylesheet" href="../resources/vendor/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="../resources/css/theme.css?v=3">
-  <link rel="stylesheet" href="../resources/css/service/hash-check.css">
+  <link rel="icon" href="/resources/img/service/logo/hash-check.ico">
+  <link rel="stylesheet" href="/resources/css/theme.css?v=4">
+  <link rel="stylesheet" href="/resources/css/service/hash-check.css?v=4">
 </head>
 <body data-page="service">
   <button type="button" class="corner tl" id="menuBtn" aria-expanded="false"></button>
   <button type="button" class="corner tr" id="langBtn" aria-expanded="false">
     <img class="lang-flag" src="/resources/img/header/lang/kr.png" alt="" width="28" height="28">
   </button>
-  <div class="tool-wrap">
-<div id="container">
-			<h1 id="title" class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="title">Hash Check</h1>
-			<div id="fileAttachmentSection">
-				<div style="display: flex;justify-content: center;align-items: center;">
-					<div id="dropZone">
-						<span class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="container">Drag & Drop your files here or click to select files</span>
-						<input type="file" id="fileInput" multiple>
-					</div>
-				</div>
-				<br>
-				<div id="historyController">
-					<button id="clearHistoryButton" onClick="clearHistory()">
-						<i class="fa-solid fa-trash"></i>&nbsp;
-						<div class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="clear">Clear history</div>
-					</button>
-					&nbsp;&nbsp;
-					<button class="downloadAllButton" onClick="downloadCSV()" disabled>
-						<i class="fa-solid fa-file-csv"></i>&nbsp;
-						<div>CSV</div>
-					</button>
-					&nbsp;&nbsp;
-					<button class="downloadAllButton" onClick="downloadJSON()" disabled>
-						<i class="fa-solid fa-file-lines"></i>&nbsp;
-						<div>JSON</div>
-					</button>
-				</div>
-
-				<div style="overflow-x: auto;width: 100%;">
-					<table id="downloadTable">
-						<thead>
-							<tr>
-								<th class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="filename">File Name</th>
-								<th class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="size">Size</th>
-								<th>MD5</th>
-								<th>SHA-1</th>
-								<th>SHA-256</th>
-							</tr>
-						</thead>
-						<tbody id="downloadLinks"></tbody>
-					</table>
-				</div>
-				<br>
-				<div id="historyController" style="justify-content: space-between;">
-					<button class="downloadAllButton" onClick="downloadCSV()" style="width:49%;" disabled>
-						<i class="fa-solid fa-file-csv"></i>&nbsp;
-						<div>CSV</div>
-					</button>
-					<button class="downloadAllButton" onClick="downloadJSON()" style="width:49%;" disabled>
-						<i class="fa-solid fa-file-lines"></i>&nbsp;
-						<div>JSON</div>
-					</button>
-				</div>
-			</div>
-			<br>
-			<h6 id="description" class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="description">Uploaded files are not recorded on the site.</h6>
-			<br>
-		</div>
-  </div>
+  <main class="page">
+    <header class="page-head">
+      <h1 class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="title">Hash Check</h1>
+    </header>
+    <div class="tool">
+      <label class="dropzone" id="dropZone">
+        <span class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="container">Drop files here or tap to select</span>
+        <input type="file" id="fileInput" multiple>
+      </label>
+      <div class="tool-bar">
+        <button type="button" class="btn danger" id="clearHistoryButton">
+          <span class="lang" data-lang-var="HASH_CHECK_LANG" data-lang="clear">Clear</span>
+        </button>
+        <button type="button" class="btn" id="csvBtn" disabled>CSV</button>
+        <button type="button" class="btn primary" id="jsonBtn" disabled>JSON</button>
+      </div>
+      <div id="loading" class="loading" hidden>
+        <div class="spinner"></div>
+      </div>
+      <div class="result-list" id="downloadLinks"></div>
+      <p class="note lang" data-lang-var="HASH_CHECK_LANG" data-lang="description">Files stay on this device.</p>
+    </div>
+  </main>
   <div id="toastContainer" class="toast-container"></div>
-  <script src="../resources/js/core.js?v=3"></script>
-  <script src="../resources/js/utils/toast.js"></script>
-  <script src="../resources/lang/service/hash-check.js"></script>
-  <script src="../resources/js/service/hash-check.js"></script>
+  <script src="/resources/js/core.js?v=4"></script>
+  <script src="/resources/js/utils/toast.js"></script>
+  <script src="/resources/lang/service/hash-check.js?v=4"></script>
+  <script src="/resources/js/service/hash-check.js?v=4"></script>
 </body>
 </html>

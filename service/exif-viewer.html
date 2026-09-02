@@ -7,66 +7,38 @@
   <meta name="description" content="GoldBigDragon — EXIF Viewer">
   <meta name="theme-color" content="#0c0c0e">
   <title>GoldBigDragon — EXIF Viewer</title>
-  <link rel="icon" href="../resources/img/service/logo/exif-viewer.ico">
-  <script src="../resources/vendor/jszip/jszip.3.6.0.min.js"></script>
-  <link rel="stylesheet" href="../resources/vendor/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="../resources/css/theme.css?v=3">
-  <link rel="stylesheet" href="../resources/css/service/exif-viewer.css">
+  <link rel="icon" href="/resources/img/service/logo/exif-viewer.ico">
+  <link rel="stylesheet" href="/resources/css/theme.css?v=4">
+  <link rel="stylesheet" href="/resources/css/service/exif-viewer.css?v=4">
 </head>
 <body data-page="service">
   <button type="button" class="corner tl" id="menuBtn" aria-expanded="false"></button>
   <button type="button" class="corner tr" id="langBtn" aria-expanded="false">
     <img class="lang-flag" src="/resources/img/header/lang/kr.png" alt="" width="28" height="28">
   </button>
-  <div class="tool-wrap">
-<div id="container">
-			<h1 id="title" class="lang" data-lang-var="EXIF_VIEWER_LANG" data-lang="title">EXIF Viewer</h1>
-			<div id="fileAttachmentSection">
-				<div style="display: flex;justify-content: center;align-items: center;">
-					<div id="dropZone">
-						<span class="lang" data-lang-var="EXIF_VIEWER_LANG" data-lang="container">Drag & Drop your image files here or click to select files</span>
-						<input type="file" id="imageInput" accept="image/png, image/jpeg, image/jpg, image/gif" multiple>
-					</div>
-				</div>
-				
-				<div id="historyController">
-					<button id="clearHistoryButton" onClick="clearHistory()">
-						<i class="fa-solid fa-trash"></i>&nbsp;
-						<div class="lang" data-lang-var="EXIF_VIEWER_LANG" data-lang="clear">Clear history</div>
-					</button>
-					&nbsp;&nbsp;
-					<button id="downloadAllButton" onClick="downloadJSON()" disabled>
-						<i class="fa-solid fa-file-lines"></i>&nbsp;
-						<div>JSON</div>
-					</button>
-				</div>
-
-				<!-- 다운로드 링크가 표시될 테이블 영역 -->
-				<table id="downloadTable">
-					<thead>
-						<tr>
-							<th class="lang" data-lang-var="EXIF_VIEWER_LANG" data-lang="preview">Preview</th>
-							<th class="lang" data-lang-var="EXIF_VIEWER_LANG" data-lang="filename">File Name</th>
-							<th style="min-width: 40%;">EXIF</th>
-						</tr>
-					</thead>
-					<tbody id="downloadLinks"></tbody>
-				</table>
-				<br>
-				<button id="downloadAllButton2" style="width: 100%;" onClick="downloadJSON()" disabled>
-					<i class="fa-solid fa-file-lines"></i>&nbsp;
-					<div>JSON</div>
-				</button>
-			</div>
-			<br>
-			<h6 id="description" class="lang" data-lang-var="EXIF_VIEWER_LANG" data-lang="description">Uploaded image files can only be downloaded by you and will not be shared anywhere.</h6>
-			<br>
-		</div>
-  </div>
+  <main class="page">
+    <header class="page-head">
+      <h1 class="lang" data-lang-var="EXIF_VIEWER_LANG" data-lang="title">EXIF Viewer</h1>
+    </header>
+    <div class="tool">
+      <label class="dropzone" id="dropZone">
+        <span class="lang" data-lang-var="EXIF_VIEWER_LANG" data-lang="container">Drop images here or tap to select</span>
+        <input type="file" id="imageInput" accept="image/*" multiple>
+      </label>
+      <div class="tool-bar">
+        <button type="button" class="btn danger" id="clearHistoryButton">
+          <span class="lang" data-lang-var="EXIF_VIEWER_LANG" data-lang="clear">Clear</span>
+        </button>
+        <button type="button" class="btn primary" id="downloadAllButton" disabled>JSON</button>
+      </div>
+      <div class="result-list" id="downloadLinks"></div>
+      <p class="note lang" data-lang-var="EXIF_VIEWER_LANG" data-lang="description">Files stay on this device.</p>
+    </div>
+  </main>
   <div id="toastContainer" class="toast-container"></div>
-  <script src="../resources/js/core.js?v=3"></script>
-  <script src="../resources/js/utils/toast.js"></script>
-  <script src="../resources/lang/service/exif-viewer.js"></script>
-  <script src="../resources/js/service/exif-viewer.js"></script>
+  <script src="/resources/js/core.js?v=4"></script>
+  <script src="/resources/js/utils/toast.js"></script>
+  <script src="/resources/lang/service/exif-viewer.js?v=4"></script>
+  <script src="/resources/js/service/exif-viewer.js?v=4"></script>
 </body>
 </html>

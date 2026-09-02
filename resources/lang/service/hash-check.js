@@ -40,6 +40,27 @@ const HASH_CHECK_LANG = {
 		"jp": "サイズ",
 		"cn": "大小",
 		"ru": "Размер"
+	},
+	"copy": {
+		"en": "Copy",
+		"kr": "복사",
+		"jp": "コピー",
+		"cn": "复制",
+		"ru": "Копировать"
+	},
+	"copied": {
+		"en": "Copied",
+		"kr": "복사됨",
+		"jp": "コピーしました",
+		"cn": "已复制",
+		"ru": "Скопировано"
+	},
+	"too_large": {
+		"en": "File is too large (128MB max).",
+		"kr": "파일이 너무 큽니다 (최대 128MB).",
+		"jp": "ファイルが大きすぎます（最大128MB）。",
+		"cn": "文件过大（最大 128MB）。",
+		"ru": "Файл слишком большой (макс. 128 МБ)."
 	}
 }
 LANGUAGE_OBJECT["HASH_CHECK_LANG"] = HASH_CHECK_LANG;
