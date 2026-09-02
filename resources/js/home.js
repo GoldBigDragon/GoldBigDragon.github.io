@@ -19,7 +19,7 @@
   let lastFocus = null;
 
   function readLoaded(key) {
-    let value = window[key];
+    let value;
     try {
       switch (key) {
         case "DATA_CAREER":
@@ -36,20 +36,36 @@
           break;
       }
     } catch (_) {}
-    if (!Array.isArray(value) || value.length === 0) {
+    if (!Array.isArray(value) || !value.length) {
       try {
-        value = eval(key);
+        const fromWindow = window[key];
+        if (Array.isArray(fromWindow) && fromWindow.length) value = fromWindow;
       } catch (_) {}
     }
     return Array.isArray(value) ? value : [];
   }
 
+  async function parseDataFile(src, key) {
+    const res = await fetch(src);
+    if (!res.ok) throw new Error("Failed to load " + src);
+    const text = await res.text();
+    const value = new Function(`${text}\n;return ${key};`)();
+    return Array.isArray(value) ? value : [];
+  }
+
   async function ensure(category) {
-    if (cache[category]) return cache[category];
+    if (Array.isArray(cache[category]) && cache[category].length) return cache[category];
     const spec = FILES[category];
-    await GBD.loadScript(spec.src);
-    cache[category] = readLoaded(spec.key);
-    return cache[category];
+    let data = readLoaded(spec.key);
+    if (!data.length) {
+      try {
+        await GBD.loadScript(spec.src);
+        data = readLoaded(spec.key);
+      } catch (_) {}
+    }
+    if (!data.length) data = await parseDataFile(spec.src, spec.key);
+    cache[category] = data;
+    return data;
   }
 
   function openModal() {

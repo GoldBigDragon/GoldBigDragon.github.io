@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,11 +8,13 @@
   <meta name="theme-color" content="#0c0c0e">
   <title>GoldBigDragon</title>
   <link rel="icon" href="/resources/img/favicon.ico">
-  <link rel="stylesheet" href="/resources/css/theme.css">
+  <link rel="stylesheet" href="/resources/css/theme.css?v=3">
 </head>
 <body data-page="home">
   <button type="button" class="corner tl" id="menuBtn" aria-expanded="false" aria-controls="menuOverlay"></button>
-  <button type="button" class="corner tr" id="langBtn" aria-expanded="false" aria-controls="langOverlay"></button>
+  <button type="button" class="corner tr" id="langBtn" aria-expanded="false" aria-controls="langOverlay">
+    <img class="lang-flag" src="/resources/img/header/lang/kr.png" alt="" width="28" height="28">
+  </button>
 
   <nav class="dock" aria-label="Portfolio">
     <button type="button" class="dock-btn" data-cat="career" aria-label="Career"></button>
@@ -25,14 +27,14 @@
     <section class="calling-card">
       <div class="portrait">
         <img src="/resources/img/index/profile-image.png" width="220" height="220" alt="GoldBigDragon">
-        <span class="portrait-caption" data-i18n="logoDescription">Oriental Dragon Shape</span>
+        <span class="portrait-caption" data-i18n="logoDescription">동양 용 문양</span>
       </div>
       <div class="identity">
-        <h1 data-i18n="nameValue">TaeRyong Kim</h1>
-        <div class="meta" data-i18n="countryValue">South Korea</div>
+        <h1 data-i18n="nameValue">김태룡</h1>
+        <div class="meta" data-i18n="countryValue">대한민국</div>
       </div>
       <a class="mail-link" href="mailto:dnwndugod642@naver.com">
-        <span data-i18n="contact">Contact</span>
+        <span data-i18n="contact">연락처</span>
         <span>dnwndugod642@naver.com</span>
       </a>
       <div class="social">
@@ -55,8 +57,12 @@
     </div>
   </div>
 
-  <script src="/resources/js/core.js"></script>
-  <script src="/resources/js/home.js"></script>
+  <script src="/resources/data/index/career.js"></script>
+  <script src="/resources/data/index/education.js"></script>
+  <script src="/resources/data/index/certificate.js"></script>
+  <script src="/resources/data/index/etc.js"></script>
+  <script src="/resources/js/core.js?v=3"></script>
+  <script src="/resources/js/home.js?v=3"></script>
   <script>
     document.getElementById("linkCafe").innerHTML = GBD.ICON.cafe;
     document.getElementById("linkYt").innerHTML = GBD.ICON.youtube;

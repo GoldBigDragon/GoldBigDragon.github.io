@@ -1,4 +1,31 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/resources/fonts/pretendard/Pretendard-Regular.subset.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/resources/fonts/pretendard/Pretendard-Medium.subset.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/resources/fonts/pretendard/Pretendard-SemiBold.subset.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/resources/fonts/pretendard/Pretendard-Bold.subset.woff2") format("woff2");
+}
 
 :root {
   --bg: #0c0c0e;
@@ -308,10 +335,13 @@ h1, h2, h3 {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  position: relative;
+  z-index: 0;
 }
 .portrait-caption {
   position: absolute;
   inset: 6px;
+  z-index: 2;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -324,18 +354,17 @@ h1, h2, h3 {
   letter-spacing: 0.02em;
   word-break: keep-all;
   white-space: pre-line;
-  color: rgb(255 255 255 / 0);
-  background: rgb(0 0 0 / 0);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.62);
+  opacity: 0;
   pointer-events: none;
   user-select: none;
-  transition: color var(--motion-fast) var(--ease-out),
-              background var(--motion-fast) var(--ease-out);
+  transition: opacity var(--motion-fast) var(--ease-out);
 }
 .portrait:hover .portrait-caption,
-.portrait:focus-within .portrait-caption {
-  color: #fff;
-  background: rgb(0 0 0 / 0.62);
-  text-shadow: 0 1px 10px rgb(0 0 0 / 0.55);
+.portrait:focus-within .portrait-caption,
+.portrait:active .portrait-caption {
+  opacity: 1;
 }
 
 .identity {

@@ -13,12 +13,14 @@
   <script src="../resources/vendor/jszip/jszip.3.7.1.min.js"></script>
   <script src="../resources/vendor/FileSaver.2.0.5.min.js"></script>
   <link rel="stylesheet" href="../resources/vendor/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="../resources/css/theme.css">
+  <link rel="stylesheet" href="../resources/css/theme.css?v=3">
   <link rel="stylesheet" href="../resources/css/service/pdf-editor.css">
 </head>
 <body data-page="service">
   <button type="button" class="corner tl" id="menuBtn" aria-expanded="false"></button>
-  <button type="button" class="corner tr" id="langBtn" aria-expanded="false"></button>
+  <button type="button" class="corner tr" id="langBtn" aria-expanded="false">
+    <img class="lang-flag" src="/resources/img/header/lang/kr.png" alt="" width="28" height="28">
+  </button>
   <div class="tool-wrap">
 <div id="container">
 			<h1 id="title" class="lang" data-lang-var="PDF_EDITOR_LANG" data-lang="title">PDF Editor</h1>
@@ -53,7 +55,7 @@
 		</div>
   </div>
   <div id="toastContainer" class="toast-container"></div>
-  <script src="../resources/js/core.js"></script>
+  <script src="../resources/js/core.js?v=3"></script>
   <script src="../resources/lang/service/pdf-editor.js"></script>
   <script src="../resources/js/service/pdf-editor.js"></script>
 </body>

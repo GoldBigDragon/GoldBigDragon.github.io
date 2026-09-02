@@ -66,7 +66,7 @@
     translating: { en: "Translation", kr: "번역", jp: "翻訳", cn: "翻译", ru: "Перевод" },
     page: { en: "Page", kr: "페이지", jp: "ページ", cn: "页", ru: "Страница" },
     unfinished: { en: "This tool is not finished yet.", kr: "아직 완성되지 않은 도구입니다.", jp: "未完成のツールです。", cn: "该工具尚未完成。", ru: "Этот инструмент ещё не готов." },
-    logoDescription: { en: "Oriental\nDragon\nShape", kr: "동양 용 문양", jp: "東洋の龍形状", cn: "东方龙形", ru: "Форма\nвосточного\nдракона" }
+    logoDescription: { en: "동양 용 문양", kr: "동양 용 문양", jp: "동양 용 문양", cn: "동양 용 문양", ru: "동양 용 문양" }
   };
 
   function svg(path, view) {
@@ -114,7 +114,7 @@
 
   function getLang() {
     const v = getCookie(COOKIE);
-    return LANGS.includes(v) ? v : "en";
+    return LANGS.includes(v) ? v : "kr";
   }
   function t(key) {
     const row = I18N[key];
@@ -301,7 +301,7 @@
   }
 
   function mountChrome() {
-    if (!getCookie(COOKIE)) setCookie(COOKIE, "en", 31);
+    if (!getCookie(COOKIE)) setCookie(COOKIE, "kr", 31);
     global.NOW_LANG = getLang();
 
     const menuBtn = document.getElementById("menuBtn");
