@@ -60,7 +60,7 @@
   }
 
   function blobGet(url) {
-    return fetch(url).then(function (res) {
+    return fetch(url, { signal: AbortSignal.timeout(10000) }).then(function (res) {
       if (!res.ok) throw new Error("error");
       return res.json();
     });
@@ -70,17 +70,20 @@
     return fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body)
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(10000)
     }).then(function (res) {
       return res.json().then(function (data) {
         if (!res.ok) throw new Error("error");
         return data;
+      }, function () {
+        throw new Error("error");
       });
     });
   }
 
   function writerIp() {
-    return fetch("https://get.geojs.io/v1/ip.json").then(function (res) {
+    return fetch("https://get.geojs.io/v1/ip.json", { signal: AbortSignal.timeout(8000) }).then(function (res) {
       return res.json();
     }).then(function (d) {
       return String((d && d.ip) || "").trim() || "0.0.0.0";
@@ -149,30 +152,20 @@
     var expiresAt = new Date(Date.now() + ms).toISOString();
     return writerIp().then(function (ip) {
       checkRate(ip);
-      return blobGet(blobCol(hash)).catch(function () {
-        return [];
-      }).then(function (rows) {
-        var now = Date.now();
-        var recent = 0;
-        (rows || []).forEach(function (r) {
-          if (r.ip === ip && now - Date.parse(r.createdAt) < RATE_MS) recent += 1;
-        });
-        if (recent >= RATE_MAX) throw new Error("rate");
-        return blobPost(blobCol(hash), {
-          roomHash: hash,
+      return blobPost(blobCol(hash), {
+        roomHash: hash,
+        ciphertext: ciphertext,
+        ip: ip,
+        createdAt: createdAt,
+        expiresAt: expiresAt
+      }).then(function (row) {
+        return {
+          id: row._id || ("m-" + Date.now()),
           ciphertext: ciphertext,
           ip: ip,
           createdAt: createdAt,
           expiresAt: expiresAt
-        }).then(function (row) {
-          return {
-            id: row._id || ("m-" + Date.now()),
-            ciphertext: ciphertext,
-            ip: ip,
-            createdAt: createdAt,
-            expiresAt: expiresAt
-          };
-        });
+        };
       });
     });
   }
