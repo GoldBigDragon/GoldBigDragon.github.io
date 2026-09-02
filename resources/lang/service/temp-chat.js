@@ -6,6 +6,13 @@ const TEMP_CHAT_LANG = {
 		cn: "临时聊天室",
 		ru: "Временный чат"
 	},
+	kicker: {
+		en: "Encrypted · 3-day limit",
+		kr: "암호화 · 최대 3일",
+		jp: "暗号化 · 最長3日",
+		cn: "加密 · 最长3天",
+		ru: "Шифрование · до 3 дней"
+	},
 	hint: {
 		en: "No sign-in. Messages are encrypted on this device and always deleted within 3 days.",
 		kr: "로그인 없이 이용합니다. 메시지는 이 기기에서 암호화되며 최대 3일 후 삭제됩니다.",
@@ -34,6 +41,27 @@ const TEMP_CHAT_LANG = {
 		cn: "创建群聊",
 		ru: "Создать группу"
 	},
+	publicDesc: {
+		en: "Anyone can enter. Same passphrase for every visitor.",
+		kr: "누구나 바로 들어올 수 있습니다. 방 암호는 모두에게 같습니다.",
+		jp: "誰でもすぐ入れます。合言葉は全員共通です。",
+		cn: "任何人都能进入。所有访客使用同一口令。",
+		ru: "Войти может любой. Одна фраза для всех."
+	},
+	joinDesc: {
+		en: "Enter the exact title and password the host set.",
+		kr: "개설자가 정한 제목과 비밀번호를 그대로 입력하세요.",
+		jp: "作成者が決めたルーム名とパスワードを入力します。",
+		cn: "请输入房主设定的标题和密码。",
+		ru: "Введите точные название и пароль комнаты."
+	},
+	createDesc: {
+		en: "Pick a title and password. Share both with people you trust.",
+		kr: "제목과 비밀번호를 정한 뒤, 믿을 사람에게만 알려 주세요.",
+		jp: "ルーム名とパスワードを決め、信頼できる相手にだけ共有します。",
+		cn: "设定标题和密码，只告诉信任的人。",
+		ru: "Задайте название и пароль. Делитесь только с теми, кому доверяете."
+	},
 	publicRoom: { en: "Public room", kr: "공용 채팅방", jp: "公開チャット", cn: "公共聊天室", ru: "Общий чат" },
 	groupRoom: { en: "Group room", kr: "그룹 채팅방", jp: "グループチャット", cn: "群聊", ru: "Группа" },
 	nick: { en: "Nickname", kr: "닉네임", jp: "ニックネーム", cn: "昵称", ru: "Ник" },
@@ -41,6 +69,13 @@ const TEMP_CHAT_LANG = {
 	send: { en: "Send", kr: "보내기", jp: "送信", cn: "发送", ru: "Отправить" },
 	sending: { en: "Sending…", kr: "전송 중", jp: "送信中", cn: "发送中", ru: "Отправка…" },
 	attach: { en: "Image", kr: "이미지", jp: "画像", cn: "图片", ru: "Фото" },
+	imgHint: {
+		en: "Compressed to 32×32 pixels before sending.",
+		kr: "32×32 Pixel로 압축되어 전송됩니다.",
+		jp: "送信時に 32×32 ピクセルへ圧縮されます。",
+		cn: "发送前会压缩为 32×32 Pixel。",
+		ru: "Перед отправкой сжимается до 32×32 пикселей."
+	},
 	removeImage: { en: "Remove image", kr: "이미지 제거", jp: "画像を削除", cn: "移除图片", ru: "Убрать фото" },
 	needImage: {
 		en: "That file is not a usable image.",

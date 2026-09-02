@@ -1,6 +1,5 @@
 (function () {
   "use strict";
-  /* gbd temp-chat r7 — ntfy relay, no crudcrud */
 
   var PUBLIC_PASSPHRASE = "goldbigdragon.github.io";
   var GROUP_SEP = "\u001f";
@@ -57,7 +56,7 @@
   var RATE_MAX = 60;
   var RATE_MS = 60000;
   var MAX_AGE_MS = 259200000;
-  var NTFY_INLINE = 3900;
+  var NTFY_INLINE = 3500;
 
   function topicOf(hash) {
     return "gbd" + String(hash).slice(0, 40);
@@ -80,12 +79,12 @@
 
   function ntfyFetch(url, init) {
     var opts = init ? Object.assign({}, init) : {};
+    opts.headers = Object.assign({ Accept: "application/json" }, opts.headers || {});
     opts.signal = opts.signal || AbortSignal.timeout(12000);
     return withRetry(function () {
       return fetch(url, opts).then(function (res) {
         if (res.status === 502 || res.status === 503 || res.status === 429) {
-          var err = new Error(res.status === 429 ? "rate" : "error");
-          throw err;
+          throw new Error(res.status === 429 ? "rate" : "error");
         }
         return res;
       });
@@ -139,18 +138,22 @@
   }
 
   function parseEnvelope(raw) {
-    try {
-      var obj = JSON.parse(raw);
-      if (!obj || typeof obj.c !== "string" || !obj.c) return null;
-      return {
-        ciphertext: obj.c,
-        ip: typeof obj.ip === "string" && obj.ip ? obj.ip : "0.0.0.0",
-        createdAt: obj.createdAt,
-        expiresAt: obj.expiresAt
-      };
-    } catch (_) {
-      return null;
+    var obj = raw;
+    if (typeof raw === "string") {
+      try {
+        obj = JSON.parse(raw);
+      } catch (_) {
+        return null;
+      }
     }
+    if (!obj || typeof obj !== "object") return null;
+    if (typeof obj.c !== "string" || !obj.c) return null;
+    return {
+      ciphertext: obj.c,
+      ip: typeof obj.ip === "string" && obj.ip ? obj.ip : "0.0.0.0",
+      createdAt: obj.createdAt,
+      expiresAt: obj.expiresAt
+    };
   }
 
   function eventToRow(ev) {
@@ -183,7 +186,7 @@
   function kvGet(hash, query) {
     var now = Date.now();
     var floor = now - MAX_AGE_MS;
-    var url = NTFY + "/" + topicOf(hash) + "/json?poll=1&since=all";
+    var url = NTFY + "/" + topicOf(hash) + "/json?poll=1";
     return ntfyFetch(url).then(function (res) {
       if (!res.ok) throw new Error("error");
       return res.text();
@@ -230,33 +233,31 @@
         expiresAt: expiresAt
       });
       var topic = topicOf(hash);
-      var req;
+      var headers;
+      var body = envelope;
       if (envelope.length <= NTFY_INLINE) {
-        req = ntfyFetch(NTFY + "/", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ topic: topic, message: envelope })
-        });
+        headers = { "Content-Type": "text/plain;charset=UTF-8" };
       } else {
-        req = ntfyFetch(NTFY + "/" + topic, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Filename: "m.json"
-          },
-          body: envelope
-        });
+        headers = {
+          "Content-Type": "application/octet-stream",
+          Filename: "m.json"
+        };
       }
-      return req.then(function (res) {
+      return ntfyFetch(NTFY + "/" + topic, {
+        method: "POST",
+        headers: headers,
+        body: body
+      }).then(function (res) {
         if (res.status === 429) throw new Error("rate");
         if (!res.ok) throw new Error("error");
-        return res.json().catch(function () {
-          return {};
-        });
+        var ctype = (res.headers.get("content-type") || "").toLowerCase();
+        if (ctype.indexOf("json") === -1) throw new Error("error");
+        return res.json();
       }).then(function (ev) {
+        if (!ev || !ev.id) throw new Error("error");
         rateCommit(ip);
         return {
-          id: ev.id || ("m-" + Date.now()),
+          id: ev.id,
           ciphertext: ciphertext,
           ip: ip,
           createdAt: createdAt,
@@ -301,7 +302,7 @@
   }
 
   function groupPassphrase(title, password) {
-    return title + GROUP_SEP + password;
+    return String(title).normalize("NFC") + GROUP_SEP + String(password).normalize("NFC");
   }
 
   function roomHash(passphrase) {
@@ -510,25 +511,55 @@
     });
   }
 
+  var ICO = {
+    globe: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M3.6 9h16.8 M3.6 15h16.8 M12 3c2.5 3 3.8 6 3.8 9s-1.3 6-3.8 9c-2.5-3-3.8-6-3.8-9s1.3-6 3.8-9z",
+    users: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M22 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75",
+    key: "M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"
+  };
+
+  function svgIcon(d) {
+    var ns = "http://www.w3.org/2000/svg";
+    var s = document.createElementNS(ns, "svg");
+    s.setAttribute("viewBox", "0 0 24 24");
+    s.setAttribute("aria-hidden", "true");
+    s.classList.add("chat-ico");
+    var p = document.createElementNS(ns, "path");
+    p.setAttribute("d", d);
+    p.setAttribute("fill", "none");
+    p.setAttribute("stroke", "currentColor");
+    p.setAttribute("stroke-width", "1.75");
+    p.setAttribute("stroke-linecap", "round");
+    p.setAttribute("stroke-linejoin", "round");
+    s.appendChild(p);
+    return s;
+  }
+
+  function gateCard(icon, title, desc, primary, onClick) {
+    var btn = el("button", "chat-gate-card" + (primary ? " is-primary" : ""));
+    btn.type = "button";
+    btn.disabled = state.busy;
+    var ico = el("span", "chat-gate-ico");
+    ico.appendChild(svgIcon(icon));
+    var copy = el("span", "chat-gate-copy");
+    copy.appendChild(el("strong", "", title));
+    copy.appendChild(el("span", "", desc));
+    btn.append(ico, copy);
+    btn.addEventListener("click", onClick);
+    return btn;
+  }
+
   function renderGate(root) {
     clearEl(root);
     root.className = "chat-app";
-    root.appendChild(el("p", "chat-hint", t("hint")));
     var gate = el("div", "chat-gate");
-    var main = el("div", "chat-gate-main");
-    var pub = el("button", "btn primary chat-gate-btn", t("joinPublic"));
-    pub.type = "button";
-    pub.addEventListener("click", joinPublic);
-    var grp = el("button", "btn chat-gate-btn", t("joinGroup"));
-    grp.type = "button";
-    grp.addEventListener("click", function () { openModal("join"); });
-    main.append(pub, grp);
-    var foot = el("div", "chat-gate-foot");
-    var create = el("button", "btn primary chat-gate-btn", t("createGroup"));
-    create.type = "button";
-    create.addEventListener("click", function () { openModal("create"); });
-    foot.appendChild(create);
-    gate.append(main, foot);
+    var lead = el("div", "chat-gate-lead");
+    lead.appendChild(el("p", "chat-kicker", t("kicker")));
+    lead.appendChild(el("p", "chat-hint", t("hint")));
+    var list = el("div", "chat-gate-list");
+    list.appendChild(gateCard(ICO.globe, t("joinPublic"), t("publicDesc"), true, joinPublic));
+    list.appendChild(gateCard(ICO.users, t("joinGroup"), t("joinDesc"), false, function () { openModal("join"); }));
+    list.appendChild(gateCard(ICO.key, t("createGroup"), t("createDesc"), false, function () { openModal("create"); }));
+    gate.append(lead, list);
     root.appendChild(gate);
     setTitle(t("title"));
   }
@@ -593,10 +624,14 @@
     clearEl(root);
     root.className = "chat-app is-room";
     var bar = el("div", "chat-room-bar");
-    var leave = el("button", "btn", t("leave"));
+    var ident = el("div", "chat-room-id");
+    var kind = state.room.kind === "public" ? t("publicRoom") : t("groupRoom");
+    ident.appendChild(el("span", "chat-room-kind", kind));
+    ident.appendChild(el("strong", "chat-room-name", state.room.kind === "public" ? t("publicRoom") : state.room.title));
+    var leave = el("button", "btn chat-leave-btn", t("leave"));
     leave.type = "button";
     leave.addEventListener("click", leaveRoom);
-    bar.appendChild(leave);
+    bar.append(ident, leave);
     var log = el("div", "chat-log");
     log.id = "chatLog";
     log.addEventListener("scroll", onLogScroll);
@@ -664,16 +699,21 @@
         file.value = "";
       });
     });
+    var attachBlock = el("div", "chat-attach-block");
     var attach = el("button", "btn", t("attach"));
     attach.type = "button";
     attach.addEventListener("click", function () { file.click(); });
+    attachBlock.appendChild(attach);
+    attachBlock.appendChild(el("p", "chat-attach-hint", t("imgHint")));
     var nl = el("button", "btn chat-newline-btn", t("newline"));
     nl.type = "button";
     nl.addEventListener("click", insertNewline);
     var sendBtn = el("button", "btn primary chat-send-btn", t("send"));
     sendBtn.type = "submit";
     sendBtn.id = "chatSend";
-    actions.append(attach, nl, sendBtn);
+    var sendWrap = el("div", "chat-send-wrap");
+    sendWrap.append(nl, sendBtn);
+    actions.append(attachBlock, sendWrap);
     form.append(row, msgField, preview, file, actions);
     root.append(bar, log, notice, form);
     var label = state.room.kind === "public" ? t("publicRoom") : state.room.title;
@@ -698,12 +738,14 @@
       return;
     }
     state.messages.forEach(function (m) {
+      if (m.kind === "welcome") {
+        log.appendChild(el("p", "chat-system", t("welcome")));
+        return;
+      }
       var art = el("article", "chat-row " + (m.mine ? "is-mine" : "is-theirs"));
-      var nick = m.kind === "welcome" ? t("system") : m.nick;
-      art.appendChild(el("span", "chat-nick", nick));
+      art.appendChild(el("span", "chat-nick", m.nick));
       var bubble = el("div", "chat-bubble" + (m.mine ? " is-mine" : ""));
-      var body = m.kind === "welcome" ? t("welcome") : m.text;
-      if (body) bubble.appendChild(document.createTextNode(body));
+      if (m.text) bubble.appendChild(document.createTextNode(m.text));
       if (m.img) {
         var c = pixelCanvas(m.img);
         if (c) bubble.appendChild(c);
@@ -740,6 +782,9 @@
   }
 
   function joinPublic() {
+    if (state.busy) return;
+    state.busy = true;
+    render();
     roomHash(PUBLIC_PASSPHRASE).then(function (hash) {
       return enterRoom({
         kind: "public",
@@ -747,6 +792,15 @@
         passphrase: PUBLIC_PASSPHRASE,
         hash: hash
       });
+    }).then(function (ok) {
+      if (!ok && !state.room) {
+        state.busy = false;
+        render();
+      }
+    }).catch(function () {
+      toast(t("error"));
+      state.busy = false;
+      render();
     });
   }
 
@@ -848,8 +902,8 @@
     var titleIn = document.getElementById("groupTitle");
     var pwIn = document.getElementById("groupPassword");
     var err = document.getElementById("groupError");
-    var roomTitle = (titleIn && titleIn.value || "").trim();
-    var pw = pwIn && pwIn.value || "";
+    var roomTitle = ((titleIn && titleIn.value) || "").trim().normalize("NFC");
+    var pw = ((pwIn && pwIn.value) || "").normalize("NFC");
     function fail(msg) {
       if (err) {
         err.hidden = false;
