@@ -804,10 +804,17 @@
     });
   }
 
-  function enterRoom(next, requireDecrypt) {
+  function enterRoom(next, requireDecrypt, attempt) {
     state.busy = true;
     return apiGet(next.hash, { limit: 20 }).then(function (rows) {
       return decodeMany(rows, next.passphrase, state.clientId).then(function (decoded) {
+        if (requireDecrypt && decoded.length === 0 && !attempt) {
+          return new Promise(function (resolve) {
+            setTimeout(resolve, 800);
+          }).then(function () {
+            return enterRoom(next, true, 1);
+          });
+        }
         if (requireDecrypt && decoded.length === 0) {
           toast(t("closed"));
           state.busy = false;
