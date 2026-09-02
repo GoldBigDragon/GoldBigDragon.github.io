@@ -39,6 +39,16 @@ const TEMP_CHAT_LANG = {
 	nick: { en: "Nickname", kr: "닉네임", jp: "ニックネーム", cn: "昵称", ru: "Ник" },
 	message: { en: "Message", kr: "내용", jp: "メッセージ", cn: "内容", ru: "Сообщение" },
 	send: { en: "Send", kr: "보내기", jp: "送信", cn: "发送", ru: "Отправить" },
+	sending: { en: "Sending…", kr: "전송 중", jp: "送信中", cn: "发送中", ru: "Отправка…" },
+	attach: { en: "Image", kr: "이미지", jp: "画像", cn: "图片", ru: "Фото" },
+	removeImage: { en: "Remove image", kr: "이미지 제거", jp: "画像を削除", cn: "移除图片", ru: "Убрать фото" },
+	needImage: {
+		en: "That file is not a usable image.",
+		kr: "사용할 수 있는 이미지 파일이 아닙니다.",
+		jp: "このファイルは画像として使えません。",
+		cn: "无法使用该图片文件。",
+		ru: "Этот файл нельзя использовать как изображение."
+	},
 	newline: { en: "New line", kr: "개행", jp: "改行", cn: "换行", ru: "Новая строка" },
 	expiry: { en: "Delete after", kr: "삭제 시기", jp: "削除時期", cn: "删除时间", ru: "Удалить через" },
 	roomTitle: { en: "Room title", kr: "채팅방 제목", jp: "ルーム名", cn: "聊天室标题", ru: "Название комнаты" },
@@ -89,11 +99,11 @@ const TEMP_CHAT_LANG = {
 		ru: "Введите пароль."
 	},
 	needText: {
-		en: "Enter a message (max 1024 characters).",
-		kr: "내용을 입력하세요 (최대 1024자).",
-		jp: "メッセージを入力してください（最大1024文字）。",
-		cn: "请输入内容（最多1024字）。",
-		ru: "Введите сообщение (до 1024 символов)."
+		en: "Enter a message or attach an image (max 1024 characters).",
+		kr: "내용을 입력하거나 이미지를 첨부하세요 (최대 1024자).",
+		jp: "メッセージを入力するか画像を添付してください（最大1024文字）。",
+		cn: "请输入内容或附加图片（最多1024字）。",
+		ru: "Введите сообщение или прикрепите изображение (до 1024 символов)."
 	},
 	error: {
 		en: "Could not reach the chat server.",
@@ -119,3 +129,4 @@ const TEMP_CHAT_LANG = {
 	ttl3d: { en: "3 days", kr: "3일", jp: "3日", cn: "3天", ru: "3 дня" }
 };
 LANGUAGE_OBJECT["TEMP_CHAT_LANG"] = TEMP_CHAT_LANG;
+window.TEMP_CHAT_LANG = TEMP_CHAT_LANG;

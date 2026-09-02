@@ -77,11 +77,22 @@
   overflow-wrap: anywhere;
   line-height: 1.45;
   font-size: var(--text-sm);
+  display: grid;
+  gap: 8px;
 }
 .chat-bubble.is-mine {
   background: var(--gold);
   color: var(--bg);
   border-radius: 16px 16px 6px 16px;
+}
+.chat-pixel {
+  display: block;
+  width: auto;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background: transparent;
+  border-radius: 2px;
 }
 .chat-meta {
   font-size: 0.7rem;
@@ -138,11 +149,40 @@
   resize: vertical;
   line-height: 1.45;
 }
+.chat-file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.chat-attach-preview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.chat-attach-preview[hidden] { display: none !important; }
+.chat-attach-remove {
+  min-height: 36px;
+}
 .chat-composer-actions {
   display: flex;
   justify-content: flex-end;
   gap: var(--space-2);
   flex-wrap: wrap;
+}
+.chat-send-btn {
+  min-width: 6.5rem;
+}
+.chat-send-btn.is-wait {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+.chat-send-btn:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
 }
 .chat-newline-btn { display: none; }
 .chat-modal {

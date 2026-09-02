@@ -28,7 +28,9 @@
     newest: null,
     oldest: null,
     clientId: "",
-    poll: 0
+    poll: 0,
+    sendTick: 0,
+    pendingImg: null
   };
 
   function t(key) {
@@ -50,34 +52,41 @@
     return /\.github\.io$/i.test(location.hostname);
   }
 
-  var BLOB = "https://crudcrud.com/api/efd053f61953437599b5863089912d3f";
-  var RATE_MAX = 5;
+  var NTFY = "https://ntfy.sh";
+  var RATE_MAX = 60;
   var RATE_MS = 60000;
   var MAX_AGE_MS = 259200000;
+  var NTFY_INLINE = 3900;
 
-  function blobCol(hash) {
-    return BLOB + "/r" + String(hash).slice(0, 40);
+  function topicOf(hash) {
+    return "gbd" + String(hash).slice(0, 40);
   }
 
-  function blobGet(url) {
-    return fetch(url, { signal: AbortSignal.timeout(10000) }).then(function (res) {
-      if (!res.ok) throw new Error("error");
-      return res.json();
-    });
+  function withRetry(fn, times) {
+    times = times || 3;
+    function attempt(n) {
+      return fn().catch(function (err) {
+        if (n >= times || (err && err.message === "rate")) throw err;
+        return new Promise(function (resolve) {
+          setTimeout(resolve, 280 * n * n);
+        }).then(function () {
+          return attempt(n + 1);
+        });
+      });
+    }
+    return attempt(1);
   }
 
-  function blobPost(url, body) {
-    return fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-      signal: AbortSignal.timeout(10000)
-    }).then(function (res) {
-      return res.json().then(function (data) {
-        if (!res.ok) throw new Error("error");
-        return data;
-      }, function () {
-        throw new Error("error");
+  function ntfyFetch(url, init) {
+    var opts = init ? Object.assign({}, init) : {};
+    opts.signal = opts.signal || AbortSignal.timeout(12000);
+    return withRetry(function () {
+      return fetch(url, opts).then(function (res) {
+        if (res.status === 502 || res.status === 503 || res.status === 429) {
+          var err = new Error(res.status === 429 ? "rate" : "error");
+          throw err;
+        }
+        return res;
       });
     });
   }
@@ -92,50 +101,111 @@
     });
   }
 
-  function checkRate(ip) {
+  function readRate() {
     var now = Date.now();
-    var key = "gbd_chat_rate";
     var list = [];
     try {
-      list = JSON.parse(localStorage.getItem(key) || "[]");
+      list = JSON.parse(localStorage.getItem("gbd_chat_rate") || "[]");
       if (!Array.isArray(list)) list = [];
     } catch (_) {
       list = [];
     }
-    list = list.filter(function (r) {
+    return list.filter(function (r) {
       return r && now - Number(r.at) < RATE_MS;
     });
-    if (list.length >= RATE_MAX) throw new Error("rate");
-    list.push({ ip: ip || "", at: now });
+  }
+
+  function rateWaitMs() {
+    var list = readRate();
+    if (list.length < RATE_MAX) return 0;
+    var oldest = Number(list[0].at) || Date.now();
+    return Math.max(0, oldest + RATE_MS - Date.now());
+  }
+
+  function rateCommit(ip) {
+    var list = readRate();
+    list.push({ ip: ip || "", at: Date.now() });
     try {
-      localStorage.setItem(key, JSON.stringify(list));
+      localStorage.setItem("gbd_chat_rate", JSON.stringify(list));
     } catch (_) {}
+  }
+
+  function formatWait(ms) {
+    var sec = Math.max(0, Math.ceil(ms / 1000));
+    var m = Math.floor(sec / 60);
+    var s = sec % 60;
+    return m + ":" + String(s).padStart(2, "0");
+  }
+
+  function parseEnvelope(raw) {
+    try {
+      var obj = JSON.parse(raw);
+      if (!obj || typeof obj.c !== "string" || !obj.c) return null;
+      return {
+        ciphertext: obj.c,
+        ip: typeof obj.ip === "string" && obj.ip ? obj.ip : "0.0.0.0",
+        createdAt: obj.createdAt,
+        expiresAt: obj.expiresAt
+      };
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function eventToRow(ev) {
+    function finish(env, id, time) {
+      if (!env) return null;
+      var created = env.createdAt || new Date((time || 0) * 1000).toISOString();
+      return {
+        id: id,
+        ciphertext: env.ciphertext,
+        ip: env.ip,
+        createdAt: created,
+        expiresAt: env.expiresAt
+      };
+    }
+    if (!ev || ev.event !== "message") return Promise.resolve(null);
+    var att = ev.attachment && ev.attachment.url;
+    if (att) {
+      return ntfyFetch(att).then(function (res) {
+        if (!res.ok) return null;
+        return res.text();
+      }).then(function (text) {
+        return finish(parseEnvelope(text), ev.id, ev.time);
+      }).catch(function () {
+        return null;
+      });
+    }
+    return Promise.resolve(finish(parseEnvelope(ev.message), ev.id, ev.time));
   }
 
   function kvGet(hash, query) {
     var now = Date.now();
     var floor = now - MAX_AGE_MS;
-    return blobGet(blobCol(hash)).catch(function () {
-      return [];
+    var url = NTFY + "/" + topicOf(hash) + "/json?poll=1&since=all";
+    return ntfyFetch(url).then(function (res) {
+      if (!res.ok) throw new Error("error");
+      return res.text();
+    }).then(function (text) {
+      var events = [];
+      String(text || "").split("\n").forEach(function (line) {
+        line = line.trim();
+        if (!line) return;
+        try {
+          events.push(JSON.parse(line));
+        } catch (_) {}
+      });
+      return Promise.all(events.map(eventToRow));
     }).then(function (rows) {
-      var list = (rows || []).map(function (r) {
-        return {
-          id: r._id,
-          ciphertext: r.ciphertext,
-          ip: r.ip,
-          createdAt: r.createdAt,
-          expiresAt: r.expiresAt,
-          roomHash: r.roomHash
-        };
-      }).filter(function (r) {
-        if (r.roomHash && r.roomHash !== hash) return false;
+      var list = rows.filter(function (r) {
+        if (!r || typeof r.ciphertext !== "string") return false;
         var created = Date.parse(r.createdAt);
         var exp = Date.parse(r.expiresAt);
         if (isNaN(created) || created < floor) return false;
         if (!isNaN(exp) && exp <= now) return false;
         if (query.before && created >= Date.parse(query.before)) return false;
         if (query.after && created <= Date.parse(query.after)) return false;
-        return typeof r.ciphertext === "string" && r.ciphertext.length > 0;
+        return true;
       });
       list.sort(function (a, b) {
         return Date.parse(a.createdAt) - Date.parse(b.createdAt);
@@ -150,17 +220,42 @@
     var ms = Math.min(MAX_AGE_MS, Math.max(60000, Number(ttl) * 1000 || 86400000));
     var createdAt = new Date().toISOString();
     var expiresAt = new Date(Date.now() + ms).toISOString();
+    if (rateWaitMs() > 0) return Promise.reject(new Error("rate"));
     return writerIp().then(function (ip) {
-      checkRate(ip);
-      return blobPost(blobCol(hash), {
-        roomHash: hash,
-        ciphertext: ciphertext,
+      var envelope = JSON.stringify({
+        c: ciphertext,
         ip: ip,
         createdAt: createdAt,
         expiresAt: expiresAt
-      }).then(function (row) {
+      });
+      var topic = topicOf(hash);
+      var req;
+      if (envelope.length <= NTFY_INLINE) {
+        req = ntfyFetch(NTFY + "/", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ topic: topic, message: envelope })
+        });
+      } else {
+        req = ntfyFetch(NTFY + "/" + topic, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Filename: "m.json"
+          },
+          body: envelope
+        });
+      }
+      return req.then(function (res) {
+        if (res.status === 429) throw new Error("rate");
+        if (!res.ok) throw new Error("error");
+        return res.json().catch(function () {
+          return {};
+        });
+      }).then(function (ev) {
+        rateCommit(ip);
         return {
-          id: row._id || ("m-" + Date.now()),
+          id: ev.id || ("m-" + Date.now()),
           ciphertext: ciphertext,
           ip: ip,
           createdAt: createdAt,
@@ -231,6 +326,23 @@
     });
   }
 
+  function validImg(img) {
+    if (!img || typeof img !== "object") return null;
+    var w = Number(img.w);
+    var h = Number(img.h);
+    if (!Number.isFinite(w) || !Number.isFinite(h)) return null;
+    w = w | 0;
+    h = h | 0;
+    if (w < 1 || h < 1 || w > 32 || h > 32) return null;
+    if (typeof img.p !== "string" || !img.p) return null;
+    try {
+      if (b64ToBytes(img.p).length !== w * h * 4) return null;
+    } catch (_) {
+      return null;
+    }
+    return { w: w, h: h, p: img.p };
+  }
+
   function decryptPayload(passphrase, b64) {
     var raw;
     try {
@@ -247,6 +359,8 @@
       var obj = JSON.parse(td.decode(pt));
       if (!obj || obj.v !== 1 || typeof obj.nick !== "string" || typeof obj.text !== "string") return null;
       if (obj.kind !== "chat" && obj.kind !== "welcome") return null;
+      obj.img = validImg(obj.img);
+      if (obj.kind === "chat" && !obj.text && !obj.img) return null;
       return obj;
     }).catch(function () {
       return null;
@@ -314,6 +428,7 @@
           id: row.id,
           nick: payload.nick,
           text: payload.text,
+          img: payload.img || null,
           ip: row.ip,
           createdAt: row.createdAt,
           mine: payload.clientId === clientId,
@@ -333,6 +448,65 @@
   function setTitle(text) {
     var h = document.getElementById("pageTitle");
     if (h) h.textContent = text;
+  }
+
+  function pixelCanvas(img) {
+    var parsed = validImg(img);
+    if (!parsed) return null;
+    var bytes = b64ToBytes(parsed.p);
+    var canvas = document.createElement("canvas");
+    canvas.width = parsed.w;
+    canvas.height = parsed.h;
+    canvas.className = "chat-pixel";
+    var ctx = canvas.getContext("2d");
+    ctx.putImageData(new ImageData(new Uint8ClampedArray(bytes), parsed.w, parsed.h), 0, 0);
+    return canvas;
+  }
+
+  function loadImageFile(file) {
+    return new Promise(function (resolve, reject) {
+      if (!file || !String(file.type || "").startsWith("image/")) {
+        reject(new Error("type"));
+        return;
+      }
+      var url = URL.createObjectURL(file);
+      var img = new Image();
+      img.onload = function () {
+        URL.revokeObjectURL(url);
+        var sw = img.naturalWidth || img.width;
+        var sh = img.naturalHeight || img.height;
+        if (!sw || !sh) {
+          reject(new Error("type"));
+          return;
+        }
+        var canvas = document.createElement("canvas");
+        var ctx;
+        if (sw <= 32 && sh <= 32) {
+          canvas.width = sw;
+          canvas.height = sh;
+          ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, sw, sh);
+          ctx.drawImage(img, 0, 0);
+        } else {
+          var scale = Math.min(32 / sw, 32 / sh);
+          var dw = Math.max(1, Math.round(sw * scale));
+          var dh = Math.max(1, Math.round(sh * scale));
+          canvas.width = 32;
+          canvas.height = 32;
+          ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, 32, 32);
+          ctx.imageSmoothingEnabled = true;
+          ctx.drawImage(img, Math.floor((32 - dw) / 2), Math.floor((32 - dh) / 2), dw, dh);
+        }
+        var data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        resolve({ w: canvas.width, h: canvas.height, p: bufToB64(data.data) });
+      };
+      img.onerror = function () {
+        URL.revokeObjectURL(url);
+        reject(new Error("type"));
+      };
+      img.src = url;
+    });
   }
 
   function renderGate(root) {
@@ -356,6 +530,62 @@
     gate.append(main, foot);
     root.appendChild(gate);
     setTitle(t("title"));
+  }
+
+  function paintPending() {
+    var wrap = document.getElementById("chatAttachPreview");
+    if (!wrap) return;
+    clearEl(wrap);
+    if (!state.pendingImg) {
+      wrap.hidden = true;
+      return;
+    }
+    wrap.hidden = false;
+    var c = pixelCanvas(state.pendingImg);
+    if (c) wrap.appendChild(c);
+    var rm = el("button", "btn chat-attach-remove", t("removeImage"));
+    rm.type = "button";
+    rm.addEventListener("click", function () {
+      state.pendingImg = null;
+      var input = document.getElementById("chatFile");
+      if (input) input.value = "";
+      paintPending();
+    });
+    wrap.appendChild(rm);
+  }
+
+  function updateSendButton() {
+    var btn = document.getElementById("chatSend");
+    if (!btn) return;
+    if (state.busy) {
+      btn.disabled = true;
+      btn.textContent = t("sending");
+      btn.classList.remove("is-wait");
+      return;
+    }
+    var wait = rateWaitMs();
+    if (wait > 0) {
+      btn.disabled = true;
+      btn.textContent = formatWait(wait);
+      btn.classList.add("is-wait");
+      return;
+    }
+    btn.disabled = false;
+    btn.textContent = t("send");
+    btn.classList.remove("is-wait");
+  }
+
+  function startSendTick() {
+    stopSendTick();
+    updateSendButton();
+    state.sendTick = window.setInterval(updateSendButton, 250);
+  }
+
+  function stopSendTick() {
+    if (state.sendTick) {
+      window.clearInterval(state.sendTick);
+      state.sendTick = 0;
+    }
   }
 
   function renderRoom(root) {
@@ -413,18 +643,42 @@
     });
     area.addEventListener("keydown", onComposerKey);
     msgField.appendChild(area);
+    var preview = el("div", "chat-attach-preview");
+    preview.id = "chatAttachPreview";
+    preview.hidden = true;
     var actions = el("div", "chat-composer-actions");
+    var file = document.createElement("input");
+    file.type = "file";
+    file.accept = "image/*";
+    file.id = "chatFile";
+    file.className = "chat-file";
+    file.addEventListener("change", function () {
+      var f = file.files && file.files[0];
+      if (!f) return;
+      loadImageFile(f).then(function (img) {
+        state.pendingImg = img;
+        paintPending();
+      }).catch(function () {
+        showNotice(t("needImage"));
+        file.value = "";
+      });
+    });
+    var attach = el("button", "btn", t("attach"));
+    attach.type = "button";
+    attach.addEventListener("click", function () { file.click(); });
     var nl = el("button", "btn chat-newline-btn", t("newline"));
     nl.type = "button";
     nl.addEventListener("click", insertNewline);
-    var sendBtn = el("button", "btn primary", t("send"));
+    var sendBtn = el("button", "btn primary chat-send-btn", t("send"));
     sendBtn.type = "submit";
     sendBtn.id = "chatSend";
-    actions.append(nl, sendBtn);
-    form.append(row, msgField, actions);
+    actions.append(attach, nl, sendBtn);
+    form.append(row, msgField, preview, file, actions);
     root.append(bar, log, notice, form);
     var label = state.room.kind === "public" ? t("publicRoom") : state.room.title;
     setTitle(t("title") + " · " + label);
+    paintPending();
+    startSendTick();
     requestAnimationFrame(function () {
       log.scrollTop = log.scrollHeight;
     });
@@ -447,7 +701,12 @@
       var nick = m.kind === "welcome" ? t("system") : m.nick;
       art.appendChild(el("span", "chat-nick", nick));
       var bubble = el("div", "chat-bubble" + (m.mine ? " is-mine" : ""));
-      bubble.textContent = m.kind === "welcome" ? t("welcome") : m.text;
+      var body = m.kind === "welcome" ? t("welcome") : m.text;
+      if (body) bubble.appendChild(document.createTextNode(body));
+      if (m.img) {
+        var c = pixelCanvas(m.img);
+        if (c) bubble.appendChild(c);
+      }
       art.appendChild(bubble);
       art.appendChild(el("span", "chat-meta", formatStamp(m.createdAt) + " · " + m.ip));
       log.appendChild(art);
@@ -473,8 +732,10 @@
     var root = document.getElementById("chatRoot");
     if (!root) return;
     closeModal();
-    if (!state.room) renderGate(root);
-    else renderRoom(root);
+    if (!state.room) {
+      stopSendTick();
+      renderGate(root);
+    } else renderRoom(root);
   }
 
   function joinPublic() {
@@ -506,6 +767,7 @@
         startPoll();
         render();
         state.busy = false;
+        updateSendButton();
         return true;
       });
     }).catch(function () {
@@ -517,8 +779,10 @@
 
   function leaveRoom() {
     stopPoll();
+    stopSendTick();
     state.room = null;
     state.messages = [];
+    state.pendingImg = null;
     render();
   }
 
@@ -709,14 +973,20 @@
 
   function send() {
     if (!state.room || state.busy) return;
+    if (rateWaitMs() > 0) {
+      updateSendButton();
+      return;
+    }
     var nickEl = document.getElementById("chatNick");
     var textEl = document.getElementById("chatText");
     var ttlEl = document.getElementById("chatTtl");
     var name = (nickEl && nickEl.value || "").trim();
     var body = (textEl && textEl.value || "").trim();
+    var img = state.pendingImg;
     if (!name) return showNotice(t("needNick"));
-    if (!body) return showNotice(t("needText"));
+    if (!body && !img) return showNotice(t("needText"));
     state.busy = true;
+    updateSendButton();
     showNotice("");
     try { localStorage.setItem("gbd_chat_nick", name); } catch (_) {}
     var payload = {
@@ -727,6 +997,7 @@
       clientId: state.clientId,
       at: Date.now()
     };
+    if (img) payload.img = img;
     encryptPayload(state.room.passphrase, payload).then(function (ciphertext) {
       return apiPost(state.room.hash, ciphertext, Number(ttlEl && ttlEl.value || 86400));
     }).then(function (row) {
@@ -734,6 +1005,7 @@
         id: row.id,
         nick: payload.nick,
         text: payload.text,
+        img: img,
         ip: row.ip,
         createdAt: row.createdAt,
         mine: true,
@@ -747,6 +1019,10 @@
         textEl.value = "";
         textEl.dispatchEvent(new Event("input"));
       }
+      state.pendingImg = null;
+      var file = document.getElementById("chatFile");
+      if (file) file.value = "";
+      paintPending();
       state.stick = true;
       var log = document.getElementById("chatLog");
       if (log) {
@@ -757,6 +1033,7 @@
       showNotice(e.message === "rate" ? t("rateLimit") : t("error"));
     }).then(function () {
       state.busy = false;
+      updateSendButton();
     });
   }
 
