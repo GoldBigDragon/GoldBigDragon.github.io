@@ -69,7 +69,7 @@
       sel.appendChild(opt);
     });
     document.getElementById("maxPage").textContent = String(item.pages.length);
-    goPage(0);
+    goPage(Math.max(0, item.pages.length - 1));
   }
 
   function closeReader() {
