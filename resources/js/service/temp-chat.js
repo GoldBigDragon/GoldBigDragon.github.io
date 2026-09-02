@@ -42,11 +42,129 @@
       var stored = localStorage.getItem("gbd_chat_api");
       if (stored) return stored;
     } catch (_) {}
-    var host = location.hostname;
-    if (host === "goldbigdragon.github.io" || /\.github\.io$/.test(host)) {
-      return "https://goldbigdragon-chat.goldbigdragon.workers.dev/api/chat";
-    }
     return "/api/chat";
+  }
+
+  function onPages() {
+    return /\.github\.io$/i.test(location.hostname);
+  }
+
+  var BLOB = "https://crudcrud.com/api/efd053f61953437599b5863089912d3f";
+  var RATE_MAX = 5;
+  var RATE_MS = 60000;
+  var MAX_AGE_MS = 259200000;
+
+  function blobCol(hash) {
+    return BLOB + "/r" + String(hash).slice(0, 40);
+  }
+
+  function blobGet(url) {
+    return fetch(url).then(function (res) {
+      if (!res.ok) throw new Error("error");
+      return res.json();
+    });
+  }
+
+  function blobPost(url, body) {
+    return fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    }).then(function (res) {
+      return res.json().then(function (data) {
+        if (!res.ok) throw new Error("error");
+        return data;
+      });
+    });
+  }
+
+  function writerIp() {
+    return fetch("https://get.geojs.io/v1/ip.json").then(function (res) {
+      return res.json();
+    }).then(function (d) {
+      return String((d && d.ip) || "").trim() || "0.0.0.0";
+    }).catch(function () {
+      return "0.0.0.0";
+    });
+  }
+
+  function checkRate(ip) {
+    var url = BLOB + "/rate";
+    var now = Date.now();
+    return blobGet(url).catch(function () {
+      return [];
+    }).then(function (rows) {
+      var list = rows || [];
+      var recent = 0;
+      list.forEach(function (r) {
+        var at = Number(r.at);
+        if (r.ip === ip && now - at < RATE_MS) recent += 1;
+        else if (r._id && now - at >= RATE_MS) {
+          fetch(url + "/" + r._id, { method: "DELETE" }).catch(function () {});
+        }
+      });
+      if (recent >= RATE_MAX) throw new Error("rate");
+      return blobPost(url, { ip: ip, at: now });
+    });
+  }
+
+  function kvGet(hash, query) {
+    var now = Date.now();
+    var floor = now - MAX_AGE_MS;
+    return blobGet(blobCol(hash)).catch(function () {
+      return [];
+    }).then(function (rows) {
+      var list = (rows || []).map(function (r) {
+        return {
+          id: r._id,
+          ciphertext: r.ciphertext,
+          ip: r.ip,
+          createdAt: r.createdAt,
+          expiresAt: r.expiresAt,
+          roomHash: r.roomHash
+        };
+      }).filter(function (r) {
+        if (r.roomHash && r.roomHash !== hash) return false;
+        var created = Date.parse(r.createdAt);
+        var exp = Date.parse(r.expiresAt);
+        if (isNaN(created) || created < floor) return false;
+        if (!isNaN(exp) && exp <= now) return false;
+        if (query.before && created >= Date.parse(query.before)) return false;
+        if (query.after && created <= Date.parse(query.after)) return false;
+        return typeof r.ciphertext === "string" && r.ciphertext.length > 0;
+      });
+      list.sort(function (a, b) {
+        return Date.parse(a.createdAt) - Date.parse(b.createdAt);
+      });
+      var limit = query.limit || 20;
+      if (query.after) return list.slice(0, limit);
+      return list.slice(-limit);
+    });
+  }
+
+  function kvPost(hash, ciphertext, ttl) {
+    var ms = Math.min(MAX_AGE_MS, Math.max(60000, Number(ttl) * 1000 || 86400000));
+    var createdAt = new Date().toISOString();
+    var expiresAt = new Date(Date.now() + ms).toISOString();
+    return writerIp().then(function (ip) {
+      return checkRate(ip).then(function () {
+        return blobPost(blobCol(hash), {
+          roomHash: hash,
+          ciphertext: ciphertext,
+          ip: ip,
+          createdAt: createdAt,
+          expiresAt: expiresAt
+        }).then(function (row) {
+          return {
+            id: row._id || ("m-" + Date.now()),
+            ciphertext: ciphertext,
+            ip: ip,
+            createdAt: createdAt,
+            expiresAt: expiresAt
+          };
+        });
+      });
+    });
   }
 
   function clearEl(el) {
@@ -156,6 +274,7 @@
   }
 
   function apiGet(hash, query) {
+    if (onPages()) return kvGet(hash, query);
     var u = new URL(apiBase(), location.origin);
     u.searchParams.set("roomHash", hash);
     u.searchParams.set("limit", String(query.limit));
@@ -170,6 +289,7 @@
   }
 
   function apiPost(hash, ciphertext, ttl) {
+    if (onPages()) return kvPost(hash, ciphertext, ttl);
     return fetch(apiBase(), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
