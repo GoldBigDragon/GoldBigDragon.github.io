@@ -24,16 +24,17 @@
     }
   }
 
-  function channelRange(pixels) {
+  function channelRange(pixels, start, end) {
     var r0 = 255, g0 = 255, b0 = 255, r1 = 0, g1 = 0, b1 = 0;
-    for (var i = 0; i < pixels.length; i++) {
+    for (var i = start; i < end; i++) {
       var p = pixels[i];
-      if (p[0] < r0) r0 = p[0];
-      if (p[1] < g0) g0 = p[1];
-      if (p[2] < b0) b0 = p[2];
-      if (p[0] > r1) r1 = p[0];
-      if (p[1] > g1) g1 = p[1];
-      if (p[2] > b1) b1 = p[2];
+      var r = p & 255, g = (p >>> 8) & 255, b = (p >>> 16) & 255;
+      if (r < r0) r0 = r;
+      if (g < g0) g0 = g;
+      if (b < b0) b0 = b;
+      if (r > r1) r1 = r;
+      if (g > g1) g1 = g;
+      if (b > b1) b1 = b;
     }
     var rr = r1 - r0, rg = g1 - g0, rb = b1 - b0;
     var ch = 0;
@@ -42,14 +43,22 @@
     return { ch: ch, range: Math.max(rr, rg, rb) };
   }
 
-  function averageColor(pixels) {
-    var r = 0, g = 0, b = 0, n = pixels.length || 1;
-    for (var i = 0; i < pixels.length; i++) {
-      r += pixels[i][0];
-      g += pixels[i][1];
-      b += pixels[i][2];
+  function averageColor(pixels, start, end) {
+    var r = 0, g = 0, b = 0, n = end - start || 1;
+    for (var i = start; i < end; i++) {
+      var p = pixels[i];
+      r += p & 255;
+      g += (p >>> 8) & 255;
+      b += (p >>> 16) & 255;
     }
     return [Math.round(r / n), Math.round(g / n), Math.round(b / n)];
+  }
+
+  function sortRange(pixels, start, end, ch) {
+    var shift = ch * 8;
+    var slice = pixels.slice(start, end);
+    slice.sort(function (a, c) { return ((a >>> shift) & 255) - ((c >>> shift) & 255); });
+    for (var i = 0; i < slice.length; i++) pixels[start + i] = slice[i];
   }
 
   function buildPalette(data, maxColors) {
@@ -58,31 +67,30 @@
     var samples = [];
     for (var i = 0; i < data.length; i += 4 * step) {
       if (data[i + 3] < 8) continue;
-      samples.push([data[i], data[i + 1], data[i + 2]]);
+      samples.push(data[i] | (data[i + 1] << 8) | (data[i + 2] << 16));
     }
     if (!samples.length) return [[0, 0, 0]];
-    var boxes = [samples];
+    var boxes = [{ s: 0, e: samples.length }];
     while (boxes.length < maxColors) {
       var bi = 0, br = -1, ch = 0;
       for (var b = 0; b < boxes.length; b++) {
-        var info = channelRange(boxes[b]);
-        if (info.range > br && boxes[b].length > 1) {
+        var box = boxes[b];
+        if (box.e - box.s <= 1) continue;
+        var info = channelRange(samples, box.s, box.e);
+        if (info.range > br) {
           br = info.range;
           bi = b;
           ch = info.ch;
         }
       }
       if (br <= 0) break;
-      var box = boxes.splice(bi, 1)[0];
-      box.sort(function (a, c) { return a[ch] - c[ch]; });
-      var mid = box.length >> 1;
-      if (mid === 0 || mid === box.length) {
-        boxes.push(box);
-        break;
-      }
-      boxes.push(box.slice(0, mid), box.slice(mid));
+      var cur = boxes[bi];
+      sortRange(samples, cur.s, cur.e, ch);
+      var mid = cur.s + ((cur.e - cur.s) >> 1);
+      if (mid <= cur.s || mid >= cur.e) break;
+      boxes.splice(bi, 1, { s: cur.s, e: mid }, { s: mid, e: cur.e });
     }
-    return boxes.map(averageColor);
+    return boxes.map(function (box) { return averageColor(samples, box.s, box.e); });
   }
 
   function applyPalette(data, palette) {
@@ -146,25 +154,24 @@
         Math.abs(data[i + 2] - bb) <= tol;
     }
     var visited = new Uint8Array(w * h);
-    var q = [];
+    var q = new Int32Array(w * h);
+    var qh = 0, qt = 0;
     function seed(x, y) {
       var idx = y * w + x;
-      if (similar(idx * 4)) q.push(idx);
+      if (similar(idx * 4)) q[qt++] = idx;
     }
     for (var x = 0; x < w; x++) { seed(x, 0); seed(x, h - 1); }
     for (var y = 0; y < h; y++) { seed(0, y); seed(w - 1, y); }
-    var qi = 0;
-    while (qi < q.length) {
-      var idx = q[qi++];
-      if (visited[idx]) continue;
-      if (!similar(idx * 4)) continue;
+    while (qh < qt) {
+      var idx = q[qh++];
+      if (visited[idx] || !similar(idx * 4)) continue;
       visited[idx] = 1;
       var xx = idx % w;
       var yy = (idx / w) | 0;
-      if (xx > 0) q.push(idx - 1);
-      if (xx < w - 1) q.push(idx + 1);
-      if (yy > 0) q.push(idx - w);
-      if (yy < h - 1) q.push(idx + w);
+      if (xx > 0) q[qt++] = idx - 1;
+      if (xx < w - 1) q[qt++] = idx + 1;
+      if (yy > 0) q[qt++] = idx - w;
+      if (yy < h - 1) q[qt++] = idx + w;
     }
     for (var i = 0; i < visited.length; i++) {
       if (!visited[i]) continue;

@@ -103,10 +103,6 @@
       if (gen !== playGen) return;
       updateProgress();
     });
-    audio.addEventListener("timeupdate", () => {
-      if (gen !== playGen) return;
-      updateProgress();
-    });
     audio.addEventListener("playing", () => {
       if (gen !== playGen) return;
       startTicker();

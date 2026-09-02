@@ -1,6 +1,6 @@
 const SERVICE_LIST = [
 	{
-		"url": "/service/temp-chat.html?r8",
+		"url": "/service/temp-chat.html?r9",
 		"name": {
 			"en": "Temporary Chat",
 			"kr": "임시 채팅방",

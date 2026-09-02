@@ -30,7 +30,9 @@
     clientId: "",
     poll: 0,
     sendTick: 0,
-    pendingImg: null
+    pendingImg: null,
+    polling: false,
+    seen: Object.create(null)
   };
 
   function t(key) {
@@ -57,6 +59,13 @@
   var RATE_MS = 60000;
   var MAX_AGE_MS = 259200000;
   var NTFY_INLINE = 3500;
+  var aesCache = Object.create(null);
+  var hashCache = Object.create(null);
+  var rowCache = Object.create(null);
+  var rowCacheN = 0;
+  var cachedIp = "";
+  var cachedIpAt = 0;
+  var rateMem = null;
 
   function topicOf(hash) {
     return "gbd" + String(hash).slice(0, 40);
@@ -92,27 +101,32 @@
   }
 
   function writerIp() {
+    if (cachedIp && Date.now() - cachedIpAt < 300000) return Promise.resolve(cachedIp);
     return fetch("https://get.geojs.io/v1/ip.json", { signal: AbortSignal.timeout(8000) }).then(function (res) {
       return res.json();
     }).then(function (d) {
-      return String((d && d.ip) || "").trim() || "0.0.0.0";
+      cachedIp = String((d && d.ip) || "").trim() || "0.0.0.0";
+      cachedIpAt = Date.now();
+      return cachedIp;
     }).catch(function () {
-      return "0.0.0.0";
+      return cachedIp || "0.0.0.0";
     });
   }
 
   function readRate() {
     var now = Date.now();
-    var list = [];
-    try {
-      list = JSON.parse(localStorage.getItem("gbd_chat_rate") || "[]");
-      if (!Array.isArray(list)) list = [];
-    } catch (_) {
-      list = [];
+    if (!rateMem) {
+      try {
+        rateMem = JSON.parse(localStorage.getItem("gbd_chat_rate") || "[]");
+        if (!Array.isArray(rateMem)) rateMem = [];
+      } catch (_) {
+        rateMem = [];
+      }
     }
-    return list.filter(function (r) {
+    rateMem = rateMem.filter(function (r) {
       return r && now - Number(r.at) < RATE_MS;
     });
+    return rateMem;
   }
 
   function rateWaitMs() {
@@ -160,15 +174,26 @@
     function finish(env, id, time) {
       if (!env) return null;
       var created = env.createdAt || new Date((time || 0) * 1000).toISOString();
-      return {
+      var row = {
         id: id,
         ciphertext: env.ciphertext,
         ip: env.ip,
         createdAt: created,
-        expiresAt: env.expiresAt
+        expiresAt: env.expiresAt,
+        t: Date.parse(created)
       };
+      if (id) {
+        rowCache[id] = row;
+        rowCacheN += 1;
+        if (rowCacheN > 400) {
+          rowCache = Object.create(null);
+          rowCacheN = 0;
+        }
+      }
+      return row;
     }
     if (!ev || ev.event !== "message") return Promise.resolve(null);
+    if (rowCache[ev.id]) return Promise.resolve(rowCache[ev.id]);
     var att = ev.attachment && ev.attachment.url;
     if (att) {
       return ntfyFetch(att).then(function (res) {
@@ -201,18 +226,26 @@
       });
       return Promise.all(events.map(eventToRow));
     }).then(function (rows) {
-      var list = rows.filter(function (r) {
-        if (!r || typeof r.ciphertext !== "string") return false;
-        var created = Date.parse(r.createdAt);
+      var beforeMs = query.before ? Date.parse(query.before) : NaN;
+      var afterMs = query.after ? Date.parse(query.after) : NaN;
+      var list = [];
+      for (var i = 0; i < rows.length; i++) {
+        var r = rows[i];
+        if (!r || typeof r.ciphertext !== "string") continue;
+        var created = r.t;
+        if (created !== created) {
+          created = Date.parse(r.createdAt);
+          r.t = created;
+        }
         var exp = Date.parse(r.expiresAt);
-        if (isNaN(created) || created < floor) return false;
-        if (!isNaN(exp) && exp <= now) return false;
-        if (query.before && created >= Date.parse(query.before)) return false;
-        if (query.after && created <= Date.parse(query.after)) return false;
-        return true;
-      });
+        if (created !== created || created < floor) continue;
+        if (exp === exp && exp <= now) continue;
+        if (beforeMs === beforeMs && created >= beforeMs) continue;
+        if (afterMs === afterMs && created <= afterMs) continue;
+        list.push(r);
+      }
       list.sort(function (a, b) {
-        return Date.parse(a.createdAt) - Date.parse(b.createdAt);
+        return a.t - b.t;
       });
       var limit = query.limit || 20;
       if (query.after) return list.slice(0, limit);
@@ -278,15 +311,24 @@
     return node;
   }
 
+  var HEX = [];
+  for (var hi = 0; hi < 256; hi++) HEX[hi] = hi.toString(16).padStart(2, "0");
+
   function bufToHex(buf) {
-    return Array.from(new Uint8Array(buf)).map(function (b) {
-      return b.toString(16).padStart(2, "0");
-    }).join("");
+    var u = new Uint8Array(buf);
+    var s = "";
+    for (var i = 0; i < u.length; i++) s += HEX[u[i]];
+    return s;
   }
 
   function bufToB64(bytes) {
+    var CHUNK = 8192;
+    var n = bytes.length;
+    if (n <= CHUNK) return btoa(String.fromCharCode.apply(null, bytes));
     var s = "";
-    for (var i = 0; i < bytes.length; i++) s += String.fromCharCode(bytes[i]);
+    for (var i = 0; i < n; i += CHUNK) {
+      s += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
+    }
     return btoa(s);
   }
 
@@ -306,13 +348,17 @@
   }
 
   function roomHash(passphrase) {
-    return sha256("gbd.room\0" + passphrase).then(bufToHex);
+    if (hashCache[passphrase]) return hashCache[passphrase];
+    hashCache[passphrase] = sha256("gbd.room\0" + passphrase).then(bufToHex);
+    return hashCache[passphrase];
   }
 
   function aesKey(passphrase) {
-    return sha256("gbd.aes\0" + passphrase).then(function (raw) {
+    if (aesCache[passphrase]) return aesCache[passphrase];
+    aesCache[passphrase] = sha256("gbd.aes\0" + passphrase).then(function (raw) {
       return crypto.subtle.importKey("raw", raw, "AES-GCM", false, ["encrypt", "decrypt"]);
     });
+    return aesCache[passphrase];
   }
 
   function encryptPayload(passphrase, payload) {
@@ -328,6 +374,15 @@
     });
   }
 
+  function b64DecodedLen(b64) {
+    var n = b64.length;
+    if (!n) return 0;
+    var pad = 0;
+    if (b64.charCodeAt(n - 1) === 61) pad++;
+    if (n > 1 && b64.charCodeAt(n - 2) === 61) pad++;
+    return ((n * 3) >> 2) - pad;
+  }
+
   function validImg(img) {
     if (!img || typeof img !== "object") return null;
     var w = Number(img.w);
@@ -337,11 +392,7 @@
     h = h | 0;
     if (w < 1 || h < 1 || w > 32 || h > 32) return null;
     if (typeof img.p !== "string" || !img.p) return null;
-    try {
-      if (b64ToBytes(img.p).length !== w * h * 4) return null;
-    } catch (_) {
-      return null;
-    }
+    if (b64DecodedLen(img.p) !== w * h * 4) return null;
     return { w: w, h: h, p: img.p };
   }
 
@@ -353,8 +404,8 @@
       return Promise.resolve(null);
     }
     if (raw.length < 13) return Promise.resolve(null);
-    var iv = raw.slice(0, 12);
-    var data = raw.slice(12);
+    var iv = raw.subarray(0, 12);
+    var data = raw.subarray(12);
     return aesKey(passphrase).then(function (key) {
       return crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, key, data);
     }).then(function (pt) {
@@ -453,15 +504,21 @@
   }
 
   function pixelCanvas(img) {
-    var parsed = validImg(img);
+    var parsed = img && img.w && img.h && img.p ? img : validImg(img);
     if (!parsed) return null;
-    var bytes = b64ToBytes(parsed.p);
+    var bytes;
+    try {
+      bytes = b64ToBytes(parsed.p);
+    } catch (_) {
+      return null;
+    }
+    if (bytes.length !== parsed.w * parsed.h * 4) return null;
     var canvas = document.createElement("canvas");
     canvas.width = parsed.w;
     canvas.height = parsed.h;
     canvas.className = "chat-pixel";
     var ctx = canvas.getContext("2d");
-    ctx.putImageData(new ImageData(new Uint8ClampedArray(bytes), parsed.w, parsed.h), 0, 0);
+    ctx.putImageData(new ImageData(new Uint8ClampedArray(bytes.buffer, bytes.byteOffset, bytes.byteLength), parsed.w, parsed.h), 0, 0);
     return canvas;
   }
 
@@ -610,7 +667,11 @@
   function startSendTick() {
     stopSendTick();
     updateSendButton();
-    state.sendTick = window.setInterval(updateSendButton, 250);
+    if (rateWaitMs() <= 0) return;
+    state.sendTick = window.setInterval(function () {
+      updateSendButton();
+      if (rateWaitMs() <= 0) stopSendTick();
+    }, 250);
   }
 
   function stopSendTick() {
@@ -731,29 +792,47 @@
     return wrap;
   }
 
+  function msgNode(m) {
+    if (m.kind === "welcome") {
+      var p = el("p", "chat-system", t("welcome"));
+      p.dataset.id = m.id;
+      return p;
+    }
+    var art = el("article", "chat-row " + (m.mine ? "is-mine" : "is-theirs"));
+    art.dataset.id = m.id;
+    art.appendChild(el("span", "chat-nick", m.nick));
+    var bubble = el("div", "chat-bubble" + (m.mine ? " is-mine" : ""));
+    if (m.text) bubble.appendChild(document.createTextNode(m.text));
+    if (m.img) {
+      var c = pixelCanvas(m.img);
+      if (c) bubble.appendChild(c);
+    }
+    art.appendChild(bubble);
+    art.appendChild(el("span", "chat-meta", (m.stamp || formatStamp(m.createdAt)) + " · " + m.ip));
+    return art;
+  }
+
+  function dropEmpty(log) {
+    var empty = log.querySelector(".chat-empty");
+    if (empty) log.removeChild(empty);
+  }
+
+  function mountMsgs(log, list, prepend) {
+    if (!list.length) return;
+    dropEmpty(log);
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < list.length; i++) frag.appendChild(msgNode(list[i]));
+    if (prepend && log.firstChild) log.insertBefore(frag, log.firstChild);
+    else log.appendChild(frag);
+  }
+
   function paintLog(log) {
     clearEl(log);
     if (!state.messages.length) {
       log.appendChild(el("p", "chat-empty", t("empty")));
       return;
     }
-    state.messages.forEach(function (m) {
-      if (m.kind === "welcome") {
-        log.appendChild(el("p", "chat-system", t("welcome")));
-        return;
-      }
-      var art = el("article", "chat-row " + (m.mine ? "is-mine" : "is-theirs"));
-      art.appendChild(el("span", "chat-nick", m.nick));
-      var bubble = el("div", "chat-bubble" + (m.mine ? " is-mine" : ""));
-      if (m.text) bubble.appendChild(document.createTextNode(m.text));
-      if (m.img) {
-        var c = pixelCanvas(m.img);
-        if (c) bubble.appendChild(c);
-      }
-      art.appendChild(bubble);
-      art.appendChild(el("span", "chat-meta", formatStamp(m.createdAt) + " · " + m.ip));
-      log.appendChild(art);
-    });
+    mountMsgs(log, state.messages, false);
   }
 
   function showNotice(msg) {
@@ -822,6 +901,11 @@
         }
         state.room = next;
         state.messages = decoded;
+        state.seen = Object.create(null);
+        for (var i = 0; i < decoded.length; i++) {
+          state.seen[decoded[i].id] = true;
+          if (!decoded[i].stamp) decoded[i].stamp = formatStamp(decoded[i].createdAt);
+        }
         state.newest = decoded.length ? decoded[decoded.length - 1].createdAt : null;
         state.oldest = decoded.length ? decoded[0].createdAt : null;
         state.hasMore = rows.length >= 20;
@@ -844,6 +928,7 @@
     stopSendTick();
     state.room = null;
     state.messages = [];
+    state.seen = Object.create(null);
     state.pendingImg = null;
     render();
   }
@@ -962,12 +1047,20 @@
         if (rows.length < 30) state.hasMore = false;
         if (decoded.length) {
           state.oldest = decoded[0].createdAt;
-          var seen = {};
-          state.messages.forEach(function (m) { seen[m.id] = true; });
-          state.messages = decoded.filter(function (m) { return !seen[m.id]; }).concat(state.messages);
-          if (log) {
-            paintLog(log);
-            log.scrollTop = log.scrollHeight - prev;
+          var fresh = [];
+          for (var i = 0; i < decoded.length; i++) {
+            var m = decoded[i];
+            if (state.seen[m.id]) continue;
+            state.seen[m.id] = true;
+            if (!m.stamp) m.stamp = formatStamp(m.createdAt);
+            fresh.push(m);
+          }
+          if (fresh.length) {
+            state.messages = fresh.concat(state.messages);
+            if (log) {
+              mountMsgs(log, fresh, true);
+              log.scrollTop = log.scrollHeight - prev;
+            }
           }
         } else if (!rows.length) {
           state.hasMore = false;
@@ -981,7 +1074,8 @@
   function startPoll() {
     stopPoll();
     state.poll = window.setInterval(function () {
-      if (document.hidden || !state.room) return;
+      if (document.hidden || !state.room || state.polling) return;
+      state.polling = true;
       apiGet(state.room.hash, {
         limit: 30,
         after: state.newest || "1970-01-01T00:00:00.000Z"
@@ -990,18 +1084,25 @@
         return decodeMany(rows, state.room.passphrase, state.clientId).then(function (decoded) {
           if (!decoded.length) return;
           state.newest = decoded[decoded.length - 1].createdAt;
-          var seen = {};
-          state.messages.forEach(function (m) { seen[m.id] = true; });
-          decoded.forEach(function (m) {
-            if (!seen[m.id]) state.messages.push(m);
-          });
+          var added = [];
+          for (var i = 0; i < decoded.length; i++) {
+            var m = decoded[i];
+            if (state.seen[m.id]) continue;
+            state.seen[m.id] = true;
+            if (!m.stamp) m.stamp = formatStamp(m.createdAt);
+            state.messages.push(m);
+            added.push(m);
+          }
+          if (!added.length) return;
           var log = document.getElementById("chatLog");
           if (log) {
-            paintLog(log);
+            mountMsgs(log, added, false);
             if (state.stick) log.scrollTop = log.scrollHeight;
           }
         });
-      }).catch(function () {});
+      }).catch(function () {}).then(function () {
+        state.polling = false;
+      });
     }, onPages() ? 8000 : 4000);
   }
 
@@ -1073,8 +1174,12 @@
         mine: true,
         kind: "chat"
       };
-      var exists = state.messages.some(function (m) { return m.id === view.id; });
-      if (!exists) state.messages.push(view);
+      var exists = state.seen[view.id];
+      if (!exists) {
+        state.seen[view.id] = true;
+        view.stamp = formatStamp(view.createdAt);
+        state.messages.push(view);
+      }
       state.newest = row.createdAt;
       if (!state.oldest) state.oldest = row.createdAt;
       if (textEl) {
@@ -1088,14 +1193,14 @@
       state.stick = true;
       var log = document.getElementById("chatLog");
       if (log) {
-        paintLog(log);
+        if (!exists) mountMsgs(log, [view], false);
         log.scrollTop = log.scrollHeight;
       }
     }).catch(function (e) {
       showNotice(e.message === "rate" ? t("rateLimit") : t("error"));
     }).then(function () {
       state.busy = false;
-      updateSendButton();
+      startSendTick();
     });
   }
 

@@ -3,6 +3,8 @@
 
   var rows = [];
   var MAX = 128 * 1024 * 1024;
+  var HEX = [];
+  for (var hx = 0; hx < 256; hx++) HEX[hx] = hx.toString(16).padStart(2, "0");
 
   function L(key) {
     var bag = (window.LANGUAGE_OBJECT || {}).HASH_CHECK_LANG;
@@ -24,105 +26,105 @@
 
   function hex(bytes) {
     var s = "";
-    for (var i = 0; i < bytes.length; i++) s += bytes[i].toString(16).padStart(2, "0");
+    for (var i = 0; i < bytes.length; i++) s += HEX[bytes[i]];
     return s;
   }
 
   function add(a, b) { return (a + b) >>> 0; }
   function rol(x, n) { return (x << n) | (x >>> (32 - n)); }
   function cmn(q, a, b, x, s, t) { return add(rol(add(add(a, q), add(x, t)), s), b); }
+  function ff(a0, b0, c0, d0, x, s, t) { return cmn((b0 & c0) | (~b0 & d0), a0, b0, x, s, t); }
+  function gg(a0, b0, c0, d0, x, s, t) { return cmn((b0 & d0) | (c0 & ~d0), a0, b0, x, s, t); }
+  function hh(a0, b0, c0, d0, x, s, t) { return cmn(b0 ^ c0 ^ d0, a0, b0, x, s, t); }
+  function ii(a0, b0, c0, d0, x, s, t) { return cmn(c0 ^ (b0 | ~d0), a0, b0, x, s, t); }
+  function hexLe(n) {
+    return HEX[n & 255] + HEX[(n >>> 8) & 255] + HEX[(n >>> 16) & 255] + HEX[(n >>> 24) & 255];
+  }
 
   function md5(buffer) {
     var bytes = new Uint8Array(buffer);
     var len = bytes.length;
-    var words = [];
-    for (var i = 0; i < len; i++) words[i >> 2] |= bytes[i] << ((i % 4) * 8);
-    words[len >> 2] |= 0x80 << ((len % 4) * 8);
-    var bits = len * 8;
     var size = (((len + 8) >> 6) + 1) * 16;
-    while (words.length < size) words.push(0);
-    words[size - 2] = bits & 0xffffffff;
+    var words = new Uint32Array(size);
+    for (var i = 0; i < len; i++) words[i >> 2] |= bytes[i] << ((i & 3) << 3);
+    words[len >> 2] |= 0x80 << ((len & 3) << 3);
+    var bits = len * 8;
+    words[size - 2] = bits >>> 0;
     words[size - 1] = Math.floor(bits / 0x100000000);
     var a = 1732584193, b = -271733879, c = -1732584194, d = 271733878;
-    for (i = 0; i < words.length; i += 16) {
+    for (i = 0; i < size; i += 16) {
       var oa = a, ob = b, oc = c, od = d;
-      var w = words.slice(i, i + 16);
-      function ff(a0, b0, c0, d0, x, s, t) { return cmn((b0 & c0) | (~b0 & d0), a0, b0, x, s, t); }
-      function gg(a0, b0, c0, d0, x, s, t) { return cmn((b0 & d0) | (c0 & ~d0), a0, b0, x, s, t); }
-      function hh(a0, b0, c0, d0, x, s, t) { return cmn(b0 ^ c0 ^ d0, a0, b0, x, s, t); }
-      function ii(a0, b0, c0, d0, x, s, t) { return cmn(c0 ^ (b0 | ~d0), a0, b0, x, s, t); }
-      a = ff(a, b, c, d, w[0], 7, -680876936);
-      d = ff(d, a, b, c, w[1], 12, -389564586);
-      c = ff(c, d, a, b, w[2], 17, 606105819);
-      b = ff(b, c, d, a, w[3], 22, -1044525330);
-      a = ff(a, b, c, d, w[4], 7, -176418897);
-      d = ff(d, a, b, c, w[5], 12, 1200080426);
-      c = ff(c, d, a, b, w[6], 17, -1473231341);
-      b = ff(b, c, d, a, w[7], 22, -45705983);
-      a = ff(a, b, c, d, w[8], 7, 1770035416);
-      d = ff(d, a, b, c, w[9], 12, -1958414417);
-      c = ff(c, d, a, b, w[10], 17, -42063);
-      b = ff(b, c, d, a, w[11], 22, -1990404162);
-      a = ff(a, b, c, d, w[12], 7, 1804603682);
-      d = ff(d, a, b, c, w[13], 12, -40341101);
-      c = ff(c, d, a, b, w[14], 17, -1502002290);
-      b = ff(b, c, d, a, w[15], 22, 1236535329);
-      a = gg(a, b, c, d, w[1], 5, -165796510);
-      d = gg(d, a, b, c, w[6], 9, -1069501632);
-      c = gg(c, d, a, b, w[11], 14, 643717713);
-      b = gg(b, c, d, a, w[0], 20, -373897302);
-      a = gg(a, b, c, d, w[5], 5, -701558691);
-      d = gg(d, a, b, c, w[10], 9, 38016083);
-      c = gg(c, d, a, b, w[15], 14, -660478335);
-      b = gg(b, c, d, a, w[4], 20, -405537848);
-      a = gg(a, b, c, d, w[9], 5, 568446438);
-      d = gg(d, a, b, c, w[14], 9, -1019803690);
-      c = gg(c, d, a, b, w[3], 14, -187363961);
-      b = gg(b, c, d, a, w[8], 20, 1163531501);
-      a = gg(a, b, c, d, w[13], 5, -1444681467);
-      d = gg(d, a, b, c, w[2], 9, -51403784);
-      c = gg(c, d, a, b, w[7], 14, 1735328473);
-      b = gg(b, c, d, a, w[12], 20, -1926607734);
-      a = hh(a, b, c, d, w[5], 4, -378558);
-      d = hh(d, a, b, c, w[8], 11, -2022574463);
-      c = hh(c, d, a, b, w[11], 16, 1839030562);
-      b = hh(b, c, d, a, w[14], 23, -35309556);
-      a = hh(a, b, c, d, w[1], 4, -1530992060);
-      d = hh(d, a, b, c, w[4], 11, 1272893353);
-      c = hh(c, d, a, b, w[7], 16, -155497632);
-      b = hh(b, c, d, a, w[10], 23, -1094730640);
-      a = hh(a, b, c, d, w[13], 4, 681279174);
-      d = hh(d, a, b, c, w[0], 11, -358537222);
-      c = hh(c, d, a, b, w[3], 16, -722521979);
-      b = hh(b, c, d, a, w[6], 23, 76029189);
-      a = hh(a, b, c, d, w[9], 4, -640364487);
-      d = hh(d, a, b, c, w[12], 11, -421815835);
-      c = hh(c, d, a, b, w[15], 16, 530742520);
-      b = hh(b, c, d, a, w[2], 23, -995338651);
-      a = ii(a, b, c, d, w[0], 6, -198630844);
-      d = ii(d, a, b, c, w[7], 10, 1126891415);
-      c = ii(c, d, a, b, w[14], 15, -1416354905);
-      b = ii(b, c, d, a, w[5], 21, -57434055);
-      a = ii(a, b, c, d, w[12], 6, 1700485571);
-      d = ii(d, a, b, c, w[3], 10, -1894986606);
-      c = ii(c, d, a, b, w[10], 15, -1051523);
-      b = ii(b, c, d, a, w[1], 21, -2054922799);
-      a = ii(a, b, c, d, w[8], 6, 1873313359);
-      d = ii(d, a, b, c, w[15], 10, -30611744);
-      c = ii(c, d, a, b, w[6], 15, -1560198380);
-      b = ii(b, c, d, a, w[13], 21, 1309151649);
-      a = ii(a, b, c, d, w[4], 6, -145523070);
-      d = ii(d, a, b, c, w[11], 10, -1120210379);
-      c = ii(c, d, a, b, w[2], 15, 718787259);
-      b = ii(b, c, d, a, w[9], 21, -343485551);
+      var w0 = words[i], w1 = words[i + 1], w2 = words[i + 2], w3 = words[i + 3];
+      var w4 = words[i + 4], w5 = words[i + 5], w6 = words[i + 6], w7 = words[i + 7];
+      var w8 = words[i + 8], w9 = words[i + 9], w10 = words[i + 10], w11 = words[i + 11];
+      var w12 = words[i + 12], w13 = words[i + 13], w14 = words[i + 14], w15 = words[i + 15];
+      a = ff(a, b, c, d, w0, 7, -680876936);
+      d = ff(d, a, b, c, w1, 12, -389564586);
+      c = ff(c, d, a, b, w2, 17, 606105819);
+      b = ff(b, c, d, a, w3, 22, -1044525330);
+      a = ff(a, b, c, d, w4, 7, -176418897);
+      d = ff(d, a, b, c, w5, 12, 1200080426);
+      c = ff(c, d, a, b, w6, 17, -1473231341);
+      b = ff(b, c, d, a, w7, 22, -45705983);
+      a = ff(a, b, c, d, w8, 7, 1770035416);
+      d = ff(d, a, b, c, w9, 12, -1958414417);
+      c = ff(c, d, a, b, w10, 17, -42063);
+      b = ff(b, c, d, a, w11, 22, -1990404162);
+      a = ff(a, b, c, d, w12, 7, 1804603682);
+      d = ff(d, a, b, c, w13, 12, -40341101);
+      c = ff(c, d, a, b, w14, 17, -1502002290);
+      b = ff(b, c, d, a, w15, 22, 1236535329);
+      a = gg(a, b, c, d, w1, 5, -165796510);
+      d = gg(d, a, b, c, w6, 9, -1069501632);
+      c = gg(c, d, a, b, w11, 14, 643717713);
+      b = gg(b, c, d, a, w0, 20, -373897302);
+      a = gg(a, b, c, d, w5, 5, -701558691);
+      d = gg(d, a, b, c, w10, 9, 38016083);
+      c = gg(c, d, a, b, w15, 14, -660478335);
+      b = gg(b, c, d, a, w4, 20, -405537848);
+      a = gg(a, b, c, d, w9, 5, 568446438);
+      d = gg(d, a, b, c, w14, 9, -1019803690);
+      c = gg(c, d, a, b, w3, 14, -187363961);
+      b = gg(b, c, d, a, w8, 20, 1163531501);
+      a = gg(a, b, c, d, w13, 5, -1444681467);
+      d = gg(d, a, b, c, w2, 9, -51403784);
+      c = gg(c, d, a, b, w7, 14, 1735328473);
+      b = gg(b, c, d, a, w12, 20, -1926607734);
+      a = hh(a, b, c, d, w5, 4, -378558);
+      d = hh(d, a, b, c, w8, 11, -2022574463);
+      c = hh(c, d, a, b, w11, 16, 1839030562);
+      b = hh(b, c, d, a, w14, 23, -35309556);
+      a = hh(a, b, c, d, w1, 4, -1530992060);
+      d = hh(d, a, b, c, w4, 11, 1272893353);
+      c = hh(c, d, a, b, w7, 16, -155497632);
+      b = hh(b, c, d, a, w10, 23, -1094730640);
+      a = hh(a, b, c, d, w13, 4, 681279174);
+      d = hh(d, a, b, c, w0, 11, -358537222);
+      c = hh(c, d, a, b, w3, 16, -722521979);
+      b = hh(b, c, d, a, w6, 23, 76029189);
+      a = hh(a, b, c, d, w9, 4, -640364487);
+      d = hh(d, a, b, c, w12, 11, -421815835);
+      c = hh(c, d, a, b, w15, 16, 530742520);
+      b = hh(b, c, d, a, w2, 23, -995338651);
+      a = ii(a, b, c, d, w0, 6, -198630844);
+      d = ii(d, a, b, c, w7, 10, 1126891415);
+      c = ii(c, d, a, b, w14, 15, -1416354905);
+      b = ii(b, c, d, a, w5, 21, -57434055);
+      a = ii(a, b, c, d, w12, 6, 1700485571);
+      d = ii(d, a, b, c, w3, 10, -1894986606);
+      c = ii(c, d, a, b, w10, 15, -1051523);
+      b = ii(b, c, d, a, w1, 21, -2054922799);
+      a = ii(a, b, c, d, w8, 6, 1873313359);
+      d = ii(d, a, b, c, w15, 10, -30611744);
+      c = ii(c, d, a, b, w6, 15, -1560198380);
+      b = ii(b, c, d, a, w13, 21, 1309151649);
+      a = ii(a, b, c, d, w4, 6, -145523070);
+      d = ii(d, a, b, c, w11, 10, -1120210379);
+      c = ii(c, d, a, b, w2, 15, 718787259);
+      b = ii(b, c, d, a, w9, 21, -343485551);
       a = add(a, oa); b = add(b, ob); c = add(c, oc); d = add(d, od);
     }
-    function le(n) {
-      return [n, n >> 8, n >> 16, n >> 24].map(function (x) {
-        return (x & 255).toString(16).padStart(2, "0");
-      }).join("");
-    }
-    return le(a) + le(b) + le(c) + le(d);
+    return hexLe(a) + hexLe(b) + hexLe(c) + hexLe(d);
   }
 
   async function sha(algo, buffer) {
