@@ -7,18 +7,18 @@ const TEMP_CHAT_LANG = {
 		ru: "Временный чат"
 	},
 	kicker: {
-		en: "Encrypted · 3-day limit",
-		kr: "암호화 · 최대 3일",
-		jp: "暗号化 · 最長3日",
-		cn: "加密 · 最长3天",
-		ru: "Шифрование · до 3 дней"
+		en: "Messages will be automatically deleted after a maximum of 3 days.",
+		kr: "메시지는 최대 3일 이후 자동 삭제됩니다.",
+		jp: "メッセージは最大3日後に自動的に削除されます。",
+		cn: "信息最多将在3天后自动删除。",
+		ru: "Сообщения будут автоматически удалены максимум через 3 дня."
 	},
 	hint: {
-		en: "No sign-in. Messages are encrypted on this device and always deleted within 3 days.",
-		kr: "로그인 없이 이용합니다. 메시지는 이 기기에서 암호화되며 최대 3일 후 삭제됩니다.",
-		jp: "ログイン不要。メッセージはこの端末で暗号化され、最長3日で削除されます。",
-		cn: "无需登录。消息在本机加密，最多3天后删除。",
-		ru: "Без входа. Сообщения шифруются на устройстве и удаляются не позже чем через 3 дня."
+		en: "",
+		kr: "",
+		jp: "",
+		cn: "",
+		ru: ""
 	},
 	joinPublic: {
 		en: "Join public room",
@@ -42,11 +42,11 @@ const TEMP_CHAT_LANG = {
 		ru: "Создать группу"
 	},
 	publicDesc: {
-		en: "Anyone can enter. Same passphrase for every visitor.",
-		kr: "누구나 바로 들어올 수 있습니다. 방 암호는 모두에게 같습니다.",
-		jp: "誰でもすぐ入れます。合言葉は全員共通です。",
-		cn: "任何人都能进入。所有访客使用同一口令。",
-		ru: "Войти может любой. Одна фраза для всех."
+		en: "Anyone can enter.",
+		kr: "누구나 참여 가능합니다.",
+		jp: "誰でもすぐ入れます。",
+		cn: "任何人都能进入。",
+		ru: "Войти может любой."
 	},
 	joinDesc: {
 		en: "Enter the exact title and password the host set.",

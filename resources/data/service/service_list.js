@@ -9,11 +9,11 @@ const SERVICE_LIST = [
 			"ru": "Временный чат"
 		},
 		"description": {
-			"en": "Write without signing in. Messages are encrypted on your device and always deleted within 3 days.",
-			"kr": "로그인 없이 메시지를 남길 수 있습니다. 내용은 기기에서 암호화되어 보관되며 최대 3일 후 자동 삭제됩니다.",
-			"jp": "ログインなしでメッセージを残せます。内容はこの端末で暗号化され、最長3日で自動削除されます。",
-			"cn": "无需登录即可留言。内容在本机加密保存，最多3天后自动删除。",
-			"ru": "Пишите без входа. Сообщения шифруются на устройстве и удаляются не позже чем через 3 дня."
+			"en": "Write without signing in. Messages will be automatically after a maximum of 3 days.",
+			"kr": "로그인 없이 메시지를 남길 수 있습니다. 메시지는 최대 3일 후 자동 삭제됩니다.",
+			"jp": "ログインなしでメッセージを残すことができます。内容は最大3日後に自動的に削除されます。",
+			"cn": "无需登录即可留言。内容最多将在3天后自动删除。",
+			"ru": "Вы можете оставить сообщение без входа в систему. Содержимое будет автоматически удалено максимум через 3 дня."
 		},
 		"tag": ["chat", "temp", "encrypt", "messenger"],
 		"icon": "/resources/img/service/logo/temp-chat.svg",
