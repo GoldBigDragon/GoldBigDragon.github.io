@@ -35,9 +35,11 @@
     logs: [],
     settings: { defaultProvider: "grok" },
     activeBotId: "admin",
+    activeRoomId: "",
+    rooms: [],
+    plugins: [],
     busy: false,
     backend: false,
-    company: {},
   };
 
   function active() {
@@ -62,19 +64,37 @@
         <span><b>${esc(b.name)}</b><i>${esc((last && last.text) || "새 대화")}</i></span>
       </button>`;
     };
-    rail.innerHTML = (admin ? row(admin) : "") + rest.map(row).join("");
+    rail.innerHTML = (admin ? row(admin) : "") + rest.map(row).join("") +
+      (S.rooms || []).map((r) => {
+        const last = (S.messages[r.id] || []).slice().reverse().find((m) => m.role === "user" || m.role === "assistant");
+        return `<button type="button" class="rail-item ${r.id === S.activeRoomId ? "on" : ""}" data-room="${esc(r.id)}">
+          <span class="av">방</span>
+          <span><b>${esc(r.name)}</b><i>${esc((last && last.text) || "단체 방")}</i></span>
+        </button>`;
+      }).join("");
     rail.querySelectorAll("[data-id]").forEach((el) => {
       el.onclick = () => {
         S.activeBotId = el.getAttribute("data-id");
-        api("/api/active", { method: "POST", body: JSON.stringify({ botId: S.activeBotId }) }).catch(() => {});
+        S.activeRoomId = "";
+        api("/api/active", { method: "POST", body: JSON.stringify({ botId: S.activeBotId, roomId: "" }) }).catch(() => {});
         render();
       };
     });
-    $("chatHead").innerHTML = bot
-      ? `<strong>${esc(bot.name)}</strong> <span>${esc(bot.rank)} · ${esc(bot.rolePath || "개인 비서")}</span>`
+    rail.querySelectorAll("[data-room]").forEach((el) => {
+      el.onclick = () => {
+        S.activeRoomId = el.getAttribute("data-room");
+        api("/api/active", { method: "POST", body: JSON.stringify({ botId: S.activeBotId, roomId: S.activeRoomId }) }).catch(() => {});
+        render();
+      };
+    });
+    const room = (S.rooms || []).find((r) => r.id === S.activeRoomId);
+    $("chatHead").innerHTML = room
+      ? `<strong>${esc(room.name)}</strong> <span>단체 방</span>`
+      : bot
+      ? `<strong>${esc(bot.name)}</strong> <span>${esc(bot.personality || "개인 비서")}</span>`
       : "";
     const log = $("chatLog");
-    const msgs = (bot && S.messages[bot.id]) || [];
+    const msgs = (room ? S.messages[room.id] : bot && S.messages[bot.id]) || [];
     log.innerHTML = msgs
       .map((m) => {
         const who = m.role === "user" ? "user" : m.role === "collab" || m.role === "tool" ? "collab" : "bot";
@@ -123,7 +143,7 @@
     $("composerInput").value = "";
     api("/api/chat", {
       method: "POST",
-      body: JSON.stringify({ botId: S.activeBotId, text, model: $("modelSelect").value || "auto:balance" }),
+      body: JSON.stringify({ botId: S.activeBotId, roomId: S.activeRoomId || "", text, model: $("modelSelect").value || "auto:balance" }),
     }).catch((err) => alert(err.message));
   });
 
@@ -166,8 +186,8 @@
   function openSettings() {
     const m = $("settingsModal");
     m.classList.remove("hidden");
-    $("settingsTabs").innerHTML = ["keys", "connect", "vault", "harness", "logs"]
-      .map((t, i) => `<button type="button" data-tab="${t}" class="${i === 0 ? "on" : ""}">${{ keys: "API 키", connect: "연결", vault: "금고", harness: "하네스", logs: "로그" }[t]}</button>`)
+    $("settingsTabs").innerHTML = ["keys", "connect", "vault", "plugins", "logs"]
+      .map((t, i) => `<button type="button" data-tab="${t}" class="${i === 0 ? "on" : ""}">${{ keys: "API 키", connect: "연결", vault: "금고", plugins: "플러그인", logs: "로그" }[t]}</button>`)
       .join("");
     const body = $("settingsBody");
     const showTab = (tab) => {
@@ -231,8 +251,8 @@
           `<label>금고 암호 <input id="vpass" type="password" maxlength="128"></label><button type="button" id="vsave">암호 저장</button>` +
           (S.secrets || []).map((s) => `<p>${esc(s.key)} · ••••••</p>`).join("");
         $("vsave").onclick = () => api("/api/vault", { method: "POST", body: JSON.stringify({ action: "passphrase", pass: $("vpass").value }) });
-      } else if (tab === "harness") {
-        body.innerHTML = (S.harness || []).map((h) => `<details><summary>${esc(h.path)}</summary><pre>${esc((h.body || "").slice(0, 4000))}</pre></details>`).join("");
+      } else if (tab === "plugins") {
+        body.innerHTML = (S.plugins || []).map((p) => `<p>${esc(p.name)} · ${p.enabled ? "실행" : "중지"}</p>`).join("") || "<p class='hint'>플러그인 없음</p>";
       } else {
         body.innerHTML = (S.logs || [])
           .slice()
