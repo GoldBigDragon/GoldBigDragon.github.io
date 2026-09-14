@@ -1,0 +1,44 @@
+{
+	"korea": {
+		"en": "Korea",
+		"ko": "대한민국",
+		"ja": "韓国",
+		"zh": "韩国",
+		"ba": "Корея"
+	},
+	"united_states_of_america": {
+		"en": "United States of America",
+		"ko": "미국",
+		"ja": "アメリカ合衆国",
+		"zh": "美国",
+		"ba": "США"
+	},
+	"japan": {
+		"en": "Japan",
+		"ko": "일본",
+		"ja": "日本",
+		"zh": "日本",
+		"ba": "Япония"
+	},
+	"china": {
+		"en": "China",
+		"ko": "중국",
+		"ja": "中国",
+		"zh": "中国",
+		"ba": "Китай"
+	},
+	"russia": {
+		"en": "Russia",
+		"ko": "러시아",
+		"ja": "ロシア",
+		"zh": "俄罗斯",
+		"ba": "Россия"
+	},
+	"unknown": {
+		"en": "Unknown",
+		"ko": "알 수 없음",
+		"ja": "不明",
+		"zh": "未知",
+		"ba": "Неизвестно"
+	}
+}

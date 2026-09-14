@@ -1,0 +1,499 @@
+{
+	"building": {
+		"en": "Building",
+		"ko": "건물",
+		"ja": "建物",
+		"zh": "建筑",
+		"ba": "Здание"
+	},
+	"buildings": {
+		"en": "Buildings",
+		"ko": "많은 건물",
+		"ja": "多くの建物",
+		"zh": "许多建筑",
+		"ba": "Много зданий"
+	},
+	"building_with_wheat": {
+		"en": "Building with wheat",
+		"ko": "작물이 자라는 건물",
+		"ja": "小麦が育つ建物",
+		"zh": "长麦子的建筑",
+		"ba": "Здание с пшеницей"
+	},
+	"building_with_person": {
+		"en": "Building with person",
+		"ko": "사람이 있는 건물",
+		"ja": "人がいる建物",
+		"zh": "有人在的建筑",
+		"ba": "Здание с человеком"
+	},
+	"building_with_shield": {
+		"en": "Building with shield",
+		"ko": "강화된 건물",
+		"ja": "シールド付きの建物",
+		"zh": "带有盾牌的建筑",
+		"ba": "Здание с щитом"
+	},
+	"building_with_magnifier": {
+		"en": "Building with magnifier",
+		"ko": "돋보기가 그려진 건물",
+		"ja": "拡大鏡のついた建物",
+		"zh": "带有放大镜的建筑",
+		"ba": "Здание с увеличительным стеклом"
+	},
+	"building_with_lock": {
+		"en": "Building with lock",
+		"ko": "잠겨 있는 건물",
+		"ja": "鍵がかかった建物",
+		"zh": "锁住的建筑",
+		"ba": "Здание с замком"
+	},
+	"building_with_car": {
+		"en": "Building with car",
+		"ko": "차량이 있는 건물",
+		"ja": "車のある建物",
+		"zh": "有车的建筑",
+		"ba": "Здание с автомобилем"
+	},
+	"building_with_x": {
+		"en": "Building with X",
+		"ko": "X 표시가 그려진 건물",
+		"ja": "X印が描かれた建物",
+		"zh": "有X标记的建筑",
+		"ba": "Здание с пометкой X"
+	},
+	"building_with_exclamation": {
+		"en": "Building with exclamation",
+		"ko": "느낌표가 그려진 건물",
+		"ja": "感嘆符が描かれた建物",
+		"zh": "带有感叹号的建筑",
+		"ba": "Здание с восклицательным знаком"
+	},
+	"building_with_check": {
+		"en": "Building with check",
+		"ko": "체크 표시가 그려진 건물",
+		"ja": "チェックマークが描かれた建物",
+		"zh": "带有勾号的建筑",
+		"ba": "Здание с галочкой"
+	},
+	"city": {
+		"en": "City",
+		"ko": "도시",
+		"ja": "都市",
+		"zh": "城市",
+		"ba": "Город"
+	},
+	"house": {
+		"en": "House",
+		"ko": "집",
+		"ja": "家",
+		"zh": "房子",
+		"ba": "Дом"
+	},
+	"house_with_car": {
+		"en": "House with car",
+		"ko": "차량이 있는 집",
+		"ja": "車のある家",
+		"zh": "有车的房子",
+		"ba": "Дом с автомобилем"
+	},
+	"house_witch_check": {
+		"en": "House with car",
+		"ko": "체크 표시가 그려진 집",
+		"ja": "チェックマークが描かれた家",
+		"zh": "带有勾号的房子",
+		"ba": "Дом с галочкой"
+	},
+	"house_with_exclamation": {
+		"en": "House with exclamation",
+		"ko": "느낌표가 그려진 집",
+		"ja": "感嘆符が描かれた家",
+		"zh": "带有感叹号的房子",
+		"ba": "Дом с восклицательным знаком"
+	},
+	"house_with_x": {
+		"en": "House with X",
+		"ko": "X 표시가 그려진 집",
+		"ja": "X印が描かれた家",
+		"zh": "有X标记的房子",
+		"ba": "Дом с пометкой X"
+	},
+	"house_with_lock": {
+		"en": "House with lock",
+		"ko": "잠겨 있는 집",
+		"ja": "鍵がかかった家",
+		"zh": "锁住的房子",
+		"ba": "Дом с замком"
+	},
+	"house_with_magnifier": {
+		"en": "House with magnifier",
+		"ko": "돋보기가 그려진 집",
+		"ja": "拡大鏡のついた家",
+		"zh": "带有放大镜的房子",
+		"ba": "Дом с увеличительным стеклом"
+	},
+	"house_with_person": {
+		"en": "House with person",
+		"ko": "사람이 있는 집",
+		"ja": "人がいる家",
+		"zh": "有人的房子",
+		"ba": "Дом с человеком"
+	},
+	"house_with_shield": {
+		"en": "House with shield",
+		"ko": "강화된 집",
+		"ja": "シールド付きの家",
+		"zh": "带有盾牌的房子",
+		"ba": "Дом с щитом"
+	},
+	"house_with_wheat": {
+		"en": "House with wheat",
+		"ko": "작물이 자라는 집",
+		"ja": "小麦が育つ家",
+		"zh": "长麦子的房子",
+		"ba": "Дом с пшеницей"
+	},
+	"shop": {
+		"en": "Shop",
+		"ko": "상점",
+		"ja": "ショップ",
+		"zh": "商店",
+		"ba": "Магазин"
+	},
+	"church": {
+		"en": "Church",
+		"ko": "교회",
+		"ja": "教会",
+		"zh": "教堂",
+		"ba": "Церковь"
+	},
+	"hospital": {
+		"en": "Hospital",
+		"ko": "병원",
+		"ja": "病院",
+		"zh": "医院",
+		"ba": "Больница"
+	},
+	"hotel": {
+		"en": "Hotel",
+		"ko": "호텔",
+		"ja": "ホテル",
+		"zh": "酒店",
+		"ba": "Отель"
+	},
+	"industry": {
+		"en": "Industry",
+		"ko": "공장",
+		"ja": "工場",
+		"zh": "工厂",
+		"ba": "Промышленность"
+	},
+	"landmark": {
+		"en": "Landmark",
+		"ko": "랜드마크",
+		"ja": "ランドマーク",
+		"zh": "地标",
+		"ba": "Ориентир"
+	},
+	"warehouse": {
+		"en": "Warehouse",
+		"ko": "창고",
+		"ja": "倉庫",
+		"zh": "仓库",
+		"ba": "Склад"
+	},
+	"bridge": {
+		"en": "Bridge",
+		"ko": "다리",
+		"ja": "橋",
+		"zh": "桥",
+		"ba": "Мост"
+	},
+	"campground": {
+		"en": "Campground",
+		"ko": "캠핑장",
+		"ja": "キャンプ場",
+		"zh": "露营地",
+		"ba": "Кемпинг"
+	},
+	"farm": {
+		"en": "Farm",
+		"ko": "농장",
+		"ja": "農場",
+		"zh": "农场",
+		"ba": "Ферма"
+	},
+	"fence": {
+		"en": "Fence",
+		"ko": "울타리",
+		"ja": "フェンス",
+		"zh": "围栏",
+		"ba": "Забор"
+	},
+	"ferris_wheel": {
+		"en": "Ferris wheel",
+		"ko": "관람차",
+		"ja": "観覧車",
+		"zh": "摩天轮",
+		"ba": "Колесо обозрения"
+	},
+	"castle": {
+		"en": "Castle",
+		"ko": "성",
+		"ja": "城",
+		"zh": "城堡",
+		"ba": "Замок"
+	},
+	"igloo": {
+		"en": "Igloo",
+		"ko": "이글루",
+		"ja": "イグルー",
+		"zh": "冰屋",
+		"ba": "Иглу"
+	},
+	"lighthouse": {
+		"en": "Lighthouse",
+		"ko": "등대",
+		"ja": "灯台",
+		"zh": "灯塔",
+		"ba": "Маяк"
+	},
+	"tent": {
+		"en": "Tent",
+		"ko": "텐트",
+		"ja": "テント",
+		"zh": "帐篷",
+		"ba": "Палатка"
+	},
+	"toilet": {
+		"en": "Toilet",
+		"ko": "화장실",
+		"ja": "トイレ",
+		"zh": "厕所",
+		"ba": "Туалет"
+	},
+	"watchtower": {
+		"en": "Watchtower",
+		"ko": "망루",
+		"ja": "見張り塔",
+		"zh": "瞭望塔",
+		"ba": "Смотровая башня"
+	},
+	"shelter": {
+		"en": "Shelter",
+		"ko": "대피소",
+		"ja": "避難所",
+		"zh": "避难所",
+		"ba": "Убежище"
+	},
+	"gas_station": {
+		"en": "Gas station",
+		"ko": "주유소",
+		"ja": "ガソリンスタンド",
+		"zh": "加油站",
+		"ba": "Заправка"
+	},
+	"water_spring": {
+		"en": "Water spring",
+		"ko": "약수터",
+		"ja": "水源",
+		"zh": "水源",
+		"ba": "Источник воды"
+	},
+	"tombstone": {
+		"en": "Tombstone",
+		"ko": "묘비",
+		"ja": "墓石",
+		"zh": "墓碑",
+		"ba": "Могильная плита"
+	},
+	"supermarket": {
+		"en": "Supermarket",
+		"ko": "대형 마트",
+		"ja": "スーパーマーケット",
+		"zh": "超市",
+		"ba": "Супермаркет"
+	},
+	"stair": {
+		"en": "Stair",
+		"ko": "계단",
+		"ja": "階段",
+		"zh": "楼梯",
+		"ba": "Лестница"
+	},
+	"elevator": {
+		"en": "Elevator",
+		"ko": "승강기",
+		"ja": "エレベーター",
+		"zh": "电梯",
+		"ba": "Лифт"
+	},
+	"temple": {
+		"en": "Temple",
+		"ko": "절",
+		"ja": "寺院",
+		"zh": "寺庙",
+		"ba": "Храм"
+	},
+	"mountain": {
+		"en": "Mountain",
+		"ko": "산",
+		"ja": "山",
+		"zh": "山",
+		"ba": "Гора"
+	},
+	"hongsal_gate": {
+		"en": "Hongsal gate",
+		"ko": "홍살문",
+		"ja": "鳥居",
+		"zh": "牌坊",
+		"ba": "Хонсальмун"
+	},
+	"police_station": {
+		"en": "Police station",
+		"ko": "경찰서",
+		"ja": "警察署",
+		"zh": "警察局",
+		"ba": "Полицейский участок"
+	},
+	"well": {
+		"en": "Well",
+		"ko": "우물",
+		"ja": "井戸",
+		"zh": "井",
+		"ba": "Колодец"
+	},
+	"road": {
+		"en": "Road",
+		"ko": "도로",
+		"ja": "道路",
+		"zh": "道路",
+		"ba": "Дорога"
+	},
+	"repair_shop": {
+		"en": "Repair shop",
+		"ko": "정비소",
+		"ja": "修理工場",
+		"zh": "修理店",
+		"ba": "Ремонтная мастерская"
+	},
+	"tree": {
+		"en": "Tree",
+		"ko": "나무",
+		"ja": "木",
+		"zh": "树",
+		"ba": "Дерево"
+	},
+	"military_base": {
+		"en": "Military base",
+		"ko": "군사 기지",
+		"ja": "軍事基地",
+		"zh": "军事基地",
+		"ba": "Военная база"
+	},
+	"harbor": {
+		"en": "Harbor",
+		"ko": "항구",
+		"ja": "港",
+		"zh": "港口",
+		"ba": "Порт"
+	},
+	"bus_stop": {
+		"en": "Bus stop",
+		"ko": "버스 정류장",
+		"ja": "バス停",
+		"zh": "公交车站",
+		"ba": "Автобусная остановка"
+	},
+	"airport": {
+		"en": "Airport",
+		"ko": "공항",
+		"ja": "空港",
+		"zh": "机场",
+		"ba": "Аэропорт"
+	},
+	"subway_station": {
+		"en": "Subway station",
+		"ko": "지하철역",
+		"ja": "地下鉄駅",
+		"zh": "地铁站",
+		"ba": "Станция метро"
+	},
+	"train_station": {
+		"en": "Train station",
+		"ko": "기차역",
+		"ja": "鉄道駅",
+		"zh": "火车站",
+		"ba": "Железнодорожный вокзал"
+	},
+	"mine": {
+		"en": "Mine",
+		"ko": "광산",
+		"ja": "鉱山",
+		"zh": "矿山",
+		"ba": "Шахта"
+	},
+	"cave": {
+		"en": "Cave",
+		"ko": "동굴",
+		"ja": "洞窟",
+		"zh": "洞穴",
+		"ba": "Пещера"
+	},
+	"cctv": {
+		"en": "CCTV",
+		"ko": "CCTV",
+		"ja": "CCTV",
+		"zh": "监控摄像头",
+		"ba": "CCTV"
+	},
+	"laboratory": {
+		"en": "Laboratory",
+		"ko": "연구소",
+		"ja": "研究所",
+		"zh": "实验室",
+		"ba": "Лаборатория"
+	},
+	"signal": {
+		"en": "Signal",
+		"ko": "신호",
+		"ja": "信号",
+		"zh": "信号",
+		"ba": "Сигнал"
+	},
+	"pin_point": {
+		"en": "Pin point",
+		"ko": "핀 포인트",
+		"ja": "ピンポイント",
+		"zh": "定位点",
+		"ba": "Точка отсчета"
+	},
+	"skull": {
+		"en": "Skull",
+		"ko": "해골",
+		"ja": "頭蓋骨",
+		"zh": "头骨",
+		"ba": "Череп"
+	},
+	"radiation": {
+		"en": "Radiation",
+		"ko": "방사선",
+		"ja": "放射線",
+		"zh": "辐射",
+		"ba": "Радиация"
+	},
+	"biohazard": {
+		"en": "Biohazard",
+		"ko": "생물학적 위험",
+		"ja": "バイオハザード",
+		"zh": "生物危害",
+		"ba": "Биологическая угроза"
+	},
+	"phone": {
+		"en": "Phone",
+		"ko": "전화기",
+		"ja": "電話",
+		"zh": "电话",
+		"ba": "Телефон"
+	}
+}

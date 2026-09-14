@@ -1,0 +1,233 @@
+{
+	"pill": {
+		"en": "Pill",
+		"ko": "알약",
+		"ja": "錠剤",
+		"zh": "药丸",
+		"ba": "Таблетка"
+	},
+	"soft_capsule": {
+		"en": "Soft Capsule",
+		"ko": "연질 캡슐",
+		"ja": "ソフトカプセル",
+		"zh": "软胶囊",
+		"ba": "Мягкая капсула"
+	},
+	"drug": {
+		"en": "Drug",
+		"ko": "알약",
+		"ja": "薬",
+		"zh": "药物",
+		"ba": "Препарат"
+	},
+	"tablet": {
+		"en": "Tablet",
+		"ko": "알약",
+		"ja": "錠剤",
+		"zh": "药片",
+		"ba": "Таблетка"
+	},
+	"medicine_bag": {
+		"en": "Medicine bag",
+		"ko": "약 봉지",
+		"ja": "薬袋",
+		"zh": "药袋",
+		"ba": "Медицинская сумка"
+	},
+	"medicine_bottle": {
+		"en": "Medicine bottle",
+		"ko": "약 통",
+		"ja": "薬瓶",
+		"zh": "药瓶",
+		"ba": "Бутылка с лекарством"
+	},
+	"medicine_box": {
+		"en": "Medicine box",
+		"ko": "약 상자",
+		"ja": "薬箱",
+		"zh": "药盒",
+		"ba": "Коробка с лекарствами"
+	},
+	"first_aid_kit_1": {
+		"en": "First aid kit",
+		"ko": "구급상자",
+		"ja": "救急箱",
+		"zh": "急救箱",
+		"ba": "Аптечка первой помощи"
+	},
+	"first_aid_kit_2": {
+		"en": "First aid kit",
+		"ko": "구급상자",
+		"ja": "救急箱",
+		"zh": "急救箱",
+		"ba": "Аптечка первой помощи"
+	},
+	"syringe": {
+		"en": "Syringe",
+		"ko": "주사기",
+		"ja": "注射器",
+		"zh": "注射器",
+		"ba": "Шприц"
+	},
+	"injection_vial": {
+		"en": "Injection vial",
+		"ko": "주사약 병",
+		"ja": "注射薬瓶",
+		"zh": "注射瓶",
+		"ba": "Флакон для инъекций"
+	},
+	"ampoule": {
+		"en": "Ampoule",
+		"ko": "앰플",
+		"ja": "アンプル",
+		"zh": "安瓿",
+		"ba": "Ампула"
+	},
+	"double_tip_ampoule": {
+		"en": "Double tip ampoule",
+		"ko": "앰플",
+		"ja": "両端アンプル",
+		"zh": "双头安瓿",
+		"ba": "Ампула с двумя концами"
+	},
+	"syrup": {
+		"en": "Syrup",
+		"ko": "시럽",
+		"ja": "シロップ",
+		"zh": "糖浆",
+		"ba": "Сироп"
+	},
+	"blood_pack": {
+		"en": "Blood pack",
+		"ko": "혈액 팩",
+		"ja": "輸血パック",
+		"zh": "血液包",
+		"ba": "Пакет с кровью"
+	},
+	"glucose_sap": {
+		"en": "Glucose sap",
+		"ko": "포도당 수액",
+		"ja": "ブドウ糖液",
+		"zh": "葡萄糖液",
+		"ba": "Раствор глюкозы"
+	},
+	"inspirator": {
+		"en": "Inspirator",
+		"ko": "흡입기",
+		"ja": "吸入器",
+		"zh": "吸入器",
+		"ba": "Ингалятор"
+	},
+	"spray": {
+		"en": "Spray",
+		"ko": "분무기",
+		"ja": "噴霧器",
+		"zh": "喷雾器",
+		"ba": "Спрей"
+	},
+	"ointment_1": {
+		"en": "Ointment",
+		"ko": "연고",
+		"ja": "軟膏",
+		"zh": "软膏",
+		"ba": "Мазь"
+	},
+	"ointment_2": {
+		"en": "Ointment",
+		"ko": "연고",
+		"ja": "軟膏",
+		"zh": "软膏",
+		"ba": "Мазь"
+	},
+	"ointment_3": {
+		"en": "Ointment",
+		"ko": "연고",
+		"ja": "軟膏",
+		"zh": "软膏",
+		"ba": "Мазь"
+	},
+	"bandage": {
+		"en": "Bandage",
+		"ko": "반창고",
+		"ja": "包帯",
+		"zh": "绷带",
+		"ba": "Бинт"
+	},
+	"dressing": {
+		"en": "Dressing",
+		"ko": "드레싱",
+		"ja": "ドレッシング",
+		"zh": "敷料",
+		"ba": "Повязка"
+	},
+	"gauze": {
+		"en": "Gauze",
+		"ko": "거즈",
+		"ja": "ガーゼ",
+		"zh": "纱布",
+		"ba": "Марля"
+	},
+	"tourniquet": {
+		"en": "Tourniquet",
+		"ko": "지혈대",
+		"ja": "止血帯",
+		"zh": "止血带",
+		"ba": "Жгут"
+	},
+	"splint": {
+		"en": "Splint",
+		"ko": "부목",
+		"ja": "添え木",
+		"zh": "夹板",
+		"ba": "Шина"
+	},
+	"scissor": {
+		"en": "Scissor",
+		"ko": "가위",
+		"ja": "ハサミ",
+		"zh": "剪刀",
+		"ba": "Ножницы"
+	},
+	"scalpel": {
+		"en": "Scalpel",
+		"ko": "매스",
+		"ja": "メス",
+		"zh": "手术刀",
+		"ba": "Скальпель"
+	},
+	"tweezers": {
+		"en": "Tweezers",
+		"ko": "집게",
+		"ja": "ピンセット",
+		"zh": "镊子",
+		"ba": "Пинцет"
+	},
+	"first_aid_manual": {
+		"en": "First aid manual",
+		"ko": "응급처치 매뉴얼",
+		"ja": "応急手当マニュアル",
+		"zh": "急救手册",
+		"ba": "Руководство по первой помощи"
+	},
+	"thermometer": {
+		"en": "Thermometer",
+		"ko": "체온계",
+		"ja": "体温計",
+		"zh": "体温计",
+		"ba": "Термометр"
+	},
+	"blood_pressure_monitor": {
+		"en": "Blood pressure monitor",
+		"ko": "혈압계",
+		"ja": "血圧計",
+		"zh": "血压计",
+		"ba": "Тонометр"
+	},
+	"blood_glucose_meter": {
+		"en": "Blood Glucose Meter",
+		"ko": "혈당계",
+		"ja": "血糖測定器",
+		"zh": "血糖仪",
+		"ba": "Глюкометр"
+	}
+}

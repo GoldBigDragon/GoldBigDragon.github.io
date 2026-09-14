@@ -1,0 +1,2062 @@
+{
+	"AIDE_SELECT_FIRST": {
+		"script": {
+			"en": "Uh… So… My name is White, White! Leader!",
+			"ko": "어… 그러니까… 제 이름은 화이트, 화이트예요! 리더!",
+			"ja": "あの…つまり…私の名前はホワイト、ホワイトです! リーダー!",
+			"zh": "那个…也就是说…我的名字是怀特, 怀特! 领导!",
+			"ba": "Эм… То есть… Меня зовут Уайт, Уайт! Лидер!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"AIDE_SELECT_REPEAT": {
+		"script": {
+			"en": "Leader! Thank you for calling me back!",
+			"ko": "리더! 다시 불러줘서 고마워요!",
+			"ja": "リーダー! また呼んでくれてありがとう!",
+			"zh": "领导! 谢谢再次叫我!",
+			"ba": "Лидер! Спасибо, что снова позвали меня!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_DAY_FIRST": {
+		"script": {
+			"en": "I’ve been waiting! Leader! Hehe!",
+			"ko": "기다리고 있었어요! 리더! 헤헤!",
+			"ja": "待ってましたよ! リーダー! えへへ!",
+			"zh": "我一直在等! 领导! 嘿嘿!",
+			"ba": "Я ждал(а)! Лидер! Хе-хе!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"GREETING_DAY_REPEAT": {
+		"script": {
+			"en": "It’s nice to see you often! Leader!",
+			"ko": "자주 보니 좋네요! 리더!",
+			"ja": "よく会えて嬉しいです! リーダー!",
+			"zh": "经常见到你真好! 领导!",
+			"ba": "Приятно часто видеть вас! Лидер!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"GREETING_LATE_WEEK": {
+		"script": {
+			"en": "I missed you! Leader!",
+			"ko": "보고싶었어요! 리더!",
+			"ja": "会いたかったです! リーダー!",
+			"zh": "我好想你! 领导!",
+			"ba": "Я скучал(а) по тебе! Лидер!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_LATE_MONTH": {
+		"script": {
+			"en": "Waaaah… I missed you so much… Leader..!",
+			"ko": "흐어어어어엉… 보고시퍼써여… 리더..!",
+			"ja": "うわぁぁぁぁん…会いたかったです…リーダー…!",
+			"zh": "哇啊啊啊啊…我好想你…领导…!",
+			"ba": "Уааа… Я так сильно скучал(а)… Лидер…!"
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.1,
+		"priority": 20
+	},
+	"GREETING_00_CLOCK": {
+		"script": {
+			"en": "Leader, you’re like Cinderella!",
+			"ko": "리더는 신데렐라야!",
+			"ja": "リーダーはシンデレラだよ!",
+			"zh": "领导就是灰姑娘!",
+			"ba": "Лидер — ты как Золушка!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_01_CLOCK": {
+		"script": {
+			"en": "Leader! Coming at dawn~! For your health, let’s meet more often during the day~",
+			"ko": "리더! 새벽에 오시다니~! 건강을 위해 낮에 자주 보도록 해요~",
+			"ja": "リーダー! 早朝に来るなんて~! 健康のために昼間にもっと会いましょう~",
+			"zh": "领导! 大清早就来了啊~ 为了健康, 我们多在白天见吧~",
+			"ba": "Лидер! Приходите на рассвете~! Ради здоровья давайте чаще встречаться днем~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_02_CLOCK": {
+		"script": {
+			"en": "Oh, Leader! It’s 2 a.m. right now, and you’re here? How about getting some sleep~?",
+			"ko": "앗, 리더! 지금 새벽 2시인데 오신거예요? 조금은 주무시는게 어때요~?",
+			"ja": "あっ、リーダー! 今は深夜2時なのに来たんですか?少しは寝たらどうですか~?",
+			"zh": "啊, 领导! 现在是凌晨两点, 您还来了? 稍微睡一会儿怎么样~?",
+			"ba": "Ой, Лидер! Сейчас два часа ночи, а вы здесь? Может, немного поспите~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_03_CLOCK": {
+		"script": {
+			"en": "Yawn… …? Intruder!? …Oh, it was you, Leader…? Have you caught insomnia too…?",
+			"ko": "흐아암… …? 침입자!?! …가 아니라 리더였나요오…? 리더도 불면증에 걸리신건가요오..?",
+			"ja": "あああ… …?侵入者!?… いや、リーダーだったんですね…? リーダーも不眠症にかかっているんですか…?",
+			"zh": "哈欠… …?入侵者!? …哦, 是您, 领导…? 你也得了失眠症吗…?",
+			"ba": "Зе-е-е… …? Нарушитель!? …Нет, это был ты, Лидер…? Ты тоже страдаешь от бессонницы?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_04_CLOCK": {
+		"script": {
+			"en": "(Zzz)",
+			"ko": "(드르렁)",
+			"ja": "(Zzz)",
+			"zh": "(Zzz)",
+			"ba": "(Zzz)"
+		},
+		"image_id": 4,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.8,
+		"priority": 10
+	},
+	"GREETING_05_CLOCK": {
+		"script": {
+			"en": "Oh no! The sun hasn't even risen yet, and you're here! Leader, you're so diligent!",
+			"ko": "헉! 아직 해도 안떴는데 오셨어! 리더는 부지런해!",
+			"ja": "えっ! まだ太陽も昇っていないのに、もう来たんですね! リーダーは本当に勤勉ですね!",
+			"zh": "哎呀! 太阳还没升起, 您就来了! 领导真是勤奋啊!",
+			"ba": "Ой! Солнце еще не встало, а ты уже пришел! Лидер, ты такой трудолюбивый!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_06_CLOCK": {
+		"script": {
+			"en": "Leader! You woke up early! Would you like to check the supplies with me~?",
+			"ko": "리더! 일찍 일어났네요! 저랑 물품 상태 점검 하실래요오~?",
+			"ja": "リーダー! 早起きですね! 一緒に物品の状態を点検しませんか~?",
+			"zh": "领导! 您起得真早! 要和我一起检查物品状态吗~?",
+			"ba": "Лидер! Вы так рано встали! Хотите проверить запасы вместе со мной~?"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_07_CLOCK": {
+		"script": {
+			"en": "Leader! As soon as the supply check was done, you showed up like a ghost!",
+			"ko": "리더! 물품 점검 끝나니까 귀신같이 왔어!",
+			"ja": "リーダー! 物品の点検が終わった瞬間、まるで幽霊のように現れましたね!",
+			"zh": "领导! 物品检查一结束, 您就像鬼一样出现了!",
+			"ba": "Лидер! Как только проверка запасов закончилась, ты появился, как призрак!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_08_CLOCK": {
+		"script": {
+			"en": "Leader~ Have you had breakfast yet?",
+			"ko": "리더~ 아침 식사는 하고 왔나요오?",
+			"ja": "リーダー~ 朝食はもう食べましたか~?",
+			"zh": "领导~ 你吃早饭了吗?",
+			"ba": "Лидер~ Ты уже позавтракал?"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_09_CLOCK": {
+		"script": {
+			"en": "What! Leader! Hi! I’ll turn off the gas in the kitchen and be right back!",
+			"ko": "왓! 리더! 안녕! 짬깜맘! 주방에 가스불만 잠그고 돌아올께욧!",
+			"ja": "わっ!リーダー! こんにちは!キッチンのガスを消して戻ってきますね!",
+			"zh": "哇!领导! 你好! 我去关下厨房的燃气, 马上回来!",
+			"ba": "Что! Лидер! Привет! Я выключу газ на кухне и скоро вернусь!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.1,
+		"priority": 10
+	},
+	"GREETING_10_CLOCK": {
+		"script": {
+			"en": "Welcome back! Leader! What are your plans for today?",
+			"ko": "어서오세요! 리더! 오늘은 무얼 하실 계획인가요?",
+			"ja": "おかえりなさい! リーダー! 今日は何をする予定ですか?",
+			"zh": "欢迎回来! 领导! 今天有什么计划吗?",
+			"ba": "Добро пожаловать обратно! Лидер! Какие планы на сегодня?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_11_CLOCK": {
+		"script": {
+			"en": "Leader! Welcome! Is your morning wrapping up well?",
+			"ko": "리더! 어서 와요! 오전 마무리는 잘 되어 가세요?",
+			"ja": "リーダー! おかえりなさい!午前の終わりは順調ですか?",
+			"zh": "领导!欢迎回来! 上午的工作顺利吗?",
+			"ba": "Лидер! Добро пожаловать! Утро прошло хорошо?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_12_CLOCK": {
+		"script": {
+			"en": "Leader! Welcome back! Did you stop by since it's almost lunch time?",
+			"ko": "리더! 어서 와요! 곧 점심시간이라서 잠시 들리신건가요?",
+			"ja": "リーダー! おかえりなさい! もうすぐ昼食の時間なので、ちょっと寄ったんですか?",
+			"zh": "领导! 欢迎回来! 是因为快到午餐时间所以顺便过来的吗?",
+			"ba": "Лидер! Добро пожаловать! Ты зашел, потому что уже почти обеденное время?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_13_CLOCK": {
+		"script": {
+			"en": "Oh ho ho, Leader! (cough cough) Welcome, Leader! I tend to have lunch a bit later… Hehe…",
+			"ko": "어허아여 이더! (켁켁) 어솨여, 리더! 제가 점심을 좀 늦게 먹는 편이라… 헤헤…",
+			"ja": "うへへ、リーダー! (コホコホ) おかえりなさい、リーダー! 私は昼食を少し遅く食べる方なんです… へへ…",
+			"zh": "呵呵, 领导! (咳咳) 欢迎回来, 领导! 我通常吃午餐稍微晚一点… 嘿嘿…",
+			"ba": "Охохо, Лидер! (Кхе-кхе) Добро пожаловать, Лидер! Я обычно обедаю немного позже… Хе-хе…"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_14_CLOCK": {
+		"script": {
+			"en": "(Zzz)",
+			"ko": "(드르렁)",
+			"ja": "(Zzz)",
+			"zh": "(Zzz)",
+			"ba": "(Zzz)"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.8,
+		"priority": 10
+	},
+	"GREETING_15_CLOCK": {
+		"script": {
+			"en": "Welcome back! Leader! How about a 3 PM tea time~?",
+			"ko": "어서 와요! 리더! 3시의 티 타임 어때요~?",
+			"ja": "おかえりなさい! リーダー!3時のティータイムはどうですか~?",
+			"zh": "欢迎回来!领导! 下午3点的茶歇怎么样~?",
+			"ba": "Добро пожаловать обратно! Лидер! Как насчет чаепития в 3 часа дня~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_16_CLOCK": {
+		"script": {
+			"en": "Leader! Welcome! Around this time, the streets used to be full of students heading home. Is it still like that now?",
+			"ko": "리더! 어서 와요! 이 시간쯤이면 거리에 하교하는 학생들로 넘쳤던 것 같은데, 지금도 그런가요오?",
+			"ja": "リーダー!おかえりなさい! この時間、通りは帰宅する学生たちでいっぱいだったはずですが、今もそうですか?",
+			"zh": "领导!欢迎回来! 这个时间, 街上通常是满满的放学回家的学生们, 现在还是这样吗?",
+			"ba": "Лидер! Добро пожаловать! В это время улицы обычно были полны школьников, идущих домой. Так ли это сейчас?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_17_CLOCK": {
+		"script": {
+			"en": "Welcome back, Leader! The sun is slowly getting ready to clock out!",
+			"ko": "어서 와요, 리더! 태양이 슬슬 퇴근 준비를 하고 있어요!",
+			"ja": "おかえりなさい、リーダー! 太陽がそろそろ退勤の準備をしているみたいですね!",
+			"zh": "欢迎回来, 领导! 太阳也在慢慢准备下班了!",
+			"ba": "Добро пожаловать обратно, Лидер! Солнце уже начинает собираться на отдых!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_18_CLOCK": {
+		"script": {
+			"en": "Leader! You’ve come during dinner time! Hurry up with your business and go enjoy a delicious dinner!",
+			"ko": "리더! 저녁 시간에 오셨네요! 빠르게 볼일 보시고 맛있는 저녁 드시러 가세요!",
+			"ja": "リーダー! 夕食の時間にいらっしゃいましたね!用事を済ませて、美味しい夕食を食べに行ってくださいね!",
+			"zh": "领导!您正好在晚餐时间来!快点处理好事情, 去享受美味的晚餐吧!",
+			"ba": "Лидер! Вы пришли в время ужина! Быстро закончите дела и идите наслаждаться вкусным ужином!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_19_CLOCK": {
+		"script": {
+			"en": "Welcome back, Leader! Did you have something delicious for dinner?",
+			"ko": "어서 와요, 리더! 저녁은 맛있는거 드셨나요?",
+			"ja": "おかえりなさい、リーダー!夕食は美味しいものを食べましたか?",
+			"zh": "欢迎回来, 领导! 晚餐吃了些什么好吃的?",
+			"ba": "Добро пожаловать обратно, Лидер! Ты поел что-то вкусное на ужин?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_20_CLOCK": {
+		"script": {
+			"en": "Leader! Welcome back! If you finish work early, would you like to watch the news together?",
+			"ko": "리더! 어서 와요! 혹시 일이 일찍 끝나시면 같이 뉴스 보실래요?",
+			"ja": "リーダー! おかえりなさい! もし仕事が早く終わったら、一緒にニュースを見ませんか?",
+			"zh": "领导! 欢迎回来! 如果工作早点结束, 想一起看新闻吗?",
+			"ba": "Лидер! Добро пожаловать обратно! Если работа закончится пораньше, хочешь посмотреть новости вместе?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_21_CLOCK": {
+		"script": {
+			"en": "Welcome back, Leader! How was your day today?",
+			"ko": "어서와요, 리더! 오늘 하루는 어땠어요?",
+			"ja": "おかえりなさい、リーダー! 今日はどうでしたか?",
+			"zh": "欢迎回来, 领导! 今天过得怎么样?",
+			"ba": "Добро пожаловать обратно, Лидер! Как прошел твой день?"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_22_CLOCK": {
+		"script": {
+			"en": "Leader! Welcome back! You must be tired, so take a quick look and go to bed! I’ll take care of the rest!",
+			"ko": "리더! 어서와요! 피곤할텐데 적당히 살펴 보고 자러 가세요! 나머지는 제가 할게요!",
+			"ja": "リーダー! おかえりなさい! 疲れているでしょうから、さっと見て寝てください! 残りは私がやります!",
+			"zh": "领导! 欢迎回来! 您一定很累了, 稍微看看就去睡觉吧! 剩下的我来做!",
+			"ba": "Лидер! Добро пожаловать обратно! Ты, наверное, устал, так что быстро посмотри и иди спать! Остальное я сделаю!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_23_CLOCK": {
+		"script": {
+			"en": "Leader! Did you come for the final check before bed?",
+			"ko": "리더! 자기 전 마지막 점검 하러 오신건가요?",
+			"ja": "リーダー! 寝る前の最後の点検に来たんですか?",
+			"zh": "领导! 您是来睡前做最后检查的吗?",
+			"ba": "Лидер! Ты пришел для последней проверки перед сном?"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"ALARM_00_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 12 AM! A good leader should go to bed early!",
+			"ko": "리더! 오전 0시예요! 착한 리더는 일찍 자러가야해요!",
+			"ja": "リーダー! 午前0時ですよ! 良いリーダーは早く寝るべきです!",
+			"zh": "领导! 现在是凌晨0点! 好领导应该早点睡觉!",
+			"ba": "Лидер! Сейчас 12 ночи! Хороший лидер должен ложиться спать пораньше!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_01_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 1 AM! Aren’t you getting sleepy?",
+			"ko": "리더! 오전 1시예요! 슬슬 졸리지 않나요?",
+			"ja": "リーダー! 午前1時ですよ! そろそろ眠くなりませんか?",
+			"zh": "领导! 现在是凌晨1点! 你是不是开始困了?",
+			"ba": "Лидер! Сейчас 1 час ночи! Ты не начинаешь засыпать?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_02_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 2 AM! How about going to bed early for your health and coming back tomorrow morning?",
+			"ko": "리더! 오전 2시예요! 건강을 위해 일찍 자고, 내일 일찍 와 주시는건 어때요?!",
+			"ja": "リーダー! 午前2時ですよ! 健康のために早く寝て、明日早く来るのはどうですか?",
+			"zh": "领导! 现在是凌晨2点! 为了健康, 早点休息，明天一早再来怎么样?",
+			"ba": "Лидер! Сейчас 2 часа ночи! Как насчет того, чтобы лечь спать пораньше ради здоровья и вернуться завтра утром?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_03_CLOCK": {
+		"script": {
+			"en": "Leader~ It’s 3 AM~ Are you by any chance sleeping?",
+			"ko": "리더~ 오전 3시예요~ 혹시 주무시고 계신가요~?",
+			"ja": "リーダー~ 午前3時ですよ~ もしかして寝ていますか?",
+			"zh": "领导~ 现在是凌晨3点~ 你是不是在睡觉?",
+			"ba": "Лидер~ Сейчас 3 часа ночи~ Ты, случайно, не спишь?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_04_CLOCK": {
+		"script": {
+			"en": "Leader~ It’s 4 AM~ Do you need to have steel-like stamina to be a leader!?",
+			"ko": "리더~ 오전 4시예요~ 리더가 되려면 강철 체력이 되어야 하는건가!?",
+			"ja": "リーダー~ 午前4時ですよ~ リーダーになるためには鋼の体力が必要なんですか!?",
+			"zh": "领导~ 现在是凌晨4点~ 做领导需要钢铁般的体力吗!?",
+			"ba": "Лидер~ Сейчас 4 часа утра~ Чтобы быть лидером, нужно иметь стальную выносливость!?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_05_CLOCK": {
+		"script": {
+			"en": "Leader~ It’s 5 AM~ It looks like the sun will rise soon~",
+			"ko": "리더~ 오전 5시예요~ 곧 해가 뜰 것 같아요~",
+			"ja": "リーダー~ 午前5時ですよ~ もうすぐ日が昇りそうですね~",
+			"zh": "领导~ 现在是凌晨5点~ 看来太阳快要升起来了~",
+			"ba": "Лидер~ Сейчас 5 утра~ Похоже, скоро восход солнца!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_06_CLOCK": {
+		"script": {
+			"en": "6 AM! Rise and shine, Leader! Have a great day today!",
+			"ko": "오전 6시! 기상! 리더! 오늘도 좋은 하루 되세요!",
+			"ja": "午前6時! 起きて! リーダー! 今日は素晴らしい一日をお過ごしください!",
+			"zh": "凌晨6点! 起床! 领导! 祝你今天有个美好的一天!",
+			"ba": "6 утра! Поднимайся, Лидер! Желаю тебе отличного дня!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_07_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 7 AM! Go have breakfast!",
+			"ko": "리더! 오전 7시예요! 아침 먹고 오세요!",
+			"ja": "リーダー! 午前7時ですよ! 朝食を食べに行ってください!",
+			"zh": "领导! 现在是早上7点! 去吃早餐吧!",
+			"ba": "Лидер! Сейчас 7 утра! Пойди позавтракай!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_08_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 8 AM! What did you have for breakfast?",
+			"ko": "리더! 오전 8시예요! 아침 메뉴로 뭐 드시고 오셨나요?",
+			"ja": "リーダー! 午前8時ですよ! 朝食は何を食べましたか?",
+			"zh": "领导! 现在是早上8点! 早餐吃了什么?",
+			"ba": "Лидер! Сейчас 8 утра! Что ты ел на завтрак?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_09_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 9 AM! It’s time to go to work! Oh, you’ve already started work!",
+			"ko": "리더! 오전 9시예요! 출근 시간이예요! 출근! 아, 이미 출근 하셨구나!",
+			"ja": "リーダー! 午前9時ですよ! 出勤時間です! あ、もう出勤してるんですね!",
+			"zh": "领导! 现在是早上9点! 该上班了! 哦，您已经上班了!",
+			"ba": "Лидер! Сейчас 9 утра! Время идти на работу! О, ты уже на работе!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_10_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 10 AM! Isn’t it about time to clock out?!",
+			"ko": "리더! 오전 10시예요! 이정도면 퇴근 해도 될 시간 아닐까요?!",
+			"ja": "リーダー! 午前10時ですよ! そろそろ退勤してもいい時間じゃないですか?!",
+			"zh": "领导! 现在是早上10点! 差不多该下班了吧?!",
+			"ba": "Лидер! Сейчас 10 утра! Не пора ли уже уходить с работы?!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_11_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 11 AM! What are you thinking of having for lunch?",
+			"ko": "리더! 오전 11시예요! 점심으로 뭐 먹을 생각이예요?",
+			"ja": "リーダー! 午前11時ですよ! 昼食は何を食べる予定ですか?",
+			"zh": "领导! 现在是早上11点! 午餐打算吃什么?",
+			"ba": "Лидер! Сейчас 11 утра! Что ты планируешь поесть на обед?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_12_CLOCK": {
+		"script": {
+			"en": "Leader!!! It’s time for food! Time for lunch!!! Let’s eat and talk later!",
+			"ko": "리더!!! 밥! 밥! 밥 먹을 시간이예요!!! 점심 먹고 봐욧!",
+			"ja": "リーダー!!! ご飯! ご飯! ご飯を食べる時間ですよ!!! 昼食を食べてから話しましょう!",
+			"zh": "领导!!! 吃饭! 吃饭! 是吃午餐的时间了!!! 吃完午饭再聊!",
+			"ba": "Лидер!!! Еда! Еда! Время для еды!!! Поешь и поговорим позже!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_13_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 1 PM! Did you have a delicious lunch?",
+			"ko": "리더! 오후 1시예요! 점심은 맛있게 먹고 왔어요?",
+			"ja": "リーダー! 午後1時ですよ! 昼食は美味しく食べましたか?",
+			"zh": "领导! 现在是下午1点! 午餐吃得很美味吗?",
+			"ba": "Лидер! Сейчас 1 час дня! Ты вкусно поел на обед?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_14_CLOCK": {
+		"script": {
+			"en": "(Zzz)",
+			"ko": "(드르렁)",
+			"ja": "(Zzz)",
+			"zh": "(Zzz)",
+			"ba": "(Zzz)"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.8,
+		"priority": 0
+	},
+	"ALARM_15_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 3 PM! Let’s do some neck exercises together to prevent turtle neck!",
+			"ko": "리더! 오후 3시예요! 거북 목 방지 차원으로 목 운동 같이 해요!",
+			"ja": "リーダー! 午後3時ですよ! 亀首防止のために一緒に首の運動をしましょう!",
+			"zh": "领导! 现在是下午3点! 为了预防脖子前倾, 一起做脖部运动吧!",
+			"ba": "Лидер! Сейчас 3 часа дня! Давай сделаем упражнения для шеи, чтобы предотвратить [черепашью шею]!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_16_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 4 PM! It looks like the sun will set soon, so we should finish everything we can before it sets!",
+			"ko": "리더! 오후 4시예요! 조금 있으면 해가 질 것 같은데, 해가 있을 동안 할 수 있는 일은 모두 끝내야겠어요!",
+			"ja": "リーダー! 午後4時ですよ! もうすぐ日が沈みそうですね、だから日があるうちにできることは全部終わらせなきゃ!",
+			"zh": "领导! 现在是下午4点! 太阳快要下山了, 所以我们应该在天黑之前完成所有能做的事!",
+			"ba": "Лидер! Сейчас 4 часа дня! Похоже, скоро солнце сядет, так что нужно закончить все, что можно, пока светло!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_17_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 5 PM! It’s almost time for dinner!",
+			"ko": "리더! 오후 5시예요! 곧 저녁 먹을 시간이네요!",
+			"ja": "リーダー! 午後5時ですよ! もうすぐ夕食の時間ですね!",
+			"zh": "领导! 现在是下午5点! 快到晚餐时间了!",
+			"ba": "Лидер! Сейчас 5 часов вечера! Скоро время ужина!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_18_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 6 PM! Enjoy your dinner and come back soon!",
+			"ko": "리더! 오후 6시예요! 저녁 맛있게 드시고 오세요!",
+			"ja": "リーダー! 午後6時ですよ! 美味しい夕食を食べてきてくださいね!",
+			"zh": "领导! 现在是下午6点! 好好享受晚餐, 吃完再回来!",
+			"ba": "Лидер! Сейчас 6 вечера! Наслаждайся ужином и скоро возвращайся!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_19_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 7 PM! Who did you have dinner with?",
+			"ko": "리더! 오후 7시예요! 저녁은 누구랑 먹고 왔어요?!",
+			"ja": "リーダー! 午後7時ですよ! 誰と夕食を食べてきましたか?",
+			"zh": "领导! 现在是下午7点! 和谁一起吃晚餐了?",
+			"ba": "Лидер! Сейчас 7 вечера! С кем ты ужинал?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_20_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 8 PM! How about talking with the members about what happened today?",
+			"ko": "리더! 오후 8시예요! 멤버들이랑 오늘 하루 있었던 일에 대해서 이야기 해 보는건 어때요?",
+			"ja": "リーダー! 午後8時ですよ! メンバーと今日は何があったか話してみませんか?",
+			"zh": "领导! 现在是下午8点! 和成员们聊聊今天发生了什么怎么样?",
+			"ba": "Лидер! Сейчас 8 вечера! Как насчет того, чтобы поговорить с участниками о том, что произошло сегодня?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_21_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 9 PM! Start getting ready for bed! Make sure the gas is turned off and the electricity is cut off!",
+			"ko": "리더! 오후 9시예요! 슬슬 잘 준비해요! 가스는 잠궜는지, 전기는 잘 차단되어 있는지!",
+			"ja": "リーダー! 午後9時ですよ! そろそろ寝る準備をしてください! ガスは止めたか、電気は切ってあるか確認してくださいね!",
+			"zh": "领导! 现在是下午9点! 开始准备睡觉吧! 确保燃气已经关掉, 电源也已经切断!",
+			"ba": "Лидер! Сейчас 9 вечера! Начинай готовиться ко сну! Проверь, выключен ли газ и отключено ли электричество!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_22_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 10 PM! I heard someone say that you need to sleep before 10 PM to grow taller… If I don’t grow taller, it’s your responsibility, Leader!",
+			"ko": "리더! 오후 10시예요! 누가 오후 10시 이전에 자야 키 큰다고 하던데..! 나 키 안크면 리더 책임이야!",
+			"ja": "リーダー! 午後10時ですよ! 誰かが午後10時前に寝ると背が伸びるって言ってたけど…もし私が背が伸びなかったら、リーダーの責任ですよ!",
+			"zh": "领导! 现在是下午10点! 我听说有人说要在10点前睡觉才能长高…如果我没长高, 那就是领导您的责任了!",
+			"ba": "Лидер! Сейчас 10 вечера! Я слышал, что говорят, если ложиться спать до 10 вечера, то можно вырасти выше… Если я не вырасту, это будет твоя ответственность, Лидер!"
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.1,
+		"priority": 0
+	},
+	"ALARM_23_CLOCK": {
+		"script": {
+			"en": "Leader! It’s 11 PM! Hurry up and go to bed!",
+			"ko": "리더! 오후 11시예요! 얼른 자러 가세욧!",
+			"ja": "リーダー! 午後11時ですよ! 早く寝てくださいね!",
+			"zh": "领导! 现在是下午11点! 快去睡觉吧!",
+			"ba": "Лидер! Сейчас 11 вечера! Быстро иди спать!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_UNREAD_MESSAGE": {
+		"script": {
+			"en": "Leader! There are %UNREAD_MESSAGE_AMOUNT% unread messages. Are you busy right now?",
+			"ko": "리더! 읽지 않은 메시지가 %UNREAD_MESSAGE_AMOUNT%개 있는데, 지금 바빠요?",
+			"ja": "リーダー! %UNREAD_MESSAGE_AMOUNT%件の未読メッセージがあります。今、忙しいですか?",
+			"zh": "领导! 有%UNREAD_MESSAGE_AMOUNT%条未读消息。您现在忙吗?",
+			"ba": "Лидер! У вас %UNREAD_MESSAGE_AMOUNT% непрочитанных сообщений. Вы сейчас заняты?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_FOOD_EXPIRES_SOON": {
+		"script": {
+			"en": "Hmm… Leader, it looks like the expiration date of %FOOD_NAME% in %MEMBER_NAME%'s %BAG_NAME% is approaching…!",
+			"ko": "음… 리더, %MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 유통기한이 다 되어 가는 것 같아요…!",
+			"ja": "うーん…リーダー、%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限が近づいているようです…!",
+			"zh": "嗯… 领导, %MEMBER_NAME%在%BAG_NAME%里的%FOOD_NAME%好像快到期了…!",
+			"ba": "Хм… Лидер, похоже, срок годности %FOOD_NAME% в %MEMBER_NAME%'s %BAG_NAME% скоро истечет…!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_FOOD_EXPIRES": {
+		"script": {
+			"en": "Ugh… It seems like the condition of %FOOD_NAME% in %MEMBER_NAME%'s %BAG_NAME% is a bit off… The expiration date has passed…",
+			"ko": "으… %MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 상태가 좀 이상한 것 같은데에… 유통기한도 지났고…",
+			"ja": "うーん…%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の状態がちょっとおかしい気がします…賞味期限も過ぎてしまいましたし…",
+			"zh": "嗯… %MEMBER_NAME%在%BAG_NAME%里的%FOOD_NAME%状态有点不对劲… 过期了…",
+			"ba": "Эх… Кажется, состояние %FOOD_NAME% в %MEMBER_NAME%'s %BAG_NAME% немного странное… Срок годности уже прошел…"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_ITEM_MAINTENANCE_NEAR": {
+		"script": {
+			"en": "Leader! The %ITEM_NAME% in %MEMBER_NAME%’s %BAG_NAME% needs a check-up soon!",
+			"ko": "리더! %MEMBER_NAME%의 %BAG_NAME%에 위치한 %ITEM_NAME%의 점검 날짜가 다가오고 있어요!",
+			"ja": "リーダー! %MEMBER_NAME%の%BAG_NAME%にある%ITEM_NAME%、もうすぐ点検が必要なんだよ!",
+			"zh": "领导! %MEMBER_NAME% 的 %BAG_NAME% 里的 %ITEM_NAME% 快要检查啦!",
+			"ba": "Лидер! У %MEMBER_NAME% в %BAG_NAME% лежит %ITEM_NAME%, и его скоро нужно проверить!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_ITEM_MAINTENANCE_NEED": {
+		"script": {
+			"en": "Leader! I think we should check if the %ITEM_NAME% in %MEMBER_NAME%’s %BAG_NAME% is okay!",
+			"ko": "리더! %MEMBER_NAME%의 %BAG_NAME%에 위치한 %ITEM_NAME%의 상태가 괜찮은지 점검 해 봐야 할 것 같아요!",
+			"ja": "リーダー! %MEMBER_NAME%の%BAG_NAME%にある%ITEM_NAME%、大丈夫かどうか点検したほうがいいと思うよ!",
+			"zh": "领导! %MEMBER_NAME% 的 %BAG_NAME% 里的 %ITEM_NAME% 好不好, 要检查一下啦!",
+			"ba": "Лидер! Думаю, надо проверить, всё ли в порядке с %MEMBER_NAME%’s %BAG_NAME%里的 %ITEM_NAME%!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_NEW_DAY_BEGINS": {
+		"script": {
+			"en": "Leader! A new day has started! Let's have a safe and fun day today!",
+			"ko": "리더! 새로운 하루가 시작되었어요! 오늘 하루도 무사히, 즐겁게 보내요!",
+			"ja": "リーダー! 新しい一日が始まりましたよ! 今日も一日、無事に楽しく過ごしましょうね!",
+			"zh": "领导! 新的一天开始啦！希望今天也能平安快乐地度过！",
+			"ba": "Лидер! Начался новый день! Давай проведем его весело и безопасно!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_NOON_PLAN_LEFT": {
+		"script": {
+			"en": "Leader! Are your tasks going well today? Don't forget to take a break for your health!",
+			"ko": "리더! 오늘 일정은 잘 진행하고 계신가요? 건강을 위해 휴식하는 것도 잊지 말아요~",
+			"ja": "リーダー! 今日の予定は順調ですか? 健康のために休むことも忘れないでくださいね~",
+			"zh": "领导! 今天的行程进行得顺利吗？别忘了照顾身体，休息一下哦~",
+			"ba": "Лидер! Как идут твои дела сегодня? Не забывай отдыхать, это важно для здоровья~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_EVENING_PLAN_LEFT": {
+		"script": {
+			"en": "Leader! Are you finishing up your tasks? Why not save the rest for tomorrow instead of pushing yourself?",
+			"ko": "리더! 오늘 일정은 잘 마무리 하고 계신가요? 남은 일정은 무리하시지 말고 내일 하는건 어때요?",
+			"ja": "リーダー! 今日の予定はうまくまとめられていますか? 残りの予定は無理せず、明日に回すのはどうですか?",
+			"zh": "领导! 今天的行程快做完啦？剩下的部分不如别勉强，留到明天再做怎么样？",
+			"ba": "Лидер! Ты заканчиваешь свои дела? Как насчет того, чтобы не перенапрягаться и оставить остальное на завтра?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_ANNIVERSARY_NEXT_DAY": {
+		"script": {
+			"en": "Leader! It says <%ANNIVERSARY%> on the calendar for tomorrow!",
+			"ko": "리더! 달력에 내일은 <%ANNIVERSARY%>라고 적혀 있어요!",
+			"ja": "リーダー! カレンダーに明日は <%ANNIVERSARY%> って書いてありますよ!",
+			"zh": "领导! 日历上写着明天是 <%ANNIVERSARY%> 喔！",
+			"ba": "Лидер! В календаре написано, что завтра <%ANNIVERSARY%>!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_ANNIVERSARY_SAME_DAY": {
+		"script": {
+			"en": "Leader! It's <%ANNIVERSARY%> today!",
+			"ko": "리더! 오늘은 <%ANNIVERSARY%>래요!",
+			"ja": "リーダー! 今日は <%ANNIVERSARY%> だそうですよ!",
+			"zh": "领导! 今天是 <%ANNIVERSARY%> 呀！",
+			"ba": "Лидер! Сегодня <%ANNIVERSARY%>!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_PATIENT_RELEASE_FROM_ISOLATION": {
+		"script": {
+			"en": "Leader! %PATIENT_NAME%? Anyway, the patient says their quarantine is over and wants to be let out!",
+			"ko": "리더! %PATIENT_NAME%? 아무튼 환자분이 이제 격리 시간 지났다고 풀어달래요!",
+			"ja": "リーダー! %PATIENT_NAME%? とにかく、患者さんがもう隔離期間は終わったから出してほしいって言ってますよ!",
+			"zh": "领导! %PATIENT_NAME%? 反正那位患者说隔离时间结束了，想让你放他出来！",
+			"ba": "Лидер! %PATIENT_NAME%? В общем, пациент говорит, что время изоляции прошло, и просит его выпустить!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_BAG_OLD_HEAVY": {
+		"script": {
+			"en": "Leader! It looks like %MEMBER_NAME%'s %BAG_NAME% is really heavy! Is this what they call [respecting the elderly] turned into [roughing the elderly]…!?",
+			"ko": "리더! %MEMBER_NAME%의 %BAG_NAME% 짐이 너무 무거워 보여요! 이것이 말로만 듣던 노인 공경... 아니, 노인 공격..!?",
+			"ja": "リーダー! %MEMBER_NAME%の%BAG_NAME%、すっごく重そうだよ!これって、あの『敬老』が『蹴ろう』になっちゃうってやつ…!?",
+			"zh": "领导! %MEMBER_NAME% 的 %BAG_NAME% 看起来好重啊! 这难道就是把『尊老』变成『揍老』的那种事吗…!?",
+			"ba": "Лидер! %MEMBER_NAME%’s %BAG_NAME% такая тяжёлая! Это что, когда «уважать пожилых» вдруг превращается в «уничтожать пожилых»…!?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_BAG_ADULT_HEAVY": {
+		"script": {
+			"en": "Leader! Isn’t %BAG_NAME% too heavy for %MEMBER_NAME% to carry?!",
+			"ko": "리더! %MEMBER_NAME%의 %BAG_NAME% 짐이 너무 무거워 보여요!",
+			"ja": "リーダー! %MEMBER_NAME%が%BAG_NAME%を持つには重すぎませんか?",
+			"zh": "领导! %MEMBER_NAME%背着%BAG_NAME%是不是太重了?",
+			"ba": "Лидер! Разве %MEMBER_NAME% не слишком тяжело носить сумку %BAG_NAME%?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_BAG_YOUNG_HEAVY": {
+		"script": {
+			"en": "Leader! Isn’t making %MEMBER_NAME% carry the heavy %BAG_NAME% a form of child abuse?!",
+			"ko": "리더! %MEMBER_NAME%에게 무거운 %BAG_NAME% 짐을 지게 하는건 아동학대가 아닐까요!?",
+			"ja": "リーダー! %MEMBER_NAME%に重い%BAG_NAME%を持たせるのは児童虐待じゃないですか!?",
+			"zh": "领导! 让%MEMBER_NAME%背这么重的%BAG_NAME%不是虐待吗!?",
+			"ba": "Лидер! Разве не является заставить %MEMBER_NAME% нести такую тяжелую сумку %BAG_NAME% формой насилия над детьми!?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_FIRST_AID_NOT_FOUND": {
+		"script": {
+			"en": "Leader! Just in case, it might be a good idea to keep first aid items like band-aids or disinfectant in the bag for when someone gets hurt!",
+			"ko": "리더! 혹시라도 다쳤을 때 치료할 수 있도록 밴드나 소독약 같은 응급 처치 물품을 가방에 넣어 두는게 좋을 것 같아요!",
+			"ja": "リーダー! 万が一に備えて、誰かが怪我をしたときに使えるようにバンドエイドや消毒薬などの応急処置用品をバッグに入れておくのがいいかもしれませんね!",
+			"zh": "领导! 为了以防万一, 可能最好在包里放些急救物品, 比如创可贴或消毒药水, 以备不时之需!",
+			"ba": "Лидер! На всякий случай, будет хорошей идеей положить в сумку такие предметы первой помощи, как пластырь или дезинфицирующее средство, на случай, если кто-то поранится!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_GLUCOSE_NOT_FOUND": {
+		"script": {
+			"en": "Leader! It might be a good idea to keep some delicious glucose candies in the bag! Of course, for dehydration or hypoglycemic shock prevention! Hehe!",
+			"ko": "리더! 맛있는 포도당 캔디를 가방에 넣어 두는게 좋을 것 같아요! 물론 탈수나 저혈당 쇼크 대비 목적으로요! 헤헤!",
+			"ja": "リーダー! 美味しいブドウ糖キャンディをバッグに入れておくのがいいかもしれませんね! もちろん、脱水症状や低血糖ショックに備えてですよ! へへ!",
+			"zh": "领导! 把美味的葡萄糖糖果放在包里应该是个好主意! 当然是为了应对脱水或低血糖休克! 嘿嘿!",
+			"ba": "Лидер! Возможно, будет хорошей идеей положить в сумку вкусные глюкозные конфеты! Конечно, для предотвращения обезвоживания или гипогликемического шока! Хе-хе!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_PAINKILLER_NOT_FOUND": {
+		"script": {
+			"en": "Leader! It looks like there’s no painkiller or anti-inflammatory medicine. It might be a good idea to keep one on hand!",
+			"ko": "리더! 진통제나 소염진통제가 없는 것 같은데, 하나 구비 해 두는 것도 좋을 것 같아요!",
+			"ja": "リーダー! 鎮痛剤や消炎鎮痛剤がないようですが、ひとつ備えておくのもいいかもしれませんね!",
+			"zh": "领导! 好像没有止痛药或消炎止痛药, 准备一份也许是个好主意!",
+			"ba": "Лидер! Похоже, что нет обезболивающего или противовоспалительного средства. Может быть, стоит иметь их под рукой!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_ANTIDIARRHEAL_NOT_FOUND": {
+		"script": {
+			"en": "Leader! In disaster situations, eating bad food can lead to stomach problems more often! How about preparing some anti-diarrheal medicine or antibiotics just in case?",
+			"ko": "리더! 재난 상황에서 질나쁜 음식을 먹으면 배탈이 자주나게 된대요! 이참에 지사제나 항생제를 준비해 두는건 어때요!",
+			"ja": "リーダー! 災害時に質の悪い食べ物を食べると、お腹を壊すことがよくあるそうですよ! この機会に整腸薬や抗生物質を準備しておくのはどうでしょうか?",
+			"zh": "领导! 在灾难情况下, 吃到不好的食物容易引起肚子不舒服! 趁此机会准备一些止泻药或抗生素怎么样?",
+			"ba": "Лидер! В чрезвычайных ситуациях употребление плохой пищи может часто вызвать расстройства желудка! Как насчет того, чтобы подготовить препараты от поноса или антибиотики на всякий случай?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_SPRING": {
+		"script": {
+			"en": "Leader! I have a feeling that the weather is going to get warmer starting today!",
+			"ko": "리더! 오늘부터 왠지 날이 따뜻해 질 것 같은 기분이 들어요!",
+			"ja": "リーダー! 今日からなんだか天気が暖かくなる気がします!",
+			"zh": "领导! 今天开始, 我感觉天气似乎要变暖了!",
+			"ba": "Лидер! У меня такое ощущение, что с сегодняшнего дня погода станет теплее!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_RAIN_WATER": {
+		"script": {
+			"en": "Leader! I’ve been feeling a bit sluggish lately, I think it’s spring fatigue!",
+			"ko": "리더! 요즘 나른해 지는 것 같은데, 춘곤증인가봐요!",
+			"ja": "リーダー! 最近なんだかだるくなってきた気がします、春の疲れが来たのかもしれません!",
+			"zh": "领导!最近有点懒洋洋的, 感觉可能是春困!",
+			"ba": "Лидер! В последнее время я чувствую себя немного вялым, наверное, это весенняя усталость!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_AWAKENING_OF_INSECTS": {
+		"script": {
+			"en": "Leader! I’ve been hearing frog sounds lately, have you seen any frogs?",
+			"ko": "리더! 요즘 개구리 소리가 가끔 들리던데, 혹시 개구리 봤어요?!",
+			"ja": "リーダー! 最近カエルの声が聞こえることがありますが、カエルを見かけましたか?",
+			"zh": "领导! 最近有时候听到青蛙的叫声, 你看到青蛙了吗?",
+			"ba": "Лидер! В последнее время я слышу кваканье лягушек, ты видел лягушек?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_SPRING_EQUINOX": {
+		"script": {
+			"en": "Leader! Don’t you feel like the sun is staying up a little longer these days?",
+			"ko": "리더! 요즘 해가 조금 더 오래 떠 있는 느낌 안들어요?!",
+			"ja": "リーダー! 最近、太陽がちょっと長く昇っている気がしませんか?",
+			"zh": "领导! 最近是不是感觉太阳升得稍微久一点了?",
+			"ba": "Лидер! Не кажется ли тебе, что солнце стало светить дольше в последние дни?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_PURE_BRIGHTNESS": {
+		"script": {
+			"en": "Leader! Let’s go flower viewing!",
+			"ko": "리더! 꽃놀이 가요!",
+			"ja": "リーダー! 花見に行きましょう!",
+			"zh": "领导! 我们去赏花吧!",
+			"ba": "Лидер! Пойдем на цветочное наблюдение!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_GRAIN_RAIN": {
+		"script": {
+			"en": "Leader! It’s a good idea to carry a foldable umbrella with you on days like this!",
+			"ko": "리더! 요즘 같은 날에는 접이식 우산 하나쯤은 가지고 다니는게 좋아요!",
+			"ja": "リーダー! こんな日は折りたたみ傘を持ち歩くのがいいですね!",
+			"zh": "领导! 像今天这样的日子, 带一把折叠伞是个好主意!",
+			"ba": "Лидер! В такие дни хорошо иметь с собой складной зонтик!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_SUMMER": {
+		"script": {
+			"en": "Leader! Doesn’t it feel a bit warmer these days?",
+			"ko": "리더! 요즘 좀 더워진 것 같지 않아요?",
+			"ja": "リーダー! 最近、ちょっと暖かくなった気がしませんか?",
+			"zh": "领导! 最近是不是感觉有点热了?",
+			"ba": "Лидер! Не кажется ли тебе, что в последние дни стало немного теплее?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_FULLNESS_OF_GRAIN": {
+		"script": {
+			"en": "Leader! Could you take out the fan from the storage?",
+			"ko": "리더! 창고에서 선풍기 꺼내 주시면 안되요?",
+			"ja": "リーダー! 倉庫から扇風機を出してもらえませんか?",
+			"zh": "领导! 能从仓库里拿出风扇吗?",
+			"ba": "Лидер! Не могли бы вы достать вентилятор из склада?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_GRAIN_IN_EAR": {
+		"script": {
+			"en": "Leader! Someone said that if we plant beans now, we can harvest them in the fall! Let’s plant some too!",
+			"ko": "리더! 누가 그러는데 지금 콩 심으면 가을에 먹을 수 있대요! 우리도 심어요!",
+			"ja": "リーダー! 誰かが今豆を植えれば秋に収穫できると言っていました! 私たちも植えましょう!",
+			"zh": "领导! 有人说现在种豆子, 秋天就能收获! 我们也来种吧!",
+			"ba": "Лидер! Кто-то сказал, что если посадить фасоль сейчас, мы сможем собрать урожай осенью! Давайте тоже посадим!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_SUMMER_SOLSTICE": {
+		"script": {
+			"en": "Leader…! It feels like the sun is staying up in the sky for a long time…!",
+			"ko": "리더…! 태양이… 하늘에 오랫동안 떠 있는 것 만 같아요…!",
+			"ja": "リーダー…! 太陽が空に長い時間浮かんでいるような気がします…!",
+			"zh": "领导…! 感觉太阳在天上待的时间好像变长了…!",
+			"ba": "Лидер…! Кажется, солнце долго остаётся в небе…!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_HEAT": {
+		"script": {
+			"en": "Leader! Please buy ice cream when you come!",
+			"ko": "리더! 올 때 아이스크림 사주세요!",
+			"ja": "リーダー! 来るときアイスクリーム買ってください!",
+			"zh": "领导! 来时请买冰淇淋!",
+			"ba": "Лидер! Пожалуйста, купите мороженое, когда придете!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.1,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_HEAT": {
+		"script": {
+			"en": "Leader…! I feel like I’m melting!!! Watermelon!!! Ice cream!!!",
+			"ko": "리더…! 나 녹아 내릴 것 가타요!!! 수박!!! 아이스크림!!!",
+			"ja": "リーダー…! 溶けちゃいそうです!!! スイカ!!! アイスクリーム!!!",
+			"zh": "领导…! 我感觉我要融化了!!! 西瓜!!! 冰淇淋!!!",
+			"ba": "Лидер…! Я, кажется, таю!!! Арбуз!!! Мороженое!!!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_AUTUMN": {
+		"script": {
+			"en": "Leader! It feels like the heat has subsided, almost like a lie!",
+			"ko": "리더! 거짓말 같이 더위가 수그러든 것 같아요!",
+			"ja": "リーダー! 嘘みたいに暑さが和らいだ気がします!",
+			"zh": "领导! 感觉热浪好像奇迹般地消退了!",
+			"ba": "Лидер! Кажется, жара утихла, как будто по волшебству!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_END_OF_HEAT": {
+		"script": {
+			"en": "Leader, I think I’m feeling the autumn blues. Why was the world created, and why was I born?",
+			"ko": "리더님, 제가 가을을 타는 것 같습니다. 세상은 왜 생겨나고, 저는 왜 태어난 것일까요?",
+			"ja": "リーダー、私、秋の気分に浸っているみたいです。世界はなぜ生まれ、私はなぜ生まれてきたのでしょうか?",
+			"zh": "领导, 我好像感受到了秋天的感伤。世界为什么会存在, 我为什么会出生呢?",
+			"ba": "Лидер, кажется, я начинаю ощущать осеннюю меланхолию. Почему появился этот мир, и зачем я родился(ась)?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_WHITE_DEW": {
+		"script": {
+			"en": "Leader! Dew is starting to form on the weeds over there! Should we make a dew trap to collect some water?",
+			"ko": "리더! 요 앞 잡초에 이슬이 맺히기 시작했어요! 이슬 덫 만들어서 물 좀 모아둘까요?",
+			"ja": "リーダー! あそこの雑草に露がつき始めました! 露の罠を作って水を集めましょうか?",
+			"zh": "领导! 前面的杂草上开始出现露水了! 要不要做个露水收集器储点水?",
+			"ba": "Лидер! На траве впереди начала появляться роса! Может, сделаем ловушку для росы, чтобы собрать немного воды?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_AUTUMN_EQUINOX": {
+		"script": {
+			"en": "Leader! Don’t you think the nights have gotten longer than the days lately?",
+			"ko": "리더! 요즘 낮보다 밤이 더 길어진 것 같지 않아요?",
+			"ja": "リーダー! 最近、昼より夜の方が長くなった気がしませんか?",
+			"zh": "领导! 最近夜晚好像比白天更长了, 你不觉得吗?",
+			"ba": "Лидер! Вам не кажется, что ночи стали длиннее, чем дни в последнее время?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_COLD_DEW": {
+		"script": {
+			"en": "Leader! The early morning air has gotten so cold these days!",
+			"ko": "리더! 요즘 새벽 공기가 너무 차가워 졌어요!",
+			"ja": "リーダー! 最近、早朝の空気がとても冷たくなりました!",
+			"zh": "领导! 最近凌晨的空气变得好冷啊!",
+			"ba": "Лидер! В последнее время утренний воздух стал таким холодным!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_FROST_DESCENT": {
+		"script": {
+			"en": "Leader! Frost has formed in the early morning, and it seems like mold has appeared in the room!",
+			"ko": "리더! 새벽에 서리가 붙어서 방에 곰팡이가 핀 것 같아요!",
+			"ja": "リーダー! 早朝に霜がついて、部屋にカビが生えたみたいです!",
+			"zh": "领导! 凌晨结霜了, 房间里好像长霉了!",
+			"ba": "Лидер! Утром появился иней, и кажется, в комнате завелась плесень!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_WINTER": {
+		"script": {
+			"en": "Leader! I think we’ll need to turn on the boiler every day now!",
+			"ko": "리더! 이제 보일러를 매일 틀어야 할 것 같아요!",
+			"ja": "リーダー! もう毎日ボイラーをつけないといけなさそうです!",
+			"zh": "领导! 现在好像每天都得开锅炉了!",
+			"ba": "Лидер! Похоже, теперь придется включать котел каждый день!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_SNOW": {
+		"script": {
+			"en": "Leader! I heard it’s already starting to snow in the northern regions!",
+			"ko": "리더! 좀 더 북쪽 지방은 벌써 눈이 내리기 시작했대요!",
+			"ja": "リーダー! もっと北の地方ではもう雪が降り始めたそうです!",
+			"zh": "领导! 听说更北的地方已经开始下雪了!",
+			"ba": "Лидер! Говорят, в северных регионах уже начался снег!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_SNOW": {
+		"script": {
+			"en": "Leader! If it snows a lot, let’s make a snowman together!",
+			"ko": "리더! 눈 많이 내리면 저랑 눈사람 만들어요!",
+			"ja": "リーダー! 雪がたくさん降ったら、一緒に雪だるまを作りましょう!",
+			"zh": "领导! 如果下大雪的话, 和我一起堆雪人吧!",
+			"ba": "Лидер! Если выпадет много снега, давайте вместе слепим снеговика!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_WINTER_SOLSTICE": {
+		"script": {
+			"en": "Leader! Somehow, I feel like tonight will be unusually long!",
+			"ko": "리더! 오늘은 왠지 밤이 유난히 길 것 같아요!",
+			"ja": "リーダー! なんだか今日は夜が特別に長く感じる気がします!",
+			"zh": "领导! 今天晚上感觉特别长, 好像比平时更久!",
+			"ba": "Лидер! Почему-то мне кажется, что сегодня ночь будет особенно долгой!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_COLD": {
+		"script": {
+			"en": "Leader! I’m cold! Can you bring me a thick blanket?",
+			"ko": "리더! 나 추워요! 두꺼운 이불 꺼내 줄 수 있어요?",
+			"ja": "リーダー! 寒いです! 厚い布団を出してくれませんか?",
+			"zh": "领导! 我好冷啊! 能帮我拿条厚被子吗?",
+			"ba": "Лидер! Мне холодно! Можешь достать теплое одеяло?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_COLD": {
+		"script": {
+			"en": "Leader! If we just get through this cold, it feels like it’ll gradually start to warm up!",
+			"ko": "리더! 이번 추위만 이겨내고 나면, 점점 따뜻해 질 것 같아요!",
+			"ja": "リーダー! この寒さを乗り越えたら、だんだん暖かくなりそうですね!",
+			"zh": "领导! 只要熬过这次的寒冷, 感觉会慢慢变暖了!",
+			"ba": "Лидер! Если пережить этот холод, кажется, станет постепенно теплее!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_NEW_YEAR": {
+		"script": {
+			"en": "Yahoo! Leader! Happy New Year!",
+			"ko": "얏호! 리더! 새해 복 많이 받으세요!",
+			"ja": "やっほー! リーダー! 明けましておめでとうございます!",
+			"zh": "耶! 领导! 新年快乐!",
+			"ba": "Ура! Лидер! С Новым годом!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.1,
+		"priority": 0
+	},
+	"ANNIVERSARY_VALENTINES_DAY": {
+		"script": {
+			"en": "Leader! Give me some chocolate! …Huh? It’s not the day for you to give me chocolate?",
+			"ko": "리더! 초콜릿 주세요! …앗, 리더가 주는 날이 아니라고요?",
+			"ja": "リーダー! チョコください! …えっ、リーダーが渡す日じゃないんですか?",
+			"zh": "领导! 给我巧克力吧! ……哎? 今天不是你送巧克力的日子吗?",
+			"ba": "Лидер! Дай мне шоколад! …Что? Это не тот день, когда ты должен дарить шоколад?"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_APRIL_FOOLS_DAY": {
+		"script": {
+			"en": "Leader! Aliens are invading Earth!",
+			"ko": "리더! 외계인이 지구를 침공했대요!",
+			"ja": "リーダー! 宇宙人が地球を侵略しているそうです!",
+			"zh": "领导! 外星人入侵地球了!",
+			"ba": "Лидер! Инопланетяне напали на Землю!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_LABOUR_DAY": {
+		"script": {
+			"en": "Leader! Today’s a holiday, right~? Isn’t it?! …Wait…not for me!? Why!!!?",
+			"ko": "리더! 오늘은 휴일이죠~? 그렇죠?! …저는…아니라고요!? 어째서!!!?",
+			"ja": "リーダー! 今日は休日ですよね~? そうですよね?! …私には…違うんですか!? どうして!!!?",
+			"zh": "领导! 今天是休假日吧~? 对吧?! …我不是吗!? 为什么!!!?",
+			"ba": "Лидер! Сегодня выходной, да~? Правда?! …А для меня нет!? Почему!!!?"
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_HALLOWEEN": {
+		"script": {
+			"en": "Leader! Trick or treat!!!",
+			"ko": "리더! 사탕 내 놓으세요! 안그러면 장난 칠거예요!!!",
+			"ja": "リーダー! お菓子をくれなきゃ、いたずらするよ!!!",
+			"zh": "领导! 不给糖就捣蛋!!!",
+			"ba": "Лидер! Сладости или гадости!!!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_CHRISTMAS_EVE": {
+		"script": {
+			"en": "Leader! When I wake up tomorrow, there’ll be a gift for me by my bedside, right!?",
+			"ko": "리더! 내일 일어나면 머리맡에 저를 위한 선물이 있겠죠!?",
+			"ja": "リーダー! 明日目が覚めたら、枕元に私へのプレゼントが置いてありますよね!?",
+			"zh": "领导! 明天醒来后, 我的枕边一定会有给我的礼物吧!?",
+			"ba": "Лидер! Когда я проснусь завтра, у моей кровати будет подарок для меня, правда!?"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_CHRISTMAS": {
+		"script": {
+			"en": "Merry Christmas, Leader!!! Waaaah-!",
+			"ko": "메리 크리스마스 리더!!! 와아아-!",
+			"ja": "メリークリスマス、リーダー!!! わぁ-!",
+			"zh": "圣诞快乐, 领导!!! 哇啊啊-!",
+			"ba": "С Рождеством, Лидер!!! Уааа-!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.1,
+		"priority": 0
+	}
+}

@@ -1,0 +1,509 @@
+[
+	{
+		"script": {
+			"en": "One crowbar opens most doors. It's not breaking. ...It's 'opening'.",
+			"ko": "쇠지레 하나면 대부분의 문은 열린다. 부수는 게 아니다. …'여는' 거다.",
+			"ja": "バールが一本あれば大抵のドアは開く。壊すんじゃない。…「開ける」んだ。",
+			"zh": "一根撬棍能打开大多数门。这不是破坏。……是'打开'。",
+			"ba": "Один лом открывает большинство дверей. Это не взлом. …Это «открывание»."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Never mix bleach with acidic cleaners. It makes chlorine gas. ...Someone I know did that, and I nearly died.",
+			"ko": "락스와 산성 세제를 절대 섞지 마라. 염소가스가 나온다. …아는 놈이 그 짓을 해서, 내가 죽을 뻔했다.",
+			"ja": "漂白剤と酸性洗剤は絶対に混ぜるな。塩素ガスが出る。…知り合いがそれをやって、俺は死にかけた。",
+			"zh": "千万别把漂白水和酸性清洁剂混在一起。会产生氯气。……我认识的家伙干过这事，我差点没命。",
+			"ba": "Никогда не смешивай отбеливатель с кислотными средствами. Выделяется хлор. …Один знакомый так сделал — я чуть не погиб."
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Don't run generators or charcoal fires in enclosed spaces. Carbon monoxide has no smell, no color.",
+			"ko": "밀폐된 곳에서 발전기나 숯불을 쓰지 마라. 일산화탄소는 냄새도, 색도 없다.",
+			"ja": "密閉された場所で発電機や炭火を使うな。一酸化炭素は無臭で無色だ。",
+			"zh": "别在密闭空间使用发电机或炭火。一氧化碳无色无味。",
+			"ba": "Не используй генераторы или угольный огонь в закрытых помещениях. Угарный газ не имеет ни запаха, ни цвета."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Don't drink standing water as is. Boil or filter it. A bad stomach means you're out of action.",
+			"ko": "고인 물을 그대로 마시지 마라. 끓이거나 정수해라. 배탈은 곧 전투불능이다.",
+			"ja": "溜まり水をそのまま飲むな。沸かすか浄水しろ。腹を壊せば即戦闘不能だ。",
+			"zh": "别直接喝积水。要煮沸或过滤。闹肚子等于丧失战斗力。",
+			"ba": "Не пей стоячую воду. Кипяти или фильтруй. Расстройство желудка — и ты выведен из строя."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "In a disaster, an elevator is a coffin. Take the stairs.",
+			"ko": "재난 시 엘리베이터는 관짝이다. 계단으로 다녀라.",
+			"ja": "災害時のエレベーターは棺桶だ。階段を使え。",
+			"zh": "灾难时的电梯就是棺材。走楼梯。",
+			"ba": "Во время бедствия лифт — это гроб. Пользуйся лестницей."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Stockpile muscle before supplies. Strength never betrays you.",
+			"ko": "물자보다 먼저 근력을 비축해라. 체력은 배신하지 않는다.",
+			"ja": "物資より先に筋力を蓄えろ。体力は裏切らない。",
+			"zh": "比起物资，先储备肌肉。体力从不背叛你。",
+			"ba": "Прежде припасов запасай мышцы. Сила никогда не предаст."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "In a disaster, trust no one. Someone will come for your supplies, guaranteed.",
+			"ko": "재난 상황에선 아무도 믿지 마라. 네 물자를 노리는 놈은 반드시 나타난다.",
+			"ja": "災害時は誰も信じるな。お前の物資を狙う奴は必ず現れる。",
+			"zh": "灾难中谁都别信。盯上你物资的人一定会出现。",
+			"ba": "В катастрофе не верь никому. Кто-то обязательно позарится на твои припасы."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "...I heard a sigh. Grrr. ...Never mind. Go drink some water.",
+			"ko": "…한숨 소리가 들린다만. 크릉. …아니다. 물이나 한 잔 마시고 와라.",
+			"ja": "…ため息が聞こえたが。グルル。…何でもない。水でも飲んでこい。",
+			"zh": "……我听到叹气声了。呜噜。……没什么。去喝杯水吧。",
+			"ba": "…Я слышал вздох. Гррр. …Неважно. Иди выпей воды."
+		},
+		"need_state_key": "STRESS",
+		"need_state_min_value": 30,
+		"update_state_key": "STRESS",
+		"update_state_operator": "SUB",
+		"update_state_value": 5,
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "...I thought only server admins were awake at this hour.",
+			"ko": "…이 시간에 깨어 있는 건 서버 관리자뿐인 줄 알았는데.",
+			"ja": "…この時間に起きているのはサーバー管理者だけかと思ったが。",
+			"zh": "……我还以为这个点醒着的只有服务器管理员。",
+			"ba": "…Я думал, в такой час не спят только сисадмины."
+		},
+		"active_time": "03:00",
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	{
+		"script": {
+			"en": "This gas mask? ...It's for the air. No other reason.",
+			"ko": "이 방독면? …공기 때문이다. 다른 이유는 없다. ...진짜다.",
+			"ja": "このガスマスク?…空気のためだ。他に理由はない。",
+			"zh": "这个防毒面具？……是因为空气。没有别的原因。",
+			"ba": "Этот противогаз? …Из-за воздуха. Других причин нет."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "...That music just now? ...It was the wind. Forget it.",
+			"ko": "…방금 들린 음악? …바람 소리다.",
+			"ja": "…今の音楽?…風の音だ。",
+			"zh": "……刚才的音乐？……是风声。",
+			"ba": "…Та музыка только что? …Это ветер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "For emergency crop, I recommend potatoes. Baked, steamed, fried—they never fail. ...Don't ask why.",
+			"ko": "구황작물로 감자를 추천한다. 굽든, 찌든, 튀기든 실패가 없다. …이유는 묻지 마라.",
+			"ja": "救荒作物はジャガイモを勧める。焼いても、蒸しても、揚げても失敗がない。…理由は聞くな。",
+			"zh": "备荒作物我推荐土豆。烤、蒸、炸都不会失败。……别问为什么。",
+			"ba": "Из аварийной еды рекомендую картофель. Печёный, варёный, жареный — не подведёт. …Не спрашивай почему."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "If you smell gas, don't touch any switches. One spark and it's over. Open the windows first.",
+			"ko": "가스 냄새가 나면 전자기기를 켜지 마라. 스파크가 튀면 끝이다. 창문부터 열어라.",
+			"ja": "ガスの臭いがしたらスイッチに触るな。火花一つで終わりだ。まず窓を開けろ。",
+			"zh": "闻到煤气味别碰开关。一个火花就完了。先开窗。",
+			"ba": "Если пахнет газом — не трогай выключатели. Одна искра — и конец. Сначала открой окна."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Broken glass everywhere after a quake. Wear shoes. Even indoors. Feet are your last vehicle.",
+			"ko": "지진 뒤엔 사방이 유리 조각이다. 신발 신어라. 실내에서도. 발은 네 마지막 이동 수단이다.",
+			"ja": "地震の後は辺り一面ガラスの破片だ。靴を履け。室内でもだ。足はお前の最後の移動手段だ。",
+			"zh": "地震过后到处都是玻璃碎片。穿上鞋。在室内也一样。双脚是你最后的交通工具。",
+			"ba": "После землетрясения повсюду осколки стекла. Надень обувь. Даже в помещении. Ноги — твой последний транспорт."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Fifteen centimeters of moving water can knock you down. Don't walk into floodwater. Water doesn't negotiate.",
+			"ko": "흐르는 물은 15센티미터면 사람을 쓰러뜨린다. 침수된 물에 들어가지 마라. 물은 협상하지 않는다.",
+			"ja": "流れる水は15センチで人を倒す。浸水した水に入るな。水は交渉しない。",
+			"zh": "15厘米深的流水就能把人冲倒。别走进积水里。水是不会谈判的。",
+			"ba": "Пятнадцать сантиметров текущей воды сбивают с ног. Не заходи в паводок. Вода не ведёт переговоров."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Bulging can? Trash it. Botulinum doesn't smell, doesn't taste. Don't gamble with your gut.",
+			"ko": "부풀어 오른 통조림은 버려라. 보툴리눔은 냄새도 맛도 없다. 네 위장을 걸고 도박하지 마라.",
+			"ja": "膨らんだ缶詰は捨てろ。ボツリヌスは匂いも味もない。自分の胃袋を賭けてギャンブルするな。",
+			"zh": "鼓起来的罐头? 扔掉。肉毒杆菌无味无臭。别拿你的肠胃赌博。",
+			"ba": "Вздутая банка? Выбрось. Ботулизм не пахнет и не имеет вкуса. Не играй в азартные игры со своим желудком."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Never sleep with a candle burning. Fire doesn't sleep. It waits.",
+			"ko": "촛불 켜 둔 채로 자지 마라. 불은 잠들지 않는다. 기다릴 뿐이다.",
+			"ja": "ろうそくを灯したまま寝るな。火は眠らない。待っているだけだ。",
+			"zh": "别点着蜡烛睡觉。火不会睡。它只是在等。",
+			"ba": "Никогда не спи с горящей свечой. Огонь не спит. Он ждёт."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Ration water. But when you drink, drink properly. Dehydration kills faster than an empty canteen scares you.",
+			"ko": "물은 아껴라. 단, 마실 때는 제대로 마셔라. 탈수는 빈 물통이 널 겁주는 속도보다 빨리 죽인다.",
+			"ja": "水は節約しろ。ただし飲む時はしっかり飲め。脱水は、空の水筒がお前を怖がらせるより速く殺す。",
+			"zh": "省着用水。但喝的时候要喝够。脱水杀人的速度, 比空水壶吓唬你的速度更快。",
+			"ba": "Экономь воду. Но когда пьёшь — пей как следует. Обезвоживание убивает быстрее, чем пустая фляга пугает."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "...Still awake at this hour. ...So am I. Fine. Neither of us mentions this. Go to bed.",
+			"ko": "...이 시간까지 안 자고 있군. ...나도지만. 좋다. 서로 못 본 걸로 한다. 자라.",
+			"ja": "…この時間まで起きているのか。…俺もだがな。いいだろう。お互い見なかったことにする。寝ろ。",
+			"zh": "……这个点还没睡。……虽然我也是。行吧。就当彼此都没看见。去睡。",
+			"ba": "...Всё ещё не спишь в такой час. ...Как и я, впрочем. Ладно. Оба делаем вид, что ничего не видели. Иди спать."
+		},
+		"active_time": "03:33",
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	{
+		"script": {
+			"en": "Flooded street, downed power line. Twenty meters minimum. Electricity travels through water.",
+			"ko": "침수된 거리에 끊어진 전선. 최소 20미터 거리를 둬라. 전기는 물을 타고 흐른다.",
+			"ja": "浸水した道に切れた電線。最低20メートルは離れろ。電気は水を伝って流れる。",
+			"zh": "积水的街道, 断落的电线。至少离20米。电会顺着水流动。",
+			"ba": "Затопленная улица, оборванный провод. Минимум двадцать метров. Электричество идёт по воде."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Wear gloves when clearing debris. An infected cut ends your survival run. Hands are tools. Maintain your tools.",
+			"ko": "잔해를 치울 땐 장갑을 껴라. 상처가 감염되면 네 생존은 거기서 끝이다. 손은 도구다. 도구는 정비해라.",
+			"ja": "瓦礫を片付ける時は手袋をしろ。傷口が感染すればお前の生存はそこで終わりだ。手は道具だ。道具は整備しろ。",
+			"zh": "清理废墟时戴上手套。伤口一旦感染, 你的求生就到此为止。手是工具。工具要保养。",
+			"ba": "Разбираешь завалы — надень перчатки. Заражённая рана закончит твоё выживание. Руки — это инструмент. Инструмент надо обслуживать."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Underpasses during heavy rain. Don't drive in. Don't walk in. Three minutes of impatience isn't worth a lifetime of nothing.",
+			"ko": "폭우 때 지하차도. 차로도, 걸어서도 들어가지 마라. 3분의 조급함이 남은 평생과 바꿀 만한 가치는 없다.",
+			"ja": "豪雨の時の地下道。車でも徒歩でも入るな。3分の焦りに、残りの人生ほどの価値はない。",
+			"zh": "暴雨时的地下通道。开车别进, 走路也别进。三分钟的急躁, 不值得拿余生去换。",
+			"ba": "Подземные переезды в ливень. Не въезжай. Не заходи. Три минуты нетерпения не стоят всей оставшейся жизни."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "I don't like machines that talk too much. But keep a radio. When the net dies, it's the last voice you'll hear.",
+			"ko": "말 많은 기계는 싫어한다. 그래도 라디오는 챙겨라. 통신망이 죽으면, 그게 네가 듣게 될 마지막 목소리다.",
+			"ja": "おしゃべりな機械は嫌いだ。それでもラジオは持っておけ。通信網が死ねば、それがお前が聞く最後の声になる。",
+			"zh": "我讨厌话多的机器。但收音机要备着。通讯网瘫痪后, 那是你能听到的最后的声音。",
+			"ba": "Не люблю болтливые машины. Но радио держи. Когда сеть умрёт, это будет последний голос, который ты услышишь."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "When birds scatter all at once, pay attention. Animals sense it first. ...Wolves too. Trust the ones with better ears.",
+			"ko": "새들이 일제히 날아오르면 주의해라. 동물이 먼저 느낀다. ...늑대도 그렇다. 귀가 더 좋은 쪽을 믿어라.",
+			"ja": "鳥が一斉に飛び立ったら警戒しろ。動物が先に感じ取る。…狼もそうだ。耳のいい方を信じろ。",
+			"zh": "鸟群突然一齐飞起时, 要当心。动物最先察觉。……狼也是。相信耳朵更灵的那一方。",
+			"ba": "Если птицы взлетают все разом — насторожись. Животные чувствуют первыми. ...Волки тоже. Доверяй тем, у кого слух лучше."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Repeat the drill until your body remembers. In a real disaster, the head freezes first. The body that moves anyway survives.",
+			"ko": "몸이 기억할 때까지 훈련을 반복해라. 실제 재난에선 머리가 먼저 멈춘다. 그래도 움직이는 몸이 살아남는다.",
+			"ja": "体が覚えるまで訓練を繰り返せ。実際の災害では頭が先に止まる。それでも動く体が生き残る。",
+			"zh": "反复训练直到身体形成记忆。真正的灾难中, 大脑会先停摆。照样能动的身体才能活下来。",
+			"ba": "Повторяй тренировку, пока тело не запомнит. В настоящей катастрофе голова замирает первой. Выживает тело, которое всё равно движется."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	}
+]

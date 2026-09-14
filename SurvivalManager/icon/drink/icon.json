@@ -1,0 +1,226 @@
+{
+	"empty_bottle": {
+		"en": "Empty_bottle",
+		"ko": "빈 유리병",
+		"ja": "空の瓶",
+		"zh": "空瓶",
+		"ba": "Пустая бутылка"
+	},
+	"small_glass_bottle": {
+		"en": "Small glass bottle",
+		"ko": "소형 유리병",
+		"ja": "小さなガラス瓶",
+		"zh": "小玻璃瓶",
+		"ba": "Маленькая стеклянная бутылка"
+	},
+	"medium_glass_bottle": {
+		"en": "Medium glass bottle",
+		"ko": "중형 유리병",
+		"ja": "中くらいのガラス瓶",
+		"zh": "中等玻璃瓶",
+		"ba": "Средняя стеклянная бутылка"
+	},
+	"large_glass_bottle": {
+		"en": "Large glass bottle",
+		"ko": "대형 유리병",
+		"ja": "大きなガラス瓶",
+		"zh": "大玻璃瓶",
+		"ba": "Большая стеклянная бутылка"
+	},
+	"small_plastic_bottle": {
+		"en": "Small plastic bottle",
+		"ko": "소형 플라스틱 병",
+		"ja": "小さなプラスチックボトル",
+		"zh": "小塑料瓶",
+		"ba": "Маленькая пластиковая бутылка"
+	},
+	"medium_plastic_bottle": {
+		"en": "Medium plastic bottle",
+		"ko": "중형 플라스틱 병",
+		"ja": "中くらいのプラスチックボトル",
+		"zh": "中等塑料瓶",
+		"ba": "Средняя пластиковая бутылка"
+	},
+	"large_plastic_bottle": {
+		"en": "Large plastic bottle",
+		"ko": "대형 플라스틱 병",
+		"ja": "大きなプラスチックボトル",
+		"zh": "大塑料瓶",
+		"ba": "Большая пластиковая бутылка"
+	},
+	"small_pouch": {
+		"en": "Small pouch",
+		"ko": "소형 파우치",
+		"ja": "小さなポーチ",
+		"zh": "小袋",
+		"ba": "Маленькая сумочка"
+	},
+	"medium_pouch": {
+		"en": "Medium pouch",
+		"ko": "중형 파우치",
+		"ja": "中くらいのポーチ",
+		"zh": "中袋",
+		"ba": "Средняя сумочка"
+	},
+	"large_pouch": {
+		"en": "Large pouch",
+		"ko": "대형 파우치",
+		"ja": "大きなポーチ",
+		"zh": "大袋",
+		"ba": "Большая сумочка"
+	},
+	"wine_bottle": {
+		"en": "Wine bottle",
+		"ko": "와인 병",
+		"ja": "ワインボトル",
+		"zh": "葡萄酒瓶",
+		"ba": "Бутылка вина"
+	},
+	"beer_bottle": {
+		"en": "Beer bottle",
+		"ko": "맥주 병",
+		"ja": "ビール瓶",
+		"zh": "啤酒瓶",
+		"ba": "Бутылка пива"
+	},
+	"square_beer_bottle": {
+		"en": "Square beer bottle",
+		"ko": "각진 맥주 병",
+		"ja": "四角いビール瓶",
+		"zh": "方形啤酒瓶",
+		"ba": "Квадратная пивная бутылка"
+	},
+	"soda_bottle": {
+		"en": "Soda bottle",
+		"ko": "탄산 음료 병",
+		"ja": "ソーダボトル",
+		"zh": "汽水瓶",
+		"ba": "Бутылка газировки"
+	},
+	"can": {
+		"en": "Can",
+		"ko": "캔",
+		"ja": "缶",
+		"zh": "罐",
+		"ba": "Жестяная банка"
+	},
+	"paper_pack": {
+		"en": "Paper pack",
+		"ko": "종이 팩",
+		"ja": "紙パック",
+		"zh": "纸包装",
+		"ba": "Бумажная упаковка"
+	},
+	"milk_pack": {
+		"en": "Milk pack",
+		"ko": "우유 팩",
+		"ja": "牛乳パック",
+		"zh": "牛奶包装",
+		"ba": "Упаковка молока"
+	},
+	"kettle": {
+		"en": "Kettle",
+		"ko": "주전자",
+		"ja": "ケトル",
+		"zh": "水壶",
+		"ba": "Чайник"
+	},
+	"cup": {
+		"en": "Cup",
+		"ko": "컵",
+		"ja": "カップ",
+		"zh": "杯子",
+		"ba": "Чашка"
+	},
+	"disposable_cup": {
+		"en": "Disposable cup",
+		"ko": "일회용 컵",
+		"ja": "使い捨てカップ",
+		"zh": "一次性杯子",
+		"ba": "Одноразовый стакан"
+	},
+	"thermos": {
+		"en": "Thermos",
+		"ko": "보온병",
+		"ja": "サーモス",
+		"zh": "保温瓶",
+		"ba": "Термос"
+	},
+	"bucket": {
+		"en": "Bucket",
+		"ko": "양동이",
+		"ja": "バケツ",
+		"zh": "水桶",
+		"ba": "Ведро"
+	},
+	"plastic_barrel": {
+		"en": "Plastic barrel",
+		"ko": "플라스틱 배럴",
+		"ja": "プラスチックバレル",
+		"zh": "塑料桶",
+		"ba": "Пластиковая бочка"
+	},
+	"metal_barrel": {
+		"en": "Metal barrel",
+		"ko": "철제 배럴",
+		"ja": "金属バレル",
+		"zh": "金属桶",
+		"ba": "Металлическая бочка"
+	},
+	"wooden_barrel": {
+		"en": "Wooden barrel",
+		"ko": "나무 배럴",
+		"ja": "木製バレル",
+		"zh": "木桶",
+		"ba": "Деревянная бочка"
+	},
+	"cooking_pot": {
+		"en": "Cooking pot",
+		"ko": "냄비",
+		"ja": "鍋",
+		"zh": "炖锅",
+		"ba": "Кастрюля"
+	},
+	"pot": {
+		"en": "Pot",
+		"ko": "항아리",
+		"ja": "壺",
+		"zh": "罐",
+		"ba": "Горшок"
+	},
+	"bowl": {
+		"en": "Bowl",
+		"ko": "대야",
+		"ja": "ボウル",
+		"zh": "碗",
+		"ba": "Чаша"
+	},
+	"dish": {
+		"en": "Dish",
+		"ko": "그릇",
+		"ja": "皿",
+		"zh": "盘子",
+		"ba": "Тарелка"
+	},
+	"sauce": {
+		"en": "Sauce",
+		"ko": "소스",
+		"ja": "ソース",
+		"zh": "酱",
+		"ba": "Соус"
+	},
+	"tube": {
+		"en": "Tube",
+		"ko": "튜브",
+		"ja": "チューブ",
+		"zh": "管子",
+		"ba": "Трубка"
+	},
+	"vial": {
+		"en": "Vial",
+		"ko": "바이알",
+		"ja": "バイアル",
+		"zh": "小瓶",
+		"ba": "Фиал"
+	}
+}

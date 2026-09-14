@@ -1,0 +1,72 @@
+{
+	"backpack": {
+		"en": "Backpack",
+		"ko": "백팩",
+		"ja": "バックパック",
+		"zh": "背包",
+		"ba": "Рюкзак"
+	},
+	"hiking_backpack": {
+		"en": "Hiking backpack",
+		"ko": "등산 가방",
+		"ja": "登山用バックパック",
+		"zh": "登山背包",
+		"ba": "Аялы рюкзак"
+	},
+	"carry_on": {
+		"en": "Carry-on / Luggage",
+		"ko": "캐리어",
+		"ja": "キャリーケース",
+		"zh": "行李箱",
+		"ba": "Чемодан"
+	},
+	"crossbody_bag": {
+		"en": "Crossbody bag",
+		"ko": "크로스백",
+		"ja": "クロスボディバッグ",
+		"zh": "斜挎包",
+		"ba": "Сумка через плечо"
+	},
+	"duffel_bag": {
+		"en": "Duffel bag",
+		"ko": "더플백",
+		"ja": "ダッフルバッグ",
+		"zh": "旅行包",
+		"ba": "Дюфелева сумка"
+	},
+	"briefcase": {
+		"en": "Briefcase",
+		"ko": "서류 가방",
+		"ja": "書類袋",
+		"zh": "公文包",
+		"ba": "Портфель"
+	},
+	"paper_bag": {
+		"en": "Paper bag",
+		"ko": "종이봉투",
+		"ja": "紙袋",
+		"zh": "纸袋",
+		"ba": "Бумажный пакет"
+	},
+	"plastic_bag": {
+		"en": "Plastic bag",
+		"ko": "비닐봉지",
+		"ja": "ポリ袋",
+		"zh": "塑料袋",
+		"ba": "Пластиковый пакет"
+	},
+	"tote_bag": {
+		"en": "Tote bag",
+		"ko": "토트백",
+		"ja": "トートバッグ",
+		"zh": "手提包",
+		"ba": "Сумка-тоут"
+	},
+	"waist_bag": {
+		"en": "Waist Bag / Fanny Pack",
+		"ko": "허리가방",
+		"ja": "ウエストポーチ",
+		"zh": "腰包",
+		"ba": "Сумка на пояс"
+	}
+}

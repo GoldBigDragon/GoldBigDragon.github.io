@@ -1,0 +1,79 @@
+{
+	"no_knowledge_needed": {
+		"en": "No knowledge needed",
+		"ko": "사전 지식 필요없음",
+		"ja": "知識は不要",
+		"zh": "无需知识",
+		"ba": "Знания не требуются"
+	},
+	"elementary_level_knowledge_needed": {
+		"en": "Elementary level knowledge needed",
+		"ko": "저학년 수준의 지식 필요",
+		"ja": "初級レベルの知識が必要",
+		"zh": "需要初级水平知识",
+		"ba": "Необходимы знания на уровне начальной школы"
+	},
+	"intermediate_level_knowledge_needed": {
+		"en": "Intermediate level knowledge needed",
+		"ko": "고학년 수준의 지식 필요",
+		"ja": "中級レベルの知識が必要",
+		"zh": "需要中级水平知识",
+		"ba": "Необходимы знания среднего уровня"
+	},
+	"college_level_knowledge_needed": {
+		"en": "College level knowledge needed",
+		"ko": "전공 대학생 수준의 지식 필요",
+		"ja": "大学レベルの知識が必要",
+		"zh": "需要大学水平知识",
+		"ba": "Необходимы знания на уровне колледжа"
+	},
+	"master_level_knowledge_needed": {
+		"en": "Master level knowledge needed",
+		"ko": "석사 수준의 전문 지식 필요",
+		"ja": "修士レベルの専門知識が必要",
+		"zh": "需要硕士水平的专业知识",
+		"ba": "Необходимы знания на уровне магистратуры"
+	},
+	"doctorate_level_knowledge_needed": {
+		"en": "Doctorate level knowledge needed",
+		"ko": "박사 수준의 전문 지식 필요",
+		"ja": "博士レベルの専門知識が必要",
+		"zh": "需要博士水平的专业知识",
+		"ba": "Необходимы знания на уровне доктора"
+	},
+	"professional_experience_1_years_needed": {
+		"en": "Professional experience of 1 years needed",
+		"ko": "현업 종사 1년 수준의 전문 지식 필요",
+		"ja": "現場での1年の専門知識が必要",
+		"zh": "需要1年行业经验的专业知识",
+		"ba": "Необходимы знания с 1-летним опытом работы"
+	},
+	"professional_experience_5_years_needed": {
+		"en": "Professional experience of 5 years needed",
+		"ko": "현업 종사 5년 수준의 전문 지식 필요",
+		"ja": "現場での5年の専門知識が必要",
+		"zh": "需要5年行业经验的专业知识",
+		"ba": "Необходимы знания с 5-летним опытом работы"
+	},
+	"professional_experience_10_years_needed": {
+		"en": "Professional experience of 10 years needed",
+		"ko": "현업 종사 10년 수준의 전문 지식 필요",
+		"ja": "現場での10年の専門知識が必要",
+		"zh": "需要10年行业经验的专业知识",
+		"ba": "Необходимы знания с 10-летним опытом работы"
+	},
+	"professional_experience_30_years_needed": {
+		"en": "Professional experience of 30 years needed",
+		"ko": "현업 종사 30년 수준의 전문 지식 필요",
+		"ja": "現場での30年の専門知識が必要",
+		"zh": "需要30年行业经验的专业知识",
+		"ba": "Необходимы знания с 30-летним опытом работы"
+	},
+	"professional_certification_needed": {
+		"en": "Professional certification needed",
+		"ko": "전문 자격증 필요",
+		"ja": "専門資格が必要",
+		"zh": "需要专业资格证书",
+		"ba": "Необходима профессиональная сертификация"
+	}
+}

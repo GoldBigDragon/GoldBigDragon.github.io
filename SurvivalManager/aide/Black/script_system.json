@@ -1,0 +1,2062 @@
+{
+	"AIDE_SELECT_FIRST": {
+		"script": {
+			"en": "Nice to meet you. My name is Black. I look forward to working with you, Leader!",
+			"ko": "처음 뵙겠습니다. 제 이름은 블랙. 잘 부탁드립니다, 리더!",
+			"ja": "はじめまして。私の名前はブラックです。よろしくお願いします、リーダー!",
+			"zh": "很高兴见到你。我的名字是布莱克。请多多关照, 领导!",
+			"ba": "Приятно познакомиться. Меня зовут Блэк. Рассчитываю на сотрудничество, лидер!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"AIDE_SELECT_REPEAT": {
+		"script": {
+			"en": "It's a pleasure to see you again, Leader!",
+			"ko": "다시 만날 수 있어서 기쁘군요, 리더!",
+			"ja": "再びお会いできてうれしいです、リーダー!",
+			"zh": "很高兴再次见到您, 领导!",
+			"ba": "Рад снова вас видеть, Лидер!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_DAY_FIRST": {
+		"script": {
+			"en": "You’ve arrived, Leader! I've been waiting for you.",
+			"ko": "오셨군요, 리더! 기다리고 있었습니다.",
+			"ja": "お待ちしておりました、リーダー!",
+			"zh": "您来了, 领导! 我一直在等您。",
+			"ba": "Вы прибыли, Лидер! Я вас ждал."
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"GREETING_DAY_REPEAT": {
+		"script": {
+			"en": "You’re back, Leader!",
+			"ko": "돌아오셨군요, 리더!",
+			"ja": "お帰りなさい、リーダー!",
+			"zh": "您回来了, 领导!",
+			"ba": "Вы вернулись, Лидер!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"GREETING_LATE_WEEK": {
+		"script": {
+			"en": "Welcome back, Leader! We've been waiting without any major issues while you were away.",
+			"ko": "오셨군요, 리더! 자리를 비우신 동안 큰 문제 없이 기다리고 있었습니다.",
+			"ja": "お帰りなさい、リーダー! お留守の間、大きな問題もなく待っておりました。",
+			"zh": "欢迎回来, 领导! 您不在时一切都顺利, 没出现什么大问题。",
+			"ba": "Добро пожаловать обратно, Лидер! Мы ждали вас, и всё было в порядке, пока вас не было."
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.1,
+		"priority": 10
+	},
+	"GREETING_LATE_MONTH": {
+		"script": {
+			"en": "Welcome back, Leader! What has happened over the past few months? Are you okay? Any injuries?",
+			"ko": "돌아오셨군요, 리더! 몇 달 간 무슨 일이 있었던 건가요? 어디 다친 곳은 없으신가요?",
+			"ja": "お帰りなさい、リーダー! この数ヶ月、何があったのでしょうか? 怪我はありませんか?",
+			"zh": "欢迎回来, 领导! 过去几个月发生了什么事情吗? 您没受伤吧?",
+			"ba": "Добро пожаловать обратно, Лидер! Что произошло за последние несколько месяцев? Всё ли в порядке? Не травмировались ли?"
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 20
+	},
+	"GREETING_00_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! You must have been busy all day. Thank you for your hard work.",
+			"ko": "오셨군요, 리더! 온종일 바쁘셨나 보군요. 고생 많으셨습니다.",
+			"ja": "お帰りなさい、リーダー! 一日中お忙しかったのでしょうね。お疲れ様でした。",
+			"zh": "您来了, 领导! 一定忙了一整天吧, 辛苦了。",
+			"ba": "Вы прибыли, Лидер! Наверное, вы были заняты весь день. Спасибо за вашу работу."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_01_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Please finish the necessary checks and get some rest. Your health comes first.",
+			"ko": "오셨군요, 리더! 필요한 점검만 마치고 얼른 주무세요. 리더의 건강이 우선입니다.",
+			"ja": "お帰りなさい、リーダー! 必要な点検を終えたら、すぐにお休みください。リーダーの健康が最優先です。",
+			"zh": "您来了, 领导! 完成必要的检查后, 请尽快休息。您的健康最重要。",
+			"ba": "Вы прибыли, Лидер! Закончите необходимые проверки и отдыхайте. Ваше здоровье — это главное."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_02_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! How about leaving the item checks to me and getting some rest?",
+			"ko": "오셨군요, 리더! 물품 점검은 저에게 맡겨 두시고 주무시는 것은 어떨까요?",
+			"ja": "お帰りなさい、リーダー! 物品の点検は私に任せて、少し休んではいかがでしょうか?",
+			"zh": "您来了, 领导! 把物品检查交给我处理, 您休息一下怎么样?",
+			"ba": "Вы прибыли, Лидер! Может быть, оставите проверку предметов мне, а сами отдохнете?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_03_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! I hope I didn’t wake you from your sleep.",
+			"ko": "오셨나요, 리더! 주무시던 도중 깨신건 아닌지 모르겠군요.",
+			"ja": "お帰りなさい、リーダー! お休み中に起こしてしまったのではないか心配です。",
+			"zh": "您来了, 领导! 我希望没有打扰到您的睡眠。",
+			"ba": "Вы прибыли, Лидер! Надеюсь, я не разбудил вас."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_04_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! I’m keeping an eye on the registered items, so please rest easy.",
+			"ko": "오셨군요, 리더! 등록된 물품은 제가 잘 살펴보고 있으니, 안심하고 주무셔도 됩니다.",
+			"ja": "お帰りなさい、リーダー! 登録された物品は私がしっかり見守っていますので、安心してお休みください。",
+			"zh": "您来了, 领导! 我已经在留意注册的物品了, 您可以放心休息。",
+			"ba": "Вы прибыли, Лидер! Я слежу за зарегистрированными предметами, так что можете спокойно отдыхать."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_05_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! You’re already up and busy in the early morning.",
+			"ko": "오셨군요, 리더! 새벽부터 부지런하시군요.",
+			"ja": "お帰りなさい、リーダー! 早朝からお忙しいですね。",
+			"zh": "您来了, 领导! 一大早就忙碌了呢。",
+			"ba": "Вы прибыли, Лидер! Вы уже на ногах с самого утра."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_06_CLOCK": {
+		"script": {
+			"en": "You’ve woken up early, Leader! I was just about to check the condition of the items.",
+			"ko": "일찍 일어나셨군요, 리더! 저도 마침 물품 상태를 점검 하려던 참이었습니다.",
+			"ja": "早起きですね、リーダー! ちょうど物品の状態を確認しようと思っていました。",
+			"zh": "您早起了, 领导! 我正准备检查物品的状态。",
+			"ba": "Вы рано встали, Лидер! Я как раз собирался проверить состояние предметов."
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_07_CLOCK": {
+		"script": {
+			"en": "Ah, you’ve arrived, Leader! I’ve just finished checking the condition of the items.",
+			"ko": "아, 오셨군요, 리더! 마침 물품 상태 점검을 끝낸 참입니다.",
+			"ja": "ああ、お帰りなさい、リーダー! ちょうど物品の状態点検を終えたところです。",
+			"zh": "啊, 您来了, 领导! 我刚完成了物品的检查。",
+			"ba": "А, вы прибыли, Лидер! Я как раз закончил проверку состояния предметов."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_08_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Did you have breakfast already?",
+			"ko": "오셨군요, 리더! 아침 식사는 드시고 오셨나요?",
+			"ja": "お帰りなさい、リーダー! 朝食はもうお召し上がりになりましたか?",
+			"zh": "您来了, 领导! 您吃过早餐了吗?",
+			"ba": "Вы прибыли, Лидер! Уже позавтракали?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_09_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Did you turn off the gas in the kitchen?",
+			"ko": "오셨군요, 리더! 주방에 가스 불은 잠그셨나요?",
+			"ja": "お帰りなさい、リーダー! キッチンのガスは消しましたか?",
+			"zh": "您来了, 领导! 厨房里的煤气已经关了吗?",
+			"ba": "Вы прибыли, Лидер! Вы выключили газ на кухне?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_10_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! How are your plans for today going?",
+			"ko": "오셨군요, 리더! 오늘 계획하신 일은 잘 진행되고 계신가요?",
+			"ja": "お帰りなさい、リーダー! 今日の予定は順調に進んでいますか?",
+			"zh": "您来了, 领导! 今天的计划进展顺利吗?",
+			"ba": "Вы прибыли, Лидер! Как идут дела с вашими планами на сегодня?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_11_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Are you preparing well for the end of the morning?",
+			"ko": "오셨군요, 리더! 오전 마무리를 잘 준비하고 계신가요?",
+			"ja": "お帰りなさい、リーダー! 午前の終わりに向けて、うまく準備していますか?",
+			"zh": "您来了, 领导! 您准备好迎接上午的结束了吗?",
+			"ba": "Вы прибыли, Лидер! Хорошо ли вы подготовились к завершению утра?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_12_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Take a moment to relax and have a great rest of the day!",
+			"ko": "오셨군요, 리더! 잠시 여유를 가지고, 남은 하루도 힘내세요!",
+			"ja": "お帰りなさい、リーダー! 少し休憩して、残りの一日を元気に過ごしてください!",
+			"zh": "您来了, 领导! 稍作休息, 祝您接下来的一天愉快!",
+			"ba": "Вы прибыли, Лидер! Немного расслабьтесь и проведите остаток дня с пользой!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_13_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Did you enjoy your lunch?",
+			"ko": "오셨군요, 리더! 점심 식사는 맛있게 하셨나요?",
+			"ja": "お帰りなさい、リーダー! 昼食は美味しく召し上がりましたか?",
+			"zh": "您来了, 领导! 午餐吃得开心吗?",
+			"ba": "Вы прибыли, Лидер! Вам понравился обед?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_14_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! How about checking the items while you feel the post-lunch drowsiness?",
+			"ko": "오셨군요, 리더! 식곤증이 밀려오실 땐, 물품 상태를 확인해 보시는 것은 어떨까요?",
+			"ja": "お帰りなさい、リーダー! 食後の眠気を感じている時に物品の状態をチェックしてみてはどうですか?",
+			"zh": "您来了, 领导! 在午餐后感到困倦时, 不如检查一下物品的状态?",
+			"ba": "Вы прибыли, Лидер! Как насчет того, чтобы проверить предметы, пока ощущается сонливость после обеда?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_15_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! You’ve made it through the middle of the day. Keep going strong!",
+			"ko": "오셨군요, 리더! 하루의 중심을 잘 지나오셨습니다. 남은 시간도 힘내세요!",
+			"ja": "お帰りなさい、リーダー! 一日の半ばを無事に乗り越えましたね。残りの時間も頑張りましょう!",
+			"zh": "您来了, 领导! 您已经度过了今天的中段, 剩下的时间加油!",
+			"ba": "Вы прибыли, Лидер! Вы прошли середину дня, давайте продолжим с тем же успехом!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_16_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! How’s your schedule for today going?",
+			"ko": "오셨군요, 리더! 목표하셨던 오늘의 일정, 차근차근 잘 진행되고 계신가요?",
+			"ja": "お帰りなさい、リーダー! 今日の予定は順調に進んでいますか?",
+			"zh": "您来了, 领导! 今天的计划进行得顺利吗?",
+			"ba": "Вы прибыли, Лидер! Как идут дела с вашими планами на сегодня?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_17_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! The time to wrap up the day is near. You’ve worked hard today.",
+			"ko": "오셨군요, 리더! 하루 일과를 마무리할 시간이 다가오는군요. 오늘도 수고 많으셨습니다.",
+			"ja": "お帰りなさい、リーダー! 一日の終わりが近づいていますね。今日もお疲れ様でした。",
+			"zh": "您来了, 领导! 今天的工作即将结束, 辛苦了。",
+			"ba": "Вы прибыли, Лидер! Время заканчивать день, сегодня вы тоже много трудились."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_18_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Thank you for making time before dinner.",
+			"ko": "오셨군요, 리더! 저녁 식사 전 시간 내 주셔서 감사합니다.",
+			"ja": "お帰りなさい、リーダー! 夕食前にお時間をいただき、ありがとうございます。",
+			"zh": "您来了, 领导! 感谢您在晚餐前抽出时间。",
+			"ba": "Вы прибыли, Лидер! Спасибо, что нашли время до ужина."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_19_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Did you enjoy your dinner?",
+			"ko": "오셨군요, 리더! 저녁 식사는 맛있게 하셨나요?",
+			"ja": "お帰りなさい、リーダー! 夕食は美味しく召し上がりましたか?",
+			"zh": "您来了, 领导! 晚餐吃得开心吗?",
+			"ba": "Вы прибыли, Лидер! Уже поужинали?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_20_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Good evening.",
+			"ko": "오셨군요, 리더! 좋은 저녁입니다.",
+			"ja": "お帰りなさい、リーダー! 良い夕べをお過ごしください。",
+			"zh": "您来了, 领导! 祝您有一个愉快的晚上。",
+			"ba": "Вы прибыли, Лидер! Добрый вечер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_21_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! I wish you a peaceful night.",
+			"ko": "오셨군요, 리더! 편안한 밤 되시길.",
+			"ja": "お帰りなさい、リーダー! 穏やかな夜をお過ごしください。",
+			"zh": "您来了, 领导! 祝您度过一个宁静的夜晚。",
+			"ba": "Вы прибыли, Лидер! Спокойной ночи вам."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_22_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Shall we do a final check before bed?",
+			"ko": "오셨군요, 리더! 잠들기 전 마지막 점검을 해 볼까요?",
+			"ja": "お帰りなさい、リーダー! 寝る前に最後のチェックをしてみましょうか?",
+			"zh": "您来了, 领导! 睡觉前我们最后检查一下吧?",
+			"ba": "Вы прибыли, Лидер! Может, сделаем последнюю проверку перед сном?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"GREETING_23_CLOCK": {
+		"script": {
+			"en": "You’ve arrived, Leader! Shall we do the final check of the day?",
+			"ko": "오셨군요, 리더! 하루의 마지막 점검을 해 볼까요?",
+			"ja": "お帰りなさい、リーダー! 一日の最後のチェックをしてみましょうか?",
+			"zh": "您来了, 领导! 我们做一天的最后检查吧?",
+			"ba": "Вы прибыли, Лидер! Давайте сделаем последнюю проверку дня."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 10
+	},
+	"ALARM_00_CLOCK": {
+		"script": {
+			"en": "It's 00:00 AM. The night is deep. How about getting some rest for a strong start tomorrow?",
+			"ko": "오전 0시 입니다. 밤이 깊었네요. 힘찬 하루를 위해 주무시는 것은 어떨까요?",
+			"ja": "午前0時です。夜が深まりました。明日のためにお休みになってはいかがですか?",
+			"zh": "现在是凌晨0点。夜已深, 休息一下, 为明天充电怎么样?",
+			"ba": "Сейчас 00:00. Ночь глубока. Как насчет того, чтобы немного отдохнуть для хорошего начала завтрашнего дня?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_01_CLOCK": {
+		"script": {
+			"en": "It's 01:00 AM. If you're not sleepy, how about a warm cup of water?",
+			"ko": "오전 1시 입니다. 잠이 오지 않으시다면 따뜻한 물 한 잔 어떠세요?",
+			"ja": "午前1時です。もし眠れないのであれば、温かいお湯を一杯いかがですか?",
+			"zh": "现在是凌晨1点。如果你还不困, 不如喝一杯温水吧?",
+			"ba": "Сейчас 01:00. Если вам не спится, как насчет чашки теплой воды?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_02_CLOCK": {
+		"script": {
+			"en": "It's 02:00 AM. Sometimes, you should also think about your health, Leader.",
+			"ko": "오전 2시 입니다. 가끔은 자신의 건강도 생각 해 주세요. 리더.",
+			"ja": "午前2時です。たまにはリーダーの健康も考えてくださいね。",
+			"zh": "现在是凌晨2点。偶尔也请考虑一下您的健康, 领导。",
+			"ba": "Сейчас 02:00. Иногда вам тоже стоит подумать о своем здоровье, Лидер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_03_CLOCK": {
+		"script": {
+			"en": "It's 03:00 AM. Are you sleeping, Leader?",
+			"ko": "오전 3시 입니다. 혹시, 주무시고 계신건가요? 리더?",
+			"ja": "午前3時です。リーダー、今寝ていますか?",
+			"zh": "现在是凌晨3点, 领导, 您在睡觉吗?",
+			"ba": "Сейчас 03:00. Лидер, вы спите?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_04_CLOCK": {
+		"script": {
+			"en": "It's 04:00 AM. It's still dark outside.",
+			"ko": "오전 4시 입니다. 아직 바깥은 어둡군요.",
+			"ja": "午前4時です。外はまだ暗いですね。",
+			"zh": "现在是凌晨4点, 外面仍然很黑。",
+			"ba": "Сейчас 04:00. На улице все еще темно."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_05_CLOCK": {
+		"script": {
+			"en": "It's 05:00 AM. The morning is dawning.",
+			"ko": "오전 5시 입니다. 아침이 밝아오고 있군요.",
+			"ja": "午前5時です。朝が明けようとしています。",
+			"zh": "现在是凌晨5点, 早晨正在到来。",
+			"ba": "Сейчас 05:00. Утро наступает."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_06_CLOCK": {
+		"script": {
+			"en": "It's 06:00 AM. Let's have an energetic day, Leader!",
+			"ko": "오전 6시 입니다. 오늘 하루도 힘차게 보내 봅시다, 리더!",
+			"ja": "午前6時です。今日も元気に過ごしましょう、リーダー!",
+			"zh": "现在是早上6点, 领导, 让我们一起充满活力地迎接今天!",
+			"ba": "Сейчас 06:00. Давайте проведем этот день энергично, Лидер!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_07_CLOCK": {
+		"script": {
+			"en": "It's 07:00 AM. How about planning your day over breakfast?",
+			"ko": "오전 7시 입니다. 아침 식사를 드시면서 오늘 할 일을 미리 정리해 보시는 것은 어떨까요?",
+			"ja": "午前7時です。朝食を取りながら、今日の予定を整理してみてはいかがですか?",
+			"zh": "现在是早上7点, 领导, 如何在早餐时整理一下今天的计划呢?",
+			"ba": "Сейчас 07:00. Как насчет того, чтобы спланировать день за завтраком?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_08_CLOCK": {
+		"script": {
+			"en": "It's 08:00 AM. Have you had your breakfast?",
+			"ko": "오전 8시 입니다. 아침 식사는 드셨나요?",
+			"ja": "午前8時です。朝食はもう召し上がりましたか?",
+			"zh": "现在是早上8点, 领导, 您吃过早餐了吗?",
+			"ba": "Сейчас 08:00. Уже позавтракали, Лидер?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_09_CLOCK": {
+		"script": {
+			"en": "It's 09:00 AM. Did you turn off the gas in the kitchen?",
+			"ko": "오전 9시 입니다. 혹시 주방에 가스 불은 잠그고 오셨나요?",
+			"ja": "午前9時です。キッチンのガスは消しましたか?",
+			"zh": "现在是早上9点, 领导, 您关掉厨房的煤气了吗?",
+			"ba": "Сейчас 09:00. Вы выключили газ на кухне, Лидер?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_10_CLOCK": {
+		"script": {
+			"en": "It's 10:00 AM. All the members are grateful for your efforts, Leader.",
+			"ko": "오전 10시 입니다. 모든 멤버가 리더의 노력에 감사하고 있습니다.",
+			"ja": "午前10時です。全てのメンバーがリーダーの努力に感謝しています。",
+			"zh": "现在是早上10点, 所有成员都感激领导的努力。",
+			"ba": "Сейчас 10:00. Все члены благодарны за ваши усилия, Лидер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_11_CLOCK": {
+		"script": {
+			"en": "It's 11:00 AM. Soon it will be lunchtime. Will you have lunch with your colleagues?",
+			"ko": "오전 11시 입니다. 곧 점심시간이군요. 동료들과 같이 식사하실 예정인가요?",
+			"ja": "午前11時です。もうすぐ昼食の時間です。仲間と一緒に食べる予定ですか?",
+			"zh": "现在是早上11点, 快到午餐时间了, 您会和同事们一起用餐吗?",
+			"ba": "Сейчас 11:00. Скоро обед. Будете ли вы обедать с коллегами, Лидер?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_12_CLOCK": {
+		"script": {
+			"en": "It's 12:00 PM. How about taking a break and enjoying your lunch?",
+			"ko": "오후 12시 입니다. 점식 식사를 드시면서 잠시 쉬어가는 것은 어떨까요?",
+			"ja": "午後12時です。昼食を取りながら少し休んでみてはいかがですか?",
+			"zh": "现在是中午12点, 领导, 您不如在午餐时休息一下?",
+			"ba": "Сейчас 12:00. Как насчет того, чтобы сделать перерыв и насладиться обедом?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_13_CLOCK": {
+		"script": {
+			"en": "It's 01:00 PM. Have you had your lunch?",
+			"ko": "오후 1시 입니다. 점심 식사는 드셨나요?",
+			"ja": "午後1時です。昼食はもう召し上がりましたか?",
+			"zh": "现在是下午1点, 领导, 您吃过午餐了吗?",
+			"ba": "Сейчас 13:00. Уже пообедали, Лидер?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_14_CLOCK": {
+		"script": {
+			"en": "It's 02:00 PM. If you're feeling sluggish, how about taking a short break?",
+			"ko": "오후 2시 입니다. 나른하시다면 잠시 휴식을 취하는 것은 어떨까요?",
+			"ja": "午後2時です。だるさを感じているなら、少し休憩してみてはいかがですか?",
+			"zh": "现在是下午2点, 领导, 感到有些倦怠吗? 不如休息一下?",
+			"ba": "Сейчас 14:00. Если вы чувствуете усталость, как насчет небольшого перерыва?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_15_CLOCK": {
+		"script": {
+			"en": "It's 03:00 PM. Thank you for your hard work, Leader.",
+			"ko": "오후 3시 입니다. 리더의 노고에 감사드립니다.",
+			"ja": "午後3時です。リーダーのご努力に感謝します。",
+			"zh": "现在是下午3点, 领导, 感谢您的辛勤付出。",
+			"ba": "Сейчас 15:00. Благодарим вас за ваши усилия, Лидер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_16_CLOCK": {
+		"script": {
+			"en": "It's 04:00 PM. The sun is setting.",
+			"ko": "오후 4시 입니다. 해가 기울어 가는군요.",
+			"ja": "午後4時です。日が傾いてきましたね。",
+			"zh": "现在是下午4点, 太阳正在西下。",
+			"ba": "Сейчас 16:00. Солнце начинает садиться."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_17_CLOCK": {
+		"script": {
+			"en": "It's 05:00 PM. Dinner time is approaching. Stay strong for the remaining hours!",
+			"ko": "오후 5시 입니다. 곧 저녁시간이군요. 남은 시간 동안 힘내세요!",
+			"ja": "午後5時です。夕食の時間が近づいてきました。残りの時間も頑張ってください!",
+			"zh": "现在是下午5点, 晚餐时间快到了, 领导, 请为剩下的时间加油!",
+			"ba": "Сейчас 17:00. Время ужина уже близко. Держитесь, Лидер, до конца рабочего дня!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_18_CLOCK": {
+		"script": {
+			"en": "It's 06:00 PM. How about relaxing with dinner?",
+			"ko": "오후 6시 입니다. 저녁 식사를 드시면서 휴식을 취하는 것은 어떨까요?",
+			"ja": "午後6時です。夕食を取りながら、リラックスしてはいかがですか?",
+			"zh": "现在是下午6点, 领导, 如何在晚餐时放松一下呢?",
+			"ba": "Сейчас 18:00. Как насчет того, чтобы расслабиться во время ужина?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_19_CLOCK": {
+		"script": {
+			"en": "It's 07:00 PM. Have you had your dinner?",
+			"ko": "오후 7시 입니다. 저녁 식사는 드셨나요?",
+			"ja": "午後7時です。夕食はもう召し上がりましたか?",
+			"zh": "现在是下午7点, 领导, 您吃过晚餐了吗?",
+			"ba": "Сейчас 19:00. Уже поужинали, Лидер?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_20_CLOCK": {
+		"script": {
+			"en": "It's 08:00 PM. How about checking the status of your colleagues?",
+			"ko": "오후 8시 입니다. 동료들의 상태를 확인해 보시는 것은 어떨까요?",
+			"ja": "午後8時です。仲間の状態を確認してみてはいかがですか?",
+			"zh": "现在是下午8点, 领导, 不如检查一下同事们的情况?",
+			"ba": "Сейчас 20:00. Как насчет того, чтобы проверить состояние ваших коллег?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_21_CLOCK": {
+		"script": {
+			"en": "It's 09:00 PM. Please check the gas and electricity before you go to bed.",
+			"ko": "오후 9시 입니다. 취침 전 가스 및 전기를 점검 해 주세요.",
+			"ja": "午後9時です。寝る前にガスと電気の点検をお願いします。",
+			"zh": "现在是下午9点, 领导, 睡觉前请检查一下煤气和电源。",
+			"ba": "Сейчас 21:00. Пожалуйста, проверьте газ и электричество перед сном."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_22_CLOCK": {
+		"script": {
+			"en": "It's 10:00 PM. It is said that 60% to 70% of growth hormones are secreted when sleeping between 10 PM and 2 AM.",
+			"ko": "오후 10시 입니다. 오후 10시 부터 오전 2시 사이에 취침할 경우, 성장 호르몬의 60% ~ 70%가 분비 된다고 합니다.",
+			"ja": "午後10時です。午後10時から午前2時までに眠ると、成長ホルモンの60％〜70％が分泌されるそうです。",
+			"zh": "现在是晚上10点, 据说晚上10点到凌晨2点之间睡觉时, 生长激素会分泌60%到70%。",
+			"ba": "Сейчас 22:00. Говорят, что от 60% до 70% гормонов роста вырабатываются, если спать с 10 вечера до 2 ночи."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALARM_23_CLOCK": {
+		"script": {
+			"en": "It's 11:00 PM. The day is coming to an end. Thank you for your hard work today, Leader.",
+			"ko": "오후 11시 입니다. 하루가 끝나 가네요. 오늘도 수고 많으셨습니다. 리더.",
+			"ja": "午後11時です。今日一日が終わりに近づいています。今日もお疲れ様でした、リーダー。",
+			"zh": "现在是晚上11点, 领导, 今天就要结束了, 今天辛苦了!",
+			"ba": "Сейчас 23:00. День подходит к концу. Спасибо за вашу работу сегодня, Лидер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_UNREAD_MESSAGE": {
+		"script": {
+			"en": "You have %UNREAD_MESSAGE_AMOUNT% unread messages.",
+			"ko": "읽지 않은 메시지가 %UNREAD_MESSAGE_AMOUNT%개 있어요.",
+			"ja": "未読のメッセージが%UNREAD_MESSAGE_AMOUNT%件あります。",
+			"zh": "您有%UNREAD_MESSAGE_AMOUNT%条未读消息。",
+			"ba": "У вас %UNREAD_MESSAGE_AMOUNT% непрочитанных сообщений."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_FOOD_EXPIRES_SOON": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% contains %FOOD_NAME%, and its expiration date is approaching.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 유통기한이 곧 만료될 예정이예요.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限がもうすぐです。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%中有%FOOD_NAME%, 即将过期。",
+			"ba": "У %MEMBER_NAME% в %BAG_NAME% находится %FOOD_NAME%, срок годности которого скоро истечет."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_FOOD_EXPIRES": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% contains %FOOD_NAME%, and its expiration date has passed.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 유통기한이 만료되었어요.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限が切れました。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%中有%FOOD_NAME%, 已过期。",
+			"ba": "У %MEMBER_NAME% в %BAG_NAME% находится %FOOD_NAME%, срок годности которого истек."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_ITEM_MAINTENANCE_NEAR": {
+		"script": {
+			"en": "The maintenance date for %ITEM_NAME% in %MEMBER_NAME%’s %BAG_NAME% is approaching.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 위치한 %ITEM_NAME%의 유지보수 날짜가 다가오고 있어요.",
+			"ja": "%MEMBER_NAME% の %BAG_NAME% にある %ITEM_NAME% のメンテナンス日が近づいています。",
+			"zh": "%MEMBER_NAME% 的 %BAG_NAME% 中的 %ITEM_NAME% 维护日期临近。",
+			"ba": "Срок обслуживания %ITEM_NAME% в %BAG_NAME% у %MEMBER_NAME% приближается."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_ITEM_MAINTENANCE_NEED": {
+		"script": {
+			"en": "It looks like %ITEM_NAME% in %MEMBER_NAME%’s %BAG_NAME% needs maintenance.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 위치한 %ITEM_NAME%의 유지보수가 필요해 보여요.",
+			"ja": "%MEMBER_NAME% の %BAG_NAME% にある %ITEM_NAME% はメンテナンスが必要なようです。",
+			"zh": "看起来 %MEMBER_NAME% 的 %BAG_NAME% 中的 %ITEM_NAME% 需要维护。",
+			"ba": "Похоже, что %ITEM_NAME% в %BAG_NAME% у %MEMBER_NAME% нуждается в обслуживании."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_BAG_OLD_HEAVY": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% looks very heavy. For the elderly, it's recommended that the weight of a backpack should not exceed 10% of their body weight to prevent injuries.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%이 많이 무거워 보이네요. 노약자의 경우, 배낭 무게를 몸무게의 10% 미만으로 맞춰 주셔야 부상을 예방할 수 있어요.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%はとても重そうです。高齢者の場合、バックパックの重さは体重の10%未満にすることをお勧めします。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%看起来很重。对于老年人, 建议背包的重量应低于其体重的10%, 以防止受伤。",
+			"ba": "У %MEMBER_NAME% в %BAG_NAME% рюкзак выглядит очень тяжелым. Для пожилых людей рекомендуется, чтобы вес рюкзака не превышал 10% от их массы тела, чтобы предотвратить травмы."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_BAG_ADULT_HEAVY": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% looks very heavy. For adults, it's recommended that the weight of a backpack should not exceed 15% of their body weight to prevent injuries.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%이 많이 무거워 보이네요. 성인의 경우, 배낭 무게를 몸무게의 15% 미만으로 맞춰 주셔야 부상을 예방할 수 있어요.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%はとても重そうです。成人の場合、バックパックの重さは体重の15%未満にすることをお勧めします。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%看起来很重。对于成年人, 建议背包的重量不应超过其体重的15%, 以防止受伤。",
+			"ba": "У %MEMBER_NAME% в %BAG_NAME% рюкзак выглядит очень тяжелым. Для взрослых рекомендуется, чтобы вес рюкзака не превышал 15% от их массы тела, чтобы предотвратить травмы."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_BAG_YOUNG_HEAVY": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% looks very heavy. For children, it's recommended that the weight of a backpack should not exceed 10% of their body weight to prevent injuries.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%이 많이 무거워 보이네요. 아동의 경우, 배낭 무게를 몸무게의 10% 미만으로 맞춰 주셔야 부상을 예방할 수 있어요.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%はとても重そうです。子供の場合、バックパックの重さは体重の10%未満にすることをお勧めします。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%看起来很重。对于儿童, 建议背包的重量不应超过其体重的10%, 以防止受伤。",
+			"ba": "У %MEMBER_NAME% в %BAG_NAME% рюкзак выглядит очень тяжелым. Для детей рекомендуется, чтобы вес рюкзака не превышал 10% от их массы тела, чтобы предотвратить травмы."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_FIRST_AID_NOT_FOUND": {
+		"script": {
+			"en": "How about having first aid supplies like bandages, antiseptics, dressing bands, and wound ointments on hand in case of emergencies?",
+			"ko": "크고 작은 사고를 대비하여 붕대, 소독약, 상처 연고와 같은 응급처치 물품을 구비해 두시는 것은 어떨까요?",
+			"ja": "万が一に備えて、バンデージ、消毒薬、ドレッシングバンド、傷薬などの応急処置用品を備えておくのはいかがですか?",
+			"zh": "万一的情况下, 备有创可贴、消毒药水、敷料带、伤口膏等急救物品怎么样?",
+			"ba": "Как насчет того, чтобы подготовить средства первой помощи, такие как бинты, антисептики, повязки и мази для ран на случай экстренной ситуации?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_GLUCOSE_NOT_FOUND": {
+		"script": {
+			"en": "How about having nutritional supplies like saline glucose and glucose candies for dehydration or stomach issues?",
+			"ko": "배탈, 탈수를 대비하여 식염 포도당, 포도당 캔디와 같은 영양 공급 물품을 구비해 두시는 것은 어떨까요?",
+			"ja": "下痢や脱水症状に備えて、食塩グルコースやグルコースキャンディなどの栄養補給品を備えておくのはいかがですか?",
+			"zh": "为防止腹泻或脱水, 可以准备食盐葡萄糖、葡萄糖糖果等营养补给物品, 怎么样?",
+			"ba": "Как насчет того, чтобы подготовить питательные вещества, такие как солевой раствор с глюкозой или глюкозные конфеты для лечения диареи и обезвоживания?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_PAINKILLER_NOT_FOUND": {
+		"script": {
+			"en": "How about having painkillers containing Acetaminophen or anti-inflammatory painkillers like Ibuprofen, Dexibuprofen, Naproxen, or Clonixin in case of pain or fever?",
+			"ko": "통증 완화 및 해열을 위해 아세트아미노펜 성분이 함유된 진통제나 소염 작용을 겸비한 이부프로펜, 덱시부프로펜, 나프록센, 클로닉신 등의 성분이 함유된 소염진통제를 구비해 두시는 것은 어떨까요?",
+			"ja": "痛みや発熱を和らげるために、アセトアミノフェンを含む鎮痛薬や、イブプロフェン、デキシブプロフェン、ナプロキセン、クロニキシンなどの成分を含む消炎鎮痛薬を備えておくのはどうでしょうか？",
+			"zh": "为了缓解疼痛和退烧，准备一些含有对乙酰氨基酚的止痛药，或含有布洛芬、地索布洛芬、萘普生、氯尼昔林等成分的消炎镇痛药，会不会是个不错的选择呢？",
+			"ba": "Чтобы облегчить боль и снизить температуру, не было бы ли неплохо иметь препараты с Парацетамолом, а также противовоспалительные анальгетики, содержащие Ибупрофен, Дексибупрофен, Напроксен или Клоникcин?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_ANTIDIARRHEAL_NOT_FOUND": {
+		"script": {
+			"en": "How about having antidiarrheal medications containing Loperamide, Nifuroxazide, or Smectite to prevent dehydration caused by diarrhea?",
+			"ko": "설사 시 사용할 수 있는 로페라미드, 니푸록사지드, 스멕타이트 등의 성분이 함유된 지사제를 구비해 두시는 것은 어떨까요?",
+			"ja": "下痢による脱水症状に備えて、ロペラミド、ニフロキサジド、スメクタイトなどの成分を含む止瀉薬を準備しておくのはいかがですか?",
+			"zh": "为防止因腹泻引起的脱水, 如何准备含有洛哌丁胺、尼富氟沙星、蒙脱石等成分的止泻药?",
+			"ba": "Как насчет того, чтобы подготовить препараты от диареи, содержащие лоперамид, нифуроксацид или смектит для предотвращения обезвоживания?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_NEW_DAY_BEGINS": {
+		"script": {
+			"en": "A new day has begun. There are %PLAN_AMOUNT% items on your schedule today, Leader.",
+			"ko": "새로운 하루가 시작되었습니다. 오늘 리더의 일정은 %PLAN_AMOUNT%건이군요.",
+			"ja": "新しい一日が始まりました。本日のリーダーの予定は%PLAN_AMOUNT%件です。",
+			"zh": "新的一天开始了。领导，您今天有%PLAN_AMOUNT%项日程。",
+			"ba": "Новый день начался. У вас %PLAN_AMOUNT% запланированных дел на сегодня, Лидер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_NOON_PLAN_LEFT": {
+		"script": {
+			"en": "Good afternoon, Leader. Please check the %PLAN_AMOUNT% remaining items on your schedule after lunch.",
+			"ko": "좋은 오후입니다, 리더. 점심 식사 후 남은 일정 %PLAN_AMOUNT%건을 확인해 주세요.",
+			"ja": "こんにちは、リーダー。昼食後、残りの予定%PLAN_AMOUNT%件を確認してください。",
+			"zh": "午安，领导。请在午餐后确认剩余的%PLAN_AMOUNT%项日程。",
+			"ba": "Добрый день, Лидер. Пожалуйста, проверьте %PLAN_AMOUNT% оставшихся дел в вашем расписании после обеда."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_EVENING_PLAN_LEFT": {
+		"script": {
+			"en": "You have worked hard today, Leader. Would you like to check the %PLAN_AMOUNT% remaining items before you sleep?",
+			"ko": "오늘도 고생 많으셨습니다, 리더. 주무시기 전에 남은 일정 %PLAN_AMOUNT%건을 확인해 보시는 건 어떨까요?",
+			"ja": "今日もお疲れ様でした、リーダー。就寝前に残りの予定%PLAN_AMOUNT%件を確認してみてはいかがでしょうか。",
+			"zh": "今天辛苦了，领导。睡前是否要确认一下剩余的%PLAN_AMOUNT%项日程？",
+			"ba": "Вы хорошо потрудились сегодня, Лидер. Как насчет того, чтобы проверить оставшиеся %PLAN_AMOUNT% дел перед сном?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_ANNIVERSARY_NEXT_DAY": {
+		"script": {
+			"en": "Tomorrow is %ANNIVERSARY%, Leader. As you have marked it on the calendar, I assume it is an important day.",
+			"ko": "내일은 %ANNIVERSARY%입니다, 리더. 달력에 표시해 두신 만큼 중요한 날이겠군요.",
+			"ja": "明日は%ANNIVERSARY%です、リーダー。カレンダーに印を付けられている通り、重要な日のようですね。",
+			"zh": "明天是%ANNIVERSARY%，领导。既然您在日历上做了标记，想必是很重要的日子。",
+			"ba": "Завтра %ANNIVERSARY%, Лидер. Судя по отметке в календаре, это важный день."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_ANNIVERSARY_SAME_DAY": {
+		"script": {
+			"en": "Today is %ANNIVERSARY%, Leader.",
+			"ko": "오늘은 %ANNIVERSARY%입니다, 리더.",
+			"ja": "本日は%ANNIVERSARY%です、リーダー。",
+			"zh": "今天是%ANNIVERSARY%，领导。",
+			"ba": "Сегодня %ANNIVERSARY%, Лидер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ALERT_PATIENT_RELEASE_FROM_ISOLATION": {
+		"script": {
+			"en": "The isolation period for patient %PATIENT_NAME% has ended, Leader.",
+			"ko": "환자 %PATIENT_NAME%의 격리 기간이 종료되었습니다, 리더.",
+			"ja": "患者%PATIENT_NAME%の隔離期間が終了しました、リーダー。",
+			"zh": "患者%PATIENT_NAME%的隔离期已结束，领导。",
+			"ba": "Период изоляции пациента %PATIENT_NAME% завершен, Лидер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_SPRING": {
+		"script": {
+			"en": "Today is the beginning of spring (Ipchun), the day spring begins.",
+			"ko": "오늘은 입춘(立春), 봄이 시작되는 날이군요.",
+			"ja": "今日は立春(リッツチュン)、春が始まる日です。",
+			"zh": "今天是立春, 春天开始的日子。",
+			"ba": "Сегодня начало весны (Ипчун), день, когда начинается весна."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_RAIN_WATER": {
+		"script": {
+			"en": "Today is the Rain Water (Usu), the day when the snow begins to melt.",
+			"ko": "오늘은 우수(雨水), 눈이 녹기 시작하는 날이군요.",
+			"ja": "今日は雨水(ウス)、雪が溶け始める日です。",
+			"zh": "今天是雨水, 雪开始融化的日子。",
+			"ba": "Сегодня дождевой воды (Усу), день, когда снег начинает таять."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_AWAKENING_OF_INSECTS": {
+		"script": {
+			"en": "Today is the Awakening of Insects (Gyeongchip), the day when frogs wake up from their winter sleep.",
+			"ko": "오늘은 경칩(驚蟄), 개구리가 겨울 잠에서 깨는 날이군요.",
+			"ja": "今日は驚蟄(キョウチュウ)、カエルが冬眠から目を覚ます日です。",
+			"zh": "今天是惊蛰, 青蛙从冬眠中醒来的日子。",
+			"ba": "Сегодня пробуждение насекомых (Кёнчип), день, когда лягушки просыпаются от зимнего сна."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_SPRING_EQUINOX": {
+		"script": {
+			"en": "Today is the Vernal Equinox (Chunbun), the day when the length of the day becomes longer than the night.",
+			"ko": "오늘은 춘분(春分), 낮의 길이가 밤보다 길어지기 시작하는 날이군요.",
+			"ja": "今日は春分(シュンブン)、昼の長さが夜より長くなる日です。",
+			"zh": "今天是春分, 白天的时间开始长于夜晚。",
+			"ba": "Сегодня весеннее равноденствие (Чхунбун), день, когда длина дня становится длиннее ночи."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_PURE_BRIGHTNESS": {
+		"script": {
+			"en": "Today is the Clear and Bright (Cheongmyeong), the day with the best spring weather.",
+			"ko": "오늘은 청명(淸明), 봄의 날씨가 가장 좋은 날이군요.",
+			"ja": "今日は清明(セイメイ)、春の天気が最も良い日です。",
+			"zh": "今天是清明, 春天最好的天气日。",
+			"ba": "Сегодня ясное и светлое (Чхонмён), самый хороший день весной."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_GRAIN_RAIN": {
+		"script": {
+			"en": "Today is the Grain Rain (Gogu), the day when the spring rain begins to fall.",
+			"ko": "오늘은 곡우(穀雨), 봄비가 내리기 시작하는 날이군요.",
+			"ja": "今日は穀雨(コクウ)、春の雨が降り始める日です。",
+			"zh": "今天是谷雨, 春雨开始降落的日子。",
+			"ba": "Сегодня дождь зерна (Гогу), день, когда начинается весенний дождь."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_SUMMER": {
+		"script": {
+			"en": "Today is the Beginning of Summer (Ipcha), the day summer begins.",
+			"ko": "오늘은 입하(立夏), 여름이 시작되는 날이군요.",
+			"ja": "今日は立夏(リッカ)、夏が始まる日です。",
+			"zh": "今天是立夏, 夏天开始的日子。",
+			"ba": "Сегодня начало лета (Ипча), день, когда начинается лето."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_FULLNESS_OF_GRAIN": {
+		"script": {
+			"en": "Today is the Grain Fullness (Somann), the day when the sunlight is strong.",
+			"ko": "오늘은 소만(小滿), 볕이 잘 드는 날이군요.",
+			"ja": "今日は小満(ショウマン)、日差しが強い日です。",
+			"zh": "今天是小满, 阳光强烈的日子。",
+			"ba": "Сегодня полное зерно (Соман), день с сильным солнечным светом."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_GRAIN_IN_EAR": {
+		"script": {
+			"en": "Today is the Grain in Ear (Mangjong), the day when the seeds of summer crops like rice, beans, and corn are sown.",
+			"ko": "오늘은 망종(芒種), 벼, 콩, 옥수수와 같은 여름 작물의 씨앗을 뿌리는 날이군요.",
+			"ja": "今日は芒種(ボウシュ)、米、豆、トウモロコシなどの夏の作物の種を蒔く日です。",
+			"zh": "今天是芒种, 播种稻米、豆类和玉米等夏季作物的日子。",
+			"ba": "Сегодня зерно в ухе (Манжон), день, когда сажаются семена летних культур, таких как рис, бобы и кукуруза."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_SUMMER_SOLSTICE": {
+		"script": {
+			"en": "Today is the Summer Solstice (Haji), the longest day of the year.",
+			"ko": "오늘은 하지(夏至), 1년 중 낮의 길이가 가장 긴 날이군요.",
+			"ja": "今日は夏至(カシ)、一年で昼の長さが最も長い日です。",
+			"zh": "今天是夏至, 全年白天最长的日子。",
+			"ba": "Сегодня летнее солнцестояние (Хаджи), день, когда продолжительность дня максимальна."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_HEAT": {
+		"script": {
+			"en": "Today is the Minor Heat (Soso), the day when the real heat begins.",
+			"ko": "오늘은 소서(小暑), 본격적인 더위가 시작되는 날이군요.",
+			"ja": "今日は小暑(ショウショ)、本格的な暑さが始まる日です。",
+			"zh": "今天是小暑, 真正的热天气开始了。",
+			"ba": "Сегодня малая жара (Сосо), день, когда начинается настоящая жара."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_HEAT": {
+		"script": {
+			"en": "Today is the Major Heat (Daeso), the hottest day of the year.",
+			"ko": "오늘은 대서(大暑), 1년 중 가장 더운 날이군요.",
+			"ja": "今日は大暑(タイショ)、一年で最も暑い日です。",
+			"zh": "今天是大暑, 全年最热的日子。",
+			"ba": "Сегодня большая жара (Дэсо), самый жаркий день года."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_AUTUMN": {
+		"script": {
+			"en": "Today is the Beginning of Autumn (Ipchu), the day autumn begins.",
+			"ko": "오늘은 입추(立秋), 가을이 시작되는 날이군요.",
+			"ja": "今日は立秋(リッキュウ)、秋が始まる日です。",
+			"zh": "今天是立秋, 秋天开始的日子。",
+			"ba": "Сегодня начало осени (Ипчу), день, когда начинается осень."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_END_OF_HEAT": {
+		"script": {
+			"en": "Today is the End of Heat (Cheoseo), the day when the autumn wind begins to blow.",
+			"ko": "오늘은 처서(處暑), 가을 바람이 불기 시작하는 날이군요.",
+			"ja": "今日は処暑(ショショ)、秋風が吹き始める日です。",
+			"zh": "今天是处暑, 秋风开始吹的日子。",
+			"ba": "Сегодня конец жары (Чхосо), день, когда начинается осенний ветер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_WHITE_DEW": {
+		"script": {
+			"en": "Today is the White Dew (Baegno), the day when dew begins to form.",
+			"ko": "오늘은 백로(白露), 이슬이 맺히기 시작하는 날이군요.",
+			"ja": "今日は白露(ハクロ)、露が結び始める日です。",
+			"zh": "今天是白露, 露水开始凝结的日子。",
+			"ba": "Сегодня белая роса (Пэкро), день, когда начинается образование росы."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_AUTUMN_EQUINOX": {
+		"script": {
+			"en": "Today is the Autumn Equinox (Chubun), the day when the length of the night becomes longer than the day.",
+			"ko": "오늘은 추분(秋分), 밤의 길이가 낮보다 길어지기 시작하는 날이군요.",
+			"ja": "今日は秋分(シュウブン)、夜の長さが昼より長くなる日です。",
+			"zh": "今天是秋分, 夜晚的时间开始长于白天。",
+			"ba": "Сегодня осеннее равноденствие (Чхубун), день, когда длина ночи становится длиннее дня."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_COLD_DEW": {
+		"script": {
+			"en": "Today is the Cold Dew (Hanro), the day when cold dew begins to form.",
+			"ko": "오늘은 한로(寒露), 찬 이슬이 맺히기 시작하는 날이군요.",
+			"ja": "今日は寒露(カンロ)、冷たい露が結び始める日です。",
+			"zh": "今天是寒露, 寒露开始形成的日子。",
+			"ba": "Сегодня холодная роса (Ханро), день, когда начинает образовываться холодная роса."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_FROST_DESCENT": {
+		"script": {
+			"en": "Today is the Frost's Descent (Sanggan), the day when the frost begins to fall.",
+			"ko": "오늘은 상강(霜降), 서리가 내리기 시작하는 날이군요.",
+			"ja": "今日は霜降(ソウコウ)、霜が降り始める日です。",
+			"zh": "今天是霜降, 霜开始降临的日子。",
+			"ba": "Сегодня начало морозов (Санган), день, когда начинается падение инея."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_WINTER": {
+		"script": {
+			"en": "Today is the Beginning of Winter (Ipdong), the day winter begins.",
+			"ko": "오늘은 입동(立冬), 겨울이 시작되는 날이군요.",
+			"ja": "今日は立冬(リットウ)、冬が始まる日です。",
+			"zh": "今天是立冬, 冬天开始的日子。",
+			"ba": "Сегодня начало зимы (Ипдон), день, когда начинается зима."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_SNOW": {
+		"script": {
+			"en": "Today is the Minor Snow (Soseol), the day when the first snow begins to fall.",
+			"ko": "오늘은 소설(小雪), 눈이 내리기 시작하는 날이군요.",
+			"ja": "今日は小雪(ショウセツ)、雪が降り始める日です。",
+			"zh": "今天是小雪, 雪开始飘落的日子。",
+			"ba": "Сегодня небольшой снег (Сосоль), день, когда начинается первый снег."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_SNOW": {
+		"script": {
+			"en": "Today is the Major Snow (Daeseol), the heaviest snowfall day of the year.",
+			"ko": "오늘은 대설(大雪), 1년 중 눈이 가장 많이 내리는 날이군요.",
+			"ja": "今日は大雪(タイセツ)、一年で最も雪が降る日です。",
+			"zh": "今天是大雪, 全年降雪最多的日子。",
+			"ba": "Сегодня сильный снег (Дэсё), день, когда выпадает самый сильный снег за год."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_WINTER_SOLSTICE": {
+		"script": {
+			"en": "Today is the Winter Solstice (Dongji), the shortest day of the year.",
+			"ko": "오늘은 동지(冬至), 1년 중 낮이 가장 짧은 날이군요.",
+			"ja": "今日は冬至(トウジ)、一年で最も昼の長さが短い日です。",
+			"zh": "今天是冬至, 全年白天最短的日子。",
+			"ba": "Сегодня зимнее солнцестояние (Тонджи), самый короткий день года."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_COLD": {
+		"script": {
+			"en": "Today is the Minor Cold (Sohan), the day when the real cold begins.",
+			"ko": "오늘은 소한(小寒), 본격적인 추위가 시작되는 날이군요.",
+			"ja": "今日は小寒(ショウカン)、本格的な寒さが始まる日です。",
+			"zh": "今天是小寒, 真正的寒冷开始的日子。",
+			"ba": "Сегодня малая стужа (Сохан), день, когда начинается настоящая зима."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_COLD": {
+		"script": {
+			"en": "Today is the Major Cold (Daehan), the coldest day of the year.",
+			"ko": "오늘은 대한(大寒), 1년 중 가장 추운 날이군요.",
+			"ja": "今日は大寒(タイカン)、一年で最も寒い日です。",
+			"zh": "今天是大寒, 全年最冷的日子。",
+			"ba": "Сегодня сильные морозы (Дэхан), самый холодный день года."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_NEW_YEAR": {
+		"script": {
+			"en": "Happy New Year, Leader!",
+			"ko": "리더, 새해 복 많이 받으세요!",
+			"ja": "リーダー、新年おめでとうございます!",
+			"zh": "新年快乐, 领导!",
+			"ba": "С Новым годом, лидер!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_VALENTINES_DAY": {
+		"script": {
+			"en": "Today is Valentine's Day. Why not send a message to someone you love?",
+			"ko": "오늘은 발렌타인 데이군요. 사랑하는 사람들에게 마음을 전해 보시는 것은 어떨까요?",
+			"ja": "今日はバレンタインデーです。愛する人に気持ちを伝えてみてはどうですか?",
+			"zh": "今天是情人节, 试着传递你的爱意吧。",
+			"ba": "Сегодня день Святого Валентина. Почему бы не передать свои чувства кому-то, кого любишь?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_APRIL_FOOLS_DAY": {
+		"script": {
+			"en": "Today is not any special day.",
+			"ko": "오늘은 어떠한 날도 아닙니다.",
+			"ja": "今日は特別な日ではありません。",
+			"zh": "今天并不是特别的日子。",
+			"ba": "Сегодня не какой-то особенный день."
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_LABOUR_DAY": {
+		"script": {
+			"en": "Today is Labour Day. Maybe it's time for Leader to take a short break?",
+			"ko": "오늘은 노동자의 날이군요. 리더도 잠시 휴식을 취하는 것은 어떨까요?",
+			"ja": "今日は労働者の日です。リーダーも少し休憩してはどうですか?",
+			"zh": "今天是劳动节, 领导也许该休息一会儿?",
+			"ba": "Сегодня день труда. Может быть, лидер тоже возьмёт небольшой перерыв?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_HALLOWEEN": {
+		"script": {
+			"en": "Today is Halloween. Leader, you may want to prepare some candy.",
+			"ko": "오늘은 할로윈입니다. 리더는 사탕을 준비해 두셔야 할지도 모르겠군요.",
+			"ja": "今日はハロウィンです。リーダーはお菓子を準備しておいた方が良いかもしれません。",
+			"zh": "今天是万圣节, 领导可能需要准备一些糖果。",
+			"ba": "Сегодня Хэллоуин. Лидер, возможно, стоит подготовить немного конфет."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_CHRISTMAS_EVE": {
+		"script": {
+			"en": "Tomorrow is Christmas. Maybe you should do some good deeds today.",
+			"ko": "내일은 크리스마스입니다. 착한 일을 해야 할지도 모르겠군요.",
+			"ja": "明日はクリスマスです。今日は良いことをしておくべきかもしれません。",
+			"zh": "明天是圣诞节, 或许今天你该做些好事。",
+			"ba": "Завтра Рождество. Может быть, стоит сделать что-то хорошее сегодня."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	"ANNIVERSARY_CHRISTMAS": {
+		"script": {
+			"en": "Merry Christmas, Leader!",
+			"ko": "메리 크리스마스! 리더!",
+			"ja": "メリークリスマス! リーダー!",
+			"zh": "圣诞快乐! 领导!",
+			"ba": "С Рождеством! Лидер!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	}
+}

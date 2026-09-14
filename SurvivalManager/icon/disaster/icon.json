@@ -1,0 +1,344 @@
+{
+	"alert": {
+		"en": "Alert",
+		"ko": "경보",
+		"ja": "警報",
+		"zh": "警报",
+		"ba": "Тревога"
+	},
+	"shelling": {
+		"en": "Shelling",
+		"ko": "포격",
+		"ja": "砲撃",
+		"zh": "炮击",
+		"ba": "Обстрел"
+	},
+	"nuclear_weapon": {
+		"en": "Nuclear weapon",
+		"ko": "핵무기",
+		"ja": "核兵器",
+		"zh": "核武器",
+		"ba": "Ядерное оружие"
+	},
+	"chemical_weapon": {
+		"en": "Chemical weapon",
+		"ko": "화학무기",
+		"ja": "化学兵器",
+		"zh": "化学武器",
+		"ba": "Химическое оружие"
+	},
+	"biological_weapon": {
+		"en": "Biological weapon/Epidemic",
+		"ko": "생물무기/전염병",
+		"ja": "生物兵器/疫病",
+		"zh": "生物武器/传染病",
+		"ba": "Биологическое оружие/Эпидемия"
+	},
+	"evacuation": {
+		"en": "Evacuation",
+		"ko": "대피",
+		"ja": "避難",
+		"zh": "疏散",
+		"ba": "Эвакуация"
+	},
+	"uav_strike": {
+		"en": "UAV strike",
+		"ko": "드론 공격",
+		"ja": "無人機攻撃",
+		"zh": "无人机攻击",
+		"ba": "Удар БПЛА"
+	},
+
+	"volcanic_eruption": {
+		"en": "Volcanic Eruption",
+		"ko": "화산 폭발",
+		"ja": "火山噴火",
+		"zh": "火山喷发",
+		"ba": "Извержение вулкана"
+	},
+	"volcanic_ash_falls": {
+		"en": "Volcanic Ash Falls",
+		"ko": "화산재",
+		"ja": "火山灰",
+		"zh": "火山灰",
+		"ba": "Пепельные осадки"
+	},
+	"heat_wave": {
+		"en": "Heat Wave",
+		"ko": "폭염",
+		"ja": "熱波",
+		"zh": "热浪",
+		"ba": "Жара"
+	},
+	"drought": {
+		"en": "Drought",
+		"ko": "가뭄",
+		"ja": "干ばつ",
+		"zh": "干旱",
+		"ba": "Засуха"
+	},
+	"tsunami": {
+		"en": "Tsunami",
+		"ko": "지진해일",
+		"ja": "津波",
+		"zh": "海啸",
+		"ba": "Цунами"
+	},
+	"tide": {
+		"en": "Tide",
+		"ko": "조수",
+		"ja": "潮汐",
+		"zh": "潮汐",
+		"ba": "Прилив и отлив"
+	},
+	"downpour": {
+		"en": "Downpour",
+		"ko": "호우",
+		"ja": "豪雨",
+		"zh": "暴雨",
+		"ba": "Ливень"
+	},
+	"flood": {
+		"en": "Flood",
+		"ko": "홍수",
+		"ja": "洪水",
+		"zh": "洪水",
+		"ba": "Наводнение"
+	},
+	"red_tide": {
+		"en": "Red tide",
+		"ko": "적조",
+		"ja": "赤潮",
+		"zh": "赤潮",
+		"ba": "Красный прилив"
+	},
+	"green_tide": {
+		"en": "Algal bloom (Green tide)",
+		"ko": "조류대발생(녹조)",
+		"ja": "藻類大量発生（アオコ）",
+		"zh": "藻类暴发（绿潮）",
+		"ba": "Массовое цветение водорослей"
+	},
+	"heavy_snowfall": {
+		"en": "Heavy Snowfall",
+		"ko": "대설",
+		"ja": "大雪",
+		"zh": "大雪",
+		"ba": "Сильный снегопад"
+	},
+	"cold_wave": {
+		"en": "Cold waves",
+		"ko": "한파",
+		"ja": "寒波",
+		"zh": "寒潮",
+		"ba": "Волна холода"
+	},
+	"typhoon": {
+		"en": "Typhoon",
+		"ko": "태풍",
+		"ja": "台風",
+		"zh": "台风",
+		"ba": "Тайфун"
+	},
+	"strong_wind": {
+		"en": "Strong wind",
+		"ko": "강풍",
+		"ja": "強風",
+		"zh": "大风",
+		"ba": "Сильный ветер"
+	},
+	"lightning_strike": {
+		"en": "Lightning strike",
+		"ko": "낙뢰",
+		"ja": "落雷",
+		"zh": "雷击",
+		"ba": "Удар молнии"
+	},
+	"yellow_dust": {
+		"en": "Yellow dust",
+		"ko": "황사",
+		"ja": "黄砂",
+		"zh": "沙尘暴",
+		"ba": "Жёлтая пыль"
+	},
+	"earthquake": {
+		"en": "Earthquake",
+		"ko": "지진",
+		"ja": "地震",
+		"zh": "地震",
+		"ba": "Землетрясение"
+	},
+	"landslide": {
+		"en": "Landslide",
+		"ko": "산사태",
+		"ja": "山崩れ",
+		"zh": "山体滑坡",
+		"ba": "Оползень"
+	},
+	"space_weather_disaster": {
+		"en": "Space weather disaster",
+		"ko": "우주전파재난",
+		"ja": "宇宙天気災害",
+		"zh": "空间天气灾害",
+		"ba": "Космическая погодная катастрофа"
+	},
+	"natural_space_object_impact": {
+		"en": "Natural space object impact",
+		"ko": "자연우주물체추락",
+		"ja": "天然宇宙物体落下",
+		"zh": "天然天体坠落",
+		"ba": "Падение естественного космического объекта"
+	},
+
+	"fire": {
+		"en": "Fire",
+		"ko": "화재",
+		"ja": "火事",
+		"zh": "火灾",
+		"ba": "Пожар"
+	},
+	"electrical_accident": {
+		"en": "Electrical accident",
+		"ko": "전기 사고",
+		"ja": "電気事故",
+		"zh": "电气事故",
+		"ba": "Электрическое происшествие"
+	},
+	"gas_accident": {
+		"en": "Gas accident",
+		"ko": "가스 사고",
+		"ja": "ガス事故",
+		"zh": "燃气事故",
+		"ba": "Газовое происшествие"
+	},
+	"building_collapses": {
+		"en": "Building collapses",
+		"ko": "건물 붕괴",
+		"ja": "建物崩壊",
+		"zh": "建筑物倒塌",
+		"ba": "Обрушение здания"
+	},
+	"crowd_crush": {
+		"en": "Crowd crush",
+		"ko": "다중 운집 인파 사고",
+		"ja": "雑踏事故",
+		"zh": "人群踩踏事故",
+		"ba": "Давка"
+	},
+	"car_accident": {
+		"en": "Car accident",
+		"ko": "교통사고",
+		"ja": "自動車事故",
+		"zh": "车祸",
+		"ba": "ДТП"
+	},
+	"railroad_or_subway_accident": {
+		"en": "Railroad/Subway accident",
+		"ko": "철도/지하철 사고",
+		"ja": "鉄道/地下鉄事故",
+		"zh": "铁路/地铁事故",
+		"ba": "Железнодорожная/метро авария"
+	},
+	"marine_accident": {
+		"en": "Marine accident",
+		"ko": "해양 선박사고",
+		"ja": "海難事故",
+		"zh": "海难事故",
+		"ba": "Морская авария"
+	},
+	"aviation_accident": {
+		"en": "Aviation accident",
+		"ko": "항공기 사고",
+		"ja": "航空事故",
+		"zh": "航空事故",
+		"ba": "Авиакатастрофа"
+	},
+	"terrorism": {
+		"en": "Terrorism",
+		"ko": "테러",
+		"ja": "テロ",
+		"zh": "恐怖主义",
+		"ba": "Терроризм"
+	},
+
+	"radiation_leak": {
+		"en": "Radiation leak",
+		"ko": "방사능 누출",
+		"ja": "放射線漏れ",
+		"zh": "辐射泄漏",
+		"ba": "Утечка радиации"
+	},
+	"explosion": {
+		"en": "Explosion",
+		"ko": "폭발",
+		"ja": "爆発",
+		"zh": "爆炸",
+		"ba": "Взрыв"
+	},
+	"water_pollution": {
+		"en": "Water pollution",
+		"ko": "수질오염",
+		"ja": "水質汚染",
+		"zh": "水污染",
+		"ba": "Загрязнение воды"
+	},
+	"livestock_disease": {
+		"en": "Livestock disease",
+		"ko": "가축질병",
+		"ja": "家畜病",
+		"zh": "牲畜疾病",
+		"ba": "Болезнь скота"
+	},
+	"sinkhole": {
+		"en": "Sinkhole",
+		"ko": "싱크홀",
+		"ja": "陥没穴",
+		"zh": "天坑",
+		"ba": "Провал"
+	},
+	"emp": {
+		"en": "EMP",
+		"ko": "EMP",
+		"ja": "EMP",
+		"zh": "EMP",
+		"ba": "ЭМП"
+	},
+	"blackout": {
+		"en": "Blackout",
+		"ko": "정전",
+		"ja": "停電",
+		"zh": "停电",
+		"ba": "Отключение электричества"
+	},
+
+	"first_aid": {
+		"en": "First Aid",
+		"ko": "응급처치",
+		"ja": "応急処置",
+		"zh": "急救",
+		"ba": "Первая помощь"
+	},
+	"water_accident": {
+		"en": "Water accident",
+		"ko": "물놀이 사고",
+		"ja": "水の事故",
+		"zh": "溺水事故",
+		"ba": "Несчастный случай на воде"
+	},
+	"climbing_accident": {
+		"en": "Climbing accident",
+		"ko": "등반 사고",
+		"ja": "山岳事故",
+		"zh": "登山事故",
+		"ba": "Несчастный случай в горах"
+	},
+	"mass_jellyfish_occurrence": {
+		"en": "Mass jellyfish occurrence",
+		"ko": "해파리 대량출현",
+		"ja": "大量クラゲ発生",
+		"zh": "水母大量出现",
+		"ba": "Массовое появление медуз"
+	}
+
+
+}

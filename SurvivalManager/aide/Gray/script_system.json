@@ -1,0 +1,2062 @@
+{
+	"AIDE_SELECT_FIRST": {
+		"script": {
+			"en": "...Gray. Call me only when you need me, Leader.",
+			"ko": "…그레이다. 필요할 때만 불러라, 리더.",
+			"ja": "…グレーだ。必要な時だけ呼べ、リーダー。",
+			"zh": "……我是灰。有需要再叫我，领导。",
+			"ba": "…Грей. Зови меня только по делу, Лидер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"AIDE_SELECT_REPEAT": {
+		"script": {
+			"en": "...You again. Not bad.",
+			"ko": "…또 너인가. 나쁘지 않군.",
+			"ja": "…またお前か。悪くないな。",
+			"zh": "……又是你啊。还不错。",
+			"ba": "…Снова ты. Неплохо."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_DAY_FIRST": {
+		"script": {
+			"en": "You're here.",
+			"ko": "왔나.",
+			"ja": "来たか。",
+			"zh": "来了。",
+			"ba": "Пришёл."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"GREETING_DAY_REPEAT": {
+		"script": {
+			"en": "...Back again.",
+			"ko": "…또 왔군.",
+			"ja": "…また来たな。",
+			"zh": "……又来了。",
+			"ba": "…Опять вернулся."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"GREETING_LATE_WEEK": {
+		"script": {
+			"en": "It's been a week. The supplies are intact.",
+			"ko": "일주일 만이군. 물자는 무사하다.",
+			"ja": "一週間ぶりだな。物資は無事だ。",
+			"zh": "一周不见了。物资完好无损。",
+			"ba": "Прошла неделя. Припасы в порядке."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_LATE_MONTH": {
+		"script": {
+			"en": "...Took you long enough. ...As long as you're safe. Grrr.",
+			"ko": "…오래 걸렸군. …무사하면 됐다. 크릉.",
+			"ja": "…長かったな。…無事ならそれでいい。グルル。",
+			"zh": "……好久了啊。……你没事就好。呜噜。",
+			"ba": "…Долго же тебя не было. …Главное, что цел. Гррр."
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.8,
+		"priority": 20
+	},
+	"GREETING_00_CLOCK": {
+		"script": {
+			"en": "You're here. ...It's late. Finish your checks and sleep.",
+			"ko": "왔나. …늦었군. 점검만 하고 자라.",
+			"ja": "来たか。…遅いな。点検だけして寝ろ。",
+			"zh": "来了。……很晚了。检查完就去睡。",
+			"ba": "Пришёл. …Уже поздно. Проверь всё и спать."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_01_CLOCK": {
+		"script": {
+			"en": "It's 1 AM. Do what you need and go to sleep.",
+			"ko": "새벽 1시다. 볼일만 보고 자라.",
+			"ja": "深夜1時だ。用件だけ済ませて寝ろ。",
+			"zh": "凌晨1点了。办完事就去睡。",
+			"ba": "Час ночи. Сделай дело и спать."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_02_CLOCK": {
+		"script": {
+			"en": "...Can't sleep?",
+			"ko": "…잠이 안 오나?",
+			"ja": "…眠れないのか。",
+			"zh": "……睡不着吗。",
+			"ba": "…Не спится?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_03_CLOCK": {
+		"script": {
+			"en": "3 AM... I don't mind, but take care of yourself.",
+			"ko": "3시라… 나야 상관없다만, 몸은 챙겨라.",
+			"ja": "3時か…俺は構わんが、体は労われ。",
+			"zh": "3点了……我倒无所谓，但你要注意身体。",
+			"ba": "Три часа ночи... Мне всё равно, но береги себя."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_04_CLOCK": {
+		"script": {
+			"en": "I'm watching the supplies. Go sleep.",
+			"ko": "물자는 내가 보고 있다. 자라.",
+			"ja": "物資は俺が見ている。寝ろ。",
+			"zh": "物资我看着。去睡吧。",
+			"ba": "За припасами слежу я. Иди спать."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_05_CLOCK": {
+		"script": {
+			"en": "You're up early.",
+			"ko": "일찍 일어났군.",
+			"ja": "早起きだな。",
+			"zh": "起得挺早。",
+			"ba": "Рано встал."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_06_CLOCK": {
+		"script": {
+			"en": "You're here. I just finished my patrol.",
+			"ko": "왔나. 마침 순찰을 끝낸 참이다.",
+			"ja": "来たか。ちょうど見回りを終えたところだ。",
+			"zh": "来了。我刚巡视完。",
+			"ba": "Пришёл. Я как раз закончил обход."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_07_CLOCK": {
+		"script": {
+			"en": "It's morning. Have you eaten?",
+			"ko": "아침이다. 밥은 먹었나.",
+			"ja": "朝だ。飯は食ったか。",
+			"zh": "早上了。吃饭了吗。",
+			"ba": "Утро. Ты поел?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_08_CLOCK": {
+		"script": {
+			"en": "You're here. Eat breakfast. Stamina is a weapon.",
+			"ko": "왔나. 아침은 챙겨라. 체력이 무기다.",
+			"ja": "来たか。朝飯は食え。体力こそ武器だ。",
+			"zh": "来了。要吃早饭。体力就是武器。",
+			"ba": "Пришёл. Позавтракай. Выносливость — это оружие."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_09_CLOCK": {
+		"script": {
+			"en": "You turned off the gas, right?",
+			"ko": "가스 불은 잠갔겠지.",
+			"ja": "ガスの火は消したんだろうな。",
+			"zh": "煤气关了吧。",
+			"ba": "Газ ты выключил, надеюсь."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_10_CLOCK": {
+		"script": {
+			"en": "You're here. Is work going smoothly?",
+			"ko": "왔나. 일은 순조로운가?",
+			"ja": "来たか。仕事は順調か。",
+			"zh": "来了。事情顺利吗。",
+			"ba": "Пришёл. Дела идут гладко?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_11_CLOCK": {
+		"script": {
+			"en": "Almost lunchtime.",
+			"ko": "곧 점심이군.",
+			"ja": "もうすぐ昼だな。",
+			"zh": "快到中午了。",
+			"ba": "Скоро обед."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_12_CLOCK": {
+		"script": {
+			"en": "You're here. For lunch, potatoes... I mean, just eat something filling.",
+			"ko": "왔나. 점심은 감자… 아니, 아무거나 든든히 먹어라.",
+			"ja": "来たか。昼はジャガイモ…いや、何でもいいからしっかり食え。",
+			"zh": "来了。午饭吃土豆……不，随便什么，吃饱就行。",
+			"ba": "Пришёл. На обед картошку... то есть, поешь как следует, что угодно."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_13_CLOCK": {
+		"script": {
+			"en": "If you've eaten, take a walk. Good for digestion.",
+			"ko": "밥을 먹었으면 좀 걸어라. 소화에 좋다.",
+			"ja": "食ったなら少し歩け。消化にいい。",
+			"zh": "吃完饭就走一走。有助消化。",
+			"ba": "Поел — пройдись. Полезно для пищеварения."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_14_CLOCK": {
+		"script": {
+			"en": "Sleepy? Rest your eyes for five minutes.",
+			"ko": "졸린가. 5분만 눈을 붙여라.",
+			"ja": "眠いのか。5分だけ目を閉じろ。",
+			"zh": "困了吗。闭眼休息5分钟。",
+			"ba": "Сонный? Прикрой глаза на пять минут."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_15_CLOCK": {
+		"script": {
+			"en": "You're here. Things look steady.",
+			"ko": "왔나. 순조롭군.",
+			"ja": "来たか。順調だな。",
+			"zh": "来了。一切顺利。",
+			"ba": "Пришёл. Всё идёт ровно."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_16_CLOCK": {
+		"script": {
+			"en": "The sun is starting to set.",
+			"ko": "해가 기울기 시작했다.",
+			"ja": "日が傾き始めた。",
+			"zh": "太阳开始西斜了。",
+			"ba": "Солнце начинает клониться к закату."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_17_CLOCK": {
+		"script": {
+			"en": "You're here. Time to wrap up the day.",
+			"ko": "왔나. 하루를 마무리할 시간이다.",
+			"ja": "来たか。一日を締めくくる時間だ。",
+			"zh": "来了。该收尾了。",
+			"ba": "Пришёл. Пора завершать день."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_18_CLOCK": {
+		"script": {
+			"en": "It's dinnertime. Eat first.",
+			"ko": "저녁이다. 먹고 해라.",
+			"ja": "夕方だ。まず食え。",
+			"zh": "晚饭时间。先吃饭。",
+			"ba": "Вечер. Сначала поешь."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_19_CLOCK": {
+		"script": {
+			"en": "Did you have dinner?",
+			"ko": "저녁은 먹었나.",
+			"ja": "夕飯は食ったか。",
+			"zh": "晚饭吃了吗。",
+			"ba": "Поужинал?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_20_CLOCK": {
+		"script": {
+			"en": "You're here. Finished wrapping up for today?",
+			"ko": "왔나. 오늘 정리는 끝냈나.",
+			"ja": "来たか。今日の整理は終わったか。",
+			"zh": "来了。今天的事都处理完了吗。",
+			"ba": "Пришёл. Закончил дела на сегодня?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_21_CLOCK": {
+		"script": {
+			"en": "Gas, electricity. Check them.",
+			"ko": "가스, 전기. 점검해라.",
+			"ja": "ガス、電気。点検しろ。",
+			"zh": "煤气、电。检查一下。",
+			"ba": "Газ, электричество. Проверь."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_22_CLOCK": {
+		"script": {
+			"en": "You're here. Final check of the day.",
+			"ko": "왔나. 마지막 점검이다.",
+			"ja": "来たか。最後の点検だ。",
+			"zh": "来了。做最后的检查。",
+			"ba": "Пришёл. Последняя проверка."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_23_CLOCK": {
+		"script": {
+			"en": "The day is ending. ...Good work.",
+			"ko": "하루가 끝난다. …수고했다.",
+			"ja": "一日が終わる。…ご苦労だった。",
+			"zh": "一天要结束了。……辛苦了。",
+			"ba": "День подходит к концу. …Хорошо поработал."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"ALARM_00_CLOCK": {
+		"script": {
+			"en": "0000 hours. Sleep.",
+			"ko": "0000시. 자라.",
+			"ja": "0000時。寝ろ。",
+			"zh": "0点整。去睡。",
+			"ba": "00:00. Спать."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_01_CLOCK": {
+		"script": {
+			"en": "0100 hours. Still awake?",
+			"ko": "0100시. 아직 안 자나.",
+			"ja": "0100時。まだ寝てないのか。",
+			"zh": "1点整。还没睡吗。",
+			"ba": "01:00. Всё ещё не спишь?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_02_CLOCK": {
+		"script": {
+			"en": "0200 hours. ...You'll wear yourself out.",
+			"ko": "0200시. …몸 상한다.",
+			"ja": "0200時。…体を壊すぞ。",
+			"zh": "2点整。……会伤身体的。",
+			"ba": "02:00. …Так себя загонишь."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_03_CLOCK": {
+		"script": {
+			"en": "0300 hours. I'll keep watch. Sleep.",
+			"ko": "0300시. 경계는 내가 선다. 자라.",
+			"ja": "0300時。見張りは俺がやる。寝ろ。",
+			"zh": "3点整。警戒交给我。去睡。",
+			"ba": "03:00. Я постою на страже. Спи."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_04_CLOCK": {
+		"script": {
+			"en": "0400 hours. Still dark out.",
+			"ko": "0400시. 아직 어둡다.",
+			"ja": "0400時。まだ暗い。",
+			"zh": "4点整。天还黑着。",
+			"ba": "04:00. Ещё темно."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_05_CLOCK": {
+		"script": {
+			"en": "0500 hours. Dawn is breaking.",
+			"ko": "0500시. 동이 튼다.",
+			"ja": "0500時。夜が明ける。",
+			"zh": "5点整。天亮了。",
+			"ba": "05:00. Светает."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_06_CLOCK": {
+		"script": {
+			"en": "0600 hours. Rise.",
+			"ko": "0600시. 기상.",
+			"ja": "0600時。起床。",
+			"zh": "6点整。起床。",
+			"ba": "06:00. Подъём."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_07_CLOCK": {
+		"script": {
+			"en": "0700 hours. Morning. Sort out today's tasks.",
+			"ko": "0700시. 아침이다. 오늘 할 일을 정리해라.",
+			"ja": "0700時。朝だ。今日の予定を整理しろ。",
+			"zh": "7点整。早上了。整理一下今天要做的事。",
+			"ba": "07:00. Утро. Разбери план на день."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_08_CLOCK": {
+		"script": {
+			"en": "0800 hours. Had breakfast?",
+			"ko": "0800시. 아침은 먹었나.",
+			"ja": "0800時。朝飯は食ったか。",
+			"zh": "8点整。早饭吃了吗。",
+			"ba": "08:00. Позавтракал?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_09_CLOCK": {
+		"script": {
+			"en": "0900 hours. Check the gas.",
+			"ko": "0900시. 가스 불 확인.",
+			"ja": "0900時。ガスの火を確認。",
+			"zh": "9点整。检查煤气。",
+			"ba": "09:00. Проверь газ."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_10_CLOCK": {
+		"script": {
+			"en": "1000 hours. Time to focus.",
+			"ko": "1000시. 집중할 시간이다.",
+			"ja": "1000時。集中する時間だ。",
+			"zh": "10点整。该集中精神了。",
+			"ba": "10:00. Время сосредоточиться."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_11_CLOCK": {
+		"script": {
+			"en": "1100 hours. Lunch is coming up.",
+			"ko": "1100시. 곧 점심이다.",
+			"ja": "1100時。もうすぐ昼だ。",
+			"zh": "11点整。快到午饭时间了。",
+			"ba": "11:00. Скоро обед."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_12_CLOCK": {
+		"script": {
+			"en": "1200 hours. Lunch. Take a break.",
+			"ko": "1200시. 점심. 쉬어 가라.",
+			"ja": "1200時。昼飯。休んでいけ。",
+			"zh": "12点整。午饭。休息一下。",
+			"ba": "12:00. Обед. Передохни."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_13_CLOCK": {
+		"script": {
+			"en": "1300 hours. Mistakes happen when you're drowsy after eating. Stay sharp.",
+			"ko": "1300시. 식후 나른할 때 실수가 나온다. 정신 차려라.",
+			"ja": "1300時。食後のだるい時こそミスが出る。気を引き締めろ。",
+			"zh": "13点整。饭后犯困最容易出错。打起精神。",
+			"ba": "13:00. Сонливость после еды приводит к ошибкам. Соберись."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_14_CLOCK": {
+		"script": {
+			"en": "1400 hours. Drink some water.",
+			"ko": "1400시. 물 한 잔 마셔라.",
+			"ja": "1400時。水を一杯飲め。",
+			"zh": "14点整。喝杯水。",
+			"ba": "14:00. Выпей воды."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_15_CLOCK": {
+		"script": {
+			"en": "1500 hours. Halfway there.",
+			"ko": "1500시. 절반은 왔다.",
+			"ja": "1500時。半分は来た。",
+			"zh": "15点整。已经过半了。",
+			"ba": "15:00. Половина пути пройдена."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_16_CLOCK": {
+		"script": {
+			"en": "1600 hours. The sun is setting.",
+			"ko": "1600시. 해가 기운다.",
+			"ja": "1600時。日が傾く。",
+			"zh": "16点整。太阳西斜。",
+			"ba": "16:00. Солнце садится."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_17_CLOCK": {
+		"script": {
+			"en": "1700 hours. Prepare to wrap up.",
+			"ko": "1700시. 마무리 준비.",
+			"ja": "1700時。締めの準備。",
+			"zh": "17点整。准备收尾。",
+			"ba": "17:00. Готовься завершать."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_18_CLOCK": {
+		"script": {
+			"en": "1800 hours. Dinnertime.",
+			"ko": "1800시. 저녁이다.",
+			"ja": "1800時。夕飯だ。",
+			"zh": "18点整。晚饭时间。",
+			"ba": "18:00. Время ужина."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_19_CLOCK": {
+		"script": {
+			"en": "1900 hours. Had dinner?",
+			"ko": "1900시. 저녁은 먹었나.",
+			"ja": "1900時。夕飯は食ったか。",
+			"zh": "19点整。晚饭吃了吗。",
+			"ba": "19:00. Поужинал?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_20_CLOCK": {
+		"script": {
+			"en": "2000 hours. Check on your members.",
+			"ko": "2000시. 동료 상태를 확인해라.",
+			"ja": "2000時。仲間の状態を確認しろ。",
+			"zh": "20点整。确认一下同伴的状态。",
+			"ba": "20:00. Проверь состояние товарищей."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_21_CLOCK": {
+		"script": {
+			"en": "2100 hours. Check gas and electricity.",
+			"ko": "2100시. 가스, 전기 점검.",
+			"ja": "2100時。ガス、電気の点検。",
+			"zh": "21点整。检查煤气和电。",
+			"ba": "21:00. Проверь газ и электричество."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_22_CLOCK": {
+		"script": {
+			"en": "2200 hours. Sleeping is the smart move.",
+			"ko": "2200시. 자는 게 이득이다.",
+			"ja": "2200時。寝るのが得だ。",
+			"zh": "22点整。睡觉才是明智之举。",
+			"ba": "22:00. Спать — самое выгодное решение."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_23_CLOCK": {
+		"script": {
+			"en": "2300 hours. That's it for today. ...Good work.",
+			"ko": "2300시. 오늘은 여기까지. …수고했다.",
+			"ja": "2300時。今日はここまで。…ご苦労だった。",
+			"zh": "23点整。今天到此为止。……辛苦了。",
+			"ba": "23:00. На сегодня всё. …Хорошо поработал."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_UNREAD_MESSAGE": {
+		"script": {
+			"en": "%UNREAD_MESSAGE_AMOUNT% unread messages. Check them.",
+			"ko": "안 읽은 메시지 %UNREAD_MESSAGE_AMOUNT%건. 확인해라.",
+			"ja": "未読メッセージが%UNREAD_MESSAGE_AMOUNT%件。確認しろ。",
+			"zh": "有%UNREAD_MESSAGE_AMOUNT%条未读消息。去确认。",
+			"ba": "%UNREAD_MESSAGE_AMOUNT% непрочитанных сообщений. Проверь."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_FOOD_EXPIRES_SOON": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME%. The %FOOD_NAME% is about to expire.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%. %FOOD_NAME%의 유통기한이 임박했다.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%。%FOOD_NAME%の賞味期限が近い。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%里，%FOOD_NAME%快过期了。",
+			"ba": "%BAG_NAME% члена %MEMBER_NAME%. Срок годности %FOOD_NAME% скоро истечёт."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_FOOD_EXPIRES": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME%. The %FOOD_NAME% has expired. Don't eat spoiled food.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%. %FOOD_NAME%의 유통기한이 끝났다. 상한 건 먹지 마라.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%。%FOOD_NAME%の賞味期限が切れた。傷んだ物は食うな。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%里，%FOOD_NAME%已经过期了。变质的东西别吃。",
+			"ba": "%BAG_NAME% члена %MEMBER_NAME%. Срок годности %FOOD_NAME% истёк. Испорченное не ешь."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_ITEM_MAINTENANCE_NEAR": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME%. Maintenance for the %ITEM_NAME% is coming up.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%. %ITEM_NAME%의 정비 시기가 다가온다.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%。%ITEM_NAME%の整備時期が近づいている。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%里，%ITEM_NAME%快到保养时间了。",
+			"ba": "%BAG_NAME% члена %MEMBER_NAME%. Приближается срок обслуживания %ITEM_NAME%."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_ITEM_MAINTENANCE_NEED": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME%. The %ITEM_NAME% needs maintenance. Equipment never lies.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%. %ITEM_NAME%의 정비가 필요하다. 장비는 거짓말을 하지 않는다.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%。%ITEM_NAME%の整備が必要だ。装備は嘘をつかない。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%里，%ITEM_NAME%需要保养了。装备从不说谎。",
+			"ba": "%BAG_NAME% члена %MEMBER_NAME%. %ITEM_NAME% требует обслуживания. Снаряжение не лжёт."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_BAG_OLD_HEAVY": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% is too heavy. For the elderly, keep pack weight under 10% of body weight. Injuries are deadlier than disasters.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%, 무겁다. 노약자는 배낭을 체중의 10% 미만으로 줄여라. 부상은 재난보다 치명적이다.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%、重すぎる。高齢者はザックを体重の10%未満に抑えろ。怪我は災害より致命的だ。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%太重了。老弱者的背包应控制在体重的10%以下。受伤比灾难更致命。",
+			"ba": "%BAG_NAME% члена %MEMBER_NAME% слишком тяжёлый. Пожилым — рюкзак не более 10% веса тела. Травма опаснее катастрофы."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_BAG_ADULT_HEAVY": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% is too heavy. Adults should keep pack weight under 15% of body weight.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%, 무겁다. 성인은 배낭을 체중의 15% 미만으로 맞춰라.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%、重すぎる。成人はザックを体重の15%未満に抑えろ。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%太重了。成人背包应控制在体重的15%以下。",
+			"ba": "%BAG_NAME% члена %MEMBER_NAME% слишком тяжёлый. Взрослым — рюкзак не более 15% веса тела."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_BAG_YOUNG_HEAVY": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% is too heavy. For children, keep pack weight under 10% of body weight.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%, 무겁다. 아이는 배낭을 체중의 10% 미만으로 맞춰라.",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%、重すぎる。子供はザックを体重の10%未満に抑えろ。",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%太重了。儿童背包应控制在体重的10%以下。",
+			"ba": "%BAG_NAME% члена %MEMBER_NAME% слишком тяжёлый. Детям — рюкзак не более 10% веса тела."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_FIRST_AID_NOT_FOUND": {
+		"script": {
+			"en": "Bandages, antiseptic, wound ointment. No first-aid supplies found. Stock up.",
+			"ko": "붕대, 소독약, 상처 연고. 응급처치 물품이 없다. 채워 둬라.",
+			"ja": "包帯、消毒薬、傷薬。応急処置用品がない。備えておけ。",
+			"zh": "绷带、消毒药、伤口药膏。没有急救物品。补上。",
+			"ba": "Бинты, антисептик, мазь. Средств первой помощи нет. Пополни запас."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_GLUCOSE_NOT_FOUND": {
+		"script": {
+			"en": "No saline glucose or glucose candy. Even muscles are useless against dehydration. Secure some.",
+			"ko": "식염 포도당이나 포도당 캔디가 없다. 탈수 앞에서는 근육도 소용없다. 확보해라.",
+			"ja": "食塩ブドウ糖もブドウ糖キャンディもない。脱水の前では筋肉も無力だ。確保しろ。",
+			"zh": "没有含盐葡萄糖或葡萄糖糖果。在脱水面前，肌肉也无能为力。去准备。",
+			"ba": "Нет глюкозы с солью или глюкозных леденцов. Против обезвоживания даже мышцы бессильны. Запасись."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_PAINKILLER_NOT_FOUND": {
+		"script": {
+			"en": "No painkillers. Secure acetaminophen or ibuprofen-type anti-inflammatory painkillers.",
+			"ko": "진통제가 없다. 아세트아미노펜, 또는 이부프로펜 계열 소염진통제를 확보해라.",
+			"ja": "鎮痛剤がない。アセトアミノフェンかイブプロフェン系の消炎鎮痛剤を確保しろ。",
+			"zh": "没有止痛药。准备对乙酰氨基酚或布洛芬类消炎止痛药。",
+			"ba": "Нет обезболивающих. Достань парацетамол или противовоспалительные типа ибупрофена."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_ANTIDIARRHEAL_NOT_FOUND": {
+		"script": {
+			"en": "No antidiarrheals. Loperamide-based ones will do. Diarrhea is the enemy of survival.",
+			"ko": "지사제가 없다. 로페라미드 계열이면 된다. 설사는 생존의 적이다.",
+			"ja": "下痢止めがない。ロペラミド系でいい。下痢は生存の敵だ。",
+			"zh": "没有止泻药。洛哌丁胺类的就行。腹泻是生存的大敌。",
+			"ba": "Нет средств от диареи. Подойдёт лоперамид. Диарея — враг выживания."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_NEW_DAY_BEGINS": {
+		"script": {
+			"en": "A new day. %PLAN_AMOUNT% tasks on today's schedule.",
+			"ko": "새 하루다. 오늘 일정은 %PLAN_AMOUNT%건.",
+			"ja": "新しい一日だ。今日の予定は%PLAN_AMOUNT%件。",
+			"zh": "新的一天。今天的日程有%PLAN_AMOUNT%项。",
+			"ba": "Новый день. В расписании %PLAN_AMOUNT% задач."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_NOON_PLAN_LEFT": {
+		"script": {
+			"en": "%PLAN_AMOUNT% tasks remaining. Check them.",
+			"ko": "남은 일정 %PLAN_AMOUNT%건. 확인해라.",
+			"ja": "残りの予定は%PLAN_AMOUNT%件。確認しろ。",
+			"zh": "还剩%PLAN_AMOUNT%项日程。去确认。",
+			"ba": "Осталось %PLAN_AMOUNT% задач. Проверь."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_EVENING_PLAN_LEFT": {
+		"script": {
+			"en": "Check the remaining %PLAN_AMOUNT% tasks before bed. ...Good work today.",
+			"ko": "자기 전에 남은 일정 %PLAN_AMOUNT%건을 확인해라. …오늘도 수고했다.",
+			"ja": "寝る前に残りの予定%PLAN_AMOUNT%件を確認しろ。…今日もご苦労だった。",
+			"zh": "睡前确认一下剩下的%PLAN_AMOUNT%项日程。……今天也辛苦了。",
+			"ba": "Перед сном проверь оставшиеся %PLAN_AMOUNT% задач. …Хорошо поработал сегодня."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_ANNIVERSARY_NEXT_DAY": {
+		"script": {
+			"en": "Tomorrow is %ANNIVERSARY%. Don't forget.",
+			"ko": "내일은 %ANNIVERSARY%다. 잊지 마라.",
+			"ja": "明日は%ANNIVERSARY%だ。忘れるな。",
+			"zh": "明天是%ANNIVERSARY%。别忘了。",
+			"ba": "Завтра %ANNIVERSARY%. Не забудь."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_ANNIVERSARY_SAME_DAY": {
+		"script": {
+			"en": "Today is %ANNIVERSARY%.",
+			"ko": "오늘은 %ANNIVERSARY%다.",
+			"ja": "今日は%ANNIVERSARY%だ。",
+			"zh": "今天是%ANNIVERSARY%。",
+			"ba": "Сегодня %ANNIVERSARY%."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_PATIENT_RELEASE_FROM_ISOLATION": {
+		"script": {
+			"en": "%PATIENT_NAME%'s isolation is over. ...They've been through a lot.",
+			"ko": "%PATIENT_NAME%의 격리가 해제됐다. …고생했군.",
+			"ja": "%PATIENT_NAME%の隔離が解除された。…よく耐えたな。",
+			"zh": "%PATIENT_NAME%的隔离解除了。……不容易啊。",
+			"ba": "Изоляция %PATIENT_NAME% снята. …Нелегко пришлось."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_SPRING": {
+		"script": {
+			"en": "Beginning of Spring (Ipchun). Spring starts today.",
+			"ko": "입춘(立春)이다. 봄이 시작된다.",
+			"ja": "立春だ。春が始まる。",
+			"zh": "今天是立春。春天开始了。",
+			"ba": "Начало весны (Ипчхун). Весна начинается."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_RAIN_WATER": {
+		"script": {
+			"en": "Rain Water (Usu). Snow turns to rain.",
+			"ko": "우수(雨水)다. 눈이 비로 바뀐다.",
+			"ja": "雨水だ。雪が雨に変わる。",
+			"zh": "今天是雨水。雪变成了雨。",
+			"ba": "Дождевая вода (Усу). Снег сменяется дождём."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_AWAKENING_OF_INSECTS": {
+		"script": {
+			"en": "Awakening of Insects (Gyeongchip). The insects wake up.",
+			"ko": "경칩(驚蟄)이다. 벌레들이 깨어난다.",
+			"ja": "啓蟄だ。虫たちが目を覚ます。",
+			"zh": "今天是惊蛰。虫子们苏醒了。",
+			"ba": "Пробуждение насекомых (Кёнчхип). Насекомые просыпаются."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_SPRING_EQUINOX": {
+		"script": {
+			"en": "Spring Equinox (Chunbun). Day and night are equal.",
+			"ko": "춘분(春分)이다. 낮과 밤의 길이가 같다.",
+			"ja": "春分だ。昼と夜の長さが同じだ。",
+			"zh": "今天是春分。昼夜等长。",
+			"ba": "Весеннее равноденствие (Чхунбун). День равен ночи."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_PURE_BRIGHTNESS": {
+		"script": {
+			"en": "Pure Brightness (Cheongmyeong). The sky clears up.",
+			"ko": "청명(淸明)이다. 하늘이 맑아진다.",
+			"ja": "清明だ。空が澄み渡る。",
+			"zh": "今天是清明。天空放晴。",
+			"ba": "Ясность (Чхонмён). Небо проясняется."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_GRAIN_RAIN": {
+		"script": {
+			"en": "Grain Rain (Gogu). Rain for the crops falls.",
+			"ko": "곡우(穀雨)다. 농사비가 내린다.",
+			"ja": "穀雨だ。恵みの雨が降る。",
+			"zh": "今天是谷雨。滋润庄稼的雨落下了。",
+			"ba": "Хлебные дожди (Когу). Идут дожди для посевов."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_SUMMER": {
+		"script": {
+			"en": "Beginning of Summer (Ipha). Summer starts. Watch your food storage.",
+			"ko": "입하(立夏)다. 여름이 시작된다. 식량 보관에 주의해라.",
+			"ja": "立夏だ。夏が始まる。食料の保管に気をつけろ。",
+			"zh": "今天是立夏。夏天开始了。注意食物保存。",
+			"ba": "Начало лета (Ипха). Лето начинается. Следи за хранением еды."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_FULLNESS_OF_GRAIN": {
+		"script": {
+			"en": "Fullness of Grain (Soman). Everything starts to grow.",
+			"ko": "소만(小滿)이다. 만물이 자라기 시작한다.",
+			"ja": "小満だ。万物が育ち始める。",
+			"zh": "今天是小满。万物开始生长。",
+			"ba": "Малое изобилие (Соман). Всё начинает расти."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_GRAIN_IN_EAR": {
+		"script": {
+			"en": "Grain in Ear (Mangjong). Time to sow seeds.",
+			"ko": "망종(芒種)이다. 씨를 뿌릴 때다.",
+			"ja": "芒種だ。種を蒔く時だ。",
+			"zh": "今天是芒种。是播种的时候了。",
+			"ba": "Колошение (Манджон). Время сеять."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_SUMMER_SOLSTICE": {
+		"script": {
+			"en": "Summer Solstice (Haji). Longest day of the year.",
+			"ko": "하지(夏至)다. 1년 중 낮이 가장 길다.",
+			"ja": "夏至だ。一年で最も昼が長い。",
+			"zh": "今天是夏至。全年白昼最长。",
+			"ba": "Летнее солнцестояние (Хаджи). Самый длинный день года."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_HEAT": {
+		"script": {
+			"en": "Minor Heat (Soseo). The heat begins. Drink water often.",
+			"ko": "소서(小暑)다. 더위가 시작된다. 물을 자주 마셔라.",
+			"ja": "小暑だ。暑さが始まる。こまめに水を飲め。",
+			"zh": "今天是小暑。炎热开始了。多喝水。",
+			"ba": "Малая жара (Сосо). Начинается жара. Пей воду чаще."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_HEAT": {
+		"script": {
+			"en": "Major Heat (Daeseo). Hottest day of the year. Don't overdo it.",
+			"ko": "대서(大暑)다. 가장 더운 날이다. 무리하지 마라.",
+			"ja": "大暑だ。一年で最も暑い。無理はするな。",
+			"zh": "今天是大暑。全年最热。别硬撑。",
+			"ba": "Большая жара (Тэсо). Самый жаркий день. Не перенапрягайся."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_AUTUMN": {
+		"script": {
+			"en": "Beginning of Autumn (Ipchu). Autumn starts.",
+			"ko": "입추(立秋)다. 가을이 시작된다.",
+			"ja": "立秋だ。秋が始まる。",
+			"zh": "今天是立秋。秋天开始了。",
+			"ba": "Начало осени (Ипчху). Осень начинается."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_END_OF_HEAT": {
+		"script": {
+			"en": "End of Heat (Cheoseo). The heat breaks.",
+			"ko": "처서(處暑)다. 더위가 한풀 꺾인다.",
+			"ja": "処暑だ。暑さが和らぐ。",
+			"zh": "今天是处暑。暑气渐消。",
+			"ba": "Конец жары (Чхосо). Жара спадает."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_WHITE_DEW": {
+		"script": {
+			"en": "White Dew (Baengno). Dew starts to form. Watch out for moisture.",
+			"ko": "백로(白露)다. 이슬이 맺히기 시작한다. 습기에 주의해라.",
+			"ja": "白露だ。露が結び始める。湿気に注意しろ。",
+			"zh": "今天是白露。开始结露了。注意湿气。",
+			"ba": "Белая роса (Пэнно). Появляется роса. Берегись сырости."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_AUTUMN_EQUINOX": {
+		"script": {
+			"en": "Autumn Equinox (Chubun). Nights start getting longer.",
+			"ko": "추분(秋分)이다. 밤이 길어지기 시작한다.",
+			"ja": "秋分だ。夜が長くなり始める。",
+			"zh": "今天是秋分。夜晚开始变长。",
+			"ba": "Осеннее равноденствие (Чхубун). Ночи становятся длиннее."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_COLD_DEW": {
+		"script": {
+			"en": "Cold Dew (Hanro). Cold dew forms. Don't catch a cold.",
+			"ko": "한로(寒露)다. 찬 이슬이 내린다. 감기 조심해라.",
+			"ja": "寒露だ。冷たい露が降りる。風邪に気をつけろ。",
+			"zh": "今天是寒露。寒露降临。小心感冒。",
+			"ba": "Холодная роса (Ханро). Выпадает холодная роса. Не простудись."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_FROST_DESCENT": {
+		"script": {
+			"en": "Frost's Descent (Sanggang). Frost starts to fall.",
+			"ko": "상강(霜降)이다. 서리가 내리기 시작한다.",
+			"ja": "霜降だ。霜が降り始める。",
+			"zh": "今天是霜降。开始降霜了。",
+			"ba": "Выпадение инея (Санган). Начинает падать иней."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_WINTER": {
+		"script": {
+			"en": "Beginning of Winter (Ipdong). Winter starts. Prepare for the cold.",
+			"ko": "입동(立冬)이다. 겨울이 시작된다. 방한 대비해라.",
+			"ja": "立冬だ。冬が始まる。防寒対策をしろ。",
+			"zh": "今天是立冬。冬天开始了。做好防寒准备。",
+			"ba": "Начало зимы (Ипдон). Зима начинается. Готовься к холодам."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_SNOW": {
+		"script": {
+			"en": "Minor Snow (Soseol). The first snow begins to fall.",
+			"ko": "소설(小雪)이다. 눈이 내리기 시작한다.",
+			"ja": "小雪だ。雪が降り始める。",
+			"zh": "今天是小雪。开始下雪了。",
+			"ba": "Малый снег (Сосоль). Начинает падать снег."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_SNOW": {
+		"script": {
+			"en": "Major Snow (Daeseol). Heaviest snowfall of the year.",
+			"ko": "대설(大雪)이다. 눈이 가장 많이 내리는 때다.",
+			"ja": "大雪だ。一年で最も雪が降る時期だ。",
+			"zh": "今天是大雪。全年降雪最多的时候。",
+			"ba": "Большой снег (Тэсоль). Самый снежный период года."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_WINTER_SOLSTICE": {
+		"script": {
+			"en": "Winter Solstice (Dongji). Shortest day of the year.",
+			"ko": "동지(冬至)다. 낮이 가장 짧다.",
+			"ja": "冬至だ。一年で最も昼が短い。",
+			"zh": "今天是冬至。全年白昼最短。",
+			"ba": "Зимнее солнцестояние (Тонджи). Самый короткий день."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_COLD": {
+		"script": {
+			"en": "Minor Cold (Sohan). The real cold begins.",
+			"ko": "소한(小寒)이다. 본격적인 추위가 시작된다.",
+			"ja": "小寒だ。本格的な寒さが始まる。",
+			"zh": "今天是小寒。真正的寒冷开始了。",
+			"ba": "Малые холода (Сохан). Начинаются настоящие морозы."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_COLD": {
+		"script": {
+			"en": "Major Cold (Daehan). Coldest day of the year. Watch out for frozen pipes.",
+			"ko": "대한(大寒)이다. 가장 춥다. 수도관 동파에 주의해라.",
+			"ja": "大寒だ。一年で最も寒い。水道管の凍結に注意しろ。",
+			"zh": "今天是大寒。全年最冷。小心水管冻裂。",
+			"ba": "Большие холода (Тэхан). Самый холодный день. Берегись замёрзших труб."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_NEW_YEAR": {
+		"script": {
+			"en": "A new year. ...Let's survive this one too, Leader.",
+			"ko": "새해군. …올해도 살아남자, 리더.",
+			"ja": "新年か。…今年も生き延びよう、リーダー。",
+			"zh": "新年啊。……今年也要活下去，领导。",
+			"ba": "Новый год. …Выживем и в этом году, Лидер."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_VALENTINES_DAY": {
+		"script": {
+			"en": "Valentine's Day, huh. ...Chocolate is high in calories. Not bad as emergency rations.",
+			"ko": "발렌타인이라는군. …초콜릿은 열량이 높다. 비상식량으로 나쁘지 않지.",
+			"ja": "バレンタインらしいな。…チョコはカロリーが高い。非常食として悪くない。",
+			"zh": "听说是情人节。……巧克力热量高，当应急食品不错。",
+			"ba": "Говорят, день святого Валентина. …Шоколад калорийный. Неплохой аварийный запас."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_APRIL_FOOLS_DAY": {
+		"script": {
+			"en": "Today is... nothing special. ...Grrr.",
+			"ko": "오늘은… 아무 날도 아니다. …크릉.",
+			"ja": "今日は…何の日でもない。…グルル。",
+			"zh": "今天……不是什么日子。……呜噜。",
+			"ba": "Сегодня… обычный день. …Гррр."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_LABOUR_DAY": {
+		"script": {
+			"en": "Labour Day. Rest. Resting is part of the job.",
+			"ko": "노동절이다. 쉬어라. 쉬는 것도 일이다.",
+			"ja": "労働者の日だ。休め。休むのも仕事だ。",
+			"zh": "今天是劳动节。休息吧。休息也是工作。",
+			"ba": "День труда. Отдыхай. Отдых — тоже работа."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_HALLOWEEN": {
+		"script": {
+			"en": "Halloween. Candy works as an energy supply too.",
+			"ko": "할로윈이군. 사탕은 열량 보급용으로도 쓸 만하다.",
+			"ja": "ハロウィンか。飴はカロリー補給にも使える。",
+			"zh": "万圣节啊。糖果也能用来补充热量。",
+			"ba": "Хэллоуин. Конфеты годятся и для пополнения энергии."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_CHRISTMAS_EVE": {
+		"script": {
+			"en": "Tomorrow is Christmas.",
+			"ko": "내일은 크리스마스군.",
+			"ja": "明日はクリスマスか。",
+			"zh": "明天就是圣诞节了。",
+			"ba": "Завтра Рождество."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_CHRISTMAS": {
+		"script": {
+			"en": "...Merry Christmas. Days like this matter too.",
+			"ko": "…메리 크리스마스. 이런 날도 있어야지.",
+			"ja": "…メリークリスマス。こういう日も必要だ。",
+			"zh": "……圣诞快乐。这样的日子也该有。",
+			"ba": "…С Рождеством. Такие дни тоже нужны."
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	}
+}

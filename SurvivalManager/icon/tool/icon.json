@@ -1,0 +1,716 @@
+{
+	"brush": {
+		"en": "Brush",
+		"ko": "붓",
+		"ja": "筆",
+		"zh": "毛笔",
+		"ba": "Кисть"
+	},
+	"pencil": {
+		"en": "Pencil",
+		"ko": "연필",
+		"ja": "鉛筆",
+		"zh": "铅笔",
+		"ba": "Карандаш"
+	},
+	"pen": {
+		"en": "Pen",
+		"ko": "펜",
+		"ja": "ペン",
+		"zh": "硬筆",
+		"ba": "Ручка"
+	},
+	"eraser": {
+		"en": "Eraser",
+		"ko": "지우개",
+		"ja": "消しゴム",
+		"zh": "橡皮擦",
+		"ba": "Ластик"
+	},
+	"ruler": {
+		"en": "Ruler",
+		"ko": "자",
+		"ja": "定規",
+		"zh": "尺",
+		"ba": "Линейка"
+	},
+	"map": {
+		"en": "Map",
+		"ko": "지도",
+		"ja": "地図",
+		"zh": "地图",
+		"ba": "Карта"
+	},
+	"compass": {
+		"en": "Compass",
+		"ko": "나침반",
+		"ja": "コンパス",
+		"zh": "罗盘",
+		"ba": "Компас"
+	},
+	"flashlight": {
+		"en": "Flashlight",
+		"ko": "손전등",
+		"ja": "懐中電灯",
+		"zh": "手电筒",
+		"ba": "Фонарь"
+	},
+	"headlamp": {
+		"en": "Headlamp",
+		"ko": "헤드램프",
+		"ja": "ヘッドランプ",
+		"zh": "头灯",
+		"ba": "Налобный фонарь"
+	},
+	"candle": {
+		"en": "Candle",
+		"ko": "양초",
+		"ja": "キャンドル",
+		"zh": "蜡烛",
+		"ba": "Свеча"
+	},
+	"watch": {
+		"en": "Watch",
+		"ko": "손목 시계",
+		"ja": "腕時計",
+		"zh": "防水手表",
+		"ba": "Наручные часы"
+	},
+	"magnifier": {
+		"en": "Magnifier",
+		"ko": "돋보기",
+		"ja": "老眼鏡",
+		"zh": "放大镜",
+		"ba": "Увеличительное стекло"
+	},
+	"binoculars": {
+		"en": "Binoculars",
+		"ko": "망원경",
+		"ja": "双眼鏡",
+		"zh": "双筒望远镜",
+		"ba": "Бинокль"
+	},
+	"hammer": {
+		"en": "Hammer",
+		"ko": "망치",
+		"ja": "ハンマー",
+		"zh": "锤子",
+		"ba": "Молото"
+	},
+	"chisel": {
+		"en": "Chisel",
+		"ko": "끌",
+		"ja": "のみ",
+		"zh": "凿子",
+		"ba": "Долото"
+	},
+	"awl": {
+		"en": "Awl",
+		"ko": "송곳",
+		"ja": "あんぐい",
+		"zh": "锥子",
+		"ba": "Шило"
+	},
+	"sledge_hammer": {
+		"en": "Sledge hammer",
+		"ko": "양손 망치",
+		"ja": "大槌",
+		"zh": "大锤",
+		"ba": "Кувалда"
+	},
+	"shovel": {
+		"en": "Shovel",
+		"ko": "삽",
+		"ja": "シャベル",
+		"zh": "铲子",
+		"ba": "Лопата"
+	},
+	"pickaxe": {
+		"en": "Pickaxe",
+		"ko": "곡괭이",
+		"ja": "つるはし",
+		"zh": "镐头",
+		"ba": "Пикакс"
+	},
+	"crow_bar": {
+		"en": "Crow bar",
+		"ko": "쇠지레",
+		"ja": "てこ",
+		"zh": "撬棍",
+		"ba": "Крюк"
+	},
+	"blow_torch": {
+		"en": "Blow torch",
+		"ko": "블로우 토치",
+		"ja": "ブロートーチ",
+		"zh": "吹 torch",
+		"ba": "Паяльная лампа"
+	},
+	"welder": {
+		"en": "Welder",
+		"ko": "용접기",
+		"ja": "溶接機",
+		"zh": "焊机",
+		"ba": "Сварщик"
+	},
+	"drill": {
+		"en": "Drill",
+		"ko": "드릴",
+		"ja": "ドリル",
+		"zh": "钻机",
+		"ba": "Дрель"
+	},
+	"screw_driver": {
+		"en": "Screw driver",
+		"ko": "드라이버",
+		"ja": "ドライバー",
+		"zh": "螺丝刀",
+		"ba": "Отвертка"
+	},
+	"saw": {
+		"en": "Saw",
+		"ko": "톱",
+		"ja": "のこぎり",
+		"zh": "锯子",
+		"ba": "Пила"
+	},
+	"axe": {
+		"en": "Axe",
+		"ko": "도끼",
+		"ja": "斧",
+		"zh": "斧头",
+		"ba": "Топор"
+	},
+	"hand_plane": {
+		"en": "Hand plane",
+		"ko": "대패",
+		"ja": "手動かんな",
+		"zh": "手动刨子",
+		"ba": "Ручной рубанок"
+	},
+	"sand_paper": {
+		"en": "Sand paper",
+		"ko": "사포",
+		"ja": "砂布",
+		"zh": "砂纸",
+		"ba": "Шлифовальная бумага"
+	},
+	"carving_knife": {
+		"en": "Carving knife",
+		"ko": "조각 칼",
+		"ja": "彫刻刀",
+		"zh": "雕刻刀",
+		"ba": "Резной нож"
+	},
+	"spanner": {
+		"en": "Spanner",
+		"ko": "스패너",
+		"ja": "スパナ",
+		"zh": "扳手",
+		"ba": "Ключ"
+	},
+	"multi_tool": {
+		"en": "Multi-tool",
+		"ko": "멀티툴",
+		"ja": "マルチツール",
+		"zh": "多功能工具",
+		"ba": "Мультитул"
+	},
+	"anvil": {
+		"en": "Anvil",
+		"ko": "모루",
+		"ja": "金床",
+		"zh": "铁砧",
+		"ba": "Кузнечный наковальня"
+	},
+	"blast_furnace": {
+		"en": "Blast furnace",
+		"ko": "용광로",
+		"ja": "炉",
+		"zh": "熔炉",
+		"ba": "Печь"
+	},
+	"bellows": {
+		"en": "Bellows",
+		"ko": "풀무",
+		"ja": "ふいご",
+		"zh": "风箱",
+		"ba": "Меха"
+	},
+	"mold": {
+		"en": "Mold",
+		"ko": "주형틀",
+		"ja": "型",
+		"zh": "模具",
+		"ba": "Форма"
+	},
+	"blacksmith_tongs": {
+		"en": "Blacksmith tongs",
+		"ko": "부집게",
+		"ja": "鍛冶屋のトング",
+		"zh": "铁匠钳",
+		"ba": "Кузнечные клещи"
+	},
+	"file": {
+		"en": "File",
+		"ko": "쇠줄",
+		"ja": "やすり",
+		"zh": "銼刀",
+		"ba": "Напильник"
+	},
+	"spinning_wheel": {
+		"en": "Spinning wheel",
+		"ko": "물레",
+		"ja": "車輪",
+		"zh": "纺车",
+		"ba": "Прялка"
+	},
+	"loom": {
+		"en": "Loom",
+		"ko": "베틀",
+		"ja": "織機",
+		"zh": "织布机",
+		"ba": "Ткацкий станок"
+	},
+	"sewing_machine": {
+		"en": "Sewing machine",
+		"ko": "재봉틀",
+		"ja": "ミシン",
+		"zh": "缝纫机",
+		"ba": "Швейная машина"
+	},
+	"scissors": {
+		"en": "Scissors",
+		"ko": "가위",
+		"ja": "はさみ",
+		"zh": "剪刀",
+		"ba": "Ножницы"
+	},
+	"needle": {
+		"en": "Needle",
+		"ko": "바늘",
+		"ja": "針",
+		"zh": "针",
+		"ba": "Игла"
+	},
+	"flat_iron": {
+		"en": "Flat iron",
+		"ko": "다리미",
+		"ja": "アイロン",
+		"zh": "熨斗",
+		"ba": "Утюг"
+	},
+	"kitchen_knife": {
+		"en": "Kitchen knife",
+		"ko": "식칼",
+		"ja": "包丁",
+		"zh": "菜刀",
+		"ba": "Кухонный нож"
+	},
+	"cleaver": {
+		"en": "Cleaver",
+		"ko": "중식도",
+		"ja": "中華包丁",
+		"zh": "菜刀",
+		"ba": "Кливер"
+	},
+	"rice_scoop": {
+		"en": "Rice scoop",
+		"ko": "주걱",
+		"ja": "しゃもじ",
+		"zh": "饭勺",
+		"ba": "Ложка для риса"
+	},
+	"spork": {
+		"en": "Spork",
+		"ko": "식기",
+		"ja": "カトラリー",
+		"zh": "餐具",
+		"ba": "Столовый прибор"
+	},
+	"scoop": {
+		"en": "Scoop",
+		"ko": "국자",
+		"ja": "おたま",
+		"zh": "勺子",
+		"ba": "Ложка"
+	},
+	"spatula": {
+		"en": "Spatula",
+		"ko": "뒤집개",
+		"ja": "ヘラ",
+		"zh": "铲子",
+		"ba": "Шпатель"
+	},
+	"whisk": {
+		"en": "Whisk",
+		"ko": "거품기",
+		"ja": "泡立て器",
+		"zh": "打蛋器",
+		"ba": "Венчик"
+	},
+	"sifter": {
+		"en": "Sifter",
+		"ko": "체",
+		"ja": "ふるい",
+		"zh": "筛子",
+		"ba": "Сито"
+	},
+	"rolling_pin": {
+		"en": "Rolling pin",
+		"ko": "밀대",
+		"ja": "めん棒",
+		"zh": "擀面杖",
+		"ba": "Скалка"
+	},
+	"cutting_board": {
+		"en": "Cutting board",
+		"ko": "도마",
+		"ja": "まな板",
+		"zh": "切菜板",
+		"ba": "Разделочная доска"
+	},
+	"can_opener": {
+		"en": "Can opener",
+		"ko": "통조림 따개",
+		"ja": "缶切り",
+		"zh": "开罐器",
+		"ba": "Открывалка для консервов"
+	},
+	"corkscrew": {
+		"en": "Corkscrew",
+		"ko": "와인 따개",
+		"ja": "コルク抜き",
+		"zh": "开瓶器",
+		"ba": "Штопор"
+	},
+	"bowl": {
+		"en": "Bowl",
+		"ko": "사발",
+		"ja": "ボウル",
+		"zh": "大碗",
+		"ba": "Боул"
+	},
+	"frying_pan": {
+		"en": "Frying pan",
+		"ko": "후라이팬",
+		"ja": "フライパン",
+		"zh": "煎锅",
+		"ba": "Сковорода"
+	},
+	"wok": {
+		"en": "Wok",
+		"ko": "웍",
+		"ja": "中華鍋",
+		"zh": "炒锅",
+		"ba": "Вок"
+	},
+	"pot": {
+		"en": "Pot",
+		"ko": "냄비",
+		"ja": "鍋",
+		"zh": "锅",
+		"ba": "Кастрюля"
+	},
+	"meter": {
+		"en": "Meter",
+		"ko": "계량기",
+		"ja": "メーター",
+		"zh": "计量器",
+		"ba": "Измеритель"
+	},
+	"weighing_scales": {
+		"en": "Weighing scales",
+		"ko": "계량 저울",
+		"ja": "体重計",
+		"zh": "秤",
+		"ba": "Весы"
+	},
+	"burner": {
+		"en": "Burner",
+		"ko": "버너",
+		"ja": "バーナー",
+		"zh": "炉子",
+		"ba": "Плита"
+	},
+	"alcohol_stove": {
+		"en": "Alcohol stove",
+		"ko": "알코올 스토브",
+		"ja": "アルコールストーブ",
+		"zh": "酒精炉",
+		"ba": "Спиртовая горелка"
+	},
+	"blender": {
+		"en": "Blender",
+		"ko": "믹서기",
+		"ja": "ミキサー",
+		"zh": "搅拌机",
+		"ba": "Блендер"
+	},
+	"toothbrush": {
+		"en": "Toothbrush",
+		"ko": "칫솔",
+		"ja": "歯ブラシ",
+		"zh": "牙刷",
+		"ba": "Зубная щётка"
+	},
+	"toothpaste": {
+		"en": "Toothpaste",
+		"ko": "치약",
+		"ja": "歯磨き粉",
+		"zh": "牙膏",
+		"ba": "Зубная паста"
+	},
+	"nail_clipper": {
+		"en": "Nail clipper",
+		"ko": "손톱깎이",
+		"ja": "爪切り",
+		"zh": "指甲剪",
+		"ba": "Кусачки для ногтей"
+	},
+	"broom": {
+		"en": "Broom",
+		"ko": "빗자루",
+		"ja": "ほうき",
+		"zh": "扫把",
+		"ba": "Метла"
+	},
+	"dustpan": {
+		"en": "Dustpan",
+		"ko": "쓰레받기",
+		"ja": "ちり取り",
+		"zh": "簸箕",
+		"ba": "Совок"
+	},
+	"vacuum_cleaner": {
+		"en": "Vacuum cleaner",
+		"ko": "청소기",
+		"ja": "掃除機",
+		"zh": "吸尘器",
+		"ba": "Пылесос"
+	},
+	"cleaning_stick": {
+		"en": "Cleaning stick",
+		"ko": "밀대",
+		"ja": "掃除棒",
+		"zh": "清洁棒",
+		"ba": "Швабра"
+	},
+	"hoe": {
+		"en": "Hoe",
+		"ko": "호미",
+		"ja": "草取",
+		"zh": "锄头",
+		"ba": "Мотыга"
+	},
+	"sickle": {
+		"en": "Sickle",
+		"ko": "낫",
+		"ja": "鎌",
+		"zh": "镰刀",
+		"ba": "Серп"
+	},
+	"seedling_shovel": {
+		"en": "Seedling shovel",
+		"ko": "모종 삽",
+		"ja": "苗スコップ",
+		"zh": "秧铲",
+		"ba": "Случайная лопата"
+	},
+	"butterfly_net": {
+		"en": "Butterfly net",
+		"ko": "잠자리 채",
+		"ja": "捕虫網",
+		"zh": "蝴蝶网",
+		"ba": "Сетка для бабочек"
+	},
+	"watering_can": {
+		"en": "Watering can",
+		"ko": "물뿌리개",
+		"ja": "じょうろ",
+		"zh": "喷壶",
+		"ba": "Лейка"
+	},
+	"hand_pump": {
+		"en": "Siphon hand pump",
+		"ko": "손 펌프",
+		"ja": "ハンドポンプ",
+		"zh": "手动泵",
+		"ba": "Ручной насос"
+	},
+	"fishing_rod": {
+		"en": "Fishing rod",
+		"ko": "낚싯대",
+		"ja": "釣り竿",
+		"zh": "钓竿",
+		"ba": "Удилище"
+	},
+	"net": {
+		"en": "Net",
+		"ko": "그물",
+		"ja": "網",
+		"zh": "网",
+		"ba": "Сеть"
+	},
+	"fish_trap": {
+		"en": "Fish trap",
+		"ko": "통발",
+		"ja": "漁かご類",
+		"zh": "鱼陷阱",
+		"ba": "Ловушка для рыбы"
+	},
+	"harpoon": {
+		"en": "Harpoon",
+		"ko": "작살",
+		"ja": "朝鮮語",
+		"zh": "朝鲜语",
+		"ba": "Харпун"
+	},
+	"lighter": {
+		"en": "Lighter",
+		"ko": "라이터",
+		"ja": "ライター",
+		"zh": "打火機",
+		"ba": "Зажигалка"
+	},
+	"fire_steel": {
+		"en": "Fire steel",
+		"ko": "파이어 스틸",
+		"ja": "ファイヤースチール",
+		"zh": "火石",
+		"ba": "Огниво"
+	},
+	"fire_extinguisher": {
+		"en": "Fire extinguisher",
+		"ko": "소화기",
+		"ja": "消火器",
+		"zh": "灭火器",
+		"ba": "Огнетушитель порошковый"
+	},
+	"water_filter": {
+		"en": "Water filter",
+		"ko": "정수기",
+		"ja": "浄水器",
+		"zh": "净水器",
+		"ba": "Фильтр для воды"
+	},
+	"solar_panel": {
+		"en": "Solar panel",
+		"ko": "태양광 패널",
+		"ja": "太陽光電板",
+		"zh": "太阳能电池板",
+		"ba": "Солнечная панель"
+	},
+	"external_battery_pack": {
+		"en": "External battery pack",
+		"ko": "보조 배터리",
+		"ja": "モバイルバッテリー",
+		"zh": "充电宝",
+		"ba": "Внешний аккумуляторный блок"
+	},
+	"charger": {
+		"en": "Charger",
+		"ko": "충전기",
+		"ja": "充電器",
+		"zh": "充电器",
+		"ba": "Зарядные устройства"
+	},
+	"gasoline_generator": {
+		"en": "Gasoline generator",
+		"ko": "가솔린 발전기",
+		"ja": "ガソリン発電機",
+		"zh": "汽油发电机",
+		"ba": "Бензиновый генератор"
+	},
+	"wind_generator": {
+		"en": "Wind generator",
+		"ko": "풍력 발전기",
+		"ja": "風力発電機",
+		"zh": "风力发电机",
+		"ba": "Ветрогенератор"
+	},
+	"hydroelectric_generator": {
+		"en": "Hydroelectric generator",
+		"ko": "수력 발전기",
+		"ja": "水力発電機",
+		"zh": "水力发电机",
+		"ba": "Гидроэлектрогенератор"
+	},
+	"hand_crank_generator": {
+		"en": "Hand crank generator",
+		"ko": "자가 발전기",
+		"ja": "手回し発電機",
+		"zh": "手摇发电机",
+		"ba": "Ручной генератор"
+	},
+	"tent": {
+		"en": "Tent",
+		"ko": "텐트",
+		"ja": "テント",
+		"zh": "帐篷",
+		"ba": "Палатка"
+	},
+	"mosquito_net": {
+		"en": "Mosquito net",
+		"ko": "모기장",
+		"ja": "蚊帳",
+		"zh": "蚊帐",
+		"ba": "Москитная сетка"
+	},
+	"sleeping_bag": {
+		"en": "Sleeping bag",
+		"ko": "침낭",
+		"ja": "寝袋",
+		"zh": "睡袋",
+		"ba": "Спальный мешок"
+	},
+	"foam_mat": {
+		"en": "Foam mat",
+		"ko": "발포 매트",
+		"ja": "発泡マット",
+		"zh": "泡沫垫",
+		"ba": "Поролоновый коврик"
+	},
+	"radio": {
+		"en": "Radio",
+		"ko": "라디오",
+		"ja": "ラジオ",
+		"zh": "收音机",
+		"ba": "Радио"
+	},
+	"radio_transceiver": {
+		"en": "Radio transceiver",
+		"ko": "무전기",
+		"ja": "トランシーバー",
+		"zh": "無電機",
+		"ba": "Рация"
+	},
+	"whistle": {
+		"en": "Whistle",
+		"ko": "호루라기",
+		"ja": "ホイッスル",
+		"zh": "口哨",
+		"ba": "Свисток"
+	},
+	"smart_phone": {
+		"en": "Smart phone",
+		"ko": "스마트폰",
+		"ja": "スマートホン",
+		"zh": "智能手机",
+		"ba": "Смартфон"
+	},
+	"id_card": {
+		"en": "ID Card",
+		"ko": "신분증",
+		"ja": "身分証明書",
+		"zh": "身份证",
+		"ba": "Удостоверение личности"
+	},
+	"drone": {
+		"en": "Drone",
+		"ko": "드론",
+		"ja": "ドローン",
+		"zh": "无人机",
+		"ba": "Дрон"
+	}
+}

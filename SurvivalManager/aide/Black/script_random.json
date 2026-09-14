@@ -1,0 +1,562 @@
+[
+	{
+		"script": {
+			"en": "Oily foods tend to spoil easily, so it may be better to stock up on non-fried foods.",
+			"ko": "대체로 기름이 함유된 식품은 산패하기 쉬우므로, 기름에 튀기지 않은 식품 위주로 식량을 구비하는게 좋겠군요.",
+			"ja": "油分を含む食品は酸化しやすいため、揚げ物を避け、揚げていない食品を中心に食糧を準備するのが良いでしょう。",
+			"zh": "油脂含量高的食品容易变质, 因此最好以非油炸食品为主储备食物。",
+			"ba": "Жирные продукты быстро портятся, поэтому лучше запастись продуктами, не жаренными в масле."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Water made by methods such as dew traps or distilled water can lead to mineral deficiencies or electrolyte imbalance if used as drinking water for long periods. It may be a good idea to prepare salt as well.",
+			"ko": "이슬 덫 등의 방법으로 공기 중 수증기를 응축하여 만든 물이나 증류수를 장기적으로 식수로 사용할 경우, 미네랄 부족이나 전해질 불균형을 야기할 수 있으니, 이를 대비하여 소금을 구비하는건 어떨까요?",
+			"ja": "露水トラップなどの方法で空気中の水蒸気を凝縮して作った水や蒸留水は、長期間飲料水として使用するとミネラル不足や電解質不均衡を引き起こす可能性があります。そのため、塩を備えておくことをお勧めします。",
+			"zh": "通过露水捕集等方法凝聚空气中的水蒸气制造的水或蒸馏水, 长期作为饮用水使用时可能导致矿物质不足或电解质失衡。因此, 最好备有盐。",
+			"ba": "Вода, полученная с помощью таких методов, как ловушки для росы или дистиллированная вода, может вызвать дефицит минералов или электролитный дисбаланс, если использовать её в качестве питьевой воды на длительный срок. Как насчет того, чтобы подготовить соль для этого?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Most shelters designated by the government are located in the basements of large buildings, subways, and schools. These places may be usable in the short term, but since they have limited stored food and water, additional planning seems necessary for long-term survival.",
+			"ko": "국가에서 지정한 대피소는 대부분 대형 건물 지하, 지하철, 학교더군요. 이런 곳은 단기적으로는 사용할 수 있겠으나, 비축된 식량과 물이 적으므로, 장기 생존을 위해서는 부가적인 계획이 필요할 것 같군요.",
+			"ja": "政府が指定した避難所の多くは、大規模建物の地下や地下鉄、学校にあります。こうした場所は短期間なら利用できるものの、備蓄されている食料や水が少ないため、長期的に生存するには追加の計画が必要だと思われます。",
+			"zh": "政府指定的避难所大多位于大型建筑的地下、地铁以及学校。这些地方在短期内可以使用，但由于储备的食物和水较少，为了长期生存似乎需要额外的计划。",
+			"ba": "Большинство укрытий, назначенных государством, находятся в подвалах крупных зданий, в метро и в школах. Такие места могут использоваться в краткосрочной перспективе, но из-за ограниченных запасов пищи и воды для долгосрочного выживания требуется дополнительное планирование."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "If there are members with chronic illnesses, it might be a good idea to know the ingredients of the medicine they usually take and locate nearby pharmacies.",
+			"ko": "지병이 있는 구성원이 있다면 평소 먹는 약의 성분과, 근방에 위치한 약 판매처를 알아두시는 것도 좋습니다.",
+			"ja": "病歴があるメンバーがいる場合、普段服用している薬の成分と、近くの薬局を確認しておくことが良いかもしれません。",
+			"zh": "如果有成员有慢性病, 了解他们通常服用的药物成分和附近的药品商店可能是个好主意。",
+			"ba": "Если среди членов группы есть люди с хроническими заболеваниями, будет полезно знать состав препаратов, которые они обычно принимают, а также расположение ближайших аптек."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Knowledge is the most valuable resource in a disaster situation. Once the internet is cut off, knowledge becomes extremely difficult to obtain.",
+			"ko": "지식은 재난 상황에서 가장 가치 있는 자원이라고 생각합니다. 인터넷이 끊어지면, 지식은 정말 얻기 어려워 지니까요.",
+			"ja": "知識は災害時に最も価値のある資源だと思います。インターネットが切断されると、知識を得ることが非常に難しくなります。",
+			"zh": "我认为知识是灾难情况下最有价值的资源。一旦互联网中断, 知识变得非常难以获得。",
+			"ba": "Я думаю, что знания — это самый ценный ресурс в условиях катастрофы. Когда интернет будет отключен, знания станут крайне труднодоступными."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "As you prepare disaster supplies, are you also building the 'strength' to protect them?",
+			"ko": "재난 대비용 물자를 챙기면서, 물자를 지킬 '힘'도 같이 기르고 계신가요?",
+			"ja": "災害備蓄品を用意しながら、その備蓄品を守る『力』も鍛えていますか?",
+			"zh": "在准备灾难物资的同时, 您是否也在锻炼保护这些物资的“力量”?",
+			"ba": "Готовя запасы на случай бедствий, вы также развиваете 'силу', чтобы их защитить?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Fire leaves traces behind, but water leaves no trace at all. It seems like it would be a good idea to check not only fire extinguishers but also drainage systems in advance.",
+			"ko": "불이 지나간 자리는 흔적이 남지만, 물이 지나간 자리는 흔적조차 남지 않는다고 해요. 소화기뿐만 아니라 배수 시설도 미리 점검하는 것이 좋을 것 같네요.",
+			"ja": "火事の後には痕跡が残りますが、水の後には痕跡すら残りません。消火器だけでなく、排水施設も事前に点検しておいた方が良さそうですね。",
+			"zh": "火灾过后会留下痕迹, 但水流过后却没有任何痕迹。我觉得最好提前检查灭火器以及排水设施。",
+			"ba": "Пожар оставляет следы, но после воды не остается даже следа. Думаю, что важно проверять не только огнетушители, но и системы водоотведения заранее."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "In the event of a disaster, I believe the most important thing is the will to survive. After that, it doesn’t matter whether it’s knowledge, physical strength, or skills—anything goes.",
+			"ko": "재난이 발생할 경우, 가장 중요한 것은 살아남고자 하는 의지라고 생각합니다. 그다음으로는 지식, 체력, 기술 등 무엇이 오더라도 상관 없을 거예요.",
+			"ja": "災害が発生した場合、最も重要なのは生き残りたいという意志だと思います。その次に、知識、体力、技術など、何が来ても構わないでしょう。",
+			"zh": "在灾难发生时, 我认为最重要的是生存的意志。接下来无论是知识、体力还是技能，都没有什么关系。",
+			"ba": "Когда происходит бедствие, я думаю, что самое важное — это желание выжить. А дальше уже не важно, что идет следом, будь то знания, сила или навыки."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "If the disaster situation seems likely to last for an extended period, it’s a good idea to cut your hair short.",
+			"ko": "혹시라도 재난 상황이 장기화 될 것 같을 경우, 머리를 짧게 깎는 것이 좋습니다.",
+			"ja": "もし災害の状況が長引きそうな場合は、髪を短く切る方が良いでしょう。",
+			"zh": "如果灾难情况可能会持续较长时间, 最好把头发剪短。",
+			"ba": "Если ситуация с бедствием может затянуться, лучше подстричь волосы коротко."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "If you’ve foraged mushrooms in the mountains and are not an expert, it’s best to use them only as kindling.",
+			"ko": "산에서 버섯을 채취하였을 경우, 전문가가 아니라면 땔감으로만 사용하는 것이 좋다고 하네요.",
+			"ja": "山でキノコを採取した場合、専門家でない限り、火を起こすための薪としてのみ使う方が良いそうです。",
+			"zh": "如果在山里采了蘑菇, 除非是专家, 否则最好只用作生火的柴火。",
+			"ba": "Если вы собрали грибы в лесу и не являетесь экспертом, лучше использовать их только для растопки."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Are you making good use of your knowledge folder? If you have internet access, it seems like you can download knowledge information created by others.",
+			"ko": "지식 문서함은 잘 활용하고 계신가요? 인터넷이 된다면 다른 사람이 작성한 지식 정보도 다운로드 가능한 것 같더군요.",
+			"ja": "知識文書フォルダをうまく活用していますか? インターネットに接続できるなら、他の人が作成した知識情報もダウンロードできるようです。",
+			"zh": "你在好好利用知识文档夹吗? 如果有互联网连接, 似乎可以下载其他人写的知识信息。",
+			"ba": "Вы хорошо используете папку с знаниями? Если есть доступ в интернет, кажется, можно скачать информацию, написанную другими людьми."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "If cockroaches, booklice, or mold are frequently spotted, it indicates high humidity, so it’s a good idea to place a moisture absorber in the container with your emergency food.",
+			"ko": "바퀴벌레, 곱등이, 곰팡이가 자주 목격된다면 습기가 많다는 의미이므로, 비상 식량을 넣어둔 용기에 습기 제거제를 함께 넣어 두시는 것이 좋습니다.",
+			"ja": "ゴキブリやムカデ、カビがよく見かける場合、湿気が多いことを意味するので、非常食を入れている容器に湿気取りも一緒に入れておくと良いでしょう。",
+			"zh": "如果经常看到蟑螂、书虱或霉菌, 这意味着湿气较重, 因此建议在储存应急食物的容器中也放入除湿剂。",
+			"ba": "Если вы часто встречаете тараканов, гнилых жуков или плесень, это означает, что в помещении слишком влажно, поэтому рекомендуется положить в контейнер с запасом пищи также средство для удаления влаги."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Do not tell anyone that you are preparing for a disaster. In a real disaster, unwanted guests may arrive seeking your resources.",
+			"ko": "재난을 대비 중인 사실을 누구에게도 알려주지 마세요. 실제 재난 상황 시, 리더의 자원을 노리는 원치 않는 손님이 찾아올 수도 있습니다.",
+			"ja": "災害の準備をしていることを誰にも伝えないでください。実際の災害時には、リーダーの資源を狙う望ましくない訪問者が来る可能性があります。",
+			"zh": "不要告诉任何人你正在为灾难做准备。在实际灾难情况下, 可能会有不请自来的客人来寻求你的资源。",
+			"ba": "Не сообщайте никому, что вы готовитесь к катастрофе. В реальной катастрофе могут появиться нежелательные гости, желающие завладеть вашими ресурсами."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "In a power outage, a refrigerator keeps food safe for about 4 hours, and a full freezer for about 48 hours. The less you open the door, the longer it lasts.",
+			"ko": "정전 시 냉장실은 약 4시간, 가득 찬 냉동실은 약 48시간 정도 식품을 보존할 수 있다고 합니다. 문을 여는 횟수를 줄일수록 그 시간은 길어지죠.",
+			"ja": "停電時、冷蔵室は約4時間、満杯の冷凍室は約48時間ほど食品を保存できるそうです。扉を開ける回数を減らすほど、その時間は延びます。",
+			"zh": "停电时, 冷藏室大约能保存食物4小时, 装满的冷冻室约48小时。开门次数越少, 保存时间越长。",
+			"ba": "При отключении электричества холодильник сохраняет продукты около 4 часов, а полная морозильная камера — около 48 часов. Чем реже открывать дверцу, тем дольше они хранятся."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "During an earthquake, taking cover under a sturdy table is basic. But opening a door first to secure an exit is just as important—door frames can warp and trap you inside.",
+			"ko": "지진 시 튼튼한 탁자 아래로 몸을 피하는 것은 기본입니다만, 문을 먼저 열어 출구를 확보하는 것도 그만큼 중요합니다. 문틀이 뒤틀리면 안에 갇힐 수 있으니까요.",
+			"ja": "地震の際、頑丈なテーブルの下に身を隠すのは基本ですが、先にドアを開けて出口を確保することも同じくらい重要です。ドア枠が歪むと中に閉じ込められる恐れがあります。",
+			"zh": "地震时躲到坚固的桌子下是基本常识, 但先打开门确保出口同样重要。门框一旦变形, 可能会被困在里面。",
+			"ba": "Во время землетрясения укрыться под прочным столом — это основа. Но не менее важно сначала открыть дверь, чтобы обеспечить выход: дверная рама может деформироваться и запереть вас внутри."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "When the internet goes down, a hand-crank radio becomes the most reliable source of information. Batteries run out, but arms do not—at least not as quickly.",
+			"ko": "인터넷이 끊기면 수동 발전 라디오가 가장 신뢰할 수 있는 정보원이 됩니다. 건전지는 닳지만, 팔은... 적어도 그보다는 오래 가니까요.",
+			"ja": "インターネットが途絶えた場合、手回し発電ラジオが最も信頼できる情報源になります。電池は切れますが、腕は…少なくともそれよりは長く持ちますから。",
+			"zh": "互联网中断时, 手摇发电收音机将成为最可靠的信息来源。电池会耗尽, 但手臂……至少比电池耐用。",
+			"ba": "Когда интернет отключается, радио с ручным генератором становится самым надёжным источником информации. Батарейки садятся, а руки — по крайней мере, не так быстро."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "The recommended water reserve is about 4 liters per person per day—2 for drinking, 2 for hygiene. People often prepare only drinking water and overlook sanitation.",
+			"ko": "권장 물 비축량은 1인당 하루 약 4리터입니다. 음용수 2리터, 위생용 2리터죠. 다들 마실 물만 준비하고 위생용 물은 간과하시더군요.",
+			"ja": "推奨される水の備蓄量は1人1日あたり約4リットルです。飲用に2リットル、衛生用に2リットル。皆さん飲み水だけ準備して、衛生用の水を見落としがちです。",
+			"zh": "建议的储水量为每人每天约4升——饮用2升, 卫生用2升。人们往往只准备饮用水, 而忽视了卫生用水。",
+			"ba": "Рекомендуемый запас воды — около 4 литров на человека в день: 2 для питья, 2 для гигиены. Люди часто готовят только питьевую воду и забывают о санитарии."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "In a blackout, card payments stop working. Keeping some cash in small bills could prove useful—large bills are hard to get change for in chaos.",
+			"ko": "정전이 되면 카드 결제는 무용지물이 됩니다. 현금을 소액권으로 준비해 두시는 게 좋습니다. 혼란 속에서 고액권은 거스름돈을 받기 어려우니까요.",
+			"ja": "停電になるとカード決済は使えなくなります。現金を小額紙幣で用意しておくと良いでしょう。混乱の中では高額紙幣のお釣りをもらうのが難しいですから。",
+			"zh": "停电时刷卡支付将无法使用。最好准备一些小面额现金——混乱中大面额纸币很难找零。",
+			"ba": "При отключении электричества оплата картой перестаёт работать. Полезно держать наличные мелкими купюрами — в хаосе с крупных купюр трудно получить сдачу."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "A whistle can signal for rescue far longer than your voice. Shouting exhausts you in minutes; a whistle costs almost nothing in stamina.",
+			"ko": "호루라기는 목소리보다 훨씬 오래 구조 신호를 보낼 수 있습니다. 소리를 지르면 몇 분 만에 지치지만, 호루라기는 체력 소모가 거의 없죠.",
+			"ja": "ホイッスルは声よりもはるかに長く救助信号を送ることができます。叫べば数分で疲れ果てますが、ホイッスルは体力の消耗がほとんどありません。",
+			"zh": "哨子发出的求救信号能比嗓音持续得更久。喊叫几分钟就会筋疲力尽, 而吹哨几乎不消耗体力。",
+			"ba": "Свисток может подавать сигнал о спасении гораздо дольше, чем голос. Крик изматывает за считанные минуты, а свисток почти не требует сил."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Keeping a pair of shoes by your bed is a small habit with great value. After an earthquake, the floor is often covered in glass shards.",
+			"ko": "머리맡에 신발을 두는 것은 사소하지만 가치 있는 습관입니다. 지진 이후의 바닥은 대개 유리 파편으로 덮여 있으니까요.",
+			"ja": "枕元に靴を置いておくのは、些細ですが価値のある習慣です。地震の後の床は、たいていガラスの破片で覆われていますから。",
+			"zh": "在床头放一双鞋是个微小却很有价值的习惯。地震过后, 地板上往往布满玻璃碎片。",
+			"ba": "Держать пару обуви у кровати — маленькая привычка с большой пользой. После землетрясения пол часто усыпан осколками стекла."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "It would be wise to keep waterproof copies of IDs, insurance papers, and medical records. Proving who you are becomes surprisingly difficult after a disaster.",
+			"ko": "신분증, 보험 증서, 진료 기록의 사본을 방수 처리하여 보관해 두시길 권합니다. 재난 이후에는 자신이 누구인지 증명하는 일이 의외로 어려워지거든요.",
+			"ja": "身分証、保険証書、診療記録のコピーを防水加工して保管しておくことをお勧めします。災害の後、自分が誰であるかを証明するのは意外と難しくなるものです。",
+			"zh": "建议将身份证、保险单和医疗记录的副本做防水处理保存。灾难过后, 证明自己的身份会变得出乎意料地困难。",
+			"ba": "Разумно хранить водонепроницаемые копии документов: удостоверения личности, страховок, медицинских записей. После катастрофы доказать, кто вы, становится на удивление трудно."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "I recommend never letting your vehicle's fuel drop below half. When a disaster strikes, gas stations are the first places to be emptied—or abandoned.",
+			"ko": "차량 연료는 절반 이하로 떨어뜨리지 않는 것을 권합니다. 재난이 터지면 주유소는 가장 먼저 비워지거나... 버려지는 곳이니까요.",
+			"ja": "車の燃料は半分以下にしないことをお勧めします。災害が起きれば、ガソリンスタンドは真っ先に空になるか…放棄される場所ですから。",
+			"zh": "建议车辆油量不要低于一半。灾难来临时, 加油站是最先被抽空——或被遗弃的地方。",
+			"ba": "Рекомендую не допускать, чтобы топливо в автомобиле опускалось ниже половины бака. Когда случается бедствие, заправки пустеют — или их бросают — первыми."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Duct tape can repair shoes, seal windows, splint fingers, and patch tents. Few items offer this much utility per gram. I suggest keeping a roll in every bag.",
+			"ko": "덕트 테이프는 신발 수선, 창문 밀폐, 손가락 부목, 텐트 수리까지 가능합니다. 그램당 이만한 활용도를 가진 물건은 드물죠. 가방마다 하나씩 넣어 두시길 권합니다.",
+			"ja": "ダクトテープは靴の修理、窓の密閉、指の添え木、テントの補修まで可能です。グラムあたりこれほどの有用性を持つ物は稀です。バッグごとに1つ入れておくことをお勧めします。",
+			"zh": "布基胶带可以修鞋、密封窗户、固定手指、修补帐篷。很少有物品每克能提供这么多用途。建议每个包里都放一卷。",
+			"ba": "Армированный скотч может починить обувь, загерметизировать окна, зафиксировать палец, залатать палатку. Мало какие предметы дают столько пользы на грамм веса. Советую держать по рулону в каждой сумке."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Building good relations with neighbors is a survival strategy—they are the first rescuers in any disaster. However, the size of your stockpile should remain your secret.",
+			"ko": "이웃과 좋은 관계를 맺는 것은 좋은 생존 전략입니다. 어떤 재난에서든 최초의 구조자는 이웃이니까요. 다만... 비축량의 규모는 리더만의 비밀로 남겨 두시죠.",
+			"ja": "隣人と良好な関係を築くことは生存戦略です。どんな災害でも最初の救助者は隣人ですから。ただし…備蓄の規模はリーダーだけの秘密にしておきましょう。",
+			"zh": "与邻居建立良好关系是一种生存策略——在任何灾难中, 最先施救的都是邻居。不过……储备的规模还是只让领导自己知道吧。",
+			"ba": "Хорошие отношения с соседями — это стратегия выживания: при любом бедствии первыми спасателями становятся именно они. Однако размер ваших запасов пусть останется вашей тайной."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "In an actual disaster, the mind freezes before the body does. Repeated drills exist to let the body move on its own when thinking becomes impossible.",
+			"ko": "실제 재난 상황에서는 몸보다 정신이 먼저 굳어 버립니다. 반복 훈련이란, 사고가 불가능해진 순간에 몸이 스스로 움직이게 하기 위해 존재하는 것이죠.",
+			"ja": "実際の災害では、体よりも先に思考が固まってしまいます。反復訓練とは、考えることが不可能になった瞬間に体が勝手に動くようにするために存在するのです。",
+			"zh": "在真正的灾难中, 思维会比身体先僵住。反复演练的意义, 就在于让身体在无法思考的瞬间自行行动。",
+			"ba": "В реальной катастрофе разум замирает раньше тела. Повторяющиеся тренировки существуют для того, чтобы тело двигалось само, когда думать уже невозможно."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Emergency bags need seasonal maintenance. Summer clothes in a winter blizzard offer little comfort. I recommend swapping the contents every six months.",
+			"ko": "비상 가방은 계절에 따른 정비가 필요합니다. 한겨울 눈보라 속에서 여름옷은 별 위안이 되지 못하니까요. 6개월마다 내용물을 교체하시길 권합니다.",
+			"ja": "非常用バッグは季節ごとのメンテナンスが必要です。真冬の吹雪の中で夏服はほとんど役に立ちませんから。半年ごとに中身を入れ替えることをお勧めします。",
+			"zh": "应急包需要按季节维护。寒冬暴雪中, 夏装起不了什么作用。建议每六个月更换一次包内物品。",
+			"ba": "Тревожный чемоданчик требует сезонного обслуживания. Летняя одежда в зимнюю метель мало утешает. Рекомендую обновлять содержимое каждые полгода."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "If water is suspect, boiling it for one full minute removes most pathogens. Unscented household bleach, two drops per liter, also works—though I imagine the taste requires some resolve.",
+			"ko": "물이 의심스럽다면 1분간 완전히 끓이는 것으로 대부분의 병원균을 제거할 수 있습니다. 무향 표백제를 리터당 두 방울 넣는 방법도 있습니다만... 그 맛은 다소의 각오가 필요할 겁니다.",
+			"ja": "水が疑わしい場合、1分間しっかり沸騰させれば大半の病原菌を除去できます。無香料の漂白剤を1リットルあたり2滴入れる方法もありますが…その味には多少の覚悟が必要でしょう。",
+			"zh": "如果水源可疑, 完全煮沸一分钟可以消灭大部分病原体。每升水加两滴无香型漂白剂也可以——不过那味道恐怕需要些决心。",
+			"ba": "Если вода вызывает сомнения, кипячение в течение одной минуты уничтожает большинство патогенов. Также подойдёт хлорный отбеливатель без запаха — две капли на литр, хотя, полагаю, вкус потребует некоторой решимости."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "I suggest planning at least two evacuation routes out of the city. When disaster strikes, main roads become parking lots within the hour.",
+			"ko": "도시를 벗어나는 대피 경로를 최소 두 개는 계획해 두시길 권합니다. 재난이 터지면 주요 도로는 한 시간 안에 거대한 주차장이 되어 버리니까요.",
+			"ja": "都市を離れる避難経路を最低でも2つは計画しておくことをお勧めします。災害が起きれば、主要道路は1時間以内に巨大な駐車場と化しますから。",
+			"zh": "建议至少规划两条撤出城市的路线。灾难发生后, 主干道会在一小时内变成巨大的停车场。",
+			"ba": "Советую спланировать как минимум два маршрута эвакуации из города. Когда случается бедствие, главные дороги за час превращаются в гигантскую парковку."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	}
+]

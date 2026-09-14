@@ -1,0 +1,268 @@
+[
+	{
+		"script": {
+			"en": "The best self-defense technique… is avoiding situations that require self-defense, don't you think~? Compared to the outside, the inside of a blanket is quite safe~",
+			"ko": "최고의 호신술이란... 호신술이 필요한 상황 자체를 피하는 것이 아닐까요~? 바깥보다는 역시 이불 속이 안전하죠~",
+			"ja": "最高の護身術とは…護身術が必要な状況そのものを避けることじゃないでしょうか~? 外よりもやっぱりお布団の中が安全ですよねぇ~",
+			"zh": "最强的护身术……难道不就是避开需要护身术的情况本身吗~? 比起外面, 还是被窝里最安全~",
+			"ba": "Лучший приём самообороны… это избегать ситуаций, где нужна самооборона, вам не кажется~? По сравнению с улицей под одеялом весьма безопасно~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "No guideline guarantees 100% survival in an emergency~ Variables can't be predicted, and the unpredictable breeds fear… so how about keeping your tools and plans as simple as possible~?",
+			"ko": "그 어떠한 가이드라인도 긴급 상황에서 100% 생존을 보장해 주지 않는다죠~ 변수는 예측할 수 없고, 예측할 수 없는 것은 공포를 일으킨다고 하니, 생존 도구든 계획이든 최대한 단순함을 유지하는 것은 어떨까요~?",
+			"ja": "どんなガイドラインも緊急時に100%の生存を保証してはくれないそうです~ 変数は予測できず、予測できないものは恐怖を生むと言いますから、生存道具も計画も、できるだけシンプルに保つのはどうでしょう~?",
+			"zh": "任何指南都无法保证紧急情况下100%生存~ 变数无法预测, 而无法预测的东西会引发恐惧, 所以无论是求生工具还是计划, 尽量保持简单怎么样~?",
+			"ba": "Ни одно руководство не гарантирует 100% выживания в чрезвычайной ситуации~ Переменные непредсказуемы, а непредсказуемое рождает страх… так может, держать и снаряжение, и планы максимально простыми~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "They say there are three things in this world that defy prediction~ Human nature, Mother Nature… and Gray's thick steel crowbar…",
+			"ko": "세상에는 예측하기 힘든 상황이 세 가지가 있다고 하죠~ 인간의 본성과 대자연, 그리고 Gray의 두꺼운 쇠지레...",
+			"ja": "世の中には予測しがたいものが3つあると言いますねぇ~ 人間の本性と大自然、そしてグレーの分厚いバール…",
+			"zh": "都说这世上有三样东西难以预测~ 人性、大自然, 还有灰那根粗壮的撬棍……",
+			"ba": "Говорят, в мире есть три вещи, не поддающиеся предсказанию~ Человеческая природа, мать-природа… и толстый лом Грея…"
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Have you chatted with Gray~? 'Hoarding gear you don't even need only distances you from the duty of owning your own survival.' Ooh… I think they secretly study cool lines~",
+			"ko": "Gray씨와 대화 나누어 보셨나요~? '필요도 없는 장비를 잔뜩 사 모으는 건 자신의 생명은 스스로 책임져야 한다는 사명에서 멀어질 수밖에 없다.' 크... 멋진 말 연구라도 하시는 것 같아요~",
+			"ja": "Grayさんとお話ししたことありますか~? 『必要もない装備を買い集めるのは、自分の命は自分で責任を持つという使命から遠ざかるだけだ』。くぅ…かっこいい台詞の研究でもしてるみたいですよねぇ~",
+			"zh": "你和Gray聊过吗~? “囤积根本不需要的装备, 只会让你远离对自己生命负责的使命。” 咕……感觉那位好像在偷偷研究帅气台词~",
+			"ba": "Вы беседовали с Греем~? «Скупать снаряжение, которое не нужно, — значит отдаляться от долга самому отвечать за свою жизнь». Ух… по-моему, там втайне изучают эффектные фразы~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Survivors like Gray, who never stop trying to save the world, can burst from stress unless they're made to rest~ …I suppose I should go brew some cocoa, then~?",
+			"ko": "Gray씨처럼 쉬지 않고 세상을 구하려고 하는 생존자들은 억지로라도 휴식을 취하지 않으면 안에서 스트레스가 폭발할 수도 있어요~ ...역시 제가 코코아라도 타 드려야겠죠~?",
+			"ja": "Grayさんみたいに休まず世界を救おうとするサバイバーは、無理にでも休息を取らないと、内側でストレスが爆発しちゃうかもしれません~ …やっぱり私がココアでも入れてあげるべきですかねぇ~?",
+			"zh": "像Gray那样不停拯救世界的幸存者, 如果不强制休息, 压力可能会在体内爆发哦~ ……看来还是得由我去冲杯可可了吧~?",
+			"ba": "Выжившие вроде Грея, что без остановки спасают мир, могут взорваться от стресса, если их не заставить отдохнуть~ …Видимо, пойду заварю какао, да~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Thinking positively takes just as much effort as thinking negatively~ But the former gives you far more energy back than the latter~",
+			"ko": "긍정적으로 생각하는 데는 부정적으로 생각하는 것만큼의 노력이 필요하죠~ 그래도 전자는 후자보다 더 많은 에너지를 가져다줘요~",
+			"ja": "ポジティブに考えるのには、ネガティブに考えるのと同じくらいの努力が必要なんです~ でも前者は後者より、ずっと多くのエネルギーを返してくれますよ~",
+			"zh": "积极思考所需的努力和消极思考一样多~ 但前者能带给你的能量远比后者多~",
+			"ba": "Думать позитивно требует не меньше усилий, чем думать негативно~ Но первое возвращает куда больше энергии, чем второе~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "What you want and what you truly need are entirely different things~ The luxuries of modern civilization make it hard to tell them apart… surrounded by ads insisting you must buy happiness, focusing on true necessities has become quite the challenge~",
+			"ko": "원하는 것과 꼭 필요한 것은 엄연히 다르다죠~ 현대 문명이 제공하는 사치 때문에 진정 필요한 것이 무엇인지 결정하기 힘들어졌기도 하고요~ 행복해지려면 꼭 사야만 한다는 과장된 광고에 둘러싸여, 꼭 필요한 것에만 집중하기가 힘들어진 것 같네요~",
+			"ja": "欲しいものと本当に必要なものは、はっきり違うんですよねぇ~ 現代文明が与えてくれる贅沢のせいで、本当に必要なものを見極めるのが難しくなりましたし~ 幸せになるには買わなきゃいけない、なんて誇張された広告に囲まれて、本当に必要なものに集中するのが大変になった気がします~",
+			"zh": "想要的和真正需要的, 是截然不同的两回事~ 现代文明提供的奢侈让人难以判断什么才是真正必需的~ 被“想幸福就必须买”的夸张广告包围着, 专注于真正必要的东西变得好难~",
+			"ba": "Желаемое и действительно необходимое — совершенно разные вещи~ Роскошь современной цивилизации мешает понять, что нужно на самом деле… в окружении рекламы, твердящей, что счастье нужно купить, сосредоточиться на действительно необходимом стало непросто~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Whatever fills your disaster-prep list, leader, never forget the one fixed requirement: keeping your body at 36.5 degrees~",
+			"ko": "리더의 재난 준비 목록이 어떤 내용으로 채워지든, 체온을 36.5℃로 유지해야 한다는 사실을 잊지 말아요~",
+			"ja": "リーダーの災害準備リストがどんな内容で埋まっても、体温を36.5℃に保たなきゃいけないという事実だけは忘れないでくださいね~",
+			"zh": "无论领导的防灾清单上填了什么, 都别忘了一个固定前提: 体温要维持在36.5℃~",
+			"ba": "Чем бы ни был заполнен ваш список подготовки к бедствиям, лидер, не забывайте одно неизменное требование: держать температуру тела на отметке 36,5°C~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Have you heard the saying, 'the more you know, the less you need'~? It's an Aboriginal Australian proverb. A good excuse to fill up the knowledge folder, don't you think~?",
+			"ko": "많이 알수록 적게 필요해진다는 말을 들어 보셨나요~? 호주 원주민들 사이 속담인데, 이참에 지식 문서함을 채워 나가시는 건 어떨까요~?",
+			"ja": "『多く知るほど、必要なものは少なくなる』という言葉を聞いたことありますか~? オーストラリア先住民の間のことわざなんですが、この機会に知識文書フォルダを埋めていくのはどうでしょう~?",
+			"zh": "听过“懂得越多, 需要越少”这句话吗~? 这是澳大利亚原住民的谚语。趁这个机会把知识文档夹填满怎么样~?",
+			"ba": "Слышали поговорку «чем больше знаешь, тем меньше нужно»~? Это пословица австралийских аборигенов. Хороший повод пополнить папку знаний, не находите~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "If you can't give up on taste, how about researching ingredients and recipes that stay delicious after the power goes out~? Historically, spices were the most profitable trade goods on Earth… so, something like pepper~?",
+			"ko": "맛을 포기할 수 없다면, 전기가 끊긴 뒤에도 맛있게 먹을 수 있는 재료와 요리법을 찾아보시는 건 어떨까요~? 역사적으로 향신료는 지구상에서 가장 이윤을 많이 남긴 거래 품목이었으니, 후추 같은 건 어때요~?",
+			"ja": "味を諦められないなら、電気が止まった後でも美味しく食べられる食材とレシピを探してみるのはどうでしょう~? 歴史的に香辛料は地球上でいちばん利益を残した交易品でしたから、胡椒なんてどうです~?",
+			"zh": "如果无法放弃美味, 那就研究一下停电后也能吃得美味的食材和菜谱怎么样~? 历史上香料曾是地球上利润最高的贸易品, 所以……胡椒之类的如何~?",
+			"ba": "Если не можете отказаться от вкуса, может, поискать продукты и рецепты, что остаются вкусными и после отключения электричества~? Исторически специи были самым прибыльным товаром на Земле… так что, может, перец~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Most bugs and insects become fine protein sources once cooked~ Roast them crisp, grind or crush them, and add them to food for proper protein intake~ Of course… if you want the whole family to enjoy dinner, simply don't mention what you did today~",
+			"ko": "대부분의 벌레, 곤충은 조리만 하면 훌륭한 단백질 공급원이라죠~? 바짝 구운 뒤, 갈거나 빻은 후 음식에 첨가해서 먹으면 적절한 단백질 섭취가 된다네요~ 물론... 가족 모두 즐거운 식사를 원한다면, 리더가 오늘 무엇을 했는지 말하지만 않으면 됩니다아~",
+			"ja": "ほとんどの虫や昆虫は、調理さえすれば立派なタンパク源になるそうですよ~? カリカリに焼いて、すり潰すか砕いてから料理に加えれば、適切なタンパク質摂取になるんですって~ もちろん…家族みんなで楽しい食事をしたいなら、リーダーが今日何をしたか言わなければいいだけです~",
+			"zh": "大部分虫子只要经过烹饪就是优质的蛋白质来源哦~? 烤脆之后磨碎或捣碎, 加进食物里就能摄取适量蛋白质~ 当然……如果想让全家人愉快用餐, 只要别说出领导今天做了什么就行啦~",
+			"ba": "Большинство жуков и насекомых после готовки становятся отличным источником белка~ Обжарьте до хруста, перемелите или растолките и добавьте в еду — вот вам и белок~ Конечно… если хотите, чтобы вся семья наслаждалась ужином, просто не рассказывайте, чем вы сегодня занимались~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader, your face says you've been running nonstop~ When tangled thoughts won't unravel, sleeping on it first is a valid strategy… the brain files away the day while you rest, you know~ Shall we think again after a nap~?",
+			"ko": "엉킨 생각이 안 풀릴 땐, 일단 자고 나서 생각하는 것도 어엿한 전략이랍니다... 자는 동안 뇌가 하루를 정리해 주거든요~ 한숨 자고 다시 생각해 볼까요~?",
+			"ja": "リーダー、顔に『休まず走ってきました』って書いてありますよ~ 絡まった考えがほどけない時は、まず寝てから考えるのも立派な戦略です…寝ている間に脳が一日を整理してくれるんですから~ ひと眠りしてから考え直しましょうか~?",
+			"zh": "领导, 你脸上写着“一直在不停奔跑”~ 想不通的时候, 先睡一觉再想也是正经的战略……睡觉时大脑会帮你整理这一天~ 要不要睡一觉再想~?",
+			"ba": "Лидер, у вас на лице написано «бежал без остановки»~ Когда спутанные мысли не распутываются, сначала выспаться — вполне законная стратегия… во сне мозг раскладывает день по полочкам~ Может, подумаем заново после сна~?"
+		},
+		"need_state_key": "STRESS",
+		"need_state_min_value": 25,
+		"update_state_key": "STRESS",
+		"update_state_operator": "SUB",
+		"update_state_value": 8,
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Two p.m.~ The napping golden hour has arrived~ A twenty-minute nap sharpens focus and judgment, you know~ Consider this an official recommendation… from a certified expert~",
+			"ko": "오후 2시예요~ 낮잠의 골든 타임이 도래했습니다~ 20분의 낮잠은 집중력과 판단력을 갈고닦아 준다죠~ 공인 전문가의... 공식 권고라고 생각해 주세요~",
+			"ja": "午後2時ですよ~ お昼寝のゴールデンタイムが到来しました~ 20分のお昼寝は集中力と判断力を磨いてくれるんですって~ 公認専門家の…公式勧告だと思ってくださいね~",
+			"zh": "下午2点了~ 午睡的黄金时段到来了~ 20分钟的午睡能磨砺专注力和判断力~ 请把这当作持证专家的……官方建议~",
+			"ba": "Два часа дня~ Наступил золотой час дневного сна~ Двадцатиминутный сон оттачивает концентрацию и рассудительность~ Считайте это официальной рекомендацией… сертифицированного эксперта~"
+		},
+		"active_time": "14:00",
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	}
+]

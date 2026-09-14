@@ -1,0 +1,26 @@
+{
+	"name": {
+		"en": "Gray",
+		"ko": "그레이",
+		"ja": "グレー", 
+		"zh": "灰", 
+		"ba": "Серый"
+	},
+	"version": 1.0,
+	"thumbnail_image_id": 1,
+	"chatting_profile_image_id": 4,
+	"illustrator": "GoldBigDragon",
+	"illustrator_homepage": "https://goldbigdragon.github.io/",
+	"voice": {
+		"en": null,
+		"en_homepage": null,
+		"ko": null,
+		"ko_homepage": null,
+		"ja": null,
+		"ja_homepage": null,
+		"zh": null,
+		"zh_homepage": null,
+		"ba": null,
+		"ba_homepage": null
+	}
+}

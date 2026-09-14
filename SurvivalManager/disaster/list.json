@@ -1,0 +1,1301 @@
+{
+	"Alert": {
+		"category": {
+			"en": "War",
+			"ko": "전쟁",
+			"ja": "戦争",
+			"zh": "战争",
+			"ba": "Война"
+		},
+		"name": {
+			"en": "Alert",
+			"ko": "경보",
+			"ja": "警報",
+			"zh": "警报",
+			"ba": "Тревога"
+		},
+		"files": [
+			"./Alert/0001.en.md",
+			"./Alert/0001.ko.md",
+			"./Alert/0001.ja.md",
+			"./Alert/0001.zh.md",
+			"./Alert/0001.ba.md",
+			"./Alert/prepare_item_list.json",
+			"./Alert/media/1.png",
+			"./Alert/media/2.png",
+			"./Alert/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "alert"
+		}
+	},
+	"Shelling": {
+		"category": {
+			"en": "War",
+			"ko": "전쟁",
+			"ja": "戦争",
+			"zh": "战争",
+			"ba": "Война"
+		},
+		"name": {
+			"en": "Shelling",
+			"ko": "포격",
+			"ja": "砲撃",
+			"zh": "炮击",
+			"ba": "Обстрел"
+		},
+		"files": [
+			"./Shelling/0001.en.md",
+			"./Shelling/0001.ko.md",
+			"./Shelling/0001.ja.md",
+			"./Shelling/0001.zh.md",
+			"./Shelling/0001.ba.md",
+			"./Shelling/prepare_item_list.json",
+			"./Shelling/media/1.png",
+			"./Shelling/media/2.png",
+			"./Shelling/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "shelling"
+		}
+	},
+	"Nuclear weapon": {
+		"category": {
+			"en": "War",
+			"ko": "전쟁",
+			"ja": "戦争",
+			"zh": "战争",
+			"ba": "Война"
+		},
+		"name": {
+			"en": "Nuclear weapon",
+			"ko": "핵 무기",
+			"ja": "核兵器",
+			"zh": "核武器",
+			"ba": "Ядерное оружие"
+		},
+		"files": [
+			"./Nuclear weapon/0001.en.md",
+			"./Nuclear weapon/0001.ko.md",
+			"./Nuclear weapon/0001.ja.md",
+			"./Nuclear weapon/0001.zh.md",
+			"./Nuclear weapon/0001.ba.md",
+			"./Nuclear weapon/prepare_item_list.json",
+			"./Nuclear weapon/media/1.png",
+			"./Nuclear weapon/media/2.png",
+			"./Nuclear weapon/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "nuclear_weapon"
+		}
+	},
+	"Chemical weapon": {
+		"category": {
+			"en": "War",
+			"ko": "전쟁",
+			"ja": "戦争",
+			"zh": "战争",
+			"ba": "Война"
+		},
+		"name": {
+			"en": "Chemical weapon",
+			"ko": "화학 무기",
+			"ja": "化学兵器",
+			"zh": "化学武器",
+			"ba": "Химическое оружие"
+		},
+		"files": [
+			"./Chemical weapon/0001.en.md",
+			"./Chemical weapon/0001.ko.md",
+			"./Chemical weapon/0001.ja.md",
+			"./Chemical weapon/0001.zh.md",
+			"./Chemical weapon/0001.ba.md",
+			"./Chemical weapon/prepare_item_list.json",
+			"./Chemical weapon/media/1.png",
+			"./Chemical weapon/media/2.png",
+			"./Chemical weapon/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "chemical_weapon"
+		}
+	},
+	"Biological weapon": {
+		"category": {
+			"en": "War",
+			"ko": "전쟁",
+			"ja": "戦争",
+			"zh": "战争",
+			"ba": "Война"
+		},
+		"name": {
+			"en": "Biological weapon",
+			"ko": "생물 무기",
+			"ja": "生物兵器",
+			"zh": "生物武器",
+			"ba": "Биологическое оружие"
+		},
+		"files": [
+			"./Biological weapon/0001.en.md",
+			"./Biological weapon/0001.ko.md",
+			"./Biological weapon/0001.ja.md",
+			"./Biological weapon/0001.zh.md",
+			"./Biological weapon/0001.ba.md",
+			"./Biological weapon/prepare_item_list.json",
+			"./Biological weapon/media/1.png",
+			"./Biological weapon/media/2.png",
+			"./Biological weapon/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "biological_weapon"
+		}
+	},
+	"Evacuation": {
+		"category": {
+			"en": "War",
+			"ko": "전쟁",
+			"ja": "戦争",
+			"zh": "战争",
+			"ba": "Война"
+		},
+		"name": {
+			"en": "Evacuation",
+			"ko": "대피",
+			"ja": "避難",
+			"zh": "疏散",
+			"ba": "Эвакуация"
+		},
+		"files": [
+			"./Evacuation/0001.en.md",
+			"./Evacuation/0001.ko.md",
+			"./Evacuation/0001.ja.md",
+			"./Evacuation/0001.zh.md",
+			"./Evacuation/0001.ba.md",
+			"./Evacuation/prepare_item_list.json",
+			"./Evacuation/media/1.png",
+			"./Evacuation/media/2.png",
+			"./Evacuation/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "evacuation"
+		}
+	},
+	"UAV strike": {
+		"category": {
+			"en": "War",
+			"ko": "전쟁",
+			"ja": "戦争",
+			"zh": "战争",
+			"ba": "Война"
+		},
+		"name": {
+			"en": "UAV strike",
+			"ko": "드론 공격",
+			"ja": "無人機攻撃",
+			"zh": "无人机攻击",
+			"ba": "Удар БПЛА"
+		},
+		"files": [
+			"./UAV strike/0001.en.md",
+			"./UAV strike/0001.ko.md",
+			"./UAV strike/0001.ja.md",
+			"./UAV strike/0001.zh.md",
+			"./UAV strike/0001.ba.md",
+			"./UAV strike/prepare_item_list.json",
+			"./UAV strike/media/1.png",
+			"./UAV strike/media/2.png",
+			"./UAV strike/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "uav_strike"
+		}
+	},
+
+	"Volcanic eruption": {
+		"category": {
+			"en": "Natural Disaster - 🔥",
+			"ko": "자연 재난 - 🔥",
+			"ja": "自然災害 - 🔥",
+			"zh": "自然灾害 - 🔥",
+			"ba": "Стихийное бедствие - 🔥"
+		},
+		"name": {
+			"en": "Volcanic eruption",
+			"ko": "화산 폭발",
+			"ja": "火山噴火",
+			"zh": "火山喷发",
+			"ba": "Извержение вулкана"
+		},
+		"files": [
+			"./Volcanic eruption/0001.en.md",
+			"./Volcanic eruption/0001.ko.md",
+			"./Volcanic eruption/0001.ja.md",
+			"./Volcanic eruption/0001.zh.md",
+			"./Volcanic eruption/0001.ba.md",
+			"./Volcanic eruption/prepare_item_list.json",
+			"./Volcanic eruption/media/1.png",
+			"./Volcanic eruption/media/2.png",
+			"./Volcanic eruption/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "volcanic_eruption"
+		}
+	},
+	"Heat wave": {
+		"category": {
+			"en": "Natural Disaster - 🔥",
+			"ko": "자연 재난 - 🔥",
+			"ja": "自然災害 - 🔥",
+			"zh": "自然灾害 - 🔥",
+			"ba": "Стихийное бедствие - 🔥"
+		},
+		"name": {
+			"en": "Heat wave",
+			"ko": "폭염",
+			"ja": "猛暑",
+			"zh": "热浪",
+			"ba": "Аномальная жара"
+		},
+		"files": [
+			"./Heat wave/0001.en.md",
+			"./Heat wave/0001.ko.md",
+			"./Heat wave/0001.ja.md",
+			"./Heat wave/0001.zh.md",
+			"./Heat wave/0001.ba.md",
+			"./Heat wave/prepare_item_list.json"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "heat_wave"
+		}
+	},
+	"Drought": {
+		"category": {
+			"en": "Natural Disaster - 🔥",
+			"ko": "자연 재난 - 🔥",
+			"ja": "自然災害 - 🔥",
+			"zh": "自然灾害 - 🔥",
+			"ba": "Стихийное бедствие - 🔥"
+		},
+		"name": {
+			"en": "Drought",
+			"ko": "가뭄",
+			"ja": "干ばつ",
+			"zh": "干旱",
+			"ba": "Засуха"
+		},
+		"files": [
+			"./Drought/0001.en.md",
+			"./Drought/0001.ko.md",
+			"./Drought/0001.ja.md",
+			"./Drought/0001.zh.md",
+			"./Drought/0001.ba.md",
+			"./Drought/prepare_item_list.json",
+			"./Drought/media/1.png",
+			"./Drought/media/2.png",
+			"./Drought/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "drought"
+		}
+	},
+	"Tsunami": {
+		"category": {
+			"en": "Natural Disaster - 💧",
+			"ko": "자연 재난 - 💧",
+			"ja": "自然災害 - 💧",
+			"zh": "自然灾害 - 💧",
+			"ba": "Стихийное бедствие - 💧"
+		},
+		"name": {
+			"en": "Tsunami",
+			"ko": "지진해일",
+			"ja": "津波",
+			"zh": "海啸",
+			"ba": "Цунами"
+		},
+		"files": [
+			"./Tsunami/0001.en.md",
+			"./Tsunami/0001.ko.md",
+			"./Tsunami/0001.ja.md",
+			"./Tsunami/0001.zh.md",
+			"./Tsunami/0001.ba.md",
+			"./Tsunami/prepare_item_list.json",
+			"./Tsunami/media/1.png",
+			"./Tsunami/media/2.png",
+			"./Tsunami/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "tsunami"
+		}
+	},
+	"Tide": {
+		"category": {
+			"en": "Natural Disaster - 💧",
+			"ko": "자연 재난 - 💧",
+			"ja": "自然災害 - 💧",
+			"zh": "自然灾害 - 💧",
+			"ba": "Стихийное бедствие - 💧"
+		},
+		"name": {
+			"en": "Tide",
+			"ko": "조수",
+			"ja": "潮汐",
+			"zh": "潮汐",
+			"ba": "Прилив и отлив"
+		},
+		"files": [
+			"./Tide/0001.en.md",
+			"./Tide/0001.ko.md",
+			"./Tide/0001.ja.md",
+			"./Tide/0001.zh.md",
+			"./Tide/0001.ba.md",
+			"./Tide/prepare_item_list.json",
+			"./Tide/media/1.png",
+			"./Tide/media/2.png",
+			"./Tide/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "tide"
+		}
+	},
+	"Downpour": {
+		"category": {
+			"en": "Natural Disaster - 💧",
+			"ko": "자연 재난 - 💧",
+			"ja": "自然災害 - 💧",
+			"zh": "自然灾害 - 💧",
+			"ba": "Стихийное бедствие - 💧"
+		},
+		"name": {
+			"en": "Downpour",
+			"ko": "호우",
+			"ja": "豪雨",
+			"zh": "暴雨",
+			"ba": "Ливень"
+		},
+		"files": [
+			"./Downpour/0001.en.md",
+			"./Downpour/0001.ko.md",
+			"./Downpour/0001.ja.md",
+			"./Downpour/0001.zh.md",
+			"./Downpour/0001.ba.md",
+			"./Downpour/prepare_item_list.json",
+			"./Downpour/media/1.png",
+			"./Downpour/media/2.png",
+			"./Downpour/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "downpour"
+		}
+	},
+	"Lightning strike": {
+		"category": {
+			"en": "Natural Disaster - 💧",
+			"ko": "자연 재난 - 💧",
+			"ja": "自然災害 - 💧",
+			"zh": "自然灾害 - 💧",
+			"ba": "Стихийное бедствие - 💧"
+		},
+		"name": {
+			"en": "Lightning strike",
+			"ko": "낙뢰",
+			"ja": "落雷",
+			"zh": "雷击",
+			"ba": "Удар молнии"
+		},
+		"files": [
+			"./Lightning strike/0001.en.md",
+			"./Lightning strike/0001.ko.md",
+			"./Lightning strike/0001.ja.md",
+			"./Lightning strike/0001.zh.md",
+			"./Lightning strike/0001.ba.md",
+			"./Lightning strike/prepare_item_list.json",
+			"./Lightning strike/media/1.png",
+			"./Lightning strike/media/2.png",
+			"./Lightning strike/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "lightning_strike"
+		}
+	},
+	"Flood": {
+		"category": {
+			"en": "Natural Disaster - 💧",
+			"ko": "자연 재난 - 💧",
+			"ja": "自然災害 - 💧",
+			"zh": "自然灾害 - 💧",
+			"ba": "Стихийное бедствие - 💧"
+		},
+		"name": {
+			"en": "Flood",
+			"ko": "홍수",
+			"ja": "洪水",
+			"zh": "洪水",
+			"ba": "Наводнение"
+		},
+		"files": [
+			"./Flood/0001.en.md",
+			"./Flood/0001.ko.md",
+			"./Flood/0001.ja.md",
+			"./Flood/0001.zh.md",
+			"./Flood/0001.ba.md",
+			"./Flood/prepare_item_list.json",
+			"./Flood/media/1.png",
+			"./Flood/media/2.png",
+			"./Flood/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "flood"
+		}
+	},
+	"Red tide": {
+		"category": {
+			"en": "Natural Disaster - 💧",
+			"ko": "자연 재난 - 💧",
+			"ja": "自然災害 - 💧",
+			"zh": "自然灾害 - 💧",
+			"ba": "Стихийное бедствие - 💧"
+		},
+		"name": {
+			"en": "Red tide",
+			"ko": "적조",
+			"ja": "赤潮",
+			"zh": "赤潮",
+			"ba": "Красный прилив"
+		},
+		"files": [
+			"./Red tide/0001.en.md",
+			"./Red tide/0001.ko.md",
+			"./Red tide/0001.ja.md",
+			"./Red tide/0001.zh.md",
+			"./Red tide/0001.ba.md"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "red_tide"
+		}
+	},
+	"Green tide": {
+		"category": {
+			"en": "Natural Disaster - 💧",
+			"ko": "자연 재난 - 💧",
+			"ja": "自然災害 - 💧",
+			"zh": "自然灾害 - 💧",
+			"ba": "Стихийное бедствие - 💧"
+		},
+		"name": {
+			"en": "Green tide",
+			"ko": "조류대발생(녹조)",
+			"ja": "藻類大量発生（アオコ）",
+			"zh": "藻类暴发（绿潮）",
+			"ba": "Массовое цветение водорослей"
+		},
+		"files": [
+			"./Green tide/0001.en.md",
+			"./Green tide/0001.ko.md",
+			"./Green tide/0001.ja.md",
+			"./Green tide/0001.zh.md",
+			"./Green tide/0001.ba.md"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "green_tide"
+		}
+	},
+	"Heavy snowfall": {
+		"category": {
+			"en": "Natural Disaster - 💧",
+			"ko": "자연 재난 - 💧",
+			"ja": "自然災害 - 💧",
+			"zh": "自然灾害 - 💧",
+			"ba": "Стихийное бедствие - 💧"
+		},
+		"name": {
+			"en": "Heavy snowfall",
+			"ko": "대설",
+			"ja": "大雪",
+			"zh": "大雪",
+			"ba": "Сильный снегопад"
+		},
+		"files": [
+			"./Heavy snowfall/0001.en.md",
+			"./Heavy snowfall/0001.ko.md",
+			"./Heavy snowfall/0001.ja.md",
+			"./Heavy snowfall/0001.zh.md",
+			"./Heavy snowfall/0001.ba.md",
+			"./Heavy snowfall/prepare_item_list.json",
+			"./Heavy snowfall/media/1.png",
+			"./Heavy snowfall/media/2.png",
+			"./Heavy snowfall/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "heavy_snowfall"
+		}
+	},
+	"Cold wave": {
+		"category": {
+			"en": "Natural Disaster - 💧",
+			"ko": "자연 재난 - 💧",
+			"ja": "自然災害 - 💧",
+			"zh": "自然灾害 - 💧",
+			"ba": "Стихийное бедствие - 💧"
+		},
+		"name": {
+			"en": "Cold wave",
+			"ko": "한파",
+			"ja": "寒波",
+			"zh": "寒潮",
+			"ba": "Волна холода"
+		},
+		"files": [
+			"./Cold wave/0001.en.md",
+			"./Cold wave/0001.ko.md",
+			"./Cold wave/0001.ja.md",
+			"./Cold wave/0001.zh.md",
+			"./Cold wave/0001.ba.md",
+			"./Cold wave/prepare_item_list.json"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "cold_wave"
+		}
+	},
+	"Typhoon": {
+		"category": {
+			"en": "Natural Disaster - 🍃",
+			"ko": "자연 재난 - 🍃",
+			"ja": "自然災害 - 🍃",
+			"zh": "自然灾害 - 🍃",
+			"ba": "Стихийное бедствие - 🍃"
+		},
+		"name": {
+			"en": "Typhoon",
+			"ko": "태풍",
+			"ja": "台風",
+			"zh": "台风",
+			"ba": "Тайфун"
+		},
+		"files": [
+			"./Typhoon/0001.en.md",
+			"./Typhoon/0001.ko.md",
+			"./Typhoon/0001.ja.md",
+			"./Typhoon/0001.zh.md",
+			"./Typhoon/0001.ba.md",
+			"./Typhoon/prepare_item_list.json",
+			"./Typhoon/media/1.png",
+			"./Typhoon/media/2.png",
+			"./Typhoon/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "typhoon"
+		}
+	},
+	"Strong wind": {
+		"category": {
+			"en": "Natural Disaster - 🍃",
+			"ko": "자연 재난 - 🍃",
+			"ja": "自然災害 - 🍃",
+			"zh": "自然灾害 - 🍃",
+			"ba": "Стихийное бедствие - 🍃"
+		},
+		"name": {
+			"en": "Strong wind",
+			"ko": "강풍",
+			"ja": "強風",
+			"zh": "大风",
+			"ba": "Сильный ветер"
+		},
+		"files": [
+			"./Strong wind/0001.en.md",
+			"./Strong wind/0001.ko.md",
+			"./Strong wind/0001.ja.md",
+			"./Strong wind/0001.zh.md",
+			"./Strong wind/0001.ba.md",
+			"./Strong wind/prepare_item_list.json",
+			"./Strong wind/media/1.png",
+			"./Strong wind/media/2.png",
+			"./Strong wind/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "strong_wind"
+		}
+	},
+	"Particulate Matter": {
+		"category": {
+			"en": "Natural Disaster - 🍃",
+			"ko": "자연 재난 - 🍃",
+			"ja": "自然災害 - 🍃",
+			"zh": "自然灾害 - 🍃",
+			"ba": "Стихийное бедствие - 🍃"
+		},
+		"name": {
+			"en": "Particulate Matter",
+			"ko": "황사 / 미세먼지",
+			"ja": "黄砂 / 微小粒子状物質",
+			"zh": "沙尘暴 / 细颗粒物",
+			"ba": "Жёлтая пыль / Мелкодисперсная пыль"
+		},
+		"files": [
+			"./Particulate Matter/0001.en.md",
+			"./Particulate Matter/0001.ko.md",
+			"./Particulate Matter/0001.ja.md",
+			"./Particulate Matter/0001.zh.md",
+			"./Particulate Matter/0001.ba.md",
+			"./Particulate Matter/prepare_item_list.json",
+			"./Particulate Matter/media/1.png",
+			"./Particulate Matter/media/2.png",
+			"./Particulate Matter/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "yellow_dust"
+		}
+	},
+	"Earthquake": {
+		"category": {
+			"en": "Natural Disaster - ⛰️",
+			"ko": "자연 재난 - ⛰️",
+			"ja": "自然災害 - ⛰️",
+			"zh": "自然灾害 - ⛰️",
+			"ba": "Стихийное бедствие - ⛰️"
+		},
+		"name": {
+			"en": "Earthquake",
+			"ko": "지진",
+			"ja": "地震",
+			"zh": "地震",
+			"ba": "Землетрясение"
+		},
+		"files": [
+			"./Earthquake/0001.en.md",
+			"./Earthquake/0001.ko.md",
+			"./Earthquake/0001.ja.md",
+			"./Earthquake/0001.zh.md",
+			"./Earthquake/0001.ba.md",
+			"./Earthquake/prepare_item_list.json",
+			"./Earthquake/media/1.png",
+			"./Earthquake/media/2.png",
+			"./Earthquake/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "earthquake"
+		}
+	},
+	"Landslide": {
+		"category": {
+			"en": "Natural Disaster - ⛰️",
+			"ko": "자연 재난 - ⛰️",
+			"ja": "自然災害 - ⛰️",
+			"zh": "自然灾害 - ⛰️",
+			"ba": "Стихийное бедствие - ⛰️"
+		},
+		"name": {
+			"en": "Landslide",
+			"ko": "산사태",
+			"ja": "山崩れ",
+			"zh": "山体滑坡",
+			"ba": "Оползень"
+		},
+		"files": [
+			"./Landslide/0001.en.md",
+			"./Landslide/0001.ko.md",
+			"./Landslide/0001.ja.md",
+			"./Landslide/0001.zh.md",
+			"./Landslide/0001.ba.md",
+			"./Landslide/prepare_item_list.json",
+			"./Landslide/media/1.png",
+			"./Landslide/media/2.png",
+			"./Landslide/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "landslide"
+		}
+	},
+	"Space weather disaster": {
+		"category": {
+			"en": "Natural Disaster - 🛰",
+			"ko": "자연 재난 - 🛰",
+			"ja": "自然災害 - 🛰",
+			"zh": "自然灾害 - 🛰",
+			"ba": "Стихийное бедствие - 🛰"
+		},
+		"name": {
+			"en": "Space weather disaster",
+			"ko": "우주전파재난",
+			"ja": "宇宙天気災害",
+			"zh": "空间天气灾害",
+			"ba": "Космическая погодная катастрофа"
+		},
+		"files": [
+			"./Space weather disaster/0001.en.md",
+			"./Space weather disaster/0001.ko.md",
+			"./Space weather disaster/0001.ja.md",
+			"./Space weather disaster/0001.zh.md",
+			"./Space weather disaster/0001.ba.md",
+			"./Space weather disaster/prepare_item_list.json"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "space_weather_disaster"
+		}
+	},
+	"Natural space object impact": {
+		"category": {
+			"en": "Natural Disaster - 🛰",
+			"ko": "자연 재난 - 🛰",
+			"ja": "自然災害 - 🛰",
+			"zh": "自然灾害 - 🛰",
+			"ba": "Стихийное бедствие - 🛰"
+		},
+		"name": {
+			"en": "Natural space object impact",
+			"ko": "자연우주물체추락",
+			"ja": "天然宇宙物体落下",
+			"zh": "天然天体坠落",
+			"ba": "Падение естественного космического объекта"
+		},
+		"files": [
+			"./Natural space object impact/0001.en.md",
+			"./Natural space object impact/0001.ko.md",
+			"./Natural space object impact/0001.ja.md",
+			"./Natural space object impact/0001.zh.md",
+			"./Natural space object impact/0001.ba.md",
+			"./Natural space object impact/prepare_item_list.json"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "natural_space_object_impact"
+		}
+	},
+
+	"Fire": {
+		"category": {
+			"en": "Social Disaster",
+			"ko": "사회 재난",
+			"ja": "社会災害",
+			"zh": "社会灾害",
+			"ba": "Социальное бедствие"
+		},
+		"name": {
+			"en": "Fire",
+			"ko": "화재",
+			"ja": "火災",
+			"zh": "火灾",
+			"ba": "Пожар"
+		},
+		"files": [
+			"./Fire/0001.en.md",
+			"./Fire/0001.ko.md",
+			"./Fire/0001.ja.md",
+			"./Fire/0001.zh.md",
+			"./Fire/0001.ba.md",
+			"./Fire/prepare_item_list.json",
+			"./Fire/media/1.png",
+			"./Fire/media/2.png",
+			"./Fire/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "fire"
+		}
+	},
+	"Electrical accident": {
+		"category": {
+			"en": "Social Disaster",
+			"ko": "사회 재난",
+			"ja": "社会災害",
+			"zh": "社会灾害",
+			"ba": "Социальное бедствие"
+		},
+		"name": {
+			"en": "Electrical accident",
+			"ko": "전기 사고",
+			"ja": "電気事故",
+			"zh": "电气事故",
+			"ba": "Электрическое происшествие"
+		},
+		"files": [
+			"./Electrical accident/0001.en.md",
+			"./Electrical accident/0001.ko.md",
+			"./Electrical accident/0001.ja.md",
+			"./Electrical accident/0001.zh.md",
+			"./Electrical accident/0001.ba.md",
+			"./Electrical accident/prepare_item_list.json",
+			"./Electrical accident/media/1.png",
+			"./Electrical accident/media/2.png",
+			"./Electrical accident/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "electrical_accident"
+		}
+	},
+	"Gas accident": {
+		"category": {
+			"en": "Social Disaster",
+			"ko": "사회 재난",
+			"ja": "社会災害",
+			"zh": "社会灾害",
+			"ba": "Социальное бедствие"
+		},
+		"name": {
+			"en": "Gas accident",
+			"ko": "가스 사고",
+			"ja": "ガス事故",
+			"zh": "燃气事故",
+			"ba": "Газовое происшествие"
+		},
+		"files": [
+			"./Gas accident/0001.en.md",
+			"./Gas accident/0001.ko.md",
+			"./Gas accident/0001.ja.md",
+			"./Gas accident/0001.zh.md",
+			"./Gas accident/0001.ba.md",
+			"./Gas accident/prepare_item_list.json",
+			"./Gas accident/media/1.png",
+			"./Gas accident/media/2.png",
+			"./Gas accident/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "gas_accident"
+		}
+	},
+	"Building collapses": {
+		"category": {
+			"en": "Social Disaster",
+			"ko": "사회 재난",
+			"ja": "社会災害",
+			"zh": "社会灾害",
+			"ba": "Социальное бедствие"
+		},
+		"name": {
+			"en": "Building collapses",
+			"ko": "건축물 붕괴",
+			"ja": "建物崩壊",
+			"zh": "建筑物倒塌",
+			"ba": "Обрушение зданий"
+		},
+		"files": [
+			"./Building collapses/0001.en.md",
+			"./Building collapses/0001.ko.md",
+			"./Building collapses/0001.ja.md",
+			"./Building collapses/0001.zh.md",
+			"./Building collapses/0001.ba.md",
+			"./Building collapses/prepare_item_list.json",
+			"./Building collapses/media/1.png",
+			"./Building collapses/media/2.png",
+			"./Building collapses/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "building_collapses"
+		}
+	},
+	"Crowd crush": {
+		"category": {
+			"en": "Social Disaster",
+			"ko": "사회 재난",
+			"ja": "社会災害",
+			"zh": "社会灾害",
+			"ba": "Социальное бедствие"
+		},
+		"name": {
+			"en": "Crowd crush",
+			"ko": "다중 운집 인파 사고",
+			"ja": "雑踏事故",
+			"zh": "人群踩踏事故",
+			"ba": "Давка"
+		},
+		"files": [
+			"./Crowd crush/0001.en.md",
+			"./Crowd crush/0001.ko.md",
+			"./Crowd crush/0001.ja.md",
+			"./Crowd crush/0001.zh.md",
+			"./Crowd crush/0001.ba.md",
+			"./Crowd crush/media/1.png",
+			"./Crowd crush/media/2.png",
+			"./Crowd crush/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "crowd_crush"
+		}
+	},
+	"Car accident": {
+		"category": {
+			"en": "Social Disaster",
+			"ko": "사회 재난",
+			"ja": "社会災害",
+			"zh": "社会灾害",
+			"ba": "Социальное бедствие"
+		},
+		"name": {
+			"en": "Car accident",
+			"ko": "교통사고",
+			"ja": "交通事故",
+			"zh": "交通事故",
+			"ba": "Д.Т.П"
+		},
+		"files": [
+			"./Car accident/0001.en.md",
+			"./Car accident/0001.ko.md",
+			"./Car accident/0001.ja.md",
+			"./Car accident/0001.zh.md",
+			"./Car accident/0001.ba.md",
+			"./Car accident/prepare_item_list.json",
+			"./Car accident/media/1.png",
+			"./Car accident/media/2.png",
+			"./Car accident/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "car_accident"
+		}
+	},
+	"Train accident": {
+		"category": {
+			"en": "Social Disaster",
+			"ko": "사회 재난",
+			"ja": "社会災害",
+			"zh": "社会灾害",
+			"ba": "Социальное бедствие"
+		},
+		"name": {
+			"en": "Train accident",
+			"ko": "열차 사고",
+			"ja": "列車事故",
+			"zh": "列车事故",
+			"ba": "Крушение поезда"
+		},
+		"files": [
+			"./Train accident/0001.en.md",
+			"./Train accident/0001.ko.md",
+			"./Train accident/0001.ja.md",
+			"./Train accident/0001.zh.md",
+			"./Train accident/0001.ba.md",
+			"./Train accident/media/1.png",
+			"./Train accident/media/2.png",
+			"./Train accident/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "railroad_or_subway_accident"
+		}
+	},
+	"Marine accident": {
+		"category": {
+			"en": "Social Disaster",
+			"ko": "사회 재난",
+			"ja": "社会災害",
+			"zh": "社会灾害",
+			"ba": "Социальное бедствие"
+		},
+		"name": {
+			"en": "Marine accident",
+			"ko": "해양 선박사고",
+			"ja": "海難事故",
+			"zh": "海难事故",
+			"ba": "Морская авария"
+		},
+		"files": [
+			"./Marine accident/0001.en.md",
+			"./Marine accident/0001.ko.md",
+			"./Marine accident/0001.ja.md",
+			"./Marine accident/0001.zh.md",
+			"./Marine accident/0001.ba.md",
+			"./Marine accident/media/1.png",
+			"./Marine accident/media/2.png",
+			"./Marine accident/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "marine_accident"
+		}
+	},
+	"Aviation accident": {
+		"category": {
+			"en": "Social Disaster",
+			"ko": "사회 재난",
+			"ja": "社会災害",
+			"zh": "社会灾害",
+			"ba": "Социальное бедствие"
+		},
+		"name": {
+			"en": "Aviation accident",
+			"ko": "항공기 사고",
+			"ja": "航空事故",
+			"zh": "航空事故",
+			"ba": "Авиакатастрофа"
+		},
+		"files": [
+			"./Aviation accident/0001.en.md",
+			"./Aviation accident/0001.ko.md",
+			"./Aviation accident/0001.ja.md",
+			"./Aviation accident/0001.zh.md",
+			"./Aviation accident/0001.ba.md",
+			"./Aviation accident/media/1.png",
+			"./Aviation accident/media/2.png",
+			"./Aviation accident/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "aviation_accident"
+		}
+	},
+	"Terrorism": {
+		"category": {
+			"en": "Social Disaster",
+			"ko": "사회 재난",
+			"ja": "社会災害",
+			"zh": "社会灾害",
+			"ba": "Социальное бедствие"
+		},
+		"name": {
+			"en": "Terrorism",
+			"ko": "테러",
+			"ja": "テロ",
+			"zh": "恐怖主义",
+			"ba": "Терроризм"
+		},
+		"files": [
+			"./Terrorism/0001.en.md",
+			"./Terrorism/0001.ko.md",
+			"./Terrorism/0001.ja.md",
+			"./Terrorism/0001.zh.md",
+			"./Terrorism/0001.ba.md",
+			"./Terrorism/media/1.png",
+			"./Terrorism/media/2.png",
+			"./Terrorism/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "terrorism"
+		}
+	},
+
+	"First Aid": {
+		"category": {
+			"en": "Life Safety",
+			"ko": "생활 안전",
+			"ja": "生活安全",
+			"zh": "生活安全",
+			"ba": "Безопасность жизнедеятельности"
+		},
+		"name": {
+			"en": "First Aid",
+			"ko": "응급처치",
+			"ja": "応急処置",
+			"zh": "急救",
+			"ba": "Первая помощь"
+		},
+		"files": [
+			"./First Aid/0001.en.md",
+			"./First Aid/0001.ko.md",
+			"./First Aid/0001.ja.md",
+			"./First Aid/0001.zh.md",
+			"./First Aid/0001.ba.md",
+			"./First Aid/media/1.png",
+			"./First Aid/media/2.png",
+			"./First Aid/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "first_aid"
+		}
+	},
+	"Water Safety Rules": {
+		"category": {
+			"en": "Life Safety",
+			"ko": "생활 안전",
+			"ja": "生活安全",
+			"zh": "生活安全",
+			"ba": "Безопасность жизнедеятельности"
+		},
+		"name": {
+			"en": "Water Safety Rules",
+			"ko": "물놀이 안전 수칙",
+			"ja": "水遊びの安全ルール",
+			"zh": "水上活动安全须知",
+			"ba": "Правила безопасности на воде"
+		},
+		"files": [
+			"./Water Safety Rules/0001.en.md",
+			"./Water Safety Rules/0001.ko.md",
+			"./Water Safety Rules/0001.ja.md",
+			"./Water Safety Rules/0001.zh.md",
+			"./Water Safety Rules/0001.ba.md",
+			"./Water Safety Rules/media/1.png",
+			"./Water Safety Rules/media/2.png",
+			"./Water Safety Rules/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "water_accident"
+		}
+	},
+	"Mountain Safety Rules": {
+		"category": {
+			"en": "Life Safety",
+			"ko": "생활 안전",
+			"ja": "生活安全",
+			"zh": "生活安全",
+			"ba": "Безопасность жизнедеятельности"
+		},
+		"name": {
+			"en": "Mountain Safety Rules",
+			"ko": "산행 안전 수칙",
+			"ja": "水遊びの安全ルール",
+			"zh": "水上活动安全须知",
+			"ba": "Правила безопасности на воде"
+		},
+		"files": [
+			"./Mountain Safety Rules/0001.en.md",
+			"./Mountain Safety Rules/0001.ko.md",
+			"./Mountain Safety Rules/0001.ja.md",
+			"./Mountain Safety Rules/0001.zh.md",
+			"./Mountain Safety Rules/0001.ba.md",
+			"./Mountain Safety Rules/media/1.png",
+			"./Mountain Safety Rules/media/2.png",
+			"./Mountain Safety Rules/media/3.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "climbing_accident"
+		}
+	},
+	"Jellyfish Stings": {
+		"category": {
+			"en": "Life Safety",
+			"ko": "생활 안전",
+			"ja": "生活安全",
+			"zh": "生活安全",
+			"ba": "Безопасность жизнедеятельности"
+		},
+		"name": {
+			"en": "Jellyfish Stings",
+			"ko": "해파리 피해",
+			"ja": "クラゲに刺される",
+			"zh": "被水母蜇伤",
+			"ba": "Ожог медузы"
+		},
+		"files": [
+			"./Jellyfish Stings/0001.en.md",
+			"./Jellyfish Stings/0001.ko.md",
+			"./Jellyfish Stings/0001.ja.md",
+			"./Jellyfish Stings/0001.zh.md",
+			"./Jellyfish Stings/0001.ba.md",
+			"./Jellyfish Stings/media/1.png",
+			"./Jellyfish Stings/media/2.png",
+			"./Jellyfish Stings/media/3.png",
+			"./Jellyfish Stings/media/Cyanea_capillata.png",
+			"./Jellyfish Stings/media/Dactylometra_quinquecirrha.png",
+			"./Jellyfish Stings/media/Nemopilema_nomurai.png",
+			"./Jellyfish Stings/media/Pelagia_noctiluca.png",
+			"./Jellyfish Stings/media/Physalia_physalis.png"
+		],
+		"created_by": "GoldBigDragon",
+		"created_at": 1770160039,
+		"icon": {
+			"category": "disaster",
+			"name": "mass_jellyfish_occurrence"
+		}
+	}
+}

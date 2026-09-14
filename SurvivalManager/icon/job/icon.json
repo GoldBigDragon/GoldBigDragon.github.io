@@ -1,0 +1,303 @@
+{
+	"cook": {
+		"en": "Cook",
+		"ko": "요리",
+		"ja": "料理人",
+		"zh": "厨师",
+		"ba": "Повар"
+	},
+	"transporter": {
+		"en": "Transporter",
+		"ko": "운송",
+		"ja": "運搬者",
+		"zh": "运输工",
+		"ba": "Транспортировщик"
+	},
+	"cultivators": {
+		"en": "Cultivator",
+		"ko": "식량 재배",
+		"ja": "耕作人",
+		"zh": "耕种者",
+		"ba": "Земледелец"
+	},
+	"fisherman": {
+		"en": "Fisherman",
+		"ko": "어부",
+		"ja": "漁師",
+		"zh": "渔夫",
+		"ba": "Рыбак"
+	},
+	"signalman": {
+		"en": "Signalman",
+		"ko": "통신",
+		"ja": "信号手",
+		"zh": "信号员",
+		"ba": "Сигнальщик"
+	},
+	"programmer": {
+		"en": "Programmer",
+		"ko": "소프트웨어 개발",
+		"ja": "プログラマー",
+		"zh": "程序员",
+		"ba": "Программист"
+	},
+	"mechanic": {
+		"en": "Mechanic",
+		"ko": "정비",
+		"ja": "整備士",
+		"zh": "机械师",
+		"ba": "Механик"
+	},
+	"carpenter": {
+		"en": "Carpenter",
+		"ko": "목공",
+		"ja": "大工",
+		"zh": "木匠",
+		"ba": "Плотник"
+	},
+	"mason": {
+		"en": "Mason",
+		"ko": "석공",
+		"ja": "石工",
+		"zh": "石匠",
+		"ba": "Каменщик"
+	},
+	"educator": {
+		"en": "Educator",
+		"ko": "교육",
+		"ja": "教育者",
+		"zh": "教育者",
+		"ba": "Образователь"
+	},
+	"hunter": {
+		"en": "Hunter",
+		"ko": "사냥",
+		"ja": "狩人",
+		"zh": "猎人",
+		"ba": "Охотник"
+	},
+	"guard": {
+		"en": "Guard",
+		"ko": "경비",
+		"ja": "警備員",
+		"zh": "守卫",
+		"ba": "Охранник"
+	},
+	"medic": {
+		"en": "Medic",
+		"ko": "의료",
+		"ja": "医者",
+		"zh": "医生",
+		"ba": "Медик"
+	},
+	"scavenger": {
+		"en": "Scavenger",
+		"ko": "수집",
+		"ja": "スクラッパー",
+		"zh": "拾荒者",
+		"ba": "Скворец"
+	},
+	"recon": {
+		"en": "Recon",
+		"ko": "정찰",
+		"ja": "偵察",
+		"zh": "侦察",
+		"ba": "Разведка"
+	},
+	"swordsman": {
+		"en": "Swordsman",
+		"ko": "검",
+		"ja": "剣士",
+		"zh": "剑士",
+		"ba": "Мечник"
+	},
+	"clubman": {
+		"en": "Clubman",
+		"ko": "둔기",
+		"ja": "クラブマン",
+		"zh": "棍棒战士",
+		"ba": "Тяжелый оружие"
+	},
+	"shieldman": {
+		"en": "Shieldman",
+		"ko": "방패",
+		"ja": "盾兵",
+		"zh": "盾牌战士",
+		"ba": "Щитоносец"
+	},
+	"spearman": {
+		"en": "Spearman",
+		"ko": "창",
+		"ja": "槍兵",
+		"zh": "枪兵",
+		"ba": "Копейщик"
+	},
+	"slinger": {
+		"en": "Slinger",
+		"ko": "투석",
+		"ja": "スリング",
+		"zh": "投石兵",
+		"ba": "Метатель"
+	},
+	"archer": {
+		"en": "Archer",
+		"ko": "활",
+		"ja": "弓兵",
+		"zh": "弓箭手",
+		"ba": "Лучник"
+	},
+	"crossbowman": {
+		"en": "Crossbowman",
+		"ko": "석궁",
+		"ja": "クロスボウ兵",
+		"zh": "十字弓兵",
+		"ba": "Арбалетчик"
+	},
+	"rifleman": {
+		"en": "Rifleman",
+		"ko": "소총",
+		"ja": "ライフル兵",
+		"zh": "步枪兵",
+		"ba": "Ружейник"
+	},
+	"rookie": {
+		"en": "Rookie",
+		"ko": "수습",
+		"ja": "新兵",
+		"zh": "新兵",
+		"ba": "Новичок"
+	},
+	"private_2nd_class": {
+		"en": "Private 2nd Class",
+		"ko": "이등병",
+		"ja": "二等兵",
+		"zh": "二等兵",
+		"ba": "Рядовой 2-го класса"
+	},
+	"private_first_class": {
+		"en": "Private First Class",
+		"ko": "일등병",
+		"ja": "一等兵",
+		"zh": "一等兵",
+		"ba": "Рядовой 1-го класса"
+	},
+	"corporal": {
+		"en": "Corporal",
+		"ko": "상등병",
+		"ja": "伍長",
+		"zh": "上等兵",
+		"ba": "Капрал"
+	},
+	"sergeant": {
+		"en": "Sergeant",
+		"ko": "병장",
+		"ja": "軍曹",
+		"zh": "兵长",
+		"ba": "Сержант"
+	},
+	"staff_sergeant": {
+		"en": "Staff Sergeant",
+		"ko": "하사",
+		"ja": "軍曹長",
+		"zh": "下士",
+		"ba": "Старший сержант"
+	},
+	"sergeant_first_class": {
+		"en": "Sergeant First Class",
+		"ko": "중사",
+		"ja": "一等軍曹",
+		"zh": "中士",
+		"ba": "Сержант 1-го класса"
+	},
+	"master_sergeant": {
+		"en": "Master Sergeant",
+		"ko": "상사",
+		"ja": "上級軍曹",
+		"zh": "中士",
+		"ba": "Мастер-сержант"
+	},
+	"sergeant_major": {
+		"en": "Sergeant Major",
+		"ko": "원사",
+		"ja": "軍士長",
+		"zh": "元士",
+		"ba": "Сержант-майор"
+	},
+	"warrant_officer": {
+		"en": "Warrant Officer",
+		"ko": "준위",
+		"ja": "准尉",
+		"zh": "准尉",
+		"ba": "Уоррант-офицер"
+	},
+	"second_lieutenant": {
+		"en": "Second Lieutenant",
+		"ko": "소위",
+		"ja": "少尉",
+		"zh": "少尉",
+		"ba": "Младший лейтенант"
+	},
+	"first_lieutenant": {
+		"en": "First Lieutenant",
+		"ko": "중위",
+		"ja": "中尉",
+		"zh": "中尉",
+		"ba": "Первый лейтенант"
+	},
+	"captain": {
+		"en": "Captain",
+		"ko": "대위",
+		"ja": "大尉",
+		"zh": "大尉",
+		"ba": "Капитан"
+	},
+	"major": {
+		"en": "Major",
+		"ko": "소령",
+		"ja": "少佐",
+		"zh": "少领",
+		"ba": "Майор"
+	},
+	"lieutenant_colonel": {
+		"en": "Lieutenant Colonel",
+		"ko": "중령",
+		"ja": "中佐",
+		"zh": "中领",
+		"ba": "Подполковник"
+	},
+	"colonel": {
+		"en": "Colonel",
+		"ko": "대령",
+		"ja": "大佐",
+		"zh": "大领",
+		"ba": "Полковник"
+	},
+	"brigadier_general": {
+		"en": "Brigadier General",
+		"ko": "준장",
+		"ja": "准将",
+		"zh": "准将",
+		"ba": "Бригадный генерал"
+	},
+	"major_general": {
+		"en": "Major General",
+		"ko": "소장",
+		"ja": "少将",
+		"zh": "少将",
+		"ba": "Майор-генерал"
+	},
+	"lieutenant_general": {
+		"en": "Lieutenant General",
+		"ko": "중장",
+		"ja": "中将",
+		"zh": "中将",
+		"ba": "Генерал-лейтенант"
+	},
+	"general": {
+		"en": "General",
+		"ko": "대장",
+		"ja": "大将",
+		"zh": "大将",
+		"ba": "Генерал"
+	}
+}

@@ -1,0 +1,2062 @@
+{
+	"AIDE_SELECT_FIRST": {
+		"script": {
+			"en": "Nice to meet you~ I'm Brown. I may be a bit slow, but slow and steady keeps you alive, you know~ Let's take good care of each other, leader~",
+			"ko": "처음 뵙겠습니다아~ 브라운이라고 해요~ 느릿할지도 모르지만, 느려도 꾸준한 쪽이 오래 산다고 하죠~ 잘 부탁드려요, 리더~",
+			"ja": "はじめましてぇ~ ブラウンと申します。ちょっとのんびり屋かもしれませんが、ゆっくりでも着実な方が長生きするって言いますよねぇ~ よろしくお願いします、リーダー~",
+			"zh": "初次见面~ 我叫Brown。虽然我可能有点慢吞吞的, 但俗话说慢而稳才活得久嘛~ 请多关照啦, 领导~",
+			"ba": "Приятно познакомиться~ Я Браун. Может, я немного медлительный, но, знаете, медленно и верно — так и выживают~ Будем добры друг к другу, лидер~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	"AIDE_SELECT_REPEAT": {
+		"script": {
+			"en": "Back again~? Hehe, checking in often is a good habit. I'll be right here… probably in this exact position~",
+			"ko": "또 불러주셨네요~? 에헤, 자주 들여다보는 건 좋은 습관이에요. 저는 여기 있을게요... 아마 이 자세 그대로요~",
+			"ja": "また来たんですねぇ~? えへへ、こまめに覗くのはいい習慣ですよ。私はここにいますね…たぶんこの姿勢のままで~",
+			"zh": "又来啦~? 嘿嘿, 常来看看是个好习惯。我就在这里……大概保持这个姿势不动~",
+			"ba": "Снова здесь~? Хе-хе, часто заглядывать — хорошая привычка. Я буду тут… наверное, в этой же самой позе~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	"GREETING_DAY_FIRST": {
+		"script": {
+			"en": "Welcome back, leader~ Today's plan: no rushing. Rushing spends energy, and energy is a survival resource~",
+			"ko": "오셨네요오, 리더~ 오늘의 계획은 '서두르지 않기'예요. 서두르면 에너지를 쓰게 되고, 에너지는 생존 자원이니까요~",
+			"ja": "いらっしゃい、リーダー~ 今日の計画は『急がないこと』です。急ぐとエネルギーを使いますし、エネルギーは生存資源ですからねぇ~",
+			"zh": "你来啦, 领导~ 今天的计划是“不着急”。着急会消耗能量, 而能量可是生存资源呢~",
+			"ba": "С возвращением, лидер~ План на сегодня: не спешить. Спешка тратит энергию, а энергия — ресурс выживания~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"GREETING_DAY_REPEAT": {
+		"script": {
+			"en": "Oh~ you're back~ I kept your spot warm. Well… I was napping on it, but that counts, right~?",
+			"ko": "어라~ 다시 오셨네요오~ 리더의 자리는 따뜻하게 지켜 뒀어요. 뭐... 그 위에서 낮잠을 자긴 했지만, 그것도 지킨 거죠~?",
+			"ja": "あら~ また来てくれたんですねぇ~ リーダーの席は温かく守っておきましたよ。まぁ…その上でお昼寝してましたけど、それも守ったうちですよねぇ~?",
+			"zh": "哦~ 你回来啦~ 领导的位置我一直帮你暖着呢。嘛……虽然是趴在上面睡午觉暖的, 但那也算守护了吧~?",
+			"ba": "О~ вы вернулись~ Я сохранил ваше место тёплым. Ну… я на нём дремал, но это же считается, правда~?"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"GREETING_LATE_WEEK": {
+		"script": {
+			"en": "It's been about a week, hasn't it~? Don't worry, I didn't go anywhere. Moving takes effort, you know~ …I did miss you a little, though~",
+			"ko": "일주일 만이네요오~? 걱정 마세요, 저는 어디에도 안 갔어요. 움직이는 건 힘드니까요~ ...그래도 조금은 보고 싶었어요~",
+			"ja": "1週間ぶりですねぇ~? ご心配なく、私はどこにも行ってませんよ。動くのって大変ですから~ …でも、ちょっとだけ会いたかったですよぉ~",
+			"zh": "有一周没见了吧~? 别担心, 我哪儿也没去。毕竟移动很费劲嘛~ ……不过还是有一点点想你的~",
+			"ba": "Прошла примерно неделя, да~? Не волнуйтесь, я никуда не уходил. Двигаться — это же усилие~ …Но я немножко скучал~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_LATE_MONTH": {
+		"script": {
+			"en": "A whole month~ I read three books, drank forty cups of cocoa, and napped… countless times. See? Waiting can be productive too~ Welcome back, leader~",
+			"ko": "한 달 만이네요오~ 그동안 책 세 권을 읽고, 코코아를 마흔 잔 마시고, 낮잠은... 셀 수 없이 잤어요. 보셨죠? 기다림도 생산적일 수 있답니다~ 어서 오세요, 리더~",
+			"ja": "1ヶ月ぶりですねぇ~ その間、本を3冊読んで、ココアを40杯飲んで、お昼寝は…数えきれないほどしました。ほらね? 待つことだって生産的になれるんですよ~ おかえりなさい、リーダー~",
+			"zh": "整整一个月了呢~ 这期间我读了三本书, 喝了四十杯可可, 午觉睡了……数不清多少次。看到了吧? 等待也可以很有成效的~ 欢迎回来, 领导~",
+			"ba": "Целый месяц~ Я прочёл три книги, выпил сорок чашек какао и вздремнул… бессчётное число раз. Видите? Ожидание тоже может быть продуктивным~ С возвращением, лидер~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_00_CLOCK": {
+		"script": {
+			"en": "Midnight~ Statistically, the safest place right now is under a blanket. I recommend immediate deployment~",
+			"ko": "자정이에요~ 통계적으로 지금 가장 안전한 장소는 이불 속이죠. 즉시 전개하시는 걸 추천해요~",
+			"ja": "真夜中ですねぇ~ 統計的に、今いちばん安全な場所はお布団の中です。即時展開をおすすめしますよ~",
+			"zh": "午夜了~ 从统计上讲, 现在最安全的地方就是被窝里。建议立即展开部署~",
+			"ba": "Полночь~ Статистически самое безопасное место сейчас — под одеялом. Рекомендую немедленное развёртывание~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	"GREETING_01_CLOCK": {
+		"script": {
+			"en": "One in the morning~ Hmm, a fellow night owl? Night owls should at least hydrate… slowly~",
+			"ko": "새벽 1시네요오~ 흐음, 리더도 야행성인가요? 야행성이라도 물은 챙겨 마셔야 해요... 천천히요~",
+			"ja": "深夜1時ですねぇ~ ふむ、リーダーも夜型さんですか? 夜型でもお水はちゃんと飲まないとですよ…ゆっくりねぇ~",
+			"zh": "凌晨1点了~ 唔, 领导也是夜猫子吗? 就算是夜猫子也要记得喝水哦……慢慢喝~",
+			"ba": "Час ночи~ Хм, тоже сова? Даже совам нужно пить воду… не спеша~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	"GREETING_02_CLOCK": {
+		"script": {
+			"en": "Two a.m.~ This is the hour when a book quietly steals your bedtime. …Been there~ *yawn*",
+			"ko": "새벽 2시예요~ 책이 취침 시간을 훔쳐 가는 시간대죠. ...저도 자주 당해요~ 하암.",
+			"ja": "深夜2時ですよ~ 本が就寝時間をこっそり盗んでいく時間帯ですねぇ。…私もよくやられます~ ふわぁ。",
+			"zh": "凌晨2点了~ 这是书本悄悄偷走睡眠时间的时段呢。……我也经常中招~ 哈啊。",
+			"ba": "Два часа ночи~ Это час, когда книга тихонько крадёт время сна. …Со мной такое бывало~ Зева-аю."
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	"GREETING_03_CLOCK": {
+		"script": {
+			"en": "Three a.m.~ Can't sleep? Warm cocoa helps, you know~ Shall I put the kettle on… mentally?",
+			"ko": "새벽 3시네요~ 잠이 안 오세요? 따뜻한 코코아가 도움이 된답니다~ 제가 주전자를... 마음속으로 올려 둘게요~",
+			"ja": "深夜3時ですねぇ~ 眠れないんですか? 温かいココアが効くんですよ~ 私がやかんを…心の中で火にかけておきますね~",
+			"zh": "凌晨3点了~ 睡不着吗? 热可可很有用的哦~ 我来把水壶……在心里烧上~",
+			"ba": "Три часа ночи~ Не спится? Тёплое какао помогает, знаете ли~ Поставлю чайник… мысленно~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	"GREETING_04_CLOCK": {
+		"script": {
+			"en": "Four a.m.~ The world is at its quietest now. Perfect for thinking… or for not thinking at all~",
+			"ko": "새벽 4시예요~ 세상이 가장 조용한 시간이죠. 생각하기에 딱 좋아요... 아니면 아무 생각도 안 하기에도요~",
+			"ja": "朝4時ですよ~ 世界がいちばん静かな時間ですねぇ。考え事にぴったりです…もしくは、何も考えないのにもね~",
+			"zh": "凌晨4点了~ 现在是世界最安静的时候。很适合思考……或者干脆什么都不想~",
+			"ba": "Четыре утра~ Мир сейчас тише всего. Идеально для размышлений… или для полного их отсутствия~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	"GREETING_05_CLOCK": {
+		"script": {
+			"en": "Five a.m.~ They say dawn sleep is the sweetest. Leader, you're witnessing me resist the greatest temptation known to mankind~",
+			"ko": "새벽 5시네요오~ 새벽잠이 제일 달다고 하죠. 리더는 지금 인류 최대의 유혹을 견디는 저를 목격하고 계신 거예요~",
+			"ja": "朝5時ですねぇ~ 明け方の眠りがいちばん甘いと言いますよね。リーダーは今、人類最大の誘惑に耐える私を目撃しているんですよ~",
+			"zh": "凌晨5点了~ 都说黎明的觉最香。领导, 你正在见证我抵抗人类最大诱惑的样子~",
+			"ba": "Пять утра~ Говорят, предрассветный сон — самый сладкий. Лидер, вы наблюдаете, как я сопротивляюсь величайшему искушению человечества~"
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	"GREETING_06_CLOCK": {
+		"script": {
+			"en": "Six already~? You're up early, leader. Me? I'm… half up. The other half needs five more minutes~",
+			"ko": "벌써 6시~? 일찍 일어나셨네요, 리더. 저요? 저는... 반쯤 일어났어요. 나머지 반은 5분만 더 필요하대요~",
+			"ja": "もう6時~? 早起きですねぇ、リーダー。私ですか? 私は…半分起きてます。残り半分はあと5分欲しいそうです~",
+			"zh": "已经6点了~? 起得真早啊, 领导。我吗? 我……起来了一半。另一半说还需要五分钟~",
+			"ba": "Уже шесть~? Рано вы встали, лидер. Я? Я… наполовину проснулся. Второй половине нужно ещё пять минут~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_07_CLOCK": {
+		"script": {
+			"en": "Good morning~ Seven o'clock. Let's start the day gently. A day that starts gently tends to end gently too~",
+			"ko": "좋은 아침이에요~ 7시네요. 하루를 부드럽게 시작해 봐요. 부드럽게 시작한 하루는 부드럽게 끝나는 법이거든요~",
+			"ja": "おはようございます~ 7時ですね。一日を柔らかく始めましょう。柔らかく始まった一日は、柔らかく終わるものなんですよ~",
+			"zh": "早上好~ 7点了。让我们温柔地开始这一天吧。温柔开始的一天, 往往也会温柔地结束~",
+			"ba": "Доброе утро~ Семь часов. Начнём день мягко. День, начатый мягко, обычно и заканчивается мягко~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_08_CLOCK": {
+		"script": {
+			"en": "Eight o'clock~ Have you had breakfast? Skipping fuel and running anyway is what they call a design flaw~",
+			"ko": "8시예요~ 아침은 드셨나요? 연료도 안 넣고 달리는 걸 설계 결함이라고 부른답니다~",
+			"ja": "8時ですよ~ 朝ごはんは食べました? 燃料も入れずに走るのを、設計ミスって言うんですよ~",
+			"zh": "8点了~ 吃早餐了吗? 不加燃料就跑, 这叫设计缺陷哦~",
+			"ba": "Восемь часов~ Вы позавтракали? Бежать без топлива — это, знаете ли, конструктивный недостаток~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_09_CLOCK": {
+		"script": {
+			"en": "Nine o'clock~ Mornings are for warming up slowly. Even the sun takes hours to reach the top~",
+			"ko": "9시네요~ 오전은 천천히 워밍업하는 시간이에요. 태양도 꼭대기까지 가는 데 몇 시간은 걸리잖아요~",
+			"ja": "9時ですねぇ~ 午前中はゆっくりウォーミングアップする時間です。太陽だって頂上まで行くのに何時間もかかるでしょう~",
+			"zh": "9点了~ 上午是慢慢热身的时间。就连太阳爬到头顶也要花好几个小时呢~",
+			"ba": "Девять часов~ Утро — время для неспешной разминки. Даже солнцу нужны часы, чтобы добраться до зенита~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_10_CLOCK": {
+		"script": {
+			"en": "Ten o'clock~ My brain is finally booting up. Estimated time to full operation… noon-ish~?",
+			"ko": "10시예요~ 이제야 뇌가 부팅되기 시작했어요. 완전 가동까지 예상 시간은... 정오쯤~?",
+			"ja": "10時ですよ~ やっと脳が起動し始めました。フル稼働までの予想時間は…お昼ごろ~?",
+			"zh": "10点了~ 我的大脑终于开始启动了。预计完全运转的时间是……中午左右~?",
+			"ba": "Десять часов~ Мой мозг наконец загружается. Расчётное время полной готовности… где-то к полудню~?"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_11_CLOCK": {
+		"script": {
+			"en": "Eleven~ The important question of the day has arrived: what's for lunch~? Big decisions deserve slow thinking~",
+			"ko": "11시네요~ 오늘의 중요한 질문이 도착했어요. 점심 뭐 먹죠~? 큰 결정일수록 천천히 생각해야 하는 법이에요~",
+			"ja": "11時ですねぇ~ 今日の重要な質問が届きました。お昼、何食べましょう~? 大きな決断ほどゆっくり考えるべきなんですよ~",
+			"zh": "11点了~ 今日重要问题已送达: 午饭吃什么~? 越是重大的决定越要慢慢想~",
+			"ba": "Одиннадцать~ Прибыл важный вопрос дня: что на обед~? Большие решения заслуживают медленных раздумий~"
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_12_CLOCK": {
+		"script": {
+			"en": "Noon~ Eat well, then nap well. That's the natural order of things, scientifically speaking… probably~",
+			"ko": "정오예요~ 잘 먹고, 잘 자고. 그게 자연의 섭리랍니다. 과학적으로요... 아마도~",
+			"ja": "正午ですよ~ よく食べて、よく寝る。それが自然の摂理なんです。科学的にね…たぶん~",
+			"zh": "中午了~ 吃好, 睡好。这是自然的法则, 科学上讲……大概吧~",
+			"ba": "Полдень~ Хорошо поесть, потом хорошо вздремнуть. Таков естественный порядок вещей, с научной точки зрения… наверное~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_13_CLOCK": {
+		"script": {
+			"en": "One p.m.~ Post-lunch drowsiness isn't laziness, it's biology. I simply choose not to fight biology~",
+			"ko": "오후 1시네요~ 식곤증은 게으름이 아니라 생물학이에요. 저는 그저 생물학과 싸우지 않기로 한 것뿐이죠~",
+			"ja": "午後1時ですねぇ~ 食後の眠気は怠けじゃなくて生物学です。私はただ、生物学と戦わないことにしただけなんですよ~",
+			"zh": "下午1点了~ 饭后困倦不是懒惰, 是生物学。我只是选择不与生物学对抗而已~",
+			"ba": "Час дня~ Послеобеденная сонливость — не лень, а биология. Я просто решил не воевать с биологией~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_14_CLOCK": {
+		"script": {
+			"en": "Two p.m.~ Welcome to the golden hour of napping. Twenty minutes now equals two cups of coffee, they say~",
+			"ko": "오후 2시예요~ 낮잠의 골든 타임에 오신 걸 환영해요. 지금 20분은 커피 두 잔과 맞먹는다고 하죠~",
+			"ja": "午後2時ですよ~ お昼寝のゴールデンタイムへようこそ。今の20分はコーヒー2杯に匹敵するそうですよ~",
+			"zh": "下午2点了~ 欢迎来到午睡的黄金时段。据说现在睡20分钟等于两杯咖啡~",
+			"ba": "Два часа дня~ Добро пожаловать в золотой час дневного сна. Говорят, двадцать минут сейчас равны двум чашкам кофе~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_15_CLOCK": {
+		"script": {
+			"en": "Three o'clock~ Snack time. A book in one hand, something sweet in the other… perfect equilibrium~",
+			"ko": "3시네요~ 간식 시간이에요. 한 손엔 책, 다른 손엔 달콤한 것... 완벽한 균형이죠~",
+			"ja": "3時ですねぇ~ おやつの時間です。片手に本、もう片手に甘いもの…完璧なバランスですよ~",
+			"zh": "3点了~ 点心时间。一手拿书, 一手拿甜食……完美的平衡~",
+			"ba": "Три часа~ Время перекуса. В одной руке книга, в другой что-то сладкое… идеальное равновесие~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_16_CLOCK": {
+		"script": {
+			"en": "Four p.m.~ The afternoon sun makes eyelids heavy… Leader, if I doze off mid-sentence, just take it as ambient soun—zzz…",
+			"ko": "오후 4시예요~ 오후 햇살은 눈꺼풀을 무겁게 하죠... 리더, 제가 말하다 졸면 배경음이라고 생각해 주세... zzz...",
+			"ja": "午後4時ですよ~ 午後の日差しはまぶたを重くしますねぇ…リーダー、私が話の途中で眠ったら環境音だと思ってくださ…すぅ…",
+			"zh": "下午4点了~ 午后的阳光让眼皮好沉……领导, 如果我说着说着睡着了, 就当是环境音吧……呼……",
+			"ba": "Четыре часа дня~ Послеполуденное солнце делает веки тяжёлыми… Лидер, если я задремлю на полуслове, считайте это фоновым шумо-о… хр-р…"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_17_CLOCK": {
+		"script": {
+			"en": "Five o'clock~ The day is winding down. Winding down is my area of expertise, so leave it to me~",
+			"ko": "5시네요~ 하루가 서서히 마무리되어 가네요. 마무리하며 느긋해지는 건 제 전문 분야니까, 맡겨 주세요~",
+			"ja": "5時ですねぇ~ 一日がゆっくり終わりに向かっていますね。のんびり締めくくるのは私の専門分野ですから、お任せください~",
+			"zh": "5点了~ 一天正在慢慢收尾。放松收尾可是我的专业领域, 交给我吧~",
+			"ba": "Пять часов~ День потихоньку сворачивается. Сворачиваться — моя специальность, так что доверьтесь мне~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_18_CLOCK": {
+		"script": {
+			"en": "Six p.m.~ Dinner time approaches. A warm meal is the day's reward. You've earned it, leader~",
+			"ko": "6시예요~ 저녁 시간이 다가오네요. 따뜻한 한 끼는 하루의 보상이에요. 리더는 받을 자격이 충분해요~",
+			"ja": "6時ですよ~ 夕食の時間が近づいてますね。温かいごはんは一日のご褒美です。リーダーは受け取る資格が十分ありますよ~",
+			"zh": "6点了~ 晚餐时间快到了。热腾腾的一餐是一天的奖励。领导, 你值得拥有~",
+			"ba": "Шесть вечера~ Приближается время ужина. Тёплая еда — награда за день. Вы её заслужили, лидер~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_19_CLOCK": {
+		"script": {
+			"en": "Seven p.m.~ The most relaxed hour of the day. Nothing urgent, nowhere to be… my favorite kind of hour~",
+			"ko": "저녁 7시네요~ 하루 중 제일 여유로운 시간이에요. 급한 일도 없고, 갈 곳도 없고... 제가 제일 좋아하는 종류의 시간이죠~",
+			"ja": "夜7時ですねぇ~ 一日でいちばんゆったりした時間です。急ぎの用もなく、行く場所もなく…私がいちばん好きな種類の時間ですよ~",
+			"zh": "晚上7点了~ 一天中最悠闲的时刻。没有急事, 也不用去哪里……这是我最喜欢的时间~",
+			"ba": "Семь вечера~ Самый расслабленный час дня. Ничего срочного, никуда не нужно… мой любимый вид времени~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_20_CLOCK": {
+		"script": {
+			"en": "Eight o'clock~ Cocoa time. One cup for you, one for me… and maybe a second one for me~",
+			"ko": "8시예요~ 코코아 타임이에요. 리더 한 잔, 저 한 잔... 그리고 어쩌면 저 한 잔 더~",
+			"ja": "8時ですよ~ ココアタイムです。リーダーに1杯、私に1杯…そして、もしかしたら私にもう1杯~",
+			"zh": "8点了~ 可可时间。领导一杯, 我一杯……说不定我还要再来一杯~",
+			"ba": "Восемь часов~ Время какао. Чашка вам, чашка мне… и, пожалуй, ещё одна мне~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_21_CLOCK": {
+		"script": {
+			"en": "Nine p.m.~ A perfect night for reading. Books are the only survival gear that works while lying down~",
+			"ko": "밤 9시네요~ 책 읽기 딱 좋은 밤이에요. 책은 누워서도 작동하는 유일한 생존 장비랍니다~",
+			"ja": "夜9時ですねぇ~ 読書にぴったりの夜です。本は寝転んだままでも作動する唯一の生存装備なんですよ~",
+			"zh": "晚上9点了~ 是个适合读书的夜晚。书是唯一躺着也能运作的生存装备哦~",
+			"ba": "Девять вечера~ Идеальная ночь для чтения. Книги — единственное снаряжение для выживания, работающее лёжа~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 10
+	},
+	"GREETING_22_CLOCK": {
+		"script": {
+			"en": "Ten p.m.~ The blanket is calling. It says… 'come here'. Who am I to refuse~?",
+			"ko": "밤 10시예요~ 이불이 부르고 있어요. 뭐라고 하냐면... '이리 와'래요. 제가 어떻게 거절하겠어요~?",
+			"ja": "夜10時ですよ~ お布団が呼んでいます。なんて言ってるかというと…『おいで』だそうです。私に断れるはずがないでしょう~?",
+			"zh": "晚上10点了~ 被窝在呼唤了。它说……“过来吧”。我怎么忍心拒绝呢~?",
+			"ba": "Десять вечера~ Одеяло зовёт. Оно говорит… «иди сюда». Кто я такой, чтобы отказывать~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	"GREETING_23_CLOCK": {
+		"script": {
+			"en": "Eleven~ Good work today, leader~ Rest is the final task of the day. Let's finish it properly, hm~?",
+			"ko": "밤 11시네요~ 오늘도 수고했어요, 리더~ 휴식은 하루의 마지막 업무예요. 마지막까지 제대로 끝내 봐요~?",
+			"ja": "夜11時ですねぇ~ 今日もお疲れさまでした、リーダー~ 休息は一日の最後の業務です。最後までちゃんと終わらせましょうねぇ~?",
+			"zh": "晚上11点了~ 今天也辛苦了, 领导~ 休息是一天的最后一项任务。让我们好好完成它吧~?",
+			"ba": "Одиннадцать~ Хорошо поработали сегодня, лидер~ Отдых — последняя задача дня. Давайте выполним её как следует, м~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 10
+	},
+	"ALARM_00_CLOCK": {
+		"script": {
+			"en": "It's midnight~ A new day has technically begun, but there's no rule saying you must greet it awake~",
+			"ko": "자정이에요~ 엄밀히는 새로운 하루가 시작됐지만, 깨어서 맞이해야 한다는 규칙은 없답니다~",
+			"ja": "午前0時ですよ~ 厳密には新しい一日が始まりましたが、起きて迎えなきゃいけないという規則はありませんからね~",
+			"zh": "午夜0点了~ 严格来说新的一天已经开始了, 但没有规定必须醒着迎接它~",
+			"ba": "Полночь~ Формально начался новый день, но нет правила, что встречать его нужно бодрствуя~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 0
+	},
+	"ALARM_01_CLOCK": {
+		"script": {
+			"en": "One a.m.~ Consider dimming~",
+			"ko": "새벽 1시예요~ 슬슬 어둡게 해 두는 건 어때요~?",
+			"ja": "午前1時ですよ~ そろそろ暗くしてみては~?",
+			"zh": "凌晨1点了~ 要不要调暗一点~?",
+			"ba": "Час ночи~ Может, приглушить~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 0
+	},
+	"ALARM_02_CLOCK": {
+		"script": {
+			"en": "Two a.m.~ Deep night. Even emergencies prefer well-rested responders, you know~",
+			"ko": "새벽 2시예요~ 깊은 밤이네요. 긴급 상황도 푹 쉰 대응자를 더 좋아한답니다~",
+			"ja": "午前2時ですよ~ 深い夜ですねぇ。緊急事態だって、よく休んだ対応者の方が好きなんですよ~",
+			"zh": "凌晨2点了~ 夜深了。紧急情况也更喜欢休息充分的应对者哦~",
+			"ba": "Два часа ночи~ Глубокая ночь. Даже чрезвычайные ситуации предпочитают отдохнувших спасателей, знаете ли~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 0
+	},
+	"ALARM_03_CLOCK": {
+		"script": {
+			"en": "Three a.m.~ The quietest hour. If you're awake by choice, respect. If not… cocoa and blanket, my friend~",
+			"ko": "새벽 3시예요~ 가장 조용한 시간이죠. 일부러 깨어 계신 거라면 존경해요. 아니라면... 코코아와 이불이에요, 리더~",
+			"ja": "午前3時ですよ~ いちばん静かな時間ですね。わざと起きているなら尊敬します。そうでないなら…ココアとお布団ですよ、リーダー~",
+			"zh": "凌晨3点了~ 最安静的时刻。如果你是特意醒着的, 敬佩。如果不是……那就可可加被窝吧, 领导~",
+			"ba": "Три часа ночи~ Самый тихий час. Если вы бодрствуете по своей воле — уважаю. Если нет… какао и одеяло, друг мой~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 0
+	},
+	"ALARM_04_CLOCK": {
+		"script": {
+			"en": "Four a.m.~ Dawn is preparing backstage. No need to help it… it's done this before~",
+			"ko": "새벽 4시예요~ 새벽이 무대 뒤에서 준비 중이에요. 도와줄 필요는 없어요... 쟤도 해 본 솜씨거든요~",
+			"ja": "午前4時ですよ~ 夜明けが舞台裏で準備中です。手伝う必要はありませんよ…あの子、経験者ですから~",
+			"zh": "凌晨4点了~ 黎明正在后台准备。不用去帮忙……它是老手了~",
+			"ba": "Четыре утра~ Рассвет готовится за кулисами. Помогать не нужно… у него есть опыт~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 0
+	},
+	"ALARM_05_CLOCK": {
+		"script": {
+			"en": "Five a.m.~ The birds are starting their shift. Ours can start… a little later~",
+			"ko": "새벽 5시예요~ 새들이 교대 근무를 시작하네요. 우리 근무는... 조금 이따 시작해도 돼요~",
+			"ja": "午前5時ですよ~ 鳥さんたちがシフトを始めましたね。私たちのシフトは…もう少し後でも大丈夫ですよ~",
+			"zh": "凌晨5点了~ 鸟儿们开始换班了。我们的班……稍微晚点开始也没关系~",
+			"ba": "Пять утра~ Птицы заступают на смену. Наша смена может начаться… чуть позже~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 0
+	},
+	"ALARM_06_CLOCK": {
+		"script": {
+			"en": "Six a.m.~ Morning has arrived. Slowly stretch, slowly rise. Sudden movements are for emergencies only~",
+			"ko": "오전 6시예요~ 아침이 왔어요. 천천히 기지개 켜고, 천천히 일어나요. 급한 움직임은 비상시에만 쓰는 거랍니다~",
+			"ja": "午前6時ですよ~ 朝が来ました。ゆっくり伸びをして、ゆっくり起きましょう。急な動きは非常時専用なんですよ~",
+			"zh": "早上6点了~ 早晨来了。慢慢伸个懒腰, 慢慢起床。急速行动是只在紧急时刻用的~",
+			"ba": "Шесть утра~ Утро пришло. Медленно потянитесь, медленно вставайте. Резкие движения — только для чрезвычайных ситуаций~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_07_CLOCK": {
+		"script": {
+			"en": "Seven a.m.~ Breakfast is the day's first supply run. Please don't skip your own logistics~",
+			"ko": "오전 7시예요~ 아침 식사는 하루의 첫 보급이에요. 자신의 보급선을 끊지 말아 주세요~",
+			"ja": "午前7時ですよ~ 朝食は一日の最初の補給です。自分の補給線を断たないでくださいね~",
+			"zh": "早上7点了~ 早餐是一天的第一次补给。请不要切断自己的补给线~",
+			"ba": "Семь утра~ Завтрак — первое снабжение дня. Пожалуйста, не обрывайте собственную линию поставок~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_08_CLOCK": {
+		"script": {
+			"en": "Eight a.m.~ The world is speeding up outside. We can match its pace… or set our own~",
+			"ko": "오전 8시예요~ 바깥 세상은 속도를 올리고 있네요. 우리는 맞춰 가도 되고... 우리만의 속도로 가도 돼요~",
+			"ja": "午前8時ですよ~ 外の世界はスピードを上げていますね。合わせてもいいし…自分たちのペースで行ってもいいんですよ~",
+			"zh": "早上8点了~ 外面的世界在加速。我们可以跟上节奏……也可以按自己的步调走~",
+			"ba": "Восемь утра~ Мир снаружи набирает скорость. Можно подстроиться… а можно задать свой темп~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_09_CLOCK": {
+		"script": {
+			"en": "Nine a.m.~ A good hour to check today's plans… calmly, with a warm drink in hand~",
+			"ko": "오전 9시예요~ 오늘 일정을 점검하기 좋은 시간이에요... 차분하게, 따뜻한 음료를 손에 들고요~",
+			"ja": "午前9時ですよ~ 今日の予定を確認するのにいい時間です…落ち着いて、温かい飲み物を手にしてね~",
+			"zh": "上午9点了~ 是检查今日日程的好时候……冷静地, 手里端杯热饮~",
+			"ba": "Девять утра~ Хорошее время проверить планы на день… спокойно, с тёплым напитком в руке~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_10_CLOCK": {
+		"script": {
+			"en": "Ten a.m.~ If something needs doing today, now is a gentle time to start. Gently, though~",
+			"ko": "오전 10시예요~ 오늘 해야 할 일이 있다면, 지금이 살살 시작하기 좋은 때예요. 어디까지나 살살요~",
+			"ja": "午前10時ですよ~ 今日やるべきことがあるなら、今がそっと始めるのにいい頃合いです。あくまでそっとですよ~",
+			"zh": "上午10点了~ 如果今天有该做的事, 现在是温和开工的好时机。记住, 要温和~",
+			"ba": "Десять утра~ Если сегодня что-то нужно сделать, сейчас — мягкое время начать. Но именно мягко~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_11_CLOCK": {
+		"script": {
+			"en": "Eleven a.m.~ Almost noon. Finishing morning tasks now buys you a guilt-free lunch~",
+			"ko": "오전 11시예요~ 곧 정오네요. 오전 일을 지금 마치면 죄책감 없는 점심이 기다린답니다~",
+			"ja": "午前11時ですよ~ もうすぐお昼ですね。午前の仕事を今終わらせれば、罪悪感ゼロのランチが待ってますよ~",
+			"zh": "上午11点了~ 快到中午了。现在做完上午的事, 就能享受毫无负罪感的午餐~",
+			"ba": "Одиннадцать утра~ Почти полдень. Закончите утренние дела сейчас — и обед будет без чувства вины~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_12_CLOCK": {
+		"script": {
+			"en": "Noon~ Lunch time. Chew slowly~ Digestion is also a survival skill, technically~",
+			"ko": "정오예요~ 점심 시간이에요. 꼭꼭 씹어 드세요~ 소화도 엄밀히는 생존 기술이랍니다~",
+			"ja": "正午ですよ~ お昼の時間です。よく噛んで食べてくださいね~ 消化も厳密には生存スキルなんですよ~",
+			"zh": "中午12点了~ 午餐时间。慢慢嚼~ 消化严格来说也是一种生存技能~",
+			"ba": "Полдень~ Время обеда. Жуйте медленно~ Пищеварение, строго говоря, тоже навык выживания~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_13_CLOCK": {
+		"script": {
+			"en": "One p.m.~ The after-lunch calm. If your eyelids get heavy, that's just your body suggesting an excellent idea~",
+			"ko": "오후 1시예요~ 점심 후의 평온한 시간이죠. 눈꺼풀이 무거워진다면, 그건 몸이 아주 훌륭한 아이디어를 제안하는 거예요~",
+			"ja": "午後1時ですよ~ 昼食後の穏やかな時間ですね。まぶたが重くなったら、それは体がとても素晴らしいアイデアを提案しているんです~",
+			"zh": "下午1点了~ 午后的平静时光。如果眼皮变沉, 那是身体在提议一个绝妙的主意~",
+			"ba": "Час дня~ Послеобеденное затишье. Если веки тяжелеют — это тело предлагает отличную идею~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_14_CLOCK": {
+		"script": {
+			"en": "Two p.m.~ Nap o'clock has officially struck. Twenty minutes, no more~ …Okay, maybe thirty~",
+			"ko": "오후 2시예요~ 공식적으로 낮잠 시가 되었습니다. 20분만요, 더는 안 돼요~ ...뭐, 30분까지는 봐줄게요~",
+			"ja": "午後2時ですよ~ 正式にお昼寝時になりました。20分だけ、それ以上はダメですよ~ …まぁ、30分までなら大目に見ます~",
+			"zh": "下午2点了~ 午睡时刻正式到来。只睡20分钟, 不能再多了~ ……好吧, 30分钟也行~",
+			"ba": "Два часа дня~ Официально пробил час дневного сна. Двадцать минут, не больше~ …Ладно, можно тридцать~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_15_CLOCK": {
+		"script": {
+			"en": "Three p.m.~ Snack alert. Sweetness restores morale, and morale is a strategic resource~",
+			"ko": "오후 3시예요~ 간식 경보예요. 달콤함은 사기를 회복시키고, 사기는 전략 자원이랍니다~",
+			"ja": "午後3時ですよ~ おやつ警報です。甘さは士気を回復させて、士気は戦略資源なんですよ~",
+			"zh": "下午3点了~ 点心警报。甜味能恢复士气, 而士气是战略资源~",
+			"ba": "Три часа дня~ Тревога: время перекуса. Сладкое восстанавливает боевой дух, а боевой дух — стратегический ресурс~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_16_CLOCK": {
+		"script": {
+			"en": "Four p.m.~ The day's final stretch begins. Slow and steady… you know the rest~",
+			"ko": "오후 4시예요~ 하루의 마지막 구간이 시작됐어요. 느려도 꾸준히... 그 다음은 아시죠~?",
+			"ja": "午後4時ですよ~ 一日の最終区間が始まりました。ゆっくり着実に…その先はご存知でしょう~?",
+			"zh": "下午4点了~ 一天的最后一段开始了。慢而稳……后面的你知道的~",
+			"ba": "Четыре часа дня~ Начался финальный отрезок дня. Медленно и верно… продолжение вы знаете~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_17_CLOCK": {
+		"script": {
+			"en": "Five p.m.~ Time to slowly wrap things up. Unfinished tasks will still be there tomorrow… they're loyal like that~",
+			"ko": "오후 5시예요~ 슬슬 정리할 시간이에요. 못 끝낸 일은 내일도 그 자리에 있을 거예요... 걔들은 그런 면에서 의리가 있죠~",
+			"ja": "午後5時ですよ~ そろそろ片付けの時間です。終わらなかった仕事は明日もそこにいてくれますよ…あの子たち、そういうところは義理堅いんです~",
+			"zh": "下午5点了~ 该慢慢收尾了。没做完的事明天还会在原地等你……它们在这方面很讲义气~",
+			"ba": "Пять вечера~ Время потихоньку закругляться. Незаконченные дела будут на месте и завтра… в этом они верны~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_18_CLOCK": {
+		"script": {
+			"en": "Six p.m.~ Dinner hour. A warm meal at day's end is civilization's greatest invention… after the blanket~",
+			"ko": "오후 6시예요~ 저녁 시간이에요. 하루 끝의 따뜻한 한 끼는 문명 최고의 발명품이죠... 이불 다음으로요~",
+			"ja": "午後6時ですよ~ 夕食の時間です。一日の終わりの温かい食事は文明最高の発明品ですね…お布団の次に~",
+			"zh": "下午6点了~ 晚餐时间。一天结束时的热饭是文明最伟大的发明……仅次于被子~",
+			"ba": "Шесть вечера~ Час ужина. Тёплая еда в конце дня — величайшее изобретение цивилизации… после одеяла~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_19_CLOCK": {
+		"script": {
+			"en": "Seven p.m.~ The evening settles in. A fine hour to do absolutely nothing, with great dedication~",
+			"ko": "저녁 7시예요~ 저녁이 자리를 잡았네요. 아무것도 안 하는 일에 전념하기 좋은 시간이죠~",
+			"ja": "夜7時ですよ~ 夜が落ち着いてきましたね。何もしないことに専念するのにいい時間です~",
+			"zh": "晚上7点了~ 夜晚安顿下来了。是全身心投入“什么都不做”的好时光~",
+			"ba": "Семь вечера~ Вечер вступил в свои права. Отличный час, чтобы с полной самоотдачей не делать ничего~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_20_CLOCK": {
+		"script": {
+			"en": "Eight p.m.~ Official cocoa hour. Warm hands, warm heart, warm survival rate~",
+			"ko": "저녁 8시예요~ 공식 코코아 시간입니다. 따뜻한 손, 따뜻한 마음, 따뜻한 생존율~",
+			"ja": "夜8時ですよ~ 公式ココアタイムです。温かい手、温かい心、温かい生存率~",
+			"zh": "晚上8点了~ 官方可可时间。温暖的手, 温暖的心, 温暖的生存率~",
+			"ba": "Восемь вечера~ Официальный час какао. Тёплые руки, тёплое сердце, тёплый уровень выживаемости~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_21_CLOCK": {
+		"script": {
+			"en": "Nine p.m.~ Screens down, pages up. Paper doesn't need charging… a truly disaster-ready medium~",
+			"ko": "밤 9시예요~ 화면은 내려놓고, 책장을 넘겨 봐요. 종이는 충전이 필요 없죠... 진정한 재난 대비형 매체랍니다~",
+			"ja": "夜9時ですよ~ 画面を置いて、ページをめくりましょう。紙は充電いらずですから…真の災害対応型メディアなんですよ~",
+			"zh": "晚上9点了~ 放下屏幕, 翻开书页吧。纸张不需要充电……真正的防灾型媒介~",
+			"ba": "Девять вечера~ Экраны вниз, страницы вверх. Бумаге не нужна зарядка… поистине готовый к бедствиям носитель~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALARM_22_CLOCK": {
+		"script": {
+			"en": "Ten p.m.~ Begin sleep preparations~ Tomorrow's version of you is counting on tonight's version of you~",
+			"ko": "밤 10시예요~ 취침 준비를 시작해요~ 내일의 리더는 오늘 밤의 리더를 믿고 있답니다~",
+			"ja": "夜10時ですよ~ 就寝準備を始めましょう~ 明日のリーダーは、今夜のリーダーを頼りにしているんですよ~",
+			"zh": "晚上10点了~ 开始睡前准备吧~ 明天的你正指望着今晚的你呢~",
+			"ba": "Десять вечера~ Начинаем подготовку ко сну~ Завтрашний вы рассчитывает на сегодняшнего вас~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 0
+	},
+	"ALARM_23_CLOCK": {
+		"script": {
+			"en": "Eleven p.m.~ Lights out soon~ Sleep is free, effective, and requires zero effort. My favorite kind of solution~",
+			"ko": "밤 11시예요~ 곧 소등 시간이에요~ 잠은 공짜에, 효과 좋고, 노력이 전혀 안 들죠. 제가 제일 좋아하는 유형의 해결책이에요~",
+			"ja": "夜11時ですよ~ もうすぐ消灯です~ 睡眠はタダで、効果抜群で、努力ゼロ。私がいちばん好きなタイプの解決策です~",
+			"zh": "晚上11点了~ 快熄灯了~ 睡眠免费、有效, 还不费力气。是我最喜欢的那类解决方案~",
+			"ba": "Одиннадцать вечера~ Скоро отбой~ Сон бесплатен, эффективен и не требует усилий. Мой любимый тип решения~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.85,
+		"priority": 0
+	},
+	"ALERT_UNREAD_MESSAGE": {
+		"script": {
+			"en": "You have %UNREAD_MESSAGE_AMOUNT% unread messages~ No rush, but words left waiting tend to get lonely~",
+			"ko": "읽지 않은 메시지가 %UNREAD_MESSAGE_AMOUNT%개 있어요~ 서두를 건 없지만, 기다리는 말들은 외로워지기 마련이거든요~",
+			"ja": "未読メッセージが%UNREAD_MESSAGE_AMOUNT%件ありますよ~ 急がなくていいですが、待たされた言葉は寂しがるものですからねぇ~",
+			"zh": "有%UNREAD_MESSAGE_AMOUNT%条未读消息哦~ 不用急, 不过等待中的话语容易变得孤单~",
+			"ba": "У вас %UNREAD_MESSAGE_AMOUNT% непрочитанных сообщений~ Спешить некуда, но слова, оставленные ждать, начинают скучать~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_FOOD_EXPIRES_SOON": {
+		"script": {
+			"en": "The %FOOD_NAME% in %MEMBER_NAME%'s %BAG_NAME% is nearing its expiration date~ How about eating it first? Rolling the stock, they call it~",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 있는 %FOOD_NAME%의 유통기한이 다가오고 있어요~ 먼저 먹어 버리는 건 어때요? 롤링 스톡이라고 부른다죠~",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限が近づいていますよ~ 先に食べちゃうのはどうですか? ローリングストックって言うんですよねぇ~",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%里的%FOOD_NAME%快到保质期了~ 要不要先吃掉? 这叫滚动储备~",
+			"ba": "У %FOOD_NAME% в %BAG_NAME% участника %MEMBER_NAME% скоро истекает срок годности~ Может, съесть его первым? Это называют ротацией запасов~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_FOOD_EXPIRES": {
+		"script": {
+			"en": "The %FOOD_NAME% in %MEMBER_NAME%'s %BAG_NAME% has expired~ Farewells are sad, but a tummy ache would be sadder~",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 있는 %FOOD_NAME%의 유통기한이 지났어요~ 이별은 슬프지만, 배탈은 더 슬프답니다~",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限が切れちゃいました~ お別れは悲しいですが、お腹を壊す方がもっと悲しいですからねぇ~",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%里的%FOOD_NAME%已经过期了~ 告别虽然难过, 但闹肚子会更难过~",
+			"ba": "Срок годности %FOOD_NAME% в %BAG_NAME% участника %MEMBER_NAME% истёк~ Прощаться грустно, но болеть животом было бы грустнее~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_ITEM_MAINTENANCE_NEAR": {
+		"script": {
+			"en": "The maintenance date for %ITEM_NAME% in %MEMBER_NAME%'s %BAG_NAME% is coming up~ Tools looked after slowly last long, you know~",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 있는 %ITEM_NAME%의 유지보수 날짜가 다가오네요~ 천천히 돌봐 준 도구가 오래 가는 법이랍니다~",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%ITEM_NAME%のメンテナンス日が近づいていますね~ ゆっくり手入れされた道具は長持ちするものなんですよ~",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%里的%ITEM_NAME%快到保养日期了~ 慢慢被照料的工具才用得久~",
+			"ba": "Приближается дата обслуживания %ITEM_NAME% в %BAG_NAME% участника %MEMBER_NAME%~ Инструменты, за которыми ухаживают не спеша, служат долго~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_ITEM_MAINTENANCE_NEED": {
+		"script": {
+			"en": "The %ITEM_NAME% in %MEMBER_NAME%'s %BAG_NAME% seems to need maintenance~ Shall we tend to it… at a comfortable pace~?",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 있는 %ITEM_NAME%에 유지보수가 필요해 보여요~ 편안한 속도로... 돌봐 볼까요~?",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%ITEM_NAME%はメンテナンスが必要みたいですよ~ 心地よいペースで…手入れしてみましょうか~?",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%里的%ITEM_NAME%似乎需要保养了~ 以舒适的节奏……来照料一下吧~?",
+			"ba": "Похоже, %ITEM_NAME% в %BAG_NAME% участника %MEMBER_NAME% нуждается в обслуживании~ Займёмся этим… в комфортном темпе~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_BAG_OLD_HEAVY": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% looks quite heavy~ For seniors, keeping the pack under 10% of body weight prevents injuries. A light load walks farther~",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%이 꽤 무거워 보여요~ 노약자는 배낭 무게를 몸무게의 10% 미만으로 맞춰야 부상을 예방할 수 있대요. 가벼운 짐이 더 멀리 걷는답니다~",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%がかなり重そうですよ~ ご高齢の方はリュックの重さを体重の10%未満にすると怪我を防げるそうです。軽い荷物の方が遠くまで歩けるんですよ~",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%看起来很重~ 老年人背包重量应控制在体重的10%以下才能预防受伤。轻装才能走得更远~",
+			"ba": "%BAG_NAME% участника %MEMBER_NAME% выглядит тяжёлым~ Пожилым людям стоит держать вес рюкзака ниже 10% массы тела, чтобы избежать травм. Лёгкая ноша уходит дальше~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_BAG_ADULT_HEAVY": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% looks quite heavy~ For adults, under 15% of body weight is the safe line. Heavy packs make slow walkers… and I mean the bad kind of slow~",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%이 꽤 무거워 보여요~ 성인은 몸무게의 15% 미만이 안전선이래요. 무거운 짐은 걸음을 느리게 하죠... 이건 나쁜 쪽의 느림이에요~",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%がかなり重そうですよ~ 大人は体重の15%未満が安全ラインだそうです。重い荷物は歩みを遅くします…これは悪い方のスローですからね~",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%看起来很重~ 成年人背包不超过体重的15%才安全。重包会让脚步变慢……这可是坏的那种慢~",
+			"ba": "%BAG_NAME% участника %MEMBER_NAME% выглядит тяжёлым~ Для взрослых безопасная граница — менее 15% массы тела. Тяжёлый рюкзак замедляет шаг… и это плохой вид медлительности~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_BAG_YOUNG_HEAVY": {
+		"script": {
+			"en": "%MEMBER_NAME%'s %BAG_NAME% looks quite heavy~ For children, under 10% of body weight is the rule. Growing backs deserve gentle loads~",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%이 꽤 무거워 보여요~ 아이들은 몸무게의 10% 미만이 규칙이래요. 자라나는 등에는 가벼운 짐이 어울리죠~",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%がかなり重そうですよ~ お子さんは体重の10%未満がルールだそうです。育ち盛りの背中には優しい荷物が似合いますからね~",
+			"zh": "%MEMBER_NAME%的%BAG_NAME%看起来很重~ 儿童背包应低于体重的10%。成长中的背脊值得温柔的负担~",
+			"ba": "%BAG_NAME% участника %MEMBER_NAME% выглядит тяжёлым~ Для детей правило — менее 10% массы тела. Растущим спинам полагается щадящий груз~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_FIRST_AID_NOT_FOUND": {
+		"script": {
+			"en": "How about stocking first-aid supplies like bandages, disinfectant, and wound ointment~? Small scratches heal best when treated slowly and early~",
+			"ko": "붕대, 소독약, 상처 연고 같은 응급처치 물품을 구비해 두는 건 어때요~? 작은 상처는 느긋하게, 그리고 일찍 돌봐 줄 때 제일 잘 낫는답니다~",
+			"ja": "包帯、消毒薬、傷薬みたいな応急処置用品を備えておくのはどうですか~? 小さな傷はのんびり、そして早めに手当てするのがいちばん治りやすいんですよ~",
+			"zh": "备一些绷带、消毒液、伤口药膏之类的急救用品怎么样~? 小伤口在从容且及早处理时愈合得最好~",
+			"ba": "Как насчёт запастись бинтами, антисептиком и мазью для ран~? Мелкие царапины лучше всего заживают, когда о них заботятся не спеша и вовремя~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_GLUCOSE_NOT_FOUND": {
+		"script": {
+			"en": "How about keeping glucose or candy on hand~? When energy runs out, something sweet is the fastest rescue team~",
+			"ko": "포도당이나 사탕을 준비해 두는 건 어때요~? 에너지가 바닥났을 때, 달콤한 것은 가장 빠른 구조대랍니다~",
+			"ja": "ブドウ糖や飴を用意しておくのはどうですか~? エネルギーが切れた時、甘いものはいちばん速い救助隊なんですよ~",
+			"zh": "备些葡萄糖或糖果怎么样~? 能量耗尽时, 甜食是最快的救援队~",
+			"ba": "Как насчёт держать под рукой глюкозу или конфеты~? Когда энергия на нуле, сладкое — самая быстрая спасательная команда~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_PAINKILLER_NOT_FOUND": {
+		"script": {
+			"en": "How about adding painkillers to the kit~? Pain makes people hurry, and hurrying leads to mistakes… a calm body thinks better~",
+			"ko": "진통제를 상비해 두는 건 어때요~? 아픔은 사람을 서두르게 하고, 서두름은 실수를 부르죠... 편안한 몸이 더 잘 생각한답니다~",
+			"ja": "鎮痛剤を常備しておくのはどうですか~? 痛みは人を急がせて、焦りはミスを呼びます…楽な体の方がよく考えられるんですよ~",
+			"zh": "常备些止痛药怎么样~? 疼痛让人着急, 着急招来失误……舒适的身体才能思考得更好~",
+			"ba": "Как насчёт добавить обезболивающее в аптечку~? Боль заставляет спешить, а спешка ведёт к ошибкам… спокойное тело лучше думает~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_MEDICINE_ANTIDIARRHEAL_NOT_FOUND": {
+		"script": {
+			"en": "How about stocking anti-diarrheal medicine~? In a disaster, water and food can be unreliable… and some troubles are best prevented, not endured~",
+			"ko": "지사제를 구비해 두는 건 어때요~? 재난 시엔 물과 음식을 믿기 어려워지죠... 어떤 곤란함은 견디는 것보다 예방하는 게 나은 법이에요~",
+			"ja": "下痢止めを備えておくのはどうですか~? 災害時は水や食べ物が信用できなくなりますから…ある種の困りごとは、耐えるより防ぐ方がいいんですよ~",
+			"zh": "备些止泻药怎么样~? 灾难时水和食物都不太可靠……有些麻烦, 与其忍受不如预防~",
+			"ba": "Как насчёт запастись средством от диареи~? В бедствие вода и еда становятся ненадёжными… некоторые неприятности лучше предотвращать, чем терпеть~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_NEW_DAY_BEGINS": {
+		"script": {
+			"en": "A new day has begun~ You have %PLAN_AMOUNT% plans today. Let's take them one at a time, slowly and surely~",
+			"ko": "새로운 하루가 시작됐어요~ 오늘 리더의 일정은 %PLAN_AMOUNT%건이네요. 하나씩, 천천히 확실하게 해치워 봐요~",
+			"ja": "新しい一日が始まりましたよ~ 今日のリーダーの予定は%PLAN_AMOUNT%件ですね。一つずつ、ゆっくり確実に片付けましょう~",
+			"zh": "新的一天开始了~ 领导今天有%PLAN_AMOUNT%项日程。一件一件, 慢而稳地解决吧~",
+			"ba": "Начался новый день~ У вас сегодня %PLAN_AMOUNT% планов. Разберёмся с ними по одному, медленно и верно~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_NOON_PLAN_LEFT": {
+		"script": {
+			"en": "Good afternoon~ %PLAN_AMOUNT% plans remain after lunch. Digest first, conquer later~",
+			"ko": "좋은 오후예요~ 점심 이후 남은 일정은 %PLAN_AMOUNT%건이에요. 소화가 먼저, 정복은 그 다음이에요~",
+			"ja": "こんにちは~ お昼の後に残っている予定は%PLAN_AMOUNT%件です。消化が先、征服はその後ですよ~",
+			"zh": "下午好~ 午饭后还剩%PLAN_AMOUNT%项日程。先消化, 再征服~",
+			"ba": "Добрый день~ После обеда осталось %PLAN_AMOUNT% планов. Сначала переварить, потом покорять~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_EVENING_PLAN_LEFT": {
+		"script": {
+			"en": "Good evening~ %PLAN_AMOUNT% plans are still waiting. If they can wait until tomorrow, that's also a strategy… if not, gently onward~",
+			"ko": "좋은 저녁이에요~ 아직 %PLAN_AMOUNT%건의 일정이 기다리고 있네요. 내일로 미룰 수 있다면 그것도 전략이고... 아니라면, 살살 마저 해 봐요~",
+			"ja": "こんばんは~ まだ%PLAN_AMOUNT%件の予定が待っていますね。明日に回せるならそれも戦略ですし…ダメなら、そっと片付けちゃいましょう~",
+			"zh": "晚上好~ 还有%PLAN_AMOUNT%项日程在等着。能推到明天也是一种战略……不能的话, 就温和地做完吧~",
+			"ba": "Добрый вечер~ Ещё %PLAN_AMOUNT% планов ждут. Если можно отложить на завтра — это тоже стратегия… если нет, мягко вперёд~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_ANNIVERSARY_NEXT_DAY": {
+		"script": {
+			"en": "Tomorrow is %ANNIVERSARY%~ You marked it on the calendar, so it must matter. Let's prepare today, unhurried~",
+			"ko": "내일은 %ANNIVERSARY%예요~ 달력에 표시해 두신 걸 보니 중요한 날이겠죠. 오늘 미리, 서두르지 말고 준비해 봐요~",
+			"ja": "明日は%ANNIVERSARY%ですよ~ カレンダーに印をつけているあたり、大事な日なんでしょうね。今日のうちに、焦らず準備しましょう~",
+			"zh": "明天是%ANNIVERSARY%哦~ 既然在日历上做了标记, 一定是重要的日子。今天就从容地准备起来吧~",
+			"ba": "Завтра %ANNIVERSARY%~ Раз вы отметили это в календаре, значит, это важно. Подготовимся сегодня, без спешки~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_ANNIVERSARY_SAME_DAY": {
+		"script": {
+			"en": "Today is %ANNIVERSARY%~ A marked day deserves a marked pace… meaning, enjoy it slowly~",
+			"ko": "오늘은 %ANNIVERSARY%예요~ 특별한 날엔 특별한 속도가 어울리죠... 그러니까, 천천히 즐기자는 뜻이에요~",
+			"ja": "今日は%ANNIVERSARY%ですよ~ 特別な日には特別なペースが似合います…つまり、ゆっくり楽しみましょうってことです~",
+			"zh": "今天是%ANNIVERSARY%~ 特别的日子配得上特别的节奏……意思就是, 慢慢享受吧~",
+			"ba": "Сегодня %ANNIVERSARY%~ Отмеченный день заслуживает особого темпа… то есть наслаждайтесь им медленно~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ALERT_PATIENT_RELEASE_FROM_ISOLATION": {
+		"script": {
+			"en": "Patient %PATIENT_NAME%'s isolation period has ended~ Recovery well earned. A warm cup of cocoa would make a fine welcome-back gift~",
+			"ko": "환자 %PATIENT_NAME%의 격리 기간이 끝났어요~ 잘 회복해 냈네요. 따뜻한 코코아 한 잔이면 훌륭한 복귀 선물이 될 거예요~",
+			"ja": "患者%PATIENT_NAME%の隔離期間が終わりましたよ~ よく回復しましたね。温かいココア1杯は、素敵な復帰祝いになりますよ~",
+			"zh": "患者%PATIENT_NAME%的隔离期结束了~ 恢复得很好。一杯热可可会是很棒的回归礼物~",
+			"ba": "Период изоляции пациента %PATIENT_NAME% закончился~ Выздоровление заслуженное. Чашка тёплого какао станет отличным подарком к возвращению~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_SPRING": {
+		"script": {
+			"en": "Today is Ipchun, the beginning of spring~ The world is waking up… slowly, at its own pace. A kindred spirit~",
+			"ko": "오늘은 입춘(立春), 봄이 시작되는 날이에요~ 세상이 깨어나고 있네요... 천천히, 자기만의 속도로요. 동지 같은 느낌이 들어요~",
+			"ja": "今日は立春、春が始まる日ですよ~ 世界が目覚めつつありますね…ゆっくり、自分のペースで。仲間みたいで親近感が湧きます~",
+			"zh": "今天是立春, 春天开始的日子~ 世界正在苏醒……慢慢地, 按自己的节奏。感觉像同类呢~",
+			"ba": "Сегодня Ипчхун — начало весны~ Мир просыпается… медленно, в своём собственном темпе. Родственная душа~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_RAIN_WATER": {
+		"script": {
+			"en": "Today is Usu, when snow turns to rain~ Rainy seasons ahead… a good time to slowly check the drains and umbrellas~",
+			"ko": "오늘은 우수(雨水), 눈이 비로 바뀌는 날이에요~ 비의 계절이 다가오니... 배수구랑 우산을 슬슬 점검하기 좋은 때죠~",
+			"ja": "今日は雨水、雪が雨に変わる日ですよ~ 雨の季節が近づくので…排水口と傘をのんびり点検するのにいい頃合いです~",
+			"zh": "今天是雨水, 雪化为雨的日子~ 雨季将至……是慢慢检查排水口和雨伞的好时候~",
+			"ba": "Сегодня Усу — снег превращается в дождь~ Впереди дождливые сезоны… хорошее время неторопливо проверить стоки и зонты~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_AWAKENING_OF_INSECTS": {
+		"script": {
+			"en": "Today is Gyeongchip, when hibernating creatures wake up~ Even they slept all winter and no one calls them lazy… nature understands~",
+			"ko": "오늘은 경칩(驚蟄), 겨울잠 자던 생물들이 깨어나는 날이에요~ 겨우내 잤는데도 아무도 게으르다고 안 하죠... 자연은 다 이해해 준답니다~",
+			"ja": "今日は啓蟄、冬眠していた生き物たちが目覚める日ですよ~ 冬中寝てたのに誰も怠け者って言わないんですよね…自然は分かってくれてるんです~",
+			"zh": "今天是惊蛰, 冬眠的生物苏醒的日子~ 它们睡了一整个冬天也没人说懒……大自然是懂的~",
+			"ba": "Сегодня Кёнчхип — просыпаются существа из зимней спячки~ Они проспали всю зиму, и никто не зовёт их ленивыми… природа всё понимает~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_SPRING_EQUINOX": {
+		"script": {
+			"en": "Today is the spring equinox~ Day and night in perfect balance. Balance is the heart of survival… and of a good nap schedule~",
+			"ko": "오늘은 춘분(春分)이에요~ 낮과 밤이 완벽한 균형을 이루는 날이죠. 균형은 생존의 핵심이에요... 그리고 좋은 낮잠 일정의 핵심이기도 하죠~",
+			"ja": "今日は春分ですよ~ 昼と夜が完璧なバランスを保つ日です。バランスは生存の核心です…そして良いお昼寝スケジュールの核心でもあります~",
+			"zh": "今天是春分~ 昼夜达到完美平衡。平衡是生存的核心……也是优质午睡日程的核心~",
+			"ba": "Сегодня весеннее равноденствие~ День и ночь в идеальном балансе. Баланс — сердце выживания… и хорошего графика дневного сна~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_PURE_BRIGHTNESS": {
+		"script": {
+			"en": "Today is Cheongmyeong, when the skies turn clear~ Fine weather for airing out blankets… so tonight's sleep gets an upgrade~",
+			"ko": "오늘은 청명(淸明), 하늘이 맑아지는 날이에요~ 이불을 널어 말리기 좋은 날씨네요... 오늘 밤 수면의 품질이 업그레이드되겠어요~",
+			"ja": "今日は清明、空が澄み渡る日ですよ~ お布団を干すのにいい天気ですね…今夜の睡眠の質がアップグレードされますよ~",
+			"zh": "今天是清明, 天空放晴的日子~ 是晒被子的好天气……今晚的睡眠质量要升级了~",
+			"ba": "Сегодня Чхонмён — небо проясняется~ Отличная погода, чтобы проветрить одеяла… сегодняшний сон получит апгрейд~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_GRAIN_RAIN": {
+		"script": {
+			"en": "Today is Gogu, the rain that feeds the grain~ Farmers are getting busy… let's cheer them on from a comfortable position~",
+			"ko": "오늘은 곡우(穀雨), 곡식을 살찌우는 비가 내리는 날이에요~ 농부들이 바빠지는 시기죠... 우리는 편안한 자세로 응원해 봐요~",
+			"ja": "今日は穀雨、穀物を育てる雨が降る日ですよ~ 農家さんが忙しくなる時期ですね…私たちは楽な姿勢で応援しましょう~",
+			"zh": "今天是谷雨, 滋养谷物的雨落下的日子~ 农民们要忙起来了……我们就用舒服的姿势为他们加油吧~",
+			"ba": "Сегодня Когу — дождь, питающий зерно~ Земледельцы начинают хлопотать… поболеем за них из удобного положения~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_SUMMER": {
+		"script": {
+			"en": "Today is Ipha, the beginning of summer~ Heat is coming… time to slowly move the hand fan to the front row of the supply shelf~",
+			"ko": "오늘은 입하(立夏), 여름이 시작되는 날이에요~ 더위가 다가오네요... 부채를 물자 선반 맨 앞줄로 슬슬 옮겨 둘 때예요~",
+			"ja": "今日は立夏、夏が始まる日ですよ~ 暑さが近づいてますね…うちわを物資棚の最前列にのんびり移しておく時期です~",
+			"zh": "今天是立夏, 夏天开始的日子~ 炎热将至……该慢慢把扇子挪到物资架最前排了~",
+			"ba": "Сегодня Ипха — начало лета~ Жара приближается… пора неторопливо переставить веер в первый ряд полки с припасами~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_FULLNESS_OF_GRAIN": {
+		"script": {
+			"en": "Today is Soman, when grains begin to plump~ Everything is filling up slowly… slow filling is the most reliable kind~",
+			"ko": "오늘은 소만(小滿), 곡식이 차오르기 시작하는 날이에요~ 모든 게 천천히 채워지고 있네요... 천천히 채워지는 것이 제일 믿음직한 법이죠~",
+			"ja": "今日は小満、穀物が実り始める日ですよ~ すべてがゆっくり満ちていきますね…ゆっくり満ちるものがいちばん頼もしいんです~",
+			"zh": "今天是小满, 谷物开始饱满的日子~ 一切都在慢慢充盈……慢慢充盈的东西最可靠~",
+			"ba": "Сегодня Соман — зёрна начинают наливаться~ Всё наполняется медленно… медленное наполнение — самое надёжное~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_GRAIN_IN_EAR": {
+		"script": {
+			"en": "Today is Mangjong, the busiest season for sowing~ Even the busiest season has lunch breaks… nature insists on them, actually~",
+			"ko": "오늘은 망종(芒種), 씨 뿌리기로 가장 바쁜 시기예요~ 가장 바쁜 시기에도 점심 휴식은 있죠... 사실 자연이 강력히 권장하는 거랍니다~",
+			"ja": "今日は芒種、種まきでいちばん忙しい時期ですよ~ いちばん忙しい時期にもお昼休みはあります…実は自然が強く推奨してるんですよ~",
+			"zh": "今天是芒种, 播种最忙的时节~ 最忙的时节也有午休……其实这是大自然强烈推荐的~",
+			"ba": "Сегодня Манчжон — самая горячая пора сева~ Даже в самую горячую пору есть обеденный перерыв… на нём, вообще-то, настаивает сама природа~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_SUMMER_SOLSTICE": {
+		"script": {
+			"en": "Today is the summer solstice, the longest day of the year~ More daylight means more time… to spend at whatever pace you like~",
+			"ko": "오늘은 하지(夏至), 일 년 중 낮이 가장 긴 날이에요~ 낮이 길다는 건 시간이 많다는 뜻이죠... 어떤 속도로 쓰든 리더의 자유예요~",
+			"ja": "今日は夏至、一年でいちばん昼が長い日ですよ~ 昼が長いということは時間が多いということ…どんなペースで使うかはリーダーの自由です~",
+			"zh": "今天是夏至, 一年中白昼最长的日子~ 白天长意味着时间多……用什么节奏度过都是领导的自由~",
+			"ba": "Сегодня летнее солнцестояние — самый длинный день в году~ Больше света — больше времени… которое можно тратить в любом угодном темпе~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_HEAT": {
+		"script": {
+			"en": "Today is Soseo, when the real heat begins~ Hydration check~ Water is the one supply your body won't let you postpone~",
+			"ko": "오늘은 소서(小暑), 본격적인 더위가 시작되는 날이에요~ 수분 체크예요~ 물은 몸이 미루는 걸 허락하지 않는 유일한 보급품이거든요~",
+			"ja": "今日は小暑、本格的な暑さが始まる日ですよ~ 水分チェックです~ 水は体が後回しを許してくれない唯一の補給品ですからね~",
+			"zh": "今天是小暑, 真正的炎热开始了~ 水分检查~ 水是身体唯一不允许你拖延的补给品~",
+			"ba": "Сегодня Сосо — начинается настоящая жара~ Проверка гидратации~ Вода — единственный припас, отложить который тело не позволит~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_HEAT": {
+		"script": {
+			"en": "Today is Daeseo, the peak of summer heat~ On days like this, doing less is wisdom. I've trained for this my whole life~",
+			"ko": "오늘은 대서(大暑), 더위가 절정인 날이에요~ 이런 날엔 덜 움직이는 게 지혜랍니다. 저는 평생 이 날을 위해 훈련해 왔죠~",
+			"ja": "今日は大暑、暑さの頂点の日ですよ~ こんな日は動かないのが知恵です。私は人生ずっとこの日のために訓練してきました~",
+			"zh": "今天是大暑, 酷热的顶峰~ 这种日子少动才是智慧。我一辈子都在为这一天训练~",
+			"ba": "Сегодня Тэсо — пик летней жары~ В такие дни меньше двигаться — мудрость. Я тренировался к этому всю жизнь~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_AUTUMN": {
+		"script": {
+			"en": "Today is Ipchu, the beginning of autumn~ The season of books, naps, and appetite… my three specialties in one season~",
+			"ko": "오늘은 입추(立秋), 가을이 시작되는 날이에요~ 독서와 낮잠과 식욕의 계절... 제 전문 분야 셋이 한 계절에 모였네요~",
+			"ja": "今日は立秋、秋が始まる日ですよ~ 読書とお昼寝と食欲の季節…私の専門分野が3つも1つの季節に集まりましたね~",
+			"zh": "今天是立秋, 秋天开始的日子~ 读书、午睡和食欲的季节……我的三大专长齐聚一季~",
+			"ba": "Сегодня Ипчху — начало осени~ Сезон книг, дневного сна и аппетита… три моих специальности в одном сезоне~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_END_OF_HEAT": {
+		"script": {
+			"en": "Today is Cheoseo, when the heat retreats~ The heat worked hard this year too… everyone deserves a retreat now and then~",
+			"ko": "오늘은 처서(處暑), 더위가 물러나는 날이에요~ 더위도 올해 열심히 일했죠... 누구에게나 가끔은 물러날 자격이 있답니다~",
+			"ja": "今日は処暑、暑さが引いていく日ですよ~ 暑さも今年はよく働きました…誰にだって、たまには退く資格があるんです~",
+			"zh": "今天是处暑, 暑气消退的日子~ 炎热今年也很努力了……谁都偶尔有资格退场休息~",
+			"ba": "Сегодня Чхосо — жара отступает~ Жара в этом году тоже потрудилась… каждый порой заслуживает отступления~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_WHITE_DEW": {
+		"script": {
+			"en": "Today is Baengno, when white dew forms~ Mornings and evenings turn chilly… time to slide a light blanket within arm's reach~",
+			"ko": "오늘은 백로(白露), 흰 이슬이 맺히는 날이에요~ 아침저녁으로 쌀쌀해지니... 얇은 이불을 팔 닿는 곳에 슬쩍 옮겨 둘 때예요~",
+			"ja": "今日は白露、白い露が結ぶ日ですよ~ 朝晩は肌寒くなりますから…薄い毛布を手の届くところにそっと移しておく時期です~",
+			"zh": "今天是白露, 凝结白色露珠的日子~ 早晚开始转凉……该悄悄把薄毯挪到伸手可及的地方了~",
+			"ba": "Сегодня Пэнно — выпадает белая роса~ По утрам и вечерам холодает… пора незаметно придвинуть лёгкое одеяло поближе~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_AUTUMN_EQUINOX": {
+		"script": {
+			"en": "Today is the autumn equinox~ Day and night are equal again. Twice a year the universe demonstrates work-life balance~",
+			"ko": "오늘은 추분(秋分)이에요~ 낮과 밤이 다시 같아지는 날이죠. 일 년에 두 번, 우주가 워라밸 시범을 보여 주는 거랍니다~",
+			"ja": "今日は秋分ですよ~ 昼と夜がまた同じになる日です。年に2回、宇宙がワークライフバランスのお手本を見せてくれるんです~",
+			"zh": "今天是秋分~ 昼夜再次等长。宇宙一年两次向我们示范工作与生活的平衡~",
+			"ba": "Сегодня осеннее равноденствие~ День и ночь снова равны. Дважды в год вселенная демонстрирует баланс работы и отдыха~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_COLD_DEW": {
+		"script": {
+			"en": "Today is Hallo, when the dew turns cold~ Autumn deepens… a fine season to restock warm drinks. Cocoa inventory check~",
+			"ko": "오늘은 한로(寒露), 이슬이 차가워지는 날이에요~ 가을이 깊어지네요... 따뜻한 음료를 재입고하기 좋은 계절이에요. 코코아 재고 점검~",
+			"ja": "今日は寒露、露が冷たくなる日ですよ~ 秋が深まりますね…温かい飲み物を再入荷するのにいい季節です。ココア在庫チェック~",
+			"zh": "今天是寒露, 露水转凉的日子~ 秋意渐深……是补货热饮的好季节。可可库存检查~",
+			"ba": "Сегодня Халло — роса становится холодной~ Осень углубляется… отличный сезон пополнить запасы тёплых напитков. Проверка запасов какао~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_FROST_DESCENT": {
+		"script": {
+			"en": "Today is Sanggang, when frost first falls~ Cold-weather gear should slowly move to the front lines now~",
+			"ko": "오늘은 상강(霜降), 첫서리가 내리는 날이에요~ 이제 방한 장비를 슬슬 최전선으로 옮겨 둘 때죠~",
+			"ja": "今日は霜降、初霜が降りる日ですよ~ そろそろ防寒装備を前線にゆっくり移動させる時期ですね~",
+			"zh": "今天是霜降, 初霜降临的日子~ 该慢慢把御寒装备调到最前线了~",
+			"ba": "Сегодня Санган — выпадает первый иней~ Пора потихоньку выдвигать тёплое снаряжение на передовую~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_BEGINNING_OF_WINTER": {
+		"script": {
+			"en": "Today is Ipdong, the beginning of winter~ The season of blankets has officially opened. I've been ready since summer~",
+			"ko": "오늘은 입동(立冬), 겨울이 시작되는 날이에요~ 이불의 계절이 공식 개막했네요. 저는 여름부터 준비되어 있었답니다~",
+			"ja": "今日は立冬、冬が始まる日ですよ~ お布団の季節が公式に開幕しました。私は夏から準備万端でしたよ~",
+			"zh": "今天是立冬, 冬天开始的日子~ 被窝的季节正式开幕。我从夏天就准备好了~",
+			"ba": "Сегодня Иптон — начало зимы~ Сезон одеял официально открыт. Я был готов ещё с лета~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_SNOW": {
+		"script": {
+			"en": "Today is Soseol, when the first snow may fall~ Snow is lovely to watch… from indoors, holding something warm~",
+			"ko": "오늘은 소설(小雪), 첫눈이 내릴지도 모르는 날이에요~ 눈은 구경하기 참 좋죠... 실내에서, 따뜻한 걸 들고서요~",
+			"ja": "今日は小雪、初雪が降るかもしれない日ですよ~ 雪は眺めるのに最高です…室内から、温かいものを持ってね~",
+			"zh": "今天是小雪, 也许会下初雪的日子~ 雪很适合观赏……在室内, 捧着热乎乎的东西看~",
+			"ba": "Сегодня Сосоль — может выпасть первый снег~ Снегом чудесно любоваться… из дома, держа что-нибудь тёплое~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_SNOW": {
+		"script": {
+			"en": "Today is Daeseol, the season of heavy snow~ Check your stove and warm clothes~ Cold is the quietest disaster, they say~",
+			"ko": "오늘은 대설(大雪), 큰 눈이 내리는 시기예요~ 난로와 방한복을 점검해 봐요~ 추위는 가장 조용한 재난이라고 하니까요~",
+			"ja": "今日は大雪、大きな雪が降る時期ですよ~ ストーブと防寒着を点検しましょう~ 寒さはいちばん静かな災害だと言いますからね~",
+			"zh": "今天是大雪, 降大雪的时节~ 检查一下炉子和保暖衣物吧~ 都说寒冷是最安静的灾难~",
+			"ba": "Сегодня Тэсоль — сезон обильных снегопадов~ Проверьте обогреватель и тёплую одежду~ Говорят, холод — самое тихое бедствие~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_WINTER_SOLSTICE": {
+		"script": {
+			"en": "Today is the winter solstice, the longest night of the year~ The universe itself is recommending extra sleep tonight. Who are we to argue~?",
+			"ko": "오늘은 동지(冬至), 일 년 중 밤이 가장 긴 날이에요~ 우주가 직접 오늘 밤은 더 자라고 권장하는 거죠. 우리가 어떻게 거스르겠어요~?",
+			"ja": "今日は冬至、一年でいちばん夜が長い日ですよ~ 宇宙自らが今夜はもっと寝なさいと推奨してるんです。私たちに逆らえるはずがないでしょう~?",
+			"zh": "今天是冬至, 一年中夜晚最长的日子~ 宇宙亲自建议今晚多睡一会儿。我们怎么好违抗呢~?",
+			"ba": "Сегодня зимнее солнцестояние — самая длинная ночь в году~ Сама вселенная рекомендует сегодня поспать подольше. Кто мы такие, чтобы спорить~?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MINOR_COLD": {
+		"script": {
+			"en": "Today is Sohan, when the cold sharpens~ They say Sohan's cold beats Daehan's~ Layer up slowly, one warm piece at a time~",
+			"ko": "오늘은 소한(小寒), 추위가 매서워지는 날이에요~ 대한이 소한 집에 놀러 갔다가 얼어 죽는다는 말도 있죠~ 따뜻한 옷을 한 겹씩, 천천히 껴입어요~",
+			"ja": "今日は小寒、寒さが厳しくなる日ですよ~ 小寒の寒さは大寒より上だと言いますね~ 温かい服を一枚ずつ、ゆっくり重ね着しましょう~",
+			"zh": "今天是小寒, 寒气逼人的日子~ 都说小寒胜大寒~ 一层一层, 慢慢添衣吧~",
+			"ba": "Сегодня Сохан — холод крепчает~ Говорят, мороз Сохана сильнее, чем Тэхана~ Утепляйтесь медленно, по одному тёплому слою~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_MAJOR_COLD": {
+		"script": {
+			"en": "Today is Daehan, the coldest of days~ But after Daehan comes spring's beginning. The cold is on its final chapter~",
+			"ko": "오늘은 대한(大寒), 가장 추운 날이에요~ 하지만 대한이 지나면 입춘이 오죠. 추위도 이제 마지막 장을 읽고 있는 거랍니다~",
+			"ja": "今日は大寒、いちばん寒い日ですよ~ でも大寒が過ぎれば立春が来ます。寒さももう最終章を読んでいるところなんです~",
+			"zh": "今天是大寒, 最冷的日子~ 但大寒过后就是立春。寒冷也在读它的最后一章了~",
+			"ba": "Сегодня Тэхан — самый холодный день~ Но после Тэхана приходит начало весны. Холод уже дочитывает свою последнюю главу~"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_NEW_YEAR": {
+		"script": {
+			"en": "Happy New Year~ New year's resolution suggestion: survive comfortably. Achievable goals are the best goals~",
+			"ko": "새해 복 많이 받으세요~ 새해 목표 추천드릴게요. '편안하게 생존하기'. 달성 가능한 목표가 최고의 목표랍니다~",
+			"ja": "あけましておめでとうございます~ 新年の目標のご提案です。『快適に生き延びること』。達成可能な目標こそ最高の目標なんですよ~",
+			"zh": "新年快乐~ 给你推荐个新年目标: “舒适地生存下去”。能实现的目标才是最好的目标~",
+			"ba": "С Новым годом~ Предложение для новогодней цели: выживать с комфортом. Достижимые цели — лучшие цели~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_VALENTINES_DAY": {
+		"script": {
+			"en": "Happy Valentine's Day~ Chocolate is love, and it's also emergency calories. Romance and preparedness in one package~",
+			"ko": "해피 밸런타인데이~ 초콜릿은 사랑이자, 비상 열량이기도 하죠. 낭만과 대비가 한 상자에 들어 있는 셈이에요~",
+			"ja": "ハッピーバレンタイン~ チョコレートは愛であり、非常用カロリーでもあります。ロマンと備えがひと箱に入っているわけですね~",
+			"zh": "情人节快乐~ 巧克力是爱, 也是应急热量。浪漫与防备尽在一盒之中~",
+			"ba": "С Днём святого Валентина~ Шоколад — это любовь, а ещё аварийные калории. Романтика и готовность в одной коробке~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_APRIL_FOOLS_DAY": {
+		"script": {
+			"en": "Today, I woke up at five a.m., jogged ten kilometers, and reorganized every supply shelf~ …Happy April Fools'~",
+			"ko": "오늘 저는 새벽 5시에 일어나서, 10킬로미터를 뛰고, 물자 선반을 전부 재정리했답니다~ ...만우절 축하해요~",
+			"ja": "今日の私は朝5時に起きて、10キロ走って、物資棚を全部整理し直したんですよ~ …エイプリルフールおめでとうございます~",
+			"zh": "今天我凌晨5点起床, 跑了10公里, 还把物资架全部重新整理了一遍~ ……愚人节快乐~",
+			"ba": "Сегодня я встал в пять утра, пробежал десять километров и переставил все полки с припасами~ …С первым апреля~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_LABOUR_DAY": {
+		"script": {
+			"en": "Happy Labour Day~ A day to honor work by not doing any. I observe this holiday with exceptional devotion~",
+			"ko": "노동절이에요~ 노동을 기리는 방법은 노동을 쉬는 것이죠. 저는 이 명절만큼은 남다른 정성으로 지킨답니다~",
+			"ja": "労働者の日ですよ~ 労働を称える方法は、労働を休むことです。私はこの祝日だけは並々ならぬ真心で守っているんですよ~",
+			"zh": "劳动节快乐~ 致敬劳动的方式就是不劳动。这个节日我一向以超常的虔诚来遵守~",
+			"ba": "С Днём труда~ День, когда труд чествуют, не трудясь. Этот праздник я соблюдаю с исключительной преданностью~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_HALLOWEEN": {
+		"script": {
+			"en": "Happy Halloween~ My costume this year is 'a person who is sleeping'. The realism is impeccable~",
+			"ko": "해피 할로윈~ 올해 제 분장은 '자고 있는 사람'이에요. 고증이 완벽하죠~",
+			"ja": "ハッピーハロウィン~ 今年の私の仮装は『眠っている人』です。リアリティが完璧でしょう~",
+			"zh": "万圣节快乐~ 我今年的装扮是“正在睡觉的人”。还原度堪称完美~",
+			"ba": "Счастливого Хэллоуина~ Мой костюм в этом году — «спящий человек». Реализм безупречен~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_CHRISTMAS_EVE": {
+		"script": {
+			"en": "It's Christmas Eve~ Santa works only one night a year… an employment structure I deeply respect~",
+			"ko": "크리스마스 이브예요~ 산타 할아버지는 일 년에 딱 하룻밤만 일하시죠... 제가 깊이 존경하는 고용 구조랍니다~",
+			"ja": "クリスマスイブですよ~ サンタさんは1年にたった一晩だけ働きます…私が深く尊敬する雇用形態です~",
+			"zh": "平安夜到了~ 圣诞老人一年只工作一个晚上……这种雇佣结构令我深感敬佩~",
+			"ba": "Сочельник~ Санта работает лишь одну ночь в году… структура занятости, которую я глубоко уважаю~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	},
+	"ANNIVERSARY_CHRISTMAS": {
+		"script": {
+			"en": "Merry Christmas, leader~ Warm room, warm cocoa, warm company… today, all supplies are fully stocked~",
+			"ko": "메리 크리스마스, 리더~ 따뜻한 방, 따뜻한 코코아, 따뜻한 동료... 오늘은 모든 물자가 완비되어 있네요~",
+			"ja": "メリークリスマス、リーダー~ 温かい部屋、温かいココア、温かい仲間…今日はすべての物資が完備されていますね~",
+			"zh": "圣诞快乐, 领导~ 温暖的房间、温暖的可可、温暖的伙伴……今天所有物资一应俱全~",
+			"ba": "С Рождеством, лидер~ Тёплая комната, тёплое какао, тёплая компания… сегодня все припасы в полном комплекте~"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 0.9,
+		"priority": 0
+	}
+}

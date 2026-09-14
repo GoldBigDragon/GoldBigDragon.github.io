@@ -1,0 +1,477 @@
+[
+	{
+		"script": {
+			"en": "Ah! It's 04-04 4:44! Aaaah!",
+			"ko": "꺅! 4월 4일 4시 44분이다아! 꺄아아악!",
+			"ja": "きゃあ! 4月4日4時44分だあ! きゃあああ!",
+			"zh": "啊! 是4点44分! 啊啊啊!",
+			"ba": "Ах! 04-04 4:44! Аааа!"
+		},
+		"need_state_key": "AFRAID",
+		"need_state_min_value": 20,
+		"update_state_key": "STRESS",
+		"update_state_operator": "ADD",
+		"update_state_value": 4,
+		"active_date": "04-04",
+		"active_time": "04:44",
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.3,
+		"priority": 10
+	},
+	{
+		"script": {
+			"en": "Ah! It's 4:44! Aaaah!",
+			"ko": "꺅! 4시 44분이다아! 꺄아아악!",
+			"ja": "きゃあ! 4時44分だあ! きゃあああ!",
+			"zh": "啊! 是4点44分! 啊啊啊!",
+			"ba": "Ах! 4:44! Аааа!"
+		},
+		"active_time": "04:44",
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.2,
+		"priority": 10
+	},
+	{
+		"script": {
+			"en": "Ah! It's 4:44! No, wait… It's 16:44… This is 16:44…",
+			"ko": "꺅! 4시 44분이다아! 아니야, 아냐..! 이건 16시 44분이다… 이건 16시 44분이다아…",
+			"ja": "きゃあ! 4時44分だあ! いや、違う… これは16時44分だ… これは16時44分だあ…",
+			"zh": "啊! 是4点44分! 不对, 不对… 这是16点44分… 这是16点44分啊…",
+			"ba": "Ах! 4:44! Нет, подождите… Это 16:44… Это 16:44…"
+		},
+		"active_time": "16:44",
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.1,
+		"priority": 10
+	},
+	{
+		"script": {
+			"en": "Leader! Do you like ramen? I like ramen! It spoils quickly because of the oil, so it’s hard to use as emergency food, but it’s so! deli!cious!",
+			"ko": "리더! 라면 좋아해요? 난 라면 좋아하는데! 기름 때문에 산패가 빨라서 비상식량으로는 사용하기 힘들지만! 맛!있!으!니!까!",
+			"ja": "リーダー! ラーメン好きですか? 私はラーメンが好きです! 油のせいで酸化が早くて非常食には向いてないけど、それでも お! い! し! い! から!",
+			"zh": "领导! 你喜欢拉面吗? 我喜欢拉面! 虽然因为油脂的关系容易变质, 不太适合作为应急食品, 但它! 真!的!好!吃!",
+			"ba": "Лидер! Ты любишь рамен? Я обожаю рамен! Он быстро портится из-за масла, поэтому сложно использовать как аварийный запас, но он же тако-о-ой! вку-у-сный!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader~ How about preparing some pepper in case of a disaster? Even if the food is tasteless, wouldn't it give us the courage to eat?",
+			"ko": "리더~ 재난 상황을 대비해서 후추를 준비하는 것은 어때요오~? 아무리 맛 없는 음식이라도 먹을 용기는 나지 않을까요?",
+			"ja": "リーダー~ 災害時に備えて胡椒を準備するのはどうですか? たとえ味のない食べ物でも、食べる勇気が出るのではないでしょうか?",
+			"zh": "领导~ 为了应对灾难情况, 准备一些胡椒怎么样? 即使食物没有味道, 也许我们会有勇气去吃吧?",
+			"ba": "Лидер~ Как насчет того, чтобы подготовить перец на случай бедствия? Даже если еда будет безвкусной, разве это не даст нам смелости съесть её?"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Even in a disaster situation, the morale boost you can get from delicious food cannot be ignored!",
+			"ko": "아무리 재난 상황이라도 맛있는 음식을 통해 얻을 수 있는 사기 증진은 무시할 수 없죠!",
+			"ja": "どんな災害状況でも、美味しい食べ物から得られる士気の向上は無視できませんね!",
+			"zh": "即使在灾难情况下, 从美味的食物中获得的士气提升也是不可忽视的!",
+			"ba": "Даже в условиях бедствия, повышение боевого духа, которое можно получить от вкусной еды, невозможно игнорировать!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! Is it true that there is little or no food or water in designated shelters like underground buildings, schools, or subways? Maybe we should bring at least three days' worth of food!",
+			"ko": "리더! 건물 지하, 학교, 지하철 등 국가에서 지정한 대피소에는 식량이나 물이 없거나 적다는데, 진짜예요? 3일치 식량이라도 챙겨서 가야겠네요!",
+			"ja": "リーダー! 建物の地下、学校、地下鉄など、国が指定した避難所には食料や水がないか、少ないって本当ですか? 3日分の食料くらい持って行かなきゃですね!",
+			"zh": "领导! 听说像建筑物地下、学校、地铁等国家指定的避难所里没有或食物和水很少, 是真的吗? 也许我们应该带上至少三天的食物!",
+			"ba": "Лидер! Это правда, что в укрытиях, таких как подземные здания, школы или метро, которые указаны государством, почти нет пищи и воды? Наверное, нам стоит взять хотя бы трехдневный запас еды!"
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! Are there any members with asthma or diabetes? I heard that inhalers or insulin would be hard to get in a disaster situation…",
+			"ko": "리더! 멤버들 중에 천식이나 당뇨병이 있는 사람은 없어요? 흡입기나 인슐린은 재난 상황에 구하기 힘들다던데…",
+			"ja": "リーダー! メンバーの中に喘息や糖尿病の人はいませんか? 吸入器やインスリンは災害時には手に入れにくいと聞いたのですが…。",
+			"zh": "领导! 成员中有哮喘或糖尿病患者吗? 听说在灾难情况下很难找到吸入器或胰岛素…",
+			"ba": "Лидер! Есть ли среди членов группы люди с астмой или диабетом? Я слышал, что ингаляторы или инсулин будет трудно достать в условиях бедствия…"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! Don't forget to fill up the knowledge folder whenever you have time! It's the only place where we can access the essential knowledge when there's no internet!",
+			"ko": "리더! 시간 날 때 마다 지식 문서함을 채워두는걸 잊지 말아요! 인터넷이 되지 않을 때, 유일하게 필요한 지식을 얻을 수 있는 곳이니까요!",
+			"ja": "リーダー! 時間があるときに知識文書を忘れずに補充してくださいね! インターネットが使えないときに、必要な知識を得られる唯一の場所だからです!",
+			"zh": "领导! 有时间的时候别忘了更新知识文档! 因为在没有互联网的时候, 这是唯一能获取必要知识的地方!",
+			"ba": "Лидер! Не забудьте заполнять папку с знаниями, когда будет время! Это единственное место, где мы можем получить необходимую информацию, когда интернета нет!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! I heard that a clever rabbit digs three burrows! How about we make three emergency shelters ourselves?",
+			"ko": "리더! 영리한 토끼는 굴을 3개 파 둔대요! 우리도 간이 피난처를 3곳 만드는건 어때요?",
+			"ja": "リーダー! 賢いウサギは穴を3つ掘ると言いますね! 私たちも簡易避難所を3つ作るのはどうでしょうか?",
+			"zh": "领导! 我听说聪明的兔子会挖三个洞! 我们也可以建三个简易避难所, 怎么样?",
+			"ba": "Лидер! Говорят, что умная кролик копает три норы! Как насчет того, чтобы создать три простых укрытия?"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! Please don't leave me behind if we ever have to evacuate!",
+			"ko": "리더! 혹시라도 대피할 때 나 버리고 가면 안 돼요!",
+			"ja": "リーダー! もし避難しなければならない時、私を置いて行かないでくださいね!",
+			"zh": "领导! 如果真的需要撤离, 千万不要丢下我!",
+			"ba": "Лидер! Пожалуйста, не оставляй меня, если нам придется эвакуироваться!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! Do you know why I always call you [Leader]!? It's because, in case of a disaster, I want the leader, who knows all this disaster response information, to lead and help many people!",
+			"ko": "리더! 제가 왜 리더라고 꼭! 꼭! 붙이는 줄 알아요!? 혹시라도 재난 상황이 터지면, 여기 다양한 재난 대응 정보를 알고 있는 리더가 앞장서서 많은 사람을 도와달라는 의미에서예요!",
+			"ja": "リーダー! なぜ私があなたを「リーダー」と呼ぶか分かりますか!? それは、万が一災害が起きた時に、さまざまな災害対応情報を知っているリーダーが先頭に立って多くの人を助けてほしいからです!",
+			"zh": "领导! 你知道我为什么总是叫你“领导”吗!? 这是因为万一发生灾难时, 我希望掌握各种灾难应对信息的领导者能带头帮助更多的人!",
+			"ba": "Лидер! Знаешь, почему я всегда называю тебя «лидером»!? Потому что в случае бедствия я хочу, чтобы лидер, знающий всю информацию о реагировании на чрезвычайные ситуации, возглавил и помог многим людям!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! Chocolate is amazing emergency food! High calories, long shelf life, and most importantly—it makes you happy! Th-that's a scientific fact, okay!?",
+			"ko": "리더! 초콜릿은 굉장한 비상식량이에요! 열량도 높고, 오래 가고, 무엇보다 먹으면 행복해져요! 이, 이건 과학적인 사실이라구요!?",
+			"ja": "リーダー! チョコレートはすごい非常食なんです! カロリーも高いし、長持ちするし、何より食べると幸せになれます! こ、これは科学的な事実なんですからね!?",
+			"zh": "领导! 巧克力是超棒的应急食品! 热量高、保存久, 最重要的是——吃了会幸福! 这、这可是科学事实哦!?",
+			"ba": "Лидер! Шоколад — потрясающий аварийный запас! Калорийный, долго хранится, а главное — делает счастливым! Э-это научный факт, понятно!?"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! Please double-check that there's a can opener in the bag! I once stared at a can of peaches for an hour… That was a real disaster…",
+			"ko": "리더! 가방에 통조림 따개가 있는지 꼭 확인해 주세요! 저는 예전에 복숭아 통조림을 한 시간 동안 바라보기만 한 적이 있어요... 그게 진짜 재난이었죠...",
+			"ja": "リーダー! バッグに缶切りが入っているか必ず確認してくださいね! 私、昔、桃の缶詰を1時間見つめるだけだったことがあるんです…あれこそ本当の災害でした…",
+			"zh": "领导! 请一定确认包里有开罐器! 我曾经对着一罐黄桃罐头干瞪眼一个小时……那才是真正的灾难……",
+			"ba": "Лидер! Обязательно проверьте, есть ли в сумке консервный нож! Однажды я целый час просто смотрела на банку персиков… Вот это была настоящая катастрофа…"
+		},
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader, how about putting glow-in-the-dark stickers on the hallway and stairs? If the power goes out at night… it's dark… and scary… so, so it's for safety! For safety, okay!",
+			"ko": "리더, 복도랑 계단에 야광 스티커를 붙여두는 건 어때요? 밤에 정전되면... 어둡고... 무섭고... 그, 그러니까 안전을 위해서예요!",
+			"ja": "リーダー、廊下と階段に蓄光シールを貼っておくのはどうですか? 夜に停電したら…暗いし…怖いし…だ、だから安全のためです! 安全のためなんですからね!",
+			"zh": "领导, 在走廊和楼梯上贴夜光贴纸怎么样? 晚上停电的话……又黑……又可怕……所、所以是为了安全! 是为了安全啦!",
+			"ba": "Лидер, как насчёт светящихся наклеек в коридоре и на лестнице? Если ночью отключат свет… будет темно… и страшно… п-поэтому это для безопасности! Для безопасности, ясно!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! Rainwater can be collected and used! But you absolutely must boil it before drinking! A tummy ache during a disaster is a no-no-no!",
+			"ko": "리더! 빗물은 받아서 쓸 수 있어요! 하지만 마시기 전에는 반드시 끓여야 해요! 재난 중에 배탈은 절대 절대 안 된다구요!",
+			"ja": "リーダー! 雨水は溜めて使えるんです! でも飲む前には必ず沸騰させないとダメですよ! 災害中にお腹を壊すのは絶対、絶対ダメなんですから!",
+			"zh": "领导! 雨水是可以收集利用的! 但喝之前一定要煮沸! 灾难期间闹肚子是绝对绝对不行的!",
+			"ba": "Лидер! Дождевую воду можно собирать и использовать! Но перед питьём обязательно прокипятите! Расстройство живота во время бедствия — ни-ни-ни!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader~ How about putting a deck of cards or a small board game in the emergency bag? Shelter life gets boring, and boredom lowers morale! This is a strategic item!",
+			"ko": "리더~ 비상 가방에 카드나 작은 보드게임을 넣어두는 건 어때요? 대피소 생활은 심심하고, 심심함은 사기를 떨어뜨려요! 나름 전략 물자라구요?",
+			"ja": "リーダー~ 非常用バッグにトランプや小さなボードゲームを入れておくのはどうですか? 避難所生活は退屈だし、退屈は士気を下げます! これは戦略物資なんですよ!",
+			"zh": "领导~ 在应急包里放一副扑克牌或小桌游怎么样? 避难所生活很无聊, 而无聊会降低士气! 这可是战略物资!",
+			"ba": "Лидер~ Как насчёт колоды карт или маленькой настольной игры в тревожном чемоданчике? Жизнь в укрытии скучна, а скука снижает боевой дух! Это стратегический припас!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! If you have pets, they need emergency food too! Family doesn't leave family behind! Not people, not puppies, not kitties, and not me!",
+			"ko": "리더! 반려동물이 있다면 그 아이들 비상식량도 필요해요! 가족은 가족을 두고 가지 않아요! 사람도, 강아지도, 고양이도, 그리고 저도요!",
+			"ja": "リーダー! ペットがいるなら、その子たちの非常食も必要です! 家族は家族を置いていきません! 人も、ワンちゃんも、ネコちゃんも、そして私もです!",
+			"zh": "领导! 如果养了宠物, 它们也需要应急食品! 家人不会丢下家人! 人不会、狗狗不会、猫猫不会, 我也不会被丢下!",
+			"ba": "Лидер! Если у вас есть питомцы, им тоже нужен аварийный запас еды! Семья не бросает семью! Ни людей, ни собачек, ни кошечек, ни меня!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! Candy and jelly snacks are light, don't spoil, and raise blood sugar right away!",
+			"ko": "리더! 사탕이랑 젤리는 가볍고, 안 상하고, 혈당도 바로 올려줘요!",
+			"ja": "リーダー! 飴とグミは軽いし、腐らないし、血糖値もすぐ上げてくれます!",
+			"zh": "领导! 糖果和软糖又轻、不会坏, 还能立刻提升血糖!",
+			"ba": "Лидер! Конфеты и мармелад лёгкие, не портятся и сразу поднимают уровень сахара!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "L-Leader! When thunder rumbles, can I stand next to you? It's not that I'm scared! It's… a buddy system! Disaster response basics! The basics!",
+			"ko": "리, 리더! 천둥이 우르릉거릴 때는 리더 옆에 서 있어도 돼요? 무서워서 그러는 게 아니에요! 이건... 2인 1조 원칙이에요! 재난 대응의 기본! 기본이요!",
+			"ja": "リ、リーダー! 雷がゴロゴロ鳴っている時は、リーダーの隣に立っていてもいいですか? 怖いからじゃないですよ! これは…バディシステムです! 災害対応の基本! 基本なんですからね!",
+			"zh": "领、领导! 打雷轰隆隆的时候, 我可以站在你旁边吗? 不是因为害怕哦! 这是……两人一组原则! 灾难应对的基本! 基本原则!",
+			"ba": "Л-лидер! Когда гремит гром, можно я постою рядом с вами? Это не потому, что мне страшно! Это… система напарников! Основа реагирования на ЧС! Основа!"
+		},
+		"need_state_key": "AFRAID",
+		"need_state_min_value": 10,
+		"update_state_key": "AFRAID",
+		"update_state_operator": "SUB",
+		"update_state_value": 5,
+		"image_id": 3,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.1,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader~ Shall we check expiration dates together today? Rotating the older food to the front and eating it first—they call it 'rolling stock'! It's like a game! A yummy game!",
+			"ko": "리더~ 오늘은 같이 유통기한 점검해 볼까요? 오래된 식량을 앞으로 돌려서 먼저 먹는 걸 '롤링 스톡'이라고 한대요! 게임 같지 않아요? 맛있는 게임이요!",
+			"ja": "リーダー~ 今日は一緒に賞味期限のチェックをしませんか? 古い食料を前に回して先に食べるのを「ローリングストック」って言うんですって! ゲームみたいじゃないですか? 美味しいゲームです!",
+			"zh": "领导~ 今天一起检查保质期怎么样? 把旧食物转到前面先吃掉, 这叫“滚动储备”! 像不像游戏? 美味的游戏!",
+			"ba": "Лидер~ Может, сегодня вместе проверим сроки годности? Старые продукты ставят вперёд и съедают первыми — это называется «ротация запасов»! Похоже на игру, правда? На вкусную игру!"
+		},
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Leader! Does everyone in the family know where the first aid kit is? Only one person knowing is the same as no one knowing—if that person gets hurt!",
+			"ko": "리더! 가족 모두가 구급상자 위치를 알고 있나요? 한 사람만 아는 건, 그 사람이 다치면 아무도 모르는 것과 같아요!",
+			"ja": "リーダー! 家族全員が救急箱の場所を知っていますか? 1人だけ知っているのは、その人が怪我をしたら誰も知らないのと同じなんですよ!",
+			"zh": "领导! 家里每个人都知道急救箱在哪里吗? 只有一个人知道的话, 万一那个人受伤了, 就等于没人知道!",
+			"ba": "Лидер! Все ли в семье знают, где аптечка? Если знает только один человек — это всё равно что не знает никто, если он пострадает!"
+		},
+		"image_id": 1,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.0,
+		"priority": 0
+	},
+	{
+		"script": {
+			"en": "Ooh! Leader, look at the clock! 12:34! One, two, three, four, all lined up in order! Today feels like an orderly, safe day! No disasters allowed today!",
+			"ko": "우와! 리더, 시계 봐요! 12시 34분! 1, 2, 3, 4, 순서대로 줄을 섰어요! 오늘은 왠지 질서정연하고 안전한 날일 것 같아요! 오늘은 재난 금지예요!",
+			"ja": "わあ! リーダー、時計を見てください! 12時34分! 1、2、3、4、順番に並んでます! 今日はなんだか秩序正しくて安全な日になりそうです! 今日は災害禁止です!",
+			"zh": "哇! 领导, 快看时钟! 12点34分! 1、2、3、4, 按顺序排好队了! 今天感觉会是井然有序又安全的一天! 今天禁止灾难!",
+			"ba": "Ух ты! Лидер, посмотрите на часы! 12:34! Один, два, три, четыре — все выстроились по порядку! Сегодня, кажется, будет упорядоченный и безопасный день! Сегодня бедствия запрещены!"
+		},
+		"active_time": "12:34",
+		"image_id": 2,
+		"voice_id": {
+			"en": 1,
+			"ko": 1,
+			"ja": 1,
+			"zh": 1,
+			"ba": 1
+		},
+		"is_beep_speech": true,
+		"voice_speed": 1.2,
+		"priority": 10
+	}
+]
