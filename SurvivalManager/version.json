@@ -1,0 +1,25 @@
+{
+	"version": "2026-09-14 22:30:00",
+	"update_info": {
+		"en": [
+			"- This is the initial release of the application. Bugs may occur.",
+			"- If you encounter any bugs, please report them to: dnwndugod642@naver.com"
+		],
+		"ko": [
+			"- 애플리케이션의 최초 버전입니다. 버그가 많이 발생 할 수도 있습니다.",
+			"- 버그 발생 시, dnwndugod642@naver.com 이메일로 알려주세요."
+		],
+		"ja": [
+			"- 本アプリケーションの初回リリース版です。不具合が発生する可能性があります。",
+			"- 不具合が発生した場合は、dnwndugod642@naver.com までご連絡ください。"
+		],
+		"zh": [
+			"- 这是本应用程序的首个版本，可能会出现较多错误。",
+			"- 如发现错误，请发送邮件至 dnwndugod642@naver.com。"
+		],
+		"ba": [
+			"- Это первая версия приложения. Возможны ошибки.",
+			"- При обнаружении ошибок сообщите по адресу: dnwndugod642@naver.com"
+		]
+	}
+}
