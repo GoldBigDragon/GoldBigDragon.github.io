@@ -1102,7 +1102,7 @@
 	"ALERT_FOOD_EXPIRES_SOON": {
 		"script": {
 			"en": "Hmm… Leader, it looks like the expiration date of %FOOD_NAME% in %MEMBER_NAME%'s %BAG_NAME% is approaching…!",
-			"ko": "음… 리더, %MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 유통기한이 다 되어 가는 것 같아요…!",
+			"ko": "음… 리더, %MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 소비기한이 다 되어 가는 것 같아요…!",
 			"ja": "うーん…リーダー、%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限が近づいているようです…!",
 			"zh": "嗯… 领导, %MEMBER_NAME%在%BAG_NAME%里的%FOOD_NAME%好像快到期了…!",
 			"ba": "Хм… Лидер, похоже, срок годности %FOOD_NAME% в %MEMBER_NAME%'s %BAG_NAME% скоро истечет…!"
@@ -1122,7 +1122,7 @@
 	"ALERT_FOOD_EXPIRES": {
 		"script": {
 			"en": "Ugh… It seems like the condition of %FOOD_NAME% in %MEMBER_NAME%'s %BAG_NAME% is a bit off… The expiration date has passed…",
-			"ko": "으… %MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 상태가 좀 이상한 것 같은데에… 유통기한도 지났고…",
+			"ko": "으… %MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 상태가 좀 이상한 것 같은데에… 소비기한도 지났고…",
 			"ja": "うーん…%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の状態がちょっとおかしい気がします…賞味期限も過ぎてしまいましたし…",
 			"zh": "嗯… %MEMBER_NAME%在%BAG_NAME%里的%FOOD_NAME%状态有点不对劲… 过期了…",
 			"ba": "Эх… Кажется, состояние %FOOD_NAME% в %MEMBER_NAME%'s %BAG_NAME% немного странное… Срок годности уже прошел…"

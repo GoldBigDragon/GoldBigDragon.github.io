@@ -1102,7 +1102,7 @@
 	"ALERT_FOOD_EXPIRES_SOON": {
 		"script": {
 			"en": "%MEMBER_NAME%'s %BAG_NAME% contains %FOOD_NAME%, and its expiration date is approaching.",
-			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 유통기한이 곧 만료될 예정이예요.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 소비기한이 곧 만료될 예정이예요.",
 			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限がもうすぐです。",
 			"zh": "%MEMBER_NAME%的%BAG_NAME%中有%FOOD_NAME%, 即将过期。",
 			"ba": "У %MEMBER_NAME% в %BAG_NAME% находится %FOOD_NAME%, срок годности которого скоро истечет."
@@ -1122,7 +1122,7 @@
 	"ALERT_FOOD_EXPIRES": {
 		"script": {
 			"en": "%MEMBER_NAME%'s %BAG_NAME% contains %FOOD_NAME%, and its expiration date has passed.",
-			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 유통기한이 만료되었어요.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 위치한 %FOOD_NAME%의 소비기한이 만료되었어요.",
 			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限が切れました。",
 			"zh": "%MEMBER_NAME%的%BAG_NAME%中有%FOOD_NAME%, 已过期。",
 			"ba": "У %MEMBER_NAME% в %BAG_NAME% находится %FOOD_NAME%, срок годности которого истек."

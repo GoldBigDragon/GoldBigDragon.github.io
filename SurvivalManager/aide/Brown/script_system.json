@@ -2,7 +2,7 @@
 	"AIDE_SELECT_FIRST": {
 		"script": {
 			"en": "Nice to meet you~ I'm Brown. I may be a bit slow, but slow and steady keeps you alive, you know~ Let's take good care of each other, leader~",
-			"ko": "처음 뵙겠습니다아~ 브라운이라고 해요~ 느릿할지도 모르지만, 느려도 꾸준한 쪽이 오래 산다고 하죠~ 잘 부탁드려요, 리더~",
+			"ko": "처음 뵙겠습니다아~ 브라운이라고 해요~ 잘 부탁드려요, 리더~",
 			"ja": "はじめましてぇ~ ブラウンと申します。ちょっとのんびり屋かもしれませんが、ゆっくりでも着実な方が長生きするって言いますよねぇ~ よろしくお願いします、リーダー~",
 			"zh": "初次见面~ 我叫Brown。虽然我可能有点慢吞吞的, 但俗话说慢而稳才活得久嘛~ 请多关照啦, 领导~",
 			"ba": "Приятно познакомиться~ Я Браун. Может, я немного медлительный, но, знаете, медленно и верно — так и выживают~ Будем добры друг к другу, лидер~"
@@ -42,7 +42,7 @@
 	"GREETING_DAY_FIRST": {
 		"script": {
 			"en": "Welcome back, leader~ Today's plan: no rushing. Rushing spends energy, and energy is a survival resource~",
-			"ko": "오셨네요오, 리더~ 오늘의 계획은 '서두르지 않기'예요. 서두르면 에너지를 쓰게 되고, 에너지는 생존 자원이니까요~",
+			"ko": "오셨네요오, 리더~ 오늘의 계획은 '서두르지 않기'예요. 에너지는 생존 자원이니까요~",
 			"ja": "いらっしゃい、リーダー~ 今日の計画は『急がないこと』です。急ぐとエネルギーを使いますし、エネルギーは生存資源ですからねぇ~",
 			"zh": "你来啦, 领导~ 今天的计划是“不着急”。着急会消耗能量, 而能量可是生存资源呢~",
 			"ba": "С возвращением, лидер~ План на сегодня: не спешить. Спешка тратит энергию, а энергия — ресурс выживания~"
@@ -1102,7 +1102,7 @@
 	"ALERT_FOOD_EXPIRES_SOON": {
 		"script": {
 			"en": "The %FOOD_NAME% in %MEMBER_NAME%'s %BAG_NAME% is nearing its expiration date~ How about eating it first? Rolling the stock, they call it~",
-			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 있는 %FOOD_NAME%의 유통기한이 다가오고 있어요~ 먼저 먹어 버리는 건 어때요? 롤링 스톡이라고 부른다죠~",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 있는 %FOOD_NAME%의 소비기한이 다가오고 있어요~ 먼저 먹어 버리는 건 어때요? 롤링 스톡이라고 부른다죠~",
 			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限が近づいていますよ~ 先に食べちゃうのはどうですか? ローリングストックって言うんですよねぇ~",
 			"zh": "%MEMBER_NAME%的%BAG_NAME%里的%FOOD_NAME%快到保质期了~ 要不要先吃掉? 这叫滚动储备~",
 			"ba": "У %FOOD_NAME% в %BAG_NAME% участника %MEMBER_NAME% скоро истекает срок годности~ Может, съесть его первым? Это называют ротацией запасов~"
@@ -1122,7 +1122,7 @@
 	"ALERT_FOOD_EXPIRES": {
 		"script": {
 			"en": "The %FOOD_NAME% in %MEMBER_NAME%'s %BAG_NAME% has expired~ Farewells are sad, but a tummy ache would be sadder~",
-			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 있는 %FOOD_NAME%의 유통기한이 지났어요~ 이별은 슬프지만, 배탈은 더 슬프답니다~",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 있는 %FOOD_NAME%의 소비기한이 지났어요~ 이별은 슬프지만, 배탈은 더 슬프답니다~",
 			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限が切れちゃいました~ お別れは悲しいですが、お腹を壊す方がもっと悲しいですからねぇ~",
 			"zh": "%MEMBER_NAME%的%BAG_NAME%里的%FOOD_NAME%已经过期了~ 告别虽然难过, 但闹肚子会更难过~",
 			"ba": "Срок годности %FOOD_NAME% в %BAG_NAME% участника %MEMBER_NAME% истёк~ Прощаться грустно, но болеть животом было бы грустнее~"

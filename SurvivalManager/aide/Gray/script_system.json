@@ -1102,7 +1102,7 @@
 	"ALERT_FOOD_EXPIRES_SOON": {
 		"script": {
 			"en": "%MEMBER_NAME%'s %BAG_NAME%. The %FOOD_NAME% is about to expire.",
-			"ko": "%MEMBER_NAME%의 %BAG_NAME%. %FOOD_NAME%의 유통기한이 임박했다.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%. %FOOD_NAME%의 소비기한이 임박했다.",
 			"ja": "%MEMBER_NAME%の%BAG_NAME%。%FOOD_NAME%の賞味期限が近い。",
 			"zh": "%MEMBER_NAME%的%BAG_NAME%里，%FOOD_NAME%快过期了。",
 			"ba": "%BAG_NAME% члена %MEMBER_NAME%. Срок годности %FOOD_NAME% скоро истечёт."
@@ -1122,7 +1122,7 @@
 	"ALERT_FOOD_EXPIRES": {
 		"script": {
 			"en": "%MEMBER_NAME%'s %BAG_NAME%. The %FOOD_NAME% has expired. Don't eat spoiled food.",
-			"ko": "%MEMBER_NAME%의 %BAG_NAME%. %FOOD_NAME%의 유통기한이 끝났다. 상한 건 먹지 마라.",
+			"ko": "%MEMBER_NAME%의 %BAG_NAME%. %FOOD_NAME%의 소비기한이 끝났다. 상한 건 먹지 마라.",
 			"ja": "%MEMBER_NAME%の%BAG_NAME%。%FOOD_NAME%の賞味期限が切れた。傷んだ物は食うな。",
 			"zh": "%MEMBER_NAME%的%BAG_NAME%里，%FOOD_NAME%已经过期了。变质的东西别吃。",
 			"ba": "%BAG_NAME% члена %MEMBER_NAME%. Срок годности %FOOD_NAME% истёк. Испорченное не ешь."
