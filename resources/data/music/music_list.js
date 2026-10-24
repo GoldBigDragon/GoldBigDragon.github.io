@@ -87,30 +87,249 @@ const PLAY_LIST = [
 				"wav": "https://drive.google.com/file/d/1-fICoHtfhEmGI1qWZkl1i0ovfG5dwKuZ/view?usp=sharing",
 				"tag": ["voice", "trance", "progressive house", "electronic dance music", "tech house", "house", "electronic", "electro house", "hypnotic", "repetitive", "uplifting", "melodic", "party", "atmospheric", "playful", "minimalistic", "energetic", "rhythmic", "bittersweet", "ethereal", "lush"],
 				"image": "/resources/img/music/music/udio/The Diamond Sutra.avif"
-			},
+			}
+		]
+	},
+	{
+		"title": {
+			"en": "Survival Manager",
+			"kr": "재난 대비",
+			"jp": "災害対策",
+			"cn": "灾害准备",
+			"ru": "Менеджер по выживанию"
+		},
+		"description": {
+			"en": "This song is featured in the 'Survival Manager' application.",
+			"kr": "'재난 대비' 애플리케이션 수록곡입니다.",
+			"jp": "この曲は「災害対策」アプリケーションの収録曲です。",
+			"cn": "本歌曲收录于'灾害准备'应用程序中。",
+			"ru": "Эта песня включена в приложение «Менеджер по выживанию»."
+		},
+		"tag": ["Survival Manager", "Google Play Store", "application", "bgm"],
+		"image": "/resources/img/music/playlist/Survival Manager.png",
+		"music": [
 			{
 				"title": {
 					"en": "Time to plan",
-					"kr": "계획할 시간",
-					"jp": "計画の時",
-					"cn": "是时候制定计划了",
-					"ru": "Время планировать"
-				},
-				"lyrics":{
-					"en": "(This piece was composed with the image of a protagonist who, after escaping to a safe place in the early stage of a disaster, begins to plan for the future.)",
-					"kr": "(재난 직후, 주인공이 안전한 장소에 피신한 뒤 앞으로의 계획을 구상하는 모습을 떠올리며 작곡한 곡입니다.)",
-					"jp": "(災害直後、安全な場所へ避難した主人公が今後の計画を立てる姿を思い描きながら作曲しました。)",
-					"cn": "(这首曲子描绘了灾难发生初期，主角成功逃到安全地带后开始筹划未来的情景。)",
-					"ru": "(Эта композиция написана с воображением главного героя, который, укрывшись в безопасном месте после начала катастрофы, начинает строить планы на будущее.)"
+					"kr": "Time to plan",
+					"jp": "Time to plan",
+					"cn": "Time to plan",
+					"ru": "Time to plan"
 				},
 				"composed-at": "2025-07-29",
 				"composed-with": "Suno",
 				"duration": 298,
 				"mp3": "/resources/files/music/suno/Time to plan.mp3",
-				"wav": "/resources/files/music/suno/Time to plan.wav",
-				"tag": ["instrumental", "folk", "dystopian", "acoustic guitar", "strings", "lonely", "modern"],
+				"wav": "https://drive.google.com/file/d/1HAWyDuR7otg2h08sEu_IrNKXsX-ZVQXd/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/1ywwlAHjVDjUQRf99CQrrDE-1Yk54AssK/view?usp=sharing",
+				"tag": ["instrumental", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
 				"image": "/resources/img/music/music/suno/Time to plan.png"
 			},
+			{
+				"title": {
+					"en": "Time to plan - Gray",
+					"kr": "Time to plan - Gray",
+					"jp": "Time to plan - Gray",
+					"cn": "Time to plan - Gray",
+					"ru": "Time to plan - Gray"
+				},
+				"composed-at": "2025-10-02",
+				"composed-with": "Suno",
+				"duration": 255,
+				"mp3": "/resources/files/music/suno/Time to plan - Gray.mp3",
+				"wav": "https://drive.google.com/file/d/1oTGzCHTNvrBtgSsi--SmMN9KOUP_QQQI/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/1g6HtRaszn5KpZs72ZR5_o_2Fikf7vNLv/view?usp=sharing",
+				"tag": ["instrumental", "western", "dystopian", "acoustic guitar", "strings"],
+				"image": "/SurvivalManager/aide/Gray/image/1.png"
+			},
+			{
+				"title": {
+					"en": "Time to plan - White",
+					"kr": "Time to plan - White",
+					"jp": "Time to plan - White",
+					"cn": "Time to plan - White",
+					"ru": "Time to plan - White"
+				},
+				"composed-at": "2025-10-06",
+				"composed-with": "Suno",
+				"duration": 219,
+				"mp3": "/resources/files/music/suno/Time to plan - White.mp3",
+				"wav": "https://drive.google.com/file/d/1m5YYZJU7NdRRrzhRzGWUoqlQ6tNFWWLT/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/1wULGw4Gqc5LOae1fpmz9ND2H7LkfWgQm/view?usp=sharing",
+				"tag": ["instrumental", "school", "dystopian", "piano", "xylophone", "ocarina"],
+				"image": "/SurvivalManager/aide/White/image/1.png"
+			},
+			{
+				"title": {
+					"en": "Time to plan - Black",
+					"kr": "Time to plan - Black",
+					"jp": "Time to plan - Black",
+					"cn": "Time to plan - Black",
+					"ru": "Time to plan - Black"
+				},
+				"composed-at": "2025-10-06",
+				"composed-with": "Suno",
+				"duration": 219,
+				"mp3": "/resources/files/music/suno/Time to plan - Black.mp3",
+				"wav": "https://drive.google.com/file/d/1zhkIubzggUvNQutSqISUgBeF2PF5r6Wy/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/1p5nf0ElehVZ-Jwhc6oXvNQ3O37Btz9J_/view?usp=sharing",
+				"tag": ["instrumental", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
+				"image": "/SurvivalManager/aide/Black/image/1.png"
+			},
+			{
+				"title": {
+					"en": "Time to plan - Male vocal",
+					"kr": "Time to plan - Male vocal",
+					"jp": "Time to plan - Male vocal",
+					"cn": "Time to plan - Male vocal",
+					"ru": "Time to plan - Male vocal"
+				},
+				"lyrics":{
+					"en": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.<br>Time to plan now your action.<br>Make a plan<br>before every action.",
+					"kr": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.<br>Time to plan now your action.<br>Make a plan<br>before every action.",
+					"jp": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.<br>Time to plan now your action.<br>Make a plan<br>before every action.",
+					"cn": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.<br>Time to plan now your action.<br>Make a plan<br>before every action.",
+					"ru": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.<br>Time to plan now your action.<br>Make a plan<br>before every action."
+				},
+				"composed-at": "2025-10-21",
+				"composed-with": "Suno",
+				"duration": 173,
+				"mp3": "/resources/files/music/suno/Time to plan - Male vocal.mp3",
+				"wav": "https://drive.google.com/file/d/1SGr8jVC6J3g1_hh6snHulqp8icnQR2Lf/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/1fXKEBhPutkv9g-WNWj4Ralaz7m6rJzeW/view?usp=sharing",
+				"tag": ["voice", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
+				"image": "/resources/img/music/music/suno/Time to plan.png"
+			},
+			{
+				"title": {
+					"en": "Time to plan - Black Voice",
+					"kr": "Time to plan - Black Voice",
+					"jp": "Time to plan - Black Voice",
+					"cn": "Time to plan - Black Voice",
+					"ru": "Time to plan - Black Voice"
+				},
+				"lyrics":{
+					"en": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"kr": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"jp": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"cn": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"ru": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action."
+				},
+				"composed-at": "2025-10-28",
+				"composed-with": "Suno",
+				"duration": 197,
+				"mp3": "/resources/files/music/suno/Time to plan - Black Voice.mp3",
+				"wav": "https://drive.google.com/file/d/1Zk41kLKhU1a8LD6fhNh4DHAG1wjxfZe9/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/16643tKNLCOcwUNF_9hki0xKW0IhToD4j/view?usp=sharing",
+				"tag": ["voice", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
+				"image": "/SurvivalManager/aide/Black/image/2.png"
+			},
+			{
+				"title": {
+					"en": "Time to plan - White Voice",
+					"kr": "Time to plan - White Voice",
+					"jp": "Time to plan - White Voice",
+					"cn": "Time to plan - White Voice",
+					"ru": "Time to plan - White Voice"
+				},
+				"lyrics":{
+					"en": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"kr": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"jp": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"cn": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"ru": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action."
+				},
+				"composed-at": "2025-10-28",
+				"composed-with": "Suno",
+				"duration": 152,
+				"mp3": "/resources/files/music/suno/Time to plan - White Voice.mp3",
+				"wav": "https://drive.google.com/file/d/1dK17H9jCxLOT9vGoz2WDSUBCOf1Xh0rG/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/1sAvKcTooGoaZdO-Y-VKyCd8A4bTYT6P0/view?usp=sharing",
+				"tag": ["voice", "school", "dystopian", "piano", "xylophone", "ocarina"],
+				"image": "/SurvivalManager/aide/White/image/2.png"
+			},
+			{
+				"title": {
+					"en": "Time to plan - Gray Voice",
+					"kr": "Time to plan - Gray Voice",
+					"jp": "Time to plan - Gray Voice",
+					"cn": "Time to plan - Gray Voice",
+					"ru": "Time to plan - Gray Voice"
+				},
+				"lyrics":{
+					"en": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"kr": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"jp": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"cn": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"ru": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action."
+				},
+				"composed-at": "2025-10-30",
+				"composed-with": "Suno",
+				"duration": 192,
+				"mp3": "/resources/files/music/suno/Time to plan - Gray Voice.mp3",
+				"wav": "https://drive.google.com/file/d/1zMnVGLf6Zk5vzTrE6bYvcHhlyndUpvgg/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/1rLlr98I6hRLZgDDh2MS8NJwNRF5mPxqL/view?usp=sharing",
+				"tag": ["voice", "western", "dystopian", "acoustic guitar", "strings"],
+				"image": "/SurvivalManager/aide/Gray/image/2.png"
+			},
+			{
+				"title": {
+					"en": "Time to plan - Brown",
+					"kr": "Time to plan - Brown",
+					"jp": "Time to plan - Brown",
+					"cn": "Time to plan - Brown",
+					"ru": "Time to plan - Brown"
+				},
+				"composed-at": "2025-11-23",
+				"composed-with": "Suno",
+				"duration": 203,
+				"mp3": "/resources/files/music/suno/Time to plan - Brown.mp3",
+				"wav": "https://drive.google.com/file/d/1IlbZVaHhKD2NLjvmJypJJKqDXgo4WCqN/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/1vboUz2Sf33j0XkhFwFvRyF-k0HGy3NCu/view?usp=sharing",
+				"tag": ["instrumental", "offbeat", "strings", "eclctro swing"],
+				"image": "/SurvivalManager/aide/Brown/image/1.png"
+			},
+			{
+				"title": {
+					"en": "Time to plan - Brown Voice",
+					"kr": "Time to plan - Brown Voice",
+					"jp": "Time to plan - Brown Voice",
+					"cn": "Time to plan - Brown Voice",
+					"ru": "Time to plan - Brown Voice"
+				},
+				"lyrics":{
+					"en": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"kr": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"jp": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"cn": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action.",
+					"ru": "Store up water.<br>Store up food.<br>Tune the radio.<br>Make your plan.<br><br>Stay in cover.<br>Move at night.<br>Don't turn on lights at night.<br>Don't smoke during the day.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Keep hair tidy.<br>Hide your scent.<br>Fix your shelter.<br>Seal up windows.<br><br>Stay with family.<br>Carry gear when go out.<br>Don't expose good equipment.<br>Don't offer unconditional goodwill.<br><br>Make a plan before every action.<br>Make a plan before every action.<br><br>Build your knowledge.<br>Learn skills.<br>Exercise regularly.<br>Go to bed early.<br><br>Make traps.<br>Bait them.<br>Don't waste time hunting.<br>Don't waste time fighting.<br><br>Time to plan now your action.<br>Time to plan now your action."
+				},
+				"composed-at": "2025-11-23",
+				"composed-with": "Suno",
+				"duration": 197,
+				"mp3": "/resources/files/music/suno/Time to plan - Brown Vioce.mp3",
+				"wav": "https://drive.google.com/file/d/1wM7c2ZgSF1ecrJ62Xd4UwC3rQe2xxtEa/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/1GVqNKZlnTivbfT9uTbVVFv6Pt9GynSIT/view?usp=sharing",
+				"tag": ["voice", "offbeat", "strings", "eclctro swing"],
+				"image": "/SurvivalManager/aide/Brown/image/2.png"
+			},
+			{
+				"title": {
+					"en": "Time to play",
+					"kr": "Time to play",
+					"jp": "Time to play",
+					"cn": "Time to play",
+					"ru": "Time to play"
+				},
+				"composed-at": "2026-06-17",
+				"composed-with": "Suno",
+				"duration": 117,
+				"mp3": "/resources/files/music/suno/Time to play.mp3",
+				"wav": "https://drive.google.com/file/d/1ynfxzICDfLP9VEC7_WRMB-mGDLmrUAO2/view?usp=sharing",
+				"stem": "https://drive.google.com/file/d/1Gtg4czx1JDxxUeaMFAPdTzXsxgYscOfY/view?usp=sharing",
+				"tag": ["instrumental", "offbeat", "ironic", "comedic"],
+				"image": "/resources/img/music/music/suno/ncm_carrot_can.png"
+			}
 		]
 	},
 	{
