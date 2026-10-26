@@ -10,73 +10,8 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://pagead2.googlesyndication.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://www.google.com; frame-src https://www.google.com;">
     <link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico" />
+	<link rel="stylesheet" href="/SurvivalManager/basic.css">
     <title>Survival Manager - Privacy</title>
-    <style>
-        /* CSS Variables for Light/Dark Mode */
-        :root {
-            --bg-color: #ECEAE4;
-            --text-color: #1A1A1A;
-            --btn-bg: #ECEAE4;
-            --btn-border: #cccccc;
-            --btn-hover: #e0e0e0;
-        }
-
-        [data-theme="dark"] {
-            --bg-color: #1A1A1A;
-            --text-color: #ECEAE4;
-            --btn-bg: #1A1A1A;
-            --btn-border: #555555;
-            --btn-hover: #444444;
-        }
-
-        /* Basic Styling */
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Top Controls Styling */
-        .controls {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--btn-border);
-        }
-
-        button, select {
-            background-color: var(--btn-bg);
-            color: var(--text-color);
-            border: 1px solid var(--btn-border);
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.2s;
-        }
-
-        button:hover, select:hover {
-            background-color: var(--btn-hover);
-        }
-
-        h1 { font-size: 1.8rem; margin-top: 10px; }
-        h2 { font-size: 1.3rem; margin-top: 30px; border-left: 4px solid var(--text-color); padding-left: 10px; }
-        div { margin-bottom: 10px; }
-        ul { margin-top: 5px; padding-left: 30px; }
-        li { margin-bottom: 5px; }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -249,20 +184,25 @@
             }
         };
 
-        function changeLanguage() {
-            const lang = document.getElementById('lang-select').value;
-            const data = i18n[lang];
-            
-            document.documentElement.lang = lang;
-            document.title = data.title;
-            
-            for (const key in data) {
-                const element = document.getElementById(key);
-                if (element) {
-                    element.innerHTML = data[key];
-                }
-            }
-        }
+		function changeLanguage(requestedLang) {
+			const select = document.getElementById('lang-select');
+			const inputLang = requestedLang || select.value;
+			const lang = inputLang === 'ba' ? 'ru' : inputLang;
+			const data = i18n[lang] || i18n.en;
+
+			select.value = i18n[lang] ? lang : 'en';
+			document.documentElement.lang = lang;
+			document.title = data.title;
+
+			for (const key in data) {
+				const element = document.getElementById(key);
+				if (element) {
+					element.innerHTML = data[key];
+				}
+			}
+		}
+		const urlLang = new URLSearchParams(window.location.search).get('lang');
+		changeLanguage(urlLang || 'en');
     </script>
 </body>
 </html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="GoldBigDragon" />
+    <meta name="description" content="Survival Manager Application Introduction" />
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self';">
+    <link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico" />
+    <link rel="stylesheet" href="/SurvivalManager/basic.css">
+    <title>[Survival Manager] Introduction</title>
+    <style>
+        .content {
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+        }
+
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .content th,
+        .content td {
+            border: 1px solid #8886;
+            padding: .55rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .content pre {
+            overflow-x: auto;
+        }
+
+        .content a {
+            overflow-wrap: anywhere;
+        }
+
+        .content h1,
+        .content h2,
+        .content h3 {
+            line-height: 1.35;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="controls">
+            <select id="lang-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ko">한국어 (Korean)</option>
+                <option value="zh">简体中文 (Chinese)</option>
+                <option value="ja">日本語 (Japanese)</option>
+                <option value="ru">Русский (Russian)</option>
+            </select>
+            <button id="theme-toggle" onclick="toggleTheme()">Dark</button>
+        </div>
+        <h1 id="title">[Survival Manager] Introduction</h1>
+		<blockquote>
+			<p>Last updated: 2026-10-26 12:00:00</p>
+		</blockquote>
+        <main id="content" class="content">
+            <hr />
+            <h2>1. Background</h2>
+            <p>While exploring ways to put Hongik Ingan, a foundational principle of Korean philosophy, into practice, I came up with the idea of developing a disaster preparedness application that could provide practical assistance in a wide range of emergency situations.</p>
+            <hr />
+            <h2>2. Key Features and Benefits</h2>
+            <ul>
+                <li>Developed for the public good, with no advertisements and no cost to use.</li>
+                <li>All data is stored locally on your device. The developer does not collect any user information.</li>
+                <li>Most features remain available offline.</li>
+                <li>Supports Korean, English, Japanese, Chinese, and Russian.</li>
+                <li>The graphics are lightweight because the developer isn't much of an artist (!).</li>
+            </ul>
+            <hr />
+            <h2>3. Features</h2>
+            <h3>3-1. Mental Well-being</h3>
+            <ul>
+                <li>Features designed to help users maintain their mental well-being in confined, dark environments where social interaction may be limited.</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:center">Feature</th>
+                        <th style="text-align:left">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">Virtual Adjutant</td>
+                        <td style="text-align:left">Displays various text messages, including the current time, disaster preparedness tips, reminders about essential supplies that have not been stockpiled, and comments on members carrying overweight bags. Custom user-generated content can also be downloaded.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Survival Journal</td>
+                        <td style="text-align:left">Record your experiences with titles, text, images, weather conditions, and daily mood entries.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">MIDI Composer</td>
+                        <td style="text-align:left">Compose music using up to 16 tracks and 128 instruments. Save your compositions in MML or MIDI format.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>3-2. Knowledge</h3>
+            <ul>
+                <li>Features that help users acquire and review knowledge even when an internet connection is unavailable.</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:center">Feature</th>
+                        <th style="text-align:left">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">Loading Tips</td>
+                        <td style="text-align:left">Displays disaster preparedness tips on the loading screen for approximately five seconds whenever the application starts.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Knowledge Base</td>
+                        <td style="text-align:left">Access a variety of reference documents offline. Additional user-generated content can be downloaded when an internet connection is available.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>3-3. Survival</h3>
+            <ul>
+                <li>Features designed to improve the chances of survival during disasters and emergencies.</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:center">Feature</th>
+                        <th style="text-align:left">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">Action Guides</td>
+                        <td style="text-align:left">Contains 40 guides covering war, natural disasters, social disasters, and everyday safety. The guides are based on official government resources, disaster preparedness books, and AI-generated responses. Selected guides include illustrated, three-step quick guides to help users respond promptly in urgent situations.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Resource Dashboard</td>
+                        <td style="text-align:left">View all registered food and drinking water supplies. Check how many days your current stockpile will last, monitor the condition of your resources, and identify who is carrying each item.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Off-Grid Chat</td>
+                        <td style="text-align:left">Provides short-range messaging through Bluetooth Low Energy (BLE), Wi-Fi Direct, and Wi-Fi LAN, allowing users to communicate and request assistance when internet access is unavailable. Messages are encrypted in transit, and chat rooms can be protected with passwords.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Offline Maps</td>
+                        <td style="text-align:left">Load images stored on your device and use them as maps. When connected to the internet, download OpenStreetMap-based maps for more detailed navigation. Downloaded maps remain accessible offline. With downloaded maps, you can display your GPS-based location, place pins with various icons and text labels, measure distances, and simulate the effects of a nuclear explosion.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Compass & Level</td>
+                        <td style="text-align:left">Provides compass and leveling functions using your device's built-in sensors. These features will not work on devices that lack the required sensors.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Water Purification Calculator</td>
+                        <td style="text-align:left">Calculates the required dosage and waiting time for disinfecting drinking water with chlorine-based bleach or iodine tincture, based on standard guidance from the U.S. Centers for Disease Control and Prevention (CDC) and the U.S. Environmental Protection Agency (EPA).</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Morse Code</td>
+                        <td style="text-align:left">Enter Morse code manually or look up characters in a reference dictionary. Output Morse code using sound, vibration, or a camera flash. With microphone permission enabled, incoming Morse code signals can be automatically decoded.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">SOS Sound Looper</td>
+                        <td style="text-align:left">Repeatedly broadcasts acoustic signals to help rescuers locate people in distress.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Astronomy Tools</td>
+                        <td style="text-align:left">Uses your current latitude and longitude to calculate sunrise and sunset times, determine direction using the sun, and display lunar phases and illumination information.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Emergency Radio Frequencies</td>
+                        <td style="text-align:left">Browse AM/FM radio frequencies, broadcast days, and broadcast schedules for stations in various countries.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Emergency Alerts & Safety Map</td>
+                        <td style="text-align:left">Requires an internet connection and opens the official safety map and emergency alert lookup services provided through <a href="https://www.safekorea.go.kr/">National Disaster and Safety Portal (safekorea.go.kr)</a>.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>3-4. Planning</h3>
+            <ul>
+                <li>Features that help users prepare for disasters and organize their daily activities.</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:center">Feature</th>
+                        <th style="text-align:left">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">Disaster Prep Checklists</td>
+                        <td style="text-align:left">Review checklists of essential disaster preparedness supplies for bug-out bags, homes, organizations, and vehicles.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Planner</td>
+                        <td style="text-align:left">Create daily, weekly, and yearly plans, manage anniversaries, and organize evacuation plans. Review your plans through daily checklists.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>3-5. Organization</h3>
+            <ul>
+                <li>Features designed to assist administrators in organizing and managing groups during disaster situations.</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:center">Feature</th>
+                        <th style="text-align:left">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">Member & Asset Management</td>
+                        <td style="text-align:left">Register detailed information about people and objects. Member profiles can serve as emergency contact records or store identifying descriptions of specific individuals. Manage items carried by registered members or stored in registered assets. Additional nutritional information can be recorded for food. For medications, you can register appearance, indications, side effects, precautions, medication type, total quantity, daily dosage, per-dose quantity, timing, administration instructions, and ingredient information. Ingredient information follows the drug classification published by the <a href="https://www.health.kr/">Korea Pharmaceutical Information Center (KPIC)</a>, as of November 16, 2025.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Data Backup & Sync</td>
+                        <td style="text-align:left">Back up data stored on your device or transfer and synchronize it with another device.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Decision Tools</td>
+                        <td style="text-align:left">Provides dice, ladder roulette, drawing lots, and anonymous voting to help groups make decisions.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Food Rationing Calculator</td>
+                        <td style="text-align:left">Reviews all registered food supplies and calculates rationing recommendations based on group size, age-specific daily calorie and water requirements, nutritional content, available quantities, and remaining shelf life.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Cipher Generator</td>
+                        <td style="text-align:left">Encrypt and decrypt messages using cipher algorithms so that only members who know the relevant method or key can understand them.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Triage System</td>
+                        <td style="text-align:left">Provides patient triage methods to help allocate limited medical resources efficiently during mass-casualty incidents.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Quarantine Management</td>
+                        <td style="text-align:left">Helps manage potential outbreaks by tracking patient symptoms and isolation periods. A contact-tracing graph visualizes potential exposure links based on patients' visit locations and times.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Ration Ticketing System</td>
+                        <td style="text-align:left">Generate and verify ration tickets to support organized distribution when managing logistics for a government-run or privately organized relief operation. Tickets are issued as QR codes. If the camera is unavailable or a QR code is damaged, tickets can still be verified by entering the 64-digit serial number printed at the bottom.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>3-6. Utilities</h3>
+            <ul>
+                <li>Additional tools designed to support disaster preparedness and everyday tasks.</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:center">Feature</th>
+                        <th style="text-align:left">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">Unit Converter</td>
+                        <td style="text-align:left">Convert units for length, data size, area, volume, speed, time, pressure, energy, fuel economy, temperature, frequency, mass, plane angle, and more.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Metronome</td>
+                        <td style="text-align:left">Produces beats at tempos ranging from 40 to 256 BPM using sound, vibration, or a camera flash. It can also help maintain a consistent rhythm during cardiopulmonary resuscitation (CPR).</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">PDF Export</td>
+                        <td style="text-align:left">Export various types of information, including knowledge documents, action guides, plans, member information, radio frequencies, and Morse code references, to PDF files for printing and offline use.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+        </main>
+    </div>
+    <script>
+        const i18n = {
+            "ko": {
+                "title": "[재난 대비] 소개말",
+                "content": "<hr />\n<h2>1. 기획 배경</h2>\n<p>&nbsp;&nbsp;대한민국 사상의 근간인 홍익인간 이념을 실천할 방법을 찾던 중, 다양한 재난 상황에서 도움을 제공할 수 있는 재난 대비 애플리케이션을 기획하게 되었습니다.</p>\n<hr />\n<h2>2. 특장점</h2>\n<ul>\n<li>공익을 목적으로 개발되었으며, 광고 없이 무료로 이용할 수 있습니다.</li>\n<li>모든 데이터는 기기 내부에만 저장되며, 개발자는 어떠한 사용자 정보도 수집하지 않습니다.</li>\n<li>대부분의 기능을 오프라인 환경에서도 사용할 수 있습니다.</li>\n<li>한국어, 영어, 일본어, 중국어, 러시아어를 지원합니다.</li>\n<li>개발자가 그림을 잘 그리지 못하는 관계로(!), 리소스 용량이 작습니다.</li>\n</ul>\n<hr />\n<h2>3. 주요 기능</h2>\n<h3>3-1. 정신 관리</h3>\n<ul>\n<li>좁고 어두우며 외부와의 교류가 제한된 환경에서도 정신 건강을 관리할 수 있도록 돕는 기능입니다.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">기능</th>\n  <th style=\"text-align:left\">내용</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">부관</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;현재 시각, 재난 상황별 TIP, 비축하지 않은 주요 물품 정보, 배낭이 무거운 멤버에 대한 지적 등 다양한 텍스트를 출력합니다. 사용자 창작 콘텐츠를 다운로드하여 추가할 수도 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">일기</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;제목, 내용, 이미지, 날씨, 오늘의 기분 등을 기록할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">MIDI 작곡</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;최대 16개 트랙과 128종의 악기를 지원하며, MML 및 MIDI 형식으로 저장할 수 있습니다.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-2. 지식</h3>\n<ul>\n<li>인터넷에 접속할 수 없는 상황에서도 지식을 습득할 수 있도록 돕는 기능입니다.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">기능</th>\n  <th style=\"text-align:left\">내용</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">TIP</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;애플리케이션 실행 시 약 5초 동안 표시되는 로딩 화면에 재난 상황별 TIP을 제공합니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">지식 문서함</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;오프라인 환경에서도 다양한 지식 문서를 열람할 수 있습니다. 사용자 창작 콘텐츠를 다운로드하여 추가할 수도 있습니다.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-3. 생존</h3>\n<ul>\n<li>재난 상황에서 생존 가능성을 높이는 데 필요한 기능을 제공합니다.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">기능</th>\n  <th style=\"text-align:left\">내용</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">재난 행동 요령</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;<a href=\"https://www.safekorea.go.kr/\">국민안전24</a>, <a href=\"https://foreign.language.j-server.com/\">도쿄방재</a>, <a href=\"https://www.fema.gov/\">FEMA</a> 등의 정부 공식 자료와 재난 대비 서적, AI 응답 내용을 참고하여 전쟁, 자연재난, 사회재난, 생활안전의 4개 카테고리에 걸쳐 총 40가지 행동 요령을 작성했습니다. 일부 항목에는 긴급 상황에서 신속하게 대처할 수 있도록 그림으로 구성된 3단계 퀵 가이드를 제공합니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">자원 조회</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;기기에 등록된 식량과 식수를 조회하고, 현재 비축량으로 며칠 동안 버틸 수 있는지, 자원의 상태는 어떠한지, 누가 보유하고 있는지 확인할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">오프라인 채팅</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;인터넷에 접속할 수 없는 재난 상황에서도 구조 요청과 근거리 통신이 가능하도록 BLE, Wi-Fi Direct, Wi-Fi LAN을 이용한 채팅 기능을 제공합니다. 채팅 내용은 암호화하여 전송하며, 채팅방 입장 비밀번호를 설정할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">오프라인 지도</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;기기에 저장된 사진을 불러와 지도처럼 활용할 수 있습니다. 인터넷에 접속할 수 있는 환경에서는 OpenStreetMap 기반 지도를 다운로드하여 상세한 지도를 이용할 수 있으며, 다운로드한 지도는 오프라인 환경에서도 열람할 수 있습니다. 오프라인 지도를 다운로드하면 GPS 기반 현재 위치 표시, 다양한 아이콘을 이용한 핀 및 텍스트 표시, 거리 측정, 핵폭발 시뮬레이션 기능을 사용할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">나침반</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;기기에 내장된 센서를 이용해 나침반과 수평계 기능을 제공합니다. 필요한 센서가 없는 기기에서는 해당 기능을 사용할 수 없습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">식수 소독 계산기</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;<a href=\"https://www.cdc.gov/\">미국 질병통제예방센터(CDC)</a>, <a href=\"https://www.epa.gov/\">미국 환경보호청(EPA)</a>에서 제공하는 표준 지침을 참고하여, 염소계 표백제(락스) 또는 아이오딘 팅크제(요오드 팅크제)를 이용해 식수를 소독할 때 필요한 투입량과 대기 시간을 계산합니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">모스 부호</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;모스 부호를 직접 입력하거나 사전에서 검색할 수 있으며, 이를 소리, 진동, 플래시로 출력할 수 있습니다. 마이크 사용 권한을 허용하면 수신한 모스 부호를 자동으로 번역합니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">소리 반복 재생기</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;재난 상황에서 구조 신호를 반복해서 송출할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">천문 도구</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;현재 위도와 경도를 바탕으로 일출 및 일몰 시각, 태양을 이용한 방위 확인, 달의 위상과 조도 정보를 제공합니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">라디오 주파수 목록</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;여러 국가의 AM/FM 라디오 방송 주파수와 방송 요일 및 시간을 확인할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">안전지도</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;인터넷 연결이 필요하며, <a href=\"https://www.safekorea.go.kr/\">국민안전24</a>에서 제공하는 안전지도 사이트로 이동합니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">재난문자</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;인터넷 연결이 필요하며, <a href=\"https://www.safekorea.go.kr/\">국민안전24</a>에서 제공하는 재난문자 조회 사이트로 이동합니다.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-4. 계획</h3>\n<ul>\n<li>재난에 대비한 준비와 일상적인 계획 수립을 돕는 기능입니다.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">기능</th>\n  <th style=\"text-align:left\">내용</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">재난 대비 체크리스트</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;개인 배낭, 가정, 조직, 차량 등에 준비해야 할 재난 대비 물품을 체크리스트 형태로 확인할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">계획표</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;일간·주간·연간 계획, 기념일, 피난 계획을 작성할 수 있으며, 작성한 계획을 매일 체크리스트 형태로 확인할 수 있습니다.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-5. 조직</h3>\n<ul>\n<li>재난 상황에서 조직을 구성하고 운영할 때 관리자의 업무를 보조하는 기능입니다.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">기능</th>\n  <th style=\"text-align:left\">내용</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">멤버 관리</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;사람과 사물에 관한 정보를 등록할 수 있습니다. 사람에 관한 정보는 비상 연락망으로 활용하거나 특정 인물의 인상착의 등을 기록하는 데 사용할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">소지품 관리</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;등록된 멤버가 소지하거나 등록된 사물에 적재한 물품을 관리할 수 있습니다. 식품에는 영양소 정보를 추가로 입력할 수 있습니다. 약품에는 외관, 효능, 부작용, 사용량, 사용 시기, 사용 방법, 성분 정보 등을 입력할 수 있습니다. 성분 정보는 <a href=\"https://www.health.kr/\">약학정보원(KPIC)</a>의 2025년 11월 16일 기준 약효 분류를 따릅니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">데이터 동기화</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;기기에 저장된 데이터를 백업하거나 다른 기기로 이전하여 동기화할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">의사결정 도구</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;주사위, 사다리 타기, 제비뽑기, 익명 투표 기능을 제공합니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">식량 분배</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;기기에 등록된 모든 식품/식수를 조회하고, 멤버 수와 연령대별 일일 필요 열량 및 수분량, 식품별 영양소, 보유 수량, 남은 유통기한 등을 종합적으로 계산하여 식량 분배 방법을 제안합니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">암호문 작성기</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;암호 알고리즘을 이용해 특정 멤버들만 이해할 수 있는 암호문을 작성하고 해독할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">환자 분류</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;대규모 재난 현장에서 제한된 의료 자원을 효율적으로 배분할 수 있도록 환자 분류 방법을 제공합니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">환자 격리 관리</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;팬데믹 상황에서 환자의 증상을 확인하고 격리 시간을 관리하여 감염 확산 방지에 도움을 줄 수 있습니다. 또한 환자의 방문 장소와 시간을 바탕으로 접촉 가능성이 있는 환자를 추적할 수 있도록 전파 추적 그래프를 제공합니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">배급표</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;재난 상황에서 정부 또는 단체가 운영하는 조직의 물류 관리를 담당할 때 배급표를 생성하고 검증할 수 있습니다. 이를 통해 체계적인 물자 배급을 지원합니다. 배급표는 QR 코드 형태로 발급되며, 카메라를 사용할 수 없거나 QR 코드가 훼손된 경우에도 배급표 하단의 64자리 일련번호를 입력하여 검증할 수 있습니다.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-6. 도구</h3>\n<ul>\n<li>재난 대비와 일상생활에 유용한 부가 기능을 제공합니다.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">기능</th>\n  <th style=\"text-align:left\">내용</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">단위 변환</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;길이, 데이터 크기, 면적, 부피, 속도, 시간, 압력, 에너지, 연비, 온도, 주파수, 질량, 평면각 등 다양한 물리량의 단위를 변환할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">메트로놈</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;BPM 40~256 범위의 박자를 소리, 진동, 플래시로 출력할 수 있습니다. 심폐소생술(CPR) 시 일정한 리듬을 유지하는 용도로도 사용할 수 있습니다.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">PDF 추출</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;지식 문서, 재난 행동 요령, 계획, 멤버 정보, 라디오 주파수, 모스 부호 등 다양한 정보를 PDF 파일로 추출하여 종이 문서로 인쇄할 수 있습니다.</td>\n</tr>\n</tbody>\n</table>\n<hr />\n"
+            },
+            "en": {
+                "title": "[Survival Manager] Introduction",
+                "content": "<hr />\n<h2>1. Background</h2>\n<p>While exploring ways to put Hongik Ingan, a foundational principle of Korean philosophy, into practice, I came up with the idea of developing a disaster preparedness application that could provide practical assistance in a wide range of emergency situations.</p>\n<hr />\n<h2>2. Key Features and Benefits</h2>\n<ul>\n<li>Developed for the public good, with no advertisements and no cost to use.</li>\n<li>All data is stored locally on your device. The developer does not collect any user information.</li>\n<li>Most features remain available offline.</li>\n<li>Supports Korean, English, Japanese, Chinese, and Russian.</li>\n<li>The graphics are lightweight because the developer isn't much of an artist (!).</li>\n</ul>\n<hr />\n<h2>3. Features</h2>\n<h3>3-1. Mental Well-being</h3>\n<ul>\n<li>Features designed to help users maintain their mental well-being in confined, dark environments where social interaction may be limited.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Feature</th>\n  <th style=\"text-align:left\">Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Virtual Adjutant</td>\n  <td style=\"text-align:left\">Displays various text messages, including the current time, disaster preparedness tips, reminders about essential supplies that have not been stockpiled, and comments on members carrying overweight bags. Custom user-generated content can also be downloaded.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Survival Journal</td>\n  <td style=\"text-align:left\">Record your experiences with titles, text, images, weather conditions, and daily mood entries.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">MIDI Composer</td>\n  <td style=\"text-align:left\">Compose music using up to 16 tracks and 128 instruments. Save your compositions in MML or MIDI format.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-2. Knowledge</h3>\n<ul>\n<li>Features that help users acquire and review knowledge even when an internet connection is unavailable.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Feature</th>\n  <th style=\"text-align:left\">Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Loading Tips</td>\n  <td style=\"text-align:left\">Displays disaster preparedness tips on the loading screen for approximately five seconds whenever the application starts.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Knowledge Base</td>\n  <td style=\"text-align:left\">Access a variety of reference documents offline. Additional user-generated content can be downloaded when an internet connection is available.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-3. Survival</h3>\n<ul>\n<li>Features designed to improve the chances of survival during disasters and emergencies.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Feature</th>\n  <th style=\"text-align:left\">Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Action Guides</td>\n  <td style=\"text-align:left\">Contains 40 guides covering war, natural disasters, social disasters, and everyday safety. The guides are based on official government resources, disaster preparedness books, and AI-generated responses. Selected guides include illustrated, three-step quick guides to help users respond promptly in urgent situations.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Resource Dashboard</td>\n  <td style=\"text-align:left\">View all registered food and drinking water supplies. Check how many days your current stockpile will last, monitor the condition of your resources, and identify who is carrying each item.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Off-Grid Chat</td>\n  <td style=\"text-align:left\">Provides short-range messaging through Bluetooth Low Energy (BLE), Wi-Fi Direct, and Wi-Fi LAN, allowing users to communicate and request assistance when internet access is unavailable. Messages are encrypted in transit, and chat rooms can be protected with passwords.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Offline Maps</td>\n  <td style=\"text-align:left\">Load images stored on your device and use them as maps. When connected to the internet, download OpenStreetMap-based maps for more detailed navigation. Downloaded maps remain accessible offline. With downloaded maps, you can display your GPS-based location, place pins with various icons and text labels, measure distances, and simulate the effects of a nuclear explosion.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Compass & Level</td>\n  <td style=\"text-align:left\">Provides compass and leveling functions using your device's built-in sensors. These features will not work on devices that lack the required sensors.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Water Purification Calculator</td>\n  <td style=\"text-align:left\">Calculates the required dosage and waiting time for disinfecting drinking water with chlorine-based bleach or iodine tincture, based on standard guidance from the U.S. Centers for Disease Control and Prevention (CDC) and the U.S. Environmental Protection Agency (EPA).</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Morse Code</td>\n  <td style=\"text-align:left\">Enter Morse code manually or look up characters in a reference dictionary. Output Morse code using sound, vibration, or a camera flash. With microphone permission enabled, incoming Morse code signals can be automatically decoded.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">SOS Sound Looper</td>\n  <td style=\"text-align:left\">Repeatedly broadcasts acoustic signals to help rescuers locate people in distress.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Astronomy Tools</td>\n  <td style=\"text-align:left\">Uses your current latitude and longitude to calculate sunrise and sunset times, determine direction using the sun, and display lunar phases and illumination information.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Emergency Radio Frequencies</td>\n  <td style=\"text-align:left\">Browse AM/FM radio frequencies, broadcast days, and broadcast schedules for stations in various countries.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Emergency Alerts & Safety Map</td>\n  <td style=\"text-align:left\">Requires an internet connection and opens the official safety map and emergency alert lookup services provided through <a href=\"https://www.safekorea.go.kr/\">National Disaster and Safety Portal (safekorea.go.kr)</a>.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-4. Planning</h3>\n<ul>\n<li>Features that help users prepare for disasters and organize their daily activities.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Feature</th>\n  <th style=\"text-align:left\">Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Disaster Prep Checklists</td>\n  <td style=\"text-align:left\">Review checklists of essential disaster preparedness supplies for bug-out bags, homes, organizations, and vehicles.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Planner</td>\n  <td style=\"text-align:left\">Create daily, weekly, and yearly plans, manage anniversaries, and organize evacuation plans. Review your plans through daily checklists.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-5. Organization</h3>\n<ul>\n<li>Features designed to assist administrators in organizing and managing groups during disaster situations.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Feature</th>\n  <th style=\"text-align:left\">Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Member & Asset Management</td>\n  <td style=\"text-align:left\">Register detailed information about people and objects. Member profiles can serve as emergency contact records or store identifying descriptions of specific individuals. Manage items carried by registered members or stored in registered assets. Additional nutritional information can be recorded for food. For medications, you can register appearance, indications, side effects, precautions, medication type, total quantity, daily dosage, per-dose quantity, timing, administration instructions, and ingredient information. Ingredient information follows the drug classification published by the <a href=\"https://www.health.kr/\">Korea Pharmaceutical Information Center (KPIC)</a>, as of November 16, 2025.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Data Backup & Sync</td>\n  <td style=\"text-align:left\">Back up data stored on your device or transfer and synchronize it with another device.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Decision Tools</td>\n  <td style=\"text-align:left\">Provides dice, ladder roulette, drawing lots, and anonymous voting to help groups make decisions.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Food Rationing Calculator</td>\n  <td style=\"text-align:left\">Reviews all registered food supplies and calculates rationing recommendations based on group size, age-specific daily calorie and water requirements, nutritional content, available quantities, and remaining shelf life.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Cipher Generator</td>\n  <td style=\"text-align:left\">Encrypt and decrypt messages using cipher algorithms so that only members who know the relevant method or key can understand them.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Triage System</td>\n  <td style=\"text-align:left\">Provides patient triage methods to help allocate limited medical resources efficiently during mass-casualty incidents.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Quarantine Management</td>\n  <td style=\"text-align:left\">Helps manage potential outbreaks by tracking patient symptoms and isolation periods. A contact-tracing graph visualizes potential exposure links based on patients' visit locations and times.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Ration Ticketing System</td>\n  <td style=\"text-align:left\">Generate and verify ration tickets to support organized distribution when managing logistics for a government-run or privately organized relief operation. Tickets are issued as QR codes. If the camera is unavailable or a QR code is damaged, tickets can still be verified by entering the 64-digit serial number printed at the bottom.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-6. Utilities</h3>\n<ul>\n<li>Additional tools designed to support disaster preparedness and everyday tasks.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Feature</th>\n  <th style=\"text-align:left\">Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Unit Converter</td>\n  <td style=\"text-align:left\">Convert units for length, data size, area, volume, speed, time, pressure, energy, fuel economy, temperature, frequency, mass, plane angle, and more.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Metronome</td>\n  <td style=\"text-align:left\">Produces beats at tempos ranging from 40 to 256 BPM using sound, vibration, or a camera flash. It can also help maintain a consistent rhythm during cardiopulmonary resuscitation (CPR).</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">PDF Export</td>\n  <td style=\"text-align:left\">Export various types of information, including knowledge documents, action guides, plans, member information, radio frequencies, and Morse code references, to PDF files for printing and offline use.</td>\n</tr>\n</tbody>\n</table>\n<hr />\n"
+            },
+            "ja": {
+                "title": "[災害対策] アプリ紹介",
+                "content": "<hr />\n<h2>1. 開発の背景</h2>\n<p>韓国思想の根幹をなす「弘益人間」の理念を実践する方法を模索する中で、さまざまな災害状況において実際に役立つ災害対策アプリの開発を企画しました。</p>\n<hr />\n<h2>2. 特長</h2>\n<ul>\n<li>公益を目的として開発されており、広告なしで無料で利用できます。</li>\n<li>すべてのデータは端末内にのみ保存され、開発者がユーザー情報を収集することはありません。</li>\n<li>ほとんどの機能をオフライン環境でも利用できます。</li>\n<li>韓国語、英語、日本語、中国語、ロシア語に対応しています。</li>\n<li>開発者に絵心がないおかげで（！）、画像などのリソース容量は小さく抑えられています。</li>\n</ul>\n<hr />\n<h2>3. 主な機能</h2>\n<h3>3-1. メンタルケア</h3>\n<ul>\n<li>狭く暗い場所や、外部との交流が限られる環境でも、心の健康を維持できるようサポートします。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">機能</th>\n  <th style=\"text-align:left\">説明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">バーチャル副官</td>\n  <td style=\"text-align:left\">現在時刻、防災・サバイバルのヒント、不足している備蓄品の情報、重いバックパックを持つメンバーへの指摘など、さまざまなメッセージを表示します。他のユーザーが作成したコンテンツをダウンロードして追加することもできます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">サバイバル日記</td>\n  <td style=\"text-align:left\">タイトル、本文、画像、天気、その日の気分などを記録できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">MIDI作曲ツール</td>\n  <td style=\"text-align:left\">最大16トラック、128種類の楽器に対応しています。作成した楽曲はMMLまたはMIDI形式で保存できます。</td>\n</tr>\n</tbody>\n</table>\n<h3>3-2. 知識</h3>\n<ul>\n<li>インターネットに接続できない状況でも、知識を習得できるようサポートします。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">機能</th>\n  <th style=\"text-align:left\">説明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">ローディング画面のヒント</td>\n  <td style=\"text-align:left\">アプリの起動時、ローディング画面に災害対策のヒントを約5秒間表示します。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">知識のライブラリ</td>\n  <td style=\"text-align:left\">オフライン環境でも、さまざまな知識資料を閲覧できます。インターネット接続時には、他のユーザーが作成したコンテンツをダウンロードして追加できます。</td>\n</tr>\n</tbody>\n</table>\n<h3>3-3. サバイバル</h3>\n<ul>\n<li>災害時の生存率を高めるために役立つ機能を提供します。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">機能</th>\n  <th style=\"text-align:left\">説明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">防災・行動マニュアル</td>\n  <td style=\"text-align:left\"><a href=\"https://www.safekorea.go.kr/\">韓国の国民安全24</a>、<a href=\"https://foreign.language.j-server.com/\">東京防災</a>、<a href=\"https://www.fema.gov/\">米国連邦緊急事態管理庁（FEMA）</a>などの政府公式資料、防災関連書籍、AIの回答内容を参考に、戦争、自然災害、社会災害、日常生活の安全に関する40種類の行動マニュアルを収録しています。一部の項目には、緊急時に素早く対応できるよう、イラスト付きの3ステップガイドを用意しています。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">資源ダッシュボード</td>\n  <td style=\"text-align:left\">端末に登録された食料や飲料水の備蓄状況を確認できます。現在の備蓄量であと何日過ごせるか、物資の状態、誰が何を所持しているかを把握できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">オフラインチャット</td>\n  <td style=\"text-align:left\">インターネットが利用できない災害時でも、Bluetooth Low Energy（BLE）、Wi-Fi Direct、ローカルWi-Fi LANを利用して近距離通信や救助要請を行えます。メッセージは暗号化して送信され、チャットルームにはパスワードを設定できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">オフラインマップ</td>\n  <td style=\"text-align:left\">端末に保存されている画像を読み込み、地図として利用できます。インターネット接続時には、OpenStreetMapをベースとした地図データをダウンロードでき、ダウンロード後はオフライン環境でも閲覧できます。オフライン地図では、GPSによる現在位置の表示、さまざまなアイコンやテキストを使ったピンの設置、距離の測定、核爆発シミュレーション機能を利用できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">コンパス＆水準器</td>\n  <td style=\"text-align:left\">端末に内蔵されたセンサーを利用して、方角を確認したり、水平を測定したりできます。必要なセンサーを搭載していない端末では利用できません。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">浄水計算ツール</td>\n  <td style=\"text-align:left\"><a href=\"https://www.cdc.gov/\">米国疾病予防管理センター（CDC）</a>および<a href=\"https://www.epa.gov/\">米国環境保護庁（EPA）</a>が公開している標準的なガイドラインを参考に、塩素系漂白剤またはヨードチンキを使用して飲料水を消毒する際の必要量と待機時間を計算します。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">モールス信号</td>\n  <td style=\"text-align:left\">モールス信号を直接入力したり、辞書から検索したりできます。入力した信号は音、振動、フラッシュで出力できます。マイクの使用を許可すると、受信したモールス信号を自動的に解読します。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">SOSサウンドルーパー</td>\n  <td style=\"text-align:left\">災害時に救助を求める音声・音響信号を繰り返し再生できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">天文ツール</td>\n  <td style=\"text-align:left\">現在の緯度・経度をもとに、日の出・日の入りの時刻、太陽を利用した方角の確認、月の満ち欠けや照度に関する情報を確認できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">緊急ラジオ周波数リスト</td>\n  <td style=\"text-align:left\">各国のAM/FMラジオ放送の周波数、放送曜日、放送時間を確認できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">緊急速報＆安全マップ</td>\n  <td style=\"text-align:left\">インターネット接続が必要です。<a href=\"https://www.safekorea.go.kr/\">韓国の国民安全24</a>が提供する安全マップおよび災害速報の確認ページにアクセスできます。</td>\n</tr>\n</tbody>\n</table>\n<h3>3-4. 計画</h3>\n<ul>\n<li>災害への備えや日常生活の計画づくりをサポートします。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">機能</th>\n  <th style=\"text-align:left\">説明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">防災チェックリスト</td>\n  <td style=\"text-align:left\">非常持ち出し袋、家庭、組織、車両などに備えておくべき防災用品を、チェックリスト形式で確認できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">プランナー（計画表）</td>\n  <td style=\"text-align:left\">日次・週次・年次の計画、記念日、避難計画を作成できます。作成した計画は、毎日のチェックリスト形式で確認できます。</td>\n</tr>\n</tbody>\n</table>\n<h3>3-5. 組織管理</h3>\n<ul>\n<li>災害時に組織を編成・運営する際、管理者の業務を支援します。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">機能</th>\n  <th style=\"text-align:left\">説明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">メンバー＆物資管理</td>\n  <td style=\"text-align:left\">人や物に関する情報を登録できます。人物情報は緊急連絡網として利用できるほか、特定の人物の服装や外見などの特徴を記録することもできます。登録されたメンバーの所持品や、登録された物資保管場所に保管されている物品も管理できます。食品には栄養情報を、医薬品には外観、効能、副作用、使用上の注意、医薬品の種類、総数量、1日あたりの使用量、1回あたりの使用量、使用時期、使用方法、成分情報などを登録できます。成分情報は、<a href=\"https://www.health.kr/\">韓国薬学情報院（KPIC）</a>が2025年11月16日時点で公開していた薬効分類に準拠しています。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">データのバックアップと同期</td>\n  <td style=\"text-align:left\">端末内に保存されたデータをバックアップしたり、別の端末へ移行して同期したりできます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">意思決定ツール</td>\n  <td style=\"text-align:left\">サイコロ、あみだくじ、くじ引き、匿名投票の機能を利用できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">食糧配分計算ツール</td>\n  <td style=\"text-align:left\">端末に登録された食料を確認し、メンバーの人数や年齢層に応じた1日あたりの必要カロリー・水分量、食品ごとの栄養素、在庫数、賞味期限までの残り日数などを総合的に計算し、食料の配分方法を提案します。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">暗号ジェネレーター</td>\n  <td style=\"text-align:left\">暗号アルゴリズムを利用して、特定のメンバー間で共有する秘密のメッセージを作成・解読できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">トリアージシステム</td>\n  <td style=\"text-align:left\">大規模災害などで多数の負傷者が発生した際、限られた医療資源を効率的に配分するための現場トリアージ手順を提供します。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">隔離管理</td>\n  <td style=\"text-align:left\">パンデミック時に患者の症状や隔離期間を管理し、感染拡大の防止を支援します。また、患者の訪問場所と時刻をもとに、接触した可能性のある患者を追跡できるよう、感染経路を可視化するグラフを提供します。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">配給チケットシステム</td>\n  <td style=\"text-align:left\">災害時に政府や団体が運営する組織の物流管理を担当する場合、配給チケットを作成・検証し、物資の計画的な配給を支援します。チケットはQRコード形式で発行されます。カメラが使用できない場合やQRコードが破損している場合でも、チケット下部に記載された64桁のシリアル番号を入力して検証できます。</td>\n</tr>\n</tbody>\n</table>\n<h3>3-6. ツール</h3>\n<ul>\n<li>災害対策や日常生活に役立つ補助機能を提供します。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">機能</th>\n  <th style=\"text-align:left\">説明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">単位変換ツール</td>\n  <td style=\"text-align:left\">長さ、データ容量、面積、体積、速度、時間、圧力、エネルギー、燃費、温度、周波数、質量、平面角など、さまざまな物理量の単位を変換できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">メトロノーム</td>\n  <td style=\"text-align:left\">BPM 40〜256の範囲でテンポを設定し、音、振動、フラッシュでリズムを出力できます。心肺蘇生法（CPR）の際に一定のリズムを維持するためにも利用できます。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">PDF出力</td>\n  <td style=\"text-align:left\">知識資料、防災・行動マニュアル、計画、メンバー情報、ラジオ周波数、モールス信号など、さまざまな情報をPDFファイルとして出力し、印刷できます。</td>\n</tr>\n</tbody>\n</table>\n<hr />\n"
+            },
+            "zh": {
+                "title": "[灾害准备] 应用介绍",
+                "content": "<hr />\n<h2>1. 开发初衷</h2>\n<p>在探索如何践行韩国思想的核心理念——“弘益人间”（广泛造福人类）时，我萌生了开发一款灾害应对应用的想法，希望它能在各种灾害和紧急情况下为人们提供切实的帮助。</p>\n<hr />\n<h2>2. 主要特点</h2>\n<ul>\n<li>以公益为目的开发，无广告，完全免费。</li>\n<li>所有数据仅存储在设备本地，开发者不会收集任何用户信息。</li>\n<li>大多数功能均可在离线环境下使用。</li>\n<li>支持韩语、英语、日语、简体中文和俄语。</li>\n<li>由于开发者不太擅长画画（！），因此图形资源占用的存储空间较小。</li>\n</ul>\n<hr />\n<h2>3. 主要功能</h2>\n<h3>3-1. 心理健康管理</h3>\n<ul>\n<li>帮助用户在狭窄、昏暗且与外界交流受限的环境中维持心理健康。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">功能</th>\n  <th style=\"text-align:left\">说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">虚拟副官</td>\n  <td style=\"text-align:left\">显示当前时间、灾害应对提示、尚未储备的重要物资提醒，以及对背包过重的成员进行提醒等内容。支持下载其他用户创作的内容并添加使用。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">生存日记</td>\n  <td style=\"text-align:left\">记录标题、正文、图片、天气和每日心情等信息。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">MIDI 作曲</td>\n  <td style=\"text-align:left\">支持最多16个音轨和128种乐器，可将创作的音乐保存为MML或MIDI格式。</td>\n</tr>\n</tbody>\n</table>\n<h3>3-2. 知识库</h3>\n<ul>\n<li>帮助用户在无法连接互联网的情况下学习和获取知识。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">功能</th>\n  <th style=\"text-align:left\">说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">加载提示</td>\n  <td style=\"text-align:left\">每次启动应用时，在加载界面显示约5秒的灾害应对实用提示。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">知识库</td>\n  <td style=\"text-align:left\">支持离线查阅各类知识资料。联网时还可以下载其他用户创作的内容并添加到资料库中。</td>\n</tr>\n</tbody>\n</table>\n<h3>3-3. 生存工具</h3>\n<ul>\n<li>提供有助于提高灾害情况下生存率的实用功能。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">功能</th>\n  <th style=\"text-align:left\">说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">行动指南</td>\n  <td style=\"text-align:left\">参考<a href=\"https://www.safekorea.go.kr/\">韩国国民安全24</a>、<a href=\"https://foreign.language.j-server.com/\">东京防灾</a>、<a href=\"https://www.fema.gov/\">美国联邦紧急事务管理局（FEMA）</a>等政府官方资料、防灾书籍及AI回答内容，编写了涵盖战争、自然灾害、社会灾害和日常安全四大类别的40种行动指南。部分指南还配有三步图解速查指南，帮助用户在紧急情况下迅速采取应对措施。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">资源看板</td>\n  <td style=\"text-align:left\">查看设备中登记的所有食品和饮用水储备，了解现有储备还能维持多少天、物资的当前状态，以及各项物资由谁携带。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">离线局域聊天</td>\n  <td style=\"text-align:left\">在无法连接互联网的灾害情况下，通过低功耗蓝牙（BLE）、Wi-Fi Direct或本地Wi-Fi局域网进行近距离通信和求救。聊天内容在传输过程中会加密，并支持为聊天室设置进入密码。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">离线地图</td>\n  <td style=\"text-align:left\">可以导入设备中保存的图片，将其作为地图使用。联网时，还可以下载基于OpenStreetMap的地图数据，获取更详细的地图信息。下载后的地图可在离线环境下继续使用。下载地图后，可使用GPS定位、添加带有不同图标和文字说明的地图标记、测量距离以及核爆模拟等功能。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">指南针与水平仪</td>\n  <td style=\"text-align:left\">利用设备内置传感器提供指南针和水平测量功能。未配备所需传感器的设备无法使用相应功能。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">净水计算器</td>\n  <td style=\"text-align:left\">参考<a href=\"https://www.cdc.gov/\">美国疾病控制与预防中心（CDC）</a>和<a href=\"https://www.epa.gov/\">美国环境保护署（EPA）</a>发布的标准指南，计算使用含氯漂白剂或碘酊对饮用水进行消毒时所需的用量和等待时间。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">摩斯密码</td>\n  <td style=\"text-align:left\">支持手动输入摩斯密码或通过词典查询，并可通过声音、震动或闪光输出。获得麦克风使用权限后，还可以自动解码接收到的摩斯信号。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">SOS 声音循环播放器</td>\n  <td style=\"text-align:left\">支持循环播放求救声音信号，以便在灾害情况下持续发出求救信息。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">天文工具</td>\n  <td style=\"text-align:left\">根据当前纬度和经度，计算日出与日落时间，利用太阳辅助判断方向，并查看月相及月面光照信息。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">应急广播频率</td>\n  <td style=\"text-align:left\">查询多个国家和地区的AM/FM广播频率、播出日期及播出时间。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">应急广播与安全地图</td>\n  <td style=\"text-align:left\">需要连接互联网。可跳转至<a href=\"https://www.safekorea.go.kr/\">韩国国民安全24</a>，访问其提供的安全地图及灾害预警信息查询页面。</td>\n</tr>\n</tbody>\n</table>\n<h3>3-4. 计划管理</h3>\n<ul>\n<li>帮助用户做好灾害准备，并合理安排日常活动。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">功能</th>\n  <th style=\"text-align:left\">说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">备灾清单</td>\n  <td style=\"text-align:left\">以清单形式查看个人应急逃生背包、家庭、组织及车辆等需要准备的灾害应对物资。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">计划表</td>\n  <td style=\"text-align:left\">可制定每日、每周和每年的计划，记录纪念日并制定撤离计划。创建的计划可以通过每日清单进行检查和跟踪。</td>\n</tr>\n</tbody>\n</table>\n<h3>3-5. 组织管理</h3>\n<ul>\n<li>在灾害情况下组建和运营组织时，为管理人员提供辅助工具。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">功能</th>\n  <th style=\"text-align:left\">说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">人员与资产管理</td>\n  <td style=\"text-align:left\">可登记人员和物品的详细信息。人员档案既可用作紧急联系人名单，也可用于记录特定人员的外貌、衣着等识别特征。还可以管理已登记成员携带的物品，以及存放在已登记资产中的物资。食品可添加营养成分信息；药品可登记外观、功效、副作用、注意事项、药品类型、总数量、每日用量、单次用量、使用时间、使用方法及成分信息等。药品成分信息采用<a href=\"https://www.health.kr/\">韩国药学信息院（KPIC）</a>截至2025年11月16日的药效分类标准。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">数据备份与同步</td>\n  <td style=\"text-align:left\">可备份存储在设备中的数据，也可以将数据迁移到其他设备并进行同步。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">决策工具</td>\n  <td style=\"text-align:left\">提供掷骰子、爬梯子、抽签和匿名投票功能，帮助团队进行决策。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">口粮分配计算器</td>\n  <td style=\"text-align:left\">查询设备中登记的所有食品，综合考虑成员人数、不同年龄段每日所需的热量和水分、食品营养成分、库存数量及剩余保质期，计算并提出合理的食品分配方案。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">密码生成器</td>\n  <td style=\"text-align:left\">使用密码算法创建和解读秘密信息，供掌握相应解密方法或密钥的成员之间交流。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">检伤分类系统</td>\n  <td style=\"text-align:left\">提供现场伤员分类方法，帮助在大规模灾害或群体伤亡事件中高效分配有限的医疗资源。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">隔离管理</td>\n  <td style=\"text-align:left\">在大流行疫情期间，帮助记录患者症状并管理隔离时间，以降低疾病传播风险。还可根据患者到访的地点和时间，利用传播追踪图表展示可能存在接触关系的患者。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">配给票系统</td>\n  <td style=\"text-align:left\">在灾害期间负责政府或组织的物流管理时，可生成并验证配给票，帮助有序分发物资。配给票以二维码形式生成。即使无法使用摄像头或二维码已经损坏，也可以输入票据下方的64位序列号进行验证。</td>\n</tr>\n</tbody>\n</table>\n<h3>3-6. 实用工具</h3>\n<ul>\n<li>提供有助于灾害应对和日常生活的辅助功能。</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">功能</th>\n  <th style=\"text-align:left\">说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">单位换算</td>\n  <td style=\"text-align:left\">支持长度、数据容量、面积、体积、速度、时间、压力、能量、燃油经济性、温度、频率、质量、平面角等多种物理量的单位换算。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">节拍器</td>\n  <td style=\"text-align:left\">支持40～256 BPM的节拍，可通过声音、震动或闪光输出节奏，也可用于心肺复苏（CPR）时维持稳定的按压节奏。</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">PDF 导出</td>\n  <td style=\"text-align:left\">可将知识资料、行动指南、计划、成员信息、广播频率、摩斯密码资料等内容导出为PDF文件，以便保存或打印成纸质文档。</td>\n</tr>\n</tbody>\n</table>\n<hr />\n"
+            },
+            "ru": {
+                "title": "[Менеджер по выживанию] Описание",
+                "content": "<hr />\n<h2>1. Предыстория проекта</h2>\n<p>&nbsp;&nbsp;В поисках способов воплотить в жизнь идею «Хонъикинган» (홍익인간), лежащую в основе корейской философской традиции и выражающую стремление приносить пользу всему человечеству, я решил разработать приложение, которое могло бы помогать людям в различных чрезвычайных ситуациях.</p>\n<hr />\n<h2>2. Особенности и преимущества</h2>\n<ul>\n<li>Приложение разработано в общественно полезных целях, предоставляется бесплатно и не содержит рекламы.</li>\n<li>Все данные хранятся исключительно на устройстве. Разработчик не собирает никакую информацию о пользователях.</li>\n<li>Большинство функций доступно без подключения к интернету.</li>\n<li>Поддерживаются пять языков: корейский, английский, японский, китайский и русский.</li>\n<li>Приложение занимает мало места в памяти устройства, поскольку разработчик, к сожалению (!), не очень хорошо рисует.</li>\n</ul>\n<hr />\n<h2>3. Основные функции</h2>\n<h3>3-1. Психологическая поддержка</h3>\n<ul>\n<li>Функции, помогающие поддерживать психологическое состояние в тесных, тёмных и изолированных помещениях, где возможности общения с внешним миром ограничены.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Функция</th>\n  <th style=\"text-align:left\">Описание</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Виртуальный адъютант</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Выводит различную текстовую информацию: текущее время, советы для разных чрезвычайных ситуаций, сведения о важных предметах, которых не хватает в запасах, а также замечания о членах группы, чьи рюкзаки слишком тяжёлые. Можно загружать и добавлять материалы, созданные другими пользователями.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Дневник выживания</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет записывать заголовки, текстовые заметки, изображения, погоду и своё настроение за день.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">MIDI-композитор</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Поддерживает до 16 дорожек и 128 музыкальных инструментов. Созданные композиции можно сохранять в форматах MML и MIDI.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-2. База знаний</h3>\n<ul>\n<li>Функции, позволяющие получать полезные знания даже при отсутствии доступа к интернету.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Функция</th>\n  <th style=\"text-align:left\">Описание</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Подсказки при загрузке</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;При запуске приложения на экране загрузки отображаются полезные советы для различных чрезвычайных ситуаций. Советы показываются примерно в течение 5 секунд.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">База знаний</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет просматривать различные справочные материалы даже без подключения к интернету. Дополнительные материалы, созданные другими пользователями, можно загружать и добавлять в библиотеку.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-3. Выживание</h3>\n<ul>\n<li>Функции, предназначенные для повышения шансов на выживание в чрезвычайных ситуациях.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Функция</th>\n  <th style=\"text-align:left\">Описание</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Руководства по выживанию</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Подготовлено 40 инструкций на основе официальных материалов государственных учреждений, таких как <a href=\"https://www.safekorea.go.kr/\">국민안전24</a>, <a href=\"https://foreign.language.j-server.com/\">Токио: руководство по предотвращению стихийных бедствий</a> и <a href=\"https://www.fema.gov/\">FEMA</a>, а также книг по подготовке к чрезвычайным ситуациям и ответов ИИ. Инструкции охватывают четыре категории: война, природные катастрофы, социальные катастрофы и повседневная безопасность. Для некоторых ситуаций предусмотрены краткие иллюстрированные руководства из трёх шагов, позволяющие быстрее сориентироваться в экстренной обстановке.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Обзор ресурсов</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет просматривать зарегистрированные в приложении запасы продуктов питания и питьевой воды, оценивать, на сколько дней их хватит, проверять состояние ресурсов и узнавать, у кого они находятся.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Автономный чат</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет обмениваться сообщениями и передавать сигналы о необходимости помощи в условиях отсутствия интернета. Для связи используются BLE, Wi-Fi Direct и Wi-Fi LAN. Сообщения передаются в зашифрованном виде. Также можно установить пароль для входа в чат.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Офлайн-карты</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет использовать сохранённые на устройстве изображения в качестве карт. При наличии доступа к интернету можно загрузить подробные карты на основе OpenStreetMap и впоследствии просматривать их офлайн. После загрузки карты становятся доступны определение текущего местоположения по GPS, размещение меток и текстовых заметок с использованием различных значков, измерение расстояний и симуляция ядерного взрыва.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Компас и уровень</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Использует встроенные датчики устройства для определения направления по компасу и измерения наклона поверхности. На устройствах без необходимых датчиков эта функция недоступна.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Калькулятор очистки воды</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;На основе стандартных рекомендаций <a href=\"https://www.cdc.gov/\">Центров по контролю и профилактике заболеваний США (CDC)</a> и <a href=\"https://www.epa.gov/\">Агентства по охране окружающей среды США (EPA)</a> рассчитывает необходимое количество хлорсодержащего отбеливателя или йодной настойки, а также время ожидания при обеззараживании питьевой воды.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Азбука Морзе</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет вводить символы азбуки Морзе вручную или находить их в справочнике, а затем передавать сигналы с помощью звука, вибрации или вспышек света. При предоставлении доступа к микрофону приложение может автоматически распознавать и расшифровывать принимаемые сигналы Морзе.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Сигнал SOS (Лупер)</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет непрерывно воспроизводить звуковые сигналы бедствия для привлечения внимания и передачи сигнала о необходимости помощи.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Астрономия</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;На основе текущих координат — широты и долготы — предоставляет информацию о времени восхода и заката Солнца, определении направления по Солнцу, фазах Луны и её освещённости.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Радиочастоты (ЧС)</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет просматривать частоты AM/FM-радиостанций в различных странах, а также дни недели и время выхода передач в эфир.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Карта безопасности</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Требуется подключение к интернету. Открывает сайт с картой безопасности, предоставляемый государственным порталом <a href=\"https://www.safekorea.go.kr/\">국민안전24</a>.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Экстренные оповещения</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Требуется подключение к интернету. Открывает страницу просмотра экстренных сообщений, предоставляемую государственным порталом <a href=\"https://www.safekorea.go.kr/\">국민안전24</a>.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-4. Планирование</h3>\n<ul>\n<li>Функции, помогающие готовиться к чрезвычайным ситуациям и организовывать повседневную жизнь.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Функция</th>\n  <th style=\"text-align:left\">Описание</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Чек-листы для ЧС</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет проверять наличие необходимых предметов для подготовки к чрезвычайным ситуациям в личном аварийном рюкзаке, дома, в организации и автомобиле с помощью удобных контрольных списков.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Планировщик</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет составлять ежедневные, еженедельные и годовые планы, отмечать памятные даты и разрабатывать маршруты эвакуации. Созданные планы можно ежедневно проверять в виде списков задач с отметками о выполнении.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-5. Управление группой</h3>\n<ul>\n<li>Функции, помогающие организовывать группы и выполнять административные задачи в чрезвычайных ситуациях.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Функция</th>\n  <th style=\"text-align:left\">Описание</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Управление группой</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет регистрировать сведения о людях и предметах. Информация о людях может использоваться для составления списка экстренных контактов, а также для записи внешности и других опознавательных признаков конкретного человека.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Управление запасами</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет учитывать предметы, находящиеся у зарегистрированных участников или размещённые в зарегистрированных объектах. Для продуктов питания можно указывать сведения о питательных веществах. Для лекарств можно добавлять информацию о внешнем виде, действии, побочных эффектах, дозировке, показаниях, способе применения и составе. Классификация лекарственных средств по действию соответствует классификации Корейского фармацевтического информационного центра <a href=\"https://www.health.kr/\">KPIC</a> по состоянию на 16 ноября 2025 года.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Резервное копирование и синхронизация</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет создавать резервные копии данных, сохранённых на устройстве, и переносить их на другие устройства для синхронизации.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Принятие решений</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Предоставляет инструменты для принятия коллективных решений: бросок кубиков, жеребьёвку с использованием лестницы, случайный выбор и анонимное голосование.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Калькулятор пайков</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Анализирует зарегистрированные продукты питания и питьевую воду, рассчитывает суточную потребность в калориях и воде с учётом количества участников и их возрастных групп, учитывает пищевую ценность продуктов, имеющиеся запасы и оставшийся срок годности, а затем предлагает варианты распределения продовольствия.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Генератор шифров</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет создавать и расшифровывать сообщения с помощью различных алгоритмов шифрования, чтобы их могли понимать только определённые участники группы.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Триаж</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Предоставляет рекомендации по медицинской сортировке пострадавших, помогая эффективно распределять ограниченные медицинские ресурсы при массовых чрезвычайных ситуациях.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Управление карантином</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Помогает отслеживать симптомы пациентов и контролировать продолжительность изоляции для предотвращения распространения инфекции. Также предоставляет графическое представление цепочек возможного заражения на основе мест и времени посещения, позволяя выявлять людей, которые могли контактировать с заболевшими.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Система талонов на пайки</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет создавать и проверять талоны на получение продовольствия и других ресурсов для организации логистики в чрезвычайных ситуациях. Талоны выдаются в виде QR-кодов. Если камера недоступна или QR-код повреждён, проверку можно выполнить вручную, введя 64-значный серийный номер, указанный в нижней части талона.</td>\n</tr>\n</tbody>\n</table>\n<h3>3-6. Инструменты</h3>\n<ul>\n<li>Дополнительные функции, полезные при подготовке к чрезвычайным ситуациям и в повседневной жизни.</li>\n</ul>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Функция</th>\n  <th style=\"text-align:left\">Описание</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td style=\"text-align:center\">Конвертер величин</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет преобразовывать единицы измерения различных физических величин, включая длину, объём данных, площадь, объём, скорость, время, давление, энергию, расход топлива, температуру, частоту, массу и плоский угол.</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Метроном</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет задавать темп в диапазоне от 40 до 256 BPM и воспроизводить ритм с помощью звука, вибрации или вспышек света. Может использоваться для поддержания необходимого ритма при сердечно-лёгочной реанимации (СЛР).</td>\n</tr>\n<tr>\n  <td style=\"text-align:center\">Экспорт в PDF</td>\n  <td style=\"text-align:left\">&nbsp;&nbsp;Позволяет экспортировать различные сведения в PDF-файлы для последующей печати на бумаге. В частности, можно сохранять справочные материалы, руководства по выживанию, планы, сведения об участниках, радиочастоты и информацию об азбуке Морзе.</td>\n</tr>\n</tbody>\n</table>\n<hr />\n"
+            }
+        };
+
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('theme-toggle');
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                btn.innerText = 'Dark';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                btn.innerText = 'Light';
+            }
+        }
+
+        function changeLanguage(requestedLang) {
+            const select = document.getElementById('lang-select');
+            const inputLang = requestedLang || select.value;
+            const lang = inputLang === 'ba' ? 'ru' : inputLang;
+            const data = i18n[lang] || i18n.en;
+            select.value = i18n[lang] ? lang : 'en';
+            document.documentElement.lang = lang;
+            document.title = data.title;
+            document.getElementById('title').textContent = data.title;
+            document.getElementById('content').innerHTML = data.content;
+        }
+
+        const urlLang = new URLSearchParams(window.location.search).get('lang');
+        changeLanguage(urlLang || 'en');
+    </script>
+</body>
+
+</html>

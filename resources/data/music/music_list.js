@@ -122,7 +122,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to plan.mp3",
 				"wav": "https://drive.google.com/file/d/1HAWyDuR7otg2h08sEu_IrNKXsX-ZVQXd/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/1ywwlAHjVDjUQRf99CQrrDE-1Yk54AssK/view?usp=sharing",
-				"tag": ["instrumental", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
+				"tag": ["Survival Manager", "instrumental", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
 				"image": "/resources/img/music/music/suno/Time to plan.png"
 			},
 			{
@@ -139,7 +139,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to plan - Gray.mp3",
 				"wav": "https://drive.google.com/file/d/1oTGzCHTNvrBtgSsi--SmMN9KOUP_QQQI/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/1g6HtRaszn5KpZs72ZR5_o_2Fikf7vNLv/view?usp=sharing",
-				"tag": ["instrumental", "western", "dystopian", "acoustic guitar", "strings"],
+				"tag": ["Survival Manager", "instrumental", "western", "dystopian", "acoustic guitar", "strings"],
 				"image": "/SurvivalManager/aide/Gray/image/1.png"
 			},
 			{
@@ -156,7 +156,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to plan - White.mp3",
 				"wav": "https://drive.google.com/file/d/1m5YYZJU7NdRRrzhRzGWUoqlQ6tNFWWLT/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/1wULGw4Gqc5LOae1fpmz9ND2H7LkfWgQm/view?usp=sharing",
-				"tag": ["instrumental", "school", "dystopian", "piano", "xylophone", "ocarina"],
+				"tag": ["Survival Manager", "instrumental", "school", "dystopian", "piano", "xylophone", "ocarina"],
 				"image": "/SurvivalManager/aide/White/image/1.png"
 			},
 			{
@@ -173,7 +173,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to plan - Black.mp3",
 				"wav": "https://drive.google.com/file/d/1zhkIubzggUvNQutSqISUgBeF2PF5r6Wy/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/1p5nf0ElehVZ-Jwhc6oXvNQ3O37Btz9J_/view?usp=sharing",
-				"tag": ["instrumental", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
+				"tag": ["Survival Manager", "instrumental", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
 				"image": "/SurvivalManager/aide/Black/image/1.png"
 			},
 			{
@@ -197,7 +197,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to plan - Male vocal.mp3",
 				"wav": "https://drive.google.com/file/d/1SGr8jVC6J3g1_hh6snHulqp8icnQR2Lf/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/1fXKEBhPutkv9g-WNWj4Ralaz7m6rJzeW/view?usp=sharing",
-				"tag": ["voice", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
+				"tag": ["Survival Manager", "voice", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
 				"image": "/resources/img/music/music/suno/Time to plan.png"
 			},
 			{
@@ -221,7 +221,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to plan - Black Voice.mp3",
 				"wav": "https://drive.google.com/file/d/1Zk41kLKhU1a8LD6fhNh4DHAG1wjxfZe9/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/16643tKNLCOcwUNF_9hki0xKW0IhToD4j/view?usp=sharing",
-				"tag": ["voice", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
+				"tag": ["Survival Manager", "voice", "atmospheric", "abstract", "dystopian", "poetic", "emotional", "acoustic guitar", "strings", "lonely", "modern"],
 				"image": "/SurvivalManager/aide/Black/image/2.png"
 			},
 			{
@@ -245,7 +245,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to plan - White Voice.mp3",
 				"wav": "https://drive.google.com/file/d/1dK17H9jCxLOT9vGoz2WDSUBCOf1Xh0rG/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/1sAvKcTooGoaZdO-Y-VKyCd8A4bTYT6P0/view?usp=sharing",
-				"tag": ["voice", "school", "dystopian", "piano", "xylophone", "ocarina"],
+				"tag": ["Survival Manager", "voice", "school", "dystopian", "piano", "xylophone", "ocarina"],
 				"image": "/SurvivalManager/aide/White/image/2.png"
 			},
 			{
@@ -269,7 +269,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to plan - Gray Voice.mp3",
 				"wav": "https://drive.google.com/file/d/1zMnVGLf6Zk5vzTrE6bYvcHhlyndUpvgg/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/1rLlr98I6hRLZgDDh2MS8NJwNRF5mPxqL/view?usp=sharing",
-				"tag": ["voice", "western", "dystopian", "acoustic guitar", "strings"],
+				"tag": ["Survival Manager", "voice", "western", "dystopian", "acoustic guitar", "strings"],
 				"image": "/SurvivalManager/aide/Gray/image/2.png"
 			},
 			{
@@ -286,7 +286,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to plan - Brown.mp3",
 				"wav": "https://drive.google.com/file/d/1IlbZVaHhKD2NLjvmJypJJKqDXgo4WCqN/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/1vboUz2Sf33j0XkhFwFvRyF-k0HGy3NCu/view?usp=sharing",
-				"tag": ["instrumental", "offbeat", "strings", "eclctro swing"],
+				"tag": ["Survival Manager", "instrumental", "offbeat", "strings", "eclctro swing"],
 				"image": "/SurvivalManager/aide/Brown/image/1.png"
 			},
 			{
@@ -310,7 +310,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to plan - Brown Vioce.mp3",
 				"wav": "https://drive.google.com/file/d/1wM7c2ZgSF1ecrJ62Xd4UwC3rQe2xxtEa/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/1GVqNKZlnTivbfT9uTbVVFv6Pt9GynSIT/view?usp=sharing",
-				"tag": ["voice", "offbeat", "strings", "eclctro swing"],
+				"tag": ["Survival Manager", "voice", "offbeat", "strings", "eclctro swing"],
 				"image": "/SurvivalManager/aide/Brown/image/2.png"
 			},
 			{
@@ -327,7 +327,7 @@ const PLAY_LIST = [
 				"mp3": "/resources/files/music/suno/Time to play.mp3",
 				"wav": "https://drive.google.com/file/d/1ynfxzICDfLP9VEC7_WRMB-mGDLmrUAO2/view?usp=sharing",
 				"stem": "https://drive.google.com/file/d/1Gtg4czx1JDxxUeaMFAPdTzXsxgYscOfY/view?usp=sharing",
-				"tag": ["instrumental", "offbeat", "ironic", "comedic"],
+				"tag": ["Survival Manager", "instrumental", "offbeat", "ironic", "comedic"],
 				"image": "/resources/img/music/music/suno/ncm_carrot_can.png"
 			}
 		]
