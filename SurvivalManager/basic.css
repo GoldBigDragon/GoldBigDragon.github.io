@@ -12,9 +12,11 @@
 	--btn-bg: #1A1A1A;
 	--btn-border: #555555;
 	--btn-hover: #444444;
+	--link-color: #66AFFF;
+	--link-visited: #C966FF;
 }
 
-/* Basic Styling */
+/* 기본 */
 body {
 	background-color: var(--bg-color);
 	color: var(--text-color);
@@ -30,7 +32,11 @@ body {
 	margin: 0 auto;
 }
 
-/* Top Controls Styling */
+.container.wide {
+	max-width: 1000px;
+}
+
+/* 상단 컨트롤 */
 .controls {
 	display: flex;
 	justify-content: flex-end;
@@ -61,3 +67,76 @@ h2 { font-size: 1.3rem; margin-top: 30px; border-left: 4px solid var(--text-colo
 div { margin-bottom: 10px; }
 ul { margin-top: 5px; padding-left: 30px; }
 li { margin-bottom: 5px; }
+
+/* 하이퍼링크 (다크 모드) */
+[data-theme="dark"] a { color: var(--link-color); }
+[data-theme="dark"] a:visited { color: var(--link-visited); }
+
+/* 다국어: html lang과 다른 .i18n 직계 자식은 숨김 */
+html[lang="ko"] .i18n > :not([lang="ko"]),
+html[lang="en"] .i18n > :not([lang="en"]),
+html[lang="zh-CN"] .i18n > :not([lang="zh-CN"]),
+html[lang="ja"] .i18n > :not([lang="ja"]),
+html[lang="ru"] .i18n > :not([lang="ru"]) {
+	display: none;
+}
+
+.meta { opacity: 0.75; }
+
+/* 본문 (소개말, 개인정보 처리방침) */
+.content {
+	line-height: 1.7;
+	overflow-wrap: anywhere;
+}
+
+.content table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1rem 0;
+}
+
+.content th,
+.content td {
+	border: 1px solid #8886;
+	padding: 0.55rem;
+	text-align: left;
+	vertical-align: top;
+}
+
+.content th:first-child,
+.content td:first-child {
+	text-align: center;
+}
+
+.content h1,
+.content h2,
+.content h3 {
+	line-height: 1.35;
+}
+
+.policy p { text-indent: 1em; }
+
+/* 개발 기록 */
+.entry {
+	padding: 8px 0 24px;
+	margin: 0 0 20px;
+	border-bottom: 1px solid var(--btn-border);
+}
+
+.entry h2 { margin: 0 0 14px; font-size: 1.35rem; }
+.entry ul { padding-left: 1.5rem; line-height: 1.8; }
+.entry a { overflow-wrap: anywhere; }
+
+.entry img {
+	display: inline-block;
+	max-width: min(100%, 420px);
+	max-height: 420px;
+	object-fit: contain;
+	margin: 8px 10px 8px 0;
+	border-radius: 6px;
+	vertical-align: top;
+}
+
+@media (max-width: 600px) {
+	.entry img { max-width: 100%; max-height: none; }
+}

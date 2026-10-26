@@ -1,436 +1,1030 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-default-lang="ko">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="GoldBigDragon">
-<meta name="description" content="재난 대비 애플리케이션 개발 기록">
-<meta http-equiv="Cache-Control" content="no-cache">
-<link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico">
-<link rel="stylesheet" href="/SurvivalManager/basic.css">
-<title>[재난 대비] 개발 기록</title>
-<style>
-.devlog-container{max-width:1000px;margin:0 auto;padding:24px;box-sizing:border-box}
-.devlog-container h1{margin-bottom:8px}
-.devlog-meta{opacity:.75;margin:0 0 28px}
-.devlog-entry{padding:8px 0 24px;margin:0 0 20px;border-bottom:1px solid var(--border-color,#ddd)}
-.devlog-entry h2{margin:0 0 14px;font-size:1.35rem}
-.devlog-entry p{line-height:1.75;margin:8px 0}
-.devlog-entry ul{padding-left:1.5rem;line-height:1.8}
-.devlog-entry img{display:inline-block;max-width:min(100%,420px);max-height:420px;object-fit:contain;margin:8px 10px 8px 0;border-radius:6px;vertical-align:top}
-.devlog-entry a{overflow-wrap:anywhere}
-.devlog-controls{display:flex;justify-content:flex-end;gap:8px;margin-bottom:16px}
-.devlog-controls button{cursor:pointer}
-@media(max-width:600px){.devlog-container{padding:16px}.devlog-entry img{max-width:100%;max-height:none}}
-</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="GoldBigDragon">
+	<meta name="description" content="재난 대비 애플리케이션 개발 기록">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<base target="_blank">
+	<link rel="icon" type="image/x-icon" href="./resources/img/favicon.ico">
+	<link rel="stylesheet" href="/SurvivalManager/basic.css">
+	<title>[재난 대비] 개발 기록</title>
 </head>
+
 <body>
-<div class="container devlog-container">
-  <div class="devlog-controls">
-    <select id="lang-select" aria-label="Language" onchange="changeLanguage()">
-      <option value="ko">한국어 (Korean)</option>
-      <option value="en">English</option>
-      <option value="zh">简体中文 (Chinese)</option>
-      <option value="ja">日本語 (Japanese)</option>
-      <option value="ru">Русский (Russian)</option>
-    </select>
-    <button id="theme-toggle" type="button" onclick="toggleTheme()">Dark</button>
-  </div>
-  <main id="devlog-content" aria-live="polite"></main>
-</div>
-<script type="text/plain" id="devlog-source"># [재난 대비] 개발 기록
-> 마지막 수정일: 2026-10-26 13:38:00
----
-## 2016년 이전
-- 대한민국 사상의 근간인 홍익인간 이념을 실천할 방법을 찾던 중, 다양한 재난 상황에서 도움을 제공할 수 있는 재난 대비 애플리케이션을 만들기로 마음먹었습니다.
----
-## 2017-09-28
-- 보스니아 내전 생존자 Selco의 경험담, 재난 상황 TIP, 재난 가방 정리 방법을 담은 [재난 상황 TIP 정리본](https://cafe.naver.com/goldbigdragon/72583)을 작성하였습니다.
----
-## 2018-02-25
-![image](/SurvivalManager/devlog_resources/2018_02_25.png)
-- Discord 서버를 개설하여 자료를 수집하기 시작했습니다.
----
-## 2018-10-08
-![image](/SurvivalManager/devlog_resources/2018_10_08.png)
-- [애플리케이션 기획 초안](/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx)을 작성하였습니다.
-- 재난 행동 요령, 재난 대비 체크리스트, 지식 문서, 부관, 5개 국어 지원, 멤버 관리, 소지품 관리, 계획, 일기장, 오프라인 지도, 의사결정 도구, 식사 분배, 소리 반복 재생 기능을 기획하였습니다.
----
-## 2018-12-10
-![image](/SurvivalManager/devlog_resources/2018_12_10.png)
-- 로비 화면 UI를 구상하였습니다.
----
-## 2020-03-07
-![image](/SurvivalManager/devlog_resources/2020_03_07.png)
-- 로비 화면 UI를 구상하였습니다.
----
-## 2020-03-08
-![image](/SurvivalManager/devlog_resources/2020_03_08.png)
-- [명일방주](https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights) UI를 참고하여 [새로운 UI](/SurvivalManager/devlog_resources/2020_03_08.zip)를 구상하였습니다.
----
-## 2021-06-06
-![image](/SurvivalManager/devlog_resources/2021_06_06.png)
-- Github에 SurvivalManager 레포지토리를 생성하였습니다.
----
-## 2021-07-26
-- 로비(Lobby) 기능이 추가되었습니다.
-- 설정(Option) 기능이 추가되었습니다.
----
-## 2021-08-22
-- 영어, 한국어, 일본어, 중국어, 러시아어에 대한 strings.xml 분리 작업을 수행하였습니다.
----
-## 2021-08-25
-- 계획(Plans) 기능이 추가되었습니다.
----
-## 2024-11-10
-![image](/SurvivalManager/devlog_resources/2024_11_10.png)
-- [Helldivers 2](https://store.steampowered.com/app/553850/HELLDIVERS_2/) UI를 참고하여 [Draw.io](https://app.diagrams.net/)를 이용한 [새로운 UI](/SurvivalManager/devlog_resources/2024_11_10.drawio)를 구상하였습니다. (UI 파일은 Draw.io에서 열람할 수 있습니다)
----
-## 2025-01-10
-![image](/SurvivalManager/devlog_resources/2025_01_10_001.png)
-![image](/SurvivalManager/devlog_resources/2025_01_10_002.png)
-![image](/SurvivalManager/devlog_resources/2025_01_10_003.png)
-- Black 캐릭터를 구상하였습니다.
----
-## 2025-01-28
-![image](/SurvivalManager/devlog_resources/2025_01_28_001.png)
-![image](/SurvivalManager/devlog_resources/2025_01_28_002.png)
-![image](/SurvivalManager/devlog_resources/2025_01_28_003.png)
-- White 캐릭터를 구상하였습니다.
----
-## 2025-02-01
-- 부관(Aide) 시스템이 개발되었습니다.
----
-## 2025-02-12
-- 전 세계 18,297건의 라디오 주파수 정보를 수집하였습니다.
----
-## 2025-02-17
-- TIP 기능이 추가되었습니다.
-- 24절기 구분 기능이 추가되었습니다.
----
-## 2025-03-01
-- 작물 재배 관련 지식을 얻기 위해 [서울사이버대학교 - AI 스마트팜학과](https://smartfarm.iscu.ac.kr/)에 편입학 하였습니다.
----
-## 2025-04-07
-![image](/SurvivalManager/devlog_resources/2025_04_07.png)
-- Gray 캐릭터를 구상하였습니다.
----
-## 2025-05-15
-- 숫자, 영문, 기호, 한글, 일본어, 키릴 알파벳, 관용구에 대한 모스 부호 정보를 수집하였습니다.
----
-## 2025-07-18
-- 아이콘(Icon) 선택 기능이 추가되었습니다.
----
-## 2025-07-29
-- 애플리케이션 대표 BGM [Time to plan](/resources/files/music/suno/Time%20to%20plan.mp3)이 작곡되었습니다.
----
-## 2025-07-31
-- 멤버 정보 입력(Member Information) 창이 개발되었습니다.
----
-## 2025-10-02
-- Gray 테마곡 [Time to plan - Gray](/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3)가 작곡되었습니다.
----
-## 2025-10-06
-- White 테마곡 [Time to plan - White](/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3)가 작곡되었습니다.
-- Black 테마곡 [Time to plan - Black](/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3)이 작곡되었습니다.
----
-## 2025-10-21
-- 부르기만 해도 재난 대비 TIP을 얻을 수 있도록, 애플리케이션 대표 BGM에 가사를 입힌 [Time to plan - Male vocal](/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3)이 작곡되었습니다.
----
-## 2025-10-28
-- Black 테마곡에 가사를 입힌 [Time to plan - Black Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3)가 작곡되었습니다.
-- White 테마곡에 가사를 입힌 [Time to plan - White Voice](/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3)가 작곡되었습니다.
----
-## 2025-10-30
-- Gray 테마곡에 가사를 입힌 [Time to plan - Gray Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3)가 작곡되었습니다.
----
-## 2025-11-02
-- 멤버 장비(Member Equipment) 창이 개발되었습니다.
----
-## 2025-11-05
-- 멤버 소지품(Member Inventory) 창이 개발되었습니다.
----
-## 2025-11-07
-- 물품별 카테고리 분류 기능이 추가되었습니다.
----
-## 2025-11-09
-- 멤버 소지품 창에 물품 등록이 가능하게 되었습니다.
----
-## 2025-11-11
-- 물품 상세 정보(Item Information) 창이 개발되었습니다.
----
-## 2025-11-13
-- 물품에 대한 메타 정보 입력이 가능하게 되었습니다.
----
-## 2025-11-23
-- Brown 테마곡 [Time to plan - Brown](/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3)이 작곡되었습니다.
-- Brown 테마곡에 가사를 입힌 [Time to plan - Brown Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3)가 작곡되었습니다.
----
-## 2025-11-25
-- [약학정보원(Korea Pharmaceutical Information Center)](https://www.health.kr/)의 [KPIC 약효분류](https://www.health.kr/drug-info/kpic-classification)법을 바탕으로 의약품 메타데이터에 원료 기입이 가능하게 되었습니다.
----
-## 2025-12-10
-- 휴대폰(420dpi), 태블릿(7 inch, 600dp), 폴더블 폰(650dp), 태블릿(10 inch, 720dp), 데스크탑(960dp) 화면을 지원하게 되었습니다.
----
-## 2025-12-19
-- 계획(Plans) 화면을 재구성하였습니다.
-- 피난 계획 작성이 가능하게 되었습니다.
----
-## 2025-12-25
-- 자원 조회(Resource Inquiry) 기능이 추가되었습니다.
----
-## 2025-12-29
-- 인터넷을 이용한 P2P 채팅 기능이 추가되었습니다.
-- 2004년 01월 06일부터 2037년 12월 21일까지의 24절기 날짜 데이터를 수집하였습니다.
----
-## 2026-01-05
-- 인터넷을 이용한 P2P 채팅에서 파일 첨부가 가능하게 되었습니다.
----
-## 2026-02-03
-- 지식 문서함(Knowledge) 기능이 추가되었습니다.
----
-## 2026-02-05
-- 매듭법(Knots), 비누(Soap), 일일 권장 섭취량(Daily Recommended Nutrient Intake), 플라스틱 병 전구(Plastic Bottle Bulb), 양초(Candle), 정수(Water Purification), 수원지(Water Source) 지식이 추가되었습니다.
----
-## 2026-02-07
-- 식품 보존(Food Preservation), 응급처치(First aid) 지식이 추가되었습니다.
----
-## 2026-02-10
-- 지식 문서 다운로드 기능이 추가되었습니다.
-- 지식 문서 뷰어에서 라이트/다크 모드를 지원합니다.
----
-## 2026-02-18
-- 부관(Aide) 다운로드 기능이 추가되었습니다.
----
-## 2026-02-18
-![image](/SurvivalManager/devlog_resources/2026_02_18_001.png)
-![image](/SurvivalManager/devlog_resources/2026_02_18_002.png)
-![image](/SurvivalManager/devlog_resources/2026_02_18_003.png)
-- White 캐릭터를 재구상하였습니다.
----
-## 2026-02-22
-- 아이콘(Icon) 다운로드 기능이 추가되었습니다.
----
-## 2026-03-25
-- 재난 상황 행동 요령(Disaster Situation) 기능이 추가되었습니다.
-- 화산(Volcanic eruption), 폭염(Heat wave), 가뭄(Drought), 쓰나미(Tsunami), 조수(Tide), 폭우(Downpour), 홍수(Flood), 적조(Red tide), 녹조(Green tide), 폭설(Heavy snowfall), 한파(Cold wave), 태풍(Typhoon), 강풍(Strong wind), 낙뢰(Lightning strike), 황사(Yellow dust), 지진(Earthquake), 산사태(Landslide), 우주 전파 재난(Space weather disaster), 자연 우주 물체 추락(Natural space object impact)에 대한 자연 재해 행동 요령이 추가되었습니다.
-- 해파리 대량 출현(Mass jellyfish occurrence)에 대한 생활 안전 요령이 추가되었습니다.
----
-## 2026-03-26
-- 경보(Alert), 대피(Evacuation), 폭격(Shelling), 드론 공습(UAV Strike)에 대한 전쟁 행동 요령이 추가되었습니다.
----
-## 2026-04-07
-- 건물 붕괴(Building Collapse), 다중 운집 인파 사고(Crowd Crush)에 대한 사회 재난 행동 요령이 추가되었습니다.
----
-## 2026-04-24
-- 화재(Fire), 테러(Terrorism), 가스 사고(Gas Accident), 전기 사고(Electrical Accident)에 대한 사회 재난 행동 요령이 추가되었습니다.
-- 산행 안전 수칙(Climbing Accident), 응급처치(First aid)에 대한 생활 안전 요령이 추가되었습니다.
----
-## 2026-04-29
-- 재난 대비 체크리스트(Prepare Disaster) 기능이 추가되었습니다.
----
-## 2026-04-30
-![image](/SurvivalManager/devlog_resources/2026_04_30_001.png)
-![image](/SurvivalManager/devlog_resources/2026_04_30_002.png)
-![image](/SurvivalManager/devlog_resources/2026_04_30_003.png)
-- Black 캐릭터를 재구상하였습니다.
----
-## 2026-05-02
-- 부관(Aide) 일러스트 전체 화면 보기 기능이 추가되었습니다.
-- 도구(Utility) 기능이 추가되었습니다.
-- 의사결정 도구에 주사위(Dice) 기능이 추가되었습니다.
----
-## 2026-05-05
-- 의사결정 도구에 사다리 타기(Ghost legs) 기능이 추가되었습니다.
-- 의사결정 도구에 제비뽑기(Drawing lots) 기능이 추가되었습니다.
-- 의사결정 도구에 익명 투표(Anonymous vote) 기능이 추가되었습니다.
-- 도구에 단위 변환(Unit conversion) 기능이 추가되었습니다.
----
-## 2026-05-08
-- 생존 도구에 오프라인 지도(Offline Map) 기능이 추가되었습니다. 마커 추가, 거리 재기, 핵 폭발 시뮬레이션 도구를 사용할 수 있습니다.
-- 생존 도구에 나침반(Compass) 기능이 추가되었습니다.
----
-## 2026-05-09
-- 생존 도구에 소리 반복 재생기(Sound repeater) 기능이 추가되었습니다.
----
-## 2026-05-14
-- 생존 도구에 모스 부호(Morse code) 기능이 추가되었습니다.
-- 조직·운영 도구에 식량 분배(Food Distribute) 기능이 추가되었습니다.
-- 조직·운영 도구에 암호문 작성(Cipher Tool) 기능이 추가되었습니다.
----
-## 2026-05-21
-- 조직·운영 도구에 환자 격리 관리(Patient Isolation Management) 기능이 추가되었습니다.
-- 조직·운영 도구에 배급표(Ration Ticket) 기능이 추가되었습니다.
-- 도구에 메트로놈(Metronome) 기능이 추가되었습니다.
----
-## 2026-05-23
-- 도구에 MIDI 작곡기(MIDI Composer) 기능이 추가되었습니다.
----
-## 2026-05-24
-- 생존 도구에 [국민안전24](https://www.safekorea.go.kr/)에서 제공하는 [안전지도](https://safemap.go.kr/main/smap_renewal.do) 페이지로 이동하는 링크가 추가되었습니다.
-- 생존 도구에 [국민안전24](https://www.safekorea.go.kr/)에서 제공하는 [재난문자](https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do) 페이지로 이동하는 링크가 추가되었습니다.
----
-## 2026-05-27
-- 지식 문서가 페이징 기능을 지원하게 되었습니다.
----
-## 2026-05-29
-- 보스니아 내전 생존자 Selco와의 인터뷰(Interview with Bosnian war survivor Selco) 지식이 추가되었습니다.
----
-## 2026-06-05
-- [대학 과제 ](/SurvivalManager/devlog_resources/2026_06_05.pdf) 제출겸 부관(Aide) 캐릭터 디자인을 다듬었습니다.
----
-## 2026-06-12
-- 태양광 발전기 설치(Solar panel installation) 지식이 추가되었습니다.
-- 오프라인 지도(Offline Map)에서 GPS 활성화 시 현재 위치가 표시되는 기능이 추가되었습니다.
-- 환자 격리 관리(Patient Isolation Management)에서 추적 그래프 저장 버튼이 추가되었습니다.
----
-## 2026-06-17
-- 애플리케이션 내에서 에피소드 및 스토리 열람 시 재생될 BGM [Time to play](/resources/files/music/suno/Time%20to%20play.mp3)가 작곡되었습니다.
----
-## 2026-07-02
-- 생존 도구에 식수 소독 계산기(Water Purification Calculator) 기능이 추가되었습니다.
-- 조직·운영 도구에 환자 분류(Patient Triage) 기능이 추가되었습니다.
-- P2P 채팅 시스템이 BLE, WiFi-Direct, WiFi-LAN 연결 기능을 지원하게 되었습니다.
-- 부관(Aide)이 사용자에게 시스템 메시지를 전송하는 기능이 추가되었습니다.
----
-## 2026-07-03
-- 도구에 일기장(Diary) 기능이 추가되었습니다.
----
-## 2026-07-05
-![image](/SurvivalManager/devlog_resources/2026_07_05_001.png)
-![image](/SurvivalManager/devlog_resources/2026_07_05_002.png)
-![image](/SurvivalManager/devlog_resources/2026_07_05_003.png)
-![image](/SurvivalManager/devlog_resources/2026_07_05_004.png)
-![image](/SurvivalManager/devlog_resources/2026_07_05_005.png)
-![image](/SurvivalManager/devlog_resources/2026_07_05_006.png)
-![image](/SurvivalManager/devlog_resources/2026_07_05_007.png)
-![image](/SurvivalManager/devlog_resources/2026_07_05_008.png)
-- Gray 캐릭터를 재구상하였습니다.
----
-## 2026-07-09
-- 생존 도구에 천문 도구(Astronomy Tool) 기능이 추가되었습니다.
-- 생존 도구에 비상 라디오 주파수(Emergency Radio Frequency) 기능이 추가되었습니다.
----
-## 2026-07-11
-![image](/SurvivalManager/devlog_resources/2026_07_11_001.png)
-![image](/SurvivalManager/devlog_resources/2026_07_11_002.png)
-![image](/SurvivalManager/devlog_resources/2026_07_11_003.png)
-- Brown 캐릭터를 구상하였습니다.
----
-## 2026-08-09
-- 데이터 동기화(Data Sync) 기능이 추가되었습니다.
----
-## 2026-08-11
-- 가로 모드(Landscape)뿐만 아니라 세로 모드(Portrait)까지 지원하여, 자유롭게 화면을 전환할 수 있게 되었습니다.
----
-## 2026-09-07
-- P2P 채팅 시스템에 참여자 강퇴, 비밀 방 개설, 프로필 이미지 설정, 닉네임 설정 기능이 추가되었습니다.
----
-## 2026-09-21
-- 부관(Aide) Gray의 가스 마스크를 벗길 수 있는 트리거가 추가되었습니다.
-- 오프라인 지도(Offline Map)에서 위도 경도 입력을 통한 마커 추가가 가능하게 되었습니다.
----
-## 2026-10-18
-- PDF 출력 기능이 추가되었습니다.
----
-## 2026-10-26
-- Google Play Store에서 내부 비공개 테스트를 시작하였습니다.
----</script>
-<script>
-const translations = {"en":{"대한민국 사상의 근간인 홍익인간 이념을 실천할 방법을 찾던 중, 다양한 재난 상황에서 도움을 제공할 수 있는 재난 대비 애플리케이션을 만들기로 마음먹었습니다.":"While looking for a way to put Hongik Ingan, a foundational Korean ideal, into practice, I decided to develop a disaster-preparedness app that could help people in a range of emergencies.","보스니아 내전 생존자 Selco의 경험담, 재난 상황 TIP, 재난 가방 정리 방법을 담은 [재난 상황 TIP 정리본](https://cafe.naver.com/goldbigdragon/72583)을 작성하였습니다.":"I compiled the [Disaster Situation Tips](https://cafe.naver.com/goldbigdragon/72583), covering the experiences of Bosnian War survivor Selco, emergency tips, and how to organize a disaster go-bag.","Discord 서버를 개설하여 자료를 수집하기 시작했습니다.":"I created a Discord server and began collecting reference materials.","[애플리케이션 기획 초안](/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx)을 작성하였습니다.":"I drafted the [application plan](/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx).","재난 행동 요령, 재난 대비 체크리스트, 지식 문서, 부관, 5개 국어 지원, 멤버 관리, 소지품 관리, 계획, 일기장, 오프라인 지도, 의사결정 도구, 식사 분배, 소리 반복 재생 기능을 기획하였습니다.":"The planned features included disaster procedures, preparedness checklists, knowledge documents, an aide, support for five languages, member and inventory management, plans, a diary, offline maps, decision-making tools, food distribution, and sound repetition.","로비 화면 UI를 구상하였습니다.":"I designed a concept for the lobby screen UI.","[명일방주](https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights) UI를 참고하여 [새로운 UI](/SurvivalManager/devlog_resources/2020_03_08.zip)를 구상하였습니다.":"I developed a [new UI concept](/SurvivalManager/devlog_resources/2020_03_08.zip), using the interface of [Arknights](https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights) as a reference.","Github에 SurvivalManager 레포지토리를 생성하였습니다.":"I created the SurvivalManager repository on GitHub.","로비(Lobby) 기능이 추가되었습니다.":"The Lobby feature was added.","설정(Option) 기능이 추가되었습니다.":"The Options feature was added.","영어, 한국어, 일본어, 중국어, 러시아어에 대한 strings.xml 분리 작업을 수행하였습니다.":"I separated the `strings.xml` resources for English, Korean, Japanese, Chinese, and Russian.","계획(Plans) 기능이 추가되었습니다.":"The Plans feature was added.","[Helldivers 2](https://store.steampowered.com/app/553850/HELLDIVERS_2/) UI를 참고하여 [Draw.io](https://app.diagrams.net/)를 이용한 [새로운 UI](/SurvivalManager/devlog_resources/2024_11_10.drawio)를 구상하였습니다. (UI 파일은 Draw.io에서 열람할 수 있습니다)":"I designed a [new UI](/SurvivalManager/devlog_resources/2024_11_10.drawio) in [Draw.io](https://app.diagrams.net/), taking inspiration from the UI of [Helldivers 2](https://store.steampowered.com/app/553850/HELLDIVERS_2/). (The UI file can be opened in Draw.io.)","Black 캐릭터를 구상하였습니다.":"I conceptualized the Black character.","White 캐릭터를 구상하였습니다.":"I conceptualized the White character.","부관(Aide) 시스템이 개발되었습니다.":"The Aide system was developed.","전 세계 18,297건의 라디오 주파수 정보를 수집하였습니다.":"I collected 18,297 radio-frequency records from around the world.","TIP 기능이 추가되었습니다.":"The Tips feature was added.","24절기 구분 기능이 추가되었습니다.":"The feature for identifying the 24 solar terms was added.","작물 재배 관련 지식을 얻기 위해 [서울사이버대학교 - AI 스마트팜학과](https://smartfarm.iscu.ac.kr/)에 편입학 하였습니다.":"I transferred to [Seoul Cyber University’s AI Smart Farm Department](https://smartfarm.iscu.ac.kr/) to learn about crop cultivation.","Gray 캐릭터를 구상하였습니다.":"I conceptualized the Gray character.","숫자, 영문, 기호, 한글, 일본어, 키릴 알파벳, 관용구에 대한 모스 부호 정보를 수집하였습니다.":"I collected Morse code data for numbers, Latin letters, symbols, Hangul, Japanese characters, Cyrillic letters, and common phrases.","아이콘(Icon) 선택 기능이 추가되었습니다.":"The Icon selection feature was added.","애플리케이션 대표 BGM [Time to plan](/resources/files/music/suno/Time%20to%20plan.mp3)이 작곡되었습니다.":"The app’s main BGM, [Time to plan](/resources/files/music/suno/Time%20to%20plan.mp3), was composed.","멤버 정보 입력(Member Information) 창이 개발되었습니다.":"The Member Information window was developed.","Gray 테마곡 [Time to plan - Gray](/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3)가 작곡되었습니다.":"The Gray theme song, [Time to plan - Gray](/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3), was composed.","White 테마곡 [Time to plan - White](/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3)가 작곡되었습니다.":"The White theme song, [Time to plan - White](/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3), was composed.","Black 테마곡 [Time to plan - Black](/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3)이 작곡되었습니다.":"The Black theme song, [Time to plan - Black](/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3), was composed.","부르기만 해도 재난 대비 TIP을 얻을 수 있도록, 애플리케이션 대표 BGM에 가사를 입힌 [Time to plan - Male vocal](/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3)이 작곡되었습니다.":"To make disaster-preparedness tips accessible by singing along, I composed a vocal version of the app’s main BGM: [Time to plan - Male vocal](/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3).","Black 테마곡에 가사를 입힌 [Time to plan - Black Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3)가 작곡되었습니다.":"A vocal version of the Black theme song, [Time to plan - Black Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3), was composed.","White 테마곡에 가사를 입힌 [Time to plan - White Voice](/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3)가 작곡되었습니다.":"A vocal version of the White theme song, [Time to plan - White Voice](/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3), was composed.","Gray 테마곡에 가사를 입힌 [Time to plan - Gray Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3)가 작곡되었습니다.":"A vocal version of the Gray theme song, [Time to plan - Gray Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3), was composed.","멤버 장비(Member Equipment) 창이 개발되었습니다.":"The Member Equipment window was developed.","멤버 소지품(Member Inventory) 창이 개발되었습니다.":"The Member Inventory window was developed.","물품별 카테고리 분류 기능이 추가되었습니다.":"Item categorization was added.","멤버 소지품 창에 물품 등록이 가능하게 되었습니다.":"Items can now be registered in the Member Inventory window.","물품 상세 정보(Item Information) 창이 개발되었습니다.":"The Item Information window was developed.","물품에 대한 메타 정보 입력이 가능하게 되었습니다.":"Metadata can now be entered for items.","Brown 테마곡 [Time to plan - Brown](/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3)이 작곡되었습니다.":"The Brown theme song, [Time to plan - Brown](/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3), was composed.","Brown 테마곡에 가사를 입힌 [Time to plan - Brown Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3)가 작곡되었습니다.":"A vocal version of the Brown theme song, [Time to plan - Brown Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3), was composed.","[약학정보원(Korea Pharmaceutical Information Center)](https://www.health.kr/)의 [KPIC 약효분류](https://www.health.kr/drug-info/kpic-classification)법을 바탕으로 의약품 메타데이터에 원료 기입이 가능하게 되었습니다.":"Drug ingredient information can now be entered in medication metadata based on the [KPIC drug classification](https://www.health.kr/drug-info/kpic-classification) published by the [Korea Pharmaceutical Information Center](https://www.health.kr/).","휴대폰(420dpi), 태블릿(7 inch, 600dp), 폴더블 폰(650dp), 태블릿(10 inch, 720dp), 데스크탑(960dp) 화면을 지원하게 되었습니다.":"The app added support for phones (420 dpi), 7-inch tablets (600 dp), foldable phones (650 dp), 10-inch tablets (720 dp), and desktops (960 dp).","계획(Plans) 화면을 재구성하였습니다.":"The Plans screen was redesigned.","피난 계획 작성이 가능하게 되었습니다.":"Users can now create evacuation plans.","자원 조회(Resource Inquiry) 기능이 추가되었습니다.":"The Resource Inquiry feature was added.","인터넷을 이용한 P2P 채팅 기능이 추가되었습니다.":"Internet-based P2P chat was added.","2004년 01월 06일부터 2037년 12월 21일까지의 24절기 날짜 데이터를 수집하였습니다.":"I collected date data for the 24 solar terms from January 6, 2004, through December 21, 2037.","인터넷을 이용한 P2P 채팅에서 파일 첨부가 가능하게 되었습니다.":"File attachments became available in internet-based P2P chat.","지식 문서함(Knowledge) 기능이 추가되었습니다.":"The Knowledge library feature was added.","매듭법(Knots), 비누(Soap), 일일 권장 섭취량(Daily Recommended Nutrient Intake), 플라스틱 병 전구(Plastic Bottle Bulb), 양초(Candle), 정수(Water Purification), 수원지(Water Source) 지식이 추가되었습니다.":"Knowledge articles were added on knots, soap, daily recommended nutrient intake, plastic-bottle bulbs, candles, water purification, and water sources.","식품 보존(Food Preservation), 응급처치(First aid) 지식이 추가되었습니다.":"Knowledge articles on food preservation and first aid were added.","지식 문서 다운로드 기능이 추가되었습니다.":"Knowledge documents can now be downloaded.","지식 문서 뷰어에서 라이트/다크 모드를 지원합니다.":"The knowledge document viewer now supports light and dark modes.","부관(Aide) 다운로드 기능이 추가되었습니다.":"Aide downloads were added.","White 캐릭터를 재구상하였습니다.":"I redesigned the White character concept.","아이콘(Icon) 다운로드 기능이 추가되었습니다.":"Icon downloads were added.","재난 상황 행동 요령(Disaster Situation) 기능이 추가되었습니다.":"The Disaster Situation guidance feature was added.","화산(Volcanic eruption), 폭염(Heat wave), 가뭄(Drought), 쓰나미(Tsunami), 조수(Tide), 폭우(Downpour), 홍수(Flood), 적조(Red tide), 녹조(Green tide), 폭설(Heavy snowfall), 한파(Cold wave), 태풍(Typhoon), 강풍(Strong wind), 낙뢰(Lightning strike), 황사(Yellow dust), 지진(Earthquake), 산사태(Landslide), 우주 전파 재난(Space weather disaster), 자연 우주 물체 추락(Natural space object impact)에 대한 자연 재해 행동 요령이 추가되었습니다.":"Natural-disaster guidance was added for volcanic eruptions, heat waves, droughts, tsunamis, tides, downpours, floods, red tides, green tides, heavy snow, cold waves, typhoons, strong winds, lightning strikes, yellow dust, earthquakes, landslides, space-weather disasters, and natural space-object impacts.","해파리 대량 출현(Mass jellyfish occurrence)에 대한 생활 안전 요령이 추가되었습니다.":"Everyday-safety guidance was added for mass jellyfish occurrences.","경보(Alert), 대피(Evacuation), 폭격(Shelling), 드론 공습(UAV Strike)에 대한 전쟁 행동 요령이 추가되었습니다.":"Wartime guidance was added for alerts, evacuation, shelling, and UAV strikes.","건물 붕괴(Building Collapse), 다중 운집 인파 사고(Crowd Crush)에 대한 사회 재난 행동 요령이 추가되었습니다.":"Social-disaster guidance was added for building collapses and crowd crush incidents.","화재(Fire), 테러(Terrorism), 가스 사고(Gas Accident), 전기 사고(Electrical Accident)에 대한 사회 재난 행동 요령이 추가되었습니다.":"Social-disaster guidance was added for fires, terrorism, gas accidents, and electrical accidents.","산행 안전 수칙(Climbing Accident), 응급처치(First aid)에 대한 생활 안전 요령이 추가되었습니다.":"Everyday-safety guidance was added for hiking accidents and first aid.","재난 대비 체크리스트(Prepare Disaster) 기능이 추가되었습니다.":"The Prepare Disaster checklist feature was added.","Black 캐릭터를 재구상하였습니다.":"I redesigned the Black character concept.","부관(Aide) 일러스트 전체 화면 보기 기능이 추가되었습니다.":"Full-screen viewing was added for Aide illustrations.","도구(Utility) 기능이 추가되었습니다.":"The Utility tools section was added.","의사결정 도구에 주사위(Dice) 기능이 추가되었습니다.":"A Dice feature was added to the decision-making tools.","의사결정 도구에 사다리 타기(Ghost legs) 기능이 추가되었습니다.":"A Ghost Legs feature was added to the decision-making tools.","의사결정 도구에 제비뽑기(Drawing lots) 기능이 추가되었습니다.":"A Drawing Lots feature was added to the decision-making tools.","의사결정 도구에 익명 투표(Anonymous vote) 기능이 추가되었습니다.":"An Anonymous Vote feature was added to the decision-making tools.","도구에 단위 변환(Unit conversion) 기능이 추가되었습니다.":"Unit conversion was added to the tools.","생존 도구에 오프라인 지도(Offline Map) 기능이 추가되었습니다. 마커 추가, 거리 재기, 핵 폭발 시뮬레이션 도구를 사용할 수 있습니다.":"The Offline Map feature was added to survival tools. It supports adding markers, measuring distances, and simulating a nuclear explosion.","생존 도구에 나침반(Compass) 기능이 추가되었습니다.":"A Compass feature was added to survival tools.","생존 도구에 소리 반복 재생기(Sound repeater) 기능이 추가되었습니다.":"A Sound Repeater feature was added to survival tools.","생존 도구에 모스 부호(Morse code) 기능이 추가되었습니다.":"A Morse Code feature was added to survival tools.","조직·운영 도구에 식량 분배(Food Distribute) 기능이 추가되었습니다.":"A Food Distribution feature was added to organization and operations tools.","조직·운영 도구에 암호문 작성(Cipher Tool) 기능이 추가되었습니다.":"A Cipher Tool was added to organization and operations tools.","조직·운영 도구에 환자 격리 관리(Patient Isolation Management) 기능이 추가되었습니다.":"Patient Isolation Management was added to organization and operations tools.","조직·운영 도구에 배급표(Ration Ticket) 기능이 추가되었습니다.":"A Ration Ticket feature was added to organization and operations tools.","도구에 메트로놈(Metronome) 기능이 추가되었습니다.":"A Metronome was added to the tools.","도구에 MIDI 작곡기(MIDI Composer) 기능이 추가되었습니다.":"A MIDI Composer was added to the tools.","생존 도구에 [국민안전24](https://www.safekorea.go.kr/)에서 제공하는 [안전지도](https://safemap.go.kr/main/smap_renewal.do) 페이지로 이동하는 링크가 추가되었습니다.":"A link was added in survival tools to the [Safety Map](https://safemap.go.kr/main/smap_renewal.do) provided by [National Safety 24](https://www.safekorea.go.kr/).","생존 도구에 [국민안전24](https://www.safekorea.go.kr/)에서 제공하는 [재난문자](https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do) 페이지로 이동하는 링크가 추가되었습니다.":"A link was added in survival tools to [disaster alerts](https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do) provided by [National Safety 24](https://www.safekorea.go.kr/).","지식 문서가 페이징 기능을 지원하게 되었습니다.":"Knowledge documents now support pagination.","보스니아 내전 생존자 Selco와의 인터뷰(Interview with Bosnian war survivor Selco) 지식이 추가되었습니다.":"A knowledge article featuring an interview with Bosnian War survivor Selco was added.","[대학 과제 ](/SurvivalManager/devlog_resources/2026_06_05.pdf) 제출겸 부관(Aide) 캐릭터 디자인을 다듬었습니다.":"I refined the Aide character design while preparing a [university assignment](/SurvivalManager/devlog_resources/2026_06_05.pdf).","태양광 발전기 설치(Solar panel installation) 지식이 추가되었습니다.":"A knowledge article on solar panel installation was added.","오프라인 지도(Offline Map)에서 GPS 활성화 시 현재 위치가 표시되는 기능이 추가되었습니다.":"The Offline Map now displays the current location when GPS is enabled.","환자 격리 관리(Patient Isolation Management)에서 추적 그래프 저장 버튼이 추가되었습니다.":"A button to save tracking graphs was added to Patient Isolation Management.","애플리케이션 내에서 에피소드 및 스토리 열람 시 재생될 BGM [Time to play](/resources/files/music/suno/Time%20to%20play.mp3)가 작곡되었습니다.":"The BGM [Time to play](/resources/files/music/suno/Time%20to%20play.mp3), intended to play while viewing episodes and stories in the app, was composed.","생존 도구에 식수 소독 계산기(Water Purification Calculator) 기능이 추가되었습니다.":"A Water Purification Calculator was added to survival tools.","조직·운영 도구에 환자 분류(Patient Triage) 기능이 추가되었습니다.":"Patient Triage was added to organization and operations tools.","P2P 채팅 시스템이 BLE, WiFi-Direct, WiFi-LAN 연결 기능을 지원하게 되었습니다.":"The P2P chat system now supports BLE, Wi-Fi Direct, and Wi-Fi LAN connections.","부관(Aide)이 사용자에게 시스템 메시지를 전송하는 기능이 추가되었습니다.":"The Aide can now send system messages to users.","도구에 일기장(Diary) 기능이 추가되었습니다.":"A Diary feature was added to the tools.","Gray 캐릭터를 재구상하였습니다.":"I redesigned the Gray character concept.","생존 도구에 천문 도구(Astronomy Tool) 기능이 추가되었습니다.":"An Astronomy Tool was added to survival tools.","생존 도구에 비상 라디오 주파수(Emergency Radio Frequency) 기능이 추가되었습니다.":"Emergency Radio Frequencies were added to survival tools.","Brown 캐릭터를 구상하였습니다.":"I conceptualized the Brown character.","데이터 동기화(Data Sync) 기능이 추가되었습니다.":"Data Sync was added.","가로 모드(Landscape)뿐만 아니라 세로 모드(Portrait)까지 지원하여, 자유롭게 화면을 전환할 수 있게 되었습니다.":"The app now supports both landscape and portrait orientations, allowing users to switch freely between them.","P2P 채팅 시스템에 참여자 강퇴, 비밀 방 개설, 프로필 이미지 설정, 닉네임 설정 기능이 추가되었습니다.":"The P2P chat system added participant removal, private rooms, profile images, and nickname settings.","부관(Aide) Gray의 가스 마스크를 벗길 수 있는 트리거가 추가되었습니다.":"A trigger was added to remove Gray’s gas mask in the Aide feature.","오프라인 지도(Offline Map)에서 위도 경도 입력을 통한 마커 추가가 가능하게 되었습니다.":"Markers can now be added to the Offline Map by entering latitude and longitude.","PDF 출력 기능이 추가되었습니다.":"PDF export was added.","Google Play Store에서 내부 비공개 테스트를 시작하였습니다.":"Closed internal testing began on the Google Play Store."},"zh":{"대한민국 사상의 근간인 홍익인간 이념을 실천할 방법을 찾던 중, 다양한 재난 상황에서 도움을 제공할 수 있는 재난 대비 애플리케이션을 만들기로 마음먹었습니다.":"在寻找践行韩国重要理念“弘益人间”的方式时，我决定开发一款能够在各种灾害情况下提供帮助的防灾应用。","보스니아 내전 생존자 Selco의 경험담, 재난 상황 TIP, 재난 가방 정리 방법을 담은 [재난 상황 TIP 정리본](https://cafe.naver.com/goldbigdragon/72583)을 작성하였습니다.":"我整理了[灾害应对技巧汇编](https://cafe.naver.com/goldbigdragon/72583)，内容包括波黑战争幸存者 Selco 的经历、灾害应对技巧以及应急包整理方法。","Discord 서버를 개설하여 자료를 수집하기 시작했습니다.":"我创建了 Discord 服务器，并开始收集资料。","[애플리케이션 기획 초안](/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx)을 작성하였습니다.":"我编写了[应用程序策划初稿](/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx)。","재난 행동 요령, 재난 대비 체크리스트, 지식 문서, 부관, 5개 국어 지원, 멤버 관리, 소지품 관리, 계획, 일기장, 오프라인 지도, 의사결정 도구, 식사 분배, 소리 반복 재생 기능을 기획하였습니다.":"规划的功能包括灾害应对指南、防灾清单、知识文档、助手、五种语言支持、成员管理、物品管理、计划、日记、离线地图、决策工具、食物分配和声音循环播放。","로비 화면 UI를 구상하였습니다.":"我构思了大厅界面的设计。","[명일방주](https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights) UI를 참고하여 [새로운 UI](/SurvivalManager/devlog_resources/2020_03_08.zip)를 구상하였습니다.":"我参考了[明日方舟](https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights)的界面，构思了[新界面](/SurvivalManager/devlog_resources/2020_03_08.zip)。","Github에 SurvivalManager 레포지토리를 생성하였습니다.":"我在 GitHub 上创建了 SurvivalManager 仓库。","로비(Lobby) 기능이 추가되었습니다.":"新增了大厅（Lobby）功能。","설정(Option) 기능이 추가되었습니다.":"新增了设置（Option）功能。","영어, 한국어, 일본어, 중국어, 러시아어에 대한 strings.xml 분리 작업을 수행하였습니다.":"我将英语、韩语、日语、中文和俄语的 `strings.xml` 资源文件分别整理。","계획(Plans) 기능이 추가되었습니다.":"新增了计划（Plans）功能。","[Helldivers 2](https://store.steampowered.com/app/553850/HELLDIVERS_2/) UI를 참고하여 [Draw.io](https://app.diagrams.net/)를 이용한 [새로운 UI](/SurvivalManager/devlog_resources/2024_11_10.drawio)를 구상하였습니다. (UI 파일은 Draw.io에서 열람할 수 있습니다)":"我参考了[绝地潜兵 2](https://store.steampowered.com/app/553850/HELLDIVERS_2/)的界面，使用 [Draw.io](https://app.diagrams.net/) 构思了[新界面](/SurvivalManager/devlog_resources/2024_11_10.drawio)。（该 UI 文件可在 Draw.io 中打开。）","Black 캐릭터를 구상하였습니다.":"我构思了 Black 角色。","White 캐릭터를 구상하였습니다.":"我构思了 White 角色。","부관(Aide) 시스템이 개발되었습니다.":"开发了助手（Aide）系统。","전 세계 18,297건의 라디오 주파수 정보를 수집하였습니다.":"我收集了全球 18,297 条无线电频率信息。","TIP 기능이 추가되었습니다.":"新增了提示（TIP）功能。","24절기 구분 기능이 추가되었습니다.":"新增了二十四节气分类功能。","작물 재배 관련 지식을 얻기 위해 [서울사이버대학교 - AI 스마트팜학과](https://smartfarm.iscu.ac.kr/)에 편입학 하였습니다.":"为了学习作物种植相关知识，我转入了[首尔网络大学 AI 智能农场学系](https://smartfarm.iscu.ac.kr/)。","Gray 캐릭터를 구상하였습니다.":"我构思了 Gray 角色。","숫자, 영문, 기호, 한글, 일본어, 키릴 알파벳, 관용구에 대한 모스 부호 정보를 수집하였습니다.":"我收集了数字、拉丁字母、符号、韩文、日文、西里尔字母和惯用语的摩斯电码资料。","아이콘(Icon) 선택 기능이 추가되었습니다.":"新增了图标（Icon）选择功能。","애플리케이션 대표 BGM [Time to plan](/resources/files/music/suno/Time%20to%20plan.mp3)이 작곡되었습니다.":"应用程序的代表背景音乐 [Time to plan](/resources/files/music/suno/Time%20to%20plan.mp3) 已创作完成。","멤버 정보 입력(Member Information) 창이 개발되었습니다.":"开发了成员信息（Member Information）窗口。","Gray 테마곡 [Time to plan - Gray](/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3)가 작곡되었습니다.":"Gray 主题曲 [Time to plan - Gray](/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3) 已创作完成。","White 테마곡 [Time to plan - White](/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3)가 작곡되었습니다.":"White 主题曲 [Time to plan - White](/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3) 已创作完成。","Black 테마곡 [Time to plan - Black](/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3)이 작곡되었습니다.":"Black 主题曲 [Time to plan - Black](/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3) 已创作完成。","부르기만 해도 재난 대비 TIP을 얻을 수 있도록, 애플리케이션 대표 BGM에 가사를 입힌 [Time to plan - Male vocal](/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3)이 작곡되었습니다.":"为了让用户通过跟唱获取防灾提示，我为应用程序主背景音乐填词并创作了人声版：[Time to plan - Male vocal](/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3)。","Black 테마곡에 가사를 입힌 [Time to plan - Black Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3)가 작곡되었습니다.":"为 Black 主题曲填词创作的人声版 [Time to plan - Black Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3) 已完成。","White 테마곡에 가사를 입힌 [Time to plan - White Voice](/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3)가 작곡되었습니다.":"为 White 主题曲填词创作的人声版 [Time to plan - White Voice](/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3) 已完成。","Gray 테마곡에 가사를 입힌 [Time to plan - Gray Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3)가 작곡되었습니다.":"为 Gray 主题曲填词创作的人声版 [Time to plan - Gray Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3) 已完成。","멤버 장비(Member Equipment) 창이 개발되었습니다.":"开发了成员装备（Member Equipment）窗口。","멤버 소지품(Member Inventory) 창이 개발되었습니다.":"开发了成员物品（Member Inventory）窗口。","물품별 카테고리 분류 기능이 추가되었습니다.":"新增了物品分类功能。","멤버 소지품 창에 물품 등록이 가능하게 되었습니다.":"现在可以在成员物品窗口中登记物品。","물품 상세 정보(Item Information) 창이 개발되었습니다.":"开发了物品详细信息（Item Information）窗口。","물품에 대한 메타 정보 입력이 가능하게 되었습니다.":"现在可以为物品填写元数据。","Brown 테마곡 [Time to plan - Brown](/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3)이 작곡되었습니다.":"Brown 主题曲 [Time to plan - Brown](/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3) 已创作完成。","Brown 테마곡에 가사를 입힌 [Time to plan - Brown Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3)가 작곡되었습니다.":"为 Brown 主题曲填词创作的人声版 [Time to plan - Brown Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3) 已完成。","[약학정보원(Korea Pharmaceutical Information Center)](https://www.health.kr/)의 [KPIC 약효분류](https://www.health.kr/drug-info/kpic-classification)법을 바탕으로 의약품 메타데이터에 원료 기입이 가능하게 되었습니다.":"根据[韩国药学信息院](https://www.health.kr/)发布的 [KPIC 药效分类](https://www.health.kr/drug-info/kpic-classification)，现在可以在药品元数据中填写成分信息。","휴대폰(420dpi), 태블릿(7 inch, 600dp), 폴더블 폰(650dp), 태블릿(10 inch, 720dp), 데스크탑(960dp) 화면을 지원하게 되었습니다.":"应用程序新增了对手机（420 dpi）、7 英寸平板（600 dp）、折叠屏手机（650 dp）、10 英寸平板（720 dp）和桌面设备（960 dp）的适配。","계획(Plans) 화면을 재구성하였습니다.":"重新设计了计划（Plans）界面。","피난 계획 작성이 가능하게 되었습니다.":"现在可以制定疏散计划。","자원 조회(Resource Inquiry) 기능이 추가되었습니다.":"新增了资源查询（Resource Inquiry）功能。","인터넷을 이용한 P2P 채팅 기능이 추가되었습니다.":"新增了通过互联网进行的 P2P 聊天功能。","2004년 01월 06일부터 2037년 12월 21일까지의 24절기 날짜 데이터를 수집하였습니다.":"我收集了 2004 年 1 月 6 日至 2037 年 12 月 21 日的二十四节气日期数据。","인터넷을 이용한 P2P 채팅에서 파일 첨부가 가능하게 되었습니다.":"互联网 P2P 聊天现已支持附件。","지식 문서함(Knowledge) 기능이 추가되었습니다.":"新增了知识文档库（Knowledge）功能。","매듭법(Knots), 비누(Soap), 일일 권장 섭취량(Daily Recommended Nutrient Intake), 플라스틱 병 전구(Plastic Bottle Bulb), 양초(Candle), 정수(Water Purification), 수원지(Water Source) 지식이 추가되었습니다.":"新增了有关绳结、肥皂、每日建议营养摄入量、塑料瓶灯泡、蜡烛、水净化和水源的知识文档。","식품 보존(Food Preservation), 응급처치(First aid) 지식이 추가되었습니다.":"新增了食品保存和急救知识文档。","지식 문서 다운로드 기능이 추가되었습니다.":"新增了知识文档下载功能。","지식 문서 뷰어에서 라이트/다크 모드를 지원합니다.":"知识文档查看器现已支持浅色和深色模式。","부관(Aide) 다운로드 기능이 추가되었습니다.":"新增了助手（Aide）下载功能。","White 캐릭터를 재구상하였습니다.":"重新构思了 White 角色。","아이콘(Icon) 다운로드 기능이 추가되었습니다.":"新增了图标（Icon）下载功能。","재난 상황 행동 요령(Disaster Situation) 기능이 추가되었습니다.":"新增了灾害情境应对指南（Disaster Situation）功能。","화산(Volcanic eruption), 폭염(Heat wave), 가뭄(Drought), 쓰나미(Tsunami), 조수(Tide), 폭우(Downpour), 홍수(Flood), 적조(Red tide), 녹조(Green tide), 폭설(Heavy snowfall), 한파(Cold wave), 태풍(Typhoon), 강풍(Strong wind), 낙뢰(Lightning strike), 황사(Yellow dust), 지진(Earthquake), 산사태(Landslide), 우주 전파 재난(Space weather disaster), 자연 우주 물체 추락(Natural space object impact)에 대한 자연 재해 행동 요령이 추가되었습니다.":"新增了针对火山喷发、热浪、干旱、海啸、潮汐、暴雨、洪水、赤潮、绿潮、暴雪、寒潮、台风、强风、雷击、沙尘、地震、山体滑坡、空间天气灾害和自然天体撞击的自然灾害应对指南。","해파리 대량 출현(Mass jellyfish occurrence)에 대한 생활 안전 요령이 추가되었습니다.":"新增了针对水母大量出现的生活安全指南。","경보(Alert), 대피(Evacuation), 폭격(Shelling), 드론 공습(UAV Strike)에 대한 전쟁 행동 요령이 추가되었습니다.":"新增了针对警报、疏散、炮击和无人机袭击的战时应对指南。","건물 붕괴(Building Collapse), 다중 운집 인파 사고(Crowd Crush)에 대한 사회 재난 행동 요령이 추가되었습니다.":"新增了针对建筑物倒塌和人群拥挤踩踏事故的社会灾害应对指南。","화재(Fire), 테러(Terrorism), 가스 사고(Gas Accident), 전기 사고(Electrical Accident)에 대한 사회 재난 행동 요령이 추가되었습니다.":"新增了针对火灾、恐怖袭击、燃气事故和电气事故的社会灾害应对指南。","산행 안전 수칙(Climbing Accident), 응급처치(First aid)에 대한 생활 안전 요령이 추가되었습니다.":"新增了针对登山事故和急救的日常安全指南。","재난 대비 체크리스트(Prepare Disaster) 기능이 추가되었습니다.":"新增了防灾准备清单（Prepare Disaster）功能。","Black 캐릭터를 재구상하였습니다.":"重新构思了 Black 角色。","부관(Aide) 일러스트 전체 화면 보기 기능이 추가되었습니다.":"新增了助手（Aide）插画全屏查看功能。","도구(Utility) 기능이 추가되었습니다.":"新增了工具（Utility）功能。","의사결정 도구에 주사위(Dice) 기능이 추가되었습니다.":"在决策工具中新增了骰子（Dice）功能。","의사결정 도구에 사다리 타기(Ghost legs) 기능이 추가되었습니다.":"在决策工具中新增了爬梯子（Ghost legs）功能。","의사결정 도구에 제비뽑기(Drawing lots) 기능이 추가되었습니다.":"在决策工具中新增了抽签（Drawing lots）功能。","의사결정 도구에 익명 투표(Anonymous vote) 기능이 추가되었습니다.":"在决策工具中新增了匿名投票（Anonymous vote）功能。","도구에 단위 변환(Unit conversion) 기능이 추가되었습니다.":"工具中新增了单位换算功能。","생존 도구에 오프라인 지도(Offline Map) 기능이 추가되었습니다. 마커 추가, 거리 재기, 핵 폭발 시뮬레이션 도구를 사용할 수 있습니다.":"生存工具新增了离线地图功能，可添加标记、测量距离并使用核爆模拟工具。","생존 도구에 나침반(Compass) 기능이 추가되었습니다.":"生存工具新增了指南针功能。","생존 도구에 소리 반복 재생기(Sound repeater) 기능이 추가되었습니다.":"生存工具新增了声音循环播放功能。","생존 도구에 모스 부호(Morse code) 기능이 추가되었습니다.":"生存工具新增了摩斯电码功能。","조직·운영 도구에 식량 분배(Food Distribute) 기능이 추가되었습니다.":"在组织与运营工具中新增了食物分配功能。","조직·운영 도구에 암호문 작성(Cipher Tool) 기능이 추가되었습니다.":"在组织与运营工具中新增了密码文本工具。","조직·운영 도구에 환자 격리 관리(Patient Isolation Management) 기능이 추가되었습니다.":"在组织与运营工具中新增了患者隔离管理功能。","조직·운영 도구에 배급표(Ration Ticket) 기능이 추가되었습니다.":"在组织与运营工具中新增了配给票功能。","도구에 메트로놈(Metronome) 기능이 추가되었습니다.":"工具中新增了节拍器功能。","도구에 MIDI 작곡기(MIDI Composer) 기능이 추가되었습니다.":"工具中新增了 MIDI 作曲器。","생존 도구에 [국민안전24](https://www.safekorea.go.kr/)에서 제공하는 [안전지도](https://safemap.go.kr/main/smap_renewal.do) 페이지로 이동하는 링크가 추가되었습니다.":"生存工具新增了跳转链接，可打开[国民安全 24](https://www.safekorea.go.kr/)提供的[安全地图](https://safemap.go.kr/main/smap_renewal.do)。","생존 도구에 [국민안전24](https://www.safekorea.go.kr/)에서 제공하는 [재난문자](https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do) 페이지로 이동하는 링크가 추가되었습니다.":"生存工具新增了跳转链接，可查看[国民安全 24](https://www.safekorea.go.kr/)提供的[灾害短信](https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do)。","지식 문서가 페이징 기능을 지원하게 되었습니다.":"知识文档现已支持分页。","보스니아 내전 생존자 Selco와의 인터뷰(Interview with Bosnian war survivor Selco) 지식이 추가되었습니다.":"新增了与波黑战争幸存者 Selco 的访谈知识文档。","[대학 과제 ](/SurvivalManager/devlog_resources/2026_06_05.pdf) 제출겸 부관(Aide) 캐릭터 디자인을 다듬었습니다.":"在提交[大学作业](/SurvivalManager/devlog_resources/2026_06_05.pdf)的同时，我完善了助手（Aide）的角色设计。","태양광 발전기 설치(Solar panel installation) 지식이 추가되었습니다.":"新增了太阳能发电系统安装知识文档。","오프라인 지도(Offline Map)에서 GPS 활성화 시 현재 위치가 표시되는 기능이 추가되었습니다.":"离线地图现已支持在启用 GPS 时显示当前位置。","환자 격리 관리(Patient Isolation Management)에서 추적 그래프 저장 버튼이 추가되었습니다.":"患者隔离管理功能新增了保存追踪图表的按钮。","애플리케이션 내에서 에피소드 및 스토리 열람 시 재생될 BGM [Time to play](/resources/files/music/suno/Time%20to%20play.mp3)가 작곡되었습니다.":"创作了应用程序中浏览章节和故事时播放的背景音乐 [Time to play](/resources/files/music/suno/Time%20to%20play.mp3)。","생존 도구에 식수 소독 계산기(Water Purification Calculator) 기능이 추가되었습니다.":"生存工具新增了饮用水消毒计算器。","조직·운영 도구에 환자 분류(Patient Triage) 기능이 추가되었습니다.":"在组织与运营工具中新增了患者检伤分类功能。","P2P 채팅 시스템이 BLE, WiFi-Direct, WiFi-LAN 연결 기능을 지원하게 되었습니다.":"P2P 聊天系统现已支持 BLE、Wi-Fi Direct 和 Wi-Fi LAN 连接。","부관(Aide)이 사용자에게 시스템 메시지를 전송하는 기능이 추가되었습니다.":"新增了助手（Aide）向用户发送系统消息的功能。","도구에 일기장(Diary) 기능이 추가되었습니다.":"工具中新增了日记功能。","Gray 캐릭터를 재구상하였습니다.":"重新构思了 Gray 角色。","생존 도구에 천문 도구(Astronomy Tool) 기능이 추가되었습니다.":"生存工具新增了天文工具。","생존 도구에 비상 라디오 주파수(Emergency Radio Frequency) 기능이 추가되었습니다.":"生存工具新增了应急无线电频率功能。","Brown 캐릭터를 구상하였습니다.":"我构思了 Brown 角色。","데이터 동기화(Data Sync) 기능이 추가되었습니다.":"新增了数据同步功能。","가로 모드(Landscape)뿐만 아니라 세로 모드(Portrait)까지 지원하여, 자유롭게 화면을 전환할 수 있게 되었습니다.":"应用程序现已同时支持横屏和竖屏，用户可以自由切换屏幕方向。","P2P 채팅 시스템에 참여자 강퇴, 비밀 방 개설, 프로필 이미지 설정, 닉네임 설정 기능이 추가되었습니다.":"P2P 聊天系统新增了移除参与者、创建私密房间、设置头像和昵称的功能。","부관(Aide) Gray의 가스 마스크를 벗길 수 있는 트리거가 추가되었습니다.":"新增了一个触发条件，可在助手（Aide）中移除 Gray 的防毒面具。","오프라인 지도(Offline Map)에서 위도 경도 입력을 통한 마커 추가가 가능하게 되었습니다.":"离线地图现已支持通过输入经纬度添加标记。","PDF 출력 기능이 추가되었습니다.":"新增了 PDF 导出功能。","Google Play Store에서 내부 비공개 테스트를 시작하였습니다.":"在 Google Play 商店启动了内部封闭测试。"},"ja":{"대한민국 사상의 근간인 홍익인간 이념을 실천할 방법을 찾던 중, 다양한 재난 상황에서 도움을 제공할 수 있는 재난 대비 애플리케이션을 만들기로 마음먹었습니다.":"韓国の根本理念の一つである「弘益人間」を実践する方法を探す中で、さまざまな災害時に役立つ防災アプリを開発することを決めました。","보스니아 내전 생존자 Selco의 경험담, 재난 상황 TIP, 재난 가방 정리 방법을 담은 [재난 상황 TIP 정리본](https://cafe.naver.com/goldbigdragon/72583)을 작성하였습니다.":"ボスニア紛争の生存者 Selco の体験談、災害時のヒント、防災バッグの整理方法をまとめた[災害時のヒント集](https://cafe.naver.com/goldbigdragon/72583)を作成しました。","Discord 서버를 개설하여 자료를 수집하기 시작했습니다.":"Discord サーバーを開設し、資料の収集を始めました。","[애플리케이션 기획 초안](/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx)을 작성하였습니다.":"[アプリケーション企画の初稿](/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx)を作成しました。","재난 행동 요령, 재난 대비 체크리스트, 지식 문서, 부관, 5개 국어 지원, 멤버 관리, 소지품 관리, 계획, 일기장, 오프라인 지도, 의사결정 도구, 식사 분배, 소리 반복 재생 기능을 기획하였습니다.":"災害時の行動指針、防災チェックリスト、知識ドキュメント、補佐役、5言語対応、メンバー管理、所持品管理、計画、日記、オフラインマップ、意思決定ツール、食料分配、音声の繰り返し再生機能を企画しました。","로비 화면 UI를 구상하였습니다.":"ロビー画面の UI を構想しました。","[명일방주](https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights) UI를 참고하여 [새로운 UI](/SurvivalManager/devlog_resources/2020_03_08.zip)를 구상하였습니다.":"[アークナイツ](https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights)の UI を参考に、[新しい UI](/SurvivalManager/devlog_resources/2020_03_08.zip)を構想しました。","Github에 SurvivalManager 레포지토리를 생성하였습니다.":"GitHub に SurvivalManager リポジトリを作成しました。","로비(Lobby) 기능이 추가되었습니다.":"ロビー（Lobby）機能を追加しました。","설정(Option) 기능이 추가되었습니다.":"設定（Option）機能を追加しました。","영어, 한국어, 일본어, 중국어, 러시아어에 대한 strings.xml 분리 작업을 수행하였습니다.":"英語、韓国語、日本語、中国語、ロシア語の `strings.xml` を分離しました。","계획(Plans) 기능이 추가되었습니다.":"計画（Plans）機能を追加しました。","[Helldivers 2](https://store.steampowered.com/app/553850/HELLDIVERS_2/) UI를 참고하여 [Draw.io](https://app.diagrams.net/)를 이용한 [새로운 UI](/SurvivalManager/devlog_resources/2024_11_10.drawio)를 구상하였습니다. (UI 파일은 Draw.io에서 열람할 수 있습니다)":"[HELLDIVERS 2](https://store.steampowered.com/app/553850/HELLDIVERS_2/)の UI を参考に、[Draw.io](https://app.diagrams.net/)を使って[新しい UI](/SurvivalManager/devlog_resources/2024_11_10.drawio)を構想しました。（UI ファイルは Draw.io で開けます。）","Black 캐릭터를 구상하였습니다.":"Black キャラクターを構想しました。","White 캐릭터를 구상하였습니다.":"White キャラクターを構想しました。","부관(Aide) 시스템이 개발되었습니다.":"補佐役（Aide）システムを開発しました。","전 세계 18,297건의 라디오 주파수 정보를 수집하였습니다.":"世界各地のラジオ周波数情報を18,297件収集しました。","TIP 기능이 추가되었습니다.":"TIP 機能を追加しました。","24절기 구분 기능이 추가되었습니다.":"二十四節気の区分機能を追加しました。","작물 재배 관련 지식을 얻기 위해 [서울사이버대학교 - AI 스마트팜학과](https://smartfarm.iscu.ac.kr/)에 편입학 하였습니다.":"作物栽培の知識を学ぶため、[ソウルサイバー大学 AI スマートファーム学科](https://smartfarm.iscu.ac.kr/)に編入しました。","Gray 캐릭터를 구상하였습니다.":"Gray キャラクターを構想しました。","숫자, 영문, 기호, 한글, 일본어, 키릴 알파벳, 관용구에 대한 모스 부호 정보를 수집하였습니다.":"数字、英字、記号、ハングル、日本語、キリル文字、慣用句のモールス信号情報を収集しました。","아이콘(Icon) 선택 기능이 추가되었습니다.":"アイコン（Icon）の選択機能を追加しました。","애플리케이션 대표 BGM [Time to plan](/resources/files/music/suno/Time%20to%20plan.mp3)이 작곡되었습니다.":"アプリのメイン BGM [Time to plan](/resources/files/music/suno/Time%20to%20plan.mp3)を作曲しました。","멤버 정보 입력(Member Information) 창이 개발되었습니다.":"メンバー情報（Member Information）画面を開発しました。","Gray 테마곡 [Time to plan - Gray](/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3)가 작곡되었습니다.":"Gray のテーマ曲 [Time to plan - Gray](/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3)を作曲しました。","White 테마곡 [Time to plan - White](/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3)가 작곡되었습니다.":"White のテーマ曲 [Time to plan - White](/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3)を作曲しました。","Black 테마곡 [Time to plan - Black](/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3)이 작곡되었습니다.":"Black のテーマ曲 [Time to plan - Black](/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3)を作曲しました。","부르기만 해도 재난 대비 TIP을 얻을 수 있도록, 애플리케이션 대표 BGM에 가사를 입힌 [Time to plan - Male vocal](/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3)이 작곡되었습니다.":"歌うだけで防災のヒントを得られるよう、アプリのメイン BGM に歌詞を付けた [Time to plan - Male vocal](/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3)を作曲しました。","Black 테마곡에 가사를 입힌 [Time to plan - Black Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3)가 작곡되었습니다.":"Black のテーマ曲に歌詞を付けた [Time to plan - Black Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3)を作曲しました。","White 테마곡에 가사를 입힌 [Time to plan - White Voice](/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3)가 작곡되었습니다.":"White のテーマ曲に歌詞を付けた [Time to plan - White Voice](/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3)を作曲しました。","Gray 테마곡에 가사를 입힌 [Time to plan - Gray Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3)가 작곡되었습니다.":"Gray のテーマ曲に歌詞を付けた [Time to plan - Gray Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3)を作曲しました。","멤버 장비(Member Equipment) 창이 개발되었습니다.":"メンバー装備（Member Equipment）画面を開発しました。","멤버 소지품(Member Inventory) 창이 개발되었습니다.":"メンバー所持品（Member Inventory）画面を開発しました。","물품별 카테고리 분류 기능이 추가되었습니다.":"アイテムのカテゴリ分類機能を追加しました。","멤버 소지품 창에 물품 등록이 가능하게 되었습니다.":"メンバー所持品画面でアイテムを登録できるようになりました。","물품 상세 정보(Item Information) 창이 개발되었습니다.":"アイテム詳細情報（Item Information）画面を開発しました。","물품에 대한 메타 정보 입력이 가능하게 되었습니다.":"アイテムのメタデータを入力できるようになりました。","Brown 테마곡 [Time to plan - Brown](/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3)이 작곡되었습니다.":"Brown のテーマ曲 [Time to plan - Brown](/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3)を作曲しました。","Brown 테마곡에 가사를 입힌 [Time to plan - Brown Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3)가 작곡되었습니다.":"Brown のテーマ曲に歌詞を付けた [Time to plan - Brown Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3)を作曲しました。","[약학정보원(Korea Pharmaceutical Information Center)](https://www.health.kr/)의 [KPIC 약효분류](https://www.health.kr/drug-info/kpic-classification)법을 바탕으로 의약품 메타데이터에 원료 기입이 가능하게 되었습니다.":"[韓国薬学情報院](https://www.health.kr/)の [KPIC 薬効分類](https://www.health.kr/drug-info/kpic-classification)に基づき、医薬品メタデータに成分を入力できるようになりました。","휴대폰(420dpi), 태블릿(7 inch, 600dp), 폴더블 폰(650dp), 태블릿(10 inch, 720dp), 데스크탑(960dp) 화면을 지원하게 되었습니다.":"スマートフォン（420dpi）、7インチタブレット（600dp）、折りたたみスマートフォン（650dp）、10インチタブレット（720dp）、デスクトップ（960dp）に対応しました。","계획(Plans) 화면을 재구성하였습니다.":"計画（Plans）画面を再構成しました。","피난 계획 작성이 가능하게 되었습니다.":"避難計画を作成できるようになりました。","자원 조회(Resource Inquiry) 기능이 추가되었습니다.":"資源照会（Resource Inquiry）機能を追加しました。","인터넷을 이용한 P2P 채팅 기능이 추가되었습니다.":"インターネットを利用した P2P チャット機能を追加しました。","2004년 01월 06일부터 2037년 12월 21일까지의 24절기 날짜 데이터를 수집하였습니다.":"2004年1月6日から2037年12月21日までの二十四節気の日付データを収集しました。","인터넷을 이용한 P2P 채팅에서 파일 첨부가 가능하게 되었습니다.":"インターネット経由の P2P チャットでファイルを添付できるようになりました。","지식 문서함(Knowledge) 기능이 추가되었습니다.":"知識ドキュメント（Knowledge）機能を追加しました。","매듭법(Knots), 비누(Soap), 일일 권장 섭취량(Daily Recommended Nutrient Intake), 플라스틱 병 전구(Plastic Bottle Bulb), 양초(Candle), 정수(Water Purification), 수원지(Water Source) 지식이 추가되었습니다.":"結び方、石けん、1日の推奨栄養摂取量、ペットボトル電球、ろうそく、水の浄化、水源に関する知識を追加しました。","식품 보존(Food Preservation), 응급처치(First aid) 지식이 추가되었습니다.":"食品保存と応急処置の知識を追加しました。","지식 문서 다운로드 기능이 추가되었습니다.":"知識ドキュメントをダウンロードできるようになりました。","지식 문서 뷰어에서 라이트/다크 모드를 지원합니다.":"知識ドキュメントビューアがライトモードとダークモードに対応しました。","부관(Aide) 다운로드 기능이 추가되었습니다.":"補佐役（Aide）のダウンロード機能を追加しました。","White 캐릭터를 재구상하였습니다.":"White キャラクターを再構想しました。","아이콘(Icon) 다운로드 기능이 추가되었습니다.":"アイコン（Icon）のダウンロード機能を追加しました。","재난 상황 행동 요령(Disaster Situation) 기능이 추가되었습니다.":"災害時の行動指針（Disaster Situation）機能を追加しました。","화산(Volcanic eruption), 폭염(Heat wave), 가뭄(Drought), 쓰나미(Tsunami), 조수(Tide), 폭우(Downpour), 홍수(Flood), 적조(Red tide), 녹조(Green tide), 폭설(Heavy snowfall), 한파(Cold wave), 태풍(Typhoon), 강풍(Strong wind), 낙뢰(Lightning strike), 황사(Yellow dust), 지진(Earthquake), 산사태(Landslide), 우주 전파 재난(Space weather disaster), 자연 우주 물체 추락(Natural space object impact)에 대한 자연 재해 행동 요령이 추가되었습니다.":"火山噴火、熱波、干ばつ、津波、潮汐、豪雨、洪水、赤潮、緑潮、大雪、寒波、台風、強風、落雷、黄砂、地震、土砂災害、宇宙天気災害、自然天体の落下に関する自然災害時の行動指針を追加しました。","해파리 대량 출현(Mass jellyfish occurrence)에 대한 생활 안전 요령이 추가되었습니다.":"クラゲの大量発生に関する生活安全の行動指針を追加しました。","경보(Alert), 대피(Evacuation), 폭격(Shelling), 드론 공습(UAV Strike)에 대한 전쟁 행동 요령이 추가되었습니다.":"警報、避難、砲撃、無人機攻撃に関する戦時の行動指針を追加しました。","건물 붕괴(Building Collapse), 다중 운집 인파 사고(Crowd Crush)에 대한 사회 재난 행동 요령이 추가되었습니다.":"建物倒壊や群衆事故に関する社会災害時の行動指針を追加しました。","화재(Fire), 테러(Terrorism), 가스 사고(Gas Accident), 전기 사고(Electrical Accident)에 대한 사회 재난 행동 요령이 추가되었습니다.":"火災、テロ、ガス事故、電気事故に関する社会災害時の行動指針を追加しました。","산행 안전 수칙(Climbing Accident), 응급처치(First aid)에 대한 생활 안전 요령이 추가되었습니다.":"登山時の事故や応急処置に関する生活安全の行動指針を追加しました。","재난 대비 체크리스트(Prepare Disaster) 기능이 추가되었습니다.":"防災チェックリスト（Prepare Disaster）機能を追加しました。","Black 캐릭터를 재구상하였습니다.":"Black キャラクターを再構想しました。","부관(Aide) 일러스트 전체 화면 보기 기능이 추가되었습니다.":"補佐役（Aide）のイラストを全画面表示する機能を追加しました。","도구(Utility) 기능이 추가되었습니다.":"ツール（Utility）機能を追加しました。","의사결정 도구에 주사위(Dice) 기능이 추가되었습니다.":"意思決定ツールにサイコロ（Dice）機能を追加しました。","의사결정 도구에 사다리 타기(Ghost legs) 기능이 추가되었습니다.":"意思決定ツールにあみだくじ（Ghost legs）機能を追加しました。","의사결정 도구에 제비뽑기(Drawing lots) 기능이 추가되었습니다.":"意思決定ツールにくじ引き（Drawing lots）機能を追加しました。","의사결정 도구에 익명 투표(Anonymous vote) 기능이 추가되었습니다.":"意思決定ツールに匿名投票（Anonymous vote）機能を追加しました。","도구에 단위 변환(Unit conversion) 기능이 추가되었습니다.":"ツールに単位変換機能を追加しました。","생존 도구에 오프라인 지도(Offline Map) 기능이 추가되었습니다. 마커 추가, 거리 재기, 핵 폭발 시뮬레이션 도구를 사용할 수 있습니다.":"サバイバルツールにオフラインマップ機能を追加しました。マーカーの追加、距離の測定、核爆発シミュレーションを利用できます。","생존 도구에 나침반(Compass) 기능이 추가되었습니다.":"サバイバルツールにコンパス機能を追加しました。","생존 도구에 소리 반복 재생기(Sound repeater) 기능이 추가되었습니다.":"サバイバルツールに音声リピーター機能を追加しました。","생존 도구에 모스 부호(Morse code) 기능이 추가되었습니다.":"サバイバルツールにモールス信号機能を追加しました。","조직·운영 도구에 식량 분배(Food Distribute) 기능이 추가되었습니다.":"組織・運営ツールに食料分配機能を追加しました。","조직·운영 도구에 암호문 작성(Cipher Tool) 기능이 추가되었습니다.":"組織・運営ツールに暗号文作成ツールを追加しました。","조직·운영 도구에 환자 격리 관리(Patient Isolation Management) 기능이 추가되었습니다.":"組織・運営ツールに患者隔離管理機能を追加しました。","조직·운영 도구에 배급표(Ration Ticket) 기능이 추가되었습니다.":"組織・運営ツールに配給券機能を追加しました。","도구에 메트로놈(Metronome) 기능이 추가되었습니다.":"ツールにメトロノーム機能を追加しました。","도구에 MIDI 작곡기(MIDI Composer) 기능이 추가되었습니다.":"ツールに MIDI 作曲機能を追加しました。","생존 도구에 [국민안전24](https://www.safekorea.go.kr/)에서 제공하는 [안전지도](https://safemap.go.kr/main/smap_renewal.do) 페이지로 이동하는 링크가 추가되었습니다.":"サバイバルツールに、[国民安全24](https://www.safekorea.go.kr/)が提供する[安全地図](https://safemap.go.kr/main/smap_renewal.do)へのリンクを追加しました。","생존 도구에 [국민안전24](https://www.safekorea.go.kr/)에서 제공하는 [재난문자](https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do) 페이지로 이동하는 링크가 추가되었습니다.":"サバイバルツールに、[国民安全24](https://www.safekorea.go.kr/)が提供する[災害メッセージ](https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do)へのリンクを追加しました。","지식 문서가 페이징 기능을 지원하게 되었습니다.":"知識ドキュメントがページ送りに対応しました。","보스니아 내전 생존자 Selco와의 인터뷰(Interview with Bosnian war survivor Selco) 지식이 추가되었습니다.":"ボスニア紛争の生存者 Selco へのインタビュー記事を知識ドキュメントに追加しました。","[대학 과제 ](/SurvivalManager/devlog_resources/2026_06_05.pdf) 제출겸 부관(Aide) 캐릭터 디자인을 다듬었습니다.":"[大学の課題](/SurvivalManager/devlog_resources/2026_06_05.pdf)の提出に合わせて、補佐役（Aide）のキャラクターデザインを調整しました。","태양광 발전기 설치(Solar panel installation) 지식이 추가되었습니다.":"太陽光発電設備の設置に関する知識を追加しました。","오프라인 지도(Offline Map)에서 GPS 활성화 시 현재 위치가 표시되는 기능이 추가되었습니다.":"オフラインマップで GPS を有効にすると現在地を表示する機能を追加しました。","환자 격리 관리(Patient Isolation Management)에서 추적 그래프 저장 버튼이 추가되었습니다.":"患者隔離管理に追跡グラフを保存するボタンを追加しました。","애플리케이션 내에서 에피소드 및 스토리 열람 시 재생될 BGM [Time to play](/resources/files/music/suno/Time%20to%20play.mp3)가 작곡되었습니다.":"アプリ内でエピソードやストーリーを閲覧する際に再生する BGM [Time to play](/resources/files/music/suno/Time%20to%20play.mp3)を作曲しました。","생존 도구에 식수 소독 계산기(Water Purification Calculator) 기능이 추가되었습니다.":"サバイバルツールに飲料水消毒計算機能を追加しました。","조직·운영 도구에 환자 분류(Patient Triage) 기능이 추가되었습니다.":"組織・運営ツールに患者トリアージ機能を追加しました。","P2P 채팅 시스템이 BLE, WiFi-Direct, WiFi-LAN 연결 기능을 지원하게 되었습니다.":"P2P チャットシステムが BLE、Wi-Fi Direct、Wi-Fi LAN 接続に対応しました。","부관(Aide)이 사용자에게 시스템 메시지를 전송하는 기능이 추가되었습니다.":"補佐役（Aide）がユーザーにシステムメッセージを送信する機能を追加しました。","도구에 일기장(Diary) 기능이 추가되었습니다.":"ツールに日記機能を追加しました。","Gray 캐릭터를 재구상하였습니다.":"Gray キャラクターを再構想しました。","생존 도구에 천문 도구(Astronomy Tool) 기능이 추가되었습니다.":"サバイバルツールに天文ツールを追加しました。","생존 도구에 비상 라디오 주파수(Emergency Radio Frequency) 기능이 추가되었습니다.":"サバイバルツールに緊急ラジオ周波数機能を追加しました。","Brown 캐릭터를 구상하였습니다.":"Brown キャラクターを構想しました。","데이터 동기화(Data Sync) 기능이 추가되었습니다.":"データ同期機能を追加しました。","가로 모드(Landscape)뿐만 아니라 세로 모드(Portrait)까지 지원하여, 자유롭게 화면을 전환할 수 있게 되었습니다.":"横向（Landscape）だけでなく縦向き（Portrait）にも対応し、画面の向きを自由に切り替えられるようになりました。","P2P 채팅 시스템에 참여자 강퇴, 비밀 방 개설, 프로필 이미지 설정, 닉네임 설정 기능이 추가되었습니다.":"P2P チャットシステムに、参加者の退出、非公開ルームの作成、プロフィール画像とニックネームの設定機能を追加しました。","부관(Aide) Gray의 가스 마스크를 벗길 수 있는 트리거가 추가되었습니다.":"補佐役（Aide）の Gray がガスマスクを外せるトリガーを追加しました。","오프라인 지도(Offline Map)에서 위도 경도 입력을 통한 마커 추가가 가능하게 되었습니다.":"オフラインマップで緯度・経度を入力してマーカーを追加できるようになりました。","PDF 출력 기능이 추가되었습니다.":"PDF 出力機能を追加しました。","Google Play Store에서 내부 비공개 테스트를 시작하였습니다.":"Google Play ストアで内部向けクローズドテストを開始しました。"},"ru":{"대한민국 사상의 근간인 홍익인간 이념을 실천할 방법을 찾던 중, 다양한 재난 상황에서 도움을 제공할 수 있는 재난 대비 애플리케이션을 만들기로 마음먹었습니다.":"В поисках способа воплотить в жизнь корейский принцип «Хонъик инган» (благо человечеству) я решил создать приложение, которое поможет людям в различных чрезвычайных ситуациях.","보스니아 내전 생존자 Selco의 경험담, 재난 상황 TIP, 재난 가방 정리 방법을 담은 [재난 상황 TIP 정리본](https://cafe.naver.com/goldbigdragon/72583)을 작성하였습니다.":"Я подготовил сборник [советов на случай чрезвычайных ситуаций](https://cafe.naver.com/goldbigdragon/72583), включив в него опыт пережившего войну в Боснии Selco, рекомендации на случай бедствий и способы комплектации аварийного рюкзака.","Discord 서버를 개설하여 자료를 수집하기 시작했습니다.":"Я создал сервер Discord и начал собирать материалы.","[애플리케이션 기획 초안](/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx)을 작성하였습니다.":"Я подготовил [первичный план приложения](/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx).","재난 행동 요령, 재난 대비 체크리스트, 지식 문서, 부관, 5개 국어 지원, 멤버 관리, 소지품 관리, 계획, 일기장, 오프라인 지도, 의사결정 도구, 식사 분배, 소리 반복 재생 기능을 기획하였습니다.":"В план вошли инструкции на случай бедствий, контрольные списки подготовки, база знаний, помощник, поддержка пяти языков, управление участниками и инвентарём, планы, дневник, офлайн-карты, инструменты принятия решений, распределение еды и повтор звука.","로비 화면 UI를 구상하였습니다.":"Я разработал концепцию интерфейса главного экрана.","[명일방주](https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights) UI를 참고하여 [새로운 UI](/SurvivalManager/devlog_resources/2020_03_08.zip)를 구상하였습니다.":"Я разработал концепцию [нового интерфейса](/SurvivalManager/devlog_resources/2020_03_08.zip), взяв за образец интерфейс [Arknights](https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights).","Github에 SurvivalManager 레포지토리를 생성하였습니다.":"Я создал репозиторий SurvivalManager на GitHub.","로비(Lobby) 기능이 추가되었습니다.":"Добавлена функция лобби (Lobby).","설정(Option) 기능이 추가되었습니다.":"Добавлена функция настроек (Option).","영어, 한국어, 일본어, 중국어, 러시아어에 대한 strings.xml 분리 작업을 수행하였습니다.":"Я разделил ресурсы `strings.xml` для английского, корейского, японского, китайского и русского языков.","계획(Plans) 기능이 추가되었습니다.":"Добавлена функция планов (Plans).","[Helldivers 2](https://store.steampowered.com/app/553850/HELLDIVERS_2/) UI를 참고하여 [Draw.io](https://app.diagrams.net/)를 이용한 [새로운 UI](/SurvivalManager/devlog_resources/2024_11_10.drawio)를 구상하였습니다. (UI 파일은 Draw.io에서 열람할 수 있습니다)":"Вдохновившись интерфейсом [Helldivers 2](https://store.steampowered.com/app/553850/HELLDIVERS_2/), я разработал [новый интерфейс](/SurvivalManager/devlog_resources/2024_11_10.drawio) с помощью [Draw.io](https://app.diagrams.net/). (Файл UI можно открыть в Draw.io.)","Black 캐릭터를 구상하였습니다.":"Я разработал концепцию персонажа Black.","White 캐릭터를 구상하였습니다.":"Я разработал концепцию персонажа White.","부관(Aide) 시스템이 개발되었습니다.":"Разработана система помощника (Aide).","전 세계 18,297건의 라디오 주파수 정보를 수집하였습니다.":"Я собрал 18 297 записей о радиочастотах со всего мира.","TIP 기능이 추가되었습니다.":"Добавлена функция советов (TIP).","24절기 구분 기능이 추가되었습니다.":"Добавлена функция определения 24 солнечных периодов.","작물 재배 관련 지식을 얻기 위해 [서울사이버대학교 - AI 스마트팜학과](https://smartfarm.iscu.ac.kr/)에 편입학 하였습니다.":"Чтобы получить знания о выращивании сельскохозяйственных культур, я перевёлся на факультет AI Smart Farm [Сеульского киберуниверситета](https://smartfarm.iscu.ac.kr/).","Gray 캐릭터를 구상하였습니다.":"Я разработал концепцию персонажа Gray.","숫자, 영문, 기호, 한글, 일본어, 키릴 알파벳, 관용구에 대한 모스 부호 정보를 수집하였습니다.":"Я собрал данные азбуки Морзе для цифр, латинских букв, символов, хангыль, японских знаков, кириллицы и распространённых выражений.","아이콘(Icon) 선택 기능이 추가되었습니다.":"Добавлена функция выбора значков (Icon).","애플리케이션 대표 BGM [Time to plan](/resources/files/music/suno/Time%20to%20plan.mp3)이 작곡되었습니다.":"Была написана главная музыкальная тема приложения [Time to plan](/resources/files/music/suno/Time%20to%20plan.mp3).","멤버 정보 입력(Member Information) 창이 개발되었습니다.":"Разработано окно сведений об участнике (Member Information).","Gray 테마곡 [Time to plan - Gray](/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3)가 작곡되었습니다.":"Написана музыкальная тема Gray — [Time to plan - Gray](/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3).","White 테마곡 [Time to plan - White](/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3)가 작곡되었습니다.":"Написана музыкальная тема White — [Time to plan - White](/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3).","Black 테마곡 [Time to plan - Black](/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3)이 작곡되었습니다.":"Написана музыкальная тема Black — [Time to plan - Black](/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3).","부르기만 해도 재난 대비 TIP을 얻을 수 있도록, 애플리케이션 대표 BGM에 가사를 입힌 [Time to plan - Male vocal](/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3)이 작곡되었습니다.":"Чтобы пользователи могли получать советы по подготовке к бедствиям, просто подпев песне, я создал вокальную версию главной темы приложения: [Time to plan - Male vocal](/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3).","Black 테마곡에 가사를 입힌 [Time to plan - Black Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3)가 작곡되었습니다.":"Создана вокальная версия темы Black с текстом — [Time to plan - Black Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3).","White 테마곡에 가사를 입힌 [Time to plan - White Voice](/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3)가 작곡되었습니다.":"Создана вокальная версия темы White с текстом — [Time to plan - White Voice](/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3).","Gray 테마곡에 가사를 입힌 [Time to plan - Gray Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3)가 작곡되었습니다.":"Создана вокальная версия темы Gray с текстом — [Time to plan - Gray Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3).","멤버 장비(Member Equipment) 창이 개발되었습니다.":"Разработано окно снаряжения участника (Member Equipment).","멤버 소지품(Member Inventory) 창이 개발되었습니다.":"Разработано окно инвентаря участника (Member Inventory).","물품별 카테고리 분류 기능이 추가되었습니다.":"Добавлена категоризация предметов.","멤버 소지품 창에 물품 등록이 가능하게 되었습니다.":"В окне инвентаря участника появилась возможность регистрировать предметы.","물품 상세 정보(Item Information) 창이 개발되었습니다.":"Разработано окно сведений о предмете (Item Information).","물품에 대한 메타 정보 입력이 가능하게 되었습니다.":"Добавлена возможность вводить метаданные предметов.","Brown 테마곡 [Time to plan - Brown](/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3)이 작곡되었습니다.":"Написана музыкальная тема Brown — [Time to plan - Brown](/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3).","Brown 테마곡에 가사를 입힌 [Time to plan - Brown Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3)가 작곡되었습니다.":"Создана вокальная версия темы Brown с текстом — [Time to plan - Brown Voice](/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3).","[약학정보원(Korea Pharmaceutical Information Center)](https://www.health.kr/)의 [KPIC 약효분류](https://www.health.kr/drug-info/kpic-classification)법을 바탕으로 의약품 메타데이터에 원료 기입이 가능하게 되었습니다.":"На основе [классификации действия лекарств KPIC](https://www.health.kr/drug-info/kpic-classification), опубликованной [Корейским центром фармацевтической информации](https://www.health.kr/), добавлен ввод действующих веществ в метаданные лекарств.","휴대폰(420dpi), 태블릿(7 inch, 600dp), 폴더블 폰(650dp), 태블릿(10 inch, 720dp), 데스크탑(960dp) 화면을 지원하게 되었습니다.":"Добавлена поддержка телефонов (420 dpi), планшетов 7 дюймов (600 dp), складных телефонов (650 dp), планшетов 10 дюймов (720 dp) и настольных устройств (960 dp).","계획(Plans) 화면을 재구성하였습니다.":"Переработан экран планов (Plans).","피난 계획 작성이 가능하게 되었습니다.":"Добавлена возможность составлять планы эвакуации.","자원 조회(Resource Inquiry) 기능이 추가되었습니다.":"Добавлена функция поиска ресурсов (Resource Inquiry).","인터넷을 이용한 P2P 채팅 기능이 추가되었습니다.":"Добавлен P2P-чат через интернет.","2004년 01월 06일부터 2037년 12월 21일까지의 24절기 날짜 데이터를 수집하였습니다.":"Я собрал данные о датах 24 солнечных периодов за период с 6 января 2004 года по 21 декабря 2037 года.","인터넷을 이용한 P2P 채팅에서 파일 첨부가 가능하게 되었습니다.":"В P2P-чате через интернет появилась возможность прикреплять файлы.","지식 문서함(Knowledge) 기능이 추가되었습니다.":"Добавлена библиотека знаний (Knowledge).","매듭법(Knots), 비누(Soap), 일일 권장 섭취량(Daily Recommended Nutrient Intake), 플라스틱 병 전구(Plastic Bottle Bulb), 양초(Candle), 정수(Water Purification), 수원지(Water Source) 지식이 추가되었습니다.":"Добавлены материалы о узлах, мыле, рекомендуемом суточном потреблении питательных веществ, лампах из пластиковых бутылок, свечах, очистке воды и источниках воды.","식품 보존(Food Preservation), 응급처치(First aid) 지식이 추가되었습니다.":"Добавлены материалы о хранении продуктов и первой помощи.","지식 문서 다운로드 기능이 추가되었습니다.":"Добавлена возможность скачивать документы из базы знаний.","지식 문서 뷰어에서 라이트/다크 모드를 지원합니다.":"В просмотрщике документов базы знаний появились светлая и тёмная темы.","부관(Aide) 다운로드 기능이 추가되었습니다.":"Добавлена возможность скачивать помощников (Aide).","White 캐릭터를 재구상하였습니다.":"Я переработал концепцию персонажа White.","아이콘(Icon) 다운로드 기능이 추가되었습니다.":"Добавлена возможность скачивать значки (Icon).","재난 상황 행동 요령(Disaster Situation) 기능이 추가되었습니다.":"Добавлены инструкции на случай бедствий (Disaster Situation).","화산(Volcanic eruption), 폭염(Heat wave), 가뭄(Drought), 쓰나미(Tsunami), 조수(Tide), 폭우(Downpour), 홍수(Flood), 적조(Red tide), 녹조(Green tide), 폭설(Heavy snowfall), 한파(Cold wave), 태풍(Typhoon), 강풍(Strong wind), 낙뢰(Lightning strike), 황사(Yellow dust), 지진(Earthquake), 산사태(Landslide), 우주 전파 재난(Space weather disaster), 자연 우주 물체 추락(Natural space object impact)에 대한 자연 재해 행동 요령이 추가되었습니다.":"Добавлены инструкции по природным бедствиям: извержения вулканов, жара, засуха, цунами, приливы, ливни, наводнения, красные и зелёные приливы, сильный снегопад, холод, тайфуны, сильный ветер, удары молнии, жёлтая пыль, землетрясения, оползни, космическая погода и падение природных космических объектов.","해파리 대량 출현(Mass jellyfish occurrence)에 대한 생활 안전 요령이 추가되었습니다.":"Добавлены рекомендации по безопасности при массовом появлении медуз.","경보(Alert), 대피(Evacuation), 폭격(Shelling), 드론 공습(UAV Strike)에 대한 전쟁 행동 요령이 추가되었습니다.":"Добавлены инструкции на случай военных действий: тревога, эвакуация, обстрел и удар БПЛА.","건물 붕괴(Building Collapse), 다중 운집 인파 사고(Crowd Crush)에 대한 사회 재난 행동 요령이 추가되었습니다.":"Добавлены инструкции при социальных бедствиях: обрушение зданий и давка в толпе.","화재(Fire), 테러(Terrorism), 가스 사고(Gas Accident), 전기 사고(Electrical Accident)에 대한 사회 재난 행동 요령이 추가되었습니다.":"Добавлены инструкции при социальных бедствиях: пожары, терроризм, аварии с газом и электричеством.","산행 안전 수칙(Climbing Accident), 응급처치(First aid)에 대한 생활 안전 요령이 추가되었습니다.":"Добавлены рекомендации по безопасности при походах в горы и по первой помощи.","재난 대비 체크리스트(Prepare Disaster) 기능이 추가되었습니다.":"Добавлена функция контрольного списка подготовки к бедствиям (Prepare Disaster).","Black 캐릭터를 재구상하였습니다.":"Я переработал концепцию персонажа Black.","부관(Aide) 일러스트 전체 화면 보기 기능이 추가되었습니다.":"Добавлен полноэкранный просмотр иллюстраций помощника (Aide).","도구(Utility) 기능이 추가되었습니다.":"Добавлен раздел инструментов (Utility).","의사결정 도구에 주사위(Dice) 기능이 추가되었습니다.":"В инструменты принятия решений добавлен кубик (Dice).","의사결정 도구에 사다리 타기(Ghost legs) 기능이 추가되었습니다.":"В инструменты принятия решений добавлен жребий «лестница» (Ghost legs).","의사결정 도구에 제비뽑기(Drawing lots) 기능이 추가되었습니다.":"В инструменты принятия решений добавлен жребий (Drawing lots).","의사결정 도구에 익명 투표(Anonymous vote) 기능이 추가되었습니다.":"В инструменты принятия решений добавлено анонимное голосование (Anonymous vote).","도구에 단위 변환(Unit conversion) 기능이 추가되었습니다.":"В инструменты добавлен конвертер единиц измерения.","생존 도구에 오프라인 지도(Offline Map) 기능이 추가되었습니다. 마커 추가, 거리 재기, 핵 폭발 시뮬레이션 도구를 사용할 수 있습니다.":"В инструменты выживания добавлена офлайн-карта: можно добавлять маркеры, измерять расстояния и моделировать ядерный взрыв.","생존 도구에 나침반(Compass) 기능이 추가되었습니다.":"В инструменты выживания добавлен компас.","생존 도구에 소리 반복 재생기(Sound repeater) 기능이 추가되었습니다.":"В инструменты выживания добавлен повторитель звука.","생존 도구에 모스 부호(Morse code) 기능이 추가되었습니다.":"В инструменты выживания добавлена азбука Морзе.","조직·운영 도구에 식량 분배(Food Distribute) 기능이 추가되었습니다.":"В инструменты организации и управления добавлено распределение продовольствия.","조직·운영 도구에 암호문 작성(Cipher Tool) 기능이 추가되었습니다.":"В инструменты организации и управления добавлен инструмент шифрования текста.","조직·운영 도구에 환자 격리 관리(Patient Isolation Management) 기능이 추가되었습니다.":"В инструменты организации и управления добавлено управление изоляцией пациентов.","조직·운영 도구에 배급표(Ration Ticket) 기능이 추가되었습니다.":"В инструменты организации и управления добавлены карточки выдачи пайков.","도구에 메트로놈(Metronome) 기능이 추가되었습니다.":"В инструменты добавлен метроном.","도구에 MIDI 작곡기(MIDI Composer) 기능이 추가되었습니다.":"В инструменты добавлен MIDI-композитор.","생존 도구에 [국민안전24](https://www.safekorea.go.kr/)에서 제공하는 [안전지도](https://safemap.go.kr/main/smap_renewal.do) 페이지로 이동하는 링크가 추가되었습니다.":"В инструменты выживания добавлена ссылка на [карту безопасности](https://safemap.go.kr/main/smap_renewal.do), предоставляемую сервисом [National Safety 24](https://www.safekorea.go.kr/).","생존 도구에 [국민안전24](https://www.safekorea.go.kr/)에서 제공하는 [재난문자](https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do) 페이지로 이동하는 링크가 추가되었습니다.":"В инструменты выживания добавлена ссылка на [экстренные сообщения о бедствиях](https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do) сервиса [National Safety 24](https://www.safekorea.go.kr/).","지식 문서가 페이징 기능을 지원하게 되었습니다.":"В документах базы знаний появилась поддержка постраничной навигации.","보스니아 내전 생존자 Selco와의 인터뷰(Interview with Bosnian war survivor Selco) 지식이 추가되었습니다.":"В базу знаний добавлено интервью с Selco, пережившим войну в Боснии.","[대학 과제 ](/SurvivalManager/devlog_resources/2026_06_05.pdf) 제출겸 부관(Aide) 캐릭터 디자인을 다듬었습니다.":"При подготовке [университетского задания](/SurvivalManager/devlog_resources/2026_06_05.pdf) я доработал дизайн персонажа-помощника (Aide).","태양광 발전기 설치(Solar panel installation) 지식이 추가되었습니다.":"Добавлен материал об установке солнечных панелей.","오프라인 지도(Offline Map)에서 GPS 활성화 시 현재 위치가 표시되는 기능이 추가되었습니다.":"На офлайн-карте добавлено отображение текущего местоположения при включённом GPS.","환자 격리 관리(Patient Isolation Management)에서 추적 그래프 저장 버튼이 추가되었습니다.":"В управлении изоляцией пациентов добавлена кнопка сохранения графиков наблюдения.","애플리케이션 내에서 에피소드 및 스토리 열람 시 재생될 BGM [Time to play](/resources/files/music/suno/Time%20to%20play.mp3)가 작곡되었습니다.":"Написана фоновая музыка [Time to play](/resources/files/music/suno/Time%20to%20play.mp3), предназначенная для воспроизведения при просмотре эпизодов и историй в приложении.","생존 도구에 식수 소독 계산기(Water Purification Calculator) 기능이 추가되었습니다.":"В инструменты выживания добавлен калькулятор обеззараживания питьевой воды.","조직·운영 도구에 환자 분류(Patient Triage) 기능이 추가되었습니다.":"В инструменты организации и управления добавлена сортировка пациентов (триаж).","P2P 채팅 시스템이 BLE, WiFi-Direct, WiFi-LAN 연결 기능을 지원하게 되었습니다.":"Система P2P-чата теперь поддерживает подключения BLE, Wi-Fi Direct и Wi-Fi LAN.","부관(Aide)이 사용자에게 시스템 메시지를 전송하는 기능이 추가되었습니다.":"Добавлена возможность отправки системных сообщений пользователю от помощника (Aide).","도구에 일기장(Diary) 기능이 추가되었습니다.":"В инструменты добавлен дневник.","Gray 캐릭터를 재구상하였습니다.":"Я переработал концепцию персонажа Gray.","생존 도구에 천문 도구(Astronomy Tool) 기능이 추가되었습니다.":"В инструменты выживания добавлен астрономический инструмент.","생존 도구에 비상 라디오 주파수(Emergency Radio Frequency) 기능이 추가되었습니다.":"В инструменты выживания добавлен список аварийных радиочастот.","Brown 캐릭터를 구상하였습니다.":"Я разработал концепцию персонажа Brown.","데이터 동기화(Data Sync) 기능이 추가되었습니다.":"Добавлена синхронизация данных.","가로 모드(Landscape)뿐만 아니라 세로 모드(Portrait)까지 지원하여, 자유롭게 화면을 전환할 수 있게 되었습니다.":"Приложение теперь поддерживает как альбомную (Landscape), так и портретную (Portrait) ориентацию, между которыми можно свободно переключаться.","P2P 채팅 시스템에 참여자 강퇴, 비밀 방 개설, 프로필 이미지 설정, 닉네임 설정 기능이 추가되었습니다.":"В систему P2P-чата добавлены исключение участников, создание закрытых комнат, установка изображения профиля и выбор псевдонима.","부관(Aide) Gray의 가스 마스크를 벗길 수 있는 트리거가 추가되었습니다.":"Добавлен триггер, позволяющий снять противогаз с Gray в системе помощника (Aide).","오프라인 지도(Offline Map)에서 위도 경도 입력을 통한 마커 추가가 가능하게 되었습니다.":"На офлайн-карте появилась возможность добавлять маркеры по введённым широте и долготе.","PDF 출력 기능이 추가되었습니다.":"Добавлен экспорт в PDF.","Google Play Store에서 내부 비공개 테스트를 시작하였습니다.":"В Google Play началось закрытое внутреннее тестирование приложения."}};
-const localeInfo = {
-  ko: {title: '[재난 대비] 개발 기록', updated: '마지막 수정일', before2016: '2016년 이전', dark: 'Dark', light: 'Light'},
-  en: {title: '[Disaster Preparedness] Development Log', updated: 'Last updated', before2016: 'Before 2016', dark: 'Dark', light: 'Light'},
-  zh: {title: '[防灾准备] 开发日志', updated: '最后修改时间', before2016: '2016年以前', dark: '深色模式', light: '浅色模式'},
-  ja: {title: '【防災対策】開発記録', updated: '最終更新日', before2016: '2016年以前', dark: 'ダーク', light: 'ライト'},
-  ru: {title: '[Подготовка к бедствиям] Журнал разработки', updated: 'Последнее обновление', before2016: 'До 2016 года', dark: 'Тёмная тема', light: 'Светлая тема'}
-};
+	<div class="container wide">
+		<div class="controls">
+			<select id="lang-select" aria-label="Language">
+				<option value="ko">한국어 (Korean)</option>
+				<option value="en">English</option>
+				<option value="zh">简体中文 (Chinese)</option>
+				<option value="ja">日本語 (Japanese)</option>
+				<option value="ru">Русский (Russian)</option>
+			</select>
+			<button id="theme-toggle" type="button">Dark</button>
+		</div>
 
-function toggleTheme() {
-  const body = document.body;
-  const button = document.getElementById('theme-toggle');
-  const lang = document.getElementById('lang-select').value;
-  const labels = localeInfo[lang] || localeInfo.ko;
-  if (body.getAttribute('data-theme') === 'dark') {
-    body.removeAttribute('data-theme');
-    button.textContent = labels.dark;
-  } else {
-    body.setAttribute('data-theme', 'dark');
-    button.textContent = labels.light;
-  }
-}
+		<main>
+			<header class="i18n">
+				<div lang="ko"><h1>[재난 대비] 개발 기록</h1><p class="meta">(마지막 수정일: 2026-10-26 13:38:00)</p></div>
+				<div lang="en"><h1>[Survival Manager] Development Log</h1><p class="meta">(Last updated: 2026-10-26 13:38:00)</p></div>
+				<div lang="zh-CN"><h1>[灾害准备] 开发日志</h1><p class="meta">（最后修改时间：2026-10-26 13:38:00）</p></div>
+				<div lang="ja"><h1>[災害対策] 開発記録</h1><p class="meta">（最終更新日：2026-10-26 13:38:00）</p></div>
+				<div lang="ru"><h1>[Менеджер по выживанию] Журнал разработки</h1><p class="meta">(Последнее обновление: 2026-10-26 13:38:00)</p></div>
+			</header>
 
-function escapeHtml(value) {
-  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
+			<section class="entry">
+				<h2 class="i18n"><span lang="ko">2016년 이전</span><span lang="en">Before 2016</span><span lang="zh-CN">2016年以前</span><span lang="ja">2016年以前</span><span lang="ru">До 2016 года</span></h2>
+				<div class="i18n">
+					<ul lang="ko"><li>대한민국 사상의 근간인 홍익인간 이념을 실천할 방법을 찾던 중, 다양한 재난 상황에서 도움을 제공할 수 있는 재난 대비 애플리케이션을 만들기로 마음먹었습니다.</li></ul>
+					<ul lang="en"><li>While looking for a way to put Hongik Ingan, a foundational Korean ideal, into practice, I decided to develop a disaster-preparedness app that could help people in a range of emergencies.</li></ul>
+					<ul lang="zh-CN"><li>在寻找践行韩国思想根基“弘益人间”理念的方式时，我决定开发一款能够在各种灾害情况下提供帮助的防灾应用。</li></ul>
+					<ul lang="ja"><li>韓国思想の根幹である「弘益人間」の理念を実践する方法を探す中で、さまざまな災害時に役立つ防災アプリを開発することを決めました。</li></ul>
+					<ul lang="ru"><li>В поисках способа воплотить в жизнь корейский принцип «Хонъик инган» (благо человечеству) я решил создать приложение, которое поможет людям в различных чрезвычайных ситуациях.</li></ul>
+				</div>
+			</section>
 
-function inlineMarkdown(value) {
-  let text = escapeHtml(value);
-  text = text.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img loading="lazy" alt="$1" src="$2">');
-  text = text.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+|\/[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-  text = text.replace(/`([^`]+)`/g, '<code>$1</code>').replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-  return text;
-}
+			<section class="entry">
+				<h2>2017-09-28</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>보스니아 내전 생존자 Selco의 경험담, 재난 상황 TIP, 재난 가방 정리 방법을 담은 <a href="https://cafe.naver.com/goldbigdragon/72583">재난 상황 TIP 정리본</a>을 작성하였습니다.</li></ul>
+					<ul lang="en"><li>I compiled the <a href="https://cafe.naver.com/goldbigdragon/72583">Disaster Situation Tips</a>, covering the experiences of Bosnian War survivor Selco, emergency tips, and how to organize a disaster go-bag.</li></ul>
+					<ul lang="zh-CN"><li>我整理了<a href="https://cafe.naver.com/goldbigdragon/72583">灾害应对技巧汇编</a>，内容包括波黑战争幸存者 Selco 的经历、灾害应对技巧以及应急包整理方法。</li></ul>
+					<ul lang="ja"><li>ボスニア紛争の生存者 Selco の体験談、災害時のヒント、防災バッグの整理方法をまとめた<a href="https://cafe.naver.com/goldbigdragon/72583">災害時のヒント集</a>を作成しました。</li></ul>
+					<ul lang="ru"><li>Я подготовил сборник <a href="https://cafe.naver.com/goldbigdragon/72583">советов на случай чрезвычайных ситуаций</a>, включив в него опыт пережившего войну в Боснии Selco, рекомендации на случай бедствий и способы комплектации аварийного рюкзака.</li></ul>
+				</div>
+			</section>
 
-function localizedMarkdown(markdown, lang) {
-  if (lang === 'ko') return markdown;
-  const data = translations[lang] || translations.en;
-  const labels = localeInfo[lang] || localeInfo.en;
-  return markdown.split(/\r?\n/).map((line) => {
-    const trimmed = line.trim();
-    if (trimmed.startsWith('# ')) return '# ' + labels.title;
-    if (trimmed.startsWith('> 마지막 수정일: ')) return '> ' + labels.updated + ': ' + trimmed.slice('> 마지막 수정일: '.length);
-    if (trimmed === '## 2016년 이전') return '## ' + labels.before2016;
-    if (trimmed.startsWith('- ')) {
-      const original = trimmed.slice(2);
-      return '- ' + (data[original] || original);
-    }
-    return line;
-  }).join('\n');
-}
+			<section class="entry">
+				<h2>2018-02-25</h2>
+				<img loading="lazy" decoding="async" alt="2018-02-25" src="/SurvivalManager/devlog_resources/2018_02_25.png">
+				<div class="i18n">
+					<ul lang="ko"><li>Discord 서버를 개설하여 자료를 수집하기 시작했습니다.</li></ul>
+					<ul lang="en"><li>I created a Discord server and began collecting reference materials.</li></ul>
+					<ul lang="zh-CN"><li>我创建了 Discord 服务器，并开始收集资料。</li></ul>
+					<ul lang="ja"><li>Discord サーバーを開設し、資料の収集を始めました。</li></ul>
+					<ul lang="ru"><li>Я создал сервер Discord и начал собирать материалы.</li></ul>
+				</div>
+			</section>
 
-function renderMarkdown(markdown) {
-  const lines = markdown.trim().split(/\r?\n/);
-  const out = [];
-  let list = false, entry = false, paragraph = [];
-  const closeList = () => { if (list) { out.push('</ul>'); list = false; } };
-  const closeParagraph = () => {
-    if (paragraph.length) { out.push('<p>' + paragraph.map(inlineMarkdown).join('<br>') + '</p>'); paragraph = []; }
-  };
-  const closeEntry = () => {
-    closeParagraph(); closeList();
-    if (entry) { out.push('</section>'); entry = false; }
-  };
-  for (const raw of lines) {
-    const line = raw.trim();
-    if (!line) { closeParagraph(); continue; }
-    if (line === '---') { closeEntry(); continue; }
-    if (line.startsWith('# ')) { closeEntry(); out.push('<header><h1>' + inlineMarkdown(line.slice(2)) + '</h1></header>'); continue; }
-    if (line.startsWith('> ')) { closeParagraph(); closeList(); out.push('<p class="devlog-meta">' + inlineMarkdown(line.slice(2)) + '</p>'); continue; }
-    if (line.startsWith('## ')) { closeEntry(); entry = true; out.push('<section class="devlog-entry"><h2>' + inlineMarkdown(line.slice(3)) + '</h2>'); continue; }
-    if (line.startsWith('![')) { closeParagraph(); closeList(); out.push(inlineMarkdown(line)); continue; }
-    if (line.startsWith('- ')) { closeParagraph(); if (!list) { out.push('<ul>'); list = true; } out.push('<li>' + inlineMarkdown(line.slice(2)) + '</li>'); continue; }
-    closeList(); paragraph.push(line);
-  }
-  closeEntry();
-  return out.join('\n');
-}
+			<section class="entry">
+				<h2>2018-10-08</h2>
+				<img loading="lazy" decoding="async" alt="2018-10-08" src="/SurvivalManager/devlog_resources/2018_10_08.png">
+				<div class="i18n">
+					<ul lang="ko">
+						<li><a href="/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx">애플리케이션 기획 초안</a>을 작성하였습니다.</li>
+						<li>재난 행동 요령, 재난 대비 체크리스트, 지식 문서, 부관, 5개 국어 지원, 멤버 관리, 소지품 관리, 계획, 일기장, 오프라인 지도, 의사결정 도구, 식사 분배, 소리 반복 재생 기능을 기획하였습니다.</li>
+					</ul>
+					<ul lang="en">
+						<li>I drafted the <a href="/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx">application plan</a>.</li>
+						<li>The planned features included disaster procedures, preparedness checklists, knowledge documents, an aide, support for five languages, member and inventory management, plans, a diary, offline maps, decision-making tools, food distribution, and sound repetition.</li>
+					</ul>
+					<ul lang="zh-CN">
+						<li>我编写了<a href="/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx">应用程序策划初稿</a>。</li>
+						<li>规划的功能包括灾害应对指南、防灾清单、知识文档、副官、五种语言支持、成员管理、物品管理、计划、日记、离线地图、决策工具、食物分配和声音循环播放。</li>
+					</ul>
+					<ul lang="ja">
+						<li><a href="/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx">アプリケーション企画の初稿</a>を作成しました。</li>
+						<li>災害時の行動指針、防災チェックリスト、知識ドキュメント、副官、5言語対応、メンバー管理、所持品管理、計画、日記、オフラインマップ、意思決定ツール、食料分配、音声の繰り返し再生機能を企画しました。</li>
+					</ul>
+					<ul lang="ru">
+						<li>Я подготовил <a href="/SurvivalManager/devlog_resources/survival_manager_app_draft_plan.pptx">первичный план приложения</a>.</li>
+						<li>В план вошли инструкции на случай бедствий, контрольные списки подготовки, база знаний, помощник, поддержка пяти языков, управление участниками и инвентарём, планы, дневник, офлайн-карты, инструменты принятия решений, распределение еды и повтор звука.</li>
+					</ul>
+				</div>
+			</section>
 
-function changeLanguage(requestedLang) {
-  const select = document.getElementById('lang-select');
-  const queryLang = new URLSearchParams(window.location.search).get('lang');
-  const requested = requestedLang || select.value || queryLang || 'ko';
-  const lang = localeInfo[requested] ? requested : 'ko';
-  select.value = lang;
-  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
-  document.title = localeInfo[lang].title;
-  document.getElementById('theme-toggle').textContent = document.body.getAttribute('data-theme') === 'dark' ? localeInfo[lang].light : localeInfo[lang].dark;
-  const source = document.getElementById('devlog-source').textContent;
-  document.getElementById('devlog-content').innerHTML = renderMarkdown(localizedMarkdown(source, lang));
-}
+			<section class="entry">
+				<h2>2018-12-10</h2>
+				<img loading="lazy" decoding="async" alt="2018-12-10" src="/SurvivalManager/devlog_resources/2018_12_10.png">
+				<div class="i18n">
+					<ul lang="ko"><li>로비 화면 UI를 구상하였습니다.</li></ul>
+					<ul lang="en"><li>I designed a concept for the lobby screen UI.</li></ul>
+					<ul lang="zh-CN"><li>我构思了大厅界面的设计。</li></ul>
+					<ul lang="ja"><li>ロビー画面の UI を構想しました。</li></ul>
+					<ul lang="ru"><li>Я разработал концепцию интерфейса главного экрана.</li></ul>
+				</div>
+			</section>
 
-const urlLang = new URLSearchParams(window.location.search).get('lang');
-changeLanguage(urlLang || 'ko');
-</script>
+			<section class="entry">
+				<h2>2020-03-07</h2>
+				<img loading="lazy" decoding="async" alt="2020-03-07" src="/SurvivalManager/devlog_resources/2020_03_07.png">
+				<div class="i18n">
+					<ul lang="ko"><li>로비 화면 UI를 구상하였습니다.</li></ul>
+					<ul lang="en"><li>I designed a concept for the lobby screen UI.</li></ul>
+					<ul lang="zh-CN"><li>我构思了大厅界面的设计。</li></ul>
+					<ul lang="ja"><li>ロビー画面の UI を構想しました。</li></ul>
+					<ul lang="ru"><li>Я разработал концепцию интерфейса главного экрана.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2020-03-08</h2>
+				<img loading="lazy" decoding="async" alt="2020-03-08" src="/SurvivalManager/devlog_resources/2020_03_08.png">
+				<div class="i18n">
+					<ul lang="ko"><li><a href="https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights">명일방주</a> UI를 참고하여 <a href="/SurvivalManager/devlog_resources/2020_03_08.zip">새로운 UI</a>를 구상하였습니다.</li></ul>
+					<ul lang="en"><li>I developed a <a href="/SurvivalManager/devlog_resources/2020_03_08.zip">new UI concept</a>, using the interface of <a href="https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights">Arknights</a> as a reference.</li></ul>
+					<ul lang="zh-CN"><li>我参考了<a href="https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights">明日方舟</a>的界面，构思了<a href="/SurvivalManager/devlog_resources/2020_03_08.zip">新界面</a>。</li></ul>
+					<ul lang="ja"><li><a href="https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights">アークナイツ</a>の UI を参考に、<a href="/SurvivalManager/devlog_resources/2020_03_08.zip">新しい UI</a>を構想しました。</li></ul>
+					<ul lang="ru"><li>Я разработал концепцию <a href="/SurvivalManager/devlog_resources/2020_03_08.zip">нового интерфейса</a>, взяв за образец интерфейс <a href="https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights">Arknights</a>.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2021-06-06</h2>
+				<img loading="lazy" decoding="async" alt="2021-06-06" src="/SurvivalManager/devlog_resources/2021_06_06.png">
+				<div class="i18n">
+					<ul lang="ko"><li>GitHub에 SurvivalManager 레포지토리를 생성하였습니다.</li></ul>
+					<ul lang="en"><li>I created the SurvivalManager repository on GitHub.</li></ul>
+					<ul lang="zh-CN"><li>我在 GitHub 上创建了 SurvivalManager 仓库。</li></ul>
+					<ul lang="ja"><li>GitHub に SurvivalManager リポジトリを作成しました。</li></ul>
+					<ul lang="ru"><li>Я создал репозиторий SurvivalManager на GitHub.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2021-07-26</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>로비(Lobby) 기능이 추가되었습니다.</li><li>설정(Option) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>The Lobby feature was added.</li><li>The Options feature was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了大厅（Lobby）功能。</li><li>新增了设置（Option）功能。</li></ul>
+					<ul lang="ja"><li>ロビー（Lobby）機能を追加しました。</li><li>設定（Option）機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлена функция лобби (Lobby).</li><li>Добавлена функция настроек (Option).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2021-08-22</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>영어, 한국어, 일본어, 중국어, 러시아어에 대한 strings.xml 분리 작업을 수행하였습니다.</li></ul>
+					<ul lang="en"><li>I separated the <code>strings.xml</code> resources for English, Korean, Japanese, Chinese, and Russian.</li></ul>
+					<ul lang="zh-CN"><li>我将英语、韩语、日语、中文和俄语的 <code>strings.xml</code> 资源文件分别整理。</li></ul>
+					<ul lang="ja"><li>英語、韓国語、日本語、中国語、ロシア語の <code>strings.xml</code> を分離しました。</li></ul>
+					<ul lang="ru"><li>Я разделил ресурсы <code>strings.xml</code> для английского, корейского, японского, китайского и русского языков.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2021-08-25</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>계획(Plans) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>The Plans feature was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了计划（Plans）功能。</li></ul>
+					<ul lang="ja"><li>計画（Plans）機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлена функция планов (Plans).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2024-11-10</h2>
+				<img loading="lazy" decoding="async" alt="2024-11-10" src="/SurvivalManager/devlog_resources/2024_11_10.png">
+				<div class="i18n">
+					<ul lang="ko"><li><a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/">Helldivers 2</a> UI를 참고하여 <a href="https://app.diagrams.net/">Draw.io</a>를 이용한 <a href="/SurvivalManager/devlog_resources/2024_11_10.drawio">새로운 UI</a>를 구상하였습니다. (UI 파일은 Draw.io에서 열람할 수 있습니다)</li></ul>
+					<ul lang="en"><li>I designed a <a href="/SurvivalManager/devlog_resources/2024_11_10.drawio">new UI</a> in <a href="https://app.diagrams.net/">Draw.io</a>, taking inspiration from the UI of <a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/">Helldivers 2</a>. (The UI file can be opened in Draw.io.)</li></ul>
+					<ul lang="zh-CN"><li>我参考了<a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/">绝地潜兵 2</a>的界面，使用 <a href="https://app.diagrams.net/">Draw.io</a> 构思了<a href="/SurvivalManager/devlog_resources/2024_11_10.drawio">新界面</a>。（该 UI 文件可在 Draw.io 中打开。）</li></ul>
+					<ul lang="ja"><li><a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/">HELLDIVERS 2</a>の UI を参考に、<a href="https://app.diagrams.net/">Draw.io</a>を使って<a href="/SurvivalManager/devlog_resources/2024_11_10.drawio">新しい UI</a>を構想しました。（UI ファイルは Draw.io で開けます。）</li></ul>
+					<ul lang="ru"><li>Вдохновившись интерфейсом <a href="https://store.steampowered.com/app/553850/HELLDIVERS_2/">Helldivers 2</a>, я разработал <a href="/SurvivalManager/devlog_resources/2024_11_10.drawio">новый интерфейс</a> с помощью <a href="https://app.diagrams.net/">Draw.io</a>. (Файл UI можно открыть в Draw.io.)</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-01-10</h2>
+				<img loading="lazy" decoding="async" alt="2025-01-10 (1)" src="/SurvivalManager/devlog_resources/2025_01_10_001.png">
+				<img loading="lazy" decoding="async" alt="2025-01-10 (2)" src="/SurvivalManager/devlog_resources/2025_01_10_002.png">
+				<img loading="lazy" decoding="async" alt="2025-01-10 (3)" src="/SurvivalManager/devlog_resources/2025_01_10_003.png">
+				<div class="i18n">
+					<ul lang="ko"><li>Black 캐릭터를 구상하였습니다.</li></ul>
+					<ul lang="en"><li>I conceptualized the Black character.</li></ul>
+					<ul lang="zh-CN"><li>我构思了 Black 角色。</li></ul>
+					<ul lang="ja"><li>Black キャラクターを構想しました。</li></ul>
+					<ul lang="ru"><li>Я разработал концепцию персонажа Black.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-01-28</h2>
+				<img loading="lazy" decoding="async" alt="2025-01-28 (1)" src="/SurvivalManager/devlog_resources/2025_01_28_001.png">
+				<img loading="lazy" decoding="async" alt="2025-01-28 (2)" src="/SurvivalManager/devlog_resources/2025_01_28_002.png">
+				<img loading="lazy" decoding="async" alt="2025-01-28 (3)" src="/SurvivalManager/devlog_resources/2025_01_28_003.png">
+				<div class="i18n">
+					<ul lang="ko"><li>White 캐릭터를 구상하였습니다.</li></ul>
+					<ul lang="en"><li>I conceptualized the White character.</li></ul>
+					<ul lang="zh-CN"><li>我构思了 White 角色。</li></ul>
+					<ul lang="ja"><li>White キャラクターを構想しました。</li></ul>
+					<ul lang="ru"><li>Я разработал концепцию персонажа White.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-02-01</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>부관(Aide) 시스템이 개발되었습니다.</li></ul>
+					<ul lang="en"><li>The Aide system was developed.</li></ul>
+					<ul lang="zh-CN"><li>开发了副官（Aide）系统。</li></ul>
+					<ul lang="ja"><li>副官（Aide）システムを開発しました。</li></ul>
+					<ul lang="ru"><li>Разработана система помощника (Aide).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-02-12</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>전 세계 18,297건의 라디오 주파수 정보를 수집하였습니다.</li></ul>
+					<ul lang="en"><li>I collected 18,297 radio-frequency records from around the world.</li></ul>
+					<ul lang="zh-CN"><li>我收集了全球 18,297 条无线电频率信息。</li></ul>
+					<ul lang="ja"><li>世界各地のラジオ周波数情報を18,297件収集しました。</li></ul>
+					<ul lang="ru"><li>Я собрал 18 297 записей о радиочастотах со всего мира.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-02-17</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>TIP 기능이 추가되었습니다.</li><li>24절기 구분 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>The Tips feature was added.</li><li>The feature for identifying the 24 solar terms was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了提示（TIP）功能。</li><li>新增了二十四节气区分功能。</li></ul>
+					<ul lang="ja"><li>TIP 機能を追加しました。</li><li>二十四節気の区分機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлена функция советов (TIP).</li><li>Добавлена функция определения 24 солнечных периодов.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-03-01</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>작물 재배 관련 지식을 얻기 위해 <a href="https://smartfarm.iscu.ac.kr/">서울사이버대학교 - AI 스마트팜학과</a>에 편입학하였습니다.</li></ul>
+					<ul lang="en"><li>I transferred to <a href="https://smartfarm.iscu.ac.kr/">Seoul Cyber University’s AI Smart Farm Department</a> to learn about crop cultivation.</li></ul>
+					<ul lang="zh-CN"><li>为了学习作物种植相关知识，我转入了<a href="https://smartfarm.iscu.ac.kr/">首尔网络大学 AI 智能农场学系</a>。</li></ul>
+					<ul lang="ja"><li>作物栽培の知識を学ぶため、<a href="https://smartfarm.iscu.ac.kr/">ソウルサイバー大学 AI スマートファーム学科</a>に編入しました。</li></ul>
+					<ul lang="ru"><li>Чтобы получить знания о выращивании сельскохозяйственных культур, я перевёлся на факультет AI Smart Farm <a href="https://smartfarm.iscu.ac.kr/">Сеульского киберуниверситета</a>.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-04-07</h2>
+				<img loading="lazy" decoding="async" alt="2025-04-07" src="/SurvivalManager/devlog_resources/2025_04_07.png">
+				<div class="i18n">
+					<ul lang="ko"><li>Gray 캐릭터를 구상하였습니다.</li></ul>
+					<ul lang="en"><li>I conceptualized the Gray character.</li></ul>
+					<ul lang="zh-CN"><li>我构思了 Gray 角色。</li></ul>
+					<ul lang="ja"><li>Gray キャラクターを構想しました。</li></ul>
+					<ul lang="ru"><li>Я разработал концепцию персонажа Gray.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-05-15</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>숫자, 영문, 기호, 한글, 일본어, 키릴 알파벳, 관용구에 대한 모스 부호 정보를 수집하였습니다.</li></ul>
+					<ul lang="en"><li>I collected Morse code data for numbers, Latin letters, symbols, Hangul, Japanese characters, Cyrillic letters, and common phrases.</li></ul>
+					<ul lang="zh-CN"><li>我收集了数字、拉丁字母、符号、韩文、日文、西里尔字母和惯用语的摩斯电码资料。</li></ul>
+					<ul lang="ja"><li>数字、英字、記号、ハングル、日本語、キリル文字、慣用句のモールス信号情報を収集しました。</li></ul>
+					<ul lang="ru"><li>Я собрал данные азбуки Морзе для цифр, латинских букв, символов, хангыль, японских знаков, кириллицы и распространённых выражений.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-07-18</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>아이콘(Icon) 선택 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>The Icon selection feature was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了图标（Icon）选择功能。</li></ul>
+					<ul lang="ja"><li>アイコン（Icon）の選択機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлена функция выбора значков (Icon).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-07-29</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>애플리케이션 대표 BGM <a href="/resources/files/music/suno/Time%20to%20plan.mp3">Time to plan</a>이 작곡되었습니다.</li></ul>
+					<ul lang="en"><li>The app’s main BGM, <a href="/resources/files/music/suno/Time%20to%20plan.mp3">Time to plan</a>, was composed.</li></ul>
+					<ul lang="zh-CN"><li>应用程序的代表背景音乐 <a href="/resources/files/music/suno/Time%20to%20plan.mp3">Time to plan</a> 已创作完成。</li></ul>
+					<ul lang="ja"><li>アプリのメイン BGM <a href="/resources/files/music/suno/Time%20to%20plan.mp3">Time to plan</a>を作曲しました。</li></ul>
+					<ul lang="ru"><li>Написана главная музыкальная тема приложения <a href="/resources/files/music/suno/Time%20to%20plan.mp3">Time to plan</a>.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-07-31</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>멤버 정보 입력(Member Information) 창이 개발되었습니다.</li></ul>
+					<ul lang="en"><li>The Member Information window was developed.</li></ul>
+					<ul lang="zh-CN"><li>开发了成员信息（Member Information）窗口。</li></ul>
+					<ul lang="ja"><li>メンバー情報（Member Information）画面を開発しました。</li></ul>
+					<ul lang="ru"><li>Разработано окно сведений об участнике (Member Information).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-10-02</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>Gray 테마곡 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3">Time to plan - Gray</a>가 작곡되었습니다.</li></ul>
+					<ul lang="en"><li>The Gray theme song, <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3">Time to plan - Gray</a>, was composed.</li></ul>
+					<ul lang="zh-CN"><li>Gray 主题曲 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3">Time to plan - Gray</a> 已创作完成。</li></ul>
+					<ul lang="ja"><li>Gray のテーマ曲 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3">Time to plan - Gray</a>を作曲しました。</li></ul>
+					<ul lang="ru"><li>Написана музыкальная тема Gray — <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Gray.mp3">Time to plan - Gray</a>.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-10-06</h2>
+				<div class="i18n">
+					<ul lang="ko">
+						<li>White 테마곡 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3">Time to plan - White</a>가 작곡되었습니다.</li>
+						<li>Black 테마곡 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3">Time to plan - Black</a>이 작곡되었습니다.</li>
+					</ul>
+					<ul lang="en">
+						<li>The White theme song, <a href="/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3">Time to plan - White</a>, was composed.</li>
+						<li>The Black theme song, <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3">Time to plan - Black</a>, was composed.</li>
+					</ul>
+					<ul lang="zh-CN">
+						<li>White 主题曲 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3">Time to plan - White</a> 已创作完成。</li>
+						<li>Black 主题曲 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3">Time to plan - Black</a> 已创作完成。</li>
+					</ul>
+					<ul lang="ja">
+						<li>White のテーマ曲 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3">Time to plan - White</a>を作曲しました。</li>
+						<li>Black のテーマ曲 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3">Time to plan - Black</a>を作曲しました。</li>
+					</ul>
+					<ul lang="ru">
+						<li>Написана музыкальная тема White — <a href="/resources/files/music/suno/Time%20to%20plan%20-%20White.mp3">Time to plan - White</a>.</li>
+						<li>Написана музыкальная тема Black — <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Black.mp3">Time to plan - Black</a>.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-10-21</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>부르기만 해도 재난 대비 TIP을 얻을 수 있도록, 애플리케이션 대표 BGM에 가사를 입힌 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3">Time to plan - Male vocal</a>이 작곡되었습니다.</li></ul>
+					<ul lang="en"><li>To make disaster-preparedness tips accessible by singing along, I composed a vocal version of the app’s main BGM: <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3">Time to plan - Male vocal</a>.</li></ul>
+					<ul lang="zh-CN"><li>为了让用户只需跟唱就能获得防灾提示，我为应用程序主背景音乐填词并创作了人声版：<a href="/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3">Time to plan - Male vocal</a>。</li></ul>
+					<ul lang="ja"><li>歌うだけで防災のヒントを得られるよう、アプリのメイン BGM に歌詞を付けた <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3">Time to plan - Male vocal</a>を作曲しました。</li></ul>
+					<ul lang="ru"><li>Чтобы пользователи могли получать советы по подготовке к бедствиям, просто подпевая, я создал вокальную версию главной темы приложения: <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Male%20vocal.mp3">Time to plan - Male vocal</a>.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-10-28</h2>
+				<div class="i18n">
+					<ul lang="ko">
+						<li>Black 테마곡에 가사를 입힌 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3">Time to plan - Black Voice</a>가 작곡되었습니다.</li>
+						<li>White 테마곡에 가사를 입힌 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3">Time to plan - White Voice</a>가 작곡되었습니다.</li>
+					</ul>
+					<ul lang="en">
+						<li>A vocal version of the Black theme song, <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3">Time to plan - Black Voice</a>, was composed.</li>
+						<li>A vocal version of the White theme song, <a href="/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3">Time to plan - White Voice</a>, was composed.</li>
+					</ul>
+					<ul lang="zh-CN">
+						<li>为 Black 主题曲填词创作的人声版 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3">Time to plan - Black Voice</a> 已完成。</li>
+						<li>为 White 主题曲填词创作的人声版 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3">Time to plan - White Voice</a> 已完成。</li>
+					</ul>
+					<ul lang="ja">
+						<li>Black のテーマ曲に歌詞を付けた <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3">Time to plan - Black Voice</a>を作曲しました。</li>
+						<li>White のテーマ曲に歌詞を付けた <a href="/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3">Time to plan - White Voice</a>を作曲しました。</li>
+					</ul>
+					<ul lang="ru">
+						<li>Создана вокальная версия темы Black — <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Black%20Voice.mp3">Time to plan - Black Voice</a>.</li>
+						<li>Создана вокальная версия темы White — <a href="/resources/files/music/suno/Time%20to%20plan%20-%20White%20Voice.mp3">Time to plan - White Voice</a>.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-10-30</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>Gray 테마곡에 가사를 입힌 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3">Time to plan - Gray Voice</a>가 작곡되었습니다.</li></ul>
+					<ul lang="en"><li>A vocal version of the Gray theme song, <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3">Time to plan - Gray Voice</a>, was composed.</li></ul>
+					<ul lang="zh-CN"><li>为 Gray 主题曲填词创作的人声版 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3">Time to plan - Gray Voice</a> 已完成。</li></ul>
+					<ul lang="ja"><li>Gray のテーマ曲に歌詞を付けた <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3">Time to plan - Gray Voice</a>を作曲しました。</li></ul>
+					<ul lang="ru"><li>Создана вокальная версия темы Gray — <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Gray%20Voice.mp3">Time to plan - Gray Voice</a>.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-11-02</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>멤버 장비(Member Equipment) 창이 개발되었습니다.</li></ul>
+					<ul lang="en"><li>The Member Equipment window was developed.</li></ul>
+					<ul lang="zh-CN"><li>开发了成员装备（Member Equipment）窗口。</li></ul>
+					<ul lang="ja"><li>メンバー装備（Member Equipment）画面を開発しました。</li></ul>
+					<ul lang="ru"><li>Разработано окно снаряжения участника (Member Equipment).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-11-05</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>멤버 소지품(Member Inventory) 창이 개발되었습니다.</li></ul>
+					<ul lang="en"><li>The Member Inventory window was developed.</li></ul>
+					<ul lang="zh-CN"><li>开发了成员物品（Member Inventory）窗口。</li></ul>
+					<ul lang="ja"><li>メンバー所持品（Member Inventory）画面を開発しました。</li></ul>
+					<ul lang="ru"><li>Разработано окно инвентаря участника (Member Inventory).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-11-07</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>물품별 카테고리 분류 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>Item categorization was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了物品分类功能。</li></ul>
+					<ul lang="ja"><li>アイテムのカテゴリ分類機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлена категоризация предметов.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-11-09</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>멤버 소지품 창에 물품 등록이 가능하게 되었습니다.</li></ul>
+					<ul lang="en"><li>Items can now be registered in the Member Inventory window.</li></ul>
+					<ul lang="zh-CN"><li>现在可以在成员物品窗口中登记物品。</li></ul>
+					<ul lang="ja"><li>メンバー所持品画面でアイテムを登録できるようになりました。</li></ul>
+					<ul lang="ru"><li>В окне инвентаря участника появилась возможность регистрировать предметы.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-11-11</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>물품 상세 정보(Item Information) 창이 개발되었습니다.</li></ul>
+					<ul lang="en"><li>The Item Information window was developed.</li></ul>
+					<ul lang="zh-CN"><li>开发了物品详细信息（Item Information）窗口。</li></ul>
+					<ul lang="ja"><li>アイテム詳細情報（Item Information）画面を開発しました。</li></ul>
+					<ul lang="ru"><li>Разработано окно сведений о предмете (Item Information).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-11-13</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>물품에 대한 메타 정보 입력이 가능하게 되었습니다.</li></ul>
+					<ul lang="en"><li>Metadata can now be entered for items.</li></ul>
+					<ul lang="zh-CN"><li>现在可以为物品填写元数据。</li></ul>
+					<ul lang="ja"><li>アイテムのメタデータを入力できるようになりました。</li></ul>
+					<ul lang="ru"><li>Добавлена возможность вводить метаданные предметов.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-11-23</h2>
+				<div class="i18n">
+					<ul lang="ko">
+						<li>Brown 테마곡 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3">Time to plan - Brown</a>이 작곡되었습니다.</li>
+						<li>Brown 테마곡에 가사를 입힌 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3">Time to plan - Brown Voice</a>가 작곡되었습니다.</li>
+					</ul>
+					<ul lang="en">
+						<li>The Brown theme song, <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3">Time to plan - Brown</a>, was composed.</li>
+						<li>A vocal version of the Brown theme song, <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3">Time to plan - Brown Voice</a>, was composed.</li>
+					</ul>
+					<ul lang="zh-CN">
+						<li>Brown 主题曲 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3">Time to plan - Brown</a> 已创作完成。</li>
+						<li>为 Brown 主题曲填词创作的人声版 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3">Time to plan - Brown Voice</a> 已完成。</li>
+					</ul>
+					<ul lang="ja">
+						<li>Brown のテーマ曲 <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3">Time to plan - Brown</a>を作曲しました。</li>
+						<li>Brown のテーマ曲に歌詞を付けた <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3">Time to plan - Brown Voice</a>を作曲しました。</li>
+					</ul>
+					<ul lang="ru">
+						<li>Написана музыкальная тема Brown — <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Brown.mp3">Time to plan - Brown</a>.</li>
+						<li>Создана вокальная версия темы Brown — <a href="/resources/files/music/suno/Time%20to%20plan%20-%20Brown%20Vioce.mp3">Time to plan - Brown Voice</a>.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-11-25</h2>
+				<div class="i18n">
+					<ul lang="ko"><li><a href="https://www.health.kr/">약학정보원(Korea Pharmaceutical Information Center)</a>의 <a href="https://www.health.kr/drug-info/kpic-classification">KPIC 약효분류</a>법을 바탕으로 의약품 메타데이터에 원료 기입이 가능하게 되었습니다.</li></ul>
+					<ul lang="en"><li>Drug ingredient information can now be entered in medication metadata based on the <a href="https://www.health.kr/drug-info/kpic-classification">KPIC drug classification</a> published by the <a href="https://www.health.kr/">Korea Pharmaceutical Information Center</a>.</li></ul>
+					<ul lang="zh-CN"><li>根据<a href="https://www.health.kr/">韩国药学信息院</a>发布的 <a href="https://www.health.kr/drug-info/kpic-classification">KPIC 药效分类</a>，现在可以在药品元数据中填写成分信息。</li></ul>
+					<ul lang="ja"><li><a href="https://www.health.kr/">韓国薬学情報院</a>の <a href="https://www.health.kr/drug-info/kpic-classification">KPIC 薬効分類</a>に基づき、医薬品メタデータに成分を入力できるようになりました。</li></ul>
+					<ul lang="ru"><li>На основе <a href="https://www.health.kr/drug-info/kpic-classification">классификации лекарств KPIC</a>, опубликованной <a href="https://www.health.kr/">Корейским центром фармацевтической информации</a>, добавлен ввод действующих веществ в метаданные лекарств.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-12-10</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>휴대폰(420dpi), 태블릿(7 inch, 600dp), 폴더블 폰(650dp), 태블릿(10 inch, 720dp), 데스크탑(960dp) 화면을 지원하게 되었습니다.</li></ul>
+					<ul lang="en"><li>The app added support for phones (420 dpi), 7-inch tablets (600 dp), foldable phones (650 dp), 10-inch tablets (720 dp), and desktops (960 dp).</li></ul>
+					<ul lang="zh-CN"><li>应用程序新增了对手机（420 dpi）、7 英寸平板（600 dp）、折叠屏手机（650 dp）、10 英寸平板（720 dp）和桌面设备（960 dp）的适配。</li></ul>
+					<ul lang="ja"><li>スマートフォン（420dpi）、7インチタブレット（600dp）、折りたたみスマートフォン（650dp）、10インチタブレット（720dp）、デスクトップ（960dp）に対応しました。</li></ul>
+					<ul lang="ru"><li>Добавлена поддержка телефонов (420 dpi), планшетов 7 дюймов (600 dp), складных телефонов (650 dp), планшетов 10 дюймов (720 dp) и настольных устройств (960 dp).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-12-19</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>계획(Plans) 화면을 재구성하였습니다.</li><li>피난 계획 작성이 가능하게 되었습니다.</li></ul>
+					<ul lang="en"><li>The Plans screen was redesigned.</li><li>Users can now create evacuation plans.</li></ul>
+					<ul lang="zh-CN"><li>重新设计了计划（Plans）界面。</li><li>现在可以制定疏散计划。</li></ul>
+					<ul lang="ja"><li>計画（Plans）画面を再構成しました。</li><li>避難計画を作成できるようになりました。</li></ul>
+					<ul lang="ru"><li>Переработан экран планов (Plans).</li><li>Добавлена возможность составлять планы эвакуации.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-12-25</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>자원 조회(Resource Inquiry) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>The Resource Inquiry feature was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了资源查询（Resource Inquiry）功能。</li></ul>
+					<ul lang="ja"><li>資源照会（Resource Inquiry）機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлена функция просмотра ресурсов (Resource Inquiry).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2025-12-29</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>인터넷을 이용한 P2P 채팅 기능이 추가되었습니다.</li><li>2004년 01월 06일부터 2037년 12월 21일까지의 24절기 날짜 데이터를 수집하였습니다.</li></ul>
+					<ul lang="en"><li>Internet-based P2P chat was added.</li><li>I collected date data for the 24 solar terms from January 6, 2004, through December 21, 2037.</li></ul>
+					<ul lang="zh-CN"><li>新增了通过互联网进行的 P2P 聊天功能。</li><li>我收集了 2004 年 1 月 6 日至 2037 年 12 月 21 日的二十四节气日期数据。</li></ul>
+					<ul lang="ja"><li>インターネットを利用した P2P チャット機能を追加しました。</li><li>2004年1月6日から2037年12月21日までの二十四節気の日付データを収集しました。</li></ul>
+					<ul lang="ru"><li>Добавлен P2P-чат через интернет.</li><li>Я собрал данные о датах 24 солнечных периодов с 6 января 2004 года по 21 декабря 2037 года.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-01-05</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>인터넷을 이용한 P2P 채팅에서 파일 첨부가 가능하게 되었습니다.</li></ul>
+					<ul lang="en"><li>File attachments became available in internet-based P2P chat.</li></ul>
+					<ul lang="zh-CN"><li>互联网 P2P 聊天现已支持附件。</li></ul>
+					<ul lang="ja"><li>インターネット経由の P2P チャットでファイルを添付できるようになりました。</li></ul>
+					<ul lang="ru"><li>В P2P-чате через интернет появилась возможность прикреплять файлы.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-02-03</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>지식 문서함(Knowledge) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>The Knowledge library feature was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了知识文档库（Knowledge）功能。</li></ul>
+					<ul lang="ja"><li>知識ドキュメント（Knowledge）機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлена библиотека знаний (Knowledge).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-02-05</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>매듭법(Knots), 비누(Soap), 일일 권장 섭취량(Daily Recommended Nutrient Intake), 플라스틱 병 전구(Plastic Bottle Bulb), 양초(Candle), 정수(Water Purification), 수원지(Water Source) 지식이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>Knowledge articles were added on knots, soap, daily recommended nutrient intake, plastic-bottle bulbs, candles, water purification, and water sources.</li></ul>
+					<ul lang="zh-CN"><li>新增了有关绳结、肥皂、每日建议营养摄入量、塑料瓶灯泡、蜡烛、水净化和水源的知识文档。</li></ul>
+					<ul lang="ja"><li>結び方、石けん、1日の推奨栄養摂取量、ペットボトル電球、ろうそく、水の浄化、水源に関する知識を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлены материалы об узлах, мыле, рекомендуемом суточном потреблении питательных веществ, лампах из пластиковых бутылок, свечах, очистке воды и источниках воды.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-02-07</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>식품 보존(Food Preservation), 응급처치(First aid) 지식이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>Knowledge articles on food preservation and first aid were added.</li></ul>
+					<ul lang="zh-CN"><li>新增了食品保存和急救知识文档。</li></ul>
+					<ul lang="ja"><li>食品保存と応急処置の知識を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлены материалы о хранении продуктов и первой помощи.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-02-10</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>지식 문서 다운로드 기능이 추가되었습니다.</li><li>지식 문서 뷰어에서 라이트/다크 모드를 지원합니다.</li></ul>
+					<ul lang="en"><li>Knowledge documents can now be downloaded.</li><li>The knowledge document viewer now supports light and dark modes.</li></ul>
+					<ul lang="zh-CN"><li>新增了知识文档下载功能。</li><li>知识文档查看器现已支持浅色和深色模式。</li></ul>
+					<ul lang="ja"><li>知識ドキュメントをダウンロードできるようになりました。</li><li>知識ドキュメントビューアがライトモードとダークモードに対応しました。</li></ul>
+					<ul lang="ru"><li>Добавлена возможность скачивать документы из базы знаний.</li><li>В просмотрщике документов базы знаний появились светлая и тёмная темы.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-02-18</h2>
+				<img loading="lazy" decoding="async" alt="2026-02-18 (1)" src="/SurvivalManager/devlog_resources/2026_02_18_001.png">
+				<img loading="lazy" decoding="async" alt="2026-02-18 (2)" src="/SurvivalManager/devlog_resources/2026_02_18_002.png">
+				<img loading="lazy" decoding="async" alt="2026-02-18 (3)" src="/SurvivalManager/devlog_resources/2026_02_18_003.png">
+				<div class="i18n">
+					<ul lang="ko"><li>부관(Aide) 다운로드 기능이 추가되었습니다.</li><li>White 캐릭터를 재구상하였습니다.</li></ul>
+					<ul lang="en"><li>Aide downloads were added.</li><li>I redesigned the White character concept.</li></ul>
+					<ul lang="zh-CN"><li>新增了副官（Aide）下载功能。</li><li>重新构思了 White 角色。</li></ul>
+					<ul lang="ja"><li>副官（Aide）のダウンロード機能を追加しました。</li><li>White キャラクターを再構想しました。</li></ul>
+					<ul lang="ru"><li>Добавлена возможность скачивать помощников (Aide).</li><li>Я переработал концепцию персонажа White.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-02-22</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>아이콘(Icon) 다운로드 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>Icon downloads were added.</li></ul>
+					<ul lang="zh-CN"><li>新增了图标（Icon）下载功能。</li></ul>
+					<ul lang="ja"><li>アイコン（Icon）のダウンロード機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлена возможность скачивать значки (Icon).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-03-25</h2>
+				<div class="i18n">
+					<ul lang="ko">
+						<li>재난 상황 행동 요령(Disaster Situation) 기능이 추가되었습니다.</li>
+						<li>화산(Volcanic eruption), 폭염(Heat wave), 가뭄(Drought), 쓰나미(Tsunami), 조수(Tide), 폭우(Downpour), 홍수(Flood), 적조(Red tide), 녹조(Green tide), 폭설(Heavy snowfall), 한파(Cold wave), 태풍(Typhoon), 강풍(Strong wind), 낙뢰(Lightning strike), 황사(Yellow dust), 지진(Earthquake), 산사태(Landslide), 우주 전파 재난(Space weather disaster), 자연 우주 물체 추락(Natural space object impact)에 대한 자연 재해 행동 요령이 추가되었습니다.</li>
+						<li>해파리 대량 출현(Mass jellyfish occurrence)에 대한 생활 안전 요령이 추가되었습니다.</li>
+					</ul>
+					<ul lang="en">
+						<li>The Disaster Situation guidance feature was added.</li>
+						<li>Natural-disaster guidance was added for volcanic eruptions, heat waves, droughts, tsunamis, tides, downpours, floods, red tides, green tides, heavy snow, cold waves, typhoons, strong winds, lightning strikes, yellow dust, earthquakes, landslides, space-weather disasters, and natural space-object impacts.</li>
+						<li>Everyday-safety guidance was added for mass jellyfish occurrences.</li>
+					</ul>
+					<ul lang="zh-CN">
+						<li>新增了灾害情境应对指南（Disaster Situation）功能。</li>
+						<li>新增了针对火山喷发、热浪、干旱、海啸、潮汐、暴雨、洪水、赤潮、绿潮、暴雪、寒潮、台风、强风、雷击、沙尘、地震、山体滑坡、空间天气灾害和自然天体坠落的自然灾害应对指南。</li>
+						<li>新增了针对水母大量出现的生活安全指南。</li>
+					</ul>
+					<ul lang="ja">
+						<li>災害時の行動指針（Disaster Situation）機能を追加しました。</li>
+						<li>火山噴火、熱波、干ばつ、津波、潮汐、豪雨、洪水、赤潮、緑潮、大雪、寒波、台風、強風、落雷、黄砂、地震、土砂災害、宇宙天気災害、自然天体の落下に関する自然災害時の行動指針を追加しました。</li>
+						<li>クラゲの大量発生に関する生活安全の行動指針を追加しました。</li>
+					</ul>
+					<ul lang="ru">
+						<li>Добавлены инструкции на случай бедствий (Disaster Situation).</li>
+						<li>Добавлены инструкции по природным бедствиям: извержения вулканов, жара, засуха, цунами, приливы, ливни, наводнения, красные и зелёные приливы, сильный снегопад, холод, тайфуны, сильный ветер, удары молнии, жёлтая пыль, землетрясения, оползни, космическая погода и падение природных космических объектов.</li>
+						<li>Добавлены рекомендации по безопасности при массовом появлении медуз.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-03-26</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>경보(Alert), 대피(Evacuation), 폭격(Shelling), 드론 공습(UAV Strike)에 대한 전쟁 행동 요령이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>Wartime guidance was added for alerts, evacuation, shelling, and UAV strikes.</li></ul>
+					<ul lang="zh-CN"><li>新增了针对警报、疏散、炮击和无人机袭击的战时应对指南。</li></ul>
+					<ul lang="ja"><li>警報、避難、砲撃、無人機攻撃に関する戦時の行動指針を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлены инструкции на случай военных действий: тревога, эвакуация, обстрел и удар БПЛА.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-04-07</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>건물 붕괴(Building Collapse), 다중 운집 인파 사고(Crowd Crush)에 대한 사회 재난 행동 요령이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>Social-disaster guidance was added for building collapses and crowd crush incidents.</li></ul>
+					<ul lang="zh-CN"><li>新增了针对建筑物倒塌和人群拥挤踩踏事故的社会灾害应对指南。</li></ul>
+					<ul lang="ja"><li>建物倒壊や群衆事故に関する社会災害時の行動指針を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлены инструкции при социальных бедствиях: обрушение зданий и давка в толпе.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-04-24</h2>
+				<div class="i18n">
+					<ul lang="ko">
+						<li>화재(Fire), 테러(Terrorism), 가스 사고(Gas Accident), 전기 사고(Electrical Accident)에 대한 사회 재난 행동 요령이 추가되었습니다.</li>
+						<li>산행 안전 수칙(Climbing Accident), 응급처치(First aid)에 대한 생활 안전 요령이 추가되었습니다.</li>
+					</ul>
+					<ul lang="en">
+						<li>Social-disaster guidance was added for fires, terrorism, gas accidents, and electrical accidents.</li>
+						<li>Everyday-safety guidance was added for hiking accidents and first aid.</li>
+					</ul>
+					<ul lang="zh-CN">
+						<li>新增了针对火灾、恐怖袭击、燃气事故和电气事故的社会灾害应对指南。</li>
+						<li>新增了针对登山事故和急救的生活安全指南。</li>
+					</ul>
+					<ul lang="ja">
+						<li>火災、テロ、ガス事故、電気事故に関する社会災害時の行動指針を追加しました。</li>
+						<li>登山時の事故や応急処置に関する生活安全の行動指針を追加しました。</li>
+					</ul>
+					<ul lang="ru">
+						<li>Добавлены инструкции при социальных бедствиях: пожары, терроризм, аварии с газом и электричеством.</li>
+						<li>Добавлены рекомендации по безопасности при походах в горы и по первой помощи.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-04-29</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>재난 대비 체크리스트(Prepare Disaster) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>The Prepare Disaster checklist feature was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了防灾准备清单（Prepare Disaster）功能。</li></ul>
+					<ul lang="ja"><li>防災チェックリスト（Prepare Disaster）機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлен контрольный список подготовки к бедствиям (Prepare Disaster).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-04-30</h2>
+				<img loading="lazy" decoding="async" alt="2026-04-30 (1)" src="/SurvivalManager/devlog_resources/2026_04_30_001.png">
+				<img loading="lazy" decoding="async" alt="2026-04-30 (2)" src="/SurvivalManager/devlog_resources/2026_04_30_002.png">
+				<img loading="lazy" decoding="async" alt="2026-04-30 (3)" src="/SurvivalManager/devlog_resources/2026_04_30_003.png">
+				<div class="i18n">
+					<ul lang="ko"><li>Black 캐릭터를 재구상하였습니다.</li></ul>
+					<ul lang="en"><li>I redesigned the Black character concept.</li></ul>
+					<ul lang="zh-CN"><li>重新构思了 Black 角色。</li></ul>
+					<ul lang="ja"><li>Black キャラクターを再構想しました。</li></ul>
+					<ul lang="ru"><li>Я переработал концепцию персонажа Black.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-05-02</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>부관(Aide) 일러스트 전체 화면 보기 기능이 추가되었습니다.</li><li>도구(Utility) 기능이 추가되었습니다.</li><li>의사결정 도구에 주사위(Dice) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>Full-screen viewing was added for Aide illustrations.</li><li>The Utility tools section was added.</li><li>A Dice feature was added to the decision-making tools.</li></ul>
+					<ul lang="zh-CN"><li>新增了副官（Aide）插画全屏查看功能。</li><li>新增了工具（Utility）功能。</li><li>在决策工具中新增了骰子（Dice）功能。</li></ul>
+					<ul lang="ja"><li>副官（Aide）のイラストを全画面表示する機能を追加しました。</li><li>ツール（Utility）機能を追加しました。</li><li>意思決定ツールにサイコロ（Dice）機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлен полноэкранный просмотр иллюстраций помощника (Aide).</li><li>Добавлен раздел инструментов (Utility).</li><li>В инструменты принятия решений добавлен кубик (Dice).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-05-05</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>의사결정 도구에 사다리 타기(Ghost legs) 기능이 추가되었습니다.</li><li>의사결정 도구에 제비뽑기(Drawing lots) 기능이 추가되었습니다.</li><li>의사결정 도구에 익명 투표(Anonymous vote) 기능이 추가되었습니다.</li><li>도구에 단위 변환(Unit conversion) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>A Ghost Legs feature was added to the decision-making tools.</li><li>A Drawing Lots feature was added to the decision-making tools.</li><li>An Anonymous Vote feature was added to the decision-making tools.</li><li>Unit conversion was added to the tools.</li></ul>
+					<ul lang="zh-CN"><li>在决策工具中新增了爬梯子（Ghost legs）功能。</li><li>在决策工具中新增了抽签（Drawing lots）功能。</li><li>在决策工具中新增了匿名投票（Anonymous vote）功能。</li><li>工具中新增了单位换算功能。</li></ul>
+					<ul lang="ja"><li>意思決定ツールにあみだくじ（Ghost legs）機能を追加しました。</li><li>意思決定ツールにくじ引き（Drawing lots）機能を追加しました。</li><li>意思決定ツールに匿名投票（Anonymous vote）機能を追加しました。</li><li>ツールに単位変換機能を追加しました。</li></ul>
+					<ul lang="ru"><li>В инструменты принятия решений добавлен жребий «лестница» (Ghost legs).</li><li>В инструменты принятия решений добавлен жребий (Drawing lots).</li><li>В инструменты принятия решений добавлено анонимное голосование (Anonymous vote).</li><li>В инструменты добавлен конвертер единиц измерения.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-05-08</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>생존 도구에 오프라인 지도(Offline Map) 기능이 추가되었습니다. 마커 추가, 거리 재기, 핵 폭발 시뮬레이션 도구를 사용할 수 있습니다.</li><li>생존 도구에 나침반(Compass) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>The Offline Map feature was added to survival tools. It supports adding markers, measuring distances, and simulating a nuclear explosion.</li><li>A Compass feature was added to survival tools.</li></ul>
+					<ul lang="zh-CN"><li>生存工具新增了离线地图功能，可添加标记、测量距离并使用核爆模拟工具。</li><li>生存工具新增了指南针功能。</li></ul>
+					<ul lang="ja"><li>サバイバルツールにオフラインマップ機能を追加しました。マーカーの追加、距離の測定、核爆発シミュレーションを利用できます。</li><li>サバイバルツールにコンパス機能を追加しました。</li></ul>
+					<ul lang="ru"><li>В инструменты выживания добавлена офлайн-карта: можно добавлять маркеры, измерять расстояния и моделировать ядерный взрыв.</li><li>В инструменты выживания добавлен компас.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-05-09</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>생존 도구에 소리 반복 재생기(Sound repeater) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>A Sound Repeater feature was added to survival tools.</li></ul>
+					<ul lang="zh-CN"><li>生存工具新增了声音循环播放功能。</li></ul>
+					<ul lang="ja"><li>サバイバルツールに音声リピーター機能を追加しました。</li></ul>
+					<ul lang="ru"><li>В инструменты выживания добавлен повторитель звука.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-05-14</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>생존 도구에 모스 부호(Morse code) 기능이 추가되었습니다.</li><li>조직·운영 도구에 식량 분배(Food Distribute) 기능이 추가되었습니다.</li><li>조직·운영 도구에 암호문 작성(Cipher Tool) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>A Morse Code feature was added to survival tools.</li><li>A Food Distribution feature was added to organization and operations tools.</li><li>A Cipher Tool was added to organization and operations tools.</li></ul>
+					<ul lang="zh-CN"><li>生存工具新增了摩斯电码功能。</li><li>在组织与运营工具中新增了食物分配功能。</li><li>在组织与运营工具中新增了密文编写工具。</li></ul>
+					<ul lang="ja"><li>サバイバルツールにモールス信号機能を追加しました。</li><li>組織・運営ツールに食料分配機能を追加しました。</li><li>組織・運営ツールに暗号文作成ツールを追加しました。</li></ul>
+					<ul lang="ru"><li>В инструменты выживания добавлена азбука Морзе.</li><li>В инструменты организации и управления добавлено распределение продовольствия.</li><li>В инструменты организации и управления добавлен инструмент шифрования текста.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-05-21</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>조직·운영 도구에 환자 격리 관리(Patient Isolation Management) 기능이 추가되었습니다.</li><li>조직·운영 도구에 배급표(Ration Ticket) 기능이 추가되었습니다.</li><li>도구에 메트로놈(Metronome) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>Patient Isolation Management was added to organization and operations tools.</li><li>A Ration Ticket feature was added to organization and operations tools.</li><li>A Metronome was added to the tools.</li></ul>
+					<ul lang="zh-CN"><li>在组织与运营工具中新增了患者隔离管理功能。</li><li>在组织与运营工具中新增了配给票功能。</li><li>工具中新增了节拍器功能。</li></ul>
+					<ul lang="ja"><li>組織・運営ツールに患者隔離管理機能を追加しました。</li><li>組織・運営ツールに配給券機能を追加しました。</li><li>ツールにメトロノーム機能を追加しました。</li></ul>
+					<ul lang="ru"><li>В инструменты организации и управления добавлено управление изоляцией пациентов.</li><li>В инструменты организации и управления добавлены талоны на пайки.</li><li>В инструменты добавлен метроном.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-05-23</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>도구에 MIDI 작곡기(MIDI Composer) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>A MIDI Composer was added to the tools.</li></ul>
+					<ul lang="zh-CN"><li>工具中新增了 MIDI 作曲器。</li></ul>
+					<ul lang="ja"><li>ツールに MIDI 作曲機能を追加しました。</li></ul>
+					<ul lang="ru"><li>В инструменты добавлен MIDI-композитор.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-05-24</h2>
+				<div class="i18n">
+					<ul lang="ko">
+						<li>생존 도구에 <a href="https://www.safekorea.go.kr/">국민안전24</a>에서 제공하는 <a href="https://safemap.go.kr/main/smap_renewal.do">안전지도</a> 페이지로 이동하는 링크가 추가되었습니다.</li>
+						<li>생존 도구에 <a href="https://www.safekorea.go.kr/">국민안전24</a>에서 제공하는 <a href="https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do">재난문자</a> 페이지로 이동하는 링크가 추가되었습니다.</li>
+					</ul>
+					<ul lang="en">
+						<li>A link was added in survival tools to the <a href="https://safemap.go.kr/main/smap_renewal.do">Safety Map</a> provided by <a href="https://www.safekorea.go.kr/">National Safety 24</a>.</li>
+						<li>A link was added in survival tools to the <a href="https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do">emergency alerts</a> page provided by <a href="https://www.safekorea.go.kr/">National Safety 24</a>.</li>
+					</ul>
+					<ul lang="zh-CN">
+						<li>生存工具新增了跳转链接，可打开<a href="https://www.safekorea.go.kr/">国民安全24</a>提供的<a href="https://safemap.go.kr/main/smap_renewal.do">安全地图</a>页面。</li>
+						<li>生存工具新增了跳转链接，可打开<a href="https://www.safekorea.go.kr/">国民安全24</a>提供的<a href="https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do">灾害短信</a>页面。</li>
+					</ul>
+					<ul lang="ja">
+						<li>サバイバルツールに、<a href="https://www.safekorea.go.kr/">国民安全24</a>が提供する<a href="https://safemap.go.kr/main/smap_renewal.do">安全マップ</a>へのリンクを追加しました。</li>
+						<li>サバイバルツールに、<a href="https://www.safekorea.go.kr/">国民安全24</a>が提供する<a href="https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do">災害メッセージ</a>へのリンクを追加しました。</li>
+					</ul>
+					<ul lang="ru">
+						<li>В инструменты выживания добавлена ссылка на <a href="https://safemap.go.kr/main/smap_renewal.do">карту безопасности</a> портала <a href="https://www.safekorea.go.kr/">National Safety 24</a>.</li>
+						<li>В инструменты выживания добавлена ссылка на <a href="https://www.safekorea.go.kr/safekorea-kor/ctim/cmsg/calamitySms.do">экстренные сообщения о бедствиях</a> портала <a href="https://www.safekorea.go.kr/">National Safety 24</a>.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-05-27</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>지식 문서가 페이징 기능을 지원하게 되었습니다.</li></ul>
+					<ul lang="en"><li>Knowledge documents now support pagination.</li></ul>
+					<ul lang="zh-CN"><li>知识文档现已支持分页。</li></ul>
+					<ul lang="ja"><li>知識ドキュメントがページ送りに対応しました。</li></ul>
+					<ul lang="ru"><li>В документах базы знаний появилась постраничная навигация.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-05-29</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>보스니아 내전 생존자 Selco와의 인터뷰(Interview with Bosnian war survivor Selco) 지식이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>A knowledge article featuring an interview with Bosnian War survivor Selco was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了与波黑战争幸存者 Selco 的访谈知识文档。</li></ul>
+					<ul lang="ja"><li>ボスニア紛争の生存者 Selco へのインタビューを知識ドキュメントに追加しました。</li></ul>
+					<ul lang="ru"><li>В базу знаний добавлено интервью с Selco, пережившим войну в Боснии.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-06-05</h2>
+				<div class="i18n">
+					<ul lang="ko"><li><a href="/SurvivalManager/devlog_resources/2026_06_05.pdf">대학 과제</a> 제출 겸 부관(Aide) 캐릭터 디자인을 다듬었습니다.</li></ul>
+					<ul lang="en"><li>I refined the Aide character design while preparing a <a href="/SurvivalManager/devlog_resources/2026_06_05.pdf">university assignment</a>.</li></ul>
+					<ul lang="zh-CN"><li>在提交<a href="/SurvivalManager/devlog_resources/2026_06_05.pdf">大学作业</a>的同时，我完善了副官（Aide）的角色设计。</li></ul>
+					<ul lang="ja"><li><a href="/SurvivalManager/devlog_resources/2026_06_05.pdf">大学の課題</a>の提出を兼ねて、副官（Aide）のキャラクターデザインを調整しました。</li></ul>
+					<ul lang="ru"><li>При подготовке <a href="/SurvivalManager/devlog_resources/2026_06_05.pdf">университетского задания</a> я доработал дизайн персонажа-помощника (Aide).</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-06-12</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>태양광 발전기 설치(Solar panel installation) 지식이 추가되었습니다.</li><li>오프라인 지도(Offline Map)에서 GPS 활성화 시 현재 위치가 표시되는 기능이 추가되었습니다.</li><li>환자 격리 관리(Patient Isolation Management)에서 추적 그래프 저장 버튼이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>A knowledge article on solar panel installation was added.</li><li>The Offline Map now displays the current location when GPS is enabled.</li><li>A button to save tracking graphs was added to Patient Isolation Management.</li></ul>
+					<ul lang="zh-CN"><li>新增了太阳能发电设备安装知识文档。</li><li>离线地图现已支持在启用 GPS 时显示当前位置。</li><li>患者隔离管理功能新增了保存追踪图表的按钮。</li></ul>
+					<ul lang="ja"><li>太陽光発電設備の設置に関する知識を追加しました。</li><li>オフラインマップで GPS を有効にすると現在地を表示する機能を追加しました。</li><li>患者隔離管理に追跡グラフを保存するボタンを追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлен материал об установке солнечных панелей.</li><li>На офлайн-карте добавлено отображение текущего местоположения при включённом GPS.</li><li>В управлении изоляцией пациентов добавлена кнопка сохранения графиков отслеживания.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-06-17</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>애플리케이션 내에서 에피소드 및 스토리 열람 시 재생될 BGM <a href="/resources/files/music/suno/Time%20to%20play.mp3">Time to play</a>가 작곡되었습니다.</li></ul>
+					<ul lang="en"><li>The BGM <a href="/resources/files/music/suno/Time%20to%20play.mp3">Time to play</a>, intended to play while viewing episodes and stories in the app, was composed.</li></ul>
+					<ul lang="zh-CN"><li>创作了应用程序中浏览章节和故事时播放的背景音乐 <a href="/resources/files/music/suno/Time%20to%20play.mp3">Time to play</a>。</li></ul>
+					<ul lang="ja"><li>アプリ内でエピソードやストーリーを閲覧する際に再生する BGM <a href="/resources/files/music/suno/Time%20to%20play.mp3">Time to play</a>を作曲しました。</li></ul>
+					<ul lang="ru"><li>Написана фоновая музыка <a href="/resources/files/music/suno/Time%20to%20play.mp3">Time to play</a> для просмотра эпизодов и историй в приложении.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-07-02</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>생존 도구에 식수 소독 계산기(Water Purification Calculator) 기능이 추가되었습니다.</li><li>조직·운영 도구에 환자 분류(Patient Triage) 기능이 추가되었습니다.</li><li>P2P 채팅 시스템이 BLE, Wi-Fi Direct, Wi-Fi LAN 연결 기능을 지원하게 되었습니다.</li><li>부관(Aide)이 사용자에게 시스템 메시지를 전송하는 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>A Water Purification Calculator was added to survival tools.</li><li>Patient Triage was added to organization and operations tools.</li><li>The P2P chat system now supports BLE, Wi-Fi Direct, and Wi-Fi LAN connections.</li><li>The Aide can now send system messages to users.</li></ul>
+					<ul lang="zh-CN"><li>生存工具新增了饮用水消毒计算器。</li><li>在组织与运营工具中新增了患者检伤分类功能。</li><li>P2P 聊天系统现已支持 BLE、Wi-Fi Direct 和 Wi-Fi LAN 连接。</li><li>新增了副官（Aide）向用户发送系统消息的功能。</li></ul>
+					<ul lang="ja"><li>サバイバルツールに飲料水消毒計算機能を追加しました。</li><li>組織・運営ツールに患者トリアージ機能を追加しました。</li><li>P2P チャットシステムが BLE、Wi-Fi Direct、Wi-Fi LAN 接続に対応しました。</li><li>副官（Aide）がユーザーにシステムメッセージを送信する機能を追加しました。</li></ul>
+					<ul lang="ru"><li>В инструменты выживания добавлен калькулятор обеззараживания питьевой воды.</li><li>В инструменты организации и управления добавлена сортировка пациентов (триаж).</li><li>Система P2P-чата теперь поддерживает подключения BLE, Wi-Fi Direct и Wi-Fi LAN.</li><li>Помощник (Aide) теперь может отправлять пользователю системные сообщения.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-07-03</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>도구에 일기장(Diary) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>A Diary feature was added to the tools.</li></ul>
+					<ul lang="zh-CN"><li>工具中新增了日记功能。</li></ul>
+					<ul lang="ja"><li>ツールに日記機能を追加しました。</li></ul>
+					<ul lang="ru"><li>В инструменты добавлен дневник.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-07-05</h2>
+				<img loading="lazy" decoding="async" alt="2026-07-05 (1)" src="/SurvivalManager/devlog_resources/2026_07_05_001.png">
+				<img loading="lazy" decoding="async" alt="2026-07-05 (2)" src="/SurvivalManager/devlog_resources/2026_07_05_002.png">
+				<img loading="lazy" decoding="async" alt="2026-07-05 (3)" src="/SurvivalManager/devlog_resources/2026_07_05_003.png">
+				<img loading="lazy" decoding="async" alt="2026-07-05 (4)" src="/SurvivalManager/devlog_resources/2026_07_05_004.png">
+				<img loading="lazy" decoding="async" alt="2026-07-05 (5)" src="/SurvivalManager/devlog_resources/2026_07_05_005.png">
+				<img loading="lazy" decoding="async" alt="2026-07-05 (6)" src="/SurvivalManager/devlog_resources/2026_07_05_006.png">
+				<img loading="lazy" decoding="async" alt="2026-07-05 (7)" src="/SurvivalManager/devlog_resources/2026_07_05_007.png">
+				<img loading="lazy" decoding="async" alt="2026-07-05 (8)" src="/SurvivalManager/devlog_resources/2026_07_05_008.png">
+				<div class="i18n">
+					<ul lang="ko"><li>Gray 캐릭터를 재구상하였습니다.</li></ul>
+					<ul lang="en"><li>I redesigned the Gray character concept.</li></ul>
+					<ul lang="zh-CN"><li>重新构思了 Gray 角色。</li></ul>
+					<ul lang="ja"><li>Gray キャラクターを再構想しました。</li></ul>
+					<ul lang="ru"><li>Я переработал концепцию персонажа Gray.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-07-09</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>생존 도구에 천문 도구(Astronomy Tool) 기능이 추가되었습니다.</li><li>생존 도구에 비상 라디오 주파수(Emergency Radio Frequency) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>An Astronomy Tool was added to survival tools.</li><li>Emergency Radio Frequencies were added to survival tools.</li></ul>
+					<ul lang="zh-CN"><li>生存工具新增了天文工具。</li><li>生存工具新增了应急无线电频率功能。</li></ul>
+					<ul lang="ja"><li>サバイバルツールに天文ツールを追加しました。</li><li>サバイバルツールに緊急ラジオ周波数機能を追加しました。</li></ul>
+					<ul lang="ru"><li>В инструменты выживания добавлен астрономический инструмент.</li><li>В инструменты выживания добавлен список аварийных радиочастот.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-07-11</h2>
+				<img loading="lazy" decoding="async" alt="2026-07-11 (1)" src="/SurvivalManager/devlog_resources/2026_07_11_001.png">
+				<img loading="lazy" decoding="async" alt="2026-07-11 (2)" src="/SurvivalManager/devlog_resources/2026_07_11_002.png">
+				<img loading="lazy" decoding="async" alt="2026-07-11 (3)" src="/SurvivalManager/devlog_resources/2026_07_11_003.png">
+				<div class="i18n">
+					<ul lang="ko"><li>Brown 캐릭터를 구상하였습니다.</li></ul>
+					<ul lang="en"><li>I conceptualized the Brown character.</li></ul>
+					<ul lang="zh-CN"><li>我构思了 Brown 角色。</li></ul>
+					<ul lang="ja"><li>Brown キャラクターを構想しました。</li></ul>
+					<ul lang="ru"><li>Я разработал концепцию персонажа Brown.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-08-09</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>데이터 동기화(Data Sync) 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>Data Sync was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了数据同步功能。</li></ul>
+					<ul lang="ja"><li>データ同期機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлена синхронизация данных.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-08-11</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>가로 모드(Landscape)뿐만 아니라 세로 모드(Portrait)까지 지원하여, 자유롭게 화면을 전환할 수 있게 되었습니다.</li></ul>
+					<ul lang="en"><li>The app now supports both landscape and portrait orientations, allowing users to switch freely between them.</li></ul>
+					<ul lang="zh-CN"><li>应用程序现已同时支持横屏和竖屏，用户可以自由切换屏幕方向。</li></ul>
+					<ul lang="ja"><li>横向き（Landscape）だけでなく縦向き（Portrait）にも対応し、画面の向きを自由に切り替えられるようになりました。</li></ul>
+					<ul lang="ru"><li>Приложение теперь поддерживает как альбомную (Landscape), так и портретную (Portrait) ориентацию, между которыми можно свободно переключаться.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-09-07</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>P2P 채팅 시스템에 참여자 강퇴, 비밀 방 개설, 프로필 이미지 설정, 닉네임 설정 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>The P2P chat system added participant removal, private rooms, profile images, and nickname settings.</li></ul>
+					<ul lang="zh-CN"><li>P2P 聊天系统新增了移除参与者、创建私密房间、设置头像和昵称的功能。</li></ul>
+					<ul lang="ja"><li>P2P チャットシステムに、参加者の強制退出、非公開ルームの作成、プロフィール画像とニックネームの設定機能を追加しました。</li></ul>
+					<ul lang="ru"><li>В систему P2P-чата добавлены исключение участников, создание закрытых комнат, установка изображения профиля и выбор псевдонима.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-09-21</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>부관(Aide) Gray의 가스 마스크를 벗길 수 있는 트리거가 추가되었습니다.</li><li>오프라인 지도(Offline Map)에서 위도 경도 입력을 통한 마커 추가가 가능하게 되었습니다.</li></ul>
+					<ul lang="en"><li>A trigger was added to remove the gas mask of the Aide Gray.</li><li>Markers can now be added to the Offline Map by entering latitude and longitude.</li></ul>
+					<ul lang="zh-CN"><li>新增了可以摘下副官（Aide）Gray 防毒面具的触发条件。</li><li>离线地图现已支持通过输入经纬度添加标记。</li></ul>
+					<ul lang="ja"><li>副官（Aide）Gray のガスマスクを外せるトリガーを追加しました。</li><li>オフラインマップで緯度・経度を入力してマーカーを追加できるようになりました。</li></ul>
+					<ul lang="ru"><li>Добавлен триггер, позволяющий снять противогаз с помощника (Aide) Gray.</li><li>На офлайн-карте появилась возможность добавлять маркеры по широте и долготе.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-10-18</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>PDF 출력 기능이 추가되었습니다.</li></ul>
+					<ul lang="en"><li>PDF export was added.</li></ul>
+					<ul lang="zh-CN"><li>新增了 PDF 导出功能。</li></ul>
+					<ul lang="ja"><li>PDF 出力機能を追加しました。</li></ul>
+					<ul lang="ru"><li>Добавлен экспорт в PDF.</li></ul>
+				</div>
+			</section>
+
+			<section class="entry">
+				<h2>2026-10-26</h2>
+				<div class="i18n">
+					<ul lang="ko"><li>Google Play Store에서 내부 비공개 테스트를 시작하였습니다.</li></ul>
+					<ul lang="en"><li>Closed internal testing began on the Google Play Store.</li></ul>
+					<ul lang="zh-CN"><li>在 Google Play 商店启动了内部封闭测试。</li></ul>
+					<ul lang="ja"><li>Google Play ストアで内部向けクローズドテストを開始しました。</li></ul>
+					<ul lang="ru"><li>В Google Play началось закрытое внутреннее тестирование приложения.</li></ul>
+				</div>
+			</section>
+		</main>
+	</div>
+	<script src="/SurvivalManager/basic.js"></script>
 </body>
+
 </html>
