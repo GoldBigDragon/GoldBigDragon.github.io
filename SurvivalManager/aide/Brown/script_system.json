@@ -16,7 +16,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 10
 	},
 	"AIDE_SELECT_REPEAT": {
@@ -36,7 +36,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 10
 	},
 	"GREETING_DAY_FIRST": {
@@ -56,7 +56,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"GREETING_DAY_REPEAT": {
@@ -76,7 +76,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"GREETING_LATE_WEEK": {
@@ -96,7 +96,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_LATE_MONTH": {
@@ -116,7 +116,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_00_CLOCK": {
@@ -136,7 +136,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 10
 	},
 	"GREETING_01_CLOCK": {
@@ -156,7 +156,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 10
 	},
 	"GREETING_02_CLOCK": {
@@ -176,7 +176,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 10
 	},
 	"GREETING_03_CLOCK": {
@@ -196,7 +196,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 10
 	},
 	"GREETING_04_CLOCK": {
@@ -216,7 +216,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 10
 	},
 	"GREETING_05_CLOCK": {
@@ -236,7 +236,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 10
 	},
 	"GREETING_06_CLOCK": {
@@ -256,7 +256,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_07_CLOCK": {
@@ -276,7 +276,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_08_CLOCK": {
@@ -296,7 +296,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_09_CLOCK": {
@@ -316,7 +316,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_10_CLOCK": {
@@ -336,7 +336,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_11_CLOCK": {
@@ -356,7 +356,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_12_CLOCK": {
@@ -376,7 +376,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_13_CLOCK": {
@@ -396,7 +396,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_14_CLOCK": {
@@ -416,7 +416,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_15_CLOCK": {
@@ -436,7 +436,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_16_CLOCK": {
@@ -456,7 +456,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_17_CLOCK": {
@@ -476,7 +476,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_18_CLOCK": {
@@ -496,7 +496,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_19_CLOCK": {
@@ -516,7 +516,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_20_CLOCK": {
@@ -536,7 +536,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_21_CLOCK": {
@@ -556,7 +556,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 10
 	},
 	"GREETING_22_CLOCK": {
@@ -576,7 +576,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 10
 	},
 	"GREETING_23_CLOCK": {
@@ -596,7 +596,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 10
 	},
 	"ALARM_00_CLOCK": {
@@ -616,7 +616,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 0
 	},
 	"ALARM_01_CLOCK": {
@@ -636,7 +636,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 0
 	},
 	"ALARM_02_CLOCK": {
@@ -656,7 +656,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 0
 	},
 	"ALARM_03_CLOCK": {
@@ -676,7 +676,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 0
 	},
 	"ALARM_04_CLOCK": {
@@ -696,7 +696,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 0
 	},
 	"ALARM_05_CLOCK": {
@@ -716,7 +716,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 0
 	},
 	"ALARM_06_CLOCK": {
@@ -736,7 +736,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_07_CLOCK": {
@@ -756,7 +756,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_08_CLOCK": {
@@ -776,7 +776,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_09_CLOCK": {
@@ -796,7 +796,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_10_CLOCK": {
@@ -816,7 +816,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_11_CLOCK": {
@@ -836,7 +836,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_12_CLOCK": {
@@ -856,7 +856,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_13_CLOCK": {
@@ -876,7 +876,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_14_CLOCK": {
@@ -896,7 +896,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_15_CLOCK": {
@@ -916,7 +916,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_16_CLOCK": {
@@ -936,7 +936,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_17_CLOCK": {
@@ -956,7 +956,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_18_CLOCK": {
@@ -976,7 +976,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_19_CLOCK": {
@@ -996,7 +996,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_20_CLOCK": {
@@ -1016,7 +1016,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_21_CLOCK": {
@@ -1036,7 +1036,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALARM_22_CLOCK": {
@@ -1056,7 +1056,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 0
 	},
 	"ALARM_23_CLOCK": {
@@ -1076,7 +1076,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.85,
+		"voice_speed": 0.95,
 		"priority": 0
 	},
 	"ALERT_UNREAD_MESSAGE": {
@@ -1096,14 +1096,14 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_FOOD_EXPIRES_SOON": {
 		"script": {
 			"en": "The %FOOD_NAME% in %MEMBER_NAME%'s %BAG_NAME% is nearing its expiration date~ How about eating it first? Rolling the stock, they call it~",
 			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 있는 %FOOD_NAME%의 소비기한이 다가오고 있어요~ 먼저 먹어 버리는 건 어때요? 롤링 스톡이라고 부른다죠~",
-			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限が近づいていますよ~ 先に食べちゃうのはどうですか? ローリングストックって言うんですよねぇ~",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の消費期限が近づいていますよ~ 先に食べちゃうのはどうですか? ローリングストックって言うんですよねぇ~",
 			"zh": "%MEMBER_NAME%的%BAG_NAME%里的%FOOD_NAME%快到保质期了~ 要不要先吃掉? 这叫滚动储备~",
 			"ba": "У %FOOD_NAME% в %BAG_NAME% участника %MEMBER_NAME% скоро истекает срок годности~ Может, съесть его первым? Это называют ротацией запасов~"
 		},
@@ -1116,14 +1116,14 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_FOOD_EXPIRES": {
 		"script": {
 			"en": "The %FOOD_NAME% in %MEMBER_NAME%'s %BAG_NAME% has expired~ Farewells are sad, but a tummy ache would be sadder~",
 			"ko": "%MEMBER_NAME%의 %BAG_NAME%에 있는 %FOOD_NAME%의 소비기한이 지났어요~ 이별은 슬프지만, 배탈은 더 슬프답니다~",
-			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の賞味期限が切れちゃいました~ お別れは悲しいですが、お腹を壊す方がもっと悲しいですからねぇ~",
+			"ja": "%MEMBER_NAME%の%BAG_NAME%にある%FOOD_NAME%の消費期限が切れちゃいました~ お別れは悲しいですが、お腹を壊す方がもっと悲しいですからねぇ~",
 			"zh": "%MEMBER_NAME%的%BAG_NAME%里的%FOOD_NAME%已经过期了~ 告别虽然难过, 但闹肚子会更难过~",
 			"ba": "Срок годности %FOOD_NAME% в %BAG_NAME% участника %MEMBER_NAME% истёк~ Прощаться грустно, но болеть животом было бы грустнее~"
 		},
@@ -1136,7 +1136,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_ITEM_MAINTENANCE_NEAR": {
@@ -1156,7 +1156,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_ITEM_MAINTENANCE_NEED": {
@@ -1176,7 +1176,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_BAG_OLD_HEAVY": {
@@ -1196,7 +1196,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_BAG_ADULT_HEAVY": {
@@ -1216,7 +1216,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_BAG_YOUNG_HEAVY": {
@@ -1236,7 +1236,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_MEDICINE_FIRST_AID_NOT_FOUND": {
@@ -1256,7 +1256,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_MEDICINE_GLUCOSE_NOT_FOUND": {
@@ -1276,7 +1276,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_MEDICINE_PAINKILLER_NOT_FOUND": {
@@ -1296,7 +1296,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_MEDICINE_ANTIDIARRHEAL_NOT_FOUND": {
@@ -1316,7 +1316,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_NEW_DAY_BEGINS": {
@@ -1336,7 +1336,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_NOON_PLAN_LEFT": {
@@ -1356,7 +1356,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_EVENING_PLAN_LEFT": {
@@ -1376,7 +1376,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_ANNIVERSARY_NEXT_DAY": {
@@ -1396,7 +1396,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_ANNIVERSARY_SAME_DAY": {
@@ -1416,7 +1416,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ALERT_PATIENT_RELEASE_FROM_ISOLATION": {
@@ -1436,7 +1436,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_BEGINNING_OF_SPRING": {
@@ -1456,7 +1456,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_RAIN_WATER": {
@@ -1476,7 +1476,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_AWAKENING_OF_INSECTS": {
@@ -1496,7 +1496,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_SPRING_EQUINOX": {
@@ -1516,7 +1516,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_PURE_BRIGHTNESS": {
@@ -1536,7 +1536,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_GRAIN_RAIN": {
@@ -1556,7 +1556,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_BEGINNING_OF_SUMMER": {
@@ -1576,7 +1576,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_FULLNESS_OF_GRAIN": {
@@ -1596,7 +1596,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_GRAIN_IN_EAR": {
@@ -1616,7 +1616,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_SUMMER_SOLSTICE": {
@@ -1636,7 +1636,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_MINOR_HEAT": {
@@ -1656,7 +1656,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_MAJOR_HEAT": {
@@ -1676,7 +1676,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_BEGINNING_OF_AUTUMN": {
@@ -1696,7 +1696,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_END_OF_HEAT": {
@@ -1716,7 +1716,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_WHITE_DEW": {
@@ -1736,7 +1736,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_AUTUMN_EQUINOX": {
@@ -1756,7 +1756,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_COLD_DEW": {
@@ -1776,7 +1776,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_FROST_DESCENT": {
@@ -1796,7 +1796,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_BEGINNING_OF_WINTER": {
@@ -1816,7 +1816,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_MINOR_SNOW": {
@@ -1836,7 +1836,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_MAJOR_SNOW": {
@@ -1856,7 +1856,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_WINTER_SOLSTICE": {
@@ -1876,7 +1876,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_MINOR_COLD": {
@@ -1896,7 +1896,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_MAJOR_COLD": {
@@ -1916,7 +1916,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_NEW_YEAR": {
@@ -1936,7 +1936,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_VALENTINES_DAY": {
@@ -1956,7 +1956,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_APRIL_FOOLS_DAY": {
@@ -1976,7 +1976,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_LABOUR_DAY": {
@@ -1996,7 +1996,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_HALLOWEEN": {
@@ -2016,7 +2016,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_CHRISTMAS_EVE": {
@@ -2036,7 +2036,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	},
 	"ANNIVERSARY_CHRISTMAS": {
@@ -2056,7 +2056,7 @@
 			"ba": 1
 		},
 		"is_beep_speech": true,
-		"voice_speed": 0.9,
+		"voice_speed": 1.0,
 		"priority": 0
 	}
 }
