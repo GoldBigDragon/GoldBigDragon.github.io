@@ -40,8 +40,8 @@
 			"ba": "Установочный файл (APK) приложения Survival Manager. Это один файл, который устанавливается на любом типе процессора.\nПосле загрузки вы сможете передавать приложение на другие телефоны даже без интернета в разделе [Утилита] → [Организация · Управление] → [Поделиться приложением офлайн]: через установленные приложения, по QR-коду в той же сети Wi-Fi или сохранив APK в папку «Загрузки».\n\n[Сведения об APK]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 14\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-23 01:32:01\n"
 		},
 		"version": "2026-11-23 01:32:01",
-		"size": 21209922,
-		"installed_size": 21209922,
+		"size": 21117866,
+		"installed_size": 21117866,
 		"file": [
 			"./SurvivalManager.apk"
 		],
