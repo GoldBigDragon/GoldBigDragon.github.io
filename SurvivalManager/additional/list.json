@@ -33,29 +33,29 @@
 			"ba": "Поделиться приложением офлайн"
 		},
 		"description": {
-			"en": "The installation file (APK) of the Survival Manager app. It is a single file that installs on any CPU type.\nOnce downloaded, you can hand this app to other phones even without the internet from [Utility] → [Organization · Operations] → [Offline App Sharing]: share with installed apps, let a phone on the same Wi-Fi download it with a QR code, or save the APK to the Downloads folder.\n\n[APK information]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 13\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-21 03:33:06\n",
-			"ko": "CPU 종류와 관계없이 설치할 수 있는 Survival Manager 앱 설치 파일(APK)입니다.\n받아 두면 [도구]→[조직 · 운영]→[오프라인 애플리케이션 공유]에서 인터넷이 없어도 다른 휴대폰에 이 앱을 나눠 줄 수 있습니다(설치된 앱으로 공유, 같은 Wi-Fi 에서 QR 코드로 받기, 다운로드 폴더에 APK 저장).\n\n[APK 정보]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 13\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-21 03:33:06\n",
-			"ja": "Survival Manager アプリのインストールファイル（APK）です。CPU の種類に関係なくインストールできる 1 つのファイルです。\nダウンロードしておくと、[ツール]→[組織・運営]→[オフラインアプリ共有] から、インターネットがなくても他のスマートフォンにこのアプリを配れます（インストール済みアプリで共有、同じ Wi-Fi で QR コードから受け取り、ダウンロードフォルダーに APK を保存）。\n\n[APK 情報]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 13\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-21 03:33:06\n",
-			"zh": "Survival Manager 应用的安装文件（APK）。这是一个与 CPU 类型无关、均可安装的单一文件。\n下载后，即使没有互联网，也可以在 [效用]→[组织·运作]→[离线应用分享] 中把本应用分享给其他手机（通过已安装的应用分享、在同一 Wi-Fi 下扫描二维码下载、将 APK 保存到下载文件夹）。\n\n[APK 信息]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 13\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-21 03:33:06\n",
-			"ba": "Установочный файл (APK) приложения Survival Manager. Это один файл, который устанавливается на любом типе процессора.\nПосле загрузки вы сможете передавать приложение на другие телефоны даже без интернета в разделе [Утилита] → [Организация · Управление] → [Поделиться приложением офлайн]: через установленные приложения, по QR-коду в той же сети Wi-Fi или сохранив APK в папку «Загрузки».\n\n[Сведения об APK]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 13\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-21 03:33:06\n"
+			"en": "The installation file (APK) of the Survival Manager app. It is a single file that installs on any CPU type.\nOnce downloaded, you can hand this app to other phones even without the internet from [Utility] → [Organization · Operations] → [Offline App Sharing]: share with installed apps, let a phone on the same Wi-Fi download it with a QR code, or save the APK to the Downloads folder.\n\n[APK information]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 14\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-23 01:32:01\n",
+			"ko": "CPU 종류와 관계없이 설치할 수 있는 Survival Manager 앱 설치 파일(APK)입니다.\n받아 두면 [도구]→[조직 · 운영]→[오프라인 애플리케이션 공유]에서 인터넷이 없어도 다른 휴대폰에 이 앱을 나눠 줄 수 있습니다(설치된 앱으로 공유, 같은 Wi-Fi 에서 QR 코드로 받기, 다운로드 폴더에 APK 저장).\n\n[APK 정보]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 14\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-23 01:32:01\n",
+			"ja": "Survival Manager アプリのインストールファイル（APK）です。CPU の種類に関係なくインストールできる 1 つのファイルです。\nダウンロードしておくと、[ツール]→[組織・運営]→[オフラインアプリ共有] から、インターネットがなくても他のスマートフォンにこのアプリを配れます（インストール済みアプリで共有、同じ Wi-Fi で QR コードから受け取り、ダウンロードフォルダーに APK を保存）。\n\n[APK 情報]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 14\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-23 01:32:01\n",
+			"zh": "Survival Manager 应用的安装文件（APK）。这是一个与 CPU 类型无关、均可安装的单一文件。\n下载后，即使没有互联网，也可以在 [效用]→[组织·运作]→[离线应用分享] 中把本应用分享给其他手机（通过已安装的应用分享、在同一 Wi-Fi 下扫描二维码下载、将 APK 保存到下载文件夹）。\n\n[APK 信息]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 14\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-23 01:32:01\n",
+			"ba": "Установочный файл (APK) приложения Survival Manager. Это один файл, который устанавливается на любом типе процессора.\nПосле загрузки вы сможете передавать приложение на другие телефоны даже без интернета в разделе [Утилита] → [Организация · Управление] → [Поделиться приложением офлайн]: через установленные приложения, по QR-коду в той же сети Wi-Fi или сохранив APK в папку «Загрузки».\n\n[Сведения об APK]\n- applicationId: goldbigdragon.github.io.SurvivalManager\n- versionName: 1.0\n- versionCode: 14\n- minSdk: 26 (Android 8.0)\n- targetSdk: 36 (Android 16)\n- compileSdk: 37\n- app_version: 2026-11-23 01:32:01\n"
 		},
-		"version": "2026-11-21 03:33:06",
-		"size": 24808504,
-		"installed_size": 24808504,
+		"version": "2026-11-23 01:32:01",
+		"size": 21209922,
+		"installed_size": 21209922,
 		"file": [
 			"./SurvivalManager.apk"
 		],
 		"sha256": [
-			"19736c29caaec85552445a80f3f46737bab38bde18b5ad779cc256b0fa3784f8"
+			""
 		],
 		"app": {
 			"applicationId": "goldbigdragon.github.io.SurvivalManager",
 			"compileSdk": 37,
 			"minSdk": 26,
 			"targetSdk": 36,
-			"versionCode": 13,
+			"versionCode": 14,
 			"versionName": "1.0",
-			"app_version": "2026-11-21 03:33:06"
+			"app_version": "2026-11-23 01:32:01"
 		}
 	}
 }
