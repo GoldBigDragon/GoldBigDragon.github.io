@@ -1,6 +1,36 @@
 const PROGRAM_LIST = [
 	{
 		"name": {
+			"en":"Survival Manager",
+			"kr":"재난 대비",
+			"jp":"災害対策",
+			"cn":"灾害准备",
+			"ru":"Менеджер по выживанию"
+		},
+		"description": {
+			"en":"This is a disaster preparedness application.",
+			"kr":"재난 대비용 애플리케이션입니다.",
+			"jp":"災害対策用のアプリケーションです。",
+			"cn":"这是一款防灾减灾备灾应用程序。",
+			"ru":"Это приложение для подготовки к чрезвычайным ситуациям."
+		},
+		"tag": [
+			"android",
+			"application",
+			"survival",
+			"manual",
+			"disaster"
+		],
+		"language": "java 17",
+		"download": "https://play.google.com/store/apps/details?id=goldbigdragon.github.io.SurvivalManager",
+		"github": "https://goldbigdragon.github.io/SurvivalManager/devlog.html?lang=ko",
+		"youtube": "https://youtu.be/WLUriGt6c0U",
+		"icon": "/resources/img/program/Survival Manager/icon.png",
+		"created-at": "2026-11-20",
+		"updated-at": "2026-11-23",
+	},
+	{
+		"name": {
 			"en":"GoldBigDragon RPG",
 			"kr":"GoldBigDragon RPG",
 			"jp":"GoldBigDragon RPG",
