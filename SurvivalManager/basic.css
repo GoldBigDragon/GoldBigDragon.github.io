@@ -41,11 +41,36 @@ body {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 10px;
 	margin-bottom: 20px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid var(--btn-border);
 }
+
+/* 페이지 이동 버튼 (좌측) */
+.page-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-right: auto;
+}
+
+.page-nav a,
+[data-theme="dark"] .page-nav a,
+[data-theme="dark"] .page-nav a:visited {
+	color: var(--text-color);
+	background-color: var(--btn-bg);
+	border: 1px solid var(--btn-border);
+	padding: 8px 12px;
+	border-radius: 5px;
+	font-size: 14px;
+	text-decoration: none;
+	transition: background-color 0.2s;
+}
+
+.page-nav a:hover { background-color: var(--btn-hover); }
+.page-nav a[aria-current="page"] { font-weight: bold; border-color: var(--text-color); }
 
 button, select {
 	background-color: var(--btn-bg);

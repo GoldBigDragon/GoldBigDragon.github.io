@@ -23,7 +23,7 @@ const PROGRAM_LIST = [
 		],
 		"language": "java 17",
 		"download": "https://play.google.com/store/apps/details?id=goldbigdragon.github.io.SurvivalManager",
-		"github": "https://goldbigdragon.github.io/SurvivalManager/devlog.html?lang=ko",
+		"document": "https://goldbigdragon.github.io/SurvivalManager/devlog.html?lang=ko",
 		"youtube": "https://youtu.be/WLUriGt6c0U",
 		"icon": "/resources/img/program/Survival Manager/icon.png",
 		"created-at": "2026-11-20",
